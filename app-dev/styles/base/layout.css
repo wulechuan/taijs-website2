@@ -1,6 +1,8 @@
 .width-wrap {
-    max-width: 1200px;
-    min-width: 1000px;
+    max-width: 1240px;
+    min-width: 920px;
+    min-width: 1240px;
+    padding: 0 20px;
 }
 .app-header {
     }
@@ -42,5 +44,11 @@
 
         #header-chief-bar > .width-wrap {
             height: 72px;
+        }
+
+        #taijs-logo {
+            display: inline-block;
+            padding: 13px;
+            margin: 0 15px 0 -13px;
         }
 
