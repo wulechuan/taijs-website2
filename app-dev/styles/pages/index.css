@@ -1,0 +1,13 @@
+.promotion-card {
+	position: relative;
+	width: 100%;
+	height: 346px;
+	overflow: hidden;
+
+}
+
+.promotion-card .splash {
+	display: inline-block;
+	width: 835px;
+	height: 346px;
+}

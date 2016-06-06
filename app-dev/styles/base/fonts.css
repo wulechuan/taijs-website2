@@ -1,0 +1,8 @@
+html, body, button, textarea, input, select, option {
+	font-family: 'Microsoft Yahei', 'Lucida Grande', 'SimHei', 'SimSun';
+}
+
+
+#header-info-and-links {
+	font-family: 'SimSun';
+}

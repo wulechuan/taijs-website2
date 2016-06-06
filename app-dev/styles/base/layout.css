@@ -1,0 +1,46 @@
+.width-wrap {
+    max-width: 1200px;
+    min-width: 1000px;
+}
+.app-header {
+    }
+    #header-info-and-links {
+        font-size: 12px;
+        border-bottom: 1px solid #eee;
+        }
+
+        #header-info-and-links > .width-wrap {
+        }
+
+        #header-info-and-links a {
+            text-decoration: none!important;
+        }
+
+        #header-contacts, #header-user-account-commands {
+            vertical-align: top;
+            display: inline-block;
+            width: 50%;
+            height: 35px;
+            line-height: 35px;
+        }
+
+        #header-contacts > div {
+            display: inline-block;
+            float: left;
+        }
+        #header-user-account-commands {
+            text-align: right;
+        }
+        #header-user-account-commands > div {
+            display: inline-block;
+        }
+
+
+    #header-chief-bar {
+        border-bottom: 1px solid #eee;
+        }
+
+        #header-chief-bar > .width-wrap {
+            height: 72px;
+        }
+

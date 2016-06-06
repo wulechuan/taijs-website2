@@ -1,0 +1,51 @@
+html, body {
+	color: #333;
+	background-color: white;
+}
+
+input {
+	background-color: white;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button,
+input[type="button"].color-chief,
+input[type="submit"].color-chief,
+input[type="reset"].color-chief,
+button.color-chief {
+	color: white;
+    border-color: #157dff;
+    background-color: #157dff;
+}
+
+input[type="button"].color-transparent,
+input[type="submit"].color-transparent,
+input[type="reset"].color-transparent,
+button.color-transparent {
+	color: #157dff;
+}
+
+input:active,  input:focus,
+select:active, select:focus,
+label:active,  label:focus {
+    border-color: #157dff;
+    outline-color: #157dff;
+}
+
+button:active, button:focus {
+    outline-color: #157dff;
+}
+
+
+
+#header-info-and-links {
+	color: #666;
+}
+
+#header-info-and-links a,
+#header-info-and-links a:link,
+#header-info-and-links a:visited {
+	color: #666;
+}
