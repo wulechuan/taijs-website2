@@ -1,9 +1,6 @@
 input[type="reset"].cast-shadow,
-input[type="reset"].cast-shadow .bg,
 input[type="submit"].cast-shadow,
-input[type="submit"].cast-shadow .bg,
 input[type="button"].cast-shadow,
-input[type="button"].cast-shadow .bg,
 button.cast-shadow,
 button.cast-shadow .bg,
 .r-tmnl                          .bg,
@@ -17,6 +14,7 @@ button.cast-shadow .bg,
     border-color: #157dff;
     background-color: #157dff;
 }
+
 .color-default [class|="corner"]:before,
                [class|="corner"]:before {
     color: #157dff;
@@ -32,13 +30,32 @@ button.cast-shadow .bg,
                [class|="corner"]:after {
     color: #157dff;
 }
-.r-cnr.r-cnr-png                     [class|="corner"],
-.rounded-corners.rounded-corners-png [class|="corner"] {
-    background-image: url(../../images/utilities/rounded-corners-5px-_default.png);
+
+input[type="reset"].cast-shadow:hover,
+input[type="submit"].cast-shadow:hover,
+input[type="button"].cast-shadow:hover,
+button.cast-shadow:hover,
+button.cast-shadow:hover .bg,
+.r-tmnl:hover                          .bg,
+.r-tmnl.color-default:hover            .bg,
+.rounded-terminals:hover               .bg,
+.rounded-terminals.color-default:hover .bg,
+.r-cnr:hover                           .bg,
+.r-cnr.color-default:hover             .bg,
+.rounded-corners:hover                 .bg,
+.rounded-corners.color-default :hover  .bg {
+    background-color: #3f93ff;
 }
-.r-tmnl.r-tmnl-png                       [class|="corner"],
-.rounded-terminals.rounded-terminals-png [class|="corner"] {
-    background-image: url(../../images/utilities/rounded-terminals-_default.png);
+
+.r-tmnl:hover                          [class|="corner"]:after,
+.r-tmnl.color-default:hover            [class|="corner"]:after,
+.rounded-terminals:hover               [class|="corner"]:after,
+.rounded-terminals.color-default:hover [class|="corner"]:after,
+.r-cnr:hover                           [class|="corner"]:after,
+.r-cnr.color-default:hover             [class|="corner"]:after,
+.rounded-corners:hover                 [class|="corner"]:after,
+.rounded-corners.color-default :hover  [class|="corner"]:after {
+    color: #3f93ff;
 }
 
 

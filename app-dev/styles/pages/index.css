@@ -50,7 +50,6 @@
 	#splash-login-panel button [class|="corner"]:before,
 	#splash-login-panel button .bg,
 	#splash-login-panel button {
-		width: 202px;
 		color: white;
 		border-color: white;
 	}
@@ -128,10 +127,6 @@
 			#credit-abstract .credit-line em {
 				font-size: 26px;
 				color: #157dff;
-			}
-
-			#credit-abstract .operations button {
-				width: 202px;
 			}
 
 			#credit-abstract .info-block {

@@ -173,12 +173,7 @@
 		.rounded-corners.color-transparent [class|="corner"]:after {
 			content: none!important;
 		}
-		.r-cnr.r-cnr-png                     [class|="corner"]:before,
-		.r-cnr.r-cnr-png                     [class|="corner"]:after,
-		.rounded-corners.rounded-corners-png [class|="corner"]:before,
-		.rounded-corners.rounded-corners-png [class|="corner"]:after {
-			content: none!important;
-		}
+
 		.r-cnr           [class|="corner"]:before,
 		.r-cnr           [class|="corner"]:after,
 		.rounded-corners [class|="corner"]:before,
@@ -187,6 +182,7 @@
 			position: absolute;
 			white-space: nowrap;
 			overflow: hidden;
+			text-indent: 0;
 
 			padding: 0;
 			margin: 0;
@@ -272,7 +268,7 @@
 		.rounded-corners      .corner-2:before,
 		.rounded-corners.r5px .corner-1:before,
 		.rounded-corners.r5px .corner-2:before {
-			line-height: 17px;
+			line-height: 18px;
 		}
 		.r-cnr                .corner-1:after,
 		.r-cnr                .corner-2:after,
@@ -292,7 +288,7 @@
 		.rounded-corners      .corner-4:before,
 		.rounded-corners.r5px .corner-3:before,
 		.rounded-corners.r5px .corner-4:before {
-			line-height: 78px;
+			line-height: 76px;
 		}
 		.r-cnr                .corner-3:after,
 		.r-cnr                .corner-4:after,
@@ -495,12 +491,7 @@
 			font-family:"iconfont"!important;
 			content: "\e661";
 		}
-		.r-tmnl.r-tmnl-png                       [class|="corner"]:before,
-		.r-tmnl.r-tmnl-png                       [class|="corner"]:after,
-		.rounded-terminals.rounded-terminals-png [class|="corner"]:before,
-		.rounded-terminals.rounded-terminals-png [class|="corner"]:after {
-			content: none!important;
-		}
+
 		.r-tmnl            [class|="corner"]:before,
 		.r-tmnl            [class|="corner"]:after,
 		.rounded-terminals [class|="corner"]:before,

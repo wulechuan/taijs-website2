@@ -42,6 +42,13 @@ button {
 	min-height: 22px;
 }
 
+
+select.size-wide-std,
+input[type="button"].size-wide-std, input[type="submit"].size-wide-std, input[type="reset"].size-wide-std,
+button.size-wide-std {
+	width: 170px;
+}
+
 input[type="button"].simple-look, input[type="submit"].simple-look, input[type="reset"].simple-look,
 button.simple-look {
 	min-height: 0;
