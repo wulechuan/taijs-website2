@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1465195490'); /* IE9*/
-  src: url('iconfont.eot?t=1465195490#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1465195490') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1465195490') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1465195490#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1465263145'); /* IE9*/
+  src: url('iconfont.eot?t=1465263145#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1465263145') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1465263145') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1465263145#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -53,3 +53,4 @@
 .icon-rounded-corners-stroke1-s40-r15:before { content: "\e66c"; }
 .icon-rounded-corners-stroke1-s40-r05:before { content: "\e665"; }
 .icon-rounded-corners-stroke1-s40-r12:before { content: "\e66b"; }
+.icon-cornerdeco:before { content: "\e604"; }

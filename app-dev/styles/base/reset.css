@@ -18,6 +18,17 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+body {
+	/* The 3 lines below are for ".row" full width even if some content is wider than browser window */
+	display: inline-block;
+	width: auto;
+	min-width: 100%;
+
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
 a {
 	font-size: inherit;
 }

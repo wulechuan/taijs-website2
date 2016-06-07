@@ -52,3 +52,6 @@
             margin: 0 15px 0 -13px;
         }
 
+#app-body {
+    display: block;
+}

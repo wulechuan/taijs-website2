@@ -140,16 +140,44 @@ input[type="radio"] {
 
 
 .row {
+    position: relative;
     display: block;
-    width: 100%;
     clear: both;
     float: none;
-}
+    }
+
+    .row-bg {
+        overflow: hidden;
+        display: block;
+        position: absolute;
+        text-align: center;
+        min-width: 100%;
+        min-height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        background-size: cover;
+        z-index: 0;
+    }
+
+    .row-bg:before {
+        content: '';
+        display: block;
+        position: absolute;
+        min-width: 100%;
+        min-height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        background-size: cover;
+    }
 
 .width-wrap {
+    position: relative;
     display: block;
     margin-left: auto;
     margin-right: auto;
     clear: both;
     float: none;
+    z-index: 1;
 }

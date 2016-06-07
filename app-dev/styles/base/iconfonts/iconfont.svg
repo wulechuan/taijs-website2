@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Mon Jun  6 14:44:49 2016
+Created by FontForge 20120731 at Tue Jun  7 09:32:24 2016
  By admin
 </metadata>
 <defs>
@@ -110,6 +110,8 @@ d="M512 875q-101 0 -192.5 -39.5t-157.5 -105.5t-105 -157.5t-39 -192t39 -192t105 -
 t154.5 154.5t212.5 56.5t212.5 -56.5t154.5 -154.5t57 -213t-57 -212.5t-154.5 -154t-212.5 -56.5zM477 114h71v419h-71v-419zM477 608h71v71h-71v-71z" />
     <glyph glyph-name="uniE603" unicode="&#xe603;" 
 d="M666 394l-238 238l-29 -30l208 -208l-208 -209l29 -30l209 209z" />
+    <glyph glyph-name="uniE604" unicode="&#xe604;" 
+d="M0 742v154h307zM0 26v-154h307zM1024 742v154h-307zM1024 26v-154h-307z" />
     <glyph glyph-name="uniE605" unicode="&#xe605;" 
 d="M320 320l46 -45l146 146l147 -146l45 45l-192 192z" />
     <glyph glyph-name="uniE606" unicode="&#xe606;" 
