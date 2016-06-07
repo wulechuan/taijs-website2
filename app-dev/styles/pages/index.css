@@ -21,15 +21,21 @@
 	}
 
 	#splash-slogan {
+		position: absolute;
+		width: 100%;
+		top: 0;
+		margin: 70px 0 10px 0;
 		text-align: center;
 	}
 
 	#splash-slogan h1 {
 		text-indent: 0.75em;
 		font-size: 34px;
+		line-height: 50px;
 	}
 	#splash-slogan h2 {
 		font-size: 26px;
+		line-height: 40px;
 	}
 
 	#splash-login-panel {

@@ -292,12 +292,17 @@
             line-height: 83px;
         }
 
-    .r-cnr.color-transparent           [class|="corner"]:before,
-    .r-cnr.r10px                       [class|="corner"]:before,
-    .rounded-corners.color-transparent [class|="corner"]:before,
-    .rounded-corners.r10px             [class|="corner"]:before {
-        /* the original design was 40px*40px, which makes the radii being 10px */
-        font-size: 40px;
+    .r-cnr.color-transparent           [class|="corner"],
+    .rounded-corners.color-transparent [class|="corner"] {
+        filter: alpha(opacity=100);
+        }
+
+        .r-cnr.color-transparent           [class|="corner"]:before,
+        .r-cnr.r10px                       [class|="corner"]:before,
+        .rounded-corners.color-transparent [class|="corner"]:before,
+        .rounded-corners.r10px             [class|="corner"]:before {
+            /* the original design was 40px*40px, which makes the radii being 10px */
+            font-size: 40px;
         }
         .r-cnr.r10px                       [class|="corner"]:after,
         .rounded-corners.r10px             [class|="corner"]:after {
@@ -335,7 +340,6 @@
         .rounded-corners.r10px .corner-4:after {
             line-height: 61px;
         }
-
         .r-cnr.color-transparent                [class|="corner"]:before,
         .r-cnr.color-transparent.r5px           [class|="corner"]:before,
         .rounded-corners.color-transparent      [class|="corner"]:before,
