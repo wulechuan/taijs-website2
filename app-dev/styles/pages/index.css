@@ -157,3 +157,43 @@
 	width: 835px;
 	height: 346px;
 }
+
+#pl-taijs-app-promotion {
+	width: 1200px;
+	height: 315px;
+	color: white;
+	text-align: center;
+	background-color: #157dff;
+	background-image: url(../../images/pages/index/qrcode-bg.png);
+	background-repeat: no-repeat;
+	}
+	
+	#pl-taijs-app-promotion .bg {
+	}
+
+	#pl-taijs-app-promotion .title {
+		position: relative;
+		display: inline-block;
+		padding: 0 1em;
+		margin: 2em 0 1em 0;
+	}
+	#pl-taijs-app-promotion .title:before,
+	#pl-taijs-app-promotion .title:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 50%;
+		font-size: 0;
+		height: 1px;
+		width: 100px;
+		background-color: white;
+	}
+	#pl-taijs-app-promotion .title:before {
+		right: 100%;
+	}
+	#pl-taijs-app-promotion .title:after {
+		left: 100%;
+	}
+	#pl-taijs-app-promotion p {
+		line-height: 1.8;
+	}
