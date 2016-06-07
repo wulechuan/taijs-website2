@@ -42,7 +42,7 @@ button:active, button:focus {
 
 #header-info-and-links {
 	color: #666;
-    border-bottom: 1px solid #eee;
+    border-bottom-color: #eee;
 	}
 
 	#header-info-and-links a,
@@ -51,3 +51,6 @@ button:active, button:focus {
 		color: #666;
 	}
 
+#header-chief-bar {
+    border-bottom-color: #eee;
+    }
