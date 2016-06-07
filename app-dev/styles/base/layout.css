@@ -8,7 +8,7 @@
     }
     #header-info-and-links {
         font-size: 12px;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid;
         }
 
         #header-info-and-links > .width-wrap {
@@ -39,7 +39,7 @@
 
 
     #header-chief-bar {
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid;
         }
 
         #header-chief-bar > .width-wrap {
