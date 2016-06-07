@@ -303,5 +303,5 @@ input[type="radio"] {
 	}
 
 	.info-block.info-auto-hide .info-locator {
-		/* display: none; */
+		display: none;
 	}
