@@ -1,48 +1,148 @@
 .width-wrap {
     max-width: 1240px;
-    min-width: 920px;
     min-width: 1240px;
     padding: 0 20px;
 }
-.app-header {
+
+#app-header {
+    position: relative;
+    z-index: 9;
+}
+
+#app-footer {
+    position: relative;
+    z-index: 8;
+}
+
+#app-body {
+    position: relative;
+    z-index: 1;
+}
+
+#app-header {
     }
-    #header-info-and-links {
+
+    #app-header .icon {
+        font-size: 21px;
+        width: 21px;
+        height: 35px;
+        vertical-align: top;
+    }
+
+    #app-header-info-and-links {
         font-size: 12px;
         border-bottom: 1px solid;
         }
 
-        #header-info-and-links > .width-wrap {
+        #app-header-info-and-links button {
+            margin: 0;
+            padding: 0 0.5em;
+            white-space: nowrap;
         }
 
-        #header-info-and-links a {
-            text-decoration: none!important;
+        #app-header-info-and-links a:hover,
+        #app-header-info-and-links button.simple-look:hover {
+            background-color: #eee;
         }
 
-        #header-contacts, #header-user-account-commands {
+        #app-header-info-and-links a:hover {
+            text-decoration: none;
+        }
+
+        #app-header-info-and-links button .icon {
+            margin: 0;
+        }
+
+        #app-header-info-and-links button label {
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+            padding: 0;
+        }
+
+        #app-header-info-and-links button label span,
+        #app-header-info-and-links button label em {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0;
+            padding: 0;
+        }
+
+        #app-header-info-and-links .sns button label {
+            display: none;
+        }
+
+        #app-header-info-and-links .width-wrap {
+        }
+
+        #app-header-contacts, #app-header-user-account-commands {
             vertical-align: top;
             display: inline-block;
+            position: relative;
             width: 50%;
-            height: 35px;
+            min-height: 35px;
             line-height: 35px;
         }
 
-        #header-contacts > div {
+        #app-header-contacts div,
+        #app-header-user-account-commands div {
+            vertical-align: top;
             display: inline-block;
-            float: left;
         }
-        #header-user-account-commands {
+
+        #app-header-contacts {
+            left: -0.5em;
+        }
+        #app-header-user-account-commands {
+            right: -1em;
+        }
+
+        #app-header-contacts p,
+        #app-header-contacts a,
+        #app-header-contacts span,
+        #app-header-user-account-commands label,
+        #app-header-user-account-commands p,
+        #app-header-user-account-commands a {
+            vertical-align: top;
+            display: inline-block;
+            padding: 0 1em;
+            min-height: 35px;
+        }
+
+
+
+        #app-header-contacts {
+            position: relative;
+            }
+
+            #app-header-contacts > div {
+                vertical-align: top;
+                display: inline-block;
+            }
+
+            #app-header-contacts p {
+                min-width: 1em;
+                background-color: pink;
+            }
+
+        #app-header-user-account-commands {
             text-align: right;
-        }
-        #header-user-account-commands > div {
-            display: inline-block;
-        }
+            }
+
+            #app-header-user-account-commands div {
+                vertical-align: top;
+                display: inline-block;
+            }
 
 
-    #header-chief-bar {
+
+
+    #app-header-chief-bar {
         border-bottom: 1px solid;
         }
 
-        #header-chief-bar > .width-wrap {
+        #app-header-chief-bar > .width-wrap {
             height: 72px;
         }
 

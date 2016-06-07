@@ -294,7 +294,7 @@
 
     .r-cnr.color-transparent           [class|="corner"],
     .rounded-corners.color-transparent [class|="corner"] {
-        filter: alpha(opacity=100);
+        /* filter: alpha(opacity=100); */
         }
 
         .r-cnr.color-transparent           [class|="corner"]:before,

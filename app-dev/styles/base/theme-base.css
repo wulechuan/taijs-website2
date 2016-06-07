@@ -38,19 +38,22 @@ button:active, button:focus {
     outline-color: #157dff;
 }
 
+em {
+	color: #ff291d;
+}
 
 
-#header-info-and-links {
+#app-header-info-and-links {
 	color: #666;
     border-bottom-color: #eee;
 	}
 
-	#header-info-and-links a,
-	#header-info-and-links a:link,
-	#header-info-and-links a:visited {
+	#app-header-info-and-links a,
+	#app-header-info-and-links a:link,
+	#app-header-info-and-links a:visited {
 		color: #666;
 	}
 
-#header-chief-bar {
+#app-header-chief-bar {
     border-bottom-color: #eee;
     }

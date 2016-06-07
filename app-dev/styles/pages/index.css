@@ -22,7 +22,8 @@
 
 	#splash-slogan {
 		position: absolute;
-		width: 100%;
+		width: 70%;
+		left: 15%;
 		top: 0;
 		margin: 70px 0 10px 0;
 		text-align: center;
@@ -40,7 +41,8 @@
 
 	#splash-login-panel {
 		position: absolute;
-		width: 100%;
+		width: 70%;
+		left: 15%;
 		top: 200px;
 		text-align: center;
 	}
@@ -51,6 +53,10 @@
 		width: 202px;
 		color: white;
 		border-color: white;
+	}
+
+	#splash-login-panel button [class|="corner"] {
+        filter: alpha(opacity=100);
 	}
 
 
