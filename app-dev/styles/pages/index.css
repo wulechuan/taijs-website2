@@ -82,7 +82,6 @@
 				filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10,MakeShadow=true,ShadowOpacity=0.27);
 				-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=10,MakeShadow=true,ShadowOpacity=0.27)";
 				zoom: 1;
-				z-index: 0;
 				left: -20px;
 				top: -20px;
 			}
@@ -90,7 +89,6 @@
 			#credit-abstract > .bg {
 				background-color: black;
 				filter: alpha(opacity=60);
-				z-index: 1;
 			}
 
 			#credit-abstract .credit-spending-limitation,
@@ -98,14 +96,12 @@
 			#credit-abstract .operations {
 				position: relative;
 				text-align: center;
-				z-index: 3;
 				line-height: 1.5;
 				padding: 12px 0 21px 0;
 			}
 
 			#credit-abstract .operations {
 				padding-bottom: 10px;
-				z-index: 2;
 			}
 
 			#credit-abstract .title {
