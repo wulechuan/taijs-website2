@@ -232,6 +232,7 @@ input[type="radio"] {
 	}
 
 .width-wrap {
+	box-sizing: border-box;
 	position: relative;
 	display: block;
 	margin-left: auto;

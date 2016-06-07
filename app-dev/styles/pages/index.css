@@ -33,6 +33,7 @@
 		text-indent: 0.75em;
 		font-size: 34px;
 		line-height: 50px;
+		letter-spacing: 0.1em;
 	}
 	#splash-slogan h2 {
 		font-size: 26px;
@@ -63,7 +64,9 @@
 	}
 
 	#splash-credit-info-panel {
-		position: relative;
+		position: absolute;
+		left: 20px;
+		top: 36px;
 		}
 
 		#credit-abstract {
