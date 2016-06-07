@@ -9,8 +9,8 @@
 		margin-left: -960px;
 		background-image: url(
 			 ../../images/pages/index/splash-bg.jpg);
-	    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-	    src='../../images/pages/index/splash-bg.jpg', sizingMethod='crop');
+		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+		src='../../images/pages/index/splash-bg.jpg', sizingMethod='crop');
 	}
 
 	#splash-block > .width-wrap {
@@ -55,10 +55,92 @@
 		border-color: white;
 	}
 
-	#splash-login-panel button [class|="corner"] {
-        filter: alpha(opacity=100);
+	#splash-login-panel button:hover {
+		background-color: rgba(255, 255, 255, 0.16)!important;
 	}
 
+	#splash-login-panel button [class|="corner"] {
+		filter: alpha(opacity=100);
+	}
+
+	#splash-credit-info-panel {
+		position: relative;
+		}
+
+		#credit-abstract {
+			position: relative;
+			width: 350px;
+			min-height: 230px;
+			padding: 10px 0;
+			background-color: rgba(0, 0, 0, 0.6);
+
+			box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.32);
+			}
+
+			#credit-abstract > .ie-shadow {
+				background-color: black;
+				filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10,MakeShadow=true,ShadowOpacity=0.27);
+				-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=10,MakeShadow=true,ShadowOpacity=0.27)";
+				zoom: 1;
+				z-index: 0;
+				left: -20px;
+				top: -20px;
+			}
+
+			#credit-abstract > .bg {
+				background-color: black;
+				filter: alpha(opacity=60);
+				z-index: 1;
+			}
+
+			#credit-abstract .credit-spending-limitation,
+			#credit-abstract .credit-line,
+			#credit-abstract .operations {
+				position: relative;
+				text-align: center;
+				z-index: 3;
+				line-height: 1.5;
+				padding: 12px 0 21px 0;
+			}
+
+			#credit-abstract .operations {
+				padding-bottom: 10px;
+				z-index: 2;
+			}
+
+			#credit-abstract .title {
+				box-sizing: border-box;
+				position: absolute;
+				left: 25%;
+				width: 50%;
+				bottom: 0;
+				line-height: 20px;
+			}
+
+			#credit-abstract .title h1,
+			#credit-abstract .title h2 {
+				display: inline-block;
+				font-size: 14px;
+				vertical-align: middle;
+			}
+
+			#credit-abstract .credit-spending-limitation em {
+				font-size: 32px;
+				color: #ff9600;
+			}
+
+			#credit-abstract .credit-line em {
+				font-size: 26px;
+				color: #157dff;
+			}
+
+			#credit-abstract .operations button {
+				width: 202px;
+			}
+
+			#credit-abstract .info-block {
+				vertical-align: middle;
+			}
 
 
 .promotion-card {

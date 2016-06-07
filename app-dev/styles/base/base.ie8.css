@@ -1,566 +1,570 @@
-.cast-shadow {
-    position: relative;
-    }
-    .cast-shadow,
-    .cast-shadow .bg {
-        background-color: white;
-    }
-    .cast-shadow .ie-shadow {
-        display: block;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: 0;
+.bg {
+	display: block;
+	position: absolute;
+	border-style: solid;
+	z-index: 0;
 
-        background-color: black;
-        filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.20);
-        -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.20)";
-        zoom: 1;
-    }
-    .cast-shadow .bg {
-        display: block;
-        position: absolute;
-        padding: 0;
-        margin: -1px;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: 1;
-    }
-    .cast-shadow label {
-        z-index: 2;
-    }
+	padding: 0;
+	margin: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	}
+
+
+.cast-shadow {
+	position: relative;
+	}
+	.cast-shadow,
+	.cast-shadow .bg {
+		background-color: white;
+	}
+	.ie-shadow {
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 0;
+
+		background-color: black;
+		filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.20);
+		-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.20)";
+		zoom: 1;
+	}
+	.cast-shadow .bg {
+		margin: -1px;
+		z-index: 1;
+	}
+	.cast-shadow label {
+		z-index: 2;
+	}
 
 
 .r-tmnl,
 .rounded-terminals,
 .r-cnr,
 .rounded-corners {
-    position: relative;
-    border-color: transparent!important;
-    background-color: transparent!important;
+	position: relative;
+	border-color: transparent!important;
+	background-color: transparent!important;
 }
 
 
 .r-cnr,
 .rounded-corners {
-    }
+	}
 
-    .r-cnr           .bg,
-    .rounded-corners .bg {
-        display: block;
-        position: absolute;
-        padding: 0;
-        overflow: visible!important;
-        border-style: solid;
-        z-index: 0;
+	.r-cnr           .bg,
+	.rounded-corners .bg {
+		overflow: visible!important;
+		border-style: solid;
 
-        margin: -1px;
-        left: 12px;
-        right: 12px;
-        top: 12px;
-        bottom: 12px;
-        }
+		margin: -1px;
+		left: 12px;
+		right: 12px;
+		top: 12px;
+		bottom: 12px;
+		}
 
-        .r-cnr           .corner-1,
-        .rounded-corners .corner-1 {
-            left: -12px;
-            top: -12px;
-            background-position: left top;
-        }
-        .r-cnr           .corner-2,
-        .rounded-corners .corner-2 {
-            right: -12px;
-            top: -12px;
-            background-position: right top;
-        }
-        .r-cnr           .corner-3,
-        .rounded-corners .corner-3 {
-            right: -12px;
-            bottom: -12px;
-            background-position: right bottom;
-        }
-        .r-cnr           .corner-4,
-        .rounded-corners .corner-4 {
-            left: -12px;
-            bottom: -12px;
-            background-position: left bottom;
-        }
+		.r-cnr           .corner-1,
+		.rounded-corners .corner-1 {
+			left: -12px;
+			top: -12px;
+			background-position: left top;
+		}
+		.r-cnr           .corner-2,
+		.rounded-corners .corner-2 {
+			right: -12px;
+			top: -12px;
+			background-position: right top;
+		}
+		.r-cnr           .corner-3,
+		.rounded-corners .corner-3 {
+			right: -12px;
+			bottom: -12px;
+			background-position: right bottom;
+		}
+		.r-cnr           .corner-4,
+		.rounded-corners .corner-4 {
+			left: -12px;
+			bottom: -12px;
+			background-position: left bottom;
+		}
 
-        .r-cnr           .bg:before,
-        .rounded-corners .bg:before {
-            top: -12px;
-            bottom: -12px;
-        }
-        .r-cnr           .bg:after,
-        .rounded-corners .bg:after {
-            left: -12px;
-            right: -12px;
-        }
+		.r-cnr           .bg:before,
+		.rounded-corners .bg:before {
+			top: -12px;
+			bottom: -12px;
+		}
+		.r-cnr           .bg:after,
+		.rounded-corners .bg:after {
+			left: -12px;
+			right: -12px;
+		}
 
-        .r-cnr           .bg:before,
-        .r-cnr           .bg:after,
-        .rounded-corners .bg:before,
-        .rounded-corners .bg:after {
-            content: "";
-            display: block;
-            box-sizing: border-box;
-            position: absolute;
-            border-style: inherit!important;
-            border-color: inherit!important;
-            background-color: inherit!important;
-        }
+		.r-cnr           .bg:before,
+		.r-cnr           .bg:after,
+		.rounded-corners .bg:before,
+		.rounded-corners .bg:after {
+			content: "";
+			display: block;
+			box-sizing: border-box;
+			position: absolute;
+			border-style: inherit!important;
+			border-color: inherit!important;
+			background-color: inherit!important;
+		}
 
-        .r-cnr           .bg:before,
-        .rounded-corners .bg:before {
-            border-width: 1px 0!important;
-            left: 0px;
-            right: 0px;
-        }
-        .r-cnr           .bg:after,
-        .rounded-corners .bg:after {
-            border-width: 0 1px!important;
-            top: 0px;
-            bottom: 0px;
-        }
+		.r-cnr           .bg:before,
+		.rounded-corners .bg:before {
+			border-width: 1px 0!important;
+			left: 0px;
+			right: 0px;
+		}
+		.r-cnr           .bg:after,
+		.rounded-corners .bg:after {
+			border-width: 0 1px!important;
+			top: 0px;
+			bottom: 0px;
+		}
 
 
-    .r-cnr           [class|="corner"],
-    .rounded-corners [class|="corner"] {
-        display: block;
-        position: absolute;
-        width: 13px;
-        height: 13px;
-        white-space: nowrap;
-        overflow: hidden;
-        z-index: 0;
-        padding: 0;
-        margin: 0;
+	.r-cnr           [class|="corner"],
+	.rounded-corners [class|="corner"] {
+		display: block;
+		position: absolute;
+		width: 13px;
+		height: 13px;
+		white-space: nowrap;
+		overflow: hidden;
+		z-index: 0;
+		padding: 0;
+		margin: 0;
 
-        /* filter: alpha(opacity=100); */
+		/* filter: alpha(opacity=100); */
 
-        border: none!important;
-        font-style: normal!important;
-        font-weight: normal!important;
+		border: none!important;
+		font-style: normal!important;
+		font-weight: normal!important;
 
-        background-repeat: no-repeat!important;
-        }
+		background-repeat: no-repeat!important;
+		}
 
-        .r-cnr           [class|="corner"]:before,
-        .r-cnr           [class|="corner"]:after,
-        .rounded-corners [class|="corner"]:before,
-        .rounded-corners [class|="corner"]:after {
-            font-family:"iconfont"!important;
-            content: "\e660";
-        }
-        .r-cnr.color-transparent                [class|="corner"]:after,
-        .rounded-corners.color-transparent      [class|="corner"]:after {
-            content: none!important;
-        }
-        .r-cnr.r-cnr-png                     [class|="corner"]:before,
-        .r-cnr.r-cnr-png                     [class|="corner"]:after,
-        .rounded-corners.rounded-corners-png [class|="corner"]:before,
-        .rounded-corners.rounded-corners-png [class|="corner"]:after {
-            content: none!important;
-        }
-        .r-cnr           [class|="corner"]:before,
-        .r-cnr           [class|="corner"]:after,
-        .rounded-corners [class|="corner"]:before,
-        .rounded-corners [class|="corner"]:after {
-            display: block;
-            position: absolute;
-            white-space: nowrap;
-            overflow: hidden;
+		.r-cnr           [class|="corner"]:before,
+		.r-cnr           [class|="corner"]:after,
+		.rounded-corners [class|="corner"]:before,
+		.rounded-corners [class|="corner"]:after {
+			font-family:"iconfont"!important;
+			content: "\e660";
+		}
+		.r-cnr.color-transparent           [class|="corner"]:after,
+		.rounded-corners.color-transparent [class|="corner"]:after {
+			content: none!important;
+		}
+		.r-cnr.r-cnr-png                     [class|="corner"]:before,
+		.r-cnr.r-cnr-png                     [class|="corner"]:after,
+		.rounded-corners.rounded-corners-png [class|="corner"]:before,
+		.rounded-corners.rounded-corners-png [class|="corner"]:after {
+			content: none!important;
+		}
+		.r-cnr           [class|="corner"]:before,
+		.r-cnr           [class|="corner"]:after,
+		.rounded-corners [class|="corner"]:before,
+		.rounded-corners [class|="corner"]:after {
+			display: block;
+			position: absolute;
+			white-space: nowrap;
+			overflow: hidden;
 
-            padding: 0;
-            margin: 0;
-            width:  50px;
-            height: 50px;
+			padding: 0;
+			margin: 0;
+			width:  50px;
+			height: 50px;
 
-            background-repeat: no-repeat;
-        }
-        .r-cnr           .corner-1:before,
-        .r-cnr           .corner-2:before,
-        .rounded-corners .corner-1:before,
-        .rounded-corners .corner-2:before {
-            top: 0;
-        }
-        .r-cnr           .corner-1:after,
-        .r-cnr           .corner-2:after,
-        .rounded-corners .corner-1:after,
-        .rounded-corners .corner-2:after {
-            top: 1px;
-        }
-        .r-cnr           .corner-3:before,
-        .r-cnr           .corner-4:before,
-        .rounded-corners .corner-3:before,
-        .rounded-corners .corner-4:before {
-            bottom: 0;
-        }
-        .r-cnr           .corner-3:after,
-        .r-cnr           .corner-4:after,
-        .rounded-corners .corner-3:after,
-        .rounded-corners .corner-4:after {
-            bottom: 1px;
-        }
-        .r-cnr           .corner-1:before,
-        .r-cnr           .corner-4:before,
-        .rounded-corners .corner-1:before,
-        .rounded-corners .corner-4:before {
-            left: 0;
-        }
-        .r-cnr           .corner-1:after,
-        .r-cnr           .corner-4:after,
-        .rounded-corners .corner-1:after,
-        .rounded-corners .corner-4:after {
-            left: 1px;
-        }
-        .r-cnr           .corner-2:before,
-        .r-cnr           .corner-3:before,
-        .rounded-corners .corner-2:before,
-        .rounded-corners .corner-3:before {
-            text-align: right;
-            direction: rtl;
-            right: 0;
-        }
-        .r-cnr           .corner-2:after,
-        .r-cnr           .corner-3:after,
-        .rounded-corners .corner-2:after,
-        .rounded-corners .corner-3:after {
-            direction: rtl;
-            text-align: right;
-            right: 1px;
-        }
+			background-repeat: no-repeat;
+		}
+		.r-cnr           .corner-1:before,
+		.r-cnr           .corner-2:before,
+		.rounded-corners .corner-1:before,
+		.rounded-corners .corner-2:before {
+			top: 0;
+		}
+		.r-cnr           .corner-1:after,
+		.r-cnr           .corner-2:after,
+		.rounded-corners .corner-1:after,
+		.rounded-corners .corner-2:after {
+			top: 1px;
+		}
+		.r-cnr           .corner-3:before,
+		.r-cnr           .corner-4:before,
+		.rounded-corners .corner-3:before,
+		.rounded-corners .corner-4:before {
+			bottom: 0;
+		}
+		.r-cnr           .corner-3:after,
+		.r-cnr           .corner-4:after,
+		.rounded-corners .corner-3:after,
+		.rounded-corners .corner-4:after {
+			bottom: 1px;
+		}
+		.r-cnr           .corner-1:before,
+		.r-cnr           .corner-4:before,
+		.rounded-corners .corner-1:before,
+		.rounded-corners .corner-4:before {
+			left: 0;
+		}
+		.r-cnr           .corner-1:after,
+		.r-cnr           .corner-4:after,
+		.rounded-corners .corner-1:after,
+		.rounded-corners .corner-4:after {
+			left: 1px;
+		}
+		.r-cnr           .corner-2:before,
+		.r-cnr           .corner-3:before,
+		.rounded-corners .corner-2:before,
+		.rounded-corners .corner-3:before {
+			text-align: right;
+			direction: rtl;
+			right: 0;
+		}
+		.r-cnr           .corner-2:after,
+		.r-cnr           .corner-3:after,
+		.rounded-corners .corner-2:after,
+		.rounded-corners .corner-3:after {
+			direction: rtl;
+			text-align: right;
+			right: 1px;
+		}
 
 
 
-    .r-cnr                [class|="corner"]:before,
-    .rounded-corners      [class|="corner"]:before,
-    .r-cnr.r5px           [class|="corner"]:before,
-    .rounded-corners.r5px [class|="corner"]:before {
-        /* the original design was 40px*40px, which makes the radii being 10px */
-        /* if the font-size is 20px, then the radii are 5px */
-        font-size: 20px;
-        }
-        .r-cnr                [class|="corner"]:after,
-        .rounded-corners      [class|="corner"]:after,
-        .r-cnr.r5px           [class|="corner"]:after,
-        .rounded-corners.r5px [class|="corner"]:after {
-            font-size: 16px;
-        }
-        .r-cnr                .corner-1:before,
-        .r-cnr                .corner-2:before,
-        .r-cnr.r5px           .corner-1:before,
-        .r-cnr.r5px           .corner-2:before,
-        .rounded-corners      .corner-1:before,
-        .rounded-corners      .corner-2:before,
-        .rounded-corners.r5px .corner-1:before,
-        .rounded-corners.r5px .corner-2:before {
-            line-height: 17px;
-        }
-        .r-cnr                .corner-1:after,
-        .r-cnr                .corner-2:after,
-        .r-cnr.r5px           .corner-1:after,
-        .r-cnr.r5px           .corner-2:after,
-        .rounded-corners      .corner-1:after,
-        .rounded-corners      .corner-2:after,
-        .rounded-corners.r5px .corner-1:after,
-        .rounded-corners.r5px .corner-2:after {
-            line-height: 15px;
-        }
-        .r-cnr                .corner-3:before,
-        .r-cnr                .corner-4:before,
-        .r-cnr.r5px           .corner-3:before,
-        .r-cnr.r5px           .corner-4:before,
-        .rounded-corners      .corner-3:before,
-        .rounded-corners      .corner-4:before,
-        .rounded-corners.r5px .corner-3:before,
-        .rounded-corners.r5px .corner-4:before {
-            line-height: 78px;
-        }
-        .r-cnr                .corner-3:after,
-        .r-cnr                .corner-4:after,
-        .r-cnr.r5px           .corner-3:after,
-        .r-cnr.r5px           .corner-4:after,
-        .rounded-corners      .corner-3:after,
-        .rounded-corners      .corner-4:after,
-        .rounded-corners.r5px .corner-3:after,
-        .rounded-corners.r5px .corner-4:after {
-            line-height: 83px;
-        }
+	.r-cnr                [class|="corner"]:before,
+	.rounded-corners      [class|="corner"]:before,
+	.r-cnr.r5px           [class|="corner"]:before,
+	.rounded-corners.r5px [class|="corner"]:before {
+		/* the original design was 40px*40px, which makes the radii being 10px */
+		/* if the font-size is 20px, then the radii are 5px */
+		font-size: 20px;
+		}
+		.r-cnr                [class|="corner"]:after,
+		.rounded-corners      [class|="corner"]:after,
+		.r-cnr.r5px           [class|="corner"]:after,
+		.rounded-corners.r5px [class|="corner"]:after {
+			font-size: 16px;
+		}
+		.r-cnr                .corner-1:before,
+		.r-cnr                .corner-2:before,
+		.r-cnr.r5px           .corner-1:before,
+		.r-cnr.r5px           .corner-2:before,
+		.rounded-corners      .corner-1:before,
+		.rounded-corners      .corner-2:before,
+		.rounded-corners.r5px .corner-1:before,
+		.rounded-corners.r5px .corner-2:before {
+			line-height: 17px;
+		}
+		.r-cnr                .corner-1:after,
+		.r-cnr                .corner-2:after,
+		.r-cnr.r5px           .corner-1:after,
+		.r-cnr.r5px           .corner-2:after,
+		.rounded-corners      .corner-1:after,
+		.rounded-corners      .corner-2:after,
+		.rounded-corners.r5px .corner-1:after,
+		.rounded-corners.r5px .corner-2:after {
+			line-height: 15px;
+		}
+		.r-cnr                .corner-3:before,
+		.r-cnr                .corner-4:before,
+		.r-cnr.r5px           .corner-3:before,
+		.r-cnr.r5px           .corner-4:before,
+		.rounded-corners      .corner-3:before,
+		.rounded-corners      .corner-4:before,
+		.rounded-corners.r5px .corner-3:before,
+		.rounded-corners.r5px .corner-4:before {
+			line-height: 78px;
+		}
+		.r-cnr                .corner-3:after,
+		.r-cnr                .corner-4:after,
+		.r-cnr.r5px           .corner-3:after,
+		.r-cnr.r5px           .corner-4:after,
+		.rounded-corners      .corner-3:after,
+		.rounded-corners      .corner-4:after,
+		.rounded-corners.r5px .corner-3:after,
+		.rounded-corners.r5px .corner-4:after {
+			line-height: 83px;
+		}
 
-    .r-cnr.color-transparent           [class|="corner"],
-    .rounded-corners.color-transparent [class|="corner"] {
-        /* filter: alpha(opacity=100); */
-        }
+	.r-cnr.color-transparent           [class|="corner"],
+	.rounded-corners.color-transparent [class|="corner"] {
+		/* filter: alpha(opacity=100); */
+		}
 
-        .r-cnr.color-transparent           [class|="corner"]:before,
-        .r-cnr.r10px                       [class|="corner"]:before,
-        .rounded-corners.color-transparent [class|="corner"]:before,
-        .rounded-corners.r10px             [class|="corner"]:before {
-            /* the original design was 40px*40px, which makes the radii being 10px */
-            font-size: 40px;
-        }
-        .r-cnr.r10px                       [class|="corner"]:after,
-        .rounded-corners.r10px             [class|="corner"]:after {
-            font-size: 36px;
-        }
-        .r-cnr.color-transparent           .corner-1:before,
-        .r-cnr.color-transparent           .corner-2:before,
-        .rounded-corners.color-transparent .corner-1:before,
-        .rounded-corners.color-transparent .corner-2:before,
-        .r-cnr.r10px                       .corner-1:before,
-        .r-cnr.r10px                       .corner-2:before,
-        .rounded-corners.r10px             .corner-1:before,
-        .rounded-corners.r10px             .corner-2:before {
-            line-height: 37px;
-        }
-        .r-cnr.r10px           .corner-1:after,
-        .r-cnr.r10px           .corner-2:after,
-        .rounded-corners.r10px .corner-1:after,
-        .rounded-corners.r10px .corner-2:after {
-            line-height: 33px;
-        }
-        .r-cnr.color-transparent           .corner-3:before,
-        .r-cnr.color-transparent           .corner-4:before,
-        .rounded-corners.color-transparent .corner-3:before,
-        .rounded-corners.color-transparent .corner-4:before,
-        .r-cnr.r10px                       .corner-3:before,
-        .r-cnr.r10px                       .corner-4:before,
-        .rounded-corners.r10px             .corner-3:before,
-        .rounded-corners.r10px             .corner-4:before {
-            line-height: 57px;
-        }
-        .r-cnr.r10px           .corner-3:after,
-        .r-cnr.r10px           .corner-4:after,
-        .rounded-corners.r10px .corner-3:after,
-        .rounded-corners.r10px .corner-4:after {
-            line-height: 61px;
-        }
-        .r-cnr.color-transparent                [class|="corner"]:before,
-        .r-cnr.color-transparent.r5px           [class|="corner"]:before,
-        .rounded-corners.color-transparent      [class|="corner"]:before,
-        .rounded-corners.color-transparent.r5px [class|="corner"]:before {
-            content: "\e665";
-        }
+		.r-cnr.color-transparent           [class|="corner"]:before,
+		.r-cnr.r10px                       [class|="corner"]:before,
+		.rounded-corners.color-transparent [class|="corner"]:before,
+		.rounded-corners.r10px             [class|="corner"]:before {
+			/* the original design was 40px*40px, which makes the radii being 10px */
+			font-size: 40px;
+		}
+		.r-cnr.r10px                       [class|="corner"]:after,
+		.rounded-corners.r10px             [class|="corner"]:after {
+			font-size: 36px;
+		}
+		.r-cnr.color-transparent           .corner-1:before,
+		.r-cnr.color-transparent           .corner-2:before,
+		.rounded-corners.color-transparent .corner-1:before,
+		.rounded-corners.color-transparent .corner-2:before,
+		.r-cnr.r10px                       .corner-1:before,
+		.r-cnr.r10px                       .corner-2:before,
+		.rounded-corners.r10px             .corner-1:before,
+		.rounded-corners.r10px             .corner-2:before {
+			line-height: 37px;
+		}
+		.r-cnr.r10px           .corner-1:after,
+		.r-cnr.r10px           .corner-2:after,
+		.rounded-corners.r10px .corner-1:after,
+		.rounded-corners.r10px .corner-2:after {
+			line-height: 33px;
+		}
+		.r-cnr.color-transparent           .corner-3:before,
+		.r-cnr.color-transparent           .corner-4:before,
+		.rounded-corners.color-transparent .corner-3:before,
+		.rounded-corners.color-transparent .corner-4:before,
+		.r-cnr.r10px                       .corner-3:before,
+		.r-cnr.r10px                       .corner-4:before,
+		.rounded-corners.r10px             .corner-3:before,
+		.rounded-corners.r10px             .corner-4:before {
+			line-height: 57px;
+		}
+		.r-cnr.r10px           .corner-3:after,
+		.r-cnr.r10px           .corner-4:after,
+		.rounded-corners.r10px .corner-3:after,
+		.rounded-corners.r10px .corner-4:after {
+			line-height: 61px;
+		}
+		.r-cnr.color-transparent                [class|="corner"]:before,
+		.r-cnr.color-transparent.r5px           [class|="corner"]:before,
+		.rounded-corners.color-transparent      [class|="corner"]:before,
+		.rounded-corners.color-transparent.r5px [class|="corner"]:before {
+			content: "\e665";
+		}
 
-        .r-cnr.color-transparent.r2px           [class|="corner"]:before,
-        .rounded-corners.color-transparent.r2px [class|="corner"]:before {
-            content: "\e662";
-        }
+		.r-cnr.color-transparent.r2px           [class|="corner"]:before,
+		.rounded-corners.color-transparent.r2px [class|="corner"]:before {
+			content: "\e662";
+		}
 
-        .r-cnr.color-transparent.r3px           [class|="corner"]:before,
-        .rounded-corners.color-transparent.r3px [class|="corner"]:before {
-            content: "\e663";
-        }
+		.r-cnr.color-transparent.r3px           [class|="corner"]:before,
+		.rounded-corners.color-transparent.r3px [class|="corner"]:before {
+			content: "\e663";
+		}
 
-        .r-cnr.color-transparent.r4px           [class|="corner"]:before,
-        .rounded-corners.color-transparent.r4px [class|="corner"]:before {
-            content: "\e664";
-        }
+		.r-cnr.color-transparent.r4px           [class|="corner"]:before,
+		.rounded-corners.color-transparent.r4px [class|="corner"]:before {
+			content: "\e664";
+		}
 
-        .r-cnr.color-transparent.r6px           [class|="corner"]:before,
-        .rounded-corners.color-transparent.r6px [class|="corner"]:before {
-            content: "\e666";
-        }
+		.r-cnr.color-transparent.r6px           [class|="corner"]:before,
+		.rounded-corners.color-transparent.r6px [class|="corner"]:before {
+			content: "\e666";
+		}
 
-        .r-cnr.color-transparent.r7px           [class|="corner"]:before,
-        .rounded-corners.color-transparent.r7px [class|="corner"]:before {
-            content: "\e667";
-        }
+		.r-cnr.color-transparent.r7px           [class|="corner"]:before,
+		.rounded-corners.color-transparent.r7px [class|="corner"]:before {
+			content: "\e667";
+		}
 
-        .r-cnr.color-transparent.r8px           [class|="corner"]:before,
-        .rounded-corners.color-transparent.r8px [class|="corner"]:before {
-            content: "\e668";
-        }
+		.r-cnr.color-transparent.r8px           [class|="corner"]:before,
+		.rounded-corners.color-transparent.r8px [class|="corner"]:before {
+			content: "\e668";
+		}
 
-        .r-cnr.color-transparent.r9px           [class|="corner"]:before,
-        .rounded-corners.color-transparent.r9px [class|="corner"]:before {
-            content: "\e669";
-        }
+		.r-cnr.color-transparent.r9px           [class|="corner"]:before,
+		.rounded-corners.color-transparent.r9px [class|="corner"]:before {
+			content: "\e669";
+		}
 
-        .r-cnr.color-transparent.r10px           [class|="corner"]:before,
-        .rounded-corners.color-transparent.r10px [class|="corner"]:before {
-            content: "\e66a";
-        }
+		.r-cnr.color-transparent.r10px           [class|="corner"]:before,
+		.rounded-corners.color-transparent.r10px [class|="corner"]:before {
+			content: "\e66a";
+		}
 
-        .r-cnr.color-transparent.r12px           [class|="corner"]:before,
-        .rounded-corners.color-transparent.r12px [class|="corner"]:before {
-            content: "\e66b";
-        }
+		.r-cnr.color-transparent.r12px           [class|="corner"]:before,
+		.rounded-corners.color-transparent.r12px [class|="corner"]:before {
+			content: "\e66b";
+		}
 
-        .r-cnr.color-transparent.r15px           [class|="corner"]:before,
-        .rounded-corners.color-transparent.r15px [class|="corner"]:before {
-            content: "\e66c";
-        }
+		.r-cnr.color-transparent.r15px           [class|="corner"]:before,
+		.rounded-corners.color-transparent.r15px [class|="corner"]:before {
+			content: "\e66c";
+		}
 
 
 .r-tmnl,
 .rounded-terminals {
-    }
+	}
 
-    .r-tmnl            .bg,
-    .rounded-terminals .bg {
-        display: block;
-        position: absolute;
-        padding: 0;
-        overflow: visible!important;
+	.r-tmnl            .bg,
+	.rounded-terminals .bg {
+		display: block;
+		position: absolute;
+		padding: 0;
+		overflow: visible!important;
 
-        border-style: solid;
-        z-index: 0;
+		border-style: solid;
+		z-index: 0;
 
-        margin: -1px;
-        left: 1.5em;
-        right: 1.5em;
-        top: 0;
-        bottom: 0;
-        }
+		margin: -1px;
+		left: 1.5em;
+		right: 1.5em;
+		top: 0;
+		bottom: 0;
+		}
 
-        .r-tmnl            .corner-1,
-        .r-tmnl            .corner-2,
-        .rounded-terminals .corner-1,
-        .rounded-terminals .corner-2 {
-            width: 1.5em;
-        }
+		.r-tmnl            .corner-1,
+		.r-tmnl            .corner-2,
+		.rounded-terminals .corner-1,
+		.rounded-terminals .corner-2 {
+			width: 1.5em;
+		}
 
-        .r-tmnl            .corner-1,
-        .rounded-terminals .corner-1 {
-            left: -1.5em;
-            background-position: left top;
-        }
-        .r-tmnl            .corner-2,
-        .rounded-terminals .corner-2 {
-            right: -1.5em;
-            background-position: right top;
-        }
+		.r-tmnl            .corner-1,
+		.rounded-terminals .corner-1 {
+			left: -1.5em;
+			background-position: left top;
+		}
+		.r-tmnl            .corner-2,
+		.rounded-terminals .corner-2 {
+			right: -1.5em;
+			background-position: right top;
+		}
 
-        .r-tmnl            .bg:before,
-        .rounded-terminals .bg:before {
-            content: "";
-            display: block;
-            box-sizing: border-box;
-            position: absolute;
-            border-width: 1px 0!important;
-            border-style: inherit!important;
-            border-color: inherit!important;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-        }
+		.r-tmnl            .bg:before,
+		.rounded-terminals .bg:before {
+			content: "";
+			display: block;
+			box-sizing: border-box;
+			position: absolute;
+			border-width: 1px 0!important;
+			border-style: inherit!important;
+			border-color: inherit!important;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
 
-    .r-tmnl            [class|="corner"],
-    .rounded-terminals [class|="corner"] {
-        display: block;
-        position: absolute;
-        height: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        z-index: 0;
-        padding: 0;
-        margin: 0;
+	.r-tmnl            [class|="corner"],
+	.rounded-terminals [class|="corner"] {
+		display: block;
+		position: absolute;
+		height: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		z-index: 0;
+		padding: 0;
+		margin: 0;
 
-        /* filter: alpha(opacity=100); */
+		/* filter: alpha(opacity=100); */
 
-        border: none!important;
-        font-style: normal!important;
-        font-weight: normal!important;
-        background-repeat: no-repeat!important;
+		border: none!important;
+		font-style: normal!important;
+		font-weight: normal!important;
+		background-repeat: no-repeat!important;
 
-        top: 0;
-        }
-
-
-        .r-tmnl            [class|="corner"]:before,
-        .r-tmnl            [class|="corner"]:after,
-        .rounded-terminals [class|="corner"]:before,
-        .rounded-terminals [class|="corner"]:after {
-            font-family:"iconfont"!important;
-            content: "\e661";
-        }
-        .r-tmnl.r-tmnl-png                       [class|="corner"]:before,
-        .r-tmnl.r-tmnl-png                       [class|="corner"]:after,
-        .rounded-terminals.rounded-terminals-png [class|="corner"]:before,
-        .rounded-terminals.rounded-terminals-png [class|="corner"]:after {
-            content: none!important;
-        }
-        .r-tmnl            [class|="corner"]:before,
-        .r-tmnl            [class|="corner"]:after,
-        .rounded-terminals [class|="corner"]:before,
-        .rounded-terminals [class|="corner"]:after {
-            display: block;
-            position: absolute;
-            white-space: nowrap;
-            overflow: hidden;
-
-            padding: 0;
-            margin: 0;
-            width:  100px;
-            height: 100%;
-
-            background-repeat: no-repeat;
-            background-color: none!important;
-        }
-        .r-tmnl            [class|="corner"]:before,
-        .rounded-terminals [class|="corner"]:before {
-            top: 0;
-        }
-        .r-tmnl            [class|="corner"]:after,
-        .rounded-terminals [class|="corner"]:after {
-            top: 1px;
-        }
-        .r-tmnl            .corner-1:before,
-        .rounded-terminals .corner-1:before {
-            left: 0;
-        }
-        .r-tmnl            .corner-1:after,
-        .rounded-terminals .corner-1:after {
-            left: 1px;
-        }
-        .r-tmnl            .corner-2:before,
-        .rounded-terminals .corner-2:before {
-            text-align: right;
-            direction: rtl;
-            right: 0;
-        }
-        .r-tmnl            .corner-2:after,
-        .rounded-terminals .corner-2:after {
-            direction: rtl;
-            text-align: right;
-            right: 1px;
-        }
+		top: 0;
+		}
 
 
-    .r-tmnl            [class|="corner"]:before,
-    .rounded-terminals [class|="corner"]:before {
-        /* the original design was 80px*80px, which makes the radii being 40px */
-        font-size: 80px;
-        line-height: 73.5px;
-        }
-        .r-tmnl            [class|="corner"]:after,
-        .rounded-terminals [class|="corner"]:after {
-            font-size: 76.1px;
-            line-height: 69.1px;
-        }
+		.r-tmnl            [class|="corner"]:before,
+		.r-tmnl            [class|="corner"]:after,
+		.rounded-terminals [class|="corner"]:before,
+		.rounded-terminals [class|="corner"]:after {
+			font-family:"iconfont"!important;
+			content: "\e661";
+		}
+		.r-tmnl.r-tmnl-png                       [class|="corner"]:before,
+		.r-tmnl.r-tmnl-png                       [class|="corner"]:after,
+		.rounded-terminals.rounded-terminals-png [class|="corner"]:before,
+		.rounded-terminals.rounded-terminals-png [class|="corner"]:after {
+			content: none!important;
+		}
+		.r-tmnl            [class|="corner"]:before,
+		.r-tmnl            [class|="corner"]:after,
+		.rounded-terminals [class|="corner"]:before,
+		.rounded-terminals [class|="corner"]:after {
+			display: block;
+			position: absolute;
+			white-space: nowrap;
+			overflow: hidden;
+
+			padding: 0;
+			margin: 0;
+			width:  100px;
+			height: 100%;
+
+			background-repeat: no-repeat;
+			background-color: none!important;
+		}
+		.r-tmnl            [class|="corner"]:before,
+		.rounded-terminals [class|="corner"]:before {
+			top: 0;
+		}
+		.r-tmnl            [class|="corner"]:after,
+		.rounded-terminals [class|="corner"]:after {
+			top: 1px;
+		}
+		.r-tmnl            .corner-1:before,
+		.rounded-terminals .corner-1:before {
+			left: 0;
+		}
+		.r-tmnl            .corner-1:after,
+		.rounded-terminals .corner-1:after {
+			left: 1px;
+		}
+		.r-tmnl            .corner-2:before,
+		.rounded-terminals .corner-2:before {
+			text-align: right;
+			direction: rtl;
+			right: 0;
+		}
+		.r-tmnl            .corner-2:after,
+		.rounded-terminals .corner-2:after {
+			direction: rtl;
+			text-align: right;
+			right: 1px;
+		}
+
+
+	.r-tmnl            [class|="corner"]:before,
+	.rounded-terminals [class|="corner"]:before {
+		/* the original design was 80px*80px, which makes the radii being 40px */
+		font-size: 80px;
+		line-height: 73.5px;
+		}
+		.r-tmnl            [class|="corner"]:after,
+		.rounded-terminals [class|="corner"]:after {
+			font-size: 76.1px;
+			line-height: 69.1px;
+		}
 
 
 
 
 button {
-    overflow: visible;
+	overflow: visible;
 }
 button label {
-    position: relative;
-    width: 100%;
-    display: block;
-    border: none!important;
-    padding: 0;
-    margin: 0;
-    min-height: inherit;
-    z-index: 1;
+	position: relative;
+	width: 100%;
+	display: block;
+	border: none!important;
+	padding: 0;
+	margin: 0;
+	min-height: inherit;
+	z-index: 1;
 }
 
 
@@ -576,18 +580,18 @@ button label {
 .rounded-terminals .bg,
 .r-cnr             .bg,
 .rounded-corners   .bg {
-    border-color: black;
-    background-color: white;
+	border-color: black;
+	background-color: white;
 }
 .r-cnr.color-transparent           .bg,
 .rounded-corners.color-transparent .bg {
-    background-color: transparent!important;
+	background-color: transparent!important;
 }
 [class|="corner"]:before {
-    color: black;
+	color: black;
 }
 [class|="corner"]:after {
-    color: white;
+	color: white;
 }
 
 

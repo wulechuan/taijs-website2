@@ -16,8 +16,19 @@ input[type="submit"].color-chief,
 input[type="reset"].color-chief,
 button.color-chief {
 	color: white;
-    border-color: #157dff;
-    background-color: #157dff;
+	border-color: #157dff;
+	background-color: #157dff;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover,
+input[type="button"].color-chief:hover,
+input[type="submit"].color-chief:hover,
+input[type="reset"].color-chief:hover,
+button.color-chief:hover {
+	background-color: #3f93ff;
 }
 
 input[type="button"].color-transparent,
@@ -30,12 +41,12 @@ button.color-transparent {
 input:active,  input:focus,
 select:active, select:focus,
 label:active,  label:focus {
-    border-color: #157dff;
-    outline-color: #157dff;
+	border-color: #157dff;
+	outline-color: #157dff;
 }
 
 button:active, button:focus {
-    outline-color: #157dff;
+	outline-color: #157dff;
 }
 
 em {
@@ -43,17 +54,38 @@ em {
 }
 
 
-#app-header-info-and-links {
-	color: #666;
-    border-bottom-color: #eee;
+
+.info-block .info-locator .info {
+	background-color: white;
+	border-color: #157dff;
+	color: #333;
+}
+
+
+#app-header {
+	background-color: white;
 	}
 
-	#app-header-info-and-links a,
-	#app-header-info-and-links a:link,
-	#app-header-info-and-links a:visited {
+	#app-header-info-and-links {
 		color: #666;
-	}
+		border-bottom-color: #eee;
+		}
 
-#app-header-chief-bar {
-    border-bottom-color: #eee;
-    }
+		#app-header-info-and-links a:hover,
+		#app-header-info-and-links button.simple-look:hover {
+			background-color: #f3f3f3;
+		}
+
+		#app-header-info-and-links a,
+		#app-header-info-and-links a:link,
+		#app-header-info-and-links a:visited {
+			color: #666;
+		}
+
+		#app-header-info-and-links button.simple-look .iconfont {
+			color: #999;
+		}
+
+	#app-header-chief-bar {
+		border-bottom-color: #eee;
+		}
