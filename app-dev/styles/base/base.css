@@ -106,8 +106,6 @@ input[type="radio"] {
 	.rounded-corners.color-transparent {
 		background-color: transparent!important;
 	}
-	.r-cnr           .bg,
-	.rounded-corners .bg,
 	.r-cnr           [class|="corner"],
 	.rounded-corners [class|="corner"] {
 		display: none;

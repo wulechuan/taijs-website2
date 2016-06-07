@@ -69,48 +69,49 @@
 	.rounded-corners .bg {
 		overflow: visible!important;
 		border-style: solid;
+		border-width: 0px;
 
 		margin: -1px;
-		left: 12px;
-		right: 12px;
-		top: 12px;
-		bottom: 12px;
+		left: 13px;
+		right: 13px;
+		top: 13px;
+		bottom: 13px;
 		}
 
 		.r-cnr           .corner-1,
 		.rounded-corners .corner-1 {
-			left: -12px;
-			top: -12px;
+			left: -13px;
+			top: -13px;
 			background-position: left top;
 		}
 		.r-cnr           .corner-2,
 		.rounded-corners .corner-2 {
-			right: -12px;
-			top: -12px;
+			right: -13px;
+			top: -13px;
 			background-position: right top;
 		}
 		.r-cnr           .corner-3,
 		.rounded-corners .corner-3 {
-			right: -12px;
-			bottom: -12px;
+			right: -13px;
+			bottom: -13px;
 			background-position: right bottom;
 		}
 		.r-cnr           .corner-4,
 		.rounded-corners .corner-4 {
-			left: -12px;
-			bottom: -12px;
+			left: -13px;
+			bottom: -13px;
 			background-position: left bottom;
 		}
 
 		.r-cnr           .bg:before,
 		.rounded-corners .bg:before {
-			top: -12px;
-			bottom: -12px;
+			top: -13px;
+			bottom: -13px;
 		}
 		.r-cnr           .bg:after,
 		.rounded-corners .bg:after {
-			left: -12px;
-			right: -12px;
+			left: -13px;
+			right: -13px;
 		}
 
 		.r-cnr           .bg:before,
@@ -422,6 +423,7 @@
 		overflow: visible!important;
 
 		border-style: solid;
+		border-width: 0;
 		z-index: 0;
 
 		margin: -1px;
