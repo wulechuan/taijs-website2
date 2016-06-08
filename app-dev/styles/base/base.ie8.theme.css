@@ -2,15 +2,15 @@ input[type="reset"].cast-shadow,
 input[type="submit"].cast-shadow,
 input[type="button"].cast-shadow,
 button.cast-shadow,
-button.cast-shadow .bg,
-.r-tmnl                          .bg,
-.r-tmnl.color-default            .bg,
-.rounded-terminals               .bg,
-.rounded-terminals.color-default .bg,
-.r-cnr                           .bg,
-.r-cnr.color-default             .bg,
-.rounded-corners                 .bg,
-.rounded-corners.color-default   .bg {
+button.cast-shadow .ie-bg,
+.r-tmnl                          .ie-bg,
+.r-tmnl.color-default            .ie-bg,
+.rounded-terminals               .ie-bg,
+.rounded-terminals.color-default .ie-bg,
+.r-cnr                           .ie-bg,
+.r-cnr.color-default             .ie-bg,
+.rounded-corners                 .ie-bg,
+.rounded-corners.color-default   .ie-bg {
     border-color: #157dff;
     background-color: #157dff;
 }
@@ -35,15 +35,15 @@ input[type="reset"].cast-shadow:hover,
 input[type="submit"].cast-shadow:hover,
 input[type="button"].cast-shadow:hover,
 button.cast-shadow:hover,
-button.cast-shadow:hover .bg,
-.r-tmnl:hover                          .bg,
-.r-tmnl.color-default:hover            .bg,
-.rounded-terminals:hover               .bg,
-.rounded-terminals.color-default:hover .bg,
-.r-cnr:hover                           .bg,
-.r-cnr.color-default:hover             .bg,
-.rounded-corners:hover                 .bg,
-.rounded-corners.color-default :hover  .bg {
+button.cast-shadow:hover .ie-bg,
+.r-tmnl:hover                          .ie-bg,
+.r-tmnl.color-default:hover            .ie-bg,
+.rounded-terminals:hover               .ie-bg,
+.rounded-terminals.color-default:hover .ie-bg,
+.r-cnr:hover                           .ie-bg,
+.r-cnr.color-default:hover             .ie-bg,
+.rounded-corners:hover                 .ie-bg,
+.rounded-corners.color-default :hover  .ie-bg {
     background-color: #3f93ff;
 }
 
@@ -70,7 +70,7 @@ button.cast-shadow:hover .bg,
 .color-pink [class|="corner"]:after {
     color: pink;
 }
-.color-pink .bg {
+.color-pink .ie-bg {
     border-color: red;
     background-color: pink;
 }

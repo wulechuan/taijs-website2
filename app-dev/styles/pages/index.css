@@ -3,7 +3,7 @@
 	background-color: #6b76ad;
 	}
 
-	#splash-block .row-bg:before {
+	#splash-block > .ie-bg:before {
 		width: 1920px;
 		left: 50%;
 		margin-left: -960px;
@@ -49,7 +49,7 @@
 	}
 
 	#splash-login-panel button [class|="corner"]:before,
-	#splash-login-panel button .bg,
+	#splash-login-panel button .ie-bg,
 	#splash-login-panel button {
 		color: white;
 		border-color: white;
@@ -88,7 +88,7 @@
 				top: -20px;
 			}
 
-			#credit-abstract > .bg {
+			#credit-abstract > .ie-bg {
 				background-color: black;
 				filter: alpha(opacity=60);
 			}
@@ -169,7 +169,7 @@
 	background-position: center top;
 	}
 	
-	#pl-taijs-app-promotion .bg {
+	#pl-taijs-app-promotion .ie-bg {
 	}
 
 	#pl-taijs-app-promotion .title {

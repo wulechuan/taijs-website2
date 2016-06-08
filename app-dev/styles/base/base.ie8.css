@@ -1,4 +1,4 @@
-.bg {
+.ie-bg {
 	display: block;
 	position: absolute;
 	border-style: solid;
@@ -13,7 +13,7 @@
 	}
 
 
-.bg ~ .content {
+.ie-bg ~ .content {
 	position: relative;
 	z-index: 1;
 }
@@ -22,7 +22,7 @@
 .cast-shadow {
 	position: relative;
 	}
-	.cast-shadow .bg {
+	.cast-shadow .ie-bg {
 		background-color: white;
 	}
 	.ie-shadow {
@@ -39,11 +39,11 @@
 		-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.20)";
 		zoom: 1;
 	}
-	.cast-shadow .bg {
+	.cast-shadow .ie-bg {
 		margin: -1px;
 		z-index: 1;
 	}
-	.cast-shadow .bg ~ .content {
+	.cast-shadow .ie-bg ~ .content {
 		z-index: 2;
 	}
 	.cast-shadow label {
@@ -65,8 +65,8 @@
 .rounded-corners {
 	}
 
-	.r-cnr           .bg,
-	.rounded-corners .bg {
+	.r-cnr           .ie-bg,
+	.rounded-corners .ie-bg {
 		overflow: visible!important;
 		border-style: solid;
 		border-width: 0px;
@@ -103,21 +103,21 @@
 			background-position: left bottom;
 		}
 
-		.r-cnr           .bg:before,
-		.rounded-corners .bg:before {
+		.r-cnr           .ie-bg:before,
+		.rounded-corners .ie-bg:before {
 			top: -13px;
 			bottom: -13px;
 		}
-		.r-cnr           .bg:after,
-		.rounded-corners .bg:after {
+		.r-cnr           .ie-bg:after,
+		.rounded-corners .ie-bg:after {
 			left: -13px;
 			right: -13px;
 		}
 
-		.r-cnr           .bg:before,
-		.r-cnr           .bg:after,
-		.rounded-corners .bg:before,
-		.rounded-corners .bg:after {
+		.r-cnr           .ie-bg:before,
+		.r-cnr           .ie-bg:after,
+		.rounded-corners .ie-bg:before,
+		.rounded-corners .ie-bg:after {
 			content: "";
 			display: block;
 			box-sizing: border-box;
@@ -127,14 +127,14 @@
 			background-color: inherit!important;
 		}
 
-		.r-cnr           .bg:before,
-		.rounded-corners .bg:before {
+		.r-cnr           .ie-bg:before,
+		.rounded-corners .ie-bg:before {
 			border-width: 1px 0!important;
 			left: 0px;
 			right: 0px;
 		}
-		.r-cnr           .bg:after,
-		.rounded-corners .bg:after {
+		.r-cnr           .ie-bg:after,
+		.rounded-corners .ie-bg:after {
 			border-width: 0 1px!important;
 			top: 0px;
 			bottom: 0px;
@@ -411,8 +411,8 @@
 .rounded-terminals {
 	}
 
-	.r-tmnl            .bg,
-	.rounded-terminals .bg {
+	.r-tmnl            .ie-bg,
+	.rounded-terminals .ie-bg {
 		display: block;
 		position: absolute;
 		padding: 0;
@@ -447,8 +447,8 @@
 			background-position: right top;
 		}
 
-		.r-tmnl            .bg:before,
-		.rounded-terminals .bg:before {
+		.r-tmnl            .ie-bg:before,
+		.rounded-terminals .ie-bg:before {
 			content: "";
 			display: block;
 			box-sizing: border-box;
@@ -577,15 +577,15 @@ button label {
 
 
 
-.r-tmnl            .bg,
-.rounded-terminals .bg,
-.r-cnr             .bg,
-.rounded-corners   .bg {
+.r-tmnl            .ie-bg,
+.rounded-terminals .ie-bg,
+.r-cnr             .ie-bg,
+.rounded-corners   .ie-bg {
 	border-color: black;
 	background-color: white;
 }
-.r-cnr.color-transparent           .bg,
-.rounded-corners.color-transparent .bg {
+.r-cnr.color-transparent           .ie-bg,
+.rounded-corners.color-transparent .ie-bg {
 	background-color: transparent!important;
 }
 [class|="corner"]:before {

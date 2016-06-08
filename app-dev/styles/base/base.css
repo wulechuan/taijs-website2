@@ -97,7 +97,7 @@ input[type="radio"] {
 
 
 
-.bg {
+.ie-bg {
 	display: none;
 }
 
@@ -175,8 +175,8 @@ input[type="radio"] {
 	padding-left: 1.5em;
 	padding-right: 1.5em;
 	}
-	.r-tmnl            .bg,
-	.rounded-terminals .bg,
+	.r-tmnl            .ie-bg,
+	.rounded-terminals .ie-bg,
 	.r-tmnl            [class|="corner"],
 	.rounded-terminals [class|="corner"] {
 		display: none;
@@ -205,7 +205,7 @@ input[type="radio"] {
 	float: none;
 	}
 
-	.row-bg {
+	.row > .ie-bg {
 		overflow: hidden;
 		display: block;
 		position: absolute;
@@ -219,7 +219,7 @@ input[type="radio"] {
 		z-index: 0;
 	}
 
-	.row-bg:before {
+	.row > .ie-bg:before {
 		content: '';
 		display: block;
 		position: absolute;
@@ -374,7 +374,7 @@ input[type="radio"] {
 
 	.popup-layers-container-backplate {
 		box-sizing: border-box;
-		/* display: none; */
+		display: none;
 		width: 100%;
 		height: 100%;
 		padding: 0;
@@ -420,6 +420,7 @@ input[type="radio"] {
 	right: 0;
 	bottom: 0;
 	z-index: 0;
+	display: none;
 	}
 
 	.popup-layer.current {
