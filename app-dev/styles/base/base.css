@@ -352,7 +352,7 @@ input[type="radio"] {
 		font-family:"iconfont" !important;
 		content: '\e61e';
 		position: relative;
-		font-size: 20px;
+		font-size: 16px;
 	}
 
 
@@ -437,4 +437,8 @@ input[type="radio"] {
 		bottom: 0;
 		max-width: 90%;
 		max-height: 90%;
+	}
+
+	.popup-window .content {
+		overflow: hidden;
 	}
