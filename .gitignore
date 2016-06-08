@@ -4,6 +4,7 @@ node_modules/*
 readme.html
 docs/*.html
 /utilities/*
+*.sublime-workspace
 *.sublime\-workspace
 
 

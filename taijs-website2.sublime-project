@@ -3,7 +3,13 @@
 	[
 		{
 			"path": ".",
-			"folder_exclude_patterns": ["node_modules", "_temp", "app-dist", "utilities"],
+			"folder_exclude_patterns": [
+				"node_modules",
+				"app-dist",
+				"utilities",
+				"_temp",
+				"app-dist-cache",
+			],
 			"file_exclude_patterns": []
 		}
 	]

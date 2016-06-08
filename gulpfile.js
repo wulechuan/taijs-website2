@@ -1,6 +1,7 @@
-var pathSrcRoot  = 'app-dev';
-var pathDistRoot = 'app-dist';
-var pathTempRoot = '_temp';
+var pathSrcRoot          = 'app-dev';
+var pathDistRoot         = 'app-dist';
+var pathNewDistCacheRoot = 'app-dist-cache';
+var pathTempRoot         = '_temp';
 
 // 文件夹结构：
 //
@@ -29,6 +30,7 @@ var del = require('del'); // 用来删除文件，例如，总是在输出之前
 
 var inject = require('gulp-inject');
 var rename = require('gulp-rename'); // 方便的重命名文件
+var changeContent = require('gulp-change'); // 方便的文件编辑插件
 var concat = require('gulp-concat');
 // var groupConcat = require('gulp-group-concat');
 
@@ -72,7 +74,7 @@ var htmlmin = require('gulp-htmlmin');
 gulp.task('before-everything', () => {
   console.log('           >>>>>>>>  Deleting old temp files...');
   return del([
-    pathTempRoot,
+    pathNewDistCacheRoot,
   ]);
 });
 
@@ -94,7 +96,7 @@ gulp.task('styles-base', ['before-everything'], () => {
       .pipe(cssnano())
     .pipe(sourcemaps.write('.'))
 
-    .pipe(gulp.dest(pathTempRoot+'/styles/base/')) // 将文件写入指定文件夹
+    .pipe(gulp.dest(pathNewDistCacheRoot+'/styles/base/')) // 将文件写入指定文件夹
   ;
 });
 
@@ -103,7 +105,7 @@ gulp.task('styles-iconfonts', ['before-everything'], () => {
     pathSrcRoot+'/styles/base/iconfonts/*',
     '!'+pathSrcRoot+'/styles/base/iconfonts/*.css', //前面加一个惊叹号，代表忽略这个glob。
   ])
-    .pipe(gulp.dest(pathTempRoot+'/styles/base/')) // 将文件写入指定文件夹
+    .pipe(gulp.dest(pathNewDistCacheRoot+'/styles/base/')) // 将文件写入指定文件夹
   ;
 });
 
@@ -130,7 +132,7 @@ gulp.task('styles-specific', ['before-everything'], () => {
       }))
     .pipe(sourcemaps.write('.'))
 
-    .pipe(gulp.dest(pathTempRoot+'/styles')) // 将文件写入指定文件夹
+    .pipe(gulp.dest(pathNewDistCacheRoot+'/styles')) // 将文件写入指定文件夹
   ;
 });
 
@@ -143,7 +145,7 @@ gulp.task('styles', [
   'styles-specific'
 ], () => {
   return gulp.src([
-    pathTempRoot+'/styles/**/*.css'
+    pathNewDistCacheRoot+'/styles/**/*.css'
   ])
     .pipe(logFileSizes({title: '>>>>>>>>  Reporting Files:    CSS', showFiles: false})) // 为了装逼，在命令行窗口中打印一下文件尺寸
   ;
@@ -178,7 +180,7 @@ gulp.task('scripts-unglify', ['es-lint'], () => {
       }))
     .pipe(sourcemaps.write('.'))
 
-    .pipe(gulp.dest(pathTempRoot+'/scripts')) // 将文件写入指定文件夹
+    .pipe(gulp.dest(pathNewDistCacheRoot+'/scripts')) // 将文件写入指定文件夹
   ;
 });
 
@@ -187,21 +189,40 @@ gulp.task('scripts-vendors', ['before-everything'], () => {
     pathSrcRoot+'/scripts/vendors/**/*'
   ])
     // .pipe(concat('vendors.min.js'))
-    .pipe(gulp.dest(pathTempRoot+'/scripts/vendors/')) // 将文件写入指定文件夹
+    .pipe(gulp.dest(pathNewDistCacheRoot+'/scripts/vendors/')) // 将文件写入指定文件夹
   ;
 });
 
 gulp.task('scripts', ['scripts-unglify', 'scripts-vendors'], () => {
   return gulp.src([
-    pathTempRoot+'/scripts/**/*.js'
+    pathNewDistCacheRoot+'/scripts/**/*.js'
   ])
     .pipe(logFileSizes({title: '>>>>>>>>  Reporting Files:     JS', showFiles: false})) // 为了装逼，在命令行窗口中打印一下文件尺寸
   ;
 });
 
+gulp.task('copy-html-snippets-files-to-temp-folder',  ['before-everything'], () => {
+  return gulp.src([
+    pathSrcRoot+'/html-snippets/**/*'
+  ])
+    .pipe(gulp.dest(pathTempRoot+/html-snippets/)) // 将文件写入指定文件夹
+  ;
+});
 
+gulp.task('pre-process-html-snippets',  ['copy-html-snippets-files-to-temp-folder'], () => {
+  return gulp.src([
+    pathTempRoot+'/html-snippets/module-app-footer.html'
+  ])
+    .pipe(changeContent((fileContentString) => {
+        var thisYear = new Date().getFullYear();
+        return fileContentString.replace(/(\&copy\;\s*)\d+/g, '$1'+thisYear);
+      })
+    )
+    .pipe(gulp.dest(pathTempRoot+'/html-snippets/')) // 将文件写入指定文件夹
+  ;
+});
 
-gulp.task('html-inject-snippets', ['before-everything'], () => {
+gulp.task('html-inject-snippets', ['pre-process-html-snippets'], () => {
   function getHtmlSnippetString(fullPathName, snippetFile, index, count, targetFile) {
     var snippetString = snippetFile.contents ? snippetFile.contents.toString('utf8') : '';
     var fileRelativePathName = targetFile.path.slice(targetFile.base.length);
@@ -213,11 +234,11 @@ gulp.task('html-inject-snippets', ['before-everything'], () => {
     return snippetString;
   }
 
-  var pathSnippetsRoot = pathSrcRoot+'/html-snippets/';
+  var pathSnippetsRoot = pathTempRoot+'/html-snippets/';
 
   return gulp.src([
     pathSrcRoot+'/**/*.html',
-    '!'+pathSnippetsRoot+'**/*'
+    '!'+pathSrcRoot+'/html-snippets/**/*' // 我们要排除的是源文件夹的片段，而不是临时文件夹的片段
   ])
 
     .pipe(inject(gulp.src([
@@ -290,15 +311,15 @@ gulp.task('html-inject-snippets', ['before-everything'], () => {
       transform: getHtmlSnippetString
     }))
 
-    .pipe(gulp.dest(pathTempRoot)) // 将文件写入指定文件夹
+    .pipe(gulp.dest(pathNewDistCacheRoot)) // 将文件写入指定文件夹
   ;
 });
 
 
 gulp.task('html', ['html-inject-snippets'], () => {
   return gulp.src([
-    pathTempRoot+'/**/*.html',
-    '!'+pathTempRoot+'/html-snippets/*'
+    pathNewDistCacheRoot+'/**/*.html',
+    '!'+pathNewDistCacheRoot+'/html-snippets/*'
   ])
     .pipe(htmlmin({
       removeComments: true,
@@ -313,7 +334,7 @@ gulp.task('html', ['html-inject-snippets'], () => {
     }))
 
     .pipe(logFileSizes({title: '>>>>>>>>  Reporting Files:   HTML', showFiles: false})) // 为了装逼，在命令行窗口中打印一下文件尺寸
-    .pipe(gulp.dest(pathTempRoot)) // 将文件写入指定文件夹
+    .pipe(gulp.dest(pathNewDistCacheRoot)) // 将文件写入指定文件夹
   ;
 });
 
@@ -323,7 +344,7 @@ gulp.task('fonts', ['before-everything'], () => {
     pathSrcRoot+'/fonts/**/*'
   ])
     .pipe(logFileSizes({title: '>>>>>>>>  Reporting Files:  Fonts'})) // 为了装逼，在命令行窗口中打印一下文件尺寸
-    .pipe(gulp.dest(pathTempRoot+'/fonts')) // 将文件写入指定文件夹
+    .pipe(gulp.dest(pathNewDistCacheRoot+'/fonts')) // 将文件写入指定文件夹
   ;
 });
 
@@ -332,13 +353,13 @@ gulp.task('images', ['before-everything'], () => {
     pathSrcRoot+'/images/**/*'
   ])
     .pipe(logFileSizes({title: '>>>>>>>>  Reporting Files: Images'})) // 为了装逼，在命令行窗口中打印一下文件尺寸
-    .pipe(gulp.dest(pathTempRoot+'/images')) // 将文件写入指定文件夹
+    .pipe(gulp.dest(pathNewDistCacheRoot+'/images')) // 将文件写入指定文件夹
   ;
 });
 
 
 
-gulp.task('prepare-all-new-files-in-temp-folder', [
+gulp.task('prepare-all-new-files-in-cache', [
   'fonts',
   'images',
   'styles',
@@ -349,7 +370,7 @@ gulp.task('prepare-all-new-files-in-temp-folder', [
 
 
 gulp.task('delete-old-dist', [
-  'prepare-all-new-files-in-temp-folder'
+  'prepare-all-new-files-in-cache'
 ], () => {
   console.log('           >>>>>>>>  Deleting old distribution files...');
 
@@ -359,34 +380,34 @@ gulp.task('delete-old-dist', [
 });
 
 
-gulp.task('ship-all-temp-files', [
+gulp.task('ship-cached-files', [
   'delete-old-dist'
 ], () => {
   var shouldCopyFilesInsteadOfRenameFolder = false;
 
   if (shouldCopyFilesInsteadOfRenameFolder) {
 
-    console.log('           >>>>>>>>  Copying all files from "'+pathTempRoot+'" to "'+pathDistRoot+'"...');
-    return gulp.src([pathTempRoot+'/**/*'])
+    console.log('           >>>>>>>>  Copying all files from "'+pathNewDistCacheRoot+'" to "'+pathDistRoot+'"...');
+    return gulp.src([pathNewDistCacheRoot+'/**/*'])
       .pipe(gulp.dest(pathDistRoot)) // 将文件写入指定文件夹
     ;
 
   } else {
 
-    console.log('           >>>>>>>>  Reanming "'+pathTempRoot+'" folder into "'+pathDistRoot+'"...');
-    fileSystem.renameSync(pathTempRoot, pathDistRoot);
+    console.log('           >>>>>>>>  Reanming "'+pathNewDistCacheRoot+'" folder into "'+pathDistRoot+'"...');
+    fileSystem.renameSync(pathNewDistCacheRoot, pathDistRoot);
 
   }
 });
 
 
 gulp.task('finishing-after-shipping', [
-  'ship-all-temp-files'
+  'ship-cached-files'
 ], () => {
-  console.log('           >>>>>>>>  Deleting useless files that shipped....');
+  console.log('           >>>>>>>>  Deleting useless files...');
 
   return del([
-    pathDistRoot+'/html-snippets/'
+    pathTempRoot
   ]);
 });
 
@@ -436,7 +457,8 @@ gulp.task('del', () => {
   } catch (e) {
     console.log('using del...');
     del([
-      // pathTempRoot,
+      pathNewDistCacheRoot,
+      pathTempRoot,
       pathDistRoot
     ]);
   }

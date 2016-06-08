@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"on",
+				"onThisTaskDone"
+			],
+			[
+				"mod",
+				"module-app-footer"
+			],
+			[
+				"sni",
+				"snippetFile"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
 				"boxs",
 				"box-shadow"
 			],
@@ -163,23 +179,15 @@
 			"file": "app-dev/index.html",
 			"settings":
 			{
-				"buffer_size": 3499,
+				"buffer_size": 3614,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app-dev/styles/base/iconfonts/iconfont.css",
+			"file": "app-dev/html-snippets/module-app-header.html",
 			"settings":
 			{
-				"buffer_size": 3744,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app-dev/styles/base/reset.css",
-			"settings":
-			{
-				"buffer_size": 2212,
+				"buffer_size": 2333,
 				"line_ending": "Windows"
 			}
 		},
@@ -187,15 +195,7 @@
 			"file": "app-dev/styles/base/base.css",
 			"settings":
 			{
-				"buffer_size": 6246,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app-dev/html-snippets/tag-head-after-title.html",
-			"settings":
-			{
-				"buffer_size": 438,
+				"buffer_size": 7512,
 				"line_ending": "Windows"
 			}
 		},
@@ -203,7 +203,7 @@
 			"file": "app-dev/styles/base/theme-base.css",
 			"settings":
 			{
-				"buffer_size": 1645,
+				"buffer_size": 1976,
 				"line_ending": "Windows"
 			}
 		},
@@ -216,19 +216,27 @@
 			}
 		},
 		{
-			"file": "app-dev/styles/pages/index.css",
+			"file": "app-dev/html-snippets/module-app-footer.html",
 			"settings":
 			{
-				"buffer_size": 3888,
+				"buffer_size": 314,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app-dev/html-snippets/module-app-header.html",
+			"file": "gulpfile.js",
 			"settings":
 			{
-				"buffer_size": 2333,
+				"buffer_size": 12232,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "taijs-website2.sublime-project",
+			"settings":
+			{
+				"buffer_size": 203,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -293,27 +301,26 @@
 	},
 	"expanded_folders":
 	[
-		"/D/p/dev/taijs/taijs-website2",
-		"/D/p/dev/taijs/taijs-website2/app-dev",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets",
-		"/D/p/dev/taijs/taijs-website2/app-dev/scripts",
-		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base",
-		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages"
+		"/D/p/dev/taijs/taijs-website2"
 	],
 	"file_history":
 	[
-		"/D/p/dev/taijs/taijs-website2/app-dev/sample-snippets.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.ie8.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.ie8.theme.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/reset.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/iconfonts/iconfont.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/sample-snippets.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/index.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.ie8.css",
 		"/D/p/dev/taijs/taijs-website2/gulpfile.js",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-popup-layers-wrap-begin.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-header.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-head-after-title.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/reset.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/sample-page-list.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/sample-page-2.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/sample-test-url-overriding.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-body-wrapper-start.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-head-before-title.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-head-after-title.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-body-start.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/fonts.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-base.css",
@@ -326,12 +333,9 @@
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/utilities/vector/svg/IE8圆角矩形 - 字号40像素 - 描边1像素 - 圆角半径2像素.svg",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-body-wrapper-end.html",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/sample-snippets.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-header.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-sidebar-0.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/module-sidebar-0.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/sample-page-2.html",
 		"/D/p/dev/taijs/taijs-website2/taijs-website2.sublime-project",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/sample-page-list.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/vendors/bootstrap.css",
 		"/D/p/dev/g.bat",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/warm-up.sublime-project",
@@ -428,11 +432,7 @@
 		"/C/Users/wulechuan/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/D/p/dev/private/warm-up/node_modules/less/package.json",
 		"/C/Users/wulechuan/.gitconfig",
-		"/C/Program Files/nodejs/node_modules/npm/html/docfoot.html",
-		"/C/Program Files/nodejs/node_modules/npm/make.bat",
-		"/C/Program Files/nodejs/node_modules/npm/node_modules/glob/changelog.md",
-		"/C/Program Files/nodejs/node_modules/npm/.travis.yml",
-		"/C/Program Files/nodejs/node_modules/npm/node_modules/glob/LICENSE"
+		"/C/Program Files/nodejs/node_modules/npm/html/docfoot.html"
 	],
 	"find":
 	{
@@ -440,9 +440,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 104.0,
 		"where_history":
 		[
+			"*.css"
 		]
 	},
 	"find_state":
@@ -450,6 +451,48 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"pathDistRoot",
+			"changeContent",
+			"getYear",
+			"changeContent",
+			"ship-cached-files",
+			"prepare-all-new-files-in-temp-folder",
+			"pathTempRoot",
+			"ship-cached-files",
+			"ship-all-cached-files",
+			"ship-all-temp-files",
+			"pathNewDistCacheRoot",
+			"pathTempRoot",
+			"pathCacheRoot",
+			"pathTempRoot",
+			"argument",
+			"app",
+			"site",
+			"OffsetX",
+			"\"bg\"",
+			"row-bg",
+			".row-bg",
+			"\"bg\"",
+			"bg",
+			"ie-shadow",
+			".bg",
+			"{\n",
+			".bg",
+			"x",
+			".bg",
+			"hover",
+			"80",
+			"cross",
+			"auto",
+			"height",
+			"pathDistRoot",
+			"6",
+			"filter:",
+			"Wrapper",
+			"app-body",
+			"2rem",
+			"min-",
+			"relative",
 			"top",
 			"before",
 			"center",
@@ -535,49 +578,7 @@
 			"-1em",
 			"50%",
 			"50",
-			"p",
-			"min",
-			".",
-			"li",
-			"transparent",
-			"#splash-block ",
-			"before",
-			"min-",
-			"inline",
-			"block",
-			"dir",
-			"link",
-			"auto",
-			"<p class=",
-			"免费开户",
-			"></",
-			"    ",
-			"span",
-			"mobile",
-			"span",
-			"\\    ",
-			"weixin",
-			"chief",
-			"wrap",
-			"content",
-			"ir",
-			"before",
-			"black",
-			".bg",
-			"lightgreen",
-			".color-chief",
-			"pink",
-			"head",
-			"page",
-			"fileContentsString",
-			"file",
-			"start",
-			"header",
-			"index",
-			"fileSystem",
-			"fs",
-			"15px;",
-			".row"
+			"p"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -595,7 +596,7 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -604,15 +605,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3499,
+						"buffer_size": 3614,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2825,
-								2848
+								1138,
+								1138
 							]
 						],
 						"settings":
@@ -623,218 +624,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 900.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app-dev/styles/base/iconfonts/iconfont.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3744,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								595,
-								595
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 565.0,
+						"translation.y": 1260.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "app-dev/styles/base/reset.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2212,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								856,
-								1208
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 360.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app-dev/styles/base/base.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6246,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6075,
-								6075
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 6331.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app-dev/html-snippets/tag-head-after-title.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 438,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								361,
-								361
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app-dev/styles/base/theme-base.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1645,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								347,
-								353
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app-dev/styles/base/layout.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2571,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								66,
-								68
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app-dev/styles/pages/index.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3888,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3884,
-								3884
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3332.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
+					"buffer": 1,
 					"file": "app-dev/html-snippets/module-app-header.html",
 					"semi_transient": false,
 					"settings":
@@ -846,8 +643,8 @@
 						"selection":
 						[
 							[
-								1320,
-								1320
+								65,
+								96
 							]
 						],
 						"settings":
@@ -856,10 +653,190 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 537.0,
+						"translation.y": 840.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app-dev/styles/base/base.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7512,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12,
+								12
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app-dev/styles/base/theme-base.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1976,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1181,
+								1183
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1116.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app-dev/styles/base/layout.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2571,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "app-dev/html-snippets/module-app-footer.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 314,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								273,
+								273
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "gulpfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12232,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5598,
+								5611
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 468.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "taijs-website2.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 203,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								154,
+								140
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -882,6 +859,12 @@
 				0,
 				1,
 				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
 			]
 		],
 		"cols":
@@ -892,6 +875,7 @@
 		"rows":
 		[
 			0.0,
+			0.217784877529,
 			1.0
 		]
 	},
@@ -913,6 +897,34 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"gul",
+				"gulpfile.js"
+			],
+			[
+				"header",
+				"app-dev\\html-snippets\\module-app-header.html"
+			],
+			[
+				"footer",
+				"app-dev\\html-snippets\\module-app-footer.html"
+			],
+			[
+				"icon",
+				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
+			],
+			[
+				"iconf",
+				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
+			],
+			[
+				"ie",
+				"app-dev\\styles\\base\\base.ie8.css"
+			],
+			[
+				"gulp",
+				"gulpfile.js"
+			],
 			[
 				"ico",
 				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
@@ -938,22 +950,6 @@
 				"app-dev\\styles\\base\\base.ie8.css"
 			],
 			[
-				"icon",
-				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
-			],
-			[
-				"iconf",
-				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
-			],
-			[
-				"ie",
-				"app-dev\\styles\\base\\base.ie8.css"
-			],
-			[
-				"gul",
-				"gulpfile.js"
-			],
-			[
 				"them",
 				"app-dev\\styles\\base\\theme-base.css"
 			],
@@ -976,10 +972,6 @@
 			[
 				"fonts",
 				"app-dev\\styles\\base\\fonts.css"
-			],
-			[
-				"gulp",
-				"gulpfile.js"
 			],
 			[
 				"index",
@@ -1054,7 +1046,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
