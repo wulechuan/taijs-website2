@@ -90,7 +90,7 @@
 
 			#credit-abstract > .ie-bg {
 				background-color: black;
-				filter: alpha(opacity=60);
+				filter: alpha(opacity=50);
 			}
 
 			#credit-abstract .credit-spending-limitation,
