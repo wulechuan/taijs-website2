@@ -235,9 +235,9 @@ gulp.task('html-inject-snippets', ['before-everything'], () => {
     }))
 
     .pipe(inject(gulp.src([
-          pathSnippetsRoot+'tag-body-start.html'
+          pathSnippetsRoot+'tag-body-begin.html'
     ]), {
-      starttag: '<!-- inject:bodyStart:html -->',
+      starttag: '<!-- inject:bodyBegin:html -->',
       transform: getHtmlSnippetString
     }))
 
@@ -263,16 +263,30 @@ gulp.task('html-inject-snippets', ['before-everything'], () => {
     }))
 
     .pipe(inject(gulp.src([
-          pathSnippetsRoot+'module-app-body-wrapper-start.html'
+          pathSnippetsRoot+'module-app-body-wrap-begin.html'
     ]), {
-      starttag: '<!-- inject:appBodyWrapperStart:html -->',
+      starttag: '<!-- inject:appBodyWrapBegin:html -->',
       transform: getHtmlSnippetString
     }))
 
     .pipe(inject(gulp.src([
-          pathSnippetsRoot+'module-app-body-wrapper-end.html'
+          pathSnippetsRoot+'module-app-body-wrap-end.html'
     ]), {
-      starttag: '<!-- inject:appBodyWrapperEnd:html -->',
+      starttag: '<!-- inject:appBodyWrapEnd:html -->',
+      transform: getHtmlSnippetString
+    }))
+
+    .pipe(inject(gulp.src([
+          pathSnippetsRoot+'module-popup-layers-wrap-begin.html'
+    ]), {
+      starttag: '<!-- inject:popupLayersWrapBegin:html -->',
+      transform: getHtmlSnippetString
+    }))
+
+    .pipe(inject(gulp.src([
+          pathSnippetsRoot+'module-popup-layers-wrap-end.html'
+    ]), {
+      starttag: '<!-- inject:popupLayersWrapEnd:html -->',
       transform: getHtmlSnippetString
     }))
 
@@ -415,3 +429,15 @@ gulp.task('default', [
 ], (onThisTaskDone) => {
   onThisTaskDone();
 });
+
+gulp.task('del', () => {
+  try {
+    fileSystem.unlinkSync(pathDistRoot);
+  } catch (e) {
+    console.log('using del...');
+    del([
+      // pathTempRoot,
+      pathDistRoot
+    ]);
+  }
+}); // For cli usage

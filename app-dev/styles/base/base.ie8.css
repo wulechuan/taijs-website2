@@ -596,5 +596,13 @@ button label {
 }
 
 
+.popup-layers-container-backplate {
+	background-color: black;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=80)";
+	zoom: 1;
+}
+
+
 
 

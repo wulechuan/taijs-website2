@@ -158,7 +158,7 @@
 	height: 346px;
 }
 
-#pl-taijs-app-promotion {
+#pl-taijs-app-promotion .popup-window {
 	width: 1200px;
 	height: 315px;
 	color: white;
@@ -166,6 +166,7 @@
 	background-color: #157dff;
 	background-image: url(../../images/pages/index/qrcode-bg.png);
 	background-repeat: no-repeat;
+	background-position: center top;
 	}
 	
 	#pl-taijs-app-promotion .bg {
@@ -185,7 +186,7 @@
 		top: 50%;
 		font-size: 0;
 		height: 1px;
-		width: 100px;
+		width: 85px;
 		background-color: white;
 	}
 	#pl-taijs-app-promotion .title:before {
