@@ -596,12 +596,28 @@ button label {
 }
 
 
+.button-x {
+	}
+
+	.button-x:before {
+		content: none; /* ie8 has :before Alpha(opacity) bug */
+	}
+
+	.button-x:after {
+		position: static;
+	}
+
+	.button-x:hover {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorstr=#33FFFFFF, endColorstr=#33FFFFFF)";
+	}
+
 .popup-layers-container-backplate {
 	background-color: black;
 	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=80)";
 	zoom: 1;
 }
+
 
 
 

@@ -64,6 +64,19 @@ em {
 }
 
 
+.button-x {
+	background-color: transparent;
+	color: white;
+	}
+
+	.button-x:hover {
+		background-color: transparent;
+	}
+
+	.button-x:before {
+		background-color: white;
+	}
+
 
 .info-block .info-locator .info {
 	background-color: white;
