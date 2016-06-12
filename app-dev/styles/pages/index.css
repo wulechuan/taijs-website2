@@ -87,16 +87,17 @@
 
 			#credit-abstract-pane > .ie-shadow {
 				background-color: black;
-				filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10,MakeShadow=true,ShadowOpacity=0.27);
-				-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=10,MakeShadow=true,ShadowOpacity=0.27)";
+				filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=12,MakeShadow=true,ShadowOpacity=0.51);
+				-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=12,MakeShadow=true,ShadowOpacity=0.51)";
 				zoom: 1;
-				left: -20px;
-				top: -20px;
+				left: -12px;
+				top: -12px;
 			}
 
 			#credit-abstract-pane > .ie-bg {
+				margin: 0;
 				background-color: black;
-				filter: alpha(opacity=50);
+				filter: alpha(opacity=45);
 			}
 
 			#credit-abstract-pane .credit-spending-limitation,
@@ -109,7 +110,7 @@
 			}
 
 			#credit-abstract-pane .operations {
-				padding-bottom: 10px;
+				padding-bottom: 8px;
 			}
 
 			#credit-abstract-pane .title {
@@ -150,55 +151,211 @@
 			}
 
 		#credit-details-pane {
+			z-index: 1;
 			position: absolute;
 			left: 350px;
-			right: 0;
 			top: 0;
 			bottom: 0;
+			padding: 0;
 			height: auto;
 			margin: auto 0;
-			max-width: 850px;
-
-			background-color: pink;
-			width: 200px;
+			width: auto;
 			}
+
+			#credit-details-pane .expandable {
+				box-sizing: border-box;
+				position: relative;
+				max-width: 850px;
+				height: 100%;
+				background-color: transparent;
+				padding: 4px 0;
+			}
+			#credit-details-pane .expandable.expanded {
+				width: 850px;
+			}
+
+
+			#credit-details-pane .cast-shadow {
+				position: absolute;
+				max-width: 850px;
+				left: 0;
+				right: 0;
+				top: 4px;
+				bottom: 4px;
+
+				background-color: transparent;
+				background-color: black\0;
+				filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=12,MakeShadow=true,ShadowOpacity=0.3);
+				-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=12,MakeShadow=true,ShadowOpacity=0.3)";
+				zoom: 1;
+				left: -12px\0;
+				top: -12px\0;
+				}
+				_:-ms-fullscreen, :root #credit-details-pane .cast-shadow {
+					left: 0\0;
+					top: 4px\0;
+				}
+
 
 			#credit-details-pane .docking {
 				position: absolute;
-				width: 0;
 				left: auto;
 				right: 0;
 				top: 0;
 				bottom: 0;
+				margin: auto 0;
+				width: 0;
+				height: 40px;
+				}
+
+
+			#credit-details-pane [class|="corner-deco"] {
+				display: block;
+				position: absolute;
 				margin: 0;
-			}
+				padding: 0;
+				border: 0;
+				text-indent: 0;
+				text-align: right;
+				direction: ltr!important;
+				overflow: hidden;
+				}
+
+				#credit-details-pane [class|="corner-deco"]:before {
+					font-family:"iconfont" !important;
+					color: #ac0b0c;
+					content: '\e604';
+
+					display: block;
+					width: auto;
+					height: auto;
+					position: absolute;
+					left: 0;
+					text-indent: 0;
+				}
+
+
+			#credit-details-pane .expandable [class|="corner-deco"] {
+				width: 9px;
+				height: 4px;
+				left: 0;
+				}
+				#credit-details-pane .expandable .corner-deco-above {
+					font-size: 27px;
+					line-height: 27px;
+					top: 0;
+				}
+				#credit-details-pane .expandable .corner-deco-below {
+					font-size: 27px;
+					line-height: 27px;
+					bottom: 0px;
+				}
+				#credit-details-pane .expandable .corner-deco-above:before {
+					bottom: 0;
+					bottom: 1px\0; /* ie8+ */
+				}
+				#credit-details-pane .expandable .corner-deco-below:before {
+					top: 0;
+					top: -1px\0; /* ie8+ */
+				}
+				_:-ms-fullscreen, :root #credit-details-pane .expandable .corner-deco-above::before {
+					/* ie11only */
+					bottom: -2px\0;
+				}
+				_:-ms-fullscreen, :root #credit-details-pane .expandable .corner-deco-below::before {
+					/* ie11only */
+					top: 2px\0;
+				}
+				@-moz-document url-prefix() {
+					wlc {}
+					#credit-details-pane .expandable .corner-deco-above::before {
+						bottom: -1px;
+					}
+					#credit-details-pane .expandable .corner-deco-below::before {
+					}
+				}
+
+
+			#credit-details-pane .docking [class|="corner-deco"] {
+				width: 6px;
+				height: 4px;
+				left: 100%;
+				}
+				#credit-details-pane .docking .corner-deco-above {
+					font-size: 20px;
+					line-height: 20px;
+					bottom: 100%;
+				}
+				#credit-details-pane .docking .corner-deco-below {
+					font-size: 20px;
+					line-height: 20px;
+					top: 100%;
+				}
+				#credit-details-pane .docking .corner-deco-above:before {
+					bottom: 0;
+					font-size: 21px; /* ie8+ */
+					line-height: 21px; /* ie8+ */
+					bottom: 1px\0; /* ie8+ */
+				}
+				#credit-details-pane .docking .corner-deco-below:before {
+					top: 0;
+					top: -1px\0; /* ie8+ */
+				}
+				_:-ms-fullscreen, :root #credit-details-pane .docking .corner-deco-above::before {
+					/* ie11only */
+					bottom: -1px\0;
+				}
+				_:-ms-fullscreen, :root #credit-details-pane .docking .corner-deco-below::before {
+					/* ie11only */
+					top: 1px\0;
+				}
+
 
 			#credit-details-pane .docking button {
+				position: absolute;
 				border: 0;
 				padding: 0;
-				margin: auto -6px auto 0;
+				margin: 0;
 				width: 20px;
 				height: 40px;
 				left: auto;
-				right: 0;
+				right: -6px;
 				top: 0;
-				bottom: 0;
+				bottom: auto;
 
-				font-size: 12px;
 				overflow: hidden;
-				text-indent: -5px;
 
 				color: white;
 				background-color: #f92c1f;
+
+				text-indent: -3px;
+				}
+
+				#credit-details-pane .expandable.expanded + .docking button {
+					text-indent: -4.5px;
+				}
+
+				#credit-details-pane .expandable + .docking button .iconfont:before {
+					font-size: 12px;
+					line-height: 40px;
+					content: '\e616';
+				}
+
+				#credit-details-pane .expandable.expanded + .docking button .iconfont:before {
+					content: '\e615';
+				}
+
+
+			#credit-details-pane .content-panel {
+				position: absolute;
+				background-color: white;
+				width: 850px;
+				top: 4px;
+				bottom: 4px;
+				right: 0;
+				height: auto;
 			}
 
-			#credit-details-pane .expandable + .docking button .iconfont:before {
-				content: '\e616';
-			}
-
-			#credit-details-pane .expandable.expanded + .docking button .iconfont:before {
-				content: '\e615';
-			}
 
 
 .promotion-card {

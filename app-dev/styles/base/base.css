@@ -196,6 +196,9 @@ input[type="radio"] {
 	.cast-inner-shadow {
 		box-shadow: inset 3px 3px 2px 0px rgba(0, 0, 0, 0.1);
 	}
+	.cast-shadow.shadow-large-and-blur {
+		box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.45);
+	}
 	.ie-shadow {
 		display: none;
 	}
@@ -368,6 +371,7 @@ input[type="radio"] {
 	display: block;
 	position: relative;
 	overflow: hidden!important;
+	transition-property: left, right, margin, padding, border-width, width, height, max-width, max-height;
 	}
 
 	.expandable.hori {
