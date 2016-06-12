@@ -263,6 +263,8 @@ input[type="radio"] {
 	vertical-align: middle;
 }
 
+
+
 .info-block {
 	display: inline-block;
 	position: relative;
@@ -312,6 +314,7 @@ input[type="radio"] {
 	}
 
 
+
 .button-x {
 	position: absolute;
 	display: block;
@@ -357,6 +360,27 @@ input[type="radio"] {
 		content: '\e61e';
 		position: relative;
 		font-size: 16px;
+	}
+
+
+
+.expandable {
+	display: block;
+	position: relative;
+	overflow: hidden!important;
+	}
+
+	.expandable.hori {
+		width: 0;
+		min-width: 0;
+	}
+
+	.expandable.vert {
+		height: 0;
+		min-height: 0;
+	}
+
+	.expandable.hori.expanded {
 	}
 
 

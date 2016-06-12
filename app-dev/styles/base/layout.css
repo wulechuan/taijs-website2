@@ -151,6 +151,47 @@
 			margin: 0 15px 0 -13px;
 		}
 
+#app-footer {
+	display: block;
+	}
+
+	#app-footer-chief-bar {
+		position: relative;
+		min-height: 200px;
+		border-top: 1px solid;
+		border-color: inherit;
+		background-color: pink;
+	}
+
+	#app-footer-copyright-bar {
+		min-height: 92px;
+		border-top: 1px solid;
+		border-color: inherit;
+		text-align: center;
+	}
+
+	#app-footer-copyright {
+		margin-top: 18px;
+		font-size: 12px;
+		line-height: 1;
+	}
+
+	#app-footer-attestations {
+		margin-top: 20px;
+		}
+
+		#app-footer-attestations a,
+		#app-footer-attestations img {
+			position: relative;
+			display: inline-block;
+			margin: 0 12px;
+			padding: 0;
+			vertical-align: top;
+		}
+		#app-footer-attestations a img {
+			margin: 0;
+		}
+
 #app-body {
 	display: block;
 }

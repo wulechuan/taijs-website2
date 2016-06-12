@@ -112,3 +112,8 @@ em {
 	#app-header-chief-bar {
 		border-bottom-color: #eee;
 		}
+
+#app-footer {
+	color: #999;
+	border-color: #ddd;
+}

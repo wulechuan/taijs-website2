@@ -40,7 +40,7 @@
 		line-height: 40px;
 	}
 
-	#splash-login-panel {
+	#splash-login-block {
 		position: absolute;
 		width: 70%;
 		left: 15%;
@@ -48,28 +48,34 @@
 		text-align: center;
 	}
 
-	#splash-login-panel button [class|="corner"]:before,
-	#splash-login-panel button .ie-bg,
-	#splash-login-panel button {
+	#splash-login-block button [class|="corner"]:before,
+	#splash-login-block button .ie-bg,
+	#splash-login-block button {
 		color: white;
 		border-color: white;
 	}
 
-	#splash-login-panel button:hover {
+	#splash-login-block button:hover {
 		background-color: rgba(255, 255, 255, 0.16)!important;
 	}
 
-	#splash-login-panel button [class|="corner"] {
+	#splash-login-block button [class|="corner"] {
 		filter: alpha(opacity=100);
 	}
 
-	#splash-credit-info-panel {
+	#splash-credit-info-block {
 		position: absolute;
 		left: 20px;
 		top: 36px;
 		}
 
-		#credit-abstract {
+		#credit-abstract-pane,
+		#credit-details-pane {
+			/* display: inline-block;
+			vertical-align: middle; */
+		}
+
+		#credit-abstract-pane {
 			position: relative;
 			width: 350px;
 			min-height: 230px;
@@ -79,7 +85,7 @@
 			box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.32);
 			}
 
-			#credit-abstract > .ie-shadow {
+			#credit-abstract-pane > .ie-shadow {
 				background-color: black;
 				filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10,MakeShadow=true,ShadowOpacity=0.27);
 				-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=10,MakeShadow=true,ShadowOpacity=0.27)";
@@ -88,25 +94,25 @@
 				top: -20px;
 			}
 
-			#credit-abstract > .ie-bg {
+			#credit-abstract-pane > .ie-bg {
 				background-color: black;
 				filter: alpha(opacity=50);
 			}
 
-			#credit-abstract .credit-spending-limitation,
-			#credit-abstract .credit-line,
-			#credit-abstract .operations {
+			#credit-abstract-pane .credit-spending-limitation,
+			#credit-abstract-pane .credit-line,
+			#credit-abstract-pane .operations {
 				position: relative;
 				text-align: center;
 				line-height: 1.5;
 				padding: 12px 0 21px 0;
 			}
 
-			#credit-abstract .operations {
+			#credit-abstract-pane .operations {
 				padding-bottom: 10px;
 			}
 
-			#credit-abstract .title {
+			#credit-abstract-pane .title {
 				box-sizing: border-box;
 				position: absolute;
 				left: 25%;
@@ -115,32 +121,83 @@
 				line-height: 20px;
 			}
 
-			#credit-abstract .title h1,
-			#credit-abstract .title h2 {
+			#credit-abstract-pane .title h1,
+			#credit-abstract-pane .title h2 {
 				display: inline-block;
 				font-size: 14px;
 				vertical-align: middle;
 			}
 
-			#credit-abstract .credit-spending-limitation em {
+			#credit-abstract-pane .credit-spending-limitation em {
 				font-size: 32px;
 				color: #ff9600;
 			}
 
-			#credit-abstract .credit-line em {
+			#credit-abstract-pane .credit-line em {
 				font-size: 26px;
 				color: #157dff;
 			}
 
-			#credit-abstract .info-block {
+			#credit-abstract-pane .info-block {
 				vertical-align: middle;
 			}
 
-			#credit-abstract .info-block .info {
+			#credit-abstract-pane .info-block .info {
 				color: white;
 				border-color: black;
 				background-color: black;
 				background-color: rgba(0, 0, 0, 0.75);
+			}
+
+		#credit-details-pane {
+			position: absolute;
+			left: 350px;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			height: auto;
+			margin: auto 0;
+			max-width: 850px;
+
+			background-color: pink;
+			width: 200px;
+			}
+
+			#credit-details-pane .docking {
+				position: absolute;
+				width: 0;
+				left: auto;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: 0;
+			}
+
+			#credit-details-pane .docking button {
+				border: 0;
+				padding: 0;
+				margin: auto -6px auto 0;
+				width: 20px;
+				height: 40px;
+				left: auto;
+				right: 0;
+				top: 0;
+				bottom: 0;
+
+				font-size: 12px;
+				overflow: hidden;
+				text-indent: -5px;
+
+				color: white;
+				background-color: #f92c1f;
+			}
+
+			#credit-details-pane .expandable + .docking button .iconfont:before {
+				content: '\e616';
+			}
+
+			#credit-details-pane .expandable.expanded + .docking button .iconfont:before {
+				content: '\e615';
 			}
 
 
