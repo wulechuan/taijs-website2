@@ -85,19 +85,10 @@
 			box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.32);
 			}
 
-			#credit-abstract-pane > .ie-shadow {
-				background-color: black;
-				filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=12,MakeShadow=true,ShadowOpacity=0.51);
-				-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=12,MakeShadow=true,ShadowOpacity=0.51)";
-				zoom: 1;
-				left: -12px;
-				top: -12px;
-			}
-
 			#credit-abstract-pane > .ie-bg {
 				margin: 0;
 				background-color: black;
-				filter: alpha(opacity=45);
+				filter: alpha(opacity=50);
 			}
 
 			#credit-abstract-pane .credit-spending-limitation,
@@ -169,6 +160,8 @@
 				height: 100%;
 				background-color: transparent;
 				padding: 4px 0;
+				transition-duration: 0.8s;
+				transition-timing-function: cubic-bezier(0, 0.2, 0.4, 1);
 			}
 			#credit-details-pane .expandable.expanded {
 				width: 850px;
@@ -182,15 +175,9 @@
 				right: 0;
 				top: 4px;
 				bottom: 4px;
-
 				background-color: transparent;
-				background-color: black\0;
-				filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=12,MakeShadow=true,ShadowOpacity=0.3);
-				-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=12,MakeShadow=true,ShadowOpacity=0.3)";
-				zoom: 1;
-				left: -12px\0;
-				top: -12px\0;
 				}
+
 				_:-ms-fullscreen, :root #credit-details-pane .cast-shadow {
 					left: 0\0;
 					top: 4px\0;

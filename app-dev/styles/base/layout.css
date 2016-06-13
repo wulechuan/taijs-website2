@@ -19,6 +19,14 @@
 	z-index: 1;
 }
 
+
+
+#app-body {
+	display: block;
+}
+
+
+
 #app-header {
 	}
 
@@ -147,9 +155,12 @@
 
 		#taijs-logo {
 			display: inline-block;
+			vertical-align: top;
 			padding: 13px;
 			margin: 0 15px 0 -13px;
 		}
+
+
 
 #app-footer {
 	display: block;
@@ -192,6 +203,32 @@
 			margin: 0;
 		}
 
-#app-body {
-	display: block;
-}
+
+
+#app-chief-nav {
+	margin: 12px 0 12px 141px;
+	height: 50px;
+	display: inline-block;
+	vertical-align: top;
+	}
+
+	#app-chief-nav nav {
+		display: inline;
+		position: static;
+	}
+
+	#app-chief-nav .menu.level-1 {
+		font-size: 16px;
+		height: 100%;
+	}
+
+	#app-chief-nav .menu.level-1 > .menu-item > label {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	#app-chief-nav .menu.level-2 {
+		display: inline-block;
+		vertical-align: top;
+		font-size: 14px;
+	}

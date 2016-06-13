@@ -63,6 +63,10 @@ em {
 	color: #ff291d;
 }
 
+.menu-item.sub-menu-shown > label,
+.menu-item.current-cate > label {
+	color: #157dff;
+}
 
 .button-x {
 	background-color: transparent;
@@ -116,4 +120,15 @@ em {
 #app-footer {
 	color: #999;
 	border-color: #ddd;
+}
+
+
+#app-chief-nav .menu.level-1 {
+}
+
+#app-chief-nav .menu.level-1 > .menu-item > label {
+}
+
+#app-chief-nav .menu.level-2> .menu-item > label {
+	color: #666;
 }
