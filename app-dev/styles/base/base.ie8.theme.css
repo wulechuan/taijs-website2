@@ -3,31 +3,31 @@ input[type="submit"].cast-shadow,
 input[type="button"].cast-shadow,
 button.cast-shadow,
 button.cast-shadow .ie-bg,
-.r-tmnl                          .ie-bg,
-.r-tmnl.color-default            .ie-bg,
-.rounded-terminals               .ie-bg,
-.rounded-terminals.color-default .ie-bg,
-.r-cnr                           .ie-bg,
-.r-cnr.color-default             .ie-bg,
-.rounded-corners                 .ie-bg,
-.rounded-corners.color-default   .ie-bg {
+button.r-tmnl                          .ie-bg,
+button.r-tmnl.color-default            .ie-bg,
+button.rounded-terminals               .ie-bg,
+button.rounded-terminals.color-default .ie-bg,
+button.r-cnr                           .ie-bg,
+button.r-cnr.color-default             .ie-bg,
+button.rounded-corners                 .ie-bg,
+button.rounded-corners.color-default   .ie-bg {
     border-color: #157dff;
     background-color: #157dff;
 }
 
-.color-default [class|="corner"]:before,
-               [class|="corner"]:before {
+button.color-default [class|="corner"]:before,
+button               [class|="corner"]:before {
     color: #157dff;
 }
-.color-default [class|="corner"]:after,
-               [class|="corner"]:after {
+button.color-default [class|="corner"]:after,
+button               [class|="corner"]:after {
     color: #157dff;
 }
 .color-transparent {
     color: #157dff;
 }
-.color-default [class|="corner"]:after,
-               [class|="corner"]:after {
+button.color-default [class|="corner"]:after,
+button               [class|="corner"]:after {
     color: #157dff;
 }
 
@@ -36,45 +36,62 @@ input[type="submit"].cast-shadow:hover,
 input[type="button"].cast-shadow:hover,
 button.cast-shadow:hover,
 button.cast-shadow:hover .ie-bg,
-.r-tmnl:hover                          .ie-bg,
-.r-tmnl.color-default:hover            .ie-bg,
-.rounded-terminals:hover               .ie-bg,
-.rounded-terminals.color-default:hover .ie-bg,
-.r-cnr:hover                           .ie-bg,
-.r-cnr.color-default:hover             .ie-bg,
-.rounded-corners:hover                 .ie-bg,
-.rounded-corners.color-default :hover  .ie-bg {
+button.r-tmnl:hover                          .ie-bg,
+button.r-tmnl.color-default:hover            .ie-bg,
+button.rounded-terminals:hover               .ie-bg,
+button.rounded-terminals.color-default:hover .ie-bg,
+button.r-cnr:hover                           .ie-bg,
+button.r-cnr.color-default:hover             .ie-bg,
+button.rounded-corners:hover                 .ie-bg,
+button.rounded-corners.color-default :hover  .ie-bg {
     background-color: #3f93ff;
 }
 
-.r-tmnl:hover                          [class|="corner"]:after,
-.r-tmnl.color-default:hover            [class|="corner"]:after,
-.rounded-terminals:hover               [class|="corner"]:after,
-.rounded-terminals.color-default:hover [class|="corner"]:after,
-.r-cnr:hover                           [class|="corner"]:after,
-.r-cnr.color-default:hover             [class|="corner"]:after,
-.rounded-corners:hover                 [class|="corner"]:after,
-.rounded-corners.color-default :hover  [class|="corner"]:after {
+button.r-tmnl:hover                          [class|="corner"]:after,
+button.r-tmnl.color-default:hover            [class|="corner"]:after,
+button.rounded-terminals:hover               [class|="corner"]:after,
+button.rounded-terminals.color-default:hover [class|="corner"]:after,
+button.r-cnr:hover                           [class|="corner"]:after,
+button.r-cnr.color-default:hover             [class|="corner"]:after,
+button.rounded-corners:hover                 [class|="corner"]:after,
+button.rounded-corners.color-default :hover  [class|="corner"]:after {
     color: #3f93ff;
 }
 
 
 
 
-.color-pink {
+button.color-pink {
     color: black;
 }
-.color-pink [class|="corner"]:before {
+button.color-pink [class|="corner"]:before {
     color: red;
 }
-.color-pink [class|="corner"]:after {
+button.color-pink [class|="corner"]:after {
     color: pink;
 }
-.color-pink .ie-bg {
+button.color-pink .ie-bg {
     border-color: red;
     background-color: pink;
 }
-.r-cnr.r-cnr-png.color-pink                     [class|="corner"],
-.rounded-corners.rounded-corners-png.color-pink [class|="corner"] {
+button.r-cnr.r-cnr-png.color-pink                     [class|="corner"],
+button.rounded-corners.rounded-corners-png.color-pink [class|="corner"] {
     background-image: url(../../images/utilities/rounded-corners-5px-pink.png);
 }
+
+
+
+
+#app-chief-nav {
+    }
+
+    #app-chief-nav .menu .deco > .ie-bg,
+    #app-chief-nav .menu > .ie-bg {
+        border-color: #e1e1e1;
+    }
+
+    #app-chief-nav .menu .deco > .ie-bg [class|="corner"]:before,
+    #app-chief-nav .menu > .ie-bg [class|="corner"]:before {
+        color: #e1e1e1;
+    }
+

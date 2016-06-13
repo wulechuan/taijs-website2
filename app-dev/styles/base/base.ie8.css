@@ -90,11 +90,18 @@
 		border-style: solid;
 		border-width: 0px;
 
-		margin: -1px;
 		left: 13px;
 		right: 13px;
 		top: 13px;
 		bottom: 13px;
+		margin: 0;
+		}
+
+		.has-borders.r-cnr           .ie-bg,
+		.has-borders.rounded-corners .ie-bg,
+		button.r-cnr                 .ie-bg,
+		button.rounded-corners       .ie-bg {
+			margin: -1px; /* compensates for borders of parent */
 		}
 
 		.r-cnr           .corner-1,
@@ -263,7 +270,33 @@
 			right: 1px;
 		}
 
+	.r-cnr.sharp-cnr-tl              .corner-1:before,
+	.r-cnr.sharp-cnr-1               .corner-1:before,
+	.rounded-corners.sharp-corner-tl .corner-1:before,
+	.rounded-corners.sharp-corner-1  .corner-1:before {
+		content: none;
+	}
 
+	.r-cnr.sharp-cnr-tr              .corner-2:before,
+	.r-cnr.sharp-cnr-2               .corner-2:before,
+	.rounded-corners.sharp-corner-tr .corner-2:before,
+	.rounded-corners.sharp-corner-2  .corner-2:before {
+		content: none;
+	}
+
+	.r-cnr.sharp-cnr-br              .corner-3:before,
+	.r-cnr.sharp-cnr-3               .corner-3:before,
+	.rounded-corners.sharp-corner-br .corner-3:before,
+	.rounded-corners.sharp-corner-3  .corner-3:before {
+		content: none;
+	}
+
+	.r-cnr.sharp-cnr-bl              .corner-4:before,
+	.r-cnr.sharp-cnr-4               .corner-4:before,
+	.rounded-corners.sharp-corner-bl .corner-4:before,
+	.rounded-corners.sharp-corner-4  .corner-4:before {
+		content: none;
+	}
 
 	.r-cnr                [class|="corner"]:before,
 	.rounded-corners      [class|="corner"]:before,

@@ -63,6 +63,7 @@ em {
 	color: #ff291d;
 }
 
+.menu-item:hover > label,
 .menu-item.sub-menu-shown > label,
 .menu-item.current-cate > label {
 	color: #157dff;
@@ -123,12 +124,26 @@ em {
 }
 
 
-#app-chief-nav .menu.level-1 {
-}
+#app-chief-nav {
+	}
 
-#app-chief-nav .menu.level-1 > .menu-item > label {
-}
+	#app-chief-nav .menu,
+	#app-chief-nav .menu .deco {
+		border-color: #e1e1e1;
+		background-color: white;
+	}
 
-#app-chief-nav .menu.level-2> .menu-item > label {
-	color: #666;
-}
+	#app-chief-nav .menu.level-1 > .menu-item > label {
+	}
+
+	#app-chief-nav .menu.level-2 {
+	}
+
+	#app-chief-nav .menu.level-2 > .menu-item > label {
+		color: #666;
+	}
+
+	#app-chief-nav .menu.level-2 > .menu-item:hover > label {
+		color: white;
+		background-color: #157dff;
+	}

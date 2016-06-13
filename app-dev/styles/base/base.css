@@ -172,6 +172,34 @@ input[type="radio"] {
 		border-radius: 15px;
 	}
 
+	.r-cnr.sharp-cnr-tl,
+	.r-cnr.sharp-cnr-1,
+	.rounded-corners.sharp-corner-tl,
+	.rounded-corners.sharp-corner-1 {
+		border-top-left-radius: 0!important;
+	}
+
+	.r-cnr.sharp-cnr-tr,
+	.r-cnr.sharp-cnr-2,
+	.rounded-corners.sharp-corner-tr,
+	.rounded-corners.sharp-corner-2 {
+		border-top-right-radius: 0!important;
+	}
+
+	.r-cnr.sharp-cnr-br,
+	.r-cnr.sharp-cnr-3,
+	.rounded-corners.sharp-corner-br,
+	.rounded-corners.sharp-corner-3 {
+		border-bottom-right-radius: 0!important;
+	}
+
+	.r-cnr.sharp-cnr-bl,
+	.r-cnr.sharp-cnr-4,
+	.rounded-corners.sharp-corner-bl,
+	.rounded-corners.sharp-corner-4 {
+		border-bottom-left-radius: 0!important;
+	}
+
 
 .r-tmnl,
 .rounded-terminals {
@@ -265,6 +293,7 @@ input[type="radio"] {
 	}
 	.menu .menu {
 		position: absolute;
+		display: none;
 	}
 	.menu-item {
 		position: relative;
@@ -280,6 +309,8 @@ input[type="radio"] {
 		height: 100%;
 	}
 	.menu-item > label {
+		cursor: pointer;
+
 		position: relative;
 		z-index: 5;
 
@@ -289,11 +320,16 @@ input[type="radio"] {
 		margin: 0;
 		padding: 8px;
 		max-height: 100%;
+		width: 100%;
 		overflow: hidden;
 	}
 
 	.menu.layout-hori > .menu-item {
 		height: 100%;
+	}
+
+	.menu.layout-hori > .menu-item > label {
+		text-align: center;
 	}
 
 
