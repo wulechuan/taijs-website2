@@ -274,7 +274,7 @@
 		}
 		#app-chief-nav .menu.level-2 > .menu-item {
 			margin-right: -12px;
-			height: 32px;
+			height: 32px; /* for Microsoft EDGE bug */
 		}
 
 		#app-chief-nav .menu.level-2 > .menu-item > label {
