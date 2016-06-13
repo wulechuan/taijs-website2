@@ -181,7 +181,7 @@
 
 		/* filter: alpha(opacity=100); */
 
-		border: none!important;
+		border: none;
 		font-style: normal!important;
 		font-weight: normal!important;
 
@@ -192,7 +192,7 @@
 		.r-cnr           [class|="corner"]:after,
 		.rounded-corners [class|="corner"]:before,
 		.rounded-corners [class|="corner"]:after {
-			font-family:"iconfont"!important;
+			font-family:"iconfont";
 			content: "\e660";
 		}
 		.r-cnr.color-transparent           [class|="corner"]:after,
@@ -270,32 +270,80 @@
 			right: 1px;
 		}
 
+	.r-cnr.sharp-cnr-tl              .corner-1,
+	.r-cnr.sharp-cnr-1               .corner-1,
+	.rounded-corners.sharp-corner-tl .corner-1,
+	.rounded-corners.sharp-corner-1  .corner-1 {
+		border-style: inherit;
+		border-width: 1px 0 0 1px;
+	}
+
+	.r-cnr.sharp-cnr-tr              .corner-2,
+	.r-cnr.sharp-cnr-2               .corner-2,
+	.rounded-corners.sharp-corner-tr .corner-2,
+	.rounded-corners.sharp-corner-2  .corner-2 {
+		border-style: inherit;
+		border-width: 1px 1px 0 0;
+	}
+
+	.r-cnr.sharp-cnr-br              .corner-3,
+	.r-cnr.sharp-cnr-3               .corner-3,
+	.rounded-corners.sharp-corner-br .corner-3,
+	.rounded-corners.sharp-corner-3  .corner-3 {
+		border-style: inherit;
+		border-width: 0 1px 1px 0;
+	}
+
+	.r-cnr.sharp-cnr-bl              .corner-4,
+	.r-cnr.sharp-cnr-4               .corner-4,
+	.rounded-corners.sharp-corner-bl .corner-4,
+	.rounded-corners.sharp-corner-4  .corner-4 {
+		border-style: inherit;
+		border-width: 0 0 1px 1px;
+	}
+
 	.r-cnr.sharp-cnr-tl              .corner-1:before,
 	.r-cnr.sharp-cnr-1               .corner-1:before,
 	.rounded-corners.sharp-corner-tl .corner-1:before,
-	.rounded-corners.sharp-corner-1  .corner-1:before {
-		content: none;
-	}
+	.rounded-corners.sharp-corner-1  .corner-1:before,
 
 	.r-cnr.sharp-cnr-tr              .corner-2:before,
 	.r-cnr.sharp-cnr-2               .corner-2:before,
 	.rounded-corners.sharp-corner-tr .corner-2:before,
-	.rounded-corners.sharp-corner-2  .corner-2:before {
-		content: none;
-	}
+	.rounded-corners.sharp-corner-2  .corner-2:before,
 
 	.r-cnr.sharp-cnr-br              .corner-3:before,
 	.r-cnr.sharp-cnr-3               .corner-3:before,
 	.rounded-corners.sharp-corner-br .corner-3:before,
-	.rounded-corners.sharp-corner-3  .corner-3:before {
-		content: none;
-	}
+	.rounded-corners.sharp-corner-3  .corner-3:before,
 
 	.r-cnr.sharp-cnr-bl              .corner-4:before,
 	.r-cnr.sharp-cnr-4               .corner-4:before,
 	.rounded-corners.sharp-corner-bl .corner-4:before,
 	.rounded-corners.sharp-corner-4  .corner-4:before {
-		content: none;
+		content: none!important;
+	}
+
+	.r-cnr.sharp-cnr-tl              .corner-1:after,
+	.r-cnr.sharp-cnr-1               .corner-1:after,
+	.rounded-corners.sharp-corner-tl .corner-1:after,
+	.rounded-corners.sharp-corner-1  .corner-1:after,
+
+	.r-cnr.sharp-cnr-tr              .corner-2:after,
+	.r-cnr.sharp-cnr-2               .corner-2:after,
+	.rounded-corners.sharp-corner-tr .corner-2:after,
+	.rounded-corners.sharp-corner-2  .corner-2:after,
+
+	.r-cnr.sharp-cnr-br              .corner-3:after,
+	.r-cnr.sharp-cnr-3               .corner-3:after,
+	.rounded-corners.sharp-corner-br .corner-3:after,
+	.rounded-corners.sharp-corner-3  .corner-3:after,
+
+	.r-cnr.sharp-cnr-bl              .corner-4:after,
+	.r-cnr.sharp-cnr-4               .corner-4:after,
+	.rounded-corners.sharp-corner-bl .corner-4:after,
+	.rounded-corners.sharp-corner-4  .corner-4:after {
+		content: none!important;
 	}
 
 	.r-cnr                [class|="corner"]:before,

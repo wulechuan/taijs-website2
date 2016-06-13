@@ -291,7 +291,7 @@ input[type="radio"] {
 	display: block;
 	position: relative;
 	}
-	.menu .menu {
+	.menu .menu-wrap {
 		position: absolute;
 		display: none;
 	}
@@ -332,8 +332,7 @@ input[type="radio"] {
 		text-align: center;
 	}
 
-
-	.menu.layout-hori > .menu-item.has-sub-menu:after {
+	.menu.layout-hori > .menu-item.has-sub-menu > label:after {
 		font-family:"iconfont" !important;
 		content: '\e607';
 		display: block;
@@ -344,16 +343,16 @@ input[type="radio"] {
 		font-size: 12px;
 
 		position: absolute;
-		z-index: 6;
+		z-index: 1;
 		overflow: hidden;
 		left: auto;
 		right: 0;
 		top: 0;
 		bottom: 0;
-		margin: auto 10px auto 0;
+		margin: auto 0 auto 0;
 	}
 
-	.menu.layout-hori > .menu-item.has-sub-menu.sub-menu-shown:after {
+	.menu.layout-hori > .menu-item.has-sub-menu.sub-menu-shown > label:after {
 		content: '\e605';
 	}
 

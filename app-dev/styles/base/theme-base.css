@@ -114,6 +114,10 @@ em {
 			color: #999;
 		}
 
+		#app-header-contacts .tel em {
+			color: #666;
+		}
+
 	#app-header-chief-bar {
 		border-bottom-color: #eee;
 		}

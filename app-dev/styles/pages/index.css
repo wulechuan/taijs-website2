@@ -120,6 +120,10 @@
 				vertical-align: middle;
 			}
 
+			#credit-abstract-pane em {
+				font-family: 'Arial', sans-serif;
+			}
+
 			#credit-abstract-pane .credit-spending-limitation em {
 				font-size: 32px;
 				color: #ff9600;

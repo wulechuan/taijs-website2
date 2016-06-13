@@ -1,6 +1,7 @@
 node_modules/*
 /_temp/*
 /app-dist/*
+/app-dist-cache/*
 readme.html
 docs/*.html
 /utilities/*
