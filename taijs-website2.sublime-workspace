@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"li",
+				"line-height"
+			],
+			[
+				"magion",
+				"margin-top"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"v",
+				"vertical-align"
+			],
+			[
 				"b",
 				"inline-block"
 			],
@@ -22,10 +42,6 @@
 			[
 				"op",
 				"opacity"
-			],
-			[
-				"v",
-				"visibility"
 			],
 			[
 				"im",
@@ -276,20 +292,10 @@
 			}
 		},
 		{
-			"contents": "Searching 11 files for \"font-family\"\n\nD:\\p\\dev\\taijs\\taijs-website2\\app-dev\\styles\\base\\base.css:\n  368  \n  369  	.menu.layout-hori > .menu-item.has-sub-menu > label:after {\n  370: 		font-family:\"iconfont\" !important;\n  371  		content: '\\e607';\n  372  		display: block;\n  ...\n  494  \n  495  	.button-x:after {\n  496: 		font-family:\"iconfont\" !important;\n  497  		content: '\\e61e';\n  498  		position: relative;\n\nD:\\p\\dev\\taijs\\taijs-website2\\app-dev\\styles\\base\\base.ie8.css:\n  207  		.rounded-corners [class|=\"corner\"]:before,\n  208  		.rounded-corners [class|=\"corner\"]:after {\n  209: 			font-family:\"iconfont\";\n  210  			content: \"\\e660\";\n  211  		}\n  ...\n  603  		.rounded-terminals [class|=\"corner\"]:before,\n  604  		.rounded-terminals [class|=\"corner\"]:after {\n  605: 			font-family:\"iconfont\"!important;\n  606  			content: \"\\e661\";\n  607  		}\n\nD:\\p\\dev\\taijs\\taijs-website2\\app-dev\\styles\\base\\fonts.css:\n    1  html, body, button, textarea, input, select, option, .default-font {\n    2: 	font-family: 'Microsoft Yahei', 'Lucida Grande', 'SimHei', 'SimSun';\n    3  }\n    4  \n    .\n    8  #app-footer-services-info,\n    9  .font-song-ti {\n   10: 	font-family: 'SimSun', serif;\n   11  }\n   12  \n\nD:\\p\\dev\\taijs\\taijs-website2\\app-dev\\styles\\base\\iconfonts\\iconfont.css:\n    1  \n    2: @font-face {font-family: \"iconfont\";\n    3    src: url('iconfont.eot?t=1465903243'); /* IE9*/\n    4    src: url('iconfont.eot?t=1465903243#iefix') format('embedded-opentype'), /* IE6-IE8 */\n    .\n    9  \n   10  .iconfont {\n   11:   font-family:\"iconfont\" !important;\n   12    font-size:16px;\n   13    font-style:normal;\n\nD:\\p\\dev\\taijs\\taijs-website2\\app-dev\\styles\\pages\\index.css:\n  121  \n  122  			#credit-abstract-pane em {\n  123: 				font-family: 'Arial', sans-serif;\n  124  			}\n  125  \n  ...\n  231  \n  232  				#credit-details-pane [class|=\"corner-deco\"]:before {\n  233: 					font-family:\"iconfont\" !important;\n  234  					color: #ac0b0c;\n  235  					content: '\\e604';\n\n10 matches across 5 files\n",
-			"settings":
-			{
-				"buffer_size": 1992,
-				"line_ending": "Windows",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
 			"file": "app-dev/styles/pages/index.css",
 			"settings":
 			{
-				"buffer_size": 12516,
+				"buffer_size": 12732,
 				"line_ending": "Windows"
 			}
 		},
@@ -297,7 +303,7 @@
 			"file": "app-dev/index.html",
 			"settings":
 			{
-				"buffer_size": 9845,
+				"buffer_size": 10075,
 				"line_ending": "Windows"
 			}
 		},
@@ -527,6 +533,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"6",
+			"5",
+			"inherit",
+			"2.1",
 			"font-family",
 			"<h4",
 			"font-fami",
@@ -650,11 +660,7 @@
 			"attributeValueMatch",
 			"attributeMatch",
 			"attributeValueMatch",
-			"atrributeMatch",
-			"classAtrributeMatch",
-			"attributeValueMatch",
-			"classAtrributeDef",
-			"attributeValue"
+			"atrributeMatch"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -672,7 +678,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -702,7 +708,7 @@
 						"translation.y": 13928.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -730,7 +736,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 929.0,
+						"translation.y": 869.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -738,101 +744,19 @@
 				},
 				{
 					"buffer": 2,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1992,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										183,
-										194
-									],
-									[
-										319,
-										330
-									],
-									[
-										589,
-										600
-									],
-									[
-										776,
-										787
-									],
-									[
-										995,
-										1006
-									],
-									[
-										1152,
-										1163
-									],
-									[
-										1301,
-										1312
-									],
-									[
-										1521,
-										1532
-									],
-									[
-										1728,
-										1739
-									],
-									[
-										1872,
-										1883
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								1753,
-								1753
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([^ 	].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 600.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "app-dev/styles/pages/index.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12516,
+						"buffer_size": 12732,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2392,
-								2392
+								9367,
+								9367
 							]
 						],
 						"settings":
@@ -841,35 +765,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1994.0,
+						"translation.y": 8454.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "app-dev/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9845,
+						"buffer_size": 10075,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3021,
-								3021
-							],
-							[
-								4944,
-								4944
-							],
-							[
-								5624,
-								5624
+								4418,
+								4434
 							]
 						],
 						"settings":
@@ -879,14 +795,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": -0.0,
-						"translation.y": 1120.0,
+						"translation.y": 1180.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "app-dev/html-snippets/module-app-footer.html",
 					"semi_transient": false,
 					"settings":
@@ -911,7 +827,7 @@
 						"translation.y": 660.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]

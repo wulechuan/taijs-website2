@@ -384,7 +384,7 @@
 			}
 
 			#credit-details-pane .content-panel > .col .col {
-				padding-right: 24px;
+				padding-right: 16px;
 			}
 
 			#credit-details-pane .content-panel .col .section {
@@ -427,31 +427,40 @@
 			}
 
 			#credit-details-pane .content-panel p {
-				line-height: 2.1em;
+				position: relative;
+				line-height: 24px;
+				margin: 0;
 				color: #666;
+				min-height: 28px;
 			}
 
 			#credit-details-pane .content-panel p > label {
 				display: inline-block;
-				margin-right: 6px;
+				margin-right: 4px;
 				width: 80px;
 			}
 
-			#credit-details-pane .content-panel p .value {
-				font-size: 16px;
+			#credit-details-pane .content-panel > .col.col-1 p .value {
+				font-size: 19px;
+				display: inline-block;
+				vertical-align: baseline;
 			}
 
 			#credit-details-pane .content-panel p > label:after {
 				content: '：';
 			}
 
-			#credit-details-pane .content-panel button {
-				margin: 8px 0;
-				line-height: 1;
+			#credit-details-pane .content-panel .button-container {
+			}
+
+			#credit-details-pane .content-panel .button-container button {
+				margin: 9.8px 0;
 				font-size: 12px;
 				min-height: 12px;
+				line-height: 1;
 				padding: 6px 18px;
 			}
+
 
 
 
