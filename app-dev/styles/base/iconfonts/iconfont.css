@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1465357829'); /* IE9*/
-  src: url('iconfont.eot?t=1465357829#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1465357829') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1465357829') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1465357829#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1465903243'); /* IE9*/
+  src: url('iconfont.eot?t=1465903243#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1465903243') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1465903243') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1465903243#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -72,3 +72,4 @@
 .icon-stopwatch:before { content: "\e61c"; }
 .icon-info-tip-circled1:before { content: "\e61d"; }
 .icon-question-mark-circled:before { content: "\e61b"; }
+.icon-clipboard-with-dollar-sign:before { content: "\e61f"; }

@@ -1,3 +1,8 @@
+hr, hr.dashed {
+    background-color: #d0d0d0\0;
+}
+
+
 input[type="reset"].cast-shadow,
 input[type="submit"].cast-shadow,
 input[type="button"].cast-shadow,

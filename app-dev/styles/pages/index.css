@@ -1,15 +1,14 @@
 #splash-block {
 	color: white;
 	background-color: #6b76ad;
+	background-image: url(../../images/pages/index/splash-bg.jpg);
 	}
 
 	#splash-block > .ie-bg:before {
 		width: 1920px;
 		left: 50%;
 		margin-left: -960px;
-		background-image: url(
-				'../../images/pages/index/splash-bg.jpg'
-		);
+
 		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
 			src='../../images/pages/index/splash-bg.jpg', sizingMethod='crop'
 		);
@@ -155,6 +154,8 @@
 			height: auto;
 			margin: auto 0;
 			width: auto;
+
+			color: #333;
 			}
 
 			#credit-details-pane .expandable {
@@ -343,25 +344,227 @@
 				width: 850px;
 				top: 4px;
 				bottom: 4px;
-				right: 0;
+				left: 0;
 				height: auto;
+				padding: 25px 0;
+				font-size: 12px;
+				font-family: 'SimSun', serif;
+			}
+
+			#credit-details-pane .content-panel .col {
+				box-sizing: border-box;
+				display: inline-block;
+				vertical-align: top;
+				width: 50%;
+			}
+
+			#credit-details-pane .content-panel > .col {
+				height: 100%;
+				border-left: 1px dashed #d3d3d3;
+			}
+
+			#credit-details-pane .content-panel > .col:first-child {
+				border-width: 0;
+				padding-left: 50px;
+			}
+
+			#credit-details-pane .content-panel > .col .col {
+				padding-right: 24px;
+			}
+
+			#credit-details-pane .content-panel .col .section {
+				box-sizing: border-box;
+				display: block;
+				border-top: 1px dashed #d3d3d3;
+				height: 50%;
+				padding: 25px 40px 0 40px;
+			}
+
+			#credit-details-pane .content-panel .col .section:first-child {
+				border-top-color: transparent;
+				padding-top: 0;
+				padding-bottom: 25px;
+			}
+
+			#credit-details-pane .content-panel > .col.col-2 .section .col {
+				width: 33%;
+			}
+
+			#credit-details-pane .content-panel h4 {
+				font-family: 'Microsoft YaHei', Sans-serif;
+				padding: 7px;
+				margin: -9px -9px 9px -9px;
+				font-size: 14px;
+				line-height: 18px;
+				color: #000;
+			}
+
+			#credit-details-pane .content-panel h4 .iconfont {
+				margin: 0;
+				margin-right: 10px;
+				color: #999;
+				font-size: 13.9px;
+				vertical-align: middle;
+			}
+
+			#credit-details-pane .content-panel h5 {
+				line-height: 2.1;
+				color: #333;
+			}
+
+			#credit-details-pane .content-panel p {
+				line-height: 2.1em;
+				color: #666;
+			}
+
+			#credit-details-pane .content-panel p > label {
+				display: inline-block;
+				margin-right: 6px;
+				width: 80px;
+			}
+
+			#credit-details-pane .content-panel p .value {
+				font-size: 16px;
+			}
+
+			#credit-details-pane .content-panel p > label:after {
+				content: '：';
+			}
+
+			#credit-details-pane .content-panel button {
+				margin: 8px 0;
+				line-height: 1;
+				font-size: 12px;
+				min-height: 12px;
+				padding: 6px 18px;
 			}
 
 
 
-.promotion-card {
-	position: relative;
-	width: 100%;
-	height: 346px;
-	overflow: hidden;
+#promotion-cards {
+	background-color: #ededed;
+	background-image: url(../../images/pages/index/promotion-cards-row-bg.png);
+	background-size: 100%;
+	background-repeat: repeat-y;
+	background-position: top;
+	padding: 1px 0;
+	}
 
-}
+	.promotion-cards-group {
+	}
 
-.promotion-card .splash {
-	display: inline-block;
-	width: 835px;
-	height: 346px;
-}
+	.promotion-card {
+		margin: 30px auto;
+		background-color: white;
+	}
+
+	.promotion-card .content {
+		position: relative;
+		box-sizing: border-box;
+		width: 100%;
+		height: 346px;
+		overflow: hidden;
+		margin: 0;
+		padding: 15px;
+	}
+
+	.promotion-card a,
+	.promotion-card a:hover {
+		text-decoration: none!important;
+	}
+
+
+	.promotion-card .info-box {
+		width: 320px;
+		text-align: center;
+		color: #666;
+		}
+
+		.promotion-card .info-box .custom-brand {
+			width: 320px;
+			height: 120px;
+			overflow: hidden;
+			background-color: #f8f8f8;
+		}
+
+		.promotion-card .info-box h2 {
+			font-size: 20px;
+			line-height: 2;
+			color: #333;
+		}
+
+		.promotion-card .info-box h3 {
+			font-size: 16px;
+			line-height: 2;
+			color: #999;
+		}
+
+		.promotion-card .info-box hr {
+			border-color: #ededed;
+			background-color: #ededed\0;
+			width: auto;
+			margin: 20px 50px;
+		}
+
+		.promotion-card .info-box .promotion-info {
+			text-indent: -12px;
+		}
+
+		.promotion-card .info-box .promotion-info .value {
+			font-size: 48px;
+			font-weight: normal;
+		}
+
+	.promotion-card .splash {
+		display: block;
+		position: absolute;
+		right: 15px;
+		top: 15px;
+		bottom: 15px;
+		left: 350px;
+		/* width: 835px; */
+		background-color: #f8f8f8;
+		overflow: hidden;
+		}
+
+		.promotion-card .splash .splash-image {
+			display: block;
+			position: absolute;
+			left: 0px;
+			right: 0px;
+			top: 0px;
+			bottom: 0px;
+			width: 100%;
+			margin: auto;
+		}
+
+		.promotion-card .splash,
+		.promotion-card .splash .splash-image {
+			background-size: 100%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		.promotion-card .splash .splash-image {
+			animation: promotion-card-zoom-out 1.5s ease forwards;
+		}
+
+		.promotion-card:hover .splash .splash-image {
+			animation: promotion-card-zoom-in 0.234s ease-out forwards;
+		}
+
+		@keyframes promotion-card-zoom-in {
+			0% { transform: scale(1); }
+			to { transform: scale(1.033); }
+		}
+		@keyframes promotion-card-zoom-out {
+			0% { transform: scale(1.033); }
+			to { transform: scale(1); }
+		}
+
+
+
 
 #pl-taijs-app-promotion .popup-window {
 	width: 1200px;

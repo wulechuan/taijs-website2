@@ -5,7 +5,6 @@
 	});
 
 	$('#credit-details-pane .docking button').on('click', function(event) {
-		console.log($('#credit-details-pane .expandable'));
 		$('#credit-details-pane .expandable').toggleClass('expanded');
 	});
 
