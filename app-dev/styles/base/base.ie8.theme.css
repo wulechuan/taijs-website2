@@ -60,28 +60,6 @@ button.rounded-corners.color-default :hover  [class|="corner"]:after {
 
 
 
-
-button.color-pink {
-    color: black;
-}
-button.color-pink [class|="corner"]:before {
-    color: red;
-}
-button.color-pink [class|="corner"]:after {
-    color: pink;
-}
-button.color-pink .ie-bg {
-    border-color: red;
-    background-color: pink;
-}
-button.r-cnr.r-cnr-png.color-pink                     [class|="corner"],
-button.rounded-corners.rounded-corners-png.color-pink [class|="corner"] {
-    background-image: url(../../images/utilities/rounded-corners-5px-pink.png);
-}
-
-
-
-
 #app-chief-nav {
     }
 

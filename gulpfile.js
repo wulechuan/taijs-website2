@@ -246,70 +246,80 @@ gulp.task('html-inject-snippets', ['pre-process-html-snippets'], () => {
           pathSnippetsRoot+'tag-head-before-title.html'
     ]), {
       starttag: '<!-- inject:headBeforeTitle:html -->',
-      transform: _getHtmlSnippetString
+      transform: _getHtmlSnippetString,
+      quiet: true
     }))
 
     .pipe(inject(gulp.src([
           pathSnippetsRoot+'tag-head-after-title.html'
     ]), {
       starttag: '<!-- inject:headAfterTitle:html -->',
-      transform: _getHtmlSnippetString
+      transform: _getHtmlSnippetString,
+      quiet: true
     }))
 
     .pipe(inject(gulp.src([
           pathSnippetsRoot+'tag-body-begin.html'
     ]), {
       starttag: '<!-- inject:bodyBegin:html -->',
-      transform: _getHtmlSnippetString
+      transform: _getHtmlSnippetString,
+      quiet: true
     }))
 
     .pipe(inject(gulp.src([
           pathSnippetsRoot+'tag-body-end.html'
     ]), {
       starttag: '<!-- inject:bodyEnd:html -->',
-      transform: _getHtmlSnippetString
+      transform: _getHtmlSnippetString,
+      quiet: true
     }))
 
     .pipe(inject(gulp.src([
           pathSnippetsRoot+'module-app-header.html'
     ]), {
       starttag: '<!-- inject:appHeader:html -->',
-      transform: _getHtmlSnippetString
+      transform: _getHtmlSnippetString,
+      quiet: true
     }))
 
     .pipe(inject(gulp.src([
           pathSnippetsRoot+'module-app-footer.html'
     ]), {
       starttag: '<!-- inject:appFooter:html -->',
-      transform: _getHtmlSnippetString
+      transform: _getHtmlSnippetString,
+      quiet: true
     }))
 
     .pipe(inject(gulp.src([
           pathSnippetsRoot+'module-app-body-wrap-begin.html'
     ]), {
       starttag: '<!-- inject:appBodyWrapBegin:html -->',
-      transform: _getHtmlSnippetString
+      transform: _getHtmlSnippetString,
+      quiet: true
     }))
 
     .pipe(inject(gulp.src([
           pathSnippetsRoot+'module-app-body-wrap-end.html'
     ]), {
       starttag: '<!-- inject:appBodyWrapEnd:html -->',
-      transform: _getHtmlSnippetString
+      transform: _getHtmlSnippetString,
+      quiet: true
     }))
 
     .pipe(inject(gulp.src([
           pathSnippetsRoot+'module-popup-layers-wrap-begin.html'
     ]), {
       starttag: '<!-- inject:popupLayersWrapBegin:html -->',
-      transform: _getHtmlSnippetString
+      transform: _getHtmlSnippetString,
+      quiet: true
     }))
 
     .pipe(inject(gulp.src([
           pathSnippetsRoot+'module-popup-layers-wrap-end.html'
     ]), {
       starttag: '<!-- inject:popupLayersWrapEnd:html -->',
-      transform: _getHtmlSnippetString
+      transform: _getHtmlSnippetString,
+      quiet: true
     }))
 
     .pipe(gulp.dest(pathNewDistCacheRoot)) // 将文件写入指定文件夹

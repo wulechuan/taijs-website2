@@ -8,9 +8,11 @@
 		left: 50%;
 		margin-left: -960px;
 		background-image: url(
-			 ../../images/pages/index/splash-bg.jpg);
+				'../../images/pages/index/splash-bg.jpg'
+		);
 		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-		src='../../images/pages/index/splash-bg.jpg', sizingMethod='crop');
+			src='../../images/pages/index/splash-bg.jpg', sizingMethod='crop'
+		);
 	}
 
 	#splash-block > .width-wrap {
