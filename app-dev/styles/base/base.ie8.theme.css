@@ -97,9 +97,10 @@ button.rounded-corners.rounded-corners-png.color-pink [class|="corner"] {
     }
 
     #app-chief-nav .menu.level-1 > .menu-item.has-sub-menu > .deco {
-        filter: alpha(opacity=0);
+        visibility: hidden;
     }
 
-    #app-chief-nav .menu.level-1 > .menu-item.has-sub-menu:hover > .deco {
-        filter: none;
+    #app-chief-nav .menu.level-1 > .menu-item.has-sub-menu:hover > .deco ,
+    #app-chief-nav .menu.level-1 > .menu-item.has-sub-menu.sub-menu-shown > .deco {
+        visibility: visible;
     }

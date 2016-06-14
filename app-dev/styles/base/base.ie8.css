@@ -33,31 +33,40 @@
 		top: 0;
 		bottom: 0;
 		z-index: 0;
+		}
+		.ie-shadow .ie-shadow-matte {
+			display: block;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: 0;
 
-		background-color: black!important;
-		-ms-filter: "\
-			progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.20)\
-		";
-		filter: 
-			progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.20);
-		zoom: 1;
-	}
-	.ie-shadow.shadow-large-and-blur {
-		-ms-filter: "\
-			progid:DXImageTransform.Microsoft.Blur(PixelRadius=12,MakeShadow=true,ShadowOpacity=1)\
-			progid:DXImageTransform.Microsoft.Blur(PixelRadius=8,MakeShadow=true,ShadowOpacity=1)\
-			progid:DXImageTransform.Microsoft.Blur(PixelRadius=4,MakeShadow=true,ShadowOpacity=0.4)\
-		";
-		filter: 
-			progid:DXImageTransform.Microsoft.Blur(PixelRadius=12,MakeShadow=true,ShadowOpacity=1)
-			progid:DXImageTransform.Microsoft.Blur(PixelRadius=8,MakeShadow=true,ShadowOpacity=1)
-			progid:DXImageTransform.Microsoft.Blur(PixelRadius=4,MakeShadow=true,ShadowOpacity=0.4)
-		;
-		left: -34px;
-		top: -34px;
-		right: 17px;
-		bottom: 17px;
-	}
+			background-color: black!important;
+			-ms-filter: "\
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.2)\
+			";
+			filter: 
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.2);
+			zoom: 1;
+		}
+		.shadow-large-and-blur .ie-shadow .ie-shadow-matte {
+			-ms-filter: "\
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=12,MakeShadow=true,ShadowOpacity=1)\
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=8, MakeShadow=true,ShadowOpacity=1)\
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=true,ShadowOpacity=0.2)\
+			";
+			filter: 
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=12,MakeShadow=true,ShadowOpacity=1)
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=8, MakeShadow=true,ShadowOpacity=1)
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=true,ShadowOpacity=0.2)
+			;
+			left: -34px;
+			top: -34px;
+			right: 17px;
+			bottom: 17px;
+		}
 	.cast-shadow .ie-bg {
 		margin: -1px;
 		z-index: 1;

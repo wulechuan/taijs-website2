@@ -80,9 +80,7 @@
 			width: 350px;
 			min-height: 230px;
 			padding: 10px 0;
-			background-color: rgba(0, 0, 0, 0.6);
-
-			box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.32);
+			background-color: rgba(0, 0, 0, 0.64);
 			}
 
 			#credit-abstract-pane > .ie-bg {

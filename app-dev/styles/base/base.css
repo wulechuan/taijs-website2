@@ -225,7 +225,7 @@ input[type="radio"] {
 		box-shadow: inset 3px 3px 2px 0px rgba(0, 0, 0, 0.1);
 	}
 	.cast-shadow.shadow-large-and-blur {
-		box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.45);
+		box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.5);
 	}
 	.ie-shadow {
 		display: none;
