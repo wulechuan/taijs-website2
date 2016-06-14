@@ -60,12 +60,12 @@
 			-ms-filter: "\
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=12,MakeShadow=true,ShadowOpacity=1)\
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=8, MakeShadow=true,ShadowOpacity=1)\
-				progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=true,ShadowOpacity=0.2)\
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=true,ShadowOpacity=0.32)\
 			";
 			filter: 
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=12,MakeShadow=true,ShadowOpacity=1)
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=8, MakeShadow=true,ShadowOpacity=1)
-				progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=true,ShadowOpacity=0.2)
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=true,ShadowOpacity=0.32)
 			;
 			left: -34px;
 			top: -34px;
