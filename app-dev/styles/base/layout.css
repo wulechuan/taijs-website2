@@ -254,7 +254,7 @@
 			height: 1px;
 			background-color: white;
 			z-index: 10;
-			}
+		}
 
 		#app-chief-nav .menu.level-2 {
 			font-size: 14px;
@@ -274,7 +274,7 @@
 		}
 		#app-chief-nav .menu.level-2 > .menu-item {
 			margin-right: -12px;
-			height: 32px; /* for Microsoft EDGE bug */
+			/*height: 30px;  for Microsoft EDGE bug */
 		}
 
 		#app-chief-nav .menu.level-2 > .menu-item > label {
@@ -333,14 +333,14 @@
 			opacity: 0;
 		}
 
-		#app-chief-nav .menu.level-1 > .menu-item.has-sub-menu:hover > .menu-wrap,
+		.touch-off #app-chief-nav .menu.level-1 > .menu-item.has-sub-menu:hover > .menu-wrap,
 		#app-chief-nav .menu.level-1 > .menu-item.has-sub-menu.sub-menu-shown > .menu-wrap {
 			visibility: visible;
 			transition-delay: 0s;
 		}
 
-		#app-chief-nav .menu.level-1 > .menu-item.has-sub-menu:hover .menu.level-2,
-		#app-chief-nav .menu.level-1 > .menu-item.has-sub-menu:hover > .deco,
+		.touch-off #app-chief-nav .menu.level-1 > .menu-item.has-sub-menu:hover .menu.level-2,
+		.touch-off #app-chief-nav .menu.level-1 > .menu-item.has-sub-menu:hover > .deco,
 		#app-chief-nav .menu.level-1 > .menu-item.has-sub-menu.sub-menu-shown .deco,
 		#app-chief-nav .menu.level-1 > .menu-item.has-sub-menu.sub-menu-shown .menu.level-2 {
 			opacity: 1;

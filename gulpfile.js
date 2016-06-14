@@ -213,7 +213,8 @@ gulp.task('pre-process-html-snippets',  ['copy-html-snippets-files-to-temp-folde
   return gulp.src([
     pathTempRoot+'/html-snippets/module-app-footer.html'
   ])
-    .pipe(changeContent((fileContentString) => {
+    .pipe(
+      changeContent((fileContentString) => {
         var thisYear = new Date().getFullYear();
         return fileContentString.replace(/(\&copy\;\s*)\d+/g, '$1'+thisYear);
       })
@@ -223,7 +224,7 @@ gulp.task('pre-process-html-snippets',  ['copy-html-snippets-files-to-temp-folde
 });
 
 gulp.task('html-inject-snippets', ['pre-process-html-snippets'], () => {
-  function getHtmlSnippetString(fullPathName, snippetFile, index, count, targetFile) {
+  function _getHtmlSnippetString(fullPathName, snippetFile, index, count, targetFile) {
     var snippetString = snippetFile.contents ? snippetFile.contents.toString('utf8') : '';
     var fileRelativePathName = targetFile.path.slice(targetFile.base.length);
     var _slashPos = fileRelativePathName.search(/\/|\\/);
@@ -245,70 +246,70 @@ gulp.task('html-inject-snippets', ['pre-process-html-snippets'], () => {
           pathSnippetsRoot+'tag-head-before-title.html'
     ]), {
       starttag: '<!-- inject:headBeforeTitle:html -->',
-      transform: getHtmlSnippetString
+      transform: _getHtmlSnippetString
     }))
 
     .pipe(inject(gulp.src([
           pathSnippetsRoot+'tag-head-after-title.html'
     ]), {
       starttag: '<!-- inject:headAfterTitle:html -->',
-      transform: getHtmlSnippetString
+      transform: _getHtmlSnippetString
     }))
 
     .pipe(inject(gulp.src([
           pathSnippetsRoot+'tag-body-begin.html'
     ]), {
       starttag: '<!-- inject:bodyBegin:html -->',
-      transform: getHtmlSnippetString
+      transform: _getHtmlSnippetString
     }))
 
     .pipe(inject(gulp.src([
           pathSnippetsRoot+'tag-body-end.html'
     ]), {
       starttag: '<!-- inject:bodyEnd:html -->',
-      transform: getHtmlSnippetString
+      transform: _getHtmlSnippetString
     }))
 
     .pipe(inject(gulp.src([
           pathSnippetsRoot+'module-app-header.html'
     ]), {
       starttag: '<!-- inject:appHeader:html -->',
-      transform: getHtmlSnippetString
+      transform: _getHtmlSnippetString
     }))
 
     .pipe(inject(gulp.src([
           pathSnippetsRoot+'module-app-footer.html'
     ]), {
       starttag: '<!-- inject:appFooter:html -->',
-      transform: getHtmlSnippetString
+      transform: _getHtmlSnippetString
     }))
 
     .pipe(inject(gulp.src([
           pathSnippetsRoot+'module-app-body-wrap-begin.html'
     ]), {
       starttag: '<!-- inject:appBodyWrapBegin:html -->',
-      transform: getHtmlSnippetString
+      transform: _getHtmlSnippetString
     }))
 
     .pipe(inject(gulp.src([
           pathSnippetsRoot+'module-app-body-wrap-end.html'
     ]), {
       starttag: '<!-- inject:appBodyWrapEnd:html -->',
-      transform: getHtmlSnippetString
+      transform: _getHtmlSnippetString
     }))
 
     .pipe(inject(gulp.src([
           pathSnippetsRoot+'module-popup-layers-wrap-begin.html'
     ]), {
       starttag: '<!-- inject:popupLayersWrapBegin:html -->',
-      transform: getHtmlSnippetString
+      transform: _getHtmlSnippetString
     }))
 
     .pipe(inject(gulp.src([
           pathSnippetsRoot+'module-popup-layers-wrap-end.html'
     ]), {
       starttag: '<!-- inject:popupLayersWrapEnd:html -->',
-      transform: getHtmlSnippetString
+      transform: _getHtmlSnippetString
     }))
 
     .pipe(gulp.dest(pathNewDistCacheRoot)) // 将文件写入指定文件夹
@@ -317,10 +318,70 @@ gulp.task('html-inject-snippets', ['pre-process-html-snippets'], () => {
 
 
 gulp.task('html', ['html-inject-snippets'], () => {
+  function _injectCssClassInto(stringToProcess, desiredTagName, classNamesToInject) {
+    var resultString;
+
+    var regExp = new RegExp('<'+desiredTagName+'[^>]*');
+
+    var beginTag = stringToProcess.match(regExp); // without tail '>'
+    var beginTagPos = stringToProcess.search(regExp);
+
+    if (!beginTag) return stringToProcess;
+
+    beginTag = beginTag[0];
+
+    var hasClassAttribute = false;
+    var attributeNameMatch = beginTag.match(/[\"\'\s]class\s*\=\s*[\"\']?/);
+    if (!attributeNameMatch) {
+      resultString = stringToProcess.replace(beginTag, beginTag+' class="'+classNamesToInject+'"');
+    } else {
+      var attributeName = attributeNameMatch[0]
+      var valuePos = attributeName.length + attributeNameMatch.index;
+      var lastChar = beginTag.charAt(valuePos-1);
+      var charAfter = beginTag.charAt(valuePos);
+
+      var lastCharIsPunc = !!lastChar.match(/[\'\"']/);
+      var lastCharIsSpace = !!lastChar.match(/\s/);
+
+      hasClassAttribute = !lastCharIsSpace;
+
+      var newValueSuffix = '';
+
+      if (!hasClassAttribute) {
+
+        attributeName = attributeName.replace(/\s+$/, '');
+        newValueSuffix = charAfter.match(/[\s>]/) ? '' : ' ';
+        resultString = stringToProcess.replace(attributeName, attributeName+'"'+classNamesToInject+'"'+newValueSuffix);
+
+      } else if (!lastCharIsPunc) {
+
+        var attributePairMatch = beginTag.match(/[\"\'\s]class\s*\=\S+/);
+        var attributePair = attributePairMatch[0];
+
+        var attributePairResult = attributePair.replace(/([\"\'\s]class\s*\=)/, '$1'+'\"') + ' ' + classNamesToInject + '\"';
+        resultString = stringToProcess.replace(attributePair, attributePairResult);
+
+      } else {
+
+        newValueSuffix = charAfter.match(/[\s\'\"']/) ? '' : ' ';
+        resultString = stringToProcess.replace(attributeName, attributeName+classNamesToInject+newValueSuffix);
+
+      }
+    }
+
+    return resultString;
+  }
+
   return gulp.src([
     pathNewDistCacheRoot+'/**/*.html',
     '!'+pathNewDistCacheRoot+'/html-snippets/*'
   ])
+    .pipe(
+      changeContent((fileContentString) => {
+        return _injectCssClassInto(fileContentString, 'html', 'touch-off');
+        // return fileContentString.replace(/(<html[^(>|class\s*=)]*)/, '$1'+' class="touch-off" ');
+      })
+    )
     .pipe(htmlmin({
       removeComments: true,
       collapseWhitespace: true,
