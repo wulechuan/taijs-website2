@@ -364,7 +364,6 @@
 				height: auto;
 				padding: 25px 0;
 				font-size: 12px;
-				font-family: 'SimSun', serif;
 			}
 
 			#credit-details-pane .content-panel .col {
@@ -407,7 +406,6 @@
 			}
 
 			#credit-details-pane .content-panel h4 {
-				font-family: 'Microsoft YaHei', Sans-serif;
 				padding: 7px;
 				margin: -9px -9px 9px -9px;
 				font-size: 14px;
@@ -502,7 +500,7 @@
 			width: 320px;
 			height: 120px;
 			overflow: hidden;
-			background-color: #f8f8f8;
+			background-color: #f3f3f3;
 		}
 
 		.promotion-card .info-box h2 {
@@ -541,7 +539,7 @@
 		bottom: 15px;
 		left: 350px;
 		/* width: 835px; */
-		background-color: #f8f8f8;
+		background-color: #f3f3f3;
 		overflow: hidden;
 		}
 

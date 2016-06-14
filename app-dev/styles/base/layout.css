@@ -4,6 +4,26 @@
 	padding: 0 20px;
 }
 
+
+.qrcode {
+	width: 128px;
+	height: 128px;
+	}
+
+	.qrcode > img {
+		width: 128px;
+		height: 128px;
+		margin-bottom: 6px;
+	}
+
+	.qrcode > .figcaption {
+		font-size: 12px;
+		display: inline-block;
+		padding: 6px;
+		margin-top: 6px;
+	}
+
+
 #app-header {
 	position: relative;
 	z-index: 9;
@@ -130,7 +150,6 @@
 
 			#app-header-contacts p {
 				min-width: 1em;
-				background-color: pink;
 			}
 
 		#app-header-user-account-commands {
@@ -166,42 +185,183 @@
 	display: block;
 	}
 
+	#app-footer > footer,
+	#app-footer .row,
+	#app-footer .width-wrap,
+	#app-footer .content,
+	#app-footer .col {
+		border-color: inherit;
+	}
+
+
+	#app-footer a {
+		display: inline-block;
+		padding: 6px;
+		margin: 0 -6px;
+	}
+
+	#app-footer a,
+	#app-footer a:hover,
+	#app-footer a:visited {
+		text-decoration: none;
+	}
+
 	#app-footer-chief-bar {
 		position: relative;
-		min-height: 200px;
 		border-top: 1px solid;
-		border-color: inherit;
-		background-color: pink;
-	}
+		}
+
+		#app-footer-chief-bar .content {
+			position: relative;
+			padding: 36px 0 14px 0;
+		}
+
+		#app-footer-chief-bar .content .col {
+			box-sizing: border-box;
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		#app-footer-chief-bar .content > .col {
+			min-height: 150px;
+			min-width: 25%;
+		}
+
+		#app-footer-chief-bar .content > .col.col-1 {
+			width: 328px;
+		}
+
+		#app-footer-chief-bar .content > .col.col-3 {
+			width: 328px;
+		}
+
+		#app-footer-chief-bar .content > .col.col-2 {
+			width: 544px;
+			border-width: 0 1px;
+			border-style: solid;
+		}
+
+		#app-footer-nav {
+			font-size: 12px;
+			}
+
+			#app-footer-nav h2 {
+				font-size: 16px;
+				padding: 8px;
+				margin: -8px -8px 8px -8px;
+			}
+
+			#app-footer-nav a,
+			#app-footer-nav a:hover,
+			#app-footer-nav a:visited {
+				margin-top: 1px;
+				margin-bottom: 1px;
+			}
+
+			#app-footer-nav .col {
+				width: 33%;
+				padding-right: 24px;
+			}
+
+		#app-footer-qrcodes {
+			text-align: center;
+			}
+
+			#app-footer-qrcodes > .col {
+				width: 33%;
+				border-top: 1px solid transparent;
+				text-align: center;
+			}
+
+			#app-footer-qrcodes .qrcode > img {
+				width: 128px;
+				height: 128px;
+				margin: -2px;
+			}
+
+		#app-footer-services-info {
+			font-size: 12px;
+			text-align: right;
+			}
+
+			#app-footer-services-info > ul {
+				text-align: left;
+				display: inline-block;
+				right: 0;
+			}
+
+			#app-footer-services-info > ul > li {
+				position: relative;
+				padding-left: 30px;
+				line-height: 40px;
+			}
+
+			#app-footer-services-info .iconfont {
+				font-size: 20px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				margin: 2px 0;
+			}
+
+			#app-footer-services-info em {
+				font-size: 18px;
+			}
+
+			#app-footer-services-info p {
+			}
+
+			#app-footer-services-info p a {
+				margin-top: -6px;
+				margin-bottom: -6px;
+			}
+
+			#app-footer-services-info p > em,
+			#app-footer-services-info p > span,
+			#app-footer-services-info p > label {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+
+			#app-footer-services-info p > label {
+				width: 60px;
+				margin-right: 6px;
+			}
+
+			#app-footer-services-info p > label:after {
+				content: '：';
+			}
+
 
 	#app-footer-copyright-bar {
 		min-height: 92px;
 		border-top: 1px solid;
-		border-color: inherit;
 		text-align: center;
-	}
-
-	#app-footer-copyright {
-		margin-top: 18px;
-		font-size: 12px;
-		line-height: 1;
-	}
-
-	#app-footer-attestations {
-		margin-top: 20px;
 		}
 
-		#app-footer-attestations a,
-		#app-footer-attestations img {
-			position: relative;
-			display: inline-block;
-			margin: 0 12px;
-			padding: 0;
-			vertical-align: top;
+		#app-footer-copyright {
+			margin-top: 18px;
+			font-size: 12px;
+			line-height: 1;
 		}
-		#app-footer-attestations a img {
-			margin: 0;
-		}
+
+		#app-footer-attestations {
+			margin-top: 20px;
+			}
+
+			#app-footer-attestations a,
+			#app-footer-attestations img {
+				position: relative;
+				display: inline-block;
+				margin: 0 12px;
+				padding: 0;
+				vertical-align: top;
+			}
+			#app-footer-attestations a img {
+				margin: 0;
+			}
 
 
 
