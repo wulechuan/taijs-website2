@@ -379,7 +379,6 @@ gulp.task('html', ['html-inject-snippets'], () => {
     .pipe(
       changeContent((fileContentString) => {
         return _injectCssClassInto(fileContentString, 'html', 'touch-off');
-        // return fileContentString.replace(/(<html[^(>|class\s*=)]*)/, '$1'+' class="touch-off" ');
       })
     )
     .pipe(htmlmin({
