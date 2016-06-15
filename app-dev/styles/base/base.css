@@ -645,6 +645,8 @@ input[type="radio"] {
 	background-position: center;
 	background-size: 100%;
 	background-size: cover;
+	padding-top: 0!important;
+	padding-bottom: 0!important;
 	}
 
 	.row > .ie-bg {
@@ -683,9 +685,8 @@ input[type="radio"] {
 	margin-right: auto;
 	clear: both;
 	float: none;
-	padding-top: 0!important;
-	padding-bottom: 0!important;
 	z-index: 1;
+	padding: 0;
 }
 
 
