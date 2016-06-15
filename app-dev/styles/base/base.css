@@ -469,6 +469,8 @@ input[type="radio"] {
 		margin: 0;
 		background-color: transparent;
 		border: none;
+		cursor: help;
+
 		z-index: 12;
 	}
 
@@ -534,7 +536,7 @@ input[type="radio"] {
 		opacity: 0;
 	}
 
-	.info-block.info-auto-hide.info-hover-to-show:hover .info-locator {
+	.touch-off .info-block.info-auto-hide.info-hover-to-show:hover .info-locator {
 		display: block;
 		visibility: visible;
 		opacity: 1;
