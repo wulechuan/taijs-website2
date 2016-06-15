@@ -137,12 +137,6 @@
 				vertical-align: middle;
 			}
 
-			#credit-abstract-pane .info-block .info {
-				color: white;
-				border-color: black;
-				background-color: black;
-				background-color: rgba(0, 0, 0, 0.75);
-			}
 
 		#credit-details-pane {
 			z-index: 1;
@@ -451,6 +445,7 @@
 			}
 
 			#credit-details-pane .content-panel .button-container {
+				margin-left: -0.25px\0; /* for fixing IE 8 rendering bug */
 			}
 
 			#credit-details-pane .content-panel .button-container button {

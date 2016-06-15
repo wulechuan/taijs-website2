@@ -79,6 +79,16 @@ em {
 		margin-bottom: 8px;
 	}
 
+
+.info-block .info-locator .info {
+	color: #333;
+	border-color: #157dff;
+	background-color: white;
+
+	box-shadow: 0 0 5px 0 rgba(33, 222, 255, 0.55)
+}
+
+
 .menu-item:hover > label,
 .menu-item.sub-menu-shown > label,
 .menu-item.current-cate > label {
@@ -99,11 +109,6 @@ em {
 	}
 
 
-.info-block .info-locator .info {
-	background-color: white;
-	border-color: #157dff;
-	color: #333;
-}
 
 
 #app-header {

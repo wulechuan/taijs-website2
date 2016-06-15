@@ -1,5 +1,5 @@
 (function () {
-	$('#credit-abstract-pane button').on('click', function(event) {
+	$('#credit-abstract-pane .operations button').on('click', function(event) {
 		$('.popup-layers-container-backplate').show();
 		$('#pl-taijs-app-promotion').show();
 	});

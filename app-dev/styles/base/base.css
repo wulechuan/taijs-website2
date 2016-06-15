@@ -3,18 +3,20 @@
 }
 
 /* transitions: start */
-	*, *::before, *::after {
-		transition-property: color, background-color, border-color; /* no opacity, for jQuery Fading Animation/Transition */
-		transition-duration: 0.15s, 0.25s, 0.25s;
+	div, span, button, input, ol, ul, li, p,
+	div:before, span:before, button:before, input:before, ol:before, ul:before, li:before, p:before,
+	div:after, span:after, button:after, input:after, ol:after, ul:after, li:after, p:after {
+		transition-property: visibility, opacity, color, background-color, border-color;
+		transition-duration: 0.33s,      0.33s,   0.20s, 0.30s,            0.30s;
 		transition-timing-function: ease-out;
 	}
 
 
-	input[type="submit"],        input[type="button"],        *[role="button"],        button,
+	/* input[type="submit"],        input[type="button"],        *[role="button"],        button,
 	input[type="submit"]:before, input[type="button"]:before, *[role="button"]:before, button:before,
 	input[type="submit"]:after,  input[type="button"]:after,  *[role="button"]:after,  button:after {
-		transition-property: color, background-color, border-color, opacity;
-	}
+		transition-property: visibility, opacity, color, background-color, border-color, opacity;
+	} */
 /* transitions: end */
 
 
@@ -312,8 +314,174 @@ input[type="radio"] {
 }
 
 
+
+.iconfont,
+.icon {
+	display: inline-block;
+	min-width: 1em;
+	min-height: 1em;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	vertical-align: middle;
+}
+
+
+.button-x {
+	position: absolute;
+	display: block;
+	right: 0;
+	top: 0;
+	width: 40px;
+	height: 40px;
+	line-height: normal;
+	padding: 0;
+	margin: 0;
+	border-width: 0;
+	text-indent: 0;
+	text-align: center;
+
+	z-index: 50;
+	overflow: hidden;
+	}
+
+	.button-x:before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		right: 0;
+		bottom: 0;
+		padding: 0;
+		border-width: 0;
+		margin: 0;
+		font-size: 0;
+
+		opacity: 0;
+	}
+
+	.button-x:hover:before {
+		opacity: 0.2;
+	}
+
+	.button-x:after {
+		font-family:"iconfont" !important;
+		content: '\e61e';
+		position: relative;
+		font-size: 16px;
+	}
+
+
+
+.info-block {
+	display: inline-block;
+	position: relative;
+	}
+	.info-block > button.icon {
+		display: inline-block;
+		line-height: inherit;
+		position: relative;
+		vertical-align: top;
+		padding: 0.3em 0.25em 0.2em;
+		margin: 0;
+		background-color: transparent;
+		border: none;
+		z-index: 12;
+	}
+
+	.info-block > button.icon .iconfont {
+		margin: 0;
+		font-size: 14px;
+	}
+
+	.info-block .info-locator {
+		display: block;
+		position: absolute;
+		width: 400px;
+		height: 0;
+		overflow: visible!important;
+		margin-top: 10px;
+		margin-left: -10px;
+		z-index: 10;
+	}
+
+	.info-block .info-locator:before { /* for stable hover */
+		content: '';
+		display: block;
+		width: 80px;
+		height: 40px;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: 0;
+		background-color: transparent!important;
+	}
+
+	.info-block .info-locator .info {
+		position: relative;
+		z-index: 2;
+		float: left;
+		width: auto;
+		text-align: left;
+		font-size: 12px;
+		padding: 0.25em;
+		border-width: 1px;
+		border-style: solid;
+		line-height: 1.33;
+		margin: 0;
+	}
+
+	.info-block .info-locator .info p {
+		padding: 0.25em 0.75em;
+		margin: 0 -0.25em;
+	}
+
+	.info-block.info-auto-hide .info-locator {
+		display: none;
+	}
+
+	.info-block.info-auto-hide.info-hover-to-show .info-locator {
+		display: block;
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	.info-block.info-auto-hide.info-hover-to-show:hover .info-locator {
+		display: block;
+		visibility: visible;
+		opacity: 1;
+	}
+
+
+
+
+.expandable {
+	display: block;
+	position: relative;
+	overflow: hidden!important;
+	transition-property: left, right, margin, padding, border-width, width, height, max-width, max-height;
+	}
+
+	.expandable.hori {
+		width: 0;
+		min-width: 0;
+	}
+
+	.expandable.vert {
+		height: 0;
+		min-height: 0;
+	}
+
+	.expandable.hori.expanded {
+	}
+
+
+
 .layout-hori {
 	}
+
 	.layout-hori > li {
 		position: relative;
 		display: inline-block;
@@ -388,137 +556,6 @@ input[type="radio"] {
 
 	.menu.layout-hori > .menu-item.has-sub-menu.sub-menu-shown > label:after {
 		content: '\e605';
-	}
-
-.iconfont,
-.icon {
-	display: inline-block;
-	min-width: 1em;
-	min-height: 1em;
-	margin-left: 0.5em;
-	margin-right: 0.5em;
-	vertical-align: middle;
-}
-
-
-
-.info-block {
-	display: inline-block;
-	position: relative;
-	}
-	.info-block > button.icon {
-		display: inline-block;
-		line-height: inherit;
-		position: relative;
-		padding: 0.25em;
-		margin: 0;
-		background-color: transparent;
-		border: none;
-	}
-
-	.info-block > button.icon .iconfont {
-		margin: 0;
-		font-size: 14px;
-	}
-
-	.info-block .info-locator {
-		position: absolute;
-		width: 360px;
-		height: 0;
-		overflow: visible!important;
-		z-index: 10;
-	}
-
-	.info-block .info-locator .info {
-		float: left;
-		width: auto;
-		text-align: left;
-		font-size: 12px;
-		padding: 0.25em;
-		border: 1px solid;
-		line-height: 1.33;
-		margin-top: 1em;
-		margin-left: -1em;
-	}
-
-	.info-block .info-locator .info p {
-		padding: 0.25em 0.75em;
-		margin: 0 -0.25em;
-	}
-
-	.info-block.info-auto-hide .info-locator {
-		display: none;
-	}
-
-
-
-.button-x {
-	position: absolute;
-	display: block;
-	right: 0;
-	top: 0;
-	width: 40px;
-	height: 40px;
-	line-height: normal;
-	padding: 0;
-	margin: 0;
-	border-width: 0;
-	text-indent: 0;
-	text-align: center;
-
-	z-index: 50;
-	overflow: hidden;
-	}
-
-	.button-x:before {
-		content: '';
-		display: block;
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		right: 0;
-		bottom: 0;
-		padding: 0;
-		border-width: 0;
-		margin: 0;
-		font-size: 0;
-
-		opacity: 0;
-	}
-
-	.button-x:hover:before {
-		opacity: 0.2;
-	}
-
-	.button-x:after {
-		font-family:"iconfont" !important;
-		content: '\e61e';
-		position: relative;
-		font-size: 16px;
-	}
-
-
-
-.expandable {
-	display: block;
-	position: relative;
-	overflow: hidden!important;
-	transition-property: left, right, margin, padding, border-width, width, height, max-width, max-height;
-	}
-
-	.expandable.hori {
-		width: 0;
-		min-width: 0;
-	}
-
-	.expandable.vert {
-		height: 0;
-		min-height: 0;
-	}
-
-	.expandable.hori.expanded {
 	}
 
 
