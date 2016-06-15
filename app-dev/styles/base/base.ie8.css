@@ -1,6 +1,6 @@
-.width-wrap {
-	max-width: 1200px;
-	min-width: 1200px;
+.ie8-input-fake-placeholder {
+	display: block;
+	position: absolute;
 }
 
 .ie-bg {
@@ -113,9 +113,16 @@
 
 		.has-borders.r-cnr           .ie-bg,
 		.has-borders.rounded-corners .ie-bg,
+		.deco-input.r-cnr            .ie-bg,
+		.deco-input.rounded-corners  .ie-bg,
 		button.r-cnr                 .ie-bg,
 		button.rounded-corners       .ie-bg {
-			margin: -1px; /* compensates for borders of parent */
+			 /* compensates for borders of parent */
+			left: 12px;
+			right: 12px;
+			top: 12px;
+			bottom: 12px;
+			margin: 0px;
 		}
 
 		.r-cnr           .corner-1,
@@ -686,11 +693,6 @@ button label {
 
 
 
-
-
-
-
-
 .r-tmnl            .ie-bg,
 .rounded-terminals .ie-bg,
 .r-cnr             .ie-bg,
@@ -709,6 +711,12 @@ button label {
 	color: white;
 }
 
+
+
+.deco-input {
+	margin-left: -0.87px;
+	margin-top: -.87px!important;
+}
 
 .button-x {
 	}

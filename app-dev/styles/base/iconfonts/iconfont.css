@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1465971221'); /* IE9*/
-  src: url('iconfont.eot?t=1465971221#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1465971221') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1465971221') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1465971221#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1465983968'); /* IE9*/
+  src: url('iconfont.eot?t=1465983968#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1465983968') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1465983968') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1465983968#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -61,7 +61,6 @@
 .icon-silk-banner-verticle:before { content: "\e60d"; }
 .icon-sina-weibo:before { content: "\e60e"; }
 .icon-tencent-weixin:before { content: "\e60f"; }
-.icon-magnifier:before { content: "\e613"; }
 .icon-eject-downwards:before { content: "\e614"; }
 .icon-eject-leftwards:before { content: "\e615"; }
 .icon-eject-rightwards:before { content: "\e616"; }
@@ -75,3 +74,4 @@
 .icon-clipboard-with-dollar-sign:before { content: "\e61f"; }
 .icon-four-squares:before { content: "\e620"; }
 .icon-card-with-dollar-sign:before { content: "\e621"; }
+.icon-magnifier:before { content: "\e613"; }

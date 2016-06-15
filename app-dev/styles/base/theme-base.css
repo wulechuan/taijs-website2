@@ -13,6 +13,23 @@ html, body {
 	background-color: white;
 }
 
+::-webkit-input-placeholder { /* WebKit browsers */
+	color: #999;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: #999;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: #999;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+	color: #999;
+}
+.ie8-input-fake-placeholder {
+	color: #999;
+}
+
+
 hr {
 	border-color: #d0d0d0;
 }
@@ -70,6 +87,15 @@ button:active, button:focus {
 em {
 	color: #ff291d;
 }
+
+label.deco-input {
+	border-color: #e6e6e6;
+	background-color: white;
+	}
+	label.deco-input .iconfont {
+		color: #999;
+	}
+
 
 .qrcode {
 	}

@@ -144,6 +144,94 @@ input[type="radio"] {
 }
 
 
+label.deco-input {
+	display: inline-block;
+	position: relative;
+	border-width: 1px;
+	border-style: solid;
+	padding: 4px;
+	box-sizing: border-box;
+	width: 140px;
+	}
+
+	.ie8-input-fake-placeholder {
+		display: none;
+	}
+
+
+	label.deco-input .iconfont {
+		display: none;
+	}
+
+	label.deco-input.has-icon {
+		padding-left: 34px;
+	}
+
+	label.deco-input .iconfont,
+	label.deco-input input {
+		z-index: 2; /* for possible ie-bg */
+	}
+
+	label.deco-input.has-icon .iconfont {
+		display: inline-block;
+		width: auto;
+		height: 16px;
+		font-size: 16px;
+		line-height: 1;
+		position: absolute;
+		left: 10px;
+		top: 0;
+		bottom: 0;
+		margin: auto 0;
+	}
+
+	label.deco-input .ie8-input-fake-placeholder {
+		line-height: 26px;
+		border-width: 0!important;
+		padding: 0!important;
+		margin: 0!important;
+		top: 4px;
+		bottom: 4px;
+		right: 4px;
+		left: 4px;
+	}
+
+	label.deco-input.has-icon .ie8-input-fake-placeholder {
+		left: 34px;
+	}
+
+
+	label.deco-input input {
+		box-sizing: border-box;
+		width: 100%;
+		position: relative;
+		line-height: 26px;
+		height: 26px;
+		font-size: 16px;
+		border-style: none!important;
+		border-width: 0!important;
+		padding: 0!important;
+		margin: 0!important;
+	}
+
+	label.deco-input input {
+		background-color: transparent; /* for ie8 input fake placeholder */
+	}
+
+	label.deco-input input:focus,
+	label.deco-input input:active {
+		background-color: white; /* for ie8 input fake placeholder */
+	}
+
+
+.search-block {
+	}
+
+	.search-block .iconfont:before {
+		content: '\e613';
+	}
+
+
 .ie-bg {
 	display: none;
 }

@@ -54,13 +54,6 @@
 #app-header {
 	}
 
-	#app-header .iconfont {
-		font-size: 21px;
-		width: 21px;
-		height: 35px;
-		vertical-align: top;
-	}
-
 	#app-header-info-and-links {
 		font-size: 12px;
 		border-bottom: 1px solid;
@@ -77,6 +70,10 @@
 		}
 
 		#app-header-info-and-links button .iconfont {
+			font-size: 21px;
+			width: 21px;
+			height: 35px;
+			vertical-align: top;
 			margin: 0;
 		}
 
@@ -185,21 +182,18 @@
 
 		#app-header-chief-bar > .width-wrap > .docking {
 			height: 100%;
-			background-color: rgba(255, 128, 128, 0.2);
 		}
 
 		#search-box, #my-assets {
-			height: 19px;
+			text-align: left;
 		}
 
 		#search-box {
 			width: 140px;
-			background-color: white;
 		}
 
 		#my-assets {
 			width: 120px;
-			background-color: white;
 			margin-left: 10px;
 		}
 
