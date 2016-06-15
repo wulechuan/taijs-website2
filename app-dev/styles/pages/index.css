@@ -35,7 +35,6 @@
 	}
 
 	#splash-block > .width-wrap {
-		box-sizing: border-box;
 		height: 320px;
 		padding-top: 36px;
 		padding-bottom: 36px;

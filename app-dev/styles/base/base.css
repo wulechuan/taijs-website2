@@ -676,13 +676,15 @@ input[type="radio"] {
 	}
 
 .width-wrap {
-	box-sizing: border-box;
+	box-sizing: content-box;
 	position: relative;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	clear: both;
 	float: none;
+	padding-top: 0!important;
+	padding-bottom: 0!important;
 	z-index: 1;
 }
 
