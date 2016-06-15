@@ -408,11 +408,12 @@
 			}
 
 			#credit-details-pane .content-panel h4 .iconfont {
+				font-size: 14.5px;
 				margin: 0;
 				margin-right: 10px;
-				color: #999;
-				font-size: 14.5px;
 				vertical-align: top;
+				padding-top: 1px;
+				color: #999;
 			}
 
 			#credit-details-pane .content-panel h5 {
@@ -570,7 +571,7 @@
 			animation: promotion-card-zoom-out 2.1s ease forwards;
 		}
 
-		.promotion-card:hover .splash .splash-image {
+		.promotion-card .splash:hover .splash-image {
 			animation: promotion-card-zoom-in 0.234s ease-out forwards;
 		}
 
