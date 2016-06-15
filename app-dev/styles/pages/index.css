@@ -35,7 +35,7 @@
 	}
 
 	#splash-block > .width-wrap {
-		height: 320px;
+		height: 248px;
 		padding-top: 36px;
 		padding-bottom: 36px;
 	}
@@ -85,7 +85,7 @@
 
 	#splash-credit-info-block {
 		position: absolute;
-		left: 20px;
+		left: 0;
 		top: 36px;
 		}
 
