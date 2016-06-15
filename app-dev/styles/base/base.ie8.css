@@ -723,6 +723,7 @@ button label {
 
 	.button-x:hover {
 		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorstr=#33FFFFFF, endColorstr=#33FFFFFF)";
+		    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#33FFFFFF, endColorstr=#33FFFFFF);
 	}
 
 .popup-layers-container-backplate {
@@ -733,6 +734,29 @@ button label {
 }
 
 
+.info-block .info-locator {
+	margin-top: 5px\0;
+    }
 
+	.info-block .info-locator .info {
+	    outline: 1px solid;
+    }
+
+    .info-block .info-locator .info .ie-shadow {
+        -ms-filter: "\
+            progid:DXImageTransform.Microsoft.Alpha(Opacity=100)\
+            progid:DXImageTransform.Microsoft.Blur(PixelRadius=5)\
+        ";
+        filter: 
+            progid:DXImageTransform.Microsoft.Alpha(Opacity=80)
+            progid:DXImageTransform.Microsoft.Blur(PixelRadius=5)
+        ;
+
+        left: -8px;
+        top: -8px;
+        right: 2px;
+        bottom: 2px;
+        z-index: -1!important;
+    }
 
 

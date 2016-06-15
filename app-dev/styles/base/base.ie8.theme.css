@@ -64,6 +64,14 @@ button.rounded-corners.color-default :hover  [class|="corner"]:after {
 }
 
 
+.info-block .info-locator .info {
+    outline-color: #1579ac;
+    }
+
+    .info-block .info-locator .info .ie-shadow {
+        background-color: #18f;
+    }
+
 
 #app-chief-nav {
     }
