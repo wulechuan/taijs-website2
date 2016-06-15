@@ -5,16 +5,29 @@
 
 	/* background-color: #6b76ad; */
 	background-color: #396d8b;
-	background-image: 
-		url(../../images/pages/index/splash-bg.jpg),
-		linear-gradient(to bottom, #396d8b, #887252)
-	;
 	-ms-filter: "\
 		progid:DXImageTransform.Microsoft.Gradient(startColorstr=#396d8b, endColorstr=#887252)\
 	";
 	    filter: 
 		progid:DXImageTransform.Microsoft.Gradient(startColorstr=#396d8b, endColorstr=#887252)\
 	);
+	}
+
+	#splash-block:before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-image: 
+			url(../../images/pages/index/splash-bg.jpg)
+		; /* ie9 doesn't support css gradient */
+		background-image: 
+			url(../../images/pages/index/splash-bg.jpg),
+			linear-gradient(to bottom, #396d8b, #887252)
+		;
 	}
 
 	#splash-block > .ie-bg {

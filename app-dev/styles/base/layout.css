@@ -416,15 +416,15 @@
 
 
 #app-chief-nav {
-	margin: 12px 0 12px 141px;
-	height: 50px;
+	margin: 0 0 0 130px;
+	padding: 11px 11px;
 	display: inline-block;
 	vertical-align: top;
 	}
 
 	#app-chief-nav nav {
-		display: inline;
-		position: static;
+		display: block;
+		position: relative;
 	}
 
 	#app-chief-nav .menu-item > label {
@@ -434,7 +434,8 @@
 
 	#app-chief-nav .menu.level-1 {
 		font-size: 16px;
-		height: 100%;
+		margin: 0;
+		height: 50px;
 		}
 
 		#app-chief-nav .menu.level-1 > .menu-item {

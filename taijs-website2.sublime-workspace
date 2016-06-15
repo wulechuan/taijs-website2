@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"inline",
+				"inline"
+			],
+			[
 				"bordco",
 				"border-color"
 			],
@@ -34,10 +38,6 @@
 			[
 				"transition",
 				"transition-property"
-			],
-			[
-				"inline",
-				"inline-block"
 			],
 			[
 				"li",
@@ -307,23 +307,23 @@
 			"file": "app-dev/styles/base/layout.css",
 			"settings":
 			{
-				"buffer_size": 9839,
+				"buffer_size": 9853,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app-dev/styles/base/base.ie8.css",
+			"file": "app-dev/index.html",
 			"settings":
 			{
-				"buffer_size": 20237,
+				"buffer_size": 10262,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app-dev/styles/base/base.ie8.theme.css",
+			"file": "app-dev/styles/base/base.css",
 			"settings":
 			{
-				"buffer_size": 3282,
+				"buffer_size": 15643,
 				"line_ending": "Windows"
 			}
 		}
@@ -398,12 +398,12 @@
 	"file_history":
 	[
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/index.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.ie8.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.ie8.theme.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/iconfonts/iconfont.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-base.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.ie8.theme.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.ie8.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/index.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/reset.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-footer.html",
@@ -545,6 +545,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"visibility: hidden;",
+			"ie9",
+			"transition",
+			"static",
+			"block",
+			"0",
+			"12px",
 			"0.87",
 			".ie8-input-fake-placeholder",
 			".ie8-input-fake-placeholder ",
@@ -665,14 +672,7 @@
 			"hover",
 			"left",
 			"columns",
-			"#app-footer",
-			"div",
-			"43",
-			"38%",
-			"42",
-			"2%",
-			"\\0",
-			"46"
+			"#app-footer"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -690,7 +690,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -728,15 +728,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9839,
+						"buffer_size": 9853,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3159,
-								3159
+								6921,
+								6921
 							]
 						],
 						"settings":
@@ -745,66 +745,70 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1254.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app-dev/styles/base/base.ie8.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 20237,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								19034,
-								19034
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 14214.0,
+						"translation.y": 8274.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "app-dev/styles/base/base.ie8.theme.css",
+					"buffer": 2,
+					"file": "app-dev/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3282,
+						"buffer_size": 10262,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2631,
-								2631
+								5693,
+								5693
+							],
+							[
+								5851,
+								5851
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 1520.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app-dev/styles/base/base.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15643,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								605,
+								605
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1105.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -863,7 +867,15 @@
 		[
 			[
 				"index",
-				"app-dev\\styles\\pages\\index.css"
+				"app-dev\\index.html"
+			],
+			[
+				"base",
+				"app-dev\\styles\\base\\base.css"
+			],
+			[
+				"layou",
+				"app-dev\\styles\\base\\layout.css"
 			],
 			[
 				"ie",
@@ -880,10 +892,6 @@
 			[
 				"them",
 				"app-dev\\styles\\base\\theme-base.css"
-			],
-			[
-				"base",
-				"app-dev\\styles\\base\\base.css"
 			],
 			[
 				"layout",
