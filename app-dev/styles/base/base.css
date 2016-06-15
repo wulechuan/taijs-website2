@@ -133,6 +133,16 @@ input[type="radio"] {
 
 
 
+.iconfont,
+.icon {
+	display: inline-block;
+	min-width: 1em;
+	min-height: 1em;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	vertical-align: middle;
+}
+
 
 .ie-bg {
 	display: none;
@@ -266,18 +276,6 @@ input[type="radio"] {
 
 
 
-
-.iconfont,
-.icon {
-	display: inline-block;
-	min-width: 1em;
-	min-height: 1em;
-	margin-left: 0.5em;
-	margin-right: 0.5em;
-	vertical-align: middle;
-}
-
-
 .button-x {
 	position: absolute;
 	display: block;
@@ -407,6 +405,26 @@ input[type="radio"] {
 	}
 
 
+
+.v-middled:before,
+.content-vertically-middled:before {
+	content: '';
+	display: inline-block;
+	width: 0;
+	font-size: 0;
+	line-height: 0;
+	overflow: hidden;
+	height: 100%;
+	vertical-align: middle;
+	}
+
+	.v-middled > *,
+	.content-vertically-middled > * {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+
 .docking {
 	position: absolute;
 	}
@@ -417,6 +435,8 @@ input[type="radio"] {
 		top: 0;
 		bottom: 0;
 		margin: auto 0;
+		text-align: left;
+		direction: ltr;
 	}
 
 	.docking.docking-rightside {
@@ -425,6 +445,7 @@ input[type="radio"] {
 		top: 0;
 		bottom: 0;
 		margin: auto 0;
+		text-align: right;
 	}
 
 	.docking.docking-top {

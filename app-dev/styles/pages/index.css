@@ -297,8 +297,8 @@
 				left: 100%;
 				}
 				#credit-details-pane .docking .corner-deco-above {
-					font-size: 20px;
-					line-height: 20px;
+					font-size: 21px;
+					line-height: 21px;
 					bottom: 100%;
 				}
 				#credit-details-pane .docking .corner-deco-below {
@@ -308,8 +308,6 @@
 				}
 				#credit-details-pane .docking .corner-deco-above:before {
 					bottom: 0;
-					font-size: 21px; /* ie8+ */
-					line-height: 21px; /* ie8+ */
 					bottom: 1px\0; /* ie8+ */
 				}
 				#credit-details-pane .docking .corner-deco-below:before {
@@ -343,7 +341,7 @@
 				color: white;
 				background-color: #f92c1f;
 
-				text-indent: -3px;
+				text-indent: -3.9px;
 				}
 
 				#credit-details-pane .expandable.expanded ~ .docking button {
@@ -351,7 +349,7 @@
 				}
 
 				#credit-details-pane .expandable ~ .docking button .iconfont:before {
-					font-size: 12px;
+					font-size: 13px;
 					line-height: 40px;
 					content: '\e616';
 				}
@@ -482,9 +480,15 @@
 	padding: 1px 0;
 	}
 
+	#promotion-cards > .width-wrap {
+		padding: 1px 0;
+	}
+
 	.promotion-cards-group {
 		position: relative;
 		width: 100%;
+		padding: 1px 0;
+		margin: -1px auto;
 	}
 
 	.promotion-card {
