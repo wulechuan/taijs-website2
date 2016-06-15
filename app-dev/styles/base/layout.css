@@ -9,25 +9,6 @@
 }
 
 
-.qrcode {
-	width: 128px;
-	height: 128px;
-	}
-
-	.qrcode > img {
-		width: 128px;
-		height: 128px;
-		margin-bottom: 6px;
-	}
-
-	.qrcode > .figcaption {
-		font-size: 12px;
-		display: inline-block;
-		padding: 6px;
-		margin-top: 6px;
-	}
-
-
 #app-header {
 	position: relative;
 	z-index: 9;
