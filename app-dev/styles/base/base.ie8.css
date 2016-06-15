@@ -715,8 +715,23 @@ button label {
 
 .deco-input {
 	margin-left: -0.87px;
-	margin-top: -.87px!important;
+	margin-top: -.87px;
 }
+
+#my-assets .menu.level-1 {
+	left: -0.87px;
+	/* margin-top: -.87px!important; */
+}
+
+#my-assets .menu.level-1 {
+	width: 120px;
+	height: 38px;
+}
+
+#my-assets .menu.level-1 > .menu-item {
+	margin: 1px;
+}
+
 
 .button-x {
 	}

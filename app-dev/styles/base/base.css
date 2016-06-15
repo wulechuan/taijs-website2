@@ -156,6 +156,7 @@ label.deco-input {
 
 	.ie8-input-fake-placeholder {
 		display: none;
+		position: absolute;
 	}
 
 
@@ -214,10 +215,10 @@ label.deco-input {
 		margin: 0!important;
 	}
 
+	label.deco-input input:empty,
 	label.deco-input input {
 		background-color: transparent; /* for ie8 input fake placeholder */
 	}
-
 	label.deco-input input:focus,
 	label.deco-input input:active {
 		background-color: white; /* for ie8 input fake placeholder */
@@ -703,6 +704,7 @@ label.deco-input {
 	}
 	.menu-item {
 		position: relative;
+		display: block;
 	}
 	.menu-item:before {
 		content: '';

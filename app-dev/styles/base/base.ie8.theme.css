@@ -63,15 +63,17 @@ button.rounded-corners.color-default :hover  [class|="corner"]:after {
     color: #3f93ff;
 }
 
-.search-block {
-    }
 
-    .search-block > .ie-bg {
-        border-color: #e6e6e6;
-    }
-    .search-block > .ie-bg [class|="corner"]:before {
-        color: #e6e6e6;
-    }
+#my-assets .menu.level-1 > .ie-bg,
+.search-block > .ie-bg {
+    border-color: #e6e6e6;
+}
+#my-assets .menu.level-1 > .ie-bg [class|="corner"]:before,
+.search-block > .ie-bg [class|="corner"]:before {
+    color: #e6e6e6;
+}
+
+
 
 .info-block .info-locator .info {
     outline-color: #1579ac;
