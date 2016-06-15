@@ -1,17 +1,37 @@
 #splash-block {
+	overflow: hidden;
+
 	color: white;
-	background-color: #6b76ad;
-	background-image: url(../../images/pages/index/splash-bg.jpg);
+
+	/* background-color: #6b76ad; */
+	background-color: #396d8b;
+	background-image: 
+		url(../../images/pages/index/splash-bg.jpg),
+		linear-gradient(to bottom, #396d8b, #887252)
+	;
+	-ms-filter: "\
+		progid:DXImageTransform.Microsoft.Gradient(startColorstr=#396d8b, endColorstr=#887252)\
+	";
+	    filter: 
+		progid:DXImageTransform.Microsoft.Gradient(startColorstr=#396d8b, endColorstr=#887252)\
+	);
 	}
 
-	#splash-block > .ie-bg:before {
+	#splash-block > .ie-bg {
 		width: 1920px;
-		left: 50%;
 		margin-left: -960px;
 
-		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-			src='../../images/pages/index/splash-bg.jpg', sizingMethod='crop'
-		);
+		-ms-filter: "\
+			progid:DXImageTransform.Microsoft.AlphaImageLoader(\
+				src='../../images/pages/index/splash-bg.jpg', sizingMethod='crop'\
+			)\
+		";
+
+		filter:
+			progid:DXImageTransform.Microsoft.AlphaImageLoader(
+				src='../../images/pages/index/splash-bg.jpg', sizingMethod='crop'
+			)
+		;
 	}
 
 	#splash-block > .width-wrap {
@@ -199,12 +219,6 @@
 
 
 			#credit-details-pane .docking {
-				position: absolute;
-				left: auto;
-				right: 0;
-				top: 0;
-				bottom: 0;
-				margin: auto 0;
 				width: 0;
 				height: 40px;
 				z-index: 3;
