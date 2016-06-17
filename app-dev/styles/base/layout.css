@@ -551,7 +551,7 @@
 		transition: none;
 		transform-origin: top;
 		padding: 8px 0;
-		min-width: 160px;
+		min-width: 144px;
 		}
 
 		#my-assets .menu.level-1 > .menu-item:hover .menu.level-2 {
