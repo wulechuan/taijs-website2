@@ -233,8 +233,8 @@ label.deco-input {
 		content: '\e613';
 	}
 
-
-.ie-bg {
+.ie-bg,
+[class|="ie"] {
 	display: none;
 }
 
@@ -705,6 +705,7 @@ label.deco-input {
 	.menu .menu-wrap {
 		position: absolute;
 		display: none;
+		overflow: visible;
 	}
 	.menu-item {
 		position: relative;
@@ -764,9 +765,51 @@ label.deco-input {
 		margin: auto 0 auto 0;
 	}
 
+	.menu-item.has-sub-menu.sub-menu-shown {
+		z-index: 9;
+	}
+
+	.menu-item:hover {
+		z-index: 10;
+	}
+
 	.menu.layout-hori > .menu-item.has-sub-menu.sub-menu-shown > label:after {
 		content: '\e605';
 	}
+
+	.menu-item > .deco {
+	/* .deco is not only used for ie8 compatibility, but also for ease of styling menu items */
+		display: none;
+		position: absolute;
+		z-index: 1;
+	}
+
+	.menu-item > .deco ~ .menu-wrap,
+	.menu-item > .deco ~ .menu-item {
+		z-index: 2;
+	}
+
+	.menu-item.has-sub-menu > .deco,
+	.menu-item.has-sub-menu > .menu-wrap,
+	.menu-item.has-sub-menu > .menu {
+		display: block;
+		visibility: hidden;
+		opacity: 0;
+		/* transition-duration: 0.33s; */
+	}
+
+	.touch-off .menu-item.has-sub-menu:hover > .deco,
+	.touch-off .menu-item.has-sub-menu:hover > .menu-wrap,
+	.touch-off .menu-item.has-sub-menu:hover > .menu,
+	.menu-item.has-sub-menu.sub-menu-shown .deco,
+	.menu-item.has-sub-menu.sub-menu-shown > .menu-wrap,
+	.menu-item.has-sub-menu.sub-menu-shown > .menu {
+		visibility: visible;
+		opacity: 1;
+	}
+
+
+
 
 
 

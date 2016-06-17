@@ -4,6 +4,70 @@
 		"selected_items":
 		[
 			[
+				"sca",
+				"scaleY()"
+			],
+			[
+				"sc",
+				"scaleY()"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"wav",
+				"waveComponent"
+			],
+			[
+				"wPhaseO",
+				"wPhaseOffsetLim1"
+			],
+			[
+				"wCol",
+				"wColorStroke"
+			],
+			[
+				"par",
+				"parseInt"
+			],
+			[
+				"new",
+				"newValue"
+			],
+			[
+				"ne",
+				"newValue"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"ap",
+				"amp"
+			],
+			[
+				"waveComp",
+				"waveComponent"
+			],
+			[
+				"samp",
+				"sampleY"
+			],
+			[
+				"strok",
+				"strokeWidth"
+			],
+			[
+				"wAmpLi",
+				"wAmpLim2"
+			],
+			[
 				"inline",
 				"inline"
 			],
@@ -260,10 +324,6 @@
 				"ERRORLEVEL"
 			],
 			[
-				"box",
-				"box-sizing"
-			],
-			[
 				"back",
 				"background-color"
 			],
@@ -299,31 +359,15 @@
 			"file": "app-dev/html-snippets/module-app-header.html",
 			"settings":
 			{
-				"buffer_size": 9681,
+				"buffer_size": 10564,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app-dev/styles/base/layout.css",
+			"file": "app-dev/styles/base/base.ie8.css",
 			"settings":
 			{
-				"buffer_size": 9853,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app-dev/index.html",
-			"settings":
-			{
-				"buffer_size": 10262,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app-dev/styles/base/base.css",
-			"settings":
-			{
-				"buffer_size": 15643,
+				"buffer_size": 15964,
 				"line_ending": "Windows"
 			}
 		}
@@ -397,14 +441,18 @@
 	],
 	"file_history":
 	[
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/index.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.ie8.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.ie8.theme.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/iconfonts/iconfont.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.ie8.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-base.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/index.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/index.html",
+		"/C/Users/wulechuan/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/D/Users/wulechuan/Desktop/OneDrive/事业/canvas-ripples.js",
+		"/D/Users/wulechuan/Desktop/waves.js",
+		"/D/Users/wulechuan/Downloads/install-a-new-font.txt",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/iconfonts/iconfont.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/reset.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-footer.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/index.js",
@@ -520,11 +568,7 @@
 		"/D/p/dev/private/warm-up/app-dev/test-url-overriding.html",
 		"/D/p/dev/private/warm-up/app-dist/styles/default.min.css",
 		"/D/p/dev/private/warm-up/dist/wulechuan-warm-up.min.js",
-		"/D/p/dev/private/warm-up/app-dist/wulechuan-warm-up.js",
-		"/D/p/dev/private/warm-up/npm.bat",
-		"/D/p/dev/private/warm-up/index.html",
-		"/D/p/dev/private/warm-up/html/page-list.html",
-		"/D/p/dev/private/warm-up/html/page-2.html"
+		"/D/p/dev/private/warm-up/app-dist/wulechuan-warm-up.js"
 	],
 	"find":
 	{
@@ -545,134 +589,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"visibility: hidden;",
-			"ie9",
-			"transition",
-			"static",
-			"block",
+			" cast-shadow",
 			"0",
-			"12px",
-			"0.87",
-			".ie8-input-fake-placeholder",
-			".ie8-input-fake-placeholder ",
-			"ma-ro",
-			"1-lczq",
-			"gmjj",
-			"=\"cn-",
-			"id=\"cn",
-			"id=",
-			"1-index",
-			"cn-",
-			"cn",
-			"menu",
-			"hidden",
-			"12",
-			"has-borders",
-			"13",
-			"has-borders",
-			"border",
-			"corner",
-			"666",
-			"f0f",
-			"italic",
-			"opacity",
-			"font-weight: lighter;\n	font-style: italic;",
-			"white",
-			"16",
-			"fdfd",
+			"my-assets",
+			"ccc",
+			"7",
 			"top",
 			"left",
-			"input",
-			"[for]",
-			"field",
-			"1",
-			"lightgreen",
-			"rlt",
-			"margin:",
-			"margin-left",
-			"-left",
-			"docking",
-			"content-",
-			"content-vertically-middled",
-			".row",
-			".row ",
-			"left",
-			"4",
-			"width-wrap",
-			"gradient",
-			"docking",
-			"dock",
-			"3",
-			"8",
-			"6",
-			"2",
-			"6",
-			"169abc",
-			"3",
-			"0",
-			"as-border-triangl",
-			"info.has-border-triangl",
-			"17",
-			"34",
-			",ShadowOpacity=1",
-			"true",
-			"sform.Micros",
-			"::",
-			"[data-tip-triangle-pos",
-			"data-tip-triangle-size=",
-			"[data-tip-triangle-size=\"normal\"]",
-			"[data-has-tip-triangle]",
-			"top",
-			"28",
-			"transition",
-			"before",
-			",",
-			"duration",
-			"transition-property:",
-			"ransition-property:",
-			"25",
-			"s;",
-			"style",
-			"top",
-			"info-auto-hide.",
-			";\n",
-			"info",
-			"6",
 			"5",
-			"inherit",
-			"2.1",
-			"font-family",
-			"<h4",
-			"font-fami",
-			"font-fa",
+			"r2px",
+			"none",
+			"rect",
+			"6",
 			"left",
-			"em",
-			"footer-nav",
+			"><div class=\"ie-shadow\"></div",
+			"ie-bg ",
+			".ie-bg ",
+			"color-transparen",
+			".color-transparent",
+			"before",
+			"Z",
+			"Y",
+			"transform-origin: top; ",
+			"1.5",
+			"translate",
+			"my-asset-menu-showing",
+			"Y",
+			"my-asset-menu-showing",
+			"3D",
+			"my-asset-menu-showing",
+			"promotion-card-zoom-in",
+			"sharp-corner-tr",
+			"before",
+			":hover",
+			".touch-off ",
+			"#my-assets .menu.level-1 > ",
+			"z-index: 10;",
+			"#my-assets .menu.level-1 >",
+			"app-chief-nav",
+			"> .deco",
+			"wrap",
 			"top",
-			"app-footer",
-			"footer-nav",
-			"span",
-			"10",
-			"8",
-			"border-color:",
-			"border-color",
-			"content",
-			"qrcode",
-			"10",
-			"<p>",
-			"class=\"qrcode\" ",
-			".qrcode",
-			"mg id",
-			"img.qrcode",
-			"f8f8f8",
-			"background",
-			"<img class=\"qrco",
-			"-qr",
-			"public",
-			"hover",
 			"left",
-			"columns",
-			"#app-footer"
+			"pink",
+			"0",
+			".deco",
+			"app-chief-nav",
+			".deco",
+			"false, ",
+			"true, ",
+			", null, null",
+			"_safelyUpdateProperty",
+			"effectsRegeneration",
+			"ripples",
+			"ripple",
+			"wave",
+			"ripples",
+			"waveCount",
+			"ripples",
+			"Ripples",
+			"ripples",
+			"wave",
+			"ripples",
+			"Ripples",
+			"ripples",
+			"Ripples",
+			"ripples",
+			"distributeSomeValuesToAllripples",
+			"waves",
+			"Waves",
+			"waves",
+			"Wave",
+			"Wave(",
+			"wave",
+			"Wave",
+			"waves",
+			"Waves",
+			"waves",
+			"Waves",
+			"waves",
+			"wSpeedLim2",
+			"randomBe",
+			"ampPeak",
+			"'positive'",
+			"Offset",
+			"waterLevel",
+			"waterLevelOffsetLim1",
+			"waterLe",
+			"waveColorOptions",
+			"distributeSomeValuesToAllWaves",
+			"decideWaveColors",
+			"conso",
+			"waterLevelOffsetLim",
+			"waterLevelOffsetLim1",
+			"wPhaseOffsetLim1",
+			"drawingFramesLim",
+			"wPhaseOffsetLim1",
+			"phaseOffset",
+			"PhaseOffset",
+			"phaseOffset",
+			"wPhaseOffsetLim2",
+			"phaseOffset",
+			"wPhaseOffsetLim1",
+			"wPhaseOffsetLim2",
+			"wPhaseOffset",
+			"wPhaseOffsetLim",
+			"wPhaseOffsetLim1",
+			"Length",
+			"wLengthLim1",
+			"count",
+			"_safelyUpdateProperty",
+			"wColorStroke",
+			"wave",
+			"wColorStroke",
+			"drawSuperpositionWave",
+			"wColorStroke",
+			"drawAnimation",
+			"waveConf",
+			"waveColorRGB",
+			"ctx",
+			"fillFadingRatio",
+			"strokeDarkenRatio",
+			"var ",
+			"hasOwnAttribute",
+			"_tryToUpdateAttribute",
+			"wAmpLim1",
+			"null",
+			"_updateFloatAttribute",
+			"_temp"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -690,7 +734,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -699,107 +743,64 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9681,
+						"buffer_size": 10564,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8513,
-								8513
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 4260.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app-dev/styles/base/layout.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9853,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6921,
-								6921
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 8274.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app-dev/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10262,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5693,
-								5693
+								2659,
+								2659
 							],
 							[
-								5851,
-								5851
+								3078,
+								3078
+							],
+							[
+								4525,
+								4525
+							],
+							[
+								4944,
+								4944
+							],
+							[
+								6388,
+								6388
+							],
+							[
+								6807,
+								6807
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": -0.0,
-						"translation.y": 1520.0,
+						"translation.x": 0.0,
+						"translation.y": 2933.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "app-dev/styles/base/base.css",
+					"buffer": 1,
+					"file": "app-dev/styles/base/base.ie8.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 15643,
+						"buffer_size": 15964,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								605,
-								605
+								392,
+								392
 							]
 						],
 						"settings":
@@ -808,10 +809,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 420.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -866,20 +867,32 @@
 		"selected_items":
 		[
 			[
-				"index",
-				"app-dev\\index.html"
+				"basie",
+				"app-dev\\styles\\base\\base.ie8.css"
+			],
+			[
+				"ie",
+				"app-dev\\styles\\base\\base.ie8.css"
+			],
+			[
+				"indexcss",
+				"app-dev\\styles\\pages\\index.css"
 			],
 			[
 				"base",
 				"app-dev\\styles\\base\\base.css"
 			],
 			[
+				"them",
+				"app-dev\\styles\\base\\theme-base.css"
+			],
+			[
 				"layou",
 				"app-dev\\styles\\base\\layout.css"
 			],
 			[
-				"ie",
-				"app-dev\\styles\\base\\base.ie8.theme.css"
+				"index",
+				"app-dev\\index.html"
 			],
 			[
 				"icon",
@@ -888,10 +901,6 @@
 			[
 				"incon",
 				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
-			],
-			[
-				"them",
-				"app-dev\\styles\\base\\theme-base.css"
 			],
 			[
 				"layout",

@@ -177,59 +177,6 @@
 		}
 
 
-#my-assets {
-	margin-left: 10px;
-	}
-
-	#my-assets .menu.level-1 {
-		box-sizing: border-box;
-		width: 120px;
-		height: 36px;
-		display: block;
-		border-style: solid;
-		border-width: 1px;
-		border-color: #e6e6e6;
-		background-color: #f9f9f9;
-	}
-
-	#my-assets .menu.level-1 > .menu-item {
-		background-color: #f9f9f9;
-		height: 34px; /* for firefox */
-	}
-
-	#my-assets .menu.level-1 > .menu-item > .deco {
-		display: none;
-		position: absolute;
-		left: 0;
-		top: 0;
-		right: 0;
-	}
-
-	#my-assets .menu.level-1 > .menu-item > label {
-		font-size: 12px;
-		color: #333;
-	}
-
-	#my-assets .menu.level-1 > .menu-item > label .iconfont {
-		color: #157dff;
-		margin: 0 8px 0 2px;
-	}
-
-	#my-assets .menu.level-1 > .menu-item.has-sub-menu > label:after {
-		font-family: 'iconfont'!important;
-		content: '\e603';
-		font-size: 26px;
-		line-height: 1;
-		position: absolute;
-		right: 10px;
-		top: 0;
-		bottom: 1px;
-		height: 26px;
-		margin: auto 0;
-		direction: rtl;
-		text-indent: -9px;
-	}
-
 
 #app-footer {
 	display: block;
@@ -415,6 +362,18 @@
 
 
 
+
+#app-chief-nav .menu.level-2,
+#app-chief-nav .menu.level-1 > .menu-item > .deco,
+
+#my-assets .menu.level-2,
+#my-assets .menu.level-1 > .menu-item > .deco {
+	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.147);
+}
+
+
+
+
 #app-chief-nav {
 	margin: 0 0 0 130px;
 	padding: 11px 11px;
@@ -447,6 +406,19 @@
 			padding-bottom: 7px;
 		}
 
+		#app-chief-nav .menu.level-1 > .menu-item > .deco {
+			border-width: 1px;
+			border-style: solid;
+			box-sizing: content-box;
+			background-color: white;
+			width: 100%;
+			height: 42px;
+			left: 0;
+			top: 0;
+			clip: rect(-9px, 200px, 41px, -9px);
+		}
+
+
 	#app-chief-nav .menu-wrap.level-2 {
 		left: 0;
 		top: 100%;
@@ -455,14 +427,13 @@
 		width: 100%;
 		}
 
-		#app-chief-nav .menu-wrap.level-2:after {
-			content: '';
+		#app-chief-nav .menu-wrap.level-2 .border-patch {
 			display: block;
 			position: absolute;
-			left: 1px;
-			top: 0;
-			right: -2px;
-			height: 1px;
+			left: 0;
+			right: 12px;
+			top: -10px;
+			height: 13px;
 			background-color: white;
 			z-index: 10;
 		}
@@ -477,9 +448,6 @@
 			box-sizing: content-box;
 			border-width: 1px;
 			border-style: solid;
-
-			opacity: 0;
-
 			padding-right: 12px;
 		}
 		#app-chief-nav .menu.level-2 > .menu-item {
@@ -499,58 +467,102 @@
 			margin-right: 8px!important;
 		}
 
-	#app-chief-nav .menu .deco {
+
+
+
+#my-assets {
+	margin-left: 10px;
+	}
+
+	#my-assets .menu.level-1 {
+		box-sizing: border-box;
+		display: block;
+		border-style: solid;
+		border-width: 1px;
+	}
+
+	#my-assets .menu.level-1 > .menu-item {
+		width: 118px;
+		height: 34px; /* for firefox */
+	}
+
+	#my-assets .menu.level-1 > .menu-item > label {
+		font-size: 12px;
+	}
+
+	#my-assets .menu.level-1 > .menu-item > label .iconfont {
+		margin: 0 8px 0 2px;
+	}
+
+	#my-assets .menu.level-1 > .menu-item.has-sub-menu > label:after {
+		font-family: 'iconfont'!important;
+		content: '\e603';
+		font-size: 26px;
+		line-height: 1;
 		position: absolute;
+		right: 10px;
+		top: 0;
+		bottom: 1px;
+		height: 26px;
+		margin: auto 0;
+		direction: rtl;
+		text-indent: -9px;
+	}
+
+	#my-assets .menu.level-2,
+	#my-assets .menu.level-1 > .menu-item > .deco {
 		border-width: 1px;
 		border-style: solid;
-		box-sizing: content-box;
-		display: none;
+		right: -1px;
+	}
+
+	#my-assets .menu.level-1 > .menu-item > .deco {
+		box-sizing: border-box;
+		left: -1px;
+		top: -1px;
+		height: 38px;
+		z-index: 1;
+		clip: rect(-9px, 200px, 36px, -9px);
+	}
+
+	#my-assets .menu-wrap.level-2 {
+		right: 0;
+		top: 100%;
+		margin: 0;
+		margin: 0 0px; 
+		padding: 0;
+		width: 322px; /* make some room for the sub-menu auto width */
 		}
 
-		#app-chief-nav .menu.level-1 .deco {
-			z-index: 3;
-			background-color: white;
-			width: 100%;
-			height: 100%;
-			left: 0;
-			top: 0;
-			clip: rect(0px, 200px, 41px, 0px);
+	#my-assets .menu.level-2 .border-patch {
+		/* using standalone div for patching because ie8 ":before" element can not cover inner div elements, such as .ie-shadow; */
+		display: block;
+		position: absolute;
+		z-index: 4;
+		background-color: white;
+		width: 118px;
+		height: 13px;
+		right: 0;
+		top: -10px;
+	}
+
+	#my-assets .menu.level-2 {
+		position: absolute;
+		transition: none;
+		transform-origin: top;
+		padding: 8px 0;
 		}
 
-		#app-chief-nav .menu-wrap.level-2 {
-			z-index: 2;
-			display: block;
-			overflow: visible;
-			visibility: hidden;
+		#my-assets .menu.level-1 > .menu-item:hover .menu.level-2 {
+			/* animation: my-asset-menu-showing 2s ease-out; */
 		}
 
-		#app-chief-nav .menu.level-2,
-		#app-chief-nav .menu.level-1 > .menu-item.has-sub-menu > .deco {
-			opacity: 0;
-			/* transition-duration: 0.33s; */
+		@keyframes my-asset-menu-showing {
+			from { transform: scaleY(0.9); }
+			to   { transform: scaleY(1); }
 		}
 
-
-		#app-chief-nav .menu.level-1 > .menu-item.has-sub-menu.sub-menu-shown {
-			z-index: 9;
+		#my-assets .menu.level-2 > .menu-item > label {
+			padding: 8px 19px;
 		}
 
-		#app-chief-nav .menu.level-1 > .menu-item.has-sub-menu:hover {
-			z-index: 10;
-		}
-
-		#app-chief-nav .menu.level-1 > .menu-item.has-sub-menu > .deco {
-			display: block;
-		}
-
-		.touch-off #app-chief-nav .menu.level-1 > .menu-item.has-sub-menu:hover > .menu-wrap,
-		#app-chief-nav .menu.level-1 > .menu-item.has-sub-menu.sub-menu-shown > .menu-wrap {
-			visibility: visible;
-		}
-
-		.touch-off #app-chief-nav .menu.level-1 > .menu-item.has-sub-menu:hover .menu.level-2,
-		.touch-off #app-chief-nav .menu.level-1 > .menu-item.has-sub-menu:hover > .deco,
-		#app-chief-nav .menu.level-1 > .menu-item.has-sub-menu.sub-menu-shown .deco,
-		#app-chief-nav .menu.level-1 > .menu-item.has-sub-menu.sub-menu-shown .menu.level-2 {
-			opacity: 1;
-		}

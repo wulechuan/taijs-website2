@@ -192,7 +192,6 @@ label.deco-input {
 	}
 
 
-
 #app-chief-nav {
 	}
 
@@ -213,6 +212,44 @@ label.deco-input {
 	}
 
 	#app-chief-nav .menu.level-2 > .menu-item:hover > label {
+		color: white;
+		background-color: #157dff;
+	}
+
+
+
+
+#my-assets {
+	}
+
+	#my-assets .menu.level-1 {
+		border-color: #e6e6e6;
+	}
+
+	#my-assets .menu.level-1 > .menu-item {
+		background-color: #f9f9f9;
+	}
+
+	#my-assets .menu.level-1 > .menu-item > label {
+		color: #333;
+	}
+
+	#my-assets .menu.level-1 > .menu-item > label .iconfont {
+		color: #157dff;
+	}
+
+	#my-assets .menu.level-1 > .menu-item > .deco,
+	#my-assets .menu.level-2 {
+	    border-color: #e6e6e6;
+	}
+
+	#my-assets .menu-wrap.level-2:after,
+	#my-assets .menu.level-1 > .menu-item > .deco,
+	#my-assets .menu.level-2 {
+		background-color: white;
+	}
+
+	#my-assets .menu.level-2 > .menu-item:hover > label {
 		color: white;
 		background-color: #157dff;
 	}

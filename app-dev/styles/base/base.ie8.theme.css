@@ -7,32 +7,32 @@ input[type="reset"].cast-shadow,
 input[type="submit"].cast-shadow,
 input[type="button"].cast-shadow,
 button.cast-shadow,
-button.cast-shadow .ie-bg,
-button.r-tmnl                          .ie-bg,
-button.r-tmnl.color-default            .ie-bg,
-button.rounded-terminals               .ie-bg,
-button.rounded-terminals.color-default .ie-bg,
-button.r-cnr                           .ie-bg,
-button.r-cnr.color-default             .ie-bg,
-button.rounded-corners                 .ie-bg,
-button.rounded-corners.color-default   .ie-bg {
+button.cast-shadow > .ie-bg,
+button.r-tmnl                          > .ie-bg,
+button.r-tmnl.color-default            > .ie-bg,
+button.rounded-terminals               > .ie-bg,
+button.rounded-terminals.color-default > .ie-bg,
+button.r-cnr                           > .ie-bg,
+button.r-cnr.color-default             > .ie-bg,
+button.rounded-corners                 > .ie-bg,
+button.rounded-corners.color-default   > .ie-bg {
     border-color: #157dff;
     background-color: #157dff;
 }
 
-button.color-default [class|="corner"]:before,
-button               [class|="corner"]:before {
+button.color-default > .ie-bg [class|="corner"]:before,
+button               > .ie-bg [class|="corner"]:before {
     color: #157dff;
 }
-button.color-default [class|="corner"]:after,
-button               [class|="corner"]:after {
+button.color-default > .ie-bg [class|="corner"]:after,
+button               > .ie-bg [class|="corner"]:after {
     color: #157dff;
 }
-.color-transparent {
+button.color-transparent {
     color: #157dff;
 }
-button.color-default [class|="corner"]:after,
-button               [class|="corner"]:after {
+button.color-default > .ie-bg [class|="corner"]:after,
+button               > .ie-bg [class|="corner"]:after {
     color: #157dff;
 }
 
@@ -40,39 +40,28 @@ input[type="reset"].cast-shadow:hover,
 input[type="submit"].cast-shadow:hover,
 input[type="button"].cast-shadow:hover,
 button.cast-shadow:hover,
-button.cast-shadow:hover .ie-bg,
-button.r-tmnl:hover                          .ie-bg,
-button.r-tmnl.color-default:hover            .ie-bg,
-button.rounded-terminals:hover               .ie-bg,
-button.rounded-terminals.color-default:hover .ie-bg,
-button.r-cnr:hover                           .ie-bg,
-button.r-cnr.color-default:hover             .ie-bg,
-button.rounded-corners:hover                 .ie-bg,
-button.rounded-corners.color-default :hover  .ie-bg {
+button.cast-shadow:hover > .ie-bg,
+button.r-tmnl:hover                          > .ie-bg,
+button.r-tmnl.color-default:hover            > .ie-bg,
+button.rounded-terminals:hover               > .ie-bg,
+button.rounded-terminals.color-default:hover > .ie-bg,
+button.r-cnr:hover                           > .ie-bg,
+button.r-cnr.color-default:hover             > .ie-bg,
+button.rounded-corners:hover                 > .ie-bg,
+button.rounded-corners.color-default :hover  > .ie-bg {
     background-color: #3f93ff;
 }
 
-button.r-tmnl:hover                          [class|="corner"]:after,
-button.r-tmnl.color-default:hover            [class|="corner"]:after,
-button.rounded-terminals:hover               [class|="corner"]:after,
-button.rounded-terminals.color-default:hover [class|="corner"]:after,
-button.r-cnr:hover                           [class|="corner"]:after,
-button.r-cnr.color-default:hover             [class|="corner"]:after,
-button.rounded-corners:hover                 [class|="corner"]:after,
-button.rounded-corners.color-default :hover  [class|="corner"]:after {
+button.r-tmnl:hover                          > .ie-bg [class|="corner"]:after,
+button.r-tmnl.color-default:hover            > .ie-bg [class|="corner"]:after,
+button.rounded-terminals:hover               > .ie-bg [class|="corner"]:after,
+button.rounded-terminals.color-default:hover > .ie-bg [class|="corner"]:after,
+button.r-cnr:hover                           > .ie-bg [class|="corner"]:after,
+button.r-cnr.color-default:hover             > .ie-bg [class|="corner"]:after,
+button.rounded-corners:hover                 > .ie-bg [class|="corner"]:after,
+button.rounded-corners.color-default :hover  > .ie-bg [class|="corner"]:after {
     color: #3f93ff;
 }
-
-
-#my-assets .menu.level-1 > .ie-bg,
-.search-block > .ie-bg {
-    border-color: #e6e6e6;
-}
-#my-assets .menu.level-1 > .ie-bg [class|="corner"]:before,
-.search-block > .ie-bg [class|="corner"]:before {
-    color: #e6e6e6;
-}
-
 
 
 .info-block .info-locator .info {
@@ -98,11 +87,34 @@ button.rounded-corners.color-default :hover  [class|="corner"]:after {
         color: #e1e1e1;
     }
 
-    #app-chief-nav .menu.level-1 > .menu-item.has-sub-menu > .deco {
-        visibility: hidden;
+    #app-chief-nav .menu.level-2 > .ie-bg .corner-1 {
+        background-color: white;
     }
 
-    #app-chief-nav .menu.level-1 > .menu-item.has-sub-menu:hover > .deco ,
-    #app-chief-nav .menu.level-1 > .menu-item.has-sub-menu.sub-menu-shown > .deco {
-        visibility: visible;
-    }
+
+#my-assets .menu.level-1 > .ie-bg,
+.search-block > .ie-bg {
+    border-color: #e6e6e6;
+}
+#my-assets .menu.level-1 > .ie-bg [class|="corner"]:before,
+.search-block > .ie-bg [class|="corner"]:before {
+    color: #e6e6e6;
+}
+
+#my-assets .menu.level-1 > .menu-item > .deco > .ie-bg,
+#my-assets .menu.level-2 > .ie-bg {
+    border-color: #e6e6e6;
+}
+#my-assets .menu.level-1 > .menu-item > .deco .ie-shadow-matte {
+    /* clip: rect(-9px, 200px, 40px, -9px); */
+}
+#my-assets .menu.level-1 > .menu-item > .deco > .ie-bg [class|="corner"]:before,
+#my-assets .menu.level-2 > .ie-bg [class|="corner"]:before,
+#my-assets .menu.level-2 > .ie-bg [class|="corner"] {
+    color: #e6e6e6;
+}
+#my-assets .menu.level-2 > .ie-patch,
+#my-assets .menu.level-2 > .ie-bg .corner-2 {
+    color: #e6e6e6;
+    background-color: white;
+}
