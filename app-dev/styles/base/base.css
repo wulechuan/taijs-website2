@@ -242,111 +242,83 @@ label.deco-input {
 }
 
 
-.r-cnr,
 .rounded-corners {
 	border-radius: 5px;
 	}
-	.r-cnr.color-transparent,
 	.rounded-corners.color-transparent {
-		background-color: transparent!important;
+		background-color: transparent;
 	}
-	.r-cnr           [class|="corner"],
 	.rounded-corners [class|="corner"] {
 		display: none;
 	}
-	.r-cnr           [class|="corner"]:before,
-	.r-cnr           [class|="corner"]:after,
 	.rounded-corners [class|="corner"]:before,
 	.rounded-corners [class|="corner"]:after {
 		content: none;
 	}
-	.r-cnr.r2px,
 	.rounded-corners.r2px {
 		border-radius: 2px;
 	}
-	.r-cnr.r3px,
 	.rounded-corners.r3px {
 		border-radius: 3px;
 	}
-	.r-cnr.r4px,
 	.rounded-corners.r4px {
 		border-radius: 4px;
 	}
-	.r-cnr.r5px,
 	.rounded-corners.r5px {
 		border-radius: 5px;
 	}
-	.r-cnr.r6px,
 	.rounded-corners.r6px {
 		border-radius: 6px;
 	}
-	.r-cnr.r7px,
 	.rounded-corners.r7px {
 		border-radius: 7px;
 	}
-	.r-cnr.r8px,
 	.rounded-corners.r8px {
 		border-radius: 8px;
 	}
-	.r-cnr.r9px,
 	.rounded-corners.r9px {
 		border-radius: 9px;
 	}
-	.r-cnr.r10px,
 	.rounded-corners.r10px {
 		border-radius: 10px;
 	}
-	.r-cnr.r12px,
 	.rounded-corners.r12px {
 		border-radius: 12px;
 	}
-	.r-cnr.r15px,
 	.rounded-corners.r15px {
 		border-radius: 15px;
 	}
 
-	.r-cnr.sharp-cnr-tl,
-	.r-cnr.sharp-cnr-1,
 	.rounded-corners.sharp-corner-tl,
 	.rounded-corners.sharp-corner-1 {
 		border-top-left-radius: 0!important;
 	}
 
-	.r-cnr.sharp-cnr-tr,
-	.r-cnr.sharp-cnr-2,
 	.rounded-corners.sharp-corner-tr,
 	.rounded-corners.sharp-corner-2 {
 		border-top-right-radius: 0!important;
 	}
 
-	.r-cnr.sharp-cnr-br,
-	.r-cnr.sharp-cnr-3,
 	.rounded-corners.sharp-corner-br,
 	.rounded-corners.sharp-corner-3 {
 		border-bottom-right-radius: 0!important;
 	}
 
-	.r-cnr.sharp-cnr-bl,
-	.r-cnr.sharp-cnr-4,
 	.rounded-corners.sharp-corner-bl,
 	.rounded-corners.sharp-corner-4 {
 		border-bottom-left-radius: 0!important;
 	}
 
 
-.r-tmnl,
 .rounded-terminals {
 	border-radius: 1000px!important;
 	padding-left: 1.5em;
 	padding-right: 1.5em;
 	}
-	.r-tmnl            .ie-bg,
 	.rounded-terminals .ie-bg,
-	.r-tmnl            [class|="corner"],
 	.rounded-terminals [class|="corner"] {
 		display: none;
 	}
-	.r-tmnl            [class|="corner"]:before
 	.rounded-terminals [class|="corner"]:before {
 		content: none;
 	}

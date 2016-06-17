@@ -73,6 +73,13 @@ button.color-transparent {
 	color: #157dff;
 }
 
+input[type="button"].color-transparent:hover,
+input[type="submit"].color-transparent:hover,
+input[type="reset"].color-transparent:hover,
+button.color-transparent:hover {
+	background-color: #e5f1ff;
+}
+
 input:active,  input:focus,
 select:active, select:focus,
 label:active,  label:focus {
