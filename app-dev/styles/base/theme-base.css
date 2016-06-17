@@ -121,12 +121,39 @@ label.deco-input {
 	box-shadow: 0 0 8px 0 rgba(33, 222, 255, 0.77)
 }
 
+.menu-item {
+	}
 
-.menu-item:hover > label,
-.menu-item.sub-menu-shown > label,
-.menu-item.current-cate > label {
-	color: #157dff;
-}
+	.menu.layout-hori > .menu-item > a > label,
+	.menu.layout-hori > .menu-item > label {
+		color: #333;
+	}
+
+	.menu.layout-hori > .menu-item:hover > a > label,
+	.menu.layout-hori > .menu-item:hover > label,
+	.menu.layout-hori > .menu-item.sub-menu-shown > a > label,
+	.menu.layout-hori > .menu-item.sub-menu-shown > label,
+	.menu.layout-hori > .menu-item.current-cate > a > label,
+	.menu.layout-hori > .menu-item.current-cate > label {
+		color: #157dff;
+	}
+
+	.menu.layout-vert > .menu-item > a > label,
+	.menu.layout-vert > .menu-item > label {
+		color: #333;
+	}
+
+	.menu.layout-vert > .menu-item:hover > a > label,
+	.menu.layout-vert > .menu-item:hover > label,
+	.menu.layout-vert > .menu-item.sub-menu-shown > a > label,
+	.menu.layout-vert > .menu-item.sub-menu-shown > label,
+	.menu.layout-vert > .menu-item.current-cate > a > label,
+	.menu.layout-vert > .menu-item.current-cate > label {
+		color: white;
+		background-color: #157dff;
+	}
+
+
 
 .button-x {
 	background-color: transparent;
@@ -208,21 +235,19 @@ label.deco-input {
 		background-color: white;
 	}
 
-	#app-chief-nav .menu.level-1 > .menu-item > label {
-	}
-
-	#app-chief-nav .menu.level-2 {
-	}
-
+	#app-chief-nav .menu.level-2 > .menu-item > a > label,
 	#app-chief-nav .menu.level-2 > .menu-item > label {
 		color: #666;
 	}
 
+	#app-chief-nav .menu.level-2 > .menu-item.current-cate > a > label,
+	#app-chief-nav .menu.level-2 > .menu-item.current-cate > label,
+	#app-chief-nav .menu.level-2 > .menu-item.sub-menu-shown > a > label,
+	#app-chief-nav .menu.level-2 > .menu-item.sub-menu-shown > label,
+	#app-chief-nav .menu.level-2 > .menu-item:hover > a > label,
 	#app-chief-nav .menu.level-2 > .menu-item:hover > label {
 		color: white;
-		background-color: #157dff;
 	}
-
 
 
 
@@ -237,10 +262,13 @@ label.deco-input {
 		background-color: #f9f9f9;
 	}
 
+	#my-assets .menu.level-1 > .menu-item > a > label,
 	#my-assets .menu.level-1 > .menu-item > label {
 		color: #333;
+		background-color: transparent!important;
 	}
 
+	#my-assets .menu.level-1 > .menu-item > a > label .iconfont,
 	#my-assets .menu.level-1 > .menu-item > label .iconfont {
 		color: #157dff;
 	}
@@ -254,9 +282,4 @@ label.deco-input {
 	#my-assets .menu.level-1 > .menu-item > .deco,
 	#my-assets .menu.level-2 {
 		background-color: white;
-	}
-
-	#my-assets .menu.level-2 > .menu-item:hover > label {
-		color: white;
-		background-color: #157dff;
 	}

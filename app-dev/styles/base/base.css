@@ -693,6 +693,7 @@ label.deco-input {
 		width: 0;
 		height: 100%;
 	}
+	.menu-item > a > label,
 	.menu-item > label {
 		cursor: pointer;
 
@@ -713,10 +714,12 @@ label.deco-input {
 		height: 100%;
 	}
 
+	.menu.layout-hori > .menu-item > a > label,
 	.menu.layout-hori > .menu-item > label {
 		text-align: center;
 	}
 
+	.menu.layout-hori > .menu-item.has-sub-menu > a > label:after,
 	.menu.layout-hori > .menu-item.has-sub-menu > label:after {
 		font-family:"iconfont" !important;
 		content: '\e607';
@@ -745,6 +748,7 @@ label.deco-input {
 		z-index: 10;
 	}
 
+	.menu.layout-hori > .menu-item.has-sub-menu.sub-menu-shown > a > label:after,
 	.menu.layout-hori > .menu-item.has-sub-menu.sub-menu-shown > label:after {
 		content: '\e605';
 	}

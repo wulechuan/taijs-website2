@@ -598,23 +598,23 @@
 		}
 
 		.promotion-card .splash .splash-image {
-			animation: promotion-card-zoom-out 2.1s ease forwards;
+			animation: image-zooms-out 2.1s ease-out forwards;
 		}
 
 		.promotion-card .splash:hover .splash-image {
-			animation: promotion-card-zoom-in 0.234s ease-out forwards;
+			/* -ms-transform: scale(1.033); */
+			transform: scale(1.033);
+			animation: image-zooms-in 0.234s ease-out forwards;
 		}
 
-		@keyframes promotion-card-zoom-in {
+		@keyframes image-zooms-in {
 			0% { transform: scale(1); }
 			to { transform: scale(1.033); }
 		}
-		@keyframes promotion-card-zoom-out {
+		@keyframes image-zooms-out {
 			0% { transform: scale(1.033); }
 			to { transform: scale(1); }
 		}
-
-
 
 
 #pl-taijs-app-promotion .popup-window {

@@ -386,6 +386,7 @@
 		position: relative;
 	}
 
+	#app-chief-nav .menu-item > a > label,
 	#app-chief-nav .menu-item > label {
 		padding-left: 20px;
 		padding-right: 20px;
@@ -401,6 +402,7 @@
 			max-width: 200px; /* just for safety */
 		}
 
+		#app-chief-nav .menu.level-1 > .menu-item > a > label,
 		#app-chief-nav .menu.level-1 > .menu-item > label {
 			padding-top: 7px;
 			padding-bottom: 7px;
@@ -455,6 +457,7 @@
 			/*height: 30px;  for Microsoft EDGE bug */
 		}
 
+		#app-chief-nav .menu.level-2 > .menu-item > a > label,
 		#app-chief-nav .menu.level-2 > .menu-item > label {
 			padding-top: 7px;
 			padding-bottom: 7px;
@@ -463,6 +466,7 @@
 			padding-right: 19px; /* level 2 menu has borders */
 		}
 
+		#app-chief-nav .menu.level-1 > .menu-item.has-sub-menu > a > label:after,
 		#app-chief-nav .menu.level-1 > .menu-item.has-sub-menu > label:after {
 			margin-right: 8px!important;
 		}
@@ -486,14 +490,17 @@
 		height: 34px; /* for firefox */
 	}
 
+	#my-assets .menu.level-1 > .menu-item > a > label,
 	#my-assets .menu.level-1 > .menu-item > label {
 		font-size: 12px;
 	}
 
+	#my-assets .menu.level-1 > .menu-item > a > label .iconfont,
 	#my-assets .menu.level-1 > .menu-item > label .iconfont {
 		margin: 0 8px 0 2px;
 	}
 
+	#my-assets .menu.level-1 > .menu-item.has-sub-menu > a > label:after,
 	#my-assets .menu.level-1 > .menu-item.has-sub-menu > label:after {
 		font-family: 'iconfont'!important;
 		content: '\e603';
@@ -548,22 +555,29 @@
 
 	#my-assets .menu.level-2 {
 		position: absolute;
-		transition: none;
-		transform-origin: top;
 		padding: 8px 0;
 		min-width: 144px;
+
+		transition: none!important;
+		transform-origin: right top;
 		}
 
 		#my-assets .menu.level-1 > .menu-item:hover .menu.level-2 {
-			/* animation: my-asset-menu-showing 2s ease-out; */
+			transform: scaleY(1) translate(0,0);
+			animation: menu-scales-up 0.2s ease-out;
 		}
 
-		@keyframes my-asset-menu-showing {
-			from { transform: scaleY(0.9); }
-			to   { transform: scaleY(1); }
-		}
 
+		#my-assets .menu.level-2 > .menu-item > a > label,
 		#my-assets .menu.level-2 > .menu-item > label {
 			padding: 8px 19px;
 		}
 
+
+
+
+
+@keyframes menu-scales-up {
+	0%   { transform: translate(0, -16px) scaleY(0.64); }
+	100% { transform: translate(0, 0) scaleY(1); }
+}
