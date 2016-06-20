@@ -49,11 +49,7 @@ input {
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
-button,
-input[type="button"].color-chief,
-input[type="submit"].color-chief,
-input[type="reset"].color-chief,
-button.color-chief {
+button {
 	color: white;
 	border-color: #157dff;
 	background-color: #157dff;
@@ -62,11 +58,7 @@ button.color-chief {
 input[type="button"]:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
-button:hover,
-input[type="button"].color-chief:hover,
-input[type="submit"].color-chief:hover,
-input[type="reset"].color-chief:hover,
-button.color-chief:hover {
+button:hover {
 	background-color: #3f93ff;
 }
 
@@ -251,6 +243,15 @@ label.deco-input {
 	#app-chief-nav .menu,
 	#app-chief-nav .menu .deco {
 		border-color: #e1e1e1;
+		background-color: white;
+	}
+
+	#app-chief-nav .menu .deco > .ie-borders {
+		color: #e1e1e1;
+		border-color: #e1e1e1;
+	}
+	#app-chief-nav .menu .deco > .ie-bg {
+		color: white;
 		background-color: white;
 	}
 

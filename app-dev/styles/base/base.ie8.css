@@ -163,14 +163,19 @@
 		}
 		.rounded-corners > .ie-bg:before,
 		.rounded-corners > .ie-bg:after {
-			content: '';
+			font-family: 'iconfont'!important;
+			content: '\e681';
 			display: block;
 			box-sizing: border-box;
 			position: absolute;
 			border-style: none!important;
 			border-color: transparent!important;
 			background-color: inherit!important;
-			/* overflow: hidden; */
+			overflow: hidden;
+
+			font-size: 2000px;
+			text-indent: -800px;
+			line-height: 1000px;
 		}
 		.rounded-corners > .ie-borders:before,
 		.rounded-corners > .ie-bg:before {
@@ -209,7 +214,7 @@
 		width: 13px;
 		height: 13px;
 		white-space: nowrap;
-		/* overflow: hidden; */
+		overflow: hidden;
 		z-index: 0;
 		padding: 0;
 		margin: 0;
@@ -223,6 +228,7 @@
 
 		.rounded-corners > .ie-borders [class|="corner"]:before,
 		.rounded-corners > .ie-bg      [class|="corner"]:before {
+			font-family: 'iconfont'!important;
 			display: block;
 			position: absolute;
 			white-space: nowrap;
@@ -278,31 +284,31 @@
 			right: 0;
 		}
 
-		.rounded-corners       > .ie-borders [class|="corner"]:before { content: "\e665"; }
-		.rounded-corners.r2px  > .ie-borders [class|="corner"]:before { content: "\e662"; }
-		.rounded-corners.r3px  > .ie-borders [class|="corner"]:before { content: "\e663"; }
-		.rounded-corners.r4px  > .ie-borders [class|="corner"]:before { content: "\e664"; }
-		.rounded-corners.r5px  > .ie-borders [class|="corner"]:before { content: "\e665"; }
-		.rounded-corners.r6px  > .ie-borders [class|="corner"]:before { content: "\e666"; }
-		.rounded-corners.r7px  > .ie-borders [class|="corner"]:before { content: "\e667"; }
-		.rounded-corners.r8px  > .ie-borders [class|="corner"]:before { content: "\e668"; }
-		.rounded-corners.r9px  > .ie-borders [class|="corner"]:before { content: "\e669"; }
-		.rounded-corners.r10px > .ie-borders [class|="corner"]:before { content: "\e66a"; }
-		.rounded-corners.r12px > .ie-borders [class|="corner"]:before { content: "\e66b"; }
-		.rounded-corners.r15px > .ie-borders [class|="corner"]:before { content: "\e66c"; }
+		.rounded-corners       > .ie-borders [class|="corner"]:before { content: '\e665'; }
+		.rounded-corners.r2px  > .ie-borders [class|="corner"]:before { content: '\e662'; }
+		.rounded-corners.r3px  > .ie-borders [class|="corner"]:before { content: '\e663'; }
+		.rounded-corners.r4px  > .ie-borders [class|="corner"]:before { content: '\e664'; }
+		.rounded-corners.r5px  > .ie-borders [class|="corner"]:before { content: '\e665'; }
+		.rounded-corners.r6px  > .ie-borders [class|="corner"]:before { content: '\e666'; }
+		.rounded-corners.r7px  > .ie-borders [class|="corner"]:before { content: '\e667'; }
+		.rounded-corners.r8px  > .ie-borders [class|="corner"]:before { content: '\e668'; }
+		.rounded-corners.r9px  > .ie-borders [class|="corner"]:before { content: '\e669'; }
+		.rounded-corners.r10px > .ie-borders [class|="corner"]:before { content: '\e66a'; }
+		.rounded-corners.r12px > .ie-borders [class|="corner"]:before { content: '\e66b'; }
+		.rounded-corners.r15px > .ie-borders [class|="corner"]:before { content: '\e66c'; }
 
-		.rounded-corners       > .ie-bg      [class|="corner"]:before { content: "\e684"; }
-		.rounded-corners.r2px  > .ie-bg      [class|="corner"]:before { content: "\e681"; }
-		.rounded-corners.r3px  > .ie-bg      [class|="corner"]:before { content: "\e682"; }
-		.rounded-corners.r4px  > .ie-bg      [class|="corner"]:before { content: "\e683"; }
-		.rounded-corners.r5px  > .ie-bg      [class|="corner"]:before { content: "\e684"; }
-		.rounded-corners.r6px  > .ie-bg      [class|="corner"]:before { content: "\e685"; }
-		.rounded-corners.r7px  > .ie-bg      [class|="corner"]:before { content: "\e686"; }
-		.rounded-corners.r8px  > .ie-bg      [class|="corner"]:before { content: "\e687"; }
-		.rounded-corners.r9px  > .ie-bg      [class|="corner"]:before { content: "\e688"; }
-		.rounded-corners.r10px > .ie-bg      [class|="corner"]:before { content: "\e689"; }
-		.rounded-corners.r12px > .ie-bg      [class|="corner"]:before { content: "\e68a"; }
-		.rounded-corners.r15px > .ie-bg      [class|="corner"]:before { content: "\e68b"; }
+		.rounded-corners       > .ie-bg      [class|="corner"]:before { content: '\e684'; }
+		.rounded-corners.r2px  > .ie-bg      [class|="corner"]:before { content: '\e681'; }
+		.rounded-corners.r3px  > .ie-bg      [class|="corner"]:before { content: '\e682'; }
+		.rounded-corners.r4px  > .ie-bg      [class|="corner"]:before { content: '\e683'; }
+		.rounded-corners.r5px  > .ie-bg      [class|="corner"]:before { content: '\e684'; }
+		.rounded-corners.r6px  > .ie-bg      [class|="corner"]:before { content: '\e685'; }
+		.rounded-corners.r7px  > .ie-bg      [class|="corner"]:before { content: '\e686'; }
+		.rounded-corners.r8px  > .ie-bg      [class|="corner"]:before { content: '\e687'; }
+		.rounded-corners.r9px  > .ie-bg      [class|="corner"]:before { content: '\e688'; }
+		.rounded-corners.r10px > .ie-bg      [class|="corner"]:before { content: '\e689'; }
+		.rounded-corners.r12px > .ie-bg      [class|="corner"]:before { content: '\e68a'; }
+		.rounded-corners.r15px > .ie-bg      [class|="corner"]:before { content: '\e68b'; }
 
 		.rounded-corners.sharp-corner-tl > .ie-borders .corner-1:before,
 		.rounded-corners.sharp-corner-1  > .ie-borders .corner-1:before,
@@ -360,7 +366,7 @@
 		}
 
 		.rounded-terminals > .ie-bg:before {
-			content: "";
+			content: '';
 			display: block;
 			box-sizing: border-box;
 			position: absolute;
@@ -396,8 +402,8 @@
 
 		.rounded-terminals > .ie-bg [class|="corner"]:before,
 		.rounded-terminals > .ie-bg [class|="corner"]:after {
-			font-family:"iconfont"!important;
-			content: "\e661";
+			font-family: 'iconfont'!important;
+			content: '\e661';
 		}
 
 		.rounded-terminals > .ie-bg [class|="corner"]:before,
@@ -469,7 +475,12 @@ button label {
 
 
 
-
+.ie-borders {
+    color: black;
+}
+.ie-bg {
+    color: white;
+}
 .rounded-terminals > .ie-bg,
 .rounded-corners   > .ie-bg {
 	border-color: black;
@@ -478,12 +489,7 @@ button label {
 .rounded-corners.bg-transparent > .ie-bg {
 	background-color: transparent;
 }
-[class|="corner"]:before {
-	color: black;
-}
-[class|="corner"]:after {
-	color: white;
-}
+
 
 
 
