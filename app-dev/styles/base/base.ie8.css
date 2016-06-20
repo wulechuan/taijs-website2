@@ -194,7 +194,7 @@
 		.rounded-corners > .ie-bg [class|="corner"]:before,
 		.rounded-corners > .ie-bg [class|="corner"]:after {
 			font-family:"iconfont";
-			content: "\e660";
+			content: "\e679";
 		}
 		.rounded-corners.color-transparent > .ie-bg [class|="corner"]:after {
 			content: none!important;
