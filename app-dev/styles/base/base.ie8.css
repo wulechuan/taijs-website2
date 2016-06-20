@@ -37,7 +37,8 @@
 	position: relative;
 	}
 	.cast-shadow > .ie-bg {
-		background-color: white;
+		color: white;
+		/* background-color: white; */
 	}
 	.cast-shadow > .ie-shadow {
 		display: block;
@@ -126,31 +127,6 @@
 			margin: 0px;
 		}
 
-		.rounded-corners > .ie-borders .corner-1,
-		.rounded-corners > .ie-bg      .corner-1 {
-			left: -13px;
-			top: -13px;
-			background-position: left top;
-		}
-		.rounded-corners > .ie-borders .corner-2,
-		.rounded-corners > .ie-bg      .corner-2 {
-			right: -13px;
-			top: -13px;
-			background-position: right top;
-		}
-		.rounded-corners > .ie-borders .corner-3,
-		.rounded-corners > .ie-bg      .corner-3 {
-			right: -13px;
-			bottom: -13px;
-			background-position: right bottom;
-		}
-		.rounded-corners > .ie-borders .corner-4,
-		.rounded-corners > .ie-bg      .corner-4 {
-			left: -13px;
-			bottom: -13px;
-			background-position: left bottom;
-		}
-
 		.rounded-corners > .ie-borders:before,
 		.rounded-corners > .ie-borders:after {
 			content: '';
@@ -159,7 +135,8 @@
 			position: absolute;
 			border-style: inherit!important;
 			border-color: inherit!important;
-			/* overflow: hidden; */
+			background-color: transparent!important;
+			overflow: hidden;
 		}
 		.rounded-corners > .ie-bg:before,
 		.rounded-corners > .ie-bg:after {
@@ -170,24 +147,13 @@
 			position: absolute;
 			border-style: none!important;
 			border-color: transparent!important;
-			background-color: inherit!important;
-			overflow: hidden;
+			background-color: red!important;
+			overflow: hidden!important;
 
 			font-size: 2000px;
 			text-indent: -800px;
 			line-height: 1000px;
 		}
-		.rounded-corners > .ie-borders:before,
-		.rounded-corners > .ie-bg:before {
-			top: -13px;
-			bottom: -13px;
-		}
-		.rounded-corners > .ie-borders:after,
-		.rounded-corners > .ie-bg:after {
-			left: -13px;
-			right: -13px;
-		}
-
 		.rounded-corners > .ie-borders:before,
 		.rounded-corners > .ie-bg:before {
 			left: 0px;
@@ -197,6 +163,22 @@
 		.rounded-corners > .ie-bg:after {
 			top: 0px;
 			bottom: 0px;
+		}
+		.rounded-corners > .ie-borders:before {
+			top: -12.96px;
+			bottom: -13.14px;
+		}
+		.rounded-corners > .ie-borders:after {
+			left: -13.14px;
+			right: -12.89px;
+		}
+		.rounded-corners > .ie-bg:before {
+			top: -12.14px;
+			bottom: -12.14px;
+		}
+		.rounded-corners > .ie-bg:after {
+			left: -12.14px;
+			right: -11.86px;
 		}
 
 		.rounded-corners > .ie-borders:before {
@@ -211,8 +193,8 @@
 	.rounded-corners > .ie-bg      [class|="corner"] {
 		display: block;
 		position: absolute;
-		width: 13px;
-		height: 13px;
+		width: 14px;
+		height: 14px;
 		white-space: nowrap;
 		overflow: hidden;
 		z-index: 0;
@@ -222,9 +204,46 @@
 		border: none;
 		font-style: normal!important;
 		font-weight: normal!important;
-
 		background-repeat: no-repeat!important;
 		}
+
+		.rounded-corners > .ie-borders .corner-1,
+		.rounded-corners > .ie-borders .corner-2,
+		.rounded-corners > .ie-bg      .corner-1,
+		.rounded-corners > .ie-bg      .corner-2 {
+			top: -13px;
+		}
+		.rounded-corners > .ie-borders .corner-1,
+		.rounded-corners > .ie-borders .corner-4,
+		.rounded-corners > .ie-bg      .corner-1,
+		.rounded-corners > .ie-bg      .corner-4 {
+			left: -13.31px;
+		}
+		.rounded-corners.sharp-corner-tl > .ie-bg .corner-1,
+		.rounded-corners.sharp-corner-1  > .ie-bg .corner-1,
+		.rounded-corners.sharp-corner-bl > .ie-bg .corner-4,
+		.rounded-corners.sharp-corner-4  > .ie-bg .corner-4 {
+			left: -12.96px;
+		}
+		.rounded-corners > .ie-borders .corner-2,
+		.rounded-corners > .ie-borders .corner-3,
+		.rounded-corners > .ie-bg      .corner-2,
+		.rounded-corners > .ie-bg      .corner-3 {
+			right: -12.96px;
+		}
+		.rounded-corners.sharp-corner-tr > .ie-bg .corner-2,
+		.rounded-corners.sharp-corner-2  > .ie-bg .corner-2,
+		.rounded-corners.sharp-corner-br > .ie-bg .corner-3,
+		.rounded-corners.sharp-corner-3  > .ie-bg .corner-3 {
+			right: -11.96px;
+		}
+		.rounded-corners > .ie-borders .corner-3,
+		.rounded-corners > .ie-borders .corner-4,
+		.rounded-corners > .ie-bg      .corner-3,
+		.rounded-corners > .ie-bg      .corner-4 {
+			bottom: -13.2px;
+		}
+
 
 		.rounded-corners > .ie-borders [class|="corner"]:before,
 		.rounded-corners > .ie-bg      [class|="corner"]:before {
@@ -239,7 +258,7 @@
 			width:  50px;
 			height: 50px;
 
-			background-repeat: no-repeat;
+			background-repeat: no-repeat!important;
 
 			/* the original design was 40px*40px, which makes the strokes being 1px wide */
 			font-size: 40px;
@@ -254,7 +273,7 @@
 		.rounded-corners > .ie-borders .corner-4:before,
 		.rounded-corners > .ie-bg      .corner-3:before,
 		.rounded-corners > .ie-bg      .corner-4:before {
-			line-height: 57px;
+			line-height: 56.6px;
 		}
 
 		.rounded-corners > .ie-borders .corner-1:before,
@@ -276,7 +295,11 @@
 			left: 0;
 		}
 		.rounded-corners > .ie-borders .corner-2:before,
-		.rounded-corners > .ie-borders .corner-3:before,
+		.rounded-corners > .ie-borders .corner-3:before {
+			text-align: right;
+			direction: rtl;
+			right: 0;
+		}
 		.rounded-corners > .ie-bg      .corner-2:before,
 		.rounded-corners > .ie-bg      .corner-3:before {
 			text-align: right;
@@ -336,6 +359,9 @@
 		.rounded-corners.sharp-corner-bl > .ie-bg      .corner-4:before,
 		.rounded-corners.sharp-corner-4  > .ie-bg      .corner-4:before {
 			content: '\e679'!important;
+			font-size: 100px;
+			line-height: 50px;
+			text-indent: -40px;
 		}
 
 
@@ -477,16 +503,13 @@ button label {
 
 .ie-borders {
     color: black;
+	border-color: black;
 }
 .ie-bg {
     color: white;
+	background-color: transparent; /*  */
 }
-.rounded-terminals > .ie-bg,
-.rounded-corners   > .ie-bg {
-	border-color: black;
-	background-color: white;
-}
-.rounded-corners.bg-transparent > .ie-bg {
+.bg-transparent > .ie-bg {
 	background-color: transparent;
 }
 
@@ -495,7 +518,7 @@ button label {
 
 .deco-input {
 	margin-left: -0.87px;
-	margin-top: -.87px;
+	margin-top: -0.87px;
 }
 
 .button-x {
@@ -546,12 +569,6 @@ button label {
         bottom: 2px;
         z-index: -1!important;
     }
-
-
-#my-assets .menu.level-1 {
-	left: 0.23px;
-	/* margin-top: -.87px!important; */
-}
 
 #my-assets .menu.level-1 > .menu-item {
 	margin: 1px; /* for revealing outer ul border */

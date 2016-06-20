@@ -19,13 +19,16 @@ button {
         color: #157dff;
     }
 
-    button:hover > .ie-borders,
     button:hover > .ie-bg {
         color: #3f93ff;
     }
 
-    button.bg-transparent:hover > .ie-borders,
+    button.bg-transparent > .ie-bg {
+        display: none;
+    }
+
     button.bg-transparent:hover > .ie-bg {
+        display: block;
         color: #e5f1ff;
     }
 
@@ -38,12 +41,12 @@ button {
     }
     button.bg-transparent.color-white > .ie-bg {
         /* background-color: white; */
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
-            filter:  progid:DXImageTransform.Microsoft.Alpha(opacity=0);
     }
-    button.bg-transparent.color-white.rounded-corners:hover   > .ie-bg {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=20)";
-            filter:  progid:DXImageTransform.Microsoft.Alpha(opacity=20);
+    button.bg-transparent.color-white:hover > .ie-bg {
+        font-size: 0!important;
+        background-color: pink;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=30)";
+            filter:  progid:DXImageTransform.Microsoft.Alpha(opacity=30);
     }
 
 
@@ -60,45 +63,27 @@ button {
 #app-chief-nav {
     }
 
-    #app-chief-nav .menu .deco > .ie-bg,
-    #app-chief-nav .menu > .ie-bg [class|="corner"],
-    #app-chief-nav .menu > .ie-bg {
+    #app-chief-nav .menu.level-2 > .ie-borders,
+    #app-chief-nav .menu .deco > .ie-borders {
+        color: #e1e1e1;
         border-color: #e1e1e1;
     }
 
-    #app-chief-nav .menu .deco > .ie-bg [class|="corner"]:before,
-    #app-chief-nav .menu > .ie-bg [class|="corner"]:before {
-        color: #e1e1e1;
+
+#my-assets {
     }
 
-    #app-chief-nav .menu.level-2 > .ie-bg .corner-1 {
+    .search-block > .ie-borders,
+    #my-assets .menu.level-1 > .ie-borders,
+    #my-assets .menu.level-1 > .menu-item > .deco > .ie-borders,
+    #my-assets .menu.level-2 > .ie-borders {
+        color: #e6e6e6;
+        border-color: #e6e6e6;
+    }
+
+    #my-assets .menu.level-1 > .menu-item > .deco .ie-shadow-matte {
+        /* clip: rect(-9px, 200px, 40px, -9px); */
+    }
+    #my-assets .menu.level-2 > .ie-patch {
         background-color: white;
     }
-
-
-#my-assets .menu.level-1 > .ie-bg,
-.search-block > .ie-bg {
-    border-color: #e6e6e6;
-}
-#my-assets .menu.level-1 > .ie-bg [class|="corner"]:before,
-.search-block > .ie-bg [class|="corner"]:before {
-    color: #e6e6e6;
-}
-
-#my-assets .menu.level-1 > .menu-item > .deco > .ie-bg,
-#my-assets .menu.level-2 > .ie-bg {
-    border-color: #e6e6e6;
-}
-#my-assets .menu.level-1 > .menu-item > .deco .ie-shadow-matte {
-    /* clip: rect(-9px, 200px, 40px, -9px); */
-}
-#my-assets .menu.level-1 > .menu-item > .deco > .ie-bg [class|="corner"]:before,
-#my-assets .menu.level-2 > .ie-bg [class|="corner"]:before,
-#my-assets .menu.level-2 > .ie-bg [class|="corner"] {
-    color: #e6e6e6;
-}
-#my-assets .menu.level-2 > .ie-patch,
-#my-assets .menu.level-2 > .ie-bg .corner-2 {
-    color: #e6e6e6;
-    background-color: white;
-}

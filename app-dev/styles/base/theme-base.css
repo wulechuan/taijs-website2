@@ -140,8 +140,8 @@ label.deco-input {
 		color: #333;
 	}
 
-	.menu.layout-hori > .menu-item:hover > a > label,
-	.menu.layout-hori > .menu-item:hover > label,
+	.menu.layout-hori > .menu-item> a > label:hover ,
+	.menu.layout-hori > .menu-item > label:hover,
 	.menu.layout-hori > .menu-item.sub-menu-shown > a > label,
 	.menu.layout-hori > .menu-item.sub-menu-shown > label,
 	.menu.layout-hori > .menu-item.current-cate > a > label,
@@ -154,8 +154,8 @@ label.deco-input {
 		color: #333;
 	}
 
-	.menu.layout-vert > .menu-item:hover > a > label,
-	.menu.layout-vert > .menu-item:hover > label,
+	.menu.layout-vert > .menu-item > a > label:hover,
+	.menu.layout-vert > .menu-item > label:hover,
 	.menu.layout-vert > .menu-item.sub-menu-shown > a > label,
 	.menu.layout-vert > .menu-item.sub-menu-shown > label,
 	.menu.layout-vert > .menu-item.current-cate > a > label,
@@ -243,15 +243,6 @@ label.deco-input {
 	#app-chief-nav .menu,
 	#app-chief-nav .menu .deco {
 		border-color: #e1e1e1;
-		background-color: white;
-	}
-
-	#app-chief-nav .menu .deco > .ie-borders {
-		color: #e1e1e1;
-		border-color: #e1e1e1;
-	}
-	#app-chief-nav .menu .deco > .ie-bg {
-		color: white;
 		background-color: white;
 	}
 
