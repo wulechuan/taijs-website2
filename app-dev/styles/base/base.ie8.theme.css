@@ -3,118 +3,122 @@ hr, hr.dashed {
 }
 
 
-input[type="reset"].cast-shadow,
-input[type="submit"].cast-shadow,
-input[type="button"].cast-shadow,
-button.cast-shadow,
-button.cast-shadow > .ie-bg,
-button.r-tmnl                          > .ie-bg,
-button.r-tmnl.color-default            > .ie-bg,
-button.rounded-terminals               > .ie-bg,
-button.rounded-terminals.color-default > .ie-bg,
-button.r-cnr                           > .ie-bg,
-button.r-cnr.color-default             > .ie-bg,
-button.rounded-corners                 > .ie-bg,
-button.rounded-corners.color-default   > .ie-bg {
-    border-color: #157dff;
-    background-color: #157dff;
-}
-
-button.color-default > .ie-bg [class|="corner"]:before,
-button               > .ie-bg [class|="corner"]:before {
-    color: #157dff;
-}
-button.color-default > .ie-bg [class|="corner"]:after,
-button               > .ie-bg [class|="corner"]:after {
-    color: #157dff;
-}
-button.color-transparent {
-    color: #157dff;
-}
-button.color-default > .ie-bg [class|="corner"]:after,
-button               > .ie-bg [class|="corner"]:after {
-    color: #157dff;
-}
-
-input[type="reset"].cast-shadow:hover,
-input[type="submit"].cast-shadow:hover,
-input[type="button"].cast-shadow:hover,
-button.cast-shadow:hover,
-button.cast-shadow:hover > .ie-bg,
-button.r-tmnl:hover                          > .ie-bg,
-button.r-tmnl.color-default:hover            > .ie-bg,
-button.rounded-terminals:hover               > .ie-bg,
-button.rounded-terminals.color-default:hover > .ie-bg,
-button.r-cnr:hover                           > .ie-bg,
-button.r-cnr.color-default:hover             > .ie-bg,
-button.rounded-corners:hover                 > .ie-bg,
-button.rounded-corners.color-default :hover  > .ie-bg {
-    background-color: #3f93ff;
-}
-
-button.r-tmnl:hover                          > .ie-bg [class|="corner"]:after,
-button.r-tmnl.color-default:hover            > .ie-bg [class|="corner"]:after,
-button.rounded-terminals:hover               > .ie-bg [class|="corner"]:after,
-button.rounded-terminals.color-default:hover > .ie-bg [class|="corner"]:after,
-button.r-cnr:hover                           > .ie-bg [class|="corner"]:after,
-button.r-cnr.color-default:hover             > .ie-bg [class|="corner"]:after,
-button.rounded-corners:hover                 > .ie-bg [class|="corner"]:after,
-button.rounded-corners.color-default :hover  > .ie-bg [class|="corner"]:after {
-    color: #3f93ff;
-}
-
-
-.info-block .info-locator .info {
-    outline-color: #1579ac;
+button {
     }
 
-    .info-block .info-locator .info .ie-shadow {
-        background-color: #18f;
+    button > .ie-borders {
+        border-color: #157dff;
+    }
+
+    button > .ie-bg {
+        /* background-color: #157dff; */
+    }
+
+    button > .ie-borders,
+    button > .ie-bg {
+        color: #157dff;
+    }
+
+    button:hover > .ie-bg {
+        color: #3f93ff;
+    }
+
+    button.bg-transparent > .ie-bg {
+        display: none;
+        left: -1px;
+        right: -1px;
+        top: -1px;
+        bottom: -1px;
+        }
+        button.bg-transparent > .ie-bg:before,
+        button.bg-transparent > .ie-bg:after {
+            content: none!important;
+        }
+        button.bg-transparent > .ie-bg [class|="corner"] {
+            display: none;
+        }
+
+        button.bg-transparent:hover > .ie-bg {
+            display: block;
+        }
+
+        button.bg-transparent > .ie-bg {
+            -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33157dff, endColorStr=#33157dff)";
+                filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33157dff, endColorStr=#33157dff);
+        }
+        button.bg-transparent.color-white > .ie-borders {
+            color: white;
+            border-color: white;
+        }
+        button.bg-transparent.color-white > .ie-bg {
+            background-color: transparent;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33FFFFFF, endColorStr=#33FFFFFF)";
+                filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33FFFFFF, endColorStr=#33FFFFFF);
+        }
+
+
+
+.info-block {
+    }
+
+    .info-block .info-locator .info > .ie-shadow {
+        background-color: #3af;
+    }
+
+    .info-block .info-locator .info.has-border-triangle .ie-border-triangle {
+        -ms-filter: "\
+            progid:DXImageTransform.Microsoft.Glow(\
+                color=#ff3399ff,\
+                strength=4\
+            )\
+            progid:DXImageTransform.Microsoft.Matrix(\
+                M11=0.7071067811865474,\
+                M12=-0.7071067811865477,\
+                M21=0.7071067811865477,\
+                M22=0.7071067811865474,\
+                SizingMethod='auto expand'\
+            )\
+        ";
+        filter: 
+            progid:DXImageTransform.Microsoft.Glow(
+                color=#ff3399ff,
+                strength=4
+            )
+            progid:DXImageTransform.Microsoft.Matrix(
+                M11=0.7071067811865474,
+                M12=-0.7071067811865477,
+                M21=0.7071067811865477,
+                M22=0.7071067811865474,
+                SizingMethod='auto expand'
+            )
+        ;
     }
 
 
 #app-chief-nav {
     }
 
-    #app-chief-nav .menu .deco > .ie-bg,
-    #app-chief-nav .menu > .ie-bg [class|="corner"],
-    #app-chief-nav .menu > .ie-bg {
+    #app-chief-nav .menu.level-2 > .ie-borders,
+    #app-chief-nav .menu .deco > .ie-borders {
+        color: #e1e1e1;
         border-color: #e1e1e1;
     }
 
-    #app-chief-nav .menu .deco > .ie-bg [class|="corner"]:before,
-    #app-chief-nav .menu > .ie-bg [class|="corner"]:before {
-        color: #e1e1e1;
+
+#my-assets {
     }
 
-    #app-chief-nav .menu.level-2 > .ie-bg .corner-1 {
+    .search-block > .ie-borders,
+    #my-assets .menu.level-1 > .ie-borders,
+    #my-assets .menu.level-1 > .menu-item > .deco > .ie-borders,
+    #my-assets .menu.level-2 > .ie-borders {
+        color: #e6e6e6;
+        border-color: #e6e6e6;
+    }
+
+    #my-assets .menu.level-1 > .menu-item > .deco .ie-shadow-matte {
+        /* clip: rect(-9px, 200px, 40px, -9px); */
+    }
+    #my-assets .menu.level-2 > .ie-patch {
         background-color: white;
     }
-
-
-#my-assets .menu.level-1 > .ie-bg,
-.search-block > .ie-bg {
-    border-color: #e6e6e6;
-}
-#my-assets .menu.level-1 > .ie-bg [class|="corner"]:before,
-.search-block > .ie-bg [class|="corner"]:before {
-    color: #e6e6e6;
-}
-
-#my-assets .menu.level-1 > .menu-item > .deco > .ie-bg,
-#my-assets .menu.level-2 > .ie-bg {
-    border-color: #e6e6e6;
-}
-#my-assets .menu.level-1 > .menu-item > .deco .ie-shadow-matte {
-    /* clip: rect(-9px, 200px, 40px, -9px); */
-}
-#my-assets .menu.level-1 > .menu-item > .deco > .ie-bg [class|="corner"]:before,
-#my-assets .menu.level-2 > .ie-bg [class|="corner"]:before,
-#my-assets .menu.level-2 > .ie-bg [class|="corner"] {
-    color: #e6e6e6;
-}
-#my-assets .menu.level-2 > .ie-patch,
-#my-assets .menu.level-2 > .ie-bg .corner-2 {
-    color: #e6e6e6;
-    background-color: white;
-}

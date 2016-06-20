@@ -29,6 +29,10 @@ html, body {
 	color: #999;
 }
 
+.bg-transparent {
+	background-color: transparent;
+}
+
 
 hr {
 	border-color: #d0d0d0;
@@ -45,11 +49,7 @@ input {
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
-button,
-input[type="button"].color-chief,
-input[type="submit"].color-chief,
-input[type="reset"].color-chief,
-button.color-chief {
+button {
 	color: white;
 	border-color: #157dff;
 	background-color: #157dff;
@@ -58,19 +58,37 @@ button.color-chief {
 input[type="button"]:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
-button:hover,
-input[type="button"].color-chief:hover,
-input[type="submit"].color-chief:hover,
-input[type="reset"].color-chief:hover,
-button.color-chief:hover {
+button:hover {
 	background-color: #3f93ff;
 }
 
-input[type="button"].color-transparent,
-input[type="submit"].color-transparent,
-input[type="reset"].color-transparent,
-button.color-transparent {
+input[type="reset"].bg-transparent,
+input[type="button"].bg-transparent,
+input[type="submit"].bg-transparent,
+button.bg-transparent {
 	color: #157dff;
+}
+
+input[type="reset"].bg-transparent:hover,
+input[type="button"].bg-transparent:hover,
+input[type="submit"].bg-transparent:hover,
+button.bg-transparent:hover {
+	background-color: #e5f1ff;
+}
+
+input[type="reset"].bg-transparent.color-white,
+input[type="button"].bg-transparent.color-white,
+input[type="submit"].bg-transparent.color-white,
+button.bg-transparent.color-white {
+    color: white;
+    border-color: white;
+}
+
+input[type="reset"].bg-transparent.color-white:hover,
+input[type="button"].bg-transparent.color-white:hover,
+input[type="submit"].bg-transparent.color-white:hover,
+button.bg-transparent.color-white:hover {
+    background-color: rgba(255, 255, 255, 0.16)!important;
 }
 
 input:active,  input:focus,
@@ -114,12 +132,39 @@ label.deco-input {
 	box-shadow: 0 0 8px 0 rgba(33, 222, 255, 0.77)
 }
 
+.menu-item {
+	}
 
-.menu-item:hover > label,
-.menu-item.sub-menu-shown > label,
-.menu-item.current-cate > label {
-	color: #157dff;
-}
+	.menu.layout-hori > .menu-item > a > label,
+	.menu.layout-hori > .menu-item > label {
+		color: #333;
+	}
+
+	.menu.layout-hori > .menu-item> a > label:hover ,
+	.menu.layout-hori > .menu-item > label:hover,
+	.menu.layout-hori > .menu-item.sub-menu-shown > a > label,
+	.menu.layout-hori > .menu-item.sub-menu-shown > label,
+	.menu.layout-hori > .menu-item.current-cate > a > label,
+	.menu.layout-hori > .menu-item.current-cate > label {
+		color: #157dff;
+	}
+
+	.menu.layout-vert > .menu-item > a > label,
+	.menu.layout-vert > .menu-item > label {
+		color: #333;
+	}
+
+	.menu.layout-vert > .menu-item > a > label:hover,
+	.menu.layout-vert > .menu-item > label:hover,
+	.menu.layout-vert > .menu-item.sub-menu-shown > a > label,
+	.menu.layout-vert > .menu-item.sub-menu-shown > label,
+	.menu.layout-vert > .menu-item.current-cate > a > label,
+	.menu.layout-vert > .menu-item.current-cate > label {
+		color: white;
+		background-color: #157dff;
+	}
+
+
 
 .button-x {
 	background-color: transparent;
@@ -201,21 +246,19 @@ label.deco-input {
 		background-color: white;
 	}
 
-	#app-chief-nav .menu.level-1 > .menu-item > label {
-	}
-
-	#app-chief-nav .menu.level-2 {
-	}
-
+	#app-chief-nav .menu.level-2 > .menu-item > a > label,
 	#app-chief-nav .menu.level-2 > .menu-item > label {
 		color: #666;
 	}
 
+	#app-chief-nav .menu.level-2 > .menu-item.current-cate > a > label,
+	#app-chief-nav .menu.level-2 > .menu-item.current-cate > label,
+	#app-chief-nav .menu.level-2 > .menu-item.sub-menu-shown > a > label,
+	#app-chief-nav .menu.level-2 > .menu-item.sub-menu-shown > label,
+	#app-chief-nav .menu.level-2 > .menu-item:hover > a > label,
 	#app-chief-nav .menu.level-2 > .menu-item:hover > label {
 		color: white;
-		background-color: #157dff;
 	}
-
 
 
 
@@ -230,10 +273,13 @@ label.deco-input {
 		background-color: #f9f9f9;
 	}
 
+	#my-assets .menu.level-1 > .menu-item > a > label,
 	#my-assets .menu.level-1 > .menu-item > label {
 		color: #333;
+		background-color: transparent!important;
 	}
 
+	#my-assets .menu.level-1 > .menu-item > a > label .iconfont,
 	#my-assets .menu.level-1 > .menu-item > label .iconfont {
 		color: #157dff;
 	}
@@ -247,9 +293,4 @@ label.deco-input {
 	#my-assets .menu.level-1 > .menu-item > .deco,
 	#my-assets .menu.level-2 {
 		background-color: white;
-	}
-
-	#my-assets .menu.level-2 > .menu-item:hover > label {
-		color: white;
-		background-color: #157dff;
 	}

@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"tran",
+				"transition"
+			],
+			[
+				"r",
+				"running"
+			],
+			[
 				"sca",
 				"scaleY()"
 			],
@@ -94,10 +102,6 @@
 			[
 				"min",
 				"min-width"
-			],
-			[
-				"r",
-				"right"
 			],
 			[
 				"transition",
@@ -356,18 +360,34 @@
 	"buffers":
 	[
 		{
-			"file": "app-dev/html-snippets/module-app-header.html",
+			"file": "app-dev/styles/pages/index.css",
 			"settings":
 			{
-				"buffer_size": 10564,
+				"buffer_size": 13302,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app-dev/styles/base/base.ie8.css",
+			"file": "app-dev/html-snippets/module-app-header.html",
 			"settings":
 			{
-				"buffer_size": 15964,
+				"buffer_size": 13184,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app-dev/styles/base/layout.css",
+			"settings":
+			{
+				"buffer_size": 10392,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app-dev/styles/base/theme-base.css",
+			"settings":
+			{
+				"buffer_size": 5483,
 				"line_ending": "Windows"
 			}
 		}
@@ -441,12 +461,23 @@
 	],
 	"file_history":
 	[
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.ie8.theme.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.ie8.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-base.css",
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/docs/configure-env-for-gulp.md",
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/docs/configure-env-for-gulp-abstract.md",
+		"/D/Users/wulechuan/Desktop/柱状图.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-header.html",
+		"/D/p/dev/taijs/taijs-website2/package.json",
+		"/D/p/dev/taijs/taijs-website2/gulpfile.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/index.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/package.json",
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/node_modules/gulp-cssnano/node_modules/object-assign/package.json",
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/node_modules/graceful-fs/fs.js",
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/node_modules/graceful-fs/graceful-fs.js",
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/node_modules/gulp-cssnano/node_modules/object-assign/index.js",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-base.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.ie8.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.ie8.theme.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/index.html",
 		"/C/Users/wulechuan/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/D/Users/wulechuan/Desktop/OneDrive/事业/canvas-ripples.js",
@@ -460,11 +491,8 @@
 		"/D/Users/wulechuan/Downloads/china.js",
 		"/D/Users/wulechuan/Downloads/china.json",
 		"/D/p/dev/taijs/taijs-website2/node_modules/gulp-inject/src/inject/index.js",
-		"/D/p/dev/taijs/taijs-website2/gulpfile.js",
 		"/D/Users/wulechuan/Desktop/柱状图.js.qq不让直接传js文件",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-header.html",
 		"/D/Users/wulechuan/Desktop/柱状图.js.qq不然直接传js文件",
-		"/D/Users/wulechuan/Desktop/柱状图.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/sample-snippets.html",
 		"/C/Users/wulechuan/AppData/Roaming/Sublime Text 3/Packages/JSHint Gutter/.jshintrc",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/sample-page-2.html",
@@ -492,8 +520,6 @@
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/module-sidebar-0.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/vendors/bootstrap.css",
 		"/D/p/dev/g.bat",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/docs/configure-env-for-gulp.md",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/docs/configure-env-for-gulp-abstract.md",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/html/page-list.html",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/html/page-2.html",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/gulpfile.js",
@@ -562,13 +588,7 @@
 		"/D/a.txt",
 		"/D/Users/wulechuan/Downloads/迅雷/js代码高亮功能测试",
 		"/D/p/dev/private/warm-up/Gruntfile.js",
-		"/D/p/dev/private/wlcJS/package.json",
-		"/D/p/dev/private/wlcJS/Gruntfile.js",
-		"/D/p/dev/private/warm-up/app-dist/html/page-2.html",
-		"/D/p/dev/private/warm-up/app-dev/test-url-overriding.html",
-		"/D/p/dev/private/warm-up/app-dist/styles/default.min.css",
-		"/D/p/dev/private/warm-up/dist/wulechuan-warm-up.min.js",
-		"/D/p/dev/private/warm-up/app-dist/wulechuan-warm-up.js"
+		"/D/p/dev/private/wlcJS/package.json"
 	],
 	"find":
 	{
@@ -589,6 +609,41 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"cssnano",
+			"vert",
+			"white",
+			":hover",
+			"><label   ",
+			"cssnano",
+			"cssno",
+			"cssnano",
+			"animation",
+			"promotion-card-zoom",
+			"promotion-card",
+			"promotion-card-zoom-in",
+			"scaleYUp",
+			"my-asset-menu-showing",
+			", 1",
+			"scale3d",
+			"X(1.0) scaleY",
+			"top",
+			":hover",
+			"sub-menu-shown",
+			":hover",
+			"item",
+			".menu-ite",
+			"item",
+			".menu-item",
+			"><label",
+			"my-asse",
+			"e",
+			"jygl",
+			"wdjf",
+			"jygl",
+			"cccc",
+			"bbbb",
+			"E5F1FF",
+			"CCE3FF",
 			" cast-shadow",
 			"0",
 			"my-assets",
@@ -681,42 +736,7 @@
 			"decideWaveColors",
 			"conso",
 			"waterLevelOffsetLim",
-			"waterLevelOffsetLim1",
-			"wPhaseOffsetLim1",
-			"drawingFramesLim",
-			"wPhaseOffsetLim1",
-			"phaseOffset",
-			"PhaseOffset",
-			"phaseOffset",
-			"wPhaseOffsetLim2",
-			"phaseOffset",
-			"wPhaseOffsetLim1",
-			"wPhaseOffsetLim2",
-			"wPhaseOffset",
-			"wPhaseOffsetLim",
-			"wPhaseOffsetLim1",
-			"Length",
-			"wLengthLim1",
-			"count",
-			"_safelyUpdateProperty",
-			"wColorStroke",
-			"wave",
-			"wColorStroke",
-			"drawSuperpositionWave",
-			"wColorStroke",
-			"drawAnimation",
-			"waveConf",
-			"waveColorRGB",
-			"ctx",
-			"fillFadingRatio",
-			"strokeDarkenRatio",
-			"var ",
-			"hasOwnAttribute",
-			"_tryToUpdateAttribute",
-			"wAmpLim1",
-			"null",
-			"_updateFloatAttribute",
-			"_temp"
+			"waterLevelOffsetLim1"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -734,73 +754,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app-dev/html-snippets/module-app-header.html",
+					"file": "app-dev/styles/pages/index.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10564,
+						"buffer_size": 13302,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2659,
-								2659
-							],
-							[
-								3078,
-								3078
-							],
-							[
-								4525,
-								4525
-							],
-							[
-								4944,
-								4944
-							],
-							[
-								6388,
-								6388
-							],
-							[
-								6807,
-								6807
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2933.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app-dev/styles/base/base.ie8.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 15964,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								392,
-								392
+								12162,
+								12162
 							]
 						],
 						"settings":
@@ -809,10 +780,137 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 420.0,
+						"translation.y": 11733.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app-dev/html-snippets/module-app-header.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13184,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10818,
+								10818
+							],
+							[
+								11043,
+								11043
+							],
+							[
+								11265,
+								11265
+							],
+							[
+								11487,
+								11487
+							],
+							[
+								11710,
+								11710
+							],
+							[
+								11933,
+								11933
+							],
+							[
+								12153,
+								12153
+							],
+							[
+								12377,
+								12377
+							],
+							[
+								12602,
+								12602
+							],
+							[
+								12828,
+								12828
+							],
+							[
+								13052,
+								13052
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6587.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app-dev/styles/base/layout.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10392,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10392,
+								10392
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 11186.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app-dev/styles/base/theme-base.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5483,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4307,
+								4307
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4637.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -867,6 +965,50 @@
 		"selected_items":
 		[
 			[
+				"theme",
+				"app-dev\\styles\\base\\theme-base.css"
+			],
+			[
+				"header",
+				"app-dev\\html-snippets\\module-app-header.html"
+			],
+			[
+				"la",
+				"app-dev\\styles\\base\\layout.css"
+			],
+			[
+				"index",
+				"app-dev\\styles\\pages\\index.css"
+			],
+			[
+				"layout",
+				"app-dev\\styles\\base\\layout.css"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"pa",
+				"package.json"
+			],
+			[
+				"gulp",
+				"gulpfile.js"
+			],
+			[
+				"inde",
+				"app-dev\\styles\\pages\\index.css"
+			],
+			[
+				"them",
+				"app-dev\\styles\\base\\theme-base.css"
+			],
+			[
+				"base",
+				"app-dev\\styles\\base\\base.css"
+			],
+			[
 				"basie",
 				"app-dev\\styles\\base\\base.ie8.css"
 			],
@@ -879,20 +1021,8 @@
 				"app-dev\\styles\\pages\\index.css"
 			],
 			[
-				"base",
-				"app-dev\\styles\\base\\base.css"
-			],
-			[
-				"them",
-				"app-dev\\styles\\base\\theme-base.css"
-			],
-			[
 				"layou",
 				"app-dev\\styles\\base\\layout.css"
-			],
-			[
-				"index",
-				"app-dev\\index.html"
 			],
 			[
 				"icon",
@@ -901,14 +1031,6 @@
 			[
 				"incon",
 				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
-			],
-			[
-				"layout",
-				"app-dev\\styles\\base\\layout.css"
-			],
-			[
-				"inde",
-				"app-dev\\index.html"
 			],
 			[
 				"res",
@@ -963,24 +1085,12 @@
 				"app-dev\\scripts\\pages\\index.js"
 			],
 			[
-				"gulp",
-				"gulpfile.js"
-			],
-			[
 				"sampl",
 				"app-dev\\sample-snippets.html"
 			],
 			[
-				"header",
-				"app-dev\\html-snippets\\module-app-header.html"
-			],
-			[
 				"sni",
 				"app-dev\\sample-snippets.html"
-			],
-			[
-				"la",
-				"app-dev\\styles\\base\\layout.css"
 			],
 			[
 				"inco",
@@ -1053,10 +1163,6 @@
 			[
 				"base.css",
 				"app-dev\\styles\\base\\base.css"
-			],
-			[
-				"theme",
-				"app-dev\\styles\\base\\theme-base.css"
 			],
 			[
 				"config",
