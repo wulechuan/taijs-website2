@@ -180,6 +180,20 @@ label.deco-input {
 	}
 
 
+.breadcrumbs {
+	}
+
+	.breadcrumbs > ul > li:before,
+	.breadcrumbs > ul > li span,
+	.breadcrumbs > ul > li a:visited,
+	.breadcrumbs > ul > li a:link,
+	.breadcrumbs > ul > li a {
+		color: #666;
+	}
+
+	.breadcrumbs > ul > li a:hover {
+		background: #f3f3f3;
+	}
 
 
 #app-header {
@@ -216,6 +230,7 @@ label.deco-input {
 
 #app-footer {
 	border-color: #ddd;
+	background-color: white;
 	}
 
 	#app-footer a,
@@ -235,7 +250,6 @@ label.deco-input {
 	#app-footer-services-info em {
 		color: #333;
 	}
-
 
 #app-chief-nav {
 	}
@@ -259,8 +273,6 @@ label.deco-input {
 	#app-chief-nav .menu.level-2 > .menu-item:hover > label {
 		color: white;
 	}
-
-
 
 #my-assets {
 	}

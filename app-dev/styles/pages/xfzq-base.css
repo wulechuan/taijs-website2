@@ -1,0 +1,101 @@
+#user-info-bar {
+	overflow: hidden;
+
+	color: white;
+
+	background-color: #6b76ad;
+	-ms-filter: "\
+		progid:DXImageTransform.Microsoft.Gradient(startColorstr=#6b76ad, endColorstr=#9d99b9)\
+	";
+	    filter: 
+		progid:DXImageTransform.Microsoft.Gradient(startColorstr=#6b76ad, endColorstr=#9d99b9)\
+	);
+	}
+
+	#user-info-bar:before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-image: 
+			url(../../images/pages/xfzq/_common/user-info-bar-bg.png)
+		; /* ie9 doesn't support css gradient */
+		background-image: 
+			url(../../images/pages/xfzq/_common/user-info-bar-bg.png),
+			linear-gradient(to bottom, #6b76ad, #9d99b9)
+		;
+	}
+
+	#user-info-bar > .width-wrap {
+		height: 106px;
+	}
+
+	#user-info-bar > .ie-bg {
+		width: 1920px;
+		margin-left: -960px;
+
+		-ms-filter: "\
+			progid:DXImageTransform.Microsoft.AlphaImageLoader(\
+				src='../../images/pages/xfzq/_common/user-info-bar-bg.png', sizingMethod='crop'\
+			)\
+		";
+
+		filter:
+			progid:DXImageTransform.Microsoft.AlphaImageLoader(
+				src='../../images/pages/xfzq/_common/user-info-bar-bg.png', sizingMethod='crop'
+			)
+		;
+	}
+
+.page {
+	margin: 0;
+	padding: 10px 0 20px 0;
+}
+.page-chief-part {
+	position: relative;
+	margin: 10px 0;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+}
+
+.page-chief-part .content-in-cols {
+	border-collapse: separate;
+	}
+	.page-chief-part .content-in-cols td {
+		border-width: 1px;
+		border-style: solid;
+		position: relative;
+
+	}
+	.page-chief-part .content-in-cols td.page-sidebar-container {
+		width: 210px;
+	}
+	.page-chief-part .content-in-cols td.page-content-container {
+		width: 990px;
+		border-left-width: 0;
+	}
+
+
+
+
+
+
+#page-container {
+	background-color: #f5f5f5;
+}
+.page-chief-part {
+	/* background-color: white; */
+}
+.page-sidebar-container {
+	border-color: #dbdeeb;
+	background-color: #ebedf5;
+	border-color: red;
+}
+.page-content-container {
+	border-color: #ddd;
+	background-color: white;
+	border-color: blue;
+}

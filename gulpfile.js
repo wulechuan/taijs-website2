@@ -174,7 +174,7 @@ gulp.task('scripts-unglify', ['es-lint'], () => {
   ])
     .pipe(sourcemaps.init())
       // .pipe(concat('base.min.js'))
-      .pipe(uglifyJs({preserveComments: 'some'}))
+      // .pipe(uglifyJs({preserveComments: 'some'}))
       .pipe(rename((fullPathName) => {
         fullPathName.basename += '.min';
         return fullPathName;
@@ -225,7 +225,7 @@ gulp.task('pre-process-html-snippets',  ['copy-html-snippets-files-to-temp-folde
 });
 
 gulp.task('html-inject-snippets', ['pre-process-html-snippets'], () => {
-  function _getHtmlSnippetString(fullPathName, snippetFile, index, count, targetFile) {
+  function _processHtmlSnippetString(fullPathName, snippetFile, index, count, targetFile) {
     var snippetString = snippetFile.contents ? snippetFile.contents.toString('utf8') : '';
     var fileRelativePathName = targetFile.path.slice(targetFile.base.length);
     var _slashPos = fileRelativePathName.search(/\/|\\/);
@@ -247,7 +247,7 @@ gulp.task('html-inject-snippets', ['pre-process-html-snippets'], () => {
           pathSnippetsRoot+'tag-head-before-title.html'
     ]), {
       starttag: '<!-- inject:headBeforeTitle:html -->',
-      transform: _getHtmlSnippetString,
+      transform: _processHtmlSnippetString,
       quiet: true
     }))
 
@@ -255,7 +255,7 @@ gulp.task('html-inject-snippets', ['pre-process-html-snippets'], () => {
           pathSnippetsRoot+'tag-head-after-title.html'
     ]), {
       starttag: '<!-- inject:headAfterTitle:html -->',
-      transform: _getHtmlSnippetString,
+      transform: _processHtmlSnippetString,
       quiet: true
     }))
 
@@ -263,7 +263,7 @@ gulp.task('html-inject-snippets', ['pre-process-html-snippets'], () => {
           pathSnippetsRoot+'tag-body-begin.html'
     ]), {
       starttag: '<!-- inject:bodyBegin:html -->',
-      transform: _getHtmlSnippetString,
+      transform: _processHtmlSnippetString,
       quiet: true
     }))
 
@@ -271,7 +271,7 @@ gulp.task('html-inject-snippets', ['pre-process-html-snippets'], () => {
           pathSnippetsRoot+'tag-body-end.html'
     ]), {
       starttag: '<!-- inject:bodyEnd:html -->',
-      transform: _getHtmlSnippetString,
+      transform: _processHtmlSnippetString,
       quiet: true
     }))
 
@@ -279,7 +279,7 @@ gulp.task('html-inject-snippets', ['pre-process-html-snippets'], () => {
           pathSnippetsRoot+'module-app-header.html'
     ]), {
       starttag: '<!-- inject:appHeader:html -->',
-      transform: _getHtmlSnippetString,
+      transform: _processHtmlSnippetString,
       quiet: true
     }))
 
@@ -287,7 +287,7 @@ gulp.task('html-inject-snippets', ['pre-process-html-snippets'], () => {
           pathSnippetsRoot+'module-app-footer.html'
     ]), {
       starttag: '<!-- inject:appFooter:html -->',
-      transform: _getHtmlSnippetString,
+      transform: _processHtmlSnippetString,
       quiet: true
     }))
 
@@ -295,7 +295,7 @@ gulp.task('html-inject-snippets', ['pre-process-html-snippets'], () => {
           pathSnippetsRoot+'module-app-body-wrap-begin.html'
     ]), {
       starttag: '<!-- inject:appBodyWrapBegin:html -->',
-      transform: _getHtmlSnippetString,
+      transform: _processHtmlSnippetString,
       quiet: true
     }))
 
@@ -303,7 +303,7 @@ gulp.task('html-inject-snippets', ['pre-process-html-snippets'], () => {
           pathSnippetsRoot+'module-app-body-wrap-end.html'
     ]), {
       starttag: '<!-- inject:appBodyWrapEnd:html -->',
-      transform: _getHtmlSnippetString,
+      transform: _processHtmlSnippetString,
       quiet: true
     }))
 
@@ -311,7 +311,7 @@ gulp.task('html-inject-snippets', ['pre-process-html-snippets'], () => {
           pathSnippetsRoot+'module-popup-layers-wrap-begin.html'
     ]), {
       starttag: '<!-- inject:popupLayersWrapBegin:html -->',
-      transform: _getHtmlSnippetString,
+      transform: _processHtmlSnippetString,
       quiet: true
     }))
 
@@ -319,7 +319,71 @@ gulp.task('html-inject-snippets', ['pre-process-html-snippets'], () => {
           pathSnippetsRoot+'module-popup-layers-wrap-end.html'
     ]), {
       starttag: '<!-- inject:popupLayersWrapEnd:html -->',
-      transform: _getHtmlSnippetString,
+      transform: _processHtmlSnippetString,
+      quiet: true
+    }))
+
+    .pipe(inject(gulp.src([
+          pathSnippetsRoot+'module-xfzq-user-info-bar.html'
+    ]), {
+      starttag: '<!-- inject:xfzqUserInfoBar:html -->',
+      transform: _processHtmlSnippetString,
+      quiet: true
+    }))
+
+    .pipe(inject(gulp.src([
+          pathSnippetsRoot+'module-xfzq-page-wrap-begin.html'
+    ]), {
+      starttag: '<!-- inject:xfzqPageWrapBegin:html -->',
+      transform: _processHtmlSnippetString,
+      quiet: true
+    }))
+
+    .pipe(inject(gulp.src([
+          pathSnippetsRoot+'module-xfzq-page-wrap-end.html'
+    ]), {
+      starttag: '<!-- inject:xfzqPageWrapEnd:html -->',
+      transform: _processHtmlSnippetString,
+      quiet: true
+    }))
+
+    .pipe(inject(gulp.src([
+          pathSnippetsRoot+'module-xfzq-page-sidebar-0.html'
+    ]), {
+      starttag: '<!-- inject:xfzqPageSidebar0:html -->',
+      transform: _processHtmlSnippetString,
+      quiet: true
+    }))
+
+    .pipe(inject(gulp.src([
+          pathSnippetsRoot+'module-xfzq-page-chief-part-wrap-begin.html'
+    ]), {
+      starttag: '<!-- inject:xfzqPageChiefPartWrapBegin:html -->',
+      transform: _processHtmlSnippetString,
+      quiet: true
+    }))
+
+    .pipe(inject(gulp.src([
+          pathSnippetsRoot+'module-xfzq-page-chief-part-wrap-end.html'
+    ]), {
+      starttag: '<!-- inject:xfzqPageChiefPartWrapEnd:html -->',
+      transform: _processHtmlSnippetString,
+      quiet: true
+    }))
+
+    .pipe(inject(gulp.src([
+          pathSnippetsRoot+'module-xfzq-page-content-wrap-begin.html'
+    ]), {
+      starttag: '<!-- inject:xfzqPageContentWrapBegin:html -->',
+      transform: _processHtmlSnippetString,
+      quiet: true
+    }))
+
+    .pipe(inject(gulp.src([
+          pathSnippetsRoot+'module-xfzq-page-content-wrap-end.html'
+    ]), {
+      starttag: '<!-- inject:xfzqPageContentWrapEnd:html -->',
+      transform: _processHtmlSnippetString,
       quiet: true
     }))
 
