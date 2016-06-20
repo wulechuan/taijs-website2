@@ -29,6 +29,10 @@ html, body {
 	color: #999;
 }
 
+.bg-transparent {
+	background-color: transparent;
+}
+
 
 hr {
 	border-color: #d0d0d0;
@@ -66,18 +70,33 @@ button.color-chief:hover {
 	background-color: #3f93ff;
 }
 
-input[type="button"].color-transparent,
-input[type="submit"].color-transparent,
-input[type="reset"].color-transparent,
-button.color-transparent {
+input[type="reset"].bg-transparent,
+input[type="button"].bg-transparent,
+input[type="submit"].bg-transparent,
+button.bg-transparent {
 	color: #157dff;
 }
 
-input[type="button"].color-transparent:hover,
-input[type="submit"].color-transparent:hover,
-input[type="reset"].color-transparent:hover,
-button.color-transparent:hover {
+input[type="reset"].bg-transparent:hover,
+input[type="button"].bg-transparent:hover,
+input[type="submit"].bg-transparent:hover,
+button.bg-transparent:hover {
 	background-color: #e5f1ff;
+}
+
+input[type="reset"].bg-transparent.color-white,
+input[type="button"].bg-transparent.color-white,
+input[type="submit"].bg-transparent.color-white,
+button.bg-transparent.color-white {
+    color: white;
+    border-color: white;
+}
+
+input[type="reset"].bg-transparent.color-white:hover,
+input[type="button"].bg-transparent.color-white:hover,
+input[type="submit"].bg-transparent.color-white:hover,
+button.bg-transparent.color-white:hover {
+    background-color: rgba(255, 255, 255, 0.16)!important;
 }
 
 input:active,  input:focus,

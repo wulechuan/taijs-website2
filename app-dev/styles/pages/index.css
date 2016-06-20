@@ -81,17 +81,6 @@
 		text-align: center;
 	}
 
-	#splash-login-block button [class|="corner"]:before,
-	#splash-login-block button .ie-bg,
-	#splash-login-block button {
-		color: white;
-		border-color: white;
-	}
-
-	#splash-login-block button:hover {
-		background-color: rgba(255, 255, 255, 0.16)!important;
-	}
-
 	#splash-login-block button [class|="corner"] {
 		filter: alpha(opacity=100);
 	}

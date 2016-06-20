@@ -2,66 +2,80 @@ hr, hr.dashed {
     background-color: #d0d0d0\0;
 }
 
+button {
+    }
 
-input[type="reset"].cast-shadow,
-input[type="submit"].cast-shadow,
-input[type="button"].cast-shadow,
-button.cast-shadow,
-button.cast-shadow > .ie-bg,
-button.r-tmnl                          > .ie-bg,
-button.r-tmnl.color-default            > .ie-bg,
-button.rounded-terminals               > .ie-bg,
-button.rounded-terminals.color-default > .ie-bg,
-button.r-cnr                           > .ie-bg,
-button.r-cnr.color-default             > .ie-bg,
-button.rounded-corners                 > .ie-bg,
-button.rounded-corners.color-default   > .ie-bg {
-    border-color: #157dff;
-    background-color: #157dff;
-}
+    button.rounded-terminals               > .ie-borders,
+    button.rounded-terminals.color-default > .ie-borders,
+    button.rounded-corners                 > .ie-borders,
+    button.rounded-corners.color-default   > .ie-borders {
+        color: #157dff;
+        border-color: #157dff;
+    }
 
-button.color-default > .ie-bg [class|="corner"]:before,
-button               > .ie-bg [class|="corner"]:before {
-    color: #157dff;
-}
-button.color-default > .ie-bg [class|="corner"]:after,
-button               > .ie-bg [class|="corner"]:after {
-    color: #157dff;
-}
-button.color-transparent {
-    color: #157dff;
-}
-button.color-default > .ie-bg [class|="corner"]:after,
-button               > .ie-bg [class|="corner"]:after {
-    color: #157dff;
-}
+    button.rounded-terminals               > .ie-bg,
+    button.rounded-terminals.color-default > .ie-bg,
+    button.rounded-corners                 > .ie-bg,
+    button.rounded-corners.color-default   > .ie-bg {
+        color: #157dff;
+        background-color: #157dff;
+    }
 
-input[type="reset"].cast-shadow:hover,
-input[type="submit"].cast-shadow:hover,
-input[type="button"].cast-shadow:hover,
-button.cast-shadow:hover,
-button.cast-shadow:hover > .ie-bg,
-button.r-tmnl:hover                          > .ie-bg,
-button.r-tmnl.color-default:hover            > .ie-bg,
-button.rounded-terminals:hover               > .ie-bg,
-button.rounded-terminals.color-default:hover > .ie-bg,
-button.r-cnr:hover                           > .ie-bg,
-button.r-cnr.color-default:hover             > .ie-bg,
-button.rounded-corners:hover                 > .ie-bg,
-button.rounded-corners.color-default :hover  > .ie-bg {
-    background-color: #3f93ff;
-}
+    button.color-default > .ie-borders [class|="corner"]:before,
+    button.color-default > .ie-bg      [class|="corner"]:before,
+    button               > .ie-borders [class|="corner"]:before,
+    button               > .ie-bg      [class|="corner"]:before {
+        color: #157dff;
+    }
 
-button.r-tmnl:hover                          > .ie-bg [class|="corner"]:after,
-button.r-tmnl.color-default:hover            > .ie-bg [class|="corner"]:after,
-button.rounded-terminals:hover               > .ie-bg [class|="corner"]:after,
-button.rounded-terminals.color-default:hover > .ie-bg [class|="corner"]:after,
-button.r-cnr:hover                           > .ie-bg [class|="corner"]:after,
-button.r-cnr.color-default:hover             > .ie-bg [class|="corner"]:after,
-button.rounded-corners:hover                 > .ie-bg [class|="corner"]:after,
-button.rounded-corners.color-default :hover  > .ie-bg [class|="corner"]:after {
-    color: #3f93ff;
-}
+    button.rounded-terminals:hover               > .ie-bg,
+    button.rounded-terminals.color-default:hover > .ie-bg,
+    button.rounded-corners:hover                 > .ie-bg,
+    button.rounded-corners.color-default:hover   > .ie-bg {
+        color: #3f93ff;
+        background-color: #3f93ff;
+    }
+
+    button.bg-transparent.rounded-terminals:hover               > .ie-bg,
+    button.bg-transparent.rounded-terminals.color-default:hover > .ie-bg,
+    button.bg-transparent.rounded-corners:hover                 > .ie-bg,
+    button.bg-transparent.rounded-corners.color-default:hover   > .ie-bg {
+        color: #e5f1ff;
+        background-color: #e5f1ff;
+    }
+
+    button.bg-transparent.color-white.rounded-terminals > .ie-bg:before,
+    button.bg-transparent.color-white.rounded-terminals > .ie-bg:after,
+    button.bg-transparent.color-white.rounded-terminals > .ie-bg,
+    button.bg-transparent.color-white.rounded-corners   > .ie-bg:before,
+    button.bg-transparent.color-white.rounded-corners   > .ie-bg:after,
+    button.bg-transparent.color-white.rounded-corners   > .ie-bg {
+        color: white;
+        background-color: white;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
+            filter:  progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+    }
+    button.bg-transparent.color-white > .ie-borders [class|="corner"]:before,
+    button.bg-transparent.color-white > .ie-borders,
+    button.bg-transparent.color-white > .ie-bg      [class|="corner"]:before,
+    button.bg-transparent.color-white > .ie-bg {
+        color: white;
+    }
+
+    button.bg-transparent.color-white.rounded-terminals:hover > .ie-bg,
+    button.bg-transparent.color-white.rounded-corners:hover   > .ie-bg {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=20)";
+            filter:  progid:DXImageTransform.Microsoft.Alpha(opacity=20);
+    }
+
+    button.bg-transparent.color-white > .ie-borders {
+        border-color: white;
+    }
+
+    button.bg-transparent.color-white:hover > .ie-bg {
+        background-color: rgba(255, 255, 255, 0.16)!important;
+    }
+
 
 
 .info-block .info-locator .info {

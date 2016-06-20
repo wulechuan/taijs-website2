@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1465983968'); /* IE9*/
-  src: url('iconfont.eot?t=1465983968#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1465983968') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1465983968') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1465983968#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1466384884'); /* IE9*/
+  src: url('iconfont.eot?t=1466384884#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1466384884') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1466384884') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1466384884#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -48,7 +48,7 @@
 .icon-rounded-corners-stroke1-s40-r08:before { content: "\e668"; }
 .icon-rounded-corners-stroke1-s40-r10:before { content: "\e66a"; }
 .icon-rounded-corners-stroke1-s40-r20:before { content: "\e66d"; }
-.icon-rounded-corners-fill-s40-r10:before { content: "\e660"; }
+.icon-rounded-corners-fill-s40-r10:before { content: "\e679"; }
 .icon-rounded-corners-stroke1-s40-r07:before { content: "\e667"; }
 .icon-rounded-corners-stroke1-s40-r09:before { content: "\e669"; }
 .icon-rounded-corners-stroke1-s40-r15:before { content: "\e66c"; }
@@ -75,3 +75,16 @@
 .icon-four-squares:before { content: "\e620"; }
 .icon-card-with-dollar-sign:before { content: "\e621"; }
 .icon-magnifier:before { content: "\e613"; }
+.icon-rounded-corners-fill-s40-r1:before { content: "\e681"; }
+.icon-rounded-corners-fill-s40-r2:before { content: "\e682"; }
+.icon-rounded-corners-fill-s40-r3:before { content: "\e683"; }
+.icon-rounded-corners-fill-s40-r4:before { content: "\e684"; }
+.icon-rounded-corners-fill-s40-r5:before { content: "\e685"; }
+.icon-rounded-corners-fill-s40-r6:before { content: "\e686"; }
+.icon-rounded-corners-fill-s40-r7:before { content: "\e687"; }
+.icon-rounded-corners-fill-s40-r8:before { content: "\e688"; }
+.icon-rounded-corners-fill-s40-r9:before { content: "\e689"; }
+.icon-rounded-corners-fill-s40-r11:before { content: "\e68a"; }
+.icon-rounded-corners-fill-s40-r14:before { content: "\e68b"; }
+.icon-rounded-corners-fill-s40-r19:before { content: "\e68c"; }
+.icon-rounded-corners-fill-s40-r0:before { content: "\e660"; }
