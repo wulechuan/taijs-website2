@@ -29,6 +29,10 @@ html, body {
 	color: #999;
 }
 
+.bg-transparent {
+	background-color: transparent;
+}
+
 
 hr {
 	border-color: #d0d0d0;
@@ -45,11 +49,7 @@ input {
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
-button,
-input[type="button"].color-chief,
-input[type="submit"].color-chief,
-input[type="reset"].color-chief,
-button.color-chief {
+button {
 	color: white;
 	border-color: #157dff;
 	background-color: #157dff;
@@ -58,26 +58,37 @@ button.color-chief {
 input[type="button"]:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
-button:hover,
-input[type="button"].color-chief:hover,
-input[type="submit"].color-chief:hover,
-input[type="reset"].color-chief:hover,
-button.color-chief:hover {
+button:hover {
 	background-color: #3f93ff;
 }
 
-input[type="button"].color-transparent,
-input[type="submit"].color-transparent,
-input[type="reset"].color-transparent,
-button.color-transparent {
+input[type="reset"].bg-transparent,
+input[type="button"].bg-transparent,
+input[type="submit"].bg-transparent,
+button.bg-transparent {
 	color: #157dff;
 }
 
-input[type="button"].color-transparent:hover,
-input[type="submit"].color-transparent:hover,
-input[type="reset"].color-transparent:hover,
-button.color-transparent:hover {
+input[type="reset"].bg-transparent:hover,
+input[type="button"].bg-transparent:hover,
+input[type="submit"].bg-transparent:hover,
+button.bg-transparent:hover {
 	background-color: #e5f1ff;
+}
+
+input[type="reset"].bg-transparent.color-white,
+input[type="button"].bg-transparent.color-white,
+input[type="submit"].bg-transparent.color-white,
+button.bg-transparent.color-white {
+    color: white;
+    border-color: white;
+}
+
+input[type="reset"].bg-transparent.color-white:hover,
+input[type="button"].bg-transparent.color-white:hover,
+input[type="submit"].bg-transparent.color-white:hover,
+button.bg-transparent.color-white:hover {
+    background-color: rgba(255, 255, 255, 0.16)!important;
 }
 
 input:active,  input:focus,
@@ -129,8 +140,8 @@ label.deco-input {
 		color: #333;
 	}
 
-	.menu.layout-hori > .menu-item:hover > a > label,
-	.menu.layout-hori > .menu-item:hover > label,
+	.menu.layout-hori > .menu-item> a > label:hover ,
+	.menu.layout-hori > .menu-item > label:hover,
 	.menu.layout-hori > .menu-item.sub-menu-shown > a > label,
 	.menu.layout-hori > .menu-item.sub-menu-shown > label,
 	.menu.layout-hori > .menu-item.current-cate > a > label,
@@ -143,8 +154,8 @@ label.deco-input {
 		color: #333;
 	}
 
-	.menu.layout-vert > .menu-item:hover > a > label,
-	.menu.layout-vert > .menu-item:hover > label,
+	.menu.layout-vert > .menu-item > a > label:hover,
+	.menu.layout-vert > .menu-item > label:hover,
 	.menu.layout-vert > .menu-item.sub-menu-shown > a > label,
 	.menu.layout-vert > .menu-item.sub-menu-shown > label,
 	.menu.layout-vert > .menu-item.current-cate > a > label,

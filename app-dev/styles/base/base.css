@@ -233,7 +233,6 @@ label.deco-input {
 		content: '\e613';
 	}
 
-.ie-bg,
 [class|="ie"] {
 	display: none;
 }
@@ -244,16 +243,6 @@ label.deco-input {
 
 .rounded-corners {
 	border-radius: 5px;
-	}
-	.rounded-corners.color-transparent {
-		background-color: transparent;
-	}
-	.rounded-corners [class|="corner"] {
-		display: none;
-	}
-	.rounded-corners [class|="corner"]:before,
-	.rounded-corners [class|="corner"]:after {
-		content: none;
 	}
 	.rounded-corners.r2px {
 		border-radius: 2px;
