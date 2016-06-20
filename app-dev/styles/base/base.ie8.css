@@ -3,6 +3,60 @@
 	position: absolute;
 }
 
+.has-border-triangle > .ie-border-triangle {
+	box-sizing: border-box;
+	display: block;
+	width: 16px;
+	height: 16px;
+
+	position: absolute;
+	z-index: 1;
+	padding: 0;
+	margin: 0;
+
+	border-width: inherit!important;
+	border-style: inherit!important;
+	border-color: inherit!important;
+	background-color: inherit!important;
+
+	clip: rect(0px, 100px, 10px, 0px);
+
+	-ms-filter: "\
+		progid:DXImageTransform.Microsoft.Matrix(\
+			M11=0.7071067811865474,\
+			M12=-0.7071067811865477,\
+			M21=0.7071067811865477,\
+			M22=0.7071067811865474,\
+			SizingMethod='auto expand'\
+		)\
+	";
+	filter:
+		progid:DXImageTransform.Microsoft.Matrix(
+			M11=0.7071067811865474,
+			M12=-0.7071067811865477,
+			M21=0.7071067811865477,
+			M22=0.7071067811865474,
+			SizingMethod='auto expand'
+		)
+	;
+	}
+
+	.has-border-triangle > .ie-border-triangle,
+	.has-border-triangle.border-triangle-at-top > .ie-border-triangle {
+		left: 50%;
+		top: 0;
+		margin-top: -11px;
+		margin-left: -11px;
+	}
+	.has-border-triangle.border-triangle-at-bottom > .ie-border-triangle {
+		left: 50%;
+		top: auto;
+		bottom: 0;
+		margin-bottom: -8px;
+		margin-left: -8px;
+	}
+
+
 .ie-borders,
 .ie-bg {
 	overflow: visible!important;
@@ -147,7 +201,7 @@
 			position: absolute;
 			border-style: none!important;
 			border-color: transparent!important;
-			background-color: red!important;
+			background-color: inherit!important;
 			overflow: hidden!important;
 
 			font-size: 2000px;
@@ -546,28 +600,71 @@ button label {
 
 
 .info-block .info-locator {
-	margin-top: 5px\0;
     }
 
-	.info-block .info-locator .info {
-	    outline: 1px solid;
-    }
+	.info-block .info-locator .info.has-border-triangle .ie-border-triangle {
+		left: 0;
+		top: -4px;
+		margin-left: 3px;
+		z-index: 1!important;
 
-    .info-block .info-locator .info .ie-shadow {
-        -ms-filter: "\
-            progid:DXImageTransform.Microsoft.Alpha(Opacity=80)\
-            progid:DXImageTransform.Microsoft.Blur(PixelRadius=5)\
-        ";
-        filter: 
-            progid:DXImageTransform.Microsoft.Alpha(Opacity=80)
-            progid:DXImageTransform.Microsoft.Blur(PixelRadius=5)
-        ;
+		/* -ms-filter: "\
+			progid:DXImageTransform.Microsoft.Glow(\
+				color=#ff3399ff,\
+				strength=4\
+			)\
+			progid:DXImageTransform.Microsoft.Matrix(\
+				M11=0.7071067811865474,\
+				M12=-0.7071067811865477,\
+				M21=0.7071067811865477,\
+				M22=0.7071067811865474,\
+				SizingMethod='auto expand'\
+			)\
+		";
+		filter: 
+			progid:DXImageTransform.Microsoft.Glow(
+				color=#ff3399ff,
+				strength=4
+			)
+			progid:DXImageTransform.Microsoft.Matrix(
+				M11=0.7071067811865474,
+				M12=-0.7071067811865477,
+				M21=0.7071067811865477,
+				M22=0.7071067811865474,
+				SizingMethod='auto expand'
+			)
+		; */
 
-        left: -8px;
-        top: -8px;
+		clip: rect(0px, 30px, 15px, 0px);
+	}
+
+    .info-block .info-locator .info > .ie-shadow {
+    	display: block;
+    	position: absolute;
+        left: -10px;
+        top: -10px;
         right: 2px;
         bottom: 2px;
-        z-index: -1!important;
+        z-index: 0!important;
+
+        -ms-filter: "\
+            progid:DXImageTransform.Microsoft.Alpha(Opacity=60)\
+            progid:DXImageTransform.Microsoft.Blur(PixelRadius=3)\
+            progid:DXImageTransform.Microsoft.Blur(PixelRadius=2)\
+        ";
+        filter: 
+            progid:DXImageTransform.Microsoft.Alpha(Opacity=60)
+            progid:DXImageTransform.Microsoft.Blur(PixelRadius=3)
+            progid:DXImageTransform.Microsoft.Blur(PixelRadius=2)
+        ;
+    }
+
+    .info-block .info-locator .info > .content {
+    	display: block;
+    	position: relative;
+    	background: inherit!important;
+    	border: 1px solid transparent;
+    	margin: -3px;
     }
 
 #my-assets .menu.level-1 > .menu-item {

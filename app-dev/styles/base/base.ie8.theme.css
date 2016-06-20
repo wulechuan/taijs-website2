@@ -25,38 +25,73 @@ button {
 
     button.bg-transparent > .ie-bg {
         display: none;
+        left: -1px;
+        right: -1px;
+        top: -1px;
+        bottom: -1px;
+        }
+        button.bg-transparent > .ie-bg:before,
+        button.bg-transparent > .ie-bg:after {
+            content: none!important;
+        }
+        button.bg-transparent > .ie-bg [class|="corner"] {
+            display: none;
+        }
+
+        button.bg-transparent:hover > .ie-bg {
+            display: block;
+        }
+
+        button.bg-transparent > .ie-bg {
+            -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33157dff, endColorStr=#33157dff)";
+                filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33157dff, endColorStr=#33157dff);
+        }
+        button.bg-transparent.color-white > .ie-borders {
+            color: white;
+            border-color: white;
+        }
+        button.bg-transparent.color-white > .ie-bg {
+            background-color: transparent;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33FFFFFF, endColorStr=#33FFFFFF)";
+                filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33FFFFFF, endColorStr=#33FFFFFF);
+        }
+
+
+
+.info-block {
     }
 
-    button.bg-transparent:hover > .ie-bg {
-        display: block;
-        color: #e5f1ff;
+    .info-block .info-locator .info > .ie-shadow {
+        background-color: #3af;
     }
 
-    button.bg-transparent.color-white > .ie-borders,
-    button.bg-transparent.color-white > .ie-bg {
-        color: white;
-    }
-    button.bg-transparent.color-white > .ie-borders {
-        border-color: white;
-    }
-    button.bg-transparent.color-white > .ie-bg {
-        /* background-color: white; */
-    }
-    button.bg-transparent.color-white:hover > .ie-bg {
-        font-size: 0!important;
-        background-color: pink;
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=30)";
-            filter:  progid:DXImageTransform.Microsoft.Alpha(opacity=30);
-    }
-
-
-
-.info-block .info-locator .info {
-    outline-color: #1579ac;
-    }
-
-    .info-block .info-locator .info .ie-shadow {
-        background-color: #18f;
+    .info-block .info-locator .info.has-border-triangle .ie-border-triangle {
+        -ms-filter: "\
+            progid:DXImageTransform.Microsoft.Glow(\
+                color=#ff3399ff,\
+                strength=4\
+            )\
+            progid:DXImageTransform.Microsoft.Matrix(\
+                M11=0.7071067811865474,\
+                M12=-0.7071067811865477,\
+                M21=0.7071067811865477,\
+                M22=0.7071067811865474,\
+                SizingMethod='auto expand'\
+            )\
+        ";
+        filter: 
+            progid:DXImageTransform.Microsoft.Glow(
+                color=#ff3399ff,
+                strength=4
+            )
+            progid:DXImageTransform.Microsoft.Matrix(
+                M11=0.7071067811865474,
+                M12=-0.7071067811865477,
+                M21=0.7071067811865477,
+                M22=0.7071067811865474,
+                SizingMethod='auto expand'
+            )
+        ;
     }
 
 
