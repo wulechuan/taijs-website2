@@ -107,11 +107,16 @@ em {
 }
 
 label.deco-input {
-	border-color: #e6e6e6;
-	background-color: white;
 	}
 	label.deco-input .iconfont {
 		color: #999;
+	}
+	label.deco-input .ie-borders {
+		border-color: #e6e6e6;
+	}
+	label.deco-input input:active ~ .ie-borders,
+	label.deco-input input:focus ~ .ie-borders {
+		border-color: #157dff;
 	}
 
 
@@ -120,7 +125,6 @@ label.deco-input {
 
 	.qrcode > img {
 		background-color: #f3f3f3;
-		margin-bottom: 8px;
 	}
 
 

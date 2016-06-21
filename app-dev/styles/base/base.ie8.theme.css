@@ -57,6 +57,14 @@ button {
         }
 
 
+label.deco-input .ie-borders {
+    color: #e6e6e6;
+    }
+    label.deco-input input:active ~ .ie-borders,
+    label.deco-input input:focus ~ .ie-borders {
+        color: #157fdd;
+    }
+
 
 .info-block {
     }

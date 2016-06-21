@@ -148,9 +148,7 @@ input[type="radio"] {
 label.deco-input {
 	display: inline-block;
 	position: relative;
-	border-width: 1px;
-	border-style: solid;
-	padding: 4px;
+	padding: 5px;
 	box-sizing: border-box;
 	width: 140px;
 	}
@@ -160,6 +158,20 @@ label.deco-input {
 		position: absolute;
 	}
 
+	label.deco-input .ie-borders {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		border-width: 1px;
+		border-style: solid;
+		display: block;
+	}
+
+	label.deco-input .ie-borders [class|="corner"] {
+		display: none;
+	}
 
 	label.deco-input .iconfont {
 		display: none;
@@ -522,13 +534,14 @@ label.deco-input {
 
 .qrcode {
 	width: 128px;
-	height: 128px;
+	text-align: center;
+	margin: auto;
 	}
 
 	.qrcode > img {
 		width: 128px;
 		height: 128px;
-		margin-bottom: 6px;
+		margin: -2px;
 	}
 
 	.qrcode > .figcaption {

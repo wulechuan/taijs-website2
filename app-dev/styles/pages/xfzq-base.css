@@ -54,48 +54,82 @@
 	margin: 0;
 	padding: 10px 0 20px 0;
 }
+
 .page-chief-part {
 	position: relative;
 	margin: 10px 0;
-	box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-	overflow: hidden;
-}
+	overflow: visible; /* for ie-shadow */
 
-.page-chief-part .content-in-cols {
-	border-collapse: separate;
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 	}
-	.page-chief-part .content-in-cols td {
+
+	.page-chief-part .content {
+		position: relative;
+		z-index: 5;
+		margin: 0;
+		padding: 0;
+		border: 0;
 		border-width: 1px;
 		border-style: solid;
+		text-align: left;
+		direction: ltr;
+		white-space: nowrap;
+		overflow: visible; /* for sidebar borders */
+	}
+
+	.page-chief-part .content .page-sidebar,
+	.page-chief-part .content .page-content {
 		position: relative;
-
+		display: inline-block;
+		vertical-align: top;
+		white-space: normal;
 	}
-	.page-chief-part .content-in-cols td.page-sidebar-container {
+	.page-chief-part .content .page-sidebar {
 		width: 210px;
+		margin-right: 0px;
 	}
-	.page-chief-part .content-in-cols td.page-content-container {
-		width: 990px;
-		border-left-width: 0;
+	.page-chief-part .content .page-content {
+		width: 100%;
+	}
+	.page-chief-part .content.has-sidebar .page-content,
+	.page-chief-part .content .page-sidebar ~ .page-content {
+		width: 989px;
+	}
+	.page-chief-part .content.has-sidebar:before {
+		box-sizing: border-box;
+		content: '';
+		position: absolute;
+		left: -1px;
+		top: -1px;
+		bottom: -1px;
+		width: 211px;
+		border-width: 1px;
+		border-style: solid;
+	}
+
+
+.page-sidebar {
+	padding: 10px 0 40px 0;
+	}
+	.page-sidebar hr {
+		margin: 20px 0;
 	}
 
 
 
 
 
-
-#page-container {
+#page-row {
 	background-color: #f5f5f5;
 }
-.page-chief-part {
-	/* background-color: white; */
-}
-.page-sidebar-container {
-	border-color: #dbdeeb;
-	background-color: #ebedf5;
-	border-color: red;
-}
-.page-content-container {
+.page-chief-part .content {
 	border-color: #ddd;
 	background-color: white;
-	border-color: blue;
+}
+.page-chief-part .content.has-sidebar .page-sidebar hr,
+.page-chief-part .content.has-sidebar:before {
+	border-color: #dbdeeb;
+}
+.page-chief-part .content.has-sidebar:before {
+	background-color: #ebedf5;
 }

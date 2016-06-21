@@ -87,6 +87,19 @@
 	}
 
 
+label.deco-input {
+	padding: 4px;
+	}
+	label.deco-input .ie-borders {
+		border-width: 0px;
+	}
+
+	label.deco-input .ie-borders [class|="corner"] {
+		display: block;
+	}
+
+
+
 .cast-shadow {
 	position: relative;
 	}

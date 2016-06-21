@@ -432,7 +432,7 @@
 		#app-chief-nav .menu-wrap.level-2 .border-patch {
 			display: block;
 			position: absolute;
-			left: -0.11px;
+			left: 0px;
 			right: 12px;
 			top: -10px;
 			height: 13px;
