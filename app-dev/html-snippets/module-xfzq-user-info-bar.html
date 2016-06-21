@@ -4,7 +4,7 @@
 		<div class="user-avatar-block">
 			<div id="user-info-bar-user-avatar">
 				<div class="ie-compositor-mask"></div>
-				<div class="ie-image"><img src=""></div>
+				<div class="ie-image"><img src="../images/_temp/fake-avatar-2.jpg"></div>
 			</div>
 		</div>
 		<div class="user-info-block"></div>
@@ -14,62 +14,31 @@
 			updateUserAvatar('../images/_temp/fake-avatar-2.jpg');
 
 			function updateUserAvatar(imageUri) {
-				var avatar = $('#user-info-bar-user-avatar')[0];
+				var avatar = document.getElementById('user-info-bar-user-avatar');
+				var imgParent = $(avatar).find('.ie-image')[0];
 				var img = $(avatar).find('img')[0];
-				var msk = $(avatar).find('.ie-compositor-mask')[0];
+				var mask = $(avatar).find('.ie-compositor-mask')[0];
 
-				if (!avatar || !img || !msk) return false;
+				if (!avatar || !imgParent || !img || !mask) return false;
 
-				var filterCmp;
+				console.log(avatar.id);
 
-				if (avatar.filters) {
-					try {
-						filterCmp = avatar.filters.item('DXImageTransform.Microsoft.Compositor');
-					} catch(e) {
-						filterCmp = undefined;
-					}
-				}
+				if (avatar.filters.item(0)) {
+					// img.src = '';
+					mask.style.display = 'block';
 
-				if (filterCmp) {
-					img.src = '';
-					msk.style.display = 'block';
-					img.style.display = 'none';
+					avatar.filters.item(0).Apply();
 
-					setTimeout(function () {
-						img.onload = function (event) {
-							console.log('loaded: ', img.src);
+					mask.style.display = 'none';
+					imgParent.style.display = 'block';
 
-							setTimeout(function () {
-								console.log('play!');
-								filterCmp.Play();
-							}, 100);
+					avatar.filters.item(0).Play();
+					avatar.filters.item(0).Function='5';
 
-							img.onload = null;
-						}
-						console.log('msk:', msk.style.display);
-						console.log('img:', img.style.display);
-
-
-						setTimeout(function () {
-							console.log('APLY APPLY APPLY!');
-							filterCmp.Apply();
-						}, 1000);
-
-						setTimeout(function () {
-							msk.style.display = 'none';
-							img.style.display = 'block';
-							console.log('msk:', msk.style.display);
-							console.log('img:', img.style.display);
-
-							setTimeout(function () {
-								console.log('new image!');
-								img.src = imageUri;
-							}, 1000);
-						}, 2000);
-					}, 1000);
-	
+					// img.src = imageUri;
 				} else {
-					img.style.display = 'none';
+					mask.style.display = 'none';
+					imgParent.style.display = 'none';
 					avatar.style.backgroundImage = 'url('+imageUri+')';
 				}
 			}
