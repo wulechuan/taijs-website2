@@ -150,7 +150,6 @@ label.deco-input {
 			bottom: 17px;
 		}
 	.cast-shadow > .ie-bg {
-		margin: -1px;
 		z-index: 1;
 	}
 	.cast-shadow > .ie-bg ~ .content {
@@ -652,10 +651,6 @@ button label {
     	border: 1px solid transparent;
     	margin: -3px;
     }
-
-#my-assets .menu.level-1 > .menu-item {
-	margin: 1px; /* for revealing outer ul border */
-}
 
 #app-chief-nav .menu.level-2 > .ie-shadow .ie-shadow-matte,
 #app-chief-nav .menu.level-1 > .menu-item > .deco .ie-shadow-matte,
