@@ -1,6 +1,78 @@
 <div class="row" id="user-info-bar">
 	<div class="ie-bg"></div>
 	<div class="width-wrap">
-		<div class="user-avatar"></div>
+		<div class="user-avatar-block">
+			<div id="user-info-bar-user-avatar">
+				<div class="ie-compositor-mask"></div>
+				<div class="ie-image"><img src=""></div>
+			</div>
+		</div>
+		<div class="user-info-block"></div>
 	</div>
+	<script type="text/javascript">
+		(function () {
+			updateUserAvatar('../images/_temp/fake-avatar-2.jpg');
+
+			function updateUserAvatar(imageUri) {
+				var avatar = $('#user-info-bar-user-avatar')[0];
+				var img = $(avatar).find('img')[0];
+				var msk = $(avatar).find('.ie-compositor-mask')[0];
+
+				if (!avatar || !img || !msk) return false;
+
+				var filterCmp;
+
+				if (avatar.filters) {
+					try {
+						filterCmp = avatar.filters.item('DXImageTransform.Microsoft.Compositor');
+					} catch(e) {
+						filterCmp = undefined;
+					}
+				}
+
+				if (filterCmp) {
+					img.src = '';
+					msk.style.display = 'block';
+					img.style.display = 'none';
+
+					setTimeout(function () {
+						img.onload = function (event) {
+							console.log('loaded: ', img.src);
+
+							setTimeout(function () {
+								console.log('play!');
+								filterCmp.Play();
+							}, 100);
+
+							img.onload = null;
+						}
+						console.log('msk:', msk.style.display);
+						console.log('img:', img.style.display);
+
+
+						setTimeout(function () {
+							console.log('APLY APPLY APPLY!');
+							filterCmp.Apply();
+						}, 1000);
+
+						setTimeout(function () {
+							msk.style.display = 'none';
+							img.style.display = 'block';
+							console.log('msk:', msk.style.display);
+							console.log('img:', img.style.display);
+
+							setTimeout(function () {
+								console.log('new image!');
+								img.src = imageUri;
+							}, 1000);
+						}, 2000);
+					}, 1000);
+	
+				} else {
+					img.style.display = 'none';
+					avatar.style.backgroundImage = 'url('+imageUri+')';
+				}
+			}
+		})();
+	</script>
 </div>
