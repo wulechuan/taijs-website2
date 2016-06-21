@@ -4,29 +4,28 @@
 	color: white;
 
 	background-color: #396d8b;
+	background-image: 
+		url(../../images/pages/index/splash-bg.jpg)
+	; /* ie9 doesn't support css gradient */
+	background-image: 
+		url(../../images/pages/index/splash-bg.jpg),
+		linear-gradient(to bottom, #396d8b, #887252)
+	;
+
+
+	/* a fall back bg image for ie8 */
 	-ms-filter: "\
 		progid:DXImageTransform.Microsoft.Gradient(startColorstr=#396d8b, endColorstr=#887252)\
+		progid:DXImageTransform.Microsoft.AlphaImageLoader(\
+			src='../../images/pages/index/splash-bg.jpg', sizingMethod='crop'\
+		)\
 	";
 	    filter: 
-		progid:DXImageTransform.Microsoft.Gradient(startColorstr=#396d8b, endColorstr=#887252)\
+		progid:DXImageTransform.Microsoft.Gradient(startColorstr=#396d8b, endColorstr=#887252)
+		progid:DXImageTransform.Microsoft.AlphaImageLoader(
+			src='../../images/pages/index/splash-bg.jpg', sizingMethod='crop'
+		)
 	);
-	}
-
-	#splash-block:before {
-		content: '';
-		display: block;
-		position: absolute;
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		background-image: 
-			url(../../images/pages/index/splash-bg.jpg)
-		; /* ie9 doesn't support css gradient */
-		background-image: 
-			url(../../images/pages/index/splash-bg.jpg),
-			linear-gradient(to bottom, #396d8b, #887252)
-		;
 	}
 
 	#splash-block > .width-wrap {
@@ -35,7 +34,7 @@
 		padding-bottom: 36px;
 	}
 
-	#splash-block > .ie-bg {
+	#splash-block > .ie-bg { /* for auto centered bg image */
 		width: 1920px;
 		margin-left: -960px;
 
@@ -102,9 +101,13 @@
 			}
 
 			#credit-abstract-pane > .ie-bg {
-				margin: 0;
+				display: block\0;
 				background-color: black;
 				filter: alpha(opacity=50);
+			}
+
+			:root #credit-abstract-pane > .ie-bg {
+				display: none\0;
 			}
 
 			#credit-abstract-pane .credit-spending-limitation,

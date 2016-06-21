@@ -116,20 +116,62 @@
 	}
 
 
+#page-sidebar-nav {
+	margin: 0;
+	padding: 0;
+	}
+
+	#page-sidebar-nav nav {
+		display: block; /* for IE9 */
+		position: relative; /* for IE9 */
+	}
+
+	#page-sidebar-nav .menu {
+		display: block;
+		position: relative;
+		visibility: visible;
+		opacity: 1;
+		border: 0;
+		padding: 0;
+		margin: 0;
+	}
+
+	#page-sidebar-nav .menu-item {
+		display: block;
+		position: relative;
+		border-width: 1px 0;
+		padding: 0;
+	}
+
+	#page-sidebar-nav .menu-item > a > label,
+	#page-sidebar-nav .menu-item > label {
+		box-sizing: border-box;
+		min-height: 43px;
+		line-height: 21px;
+		padding: 11px 45px;
+	}
+
+	#page-sidebar-nav .menu.level-2 > .menu-item > a > label,
+	#page-sidebar-nav .menu.level-2 > .menu-item > label {
+		padding-left: 75px;
+	}
+
+
+
 
 
 
 #page-row {
 	background-color: #f5f5f5;
-}
-.page-chief-part .content {
-	border-color: #ddd;
-	background-color: white;
-}
-.page-chief-part .content.has-sidebar .page-sidebar hr,
-.page-chief-part .content.has-sidebar:before {
-	border-color: #dbdeeb;
-}
-.page-chief-part .content.has-sidebar:before {
-	background-color: #ebedf5;
-}
+	}
+	.page-chief-part .content {
+		border-color: #ddd;
+		background-color: white;
+	}
+	.page-chief-part .content.has-sidebar .page-sidebar hr,
+	.page-chief-part .content.has-sidebar:before {
+		border-color: #dbdeeb;
+	}
+	.page-chief-part .content.has-sidebar:before {
+		background-color: #ebedf5;
+	}

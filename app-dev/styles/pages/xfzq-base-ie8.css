@@ -1,0 +1,4 @@
+#page-sidebar-nav .menu-item > a > label,
+#page-sidebar-nav .menu-item > label {
+	min-height: 21px;
+}

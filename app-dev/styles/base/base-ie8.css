@@ -621,33 +621,6 @@ button label {
 		margin-left: 3px;
 		z-index: 1!important;
 
-		/* -ms-filter: "\
-			progid:DXImageTransform.Microsoft.Glow(\
-				color=#ff3399ff,\
-				strength=4\
-			)\
-			progid:DXImageTransform.Microsoft.Matrix(\
-				M11=0.7071067811865474,\
-				M12=-0.7071067811865477,\
-				M21=0.7071067811865477,\
-				M22=0.7071067811865474,\
-				SizingMethod='auto expand'\
-			)\
-		";
-		filter: 
-			progid:DXImageTransform.Microsoft.Glow(
-				color=#ff3399ff,
-				strength=4
-			)
-			progid:DXImageTransform.Microsoft.Matrix(
-				M11=0.7071067811865474,
-				M12=-0.7071067811865477,
-				M21=0.7071067811865477,
-				M22=0.7071067811865474,
-				SizingMethod='auto expand'
-			)
-		; */
-
 		clip: rect(0px, 30px, 15px, 0px);
 	}
 
