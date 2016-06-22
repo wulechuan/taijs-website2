@@ -7,12 +7,13 @@
             margin: 0;
             color: white;
             background: #369;
-            font-family: 'verdana';
+            font-family: 'Segoe UI', 'Microsoft Yahei';
         }
 
         .description {
             margin: auto;
-            width: 400px;
+            width: 360px;
+            margin: 20px;
         }
 
         #avatar {
@@ -32,7 +33,6 @@
             font-size: 16px;
             font-weight: bold;
             padding: 10px;
-            height: 30px;
             background: black;
             color: white;
         }
@@ -42,15 +42,14 @@
             text-align: center;
             }
             #input-a .bar {
+                display: inline;
                 box-sizing: border-box;
-                display: block;
-                position: absolute;
                 border: 4px solid black;
                 width: 80px;
                 height: 260px;
 
                 top: 60px;
-                margin: 20px;
+                margin: 0 20px;
             }
             #input-a .bar.bar-1 {
                 background: red;
@@ -66,25 +65,24 @@
             }
 
         #input-b {
+            text-align: center;
             }
             #input-b img {
+                display: inline-block;
                 margin: 10px auto;
             }
             #input-b .bar {
                 box-sizing: border-box;
-                position: absolute;
-                top: 160px;
-                left: 10px;
-                right: 10px;
-                margin: auto;
-                width: 100%;
+                display: inline;
+                margin: 20px auto;
+                width: 95%;
                 padding: 10px;
                 background: #333;
                 color: white;
                 border: 3px solid lightblue;
 
-                font-size: 30px;
-                font-weight: bold;
+                font-size: 40px;
+                font-weight: lighter;
                 text-align:center;
             }
     </style>
@@ -140,23 +138,35 @@
     var logParagraph = document.getElementById('log-paragraph');
     var comFuncSelector = document.getElementById('compositor-function-selector');
     var avatar = document.getElementById('avatar');
-    var filter = avatar.filters.item('DXImageTransform.Microsoft.Compositor');
+
+    var filter;
+    if (avatar && avatar.filters) {
+        try {
+            filter = avatar.filters.item('DXImageTransform.Microsoft.Compositor');
+        } catch(e) {
+            writeLog('Fail to find filter');
+        }
+    }
 
     setTimeout(function () {
         comFuncSelector.focus();
     }, 20);
 
-    applyFilter();
+    swapInputAndTryToApplyFilter();
 
-    writeLog('Selector setup<br>');
+
+    writeLog('Selector setup works even after applying the filter<br>');
     setupSelector();
+
+
 
     function setupSelector() {
         if (!comFuncSelector) return false;
         comFuncSelector.onchange = function (event) {
-            var that = comFuncSelector;
-            avatar.filters.item('DXImageTransform.Microsoft.Compositor').Function = that.options(that.selectedIndex).value;
-            writeLog(filter.Function + '; ');
+            if (filter) {
+                filter.Function = comFuncSelector.options(comFuncSelector.selectedIndex).value;
+                writeLog(filter.Function + '; ');
+            }
         }
     }
 
@@ -164,16 +174,16 @@
         logParagraph.innerHTML += log;
     }
 
-    function applyFilter() {
-        var avatar = document.getElementById('avatar');
+    function swapInputAndTryToApplyFilter() {
         var inputBContainer = document.getElementById('input-b-container');
-        if (!avatar || !avatar.filters) {
-            return false;
-        }
 
         if (filter) {
             filter.Apply();
-            avatar.innerHTML = inputBContainer.innerHTML;
+        }
+
+        avatar.innerHTML = inputBContainer.innerHTML;
+
+        if (filter) {
             filter.Play();
             writeLog('played <br>')
         }
