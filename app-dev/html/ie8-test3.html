@@ -2,65 +2,38 @@
 <html>
 <head>
     <title>IE8 Compositor Filter</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
+    <link rel="stylesheet" href="../styles/base/base.min.css">
+    <link rel="stylesheet" href="../styles/base/theme-base.min.css">
     <style type="text/css">
-        body, select, button, option {
-            font-family: 'Segoe UI', 'Microsoft Yahei';
-        }
         body { 
             margin: 0;
             padding: 30px;
             color: white;
             background: #666;
+            font-family: 'Segoe UI', 'Microsoft Yahei';
             text-align: center;
-            overflow-y: scroll;
         }
-
-        button {
-            cursor: pointer;
-            width: 250px;
-            height: 40px;
-            color: #eee;
-            background-color: #000;
-            border-style: solid;
-            border-color: black;
-            }
-            button:hover {
-                background-color: #222;
-            }
-            button.disabled:hover,
-            button.disabled {
-                border-style: dashed;
-                color: #777;
-                border-color: #777;
-                background-color: transparent;
-            }
 
         .page {
             width: 600px;
             margin: auto;
         }
 
-        #control-block {
+        .control-block {
             margin: auto;
             text-align: center;
-            }
-            #control-block h1 {
-                position: relative;
-                font-size: 40px;
-                font-weight: lighter;
-            }
-            #button-toggle-author {
-                position: absolute;
-                right: 0;
-                width: 80px;
-                margin-top: 6px;
-            }
+        }
 
-        #description {
+        .control-block h1 {
+            font-size: 40px;
+            font-weight: lighter;
+        }
+        .description {
             margin: 20px 0;
-            /* text-align: left; */
+            text-align: left;
             }
-            #description em {
+            .description em {
                 text-align: center;
                 display: block;
                 padding: 5px;
@@ -69,22 +42,35 @@
                 color: #000;
                 background-color: #dd8;
             }
-        #author {
-            text-align: left;
-        }
-        #author p {
-            word-wrap: break-word;
-            margin: 15px 0;
-        }
-        #author a {
-            color: #8bf;
-        }
+            .description a {
+                color: #8bf;
+            }
 
-        #button-row {
+        .button-row {
             margin: 20px 0;
         }
 
-        #select-row {
+        #apply-button {
+            cursor: pointer;
+            width: 250px;
+            height: 40px;
+            color: #eee;
+            background-color: #000;
+            border-style: solid;
+            border-color: black;
+        }
+            #apply-button:hover {
+                background-color: #222;
+            }
+            #apply-button.disabled:hover,
+            #apply-button.disabled {
+                border-style: dashed;
+                color: #777;
+                border-color: #777;
+                background-color: transparent;
+            }
+
+        .select-row {
             text-align: left;
         }
 
@@ -186,35 +172,17 @@
 </head>
 <body>
 <div class="page">
-    <div id="control-block">
-        <h1>IE Compositor Filter <button id="button-toggle-author">Author</button></h1>
+    <div class="control-block">
+        <h1>IE Compositor Filter</h1>
 
-        <p id="description"><span>In order to make this compositor work, it seems that the doctype must be:</span><br>
-            <em>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;</em>
+        <p class="description"><span>In order to make this compositor work, it seems that the doctype must be:</span><br>
+            <em>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;</em><br>
+            <a href="mailto:wulechuan@live.com">wulechuan@live.com</a>
         </p>
 
-        <div id="author" style="display: none;">
-            <p>source: <br>
-                <a href="https://msdn.microsoft.com/en-us/library/ms532984(v=vs.85).aspx"
-                    target="_blank" 
-                    >https://msdn.microsoft.com/en-us/library/ms532984(v=vs.85).aspx</a>
-            </p>
+        <p class="button-row"><button id="apply-button">Apply Compositor Filter</button></p>
 
-            <p>original: <br>
-                <a href="http://samples.msdn.microsoft.com/workshop/samples/author/filter/Compositor.htm"
-                    target="_blank" 
-                    >http://samples.msdn.microsoft.com/workshop/samples/author/filter/Compositor.htm</a>
-            </p>
-
-            <p>modified by: <br>
-                <a href="mailto:wulechuan@live.com"
-                    >wulechuan@live.com</a>
-            </p>
-        </div>
-
-        <p id="button-row"><button id="button-apply-filter">Apply Compositor Filter</button></p>
-
-        <p id="select-row">
+        <p class="select-row">
             Choose compositor function: <br>
             <select id="compositor-function-selector">
                 <option value=0>0: Clear both sets of input.</option>
@@ -261,9 +229,7 @@
 
 <script type="text/javascript">
     var logParagraph = document.getElementById('log-paragraph');
-    var buttonToggleAuthor = document.getElementById('button-toggle-author');
-    var buttonApplication = document.getElementById('button-apply-filter');
-    var authorBlock = document.getElementById('author');
+    var buttonApplication = document.getElementById('apply-button');
     var comFuncSelector = document.getElementById('compositor-function-selector');
     var avatar = document.getElementById('avatar');
     var inputA = document.getElementById('input-a');
@@ -272,15 +238,6 @@
     inputA.style.display = 'block';
     inputB.style.display = 'none';
 
-    buttonToggleAuthor.onclick = function (event) {
-        if (authorBlock) {
-            if (authorBlock.style.display !== 'none') {
-                authorBlock.style.display = 'none';
-            } else {
-                authorBlock.style.display = '';
-            }
-        }
-    }
 
     buttonApplication.onclick = function (event) {
         buttonApplication.disabled = true;
