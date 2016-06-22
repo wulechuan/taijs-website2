@@ -3,13 +3,17 @@
 
 	color: white;
 
-	background-color: #6b76ad;
-	-ms-filter: "\
-		progid:DXImageTransform.Microsoft.Gradient(startColorstr=#6b76ad, endColorstr=#9d99b9)\
-	";
-	    filter: 
-		progid:DXImageTransform.Microsoft.Gradient(startColorstr=#6b76ad, endColorstr=#9d99b9)
-	;
+	}
+
+	#user-avatar-iframe-bg,
+	#user-info-bar {
+		background-color: #6b76ad; 
+		-ms-filter: "\
+			progid:DXImageTransform.Microsoft.Gradient(startColorstr=#6b76ad, endColorstr=#9d99b9)\
+		";
+		    filter: 
+			progid:DXImageTransform.Microsoft.Gradient(startColorstr=#6b76ad, endColorstr=#9d99b9)
+		;
 	}
 
 	#user-info-bar:before {
@@ -29,11 +33,13 @@
 		;
 	}
 
+	#user-avatar-iframe-bg,
 	#user-info-bar > .width-wrap {
-		padding: 11px 0;
-		height: 84px;
+		height: 106px;
+		padding: 0;
 	}
 
+	#user-avatar-iframe-bg > .ie-bg,
 	#user-info-bar > .ie-bg {
 		width: 1920px;
 		margin-left: -960px;
@@ -51,9 +57,11 @@
 		;
 	}
 
+#user-avatar,
 #user-info-bar-user-avatar {
 	box-sizing: border-box;
-	position: relative;
+	position: absolute;
+	top: 11px;
 	width: 84px;
 	height: 84px;
 	background-repeat: no-repeat;
@@ -64,10 +72,32 @@
 	overflow: hidden;
     filter:  progid:DXImageTransform.Microsoft.Iris(IrisStyle=circle, Motion=out);
 	}
-    
-    #user-info-bar-user-avatar img {
+    /* #user-info-bar-user-avatar img {
         position: absolute;
-    }
+    } */
+
+	#user-info-bar-user-avatar iframe {
+		border: 0;
+		margin: -13px 0 0 -2px;
+	}
+
+	#user-avatar-iframe-bg,
+	#user-avatar {
+		position: absolute;
+		left: 0;
+	}
+	#user-avatar-iframe-bg {
+		top: 0;
+		overflow: hidden;
+		width: 1200px;
+	}
+	#user-avatar-iframe-bg > .ie-bg {
+		display: block!important;
+		left: 50%;
+		height: 100%;
+		margin-left: -960.45px;
+	}
+
 
 
 
