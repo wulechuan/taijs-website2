@@ -2,60 +2,156 @@
 	<div class="ie-bg"></div>
 	<div class="width-wrap">
 		<div class="user-avatar-block">
-			<div id="user-info-bar-user-avatar">
-				<div class="ie-compositor-mask">&#xe68c;</div>
-				<div class="ie-image"><img src="../images/_temp/fake-avatar-2111.jpg"></div>
-			</div>
+			<div id="user-info-bar-user-avatar"></div>
 		</div>
 		<div class="user-info-block"></div>
 	</div>
 	<script type="text/javascript">
-		(function () {
-			var avatar = document.getElementById('user-info-bar-user-avatar');
-			var imgParent = $(avatar).find('.ie-image')[0];
-			var img = $(avatar).find('img')[0];
-			var mask = $(avatar).find('.ie-compositor-mask')[0];
+	(function () {
+		setTimeout(function () {
+	        var avatar = new AvatarController(document.getElementById('user-info-bar-user-avatar'), {
+	            disableOldIEMask: false
+	        });
+	        avatar.update('../images/_temp/fake-avatar-1.png');
+		}, 1000);
 
-			mask.style.display = 'block';
-			imgParent.style.display = 'none';
+        function AvatarController(avatar, options) {
+            if (!avatar) return undefined;
 
-			setTimeout(function () {
-				updateUserAvatar('../images/_temp/fake-avatar-2.jpg');
-			}, 2000);
+            options = options || {};
 
-			function updateUserAvatar(imageUri) {
+            var filtersEnabled = typeof avatar.filters === 'object' && !options.disableOldIEMask;
+            var filterCompositor, avatarMask, avatarImage;
 
-				if (!avatar || !imgParent || !img || !mask) return false;
-
-
-			    var filter;
-			    if (avatar && avatar.filters) {
-			        try {
-			            filter = avatar.filters.item('DXImageTransform.Microsoft.Compositor');
-			        } catch(e) {
-			            console.error('Fail to find filter! <br>');
-			        }
-			    }
+            init.call(this);
 
 
-				if (filter) {
-					filter.Apply();
+            this.update = function (imageUri) {
+                update.call(this, imageUri);
+            }
 
-					mask.style.display = 'none';
-					imgParent.style.display = 'block';
+            function init() {
+                avatarMask  = $(avatar).find('.ie-compositor-mask')[0];
+                avatarImage = $(avatar).find('img')[0];
 
-					img.onload = function (event) {
-						console.log('loaded. filter: ', typeof filter);
-						filter.Play();
-					}
+                if (!filtersEnabled) {
+                    // we are going to use background image
+                    if (avatarMask) avatarMask.style.display = 'none';
+                    if (avatarImage) avatarImage.style.display = 'none';
 
-					img.src = imageUri;
-				} else {
-					mask.style.display = 'none';
-					imgParent.style.display = 'none';
-					avatar.style.backgroundImage = 'url('+imageUri+')';
-				}
-			}
-		})();
+                    return;
+                }
+
+                if (!avatarMask) {
+                    // console.log('Creating avatarMask...');
+                    avatarMask = document.createElement('DIV');
+                    avatarMask.className = 'ie-compositor-mask';
+                    avatarMask.innerHTML = '&#xe68c;';
+                    avatar.appendChild(avatarMask);
+                }
+
+                if (!avatarImage) {
+                    // console.log('Creating avatarImage...');
+                    avatarImage = document.createElement('IMG');
+                    avatar.appendChild(avatarImage);
+                }
+
+                try {
+                    filterCompositor = avatar.filters.item('DXImageTransform.Microsoft.Compositor');
+                } catch(e) {
+                    avatar.style.filter = 'progid:DXImageTransform.Microsoft.Compositor(Function=21)';
+                    filterCompositor = avatar.filters.item('DXImageTransform.Microsoft.Compositor');
+                }
+            }
+
+            function update(imageUri) {
+                if (!filtersEnabled) {
+                    avatar.style.backgroundImage = 'url('+imageUri+')';
+                    return;
+                }
+
+                if (avatarImage.src === imageUri) return;
+
+                avatarImage.style.width      = '';
+                avatarImage.style.height     = '';
+                avatarImage.style.left = '';
+                avatarImage.style.top  = '';
+
+                avatarImage.onload = function (event) {
+                    var imgDimesion = getImageNaturalDimention(avatarImage);
+                    var nW = imgDimesion.naturalWidth;
+                    var nH = imgDimesion.naturalHeight;
+                    var isLandscape = nW >= nH;
+
+                    var tSize = $(avatar).width(); // target size
+                    var tW = tSize; // target width
+                    var tH = tSize; // target height
+
+                    var x = 0;
+                    var y = 0;
+
+                    if (isLandscape) {
+                        tW = tH * nW / nH;
+                        x = (tW - tSize) * -0.5 + 'px';
+                        y = '0';
+                    } else {
+                        tH = tW * nH / nW;
+                        x = '0';
+                        y = (tH - tSize) * -0.5 + 'px';;
+                    }
+
+                    // console.log(
+                    //     '\navatarImage dim: ', nW, ' * ', nH,
+                    //     '\ntarget dim: ', tW, ' * ', tH,
+                    //     '\noffset: ', 'x = ', x, '; y = ', y,
+                    //     '\n'
+                    // );
+
+                    avatarImage.style.width  = tW + 'px';
+                    avatarImage.style.height = tH + 'px';
+                    avatarImage.style.left = x;
+                    avatarImage.style.top  = y;
+
+                    applyAvatarMaskForOldIE();
+                };
+
+                avatarImage.src = imageUri;
+
+                return;
+            }
+
+            function getImageNaturalDimention(img) {
+                if (!img) {
+                    return {
+                        naturalWidth: NaN,
+                        naturalHeight: NaN
+                    };
+                }
+
+                if (typeof img.naturalWidth === 'number') {
+                    return {
+                        naturalWidth:  img.naturalWidth,
+                        naturalHeight: img.naturalHeight
+                    };
+                }
+
+                return {
+                    naturalWidth:  $(img).width(),
+                    naturalHeight: $(img).height()
+                };
+            }
+
+            function applyAvatarMaskForOldIE(imageUri) {
+                avatarMask.style.display = 'block';
+                avatarImage.style.display = 'none';
+                filterCompositor.Apply();
+
+                avatarMask.style.display = 'none';
+                avatarImage.style.display = 'block';
+                filterCompositor.Play();
+                filterCompositor.Enabled = 'true';
+            }
+        }
+	})();
 	</script>
 </div>

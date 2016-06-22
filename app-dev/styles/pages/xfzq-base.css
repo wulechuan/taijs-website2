@@ -8,8 +8,8 @@
 		progid:DXImageTransform.Microsoft.Gradient(startColorstr=#6b76ad, endColorstr=#9d99b9)\
 	";
 	    filter: 
-		progid:DXImageTransform.Microsoft.Gradient(startColorstr=#6b76ad, endColorstr=#9d99b9)\
-	);
+		progid:DXImageTransform.Microsoft.Gradient(startColorstr=#6b76ad, endColorstr=#9d99b9)
+	;
 	}
 
 	#user-info-bar:before {
@@ -62,38 +62,24 @@
 	background-size: cover;
 	border-radius: 1000px;
 	overflow: hidden;
-	-ms-filter: "\
-		progid:DXImageTransform.Microsoft.Compositor(Function=21)\
-	";
-    /* filter: 
-    	progid:DXImageTransform.Microsoft.Compositor(Function=21)
-    ; */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Compositor(function=21)";
+        filter:  progid:DXImageTransform.Microsoft.Compositor(function=21);
 	}
 	#user-info-bar-user-avatar .ie-compositor-mask {
-		position: absolute;
+        font-family: 'iconfont'!important;
+        position: absolute;
+        left: 0;
         top: -8px;
         text-indent: 0;
         font-size: 84px;
         line-height: 90px;
-		text-align: center;
-		font-family: 'iconfont'!important;
-		color: lightgray;
-	}
-	#user-info-bar-user-avatar .ie-image {
-		position: absolute;
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		margin: auto;
-		width: 100%;
-		height: 100%;
-		background-color: pink;
-	}
-	#user-info-bar-user-avatar img {
-		width: 100%;
-		height: 100%;
-	}
+        text-align: center;
+        color: lightgray;
+    }
+    
+    #user-info-bar-user-avatar img {
+        position: absolute;
+    }
 
 
 
