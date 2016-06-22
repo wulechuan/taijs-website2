@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title>IE8 Compositor Filter</title>
+    <style type="text/css">
+        body { 
+            margin: 0;
+            color: white;
+            background: #369;
+            font-family: 'verdana';
+        }
+
+        .description {
+            margin: auto;
+            width: 400px;
+        }
+
+        #avatar {
+            position: relative;
+            padding: 15px;
+            margin: 20px auto;
+            width: 400px;
+            height: 400px;
+            border: 3px solid black;
+        }
+
+        #input-b h1,
+        #input-a h1 {
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px;
+            height: 30px;
+            background: black;
+            color: white;
+        }
+
+        #input-a {
+            position: relative;
+            text-align: center;
+            }
+            #input-a .bar {
+                display: inline-block;
+                margin: 20px;
+                border: 2px solid black;
+                width: 80px;
+                height: 260px;
+            }
+            #input-a .bar.bar-1 {
+                background:red;
+            }
+            #input-a .bar.bar-2 {
+                background:green;
+            }
+            #input-a .bar.bar-3 {
+                background:blue;
+            }
+
+        #input-b {
+            }
+            #input-b img {
+                margin: 10px auto;
+            }
+            #input-b .bar {
+                position: absolute;
+                top: 160px;
+                left: 10px;
+                right: 10px;
+                margin: auto;
+                width: 100%;
+                padding: 10px;
+                background: #333;
+                color: white;
+                border: 3px solid lightblue;
+
+                font-size: 30px;
+                font-weight: bold;
+                text-align:center;
+            }
+    </style>
+</head>
+<body>
+<div class="description">
+    <h1>Compositor Function:</h1>
+    <select id="comFuncSelector" onchange="avatar.filters.item(
+        'DXImageTransform.Microsoft.Compositor').Function = 
+        this.options(selectedIndex).value;">
+        <option value=0>0: Clear both sets of input.</option>
+        <option value=1>1: Show the minimum color from both sets of input.</option>
+        <option value=2>2: Show the maximum color from both sets of input.</option>
+        <option value=3>3: Show Input A only.</option>
+        <option value=4>4: Show Input A over Input B.</option>
+        <option value=5>5: Only show Input A inside the Input B render area.</option>
+        <option value=6>6: Only show Input A outside the Input B render area.</option>
+        <option value=7>7: Only show Input A and B inside Input B render area.</option>
+        <option value=8>8: Show Input A minus Input B.</option>
+        <option value=9>9: Show Input A plus Input B.</option>
+        <option value=10>10: Show Input A and clear wherever the input intersects.</option>
+        <option value=19>19: Show Input B only.</option>
+        <option value=20 selected>20: Show Input B over Input A.</option>
+        <option value=21>21: Only show Input B inside the Input A render area.</option>
+        <option value=22>22: Only show Input B outside the Input A render area.</option>
+        <option value=23>23: Only show Input A and B inside the Input A render area.</option>
+        <option value=24>24: Show Input B minus Input A.</option>
+        <option value=25>25: Show Input B plus Input A.</option>
+    </select>
+</div> 
+
+<div id="avatar" style="filter:progid:DXImageTransform.Microsoft.Compositor(function=20, duration=7);">
+    <div id="input-a">
+        <h1>Input A</h1> 
+        <div class="bar bar-1"></div> 
+        <div class="bar bar-2"></div> 
+        <div class="bar bar-3"></div>
+    </div>
+</div> 
+
+<div id="input-b-container" style="display:none">
+    <div id="input-b">
+        <h1>Input B</h1>
+        <img src="http://samples.msdn.microsoft.com/workshop/samples/author/filter/banner.gif">
+        <div class="bar bar-1">THIS IS TEXT</div>
+    </div> 
+</div> 
+
+<script type="text/javascript">
+    setTimeout(function () {
+        comFuncSelector.focus();
+    }, 1);
+    applyFilter();
+
+    function applyFilter() {
+        var avatar = document.getElementById('avatar');
+        var inputBContainer = document.getElementById('input-b-container');
+        if (!avatar || !avatar.filters) {
+            return false;
+        }
+
+        var filter = avatar.filters.item('DXImageTransform.Microsoft.Compositor');
+        if (filter) {
+            filter.Apply();
+            avatar.innerHTML = inputBContainer.innerHTML;
+            filter.Play();
+        }
+    }
+</script>
+</body>
+</html>

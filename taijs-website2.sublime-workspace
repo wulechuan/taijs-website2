@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"re",
+				"relative"
+			],
+			[
+				"a",
+				"absolute"
+			],
+			[
 				"filter",
 				"filterCmp"
 			],
@@ -344,10 +352,6 @@
 				"font-size"
 			],
 			[
-				"re",
-				"return"
-			],
-			[
 				"borderc",
 				"border-color"
 			],
@@ -366,10 +370,6 @@
 			[
 				"back",
 				"background-color"
-			],
-			[
-				"a",
-				"app-dist"
 			],
 			[
 				"htm",
@@ -424,6 +424,17 @@
 			"settings":
 			{
 				"buffer_size": 102,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\">\n<html>\n\n<head><title>Compositor Filter</title>\n\n\n<style type=\"text/css\">\n    body { \n        position: relative;\n        margin:0;\n        background:#369;\n        font-family:verdana;\n        font-size: 16px;\n    }\n\n    .description {\n        margin: auto;\n        position: absolute;\n        width: 400px;\n        height: 400px;\n        left: 0;\n        right: 0;\n        top: 0;\n        bottom: 0;\n    }\n\n    #avatar {\n        text-align:	    center;\n        padding-top:    15px;\n        margin-bottom:  20px;\n\n        position:absolute; top:192px; left:10px; width:365px; height:275px; border:3px solid black;\n    }\n</style>\n\n</head>\n<body>\n<div class=\"description\">\n    <h1>Compositor Function:</h1>\n    <select onchange=\"avatar.filters.item(\n        'DXImageTransform.Microsoft.Compositor').Function = \n        this.options(selectedIndex).value;\">\n        <option value=0>0: Clear both sets of input.</option>\n        <option value=1>1: Show the minimum color from both sets of input.</option>\n        <option value=2>2: Show the maximum color from both sets of input.</option>\n        <option value=3>3: Show Input A only.</option>\n        <option value=4>4: Show Input A over Input B.</option>\n        <option value=5>5: Only show Input A inside the Input B render area.</option>\n        <option value=6>6: Only show Input A outside the Input B render area.</option>\n        <option value=7>7: Only show Input A and B inside Input B render area.</option>\n        <option value=8>8: Show Input A minus Input B.</option>\n        <option value=9>9: Show Input A plus Input B.</option>\n        <option value=10>10: Show Input A and clear wherever the input intersects.</option>\n        <option value=19>19: Show Input B only.</option>\n        <option value=20 selected>20: Show Input B over Input A.</option>\n        <option value=21>21: Only show Input B inside the Input A render area.</option>\n        <option value=22>22: Only show Input B outside the Input A render area.</option>\n        <option value=23>23: Only show Input A and B inside the Input A render area.</option>\n        <option value=24>24: Show Input B minus Input A.</option>\n        <option value=25>25: Show Input B plus Input A.</option>\n    </select>\n</div> \n\n\n<div id=\"avatar\" style=\"filter:progid:DXImageTransform.Microsoft.Compositor(function=20, duration=7);\">\n    <div style=\"position:absolute; top:0; left:0; width:100%; height:30; background:black; color:white; font-size: 13pt; padding:5px; font-weight:bold \">Input A</div> \n    <div style=\"position:absolute; top:50; left:40; width:80; height:200; background:blue; border:2px solid black;\"></div> \n    <div style=\"position:absolute; top:50; left:140; width:80; height:200; background:red; border:2px solid black;\"></div> \n    <div style=\"position:absolute; top:50; left:240; width:80; height:200; background:green; border:2px solid black;\"></div> \n</div> \n\n\n<div id=\"hiddendiv\" style=\"display:none\">\n    <div style=\"position:absolute; top:80; left:20; width:320; height:100; background:#666666; color:white; font-size:32pt; border:3px solid black\">\n        <div style=\"position:absolute; top:0; left:0; width:100%; height:30; background:black; color:white; font-size: 13pt; padding:5px; font-weight:bold \">Input B</div>\n        <IMG SRC=\"http://samples.msdn.microsoft.com/workshop/samples/author/filter/banner.gif\" style=\"position:absolute; top:30; left:0;\">\n        <div style=\"position:absolute; top:90; left:0; font-weight:bold; font-size:30pt; width:100%; text-align:center\">THIS IS TEXT</div> \n    </div>\n</div> \n\n\n<SCRIPT type=\"text/javascript\">\nOnLoad();\nfunction OnLoad()\n{\n   avatar.filters.item(0).Apply();\n   avatar.innerHTML = hiddendiv.innerHTML;\n   avatar.filters.item(0).Play();\n}\n</script>\n</body>\n</html>\n",
+			"file": "app-dev/html/ie8-test.html",
+			"file_size": 3955,
+			"file_write_time": 131110330210133914,
+			"settings":
+			{
+				"buffer_size": 3823,
 				"line_ending": "Windows"
 			}
 		}
@@ -497,16 +508,20 @@
 	],
 	"file_history":
 	[
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/sample-page-2.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/index.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/sample-page-list.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/sample-snippets.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-index.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-head-before-title.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/index.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-index.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-sidebar-0.html",
 		"/D/p/dev/taijs/taijs-website2/gulpfile.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-header.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-head-after-title.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-base.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/index.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8.theme.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-footer.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-wrap-end.html",
@@ -529,9 +544,6 @@
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-xfzq-page-chief-content-wrap-begin.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-xfzq-page-body-wrap-end.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-xfzq-page-body-wrap-begin.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/sample-page-list.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/sample-page-2.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/sample-snippets.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
 		"/C/Users/wulechuan/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/D/Users/wulechuan/Desktop/OneDrive/事业/canvas-ripples.js",
@@ -562,7 +574,6 @@
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-popup-layers-wrap-begin.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/sample-test-url-overriding.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-body-wrapper-start.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-head-before-title.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-body-start.html",
 		"/D/p/dev/taijs/taijs-website2/app-dist/index.html",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/styles/base/layout.css",
@@ -628,7 +639,7 @@
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
@@ -646,6 +657,42 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"description",
+			"bar",
+			"avatar",
+			"teststyle1",
+			"D1",
+			"teststyle1",
+			"thumb1",
+			"teststyle2",
+			"thumb2",
+			"desbar",
+			"funcsel",
+			"b",
+			"B",
+			"title",
+			"pre",
+			"<a",
+			"{",
+			"\n    {",
+			"ID=",
+			"select",
+			"SELECT",
+			"teststyle1",
+			"TITLE",
+			"STYLE>",
+			"SCRIPT>",
+			"HTML>",
+			"HTML",
+			"BODY",
+			"Bdy",
+			"OPTION",
+			"CLASS=",
+			"STYLE=",
+			"STYLE",
+			"DIV",
+			"teststyle1",
+			"bar",
 			"user-info-bar-user-avatar",
 			"typeof",
 			"play",
@@ -737,43 +784,7 @@
 			"e6e6e6",
 			"active",
 			"e6e6e6",
-			"search",
-			"block",
-			"deco",
-			"sidebar",
-			"table-cell",
-			"inline-block",
-			"red",
-			"relative",
-			"table-cell",
-			"auto",
-			"inline",
-			"color",
-			"bread",
-			"xfzqPageChiefPartWra",
-			"Content",
-			"chief",
-			"Chief",
-			"ChiefContent",
-			"underline",
-			"link",
-			"1rem",
-			"jpg",
-			"index/splash-bg",
-			"breadcrumbs",
-			"*[role=\"breadcrumbs\"]",
-			"887252",
-			"splash-block",
-			"396d8b",
-			"module-xfzq-page-wrap-end",
-			"_getHtmlSnippetString",
-			"appXFZQ",
-			"PageBody",
-			"body",
-			"appXFZQChiefContent",
-			" -->",
-			"-->",
-			" -->"
+			"search"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -793,7 +804,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -819,10 +830,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2762.0,
+						"translation.y": 3024.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -847,10 +858,10 @@
 							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 189.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -877,10 +888,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1510.0,
+						"translation.y": 1652.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -909,7 +920,37 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app-dev/html/ie8-test.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3823,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3662,
+								3662
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1104.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -917,7 +958,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 29.0
+		"height": 31.0
 	},
 	"input":
 	{
@@ -954,7 +995,7 @@
 	"project": "taijs-website2.sublime-project",
 	"replace":
 	{
-		"height": 54.0
+		"height": 58.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -963,6 +1004,22 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"sample",
+				"app-dev\\sample-snippets.html"
+			],
+			[
+				"indexht",
+				"app-dev\\html\\xfzq-index.html"
+			],
+			[
+				"index",
+				"app-dev\\index.html"
+			],
+			[
+				"before",
+				"app-dev\\html-snippets\\tag-head-before-title.html"
+			],
 			[
 				"indexcss",
 				"app-dev\\styles\\pages\\index.css"
@@ -978,10 +1035,6 @@
 			[
 				"base",
 				"app-dev\\styles\\base\\base.css"
-			],
-			[
-				"index",
-				"app-dev\\index.html"
 			],
 			[
 				"it",
