@@ -127,22 +127,23 @@ label.deco-input {
 
 			background-color: black!important;
 			-ms-filter: "\
-				progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.2)\
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=3, MakeShadow=true, ShadowOpacity=0.2)\
 			";
 			filter: 
-				progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.2);
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=3, MakeShadow=true, ShadowOpacity=0.2)
+			;
 			zoom: 1;
 		}
 		.shadow-large-and-blur .ie-shadow .ie-shadow-matte {
 			-ms-filter: "\
-				progid:DXImageTransform.Microsoft.Blur(PixelRadius=12,MakeShadow=true,ShadowOpacity=1)\
-				progid:DXImageTransform.Microsoft.Blur(PixelRadius=8, MakeShadow=true,ShadowOpacity=1)\
-				progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=true,ShadowOpacity=0.32)\
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=12, MakeShadow=true, ShadowOpacity=1)\
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=8,  MakeShadow=true, ShadowOpacity=1)\
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=4,  MakeShadow=true, ShadowOpacity=0.32)\
 			";
 			filter: 
-				progid:DXImageTransform.Microsoft.Blur(PixelRadius=12,MakeShadow=true,ShadowOpacity=1)
-				progid:DXImageTransform.Microsoft.Blur(PixelRadius=8, MakeShadow=true,ShadowOpacity=1)
-				progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=true,ShadowOpacity=0.32)
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=12, MakeShadow=true, ShadowOpacity=1)
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=8,  MakeShadow=true, ShadowOpacity=1)
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=4,  MakeShadow=true, ShadowOpacity=0.32)
 			;
 			left: -34px;
 			top: -34px;
@@ -285,10 +286,14 @@ label.deco-input {
 		.rounded-corners > .ie-bg      .corner-4 {
 			left: -13.31px;
 		}
-		.rounded-corners.sharp-corner-tl > .ie-bg .corner-1,
-		.rounded-corners.sharp-corner-1  > .ie-bg .corner-1,
-		.rounded-corners.sharp-corner-bl > .ie-bg .corner-4,
-		.rounded-corners.sharp-corner-4  > .ie-bg .corner-4 {
+		.rounded-corners.sharp-corner-tl > .ie-borders .corner-1,
+		.rounded-corners.sharp-corner-1  > .ie-borders .corner-1,
+		.rounded-corners.sharp-corner-bl > .ie-borders .corner-4,
+		.rounded-corners.sharp-corner-4  > .ie-borders .corner-4,
+		.rounded-corners.sharp-corner-tl > .ie-bg      .corner-1,
+		.rounded-corners.sharp-corner-1  > .ie-bg      .corner-1,
+		.rounded-corners.sharp-corner-bl > .ie-bg      .corner-4,
+		.rounded-corners.sharp-corner-4  > .ie-bg      .corner-4 {
 			left: -12.96px;
 		}
 		.rounded-corners > .ie-borders .corner-2,
@@ -297,11 +302,15 @@ label.deco-input {
 		.rounded-corners > .ie-bg      .corner-3 {
 			right: -12.96px;
 		}
-		.rounded-corners.sharp-corner-tr > .ie-bg .corner-2,
-		.rounded-corners.sharp-corner-2  > .ie-bg .corner-2,
-		.rounded-corners.sharp-corner-br > .ie-bg .corner-3,
-		.rounded-corners.sharp-corner-3  > .ie-bg .corner-3 {
-			right: -11.96px;
+		.rounded-corners.sharp-corner-tr > .ie-borders .corner-2,
+		.rounded-corners.sharp-corner-2  > .ie-borders .corner-2,
+		.rounded-corners.sharp-corner-br > .ie-borders .corner-3,
+		.rounded-corners.sharp-corner-3  > .ie-borders .corner-3,
+		.rounded-corners.sharp-corner-tr > .ie-bg      .corner-2,
+		.rounded-corners.sharp-corner-2  > .ie-bg      .corner-2,
+		.rounded-corners.sharp-corner-br > .ie-bg      .corner-3,
+		.rounded-corners.sharp-corner-3  > .ie-bg      .corner-3 {
+			right: -12.87px;
 		}
 		.rounded-corners > .ie-borders .corner-3,
 		.rounded-corners > .ie-borders .corner-4,
@@ -399,35 +408,32 @@ label.deco-input {
 		.rounded-corners.r12px > .ie-bg      [class|="corner"]:before { content: '\e68a'; }
 		.rounded-corners.r15px > .ie-bg      [class|="corner"]:before { content: '\e68b'; }
 
-		.rounded-corners.sharp-corner-tl > .ie-borders .corner-1:before,
-		.rounded-corners.sharp-corner-1  > .ie-borders .corner-1:before,
+		.sharp-corner-tl > .ie-borders .corner-1:before,
+		.sharp-corner-1  > .ie-borders .corner-1:before,
 
-		.rounded-corners.sharp-corner-tr > .ie-borders .corner-2:before,
-		.rounded-corners.sharp-corner-2  > .ie-borders .corner-2:before,
+		.sharp-corner-tr > .ie-borders .corner-2:before,
+		.sharp-corner-2  > .ie-borders .corner-2:before,
 
-		.rounded-corners.sharp-corner-br > .ie-borders .corner-3:before,
-		.rounded-corners.sharp-corner-3  > .ie-borders .corner-3:before,
+		.sharp-corner-br > .ie-borders .corner-3:before,
+		.sharp-corner-3  > .ie-borders .corner-3:before,
 
-		.rounded-corners.sharp-corner-bl > .ie-borders .corner-4:before,
-		.rounded-corners.sharp-corner-4  > .ie-borders .corner-4:before {
+		.sharp-corner-bl > .ie-borders .corner-4:before,
+		.sharp-corner-4  > .ie-borders .corner-4:before {
 			content: '\e660'!important;
 		}
 
-		.rounded-corners.sharp-corner-tl > .ie-bg      .corner-1:before,
-		.rounded-corners.sharp-corner-1  > .ie-bg      .corner-1:before,
+		.sharp-corner-tl > .ie-bg      .corner-1:before,
+		.sharp-corner-1  > .ie-bg      .corner-1:before,
 
-		.rounded-corners.sharp-corner-tr > .ie-bg      .corner-2:before,
-		.rounded-corners.sharp-corner-2  > .ie-bg      .corner-2:before,
+		.sharp-corner-tr > .ie-bg      .corner-2:before,
+		.sharp-corner-2  > .ie-bg      .corner-2:before,
 
-		.rounded-corners.sharp-corner-br > .ie-bg      .corner-3:before,
-		.rounded-corners.sharp-corner-3  > .ie-bg      .corner-3:before,
+		.sharp-corner-br > .ie-bg      .corner-3:before,
+		.sharp-corner-3  > .ie-bg      .corner-3:before,
 
-		.rounded-corners.sharp-corner-bl > .ie-bg      .corner-4:before,
-		.rounded-corners.sharp-corner-4  > .ie-bg      .corner-4:before {
-			content: '\e679'!important;
-			font-size: 100px;
-			line-height: 50px;
-			text-indent: -40px;
+		.sharp-corner-bl > .ie-bg      .corner-4:before,
+		.sharp-corner-4  > .ie-bg      .corner-4:before {
+			content: '\e680'!important;
 		}
 
 
