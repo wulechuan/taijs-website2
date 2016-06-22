@@ -5,6 +5,7 @@
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
     <link rel="stylesheet" href="../styles/base/base.min.css">
     <link rel="stylesheet" href="../styles/base/theme-base.min.css">
+    <script src="../scripts/vendors/jquery-1.12.4.min.js"></script>
     <style type="text/css">
         body { 
             padding: 30px 0;
@@ -33,7 +34,7 @@
                 filter:  progid:DXImageTransform.Microsoft.Compositor(function=21);
         }
 
-        #ie-compositor-mask {
+        .ie-compositor-mask {
             font-family: 'iconfont'!important;
             position: absolute;
             left: 0;
@@ -44,46 +45,47 @@
             text-align: center;
             color: lightgreen;
         }
-        #ie-image {
+        .ie-image {
             position: absolute;
             left: 0;
             right: 0;
             top: 0;
             bottom: 0;
             margin: auto;
-            width: 100%;
-            height: 100%;
+            width: 84px;
+            height: 84px;
             background-color: white;
+            overflow: hidden;
         }
         #user-info-bar-user-avatar img {
-            width: 100%;
-            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
         }
     </style>
 </head>
 <body>
 <div class="page">
     <div id="user-info-bar-user-avatar" style="">
-        <div id="ie-compositor-mask">&#xe68c;</div>
-        <div id="ie-image"><img id="avatar-image"></div>
+        <div class="ie-compositor-mask">&#xe68c;</div>
+        <div class="ie-image"><img></div>
     </div>
 </div>
 
 <script type="text/javascript">
     (function () {
         var avatar = document.getElementById('user-info-bar-user-avatar');
-        var avatarMask = document.getElementById('ie-compositor-mask');
-        var imgParent = document.getElementById('ie-image');
-        var img =  document.getElementById('avatar-image');
+        var avatarMask = $(avatar).find('.ie-compositor-mask')[0];
+        var imgParent = $(avatar).find('.ie-image')[0];
+        var img = $(avatar).find('img')[0];
 
-        var comFilter;
+        var filterCompositor;
         if (avatar && avatar.filters) {
             try {
-                comFilter = avatar.filters.item('DXImageTransform.Microsoft.Compositor');
+                filterCompositor = avatar.filters.item('DXImageTransform.Microsoft.Compositor');
             } catch(e) {
             }
         }
-
 
         setTimeout(function () {
             applyAvatarUri('../images/_temp/fake-avatar-2.jpg');
@@ -94,10 +96,12 @@
         }, 4000);
 
 
+
+
         function applyAvatarUri(imageUri) {
             if (!avatar) return false;
 
-            if (!comFilter || !avatarMask || !img || !imgParent) {
+            if (!filterCompositor || !avatarMask || !imgParent || !img) {
                 avatar.style.backgroundImage = 'url('+imageUri+')';
 
                 if (avatarMask) avatarMask.style.display = 'none';
@@ -109,14 +113,65 @@
             if (img.src === imageUri) return true;
 
             setTimeout(function () {
+                img.style.width  = '';
+                img.style.height = '';
+                img.style.top  = '';
+                img.style.left = '';
+
                 img.src = imageUri;
             }, 0);
 
             img.onload = function (event) {
+                var imgDimesion = getImageNaturalDimention(img);
+                console.log('img dim: ', imgDimesion.naturalWidth, imgDimesion.naturalHeight);
+                var isLandscape = imgDimesion.naturalWidth >= imgDimesion.naturalHeight;
+
+
+                var targetLength = $(avatar).width();
+                var targetW = targetLength;
+                var targetH = targetLength;
+
+                console.log('targetLength: ', targetLength);
+
+                if (isLandscape) {
+                    targetW = targetH * imgDimesion.naturalWidth / imgDimesion.naturalHeight;
+                    img.style.left = (targetW - targetLength) * -0.5 + 'px';
+                    img.style.top  = '0';
+                } else {
+                    targetH = targetW * imgDimesion.naturalHeight / imgDimesion.naturalWidth;
+                    img.style.left = '0';
+                    img.style.top  = (targetH - targetLength) * -0.5 + 'px';;
+                }
+
+                console.log('img target dim: ', targetW, targetH);
+                img.style.width  = targetW + 'px';
+                img.style.height = targetH + 'px';
+
                 applyAvatarMaskForOldIE();
             };
 
             return true;
+        }
+
+        function getImageNaturalDimention(img) {
+            if (!img) {
+                return {
+                    naturalWidth: NaN,
+                    naturalHeight: NaN
+                };
+            }
+
+            if (typeof img.naturalWidth === 'number') {
+                return {
+                    naturalWidth: img.naturalWidth,
+                    naturalHeight: img.naturalHeight
+                };
+            }
+
+            return {
+                naturalWidth: $(img).width(),
+                naturalHeight: $(img).height()
+            };
         }
 
         function applyAvatarMaskForOldIE(imageUri) {
@@ -124,11 +179,11 @@
 
             avatarMask.style.display = 'block';
             imgParent.style.display = 'none';
-            comFilter.Apply();
+            filterCompositor.Apply();
 
             avatarMask.style.display = 'none';
             imgParent.style.display = 'block';
-            comFilter.Play();
+            filterCompositor.Play();
         }
     })();
 </script>
