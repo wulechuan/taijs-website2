@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<title>IE8 Compositor Filter</title>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
+	<link rel="stylesheet" href="../styles/base/base.min.css">
+	<link rel="stylesheet" href="../styles/base/theme-base.min.css">
+	<script src="../scripts/vendors/jquery-1.12.4.min.js"></script>
+	<style type="text/css">
+		#user-info-bar-user-avatar {
+			background-color: transparent;
+			padding-left: 13px;
+			width: 305px;
+			padding-right: 10px;
+			height: 150px;
+			color: black;
+			filter: progid:DXImageTransform.Microsoft.Iris(IrisStyle=circle,Motion=out);
+		}
+	</style>
+</head>
+<body>
+<div id="user-info-bar-user-avatar"><img></div>
+
+<div><button id="btn"><label>Play Transition</label></button></div>
+
+<script>
+	(function () {
+		var avatar = $('#user-info-bar-user-avatar')[0];
+		var avatarImage = $(avatar).find('img')[0];
+
+		if (!avatar || !avatarImage) return false;
+
+		$('#btn').on('click', function (event) {
+			doTrans('../images/_temp/fake-avatar-1.png');
+		});
+
+
+		avatar.filters[0].apply();
+		avatar.filters[0].Percent = 45;
+
+		function doTrans(imageUri) {
+			avatarImage.src = imageUri;
+		}
+	})();
+</script>
+</body>
+</html>

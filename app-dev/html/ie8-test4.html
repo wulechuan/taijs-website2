@@ -23,45 +23,33 @@
             text-align: left;
             overflow: hidden;
             background-color: #444;
-            height: 84px;
+            height: 128px;
         }
 
         #user-info-bar-user-avatar-frame .ie-bg {
             display: block;
             width: 800px;
-            height: 84px;
+            height: 100%;
 
             position: absolute;
             left: -100px;
             top: 0px;
-            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/pages/xfzq/_common/user-info-bar-bg.png', sizingMethod='image');
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/pages/xfzq/_common/user-info-bar-bg.png', sizingMethod='scale');
         }
 
         #user-info-bar-user-avatar {
             box-sizing: border-box;
             position: relative;
-            width: 84px;
-            height: 84px;
+            width: 128px;
+            height: 128px;
             background-repeat: no-repeat;
             background-position: center;
             background-size: 100%;
             background-size: cover;
             border-radius: 1000px;
             overflow: hidden;
-            filter:  progid:DXImageTransform.Microsoft.Compositor(function=21);
+            filter:  progid:DXImageTransform.Microsoft.Iris(IrisStyle=circle, Motion=out);
             }
-            #user-info-bar-user-avatar .ie-compositor-mask {
-                font-family: 'iconfont'!important;
-                position: absolute;
-                left: 0;
-                top: -8px;
-                text-indent: 0;
-                font-size: 84px;
-                line-height: 90px;
-                text-align: center;
-                color: lightgreen;
-            }
-            
             #user-info-bar-user-avatar img {
                 position: absolute;
             }
@@ -77,19 +65,15 @@
 
 <script type="text/javascript">
     (function () {
-        var avatar;
-
-        setTimeout(function () {
-            avatar = document.getElementById('user-info-bar-user-avatar');
-            avatar = new AvatarController(avatar, {
-                disableOldIEMask: false
-            });
-            avatar.update('../images/_temp/fake-avatar-1.png');
-        }, 0);
+        var avatar = new AvatarController(
+            document.getElementById('user-info-bar-user-avatar'), {
+            disableOldIEMask: false
+        });
+        avatar.update('../images/_temp/fake-avatar-1.png');
 
         setTimeout(function () {
             avatar.update('../images/_temp/fake-avatar-2.jpg');
-        }, 3000);
+        }, 2000);
 
 
         function AvatarController(avatar, options) {
@@ -97,8 +81,9 @@
 
             options = options || {};
 
-            var filtersEnabled = typeof avatar.filters === 'object' && !options.disableOldIEMask;
-            var filterCompositor, avatarMask, avatarImage;
+            var filtersEnabled = typeof avatar.filters === 'object';
+            var oldIEMaskEnabled = !options.disableOldIEMask && filtersEnabled;
+            var filterIris, avatarImage;
 
             init.call(this);
 
@@ -108,23 +93,13 @@
             }
 
             function init() {
-                avatarMask  = $(avatar).find('.ie-compositor-mask')[0];
                 avatarImage = $(avatar).find('img')[0];
 
                 if (!filtersEnabled) {
                     // we are going to use background image
-                    if (avatarMask) avatarMask.style.display = 'none';
                     if (avatarImage) avatarImage.style.display = 'none';
 
                     return;
-                }
-
-                if (!avatarMask) {
-                    console.log('Creating avatarMask...');
-                    avatarMask = document.createElement('DIV');
-                    avatarMask.className = 'ie-compositor-mask';
-                    avatarMask.innerHTML = '&#xe68c;';
-                    avatar.appendChild(avatarMask);
                 }
 
                 if (!avatarImage) {
@@ -133,11 +108,18 @@
                     avatar.appendChild(avatarImage);
                 }
 
-                try {
-                    filterCompositor = avatar.filters.item('DXImageTransform.Microsoft.Compositor');
-                } catch(e) {
-                    avatar.style.filter = 'progid:DXImageTransform.Microsoft.Compositor(Function=21)';
-                    filterCompositor = avatar.filters.item('DXImageTransform.Microsoft.Compositor');
+                if (oldIEMaskEnabled) {
+                    try {
+                        filterIris = avatar.filters.item('DXImageTransform.Microsoft.Iris');
+                    } catch(e) {
+                        avatar.style.filter = 'progid:DXImageTransform.Microsoft.Iris(IrisStyle=circle, Motion=out)';
+                        filterIris = avatar.filters.item('DXImageTransform.Microsoft.Iris');
+                    }
+
+                    avatarImage.style.display = 'none';
+                    filterIris.Apply();
+                    filterIris.Percent = 71;
+                    avatarImage.style.display = '';
                 }
             }
 
@@ -149,52 +131,54 @@
 
                 if (avatarImage.src === imageUri) return;
 
-                avatarImage.style.width      = '';
-                avatarImage.style.height     = '';
-                avatarImage.style.left = '';
-                avatarImage.style.top  = '';
+                avatarImage.style.width  = '';
+                avatarImage.style.height = '';
+                avatarImage.style.left   = '';
+                avatarImage.style.top    = '';
 
                 avatarImage.onload = function (event) {
-                    var imgDimesion = getImageNaturalDimention(avatarImage);
-                    var nW = imgDimesion.naturalWidth;
-                    var nH = imgDimesion.naturalHeight;
-                    var isLandscape = nW >= nH;
-
-                    var tSize = $(avatar).width(); // target size
-                    var tW = tSize; // target width
-                    var tH = tSize; // target height
-
-                    var x = 0;
-                    var y = 0;
-
-                    if (isLandscape) {
-                        tW = tH * nW / nH;
-                        x = (tW - tSize) * -0.5 + 'px';
-                        y = '0';
-                    } else {
-                        tH = tW * nH / nW;
-                        x = '0';
-                        y = (tH - tSize) * -0.5 + 'px';;
-                    }
-
-                    console.log(
-                        '\navatarImage dim: ', nW, ' * ', nH,
-                        '\ntarget dim: ', tW, ' * ', tH,
-                        '\noffset: ', 'x = ', x, '; y = ', y,
-                        '\n'
-                    );
-
-                    avatarImage.style.width  = tW + 'px';
-                    avatarImage.style.height = tH + 'px';
-                    avatarImage.style.left = x;
-                    avatarImage.style.top  = y;
-
-                    applyAvatarMaskForOldIE();
+                    locateImageInside(avatarImage, avatar);
                 };
 
                 avatarImage.src = imageUri;
 
                 return;
+            }
+
+            function locateImageInside(img, container) {
+                var imgDimesion = getImageNaturalDimention(img);
+                var nW = imgDimesion.naturalWidth;
+                var nH = imgDimesion.naturalHeight;
+                var isLandscape = nW >= nH;
+
+                var tSize = $(container).width(); // target size
+                var tW = tSize; // target width
+                var tH = tSize; // target height
+
+                var x = 0;
+                var y = 0;
+
+                if (isLandscape) {
+                    tW = tH * nW / nH;
+                    x = (tW - tSize) * -0.5 + 'px';
+                    y = '0';
+                } else {
+                    tH = tW * nH / nW;
+                    x = '0';
+                    y = (tH - tSize) * -0.5 + 'px';;
+                }
+
+                console.log(
+                    '\nimg dim: ', nW, ' * ', nH,
+                    '\ntarget dim: ', tW, ' * ', tH,
+                    '\noffset: ', 'x = ', x, '; y = ', y,
+                    '\n'
+                );
+
+                img.style.width  = tW + 'px';
+                img.style.height = tH + 'px';
+                img.style.left   = x;
+                img.style.top    = y;
             }
 
             function getImageNaturalDimention(img) {
@@ -216,16 +200,6 @@
                     naturalWidth:  $(img).width(),
                     naturalHeight: $(img).height()
                 };
-            }
-
-            function applyAvatarMaskForOldIE(imageUri) {
-                avatarMask.style.display = 'block';
-                avatarImage.style.display = 'none';
-                filterCompositor.Apply();
-
-                avatarMask.style.display = 'none';
-                avatarImage.style.display = 'block';
-                filterCompositor.Play();
             }
         }
     })();
