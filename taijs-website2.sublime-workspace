@@ -504,18 +504,18 @@
 			}
 		},
 		{
-			"file": "app-dev/html/xfzq-index.html",
+			"file": "app-dev/styles/pages/xfzq-base.css",
 			"settings":
 			{
-				"buffer_size": 3988,
+				"buffer_size": 6256,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app-dev/html/user-avatar.html",
+			"file": "app-dev/styles/base/theme-base.css",
 			"settings":
 			{
-				"buffer_size": 5103,
+				"buffer_size": 6132,
 				"line_ending": "Windows"
 			}
 		}
@@ -589,13 +589,14 @@
 	],
 	"file_history":
 	[
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-index.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/user-avatar.html",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/_trys/html/ie8-filter-compositor (3).html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-base.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-head-after-title.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-head-before-title.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/reset.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-index.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/index.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/sample-page-2.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/ie8-test2.html",
@@ -715,8 +716,7 @@
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/docs/configure-env.md",
 		"/D/p/dev/private/warm-up/package.json",
 		"/C/d2f42068.ini",
-		"/D/p/dev/npm.bat",
-		"/C/Windows/System32/cmd.exe"
+		"/D/p/dev/npm.bat"
 	],
 	"find":
 	{
@@ -738,6 +738,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"bread",
 			"disableOldIEMask",
 			"oldIEMaskEnabled",
 			"avatarImage",
@@ -864,8 +865,7 @@
 			"setTimeout",
 			"triangle",
 			"666",
-			"navy",
-			"argument"
+			"navy"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -912,65 +912,65 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 544.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app-dev/html/xfzq-index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3988,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								172,
-								386
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 389.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "app-dev/html/user-avatar.html",
+					"buffer": 1,
+					"file": "app-dev/styles/pages/xfzq-base.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5103,
+						"buffer_size": 6256,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								519,
-								519
+								11,
+								12
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app-dev/styles/base/theme-base.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6132,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3852,
+								3852
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3563.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1027,6 +1027,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"themba",
+				"app-dev\\styles\\base\\theme-base.css"
+			],
+			[
+				"x",
+				"app-dev\\styles\\pages\\xfzq-base.css"
+			],
 			[
 				"reset",
 				"app-dev\\styles\\base\\reset.css"
