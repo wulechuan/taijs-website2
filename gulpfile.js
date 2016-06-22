@@ -465,7 +465,7 @@ gulp.task('html', ['html-inject-snippets'], () => {
       removeEmptyAttributes: true,
       removeScriptTypeAttributes: true,
       removeStyleLinkTypeAttributes: true,
-      removeOptionalTags: true
+      // removeOptionalTags: true
     }))
 
     .pipe(logFileSizes({title: '>>>>>>>>  Reporting Files:   HTML', showFiles: false})) // 为了装逼，在命令行窗口中打印一下文件尺寸

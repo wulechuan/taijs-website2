@@ -62,20 +62,8 @@
 	background-size: cover;
 	border-radius: 1000px;
 	overflow: hidden;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Compositor(function=21)";
-        filter:  progid:DXImageTransform.Microsoft.Compositor(function=21);
+    filter:  progid:DXImageTransform.Microsoft.Iris(IrisStyle=circle, Motion=out);
 	}
-	#user-info-bar-user-avatar .ie-compositor-mask {
-        font-family: 'iconfont'!important;
-        position: absolute;
-        left: 0;
-        top: -8px;
-        text-indent: 0;
-        font-size: 84px;
-        line-height: 90px;
-        text-align: center;
-        color: lightgray;
-    }
     
     #user-info-bar-user-avatar img {
         position: absolute;
