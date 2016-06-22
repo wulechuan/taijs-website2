@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title>IE8 Compositor Filter</title>
+    <style type="text/css">
+        body { 
+            margin: 0;
+            padding: 30px;
+            color: white;
+            background: #666;
+            font-family: 'Segoe UI', 'Microsoft Yahei';
+            text-align: center;
+        }
+
+        .description {
+            margin: auto;
+            text-align: center;
+        }
+
+        .description h1 {
+            font-size: 40px;
+            font-weight: lighter;
+        }
+
+        #apply-button {
+            cursor: pointer;
+            width: 250px;
+            height: 40px;
+            color: #eee;
+            background-color: #000;
+            border-style: solid;
+            border-color: black;
+        }
+            #apply-button:hover {
+                background-color: #222;
+            }
+            #apply-button.disabled:hover,
+            #apply-button.disabled {
+                border-style: dashed;
+                color: #6b6b6b;
+                border-color: #6b6b6b;
+                background-color: transparent;
+            }
+
+        #compositor-function-selector {
+            width: 500px;
+        }
+
+        #log-block {
+            width: 500px;
+            text-align: left;
+            background-color: #444;
+            padding: 10px;
+            }
+            #log-block h2 {
+                font-size: 16px;
+                font-weight: lighter;
+                padding: 10px;
+                margin: -10px;
+                color: white;
+                background-color: black;
+            }
+            #log-block p {
+                font-size: 14px;
+            }
+
+        #avatar {
+            position: relative;
+            padding: 15px;
+            margin: 20px auto;
+            width: 500px;
+            height: 320px;
+            overflow: hidden;
+            border: 3px solid black;
+
+            -ms-filter: "progid:DXImageTransform.Microsoft.Compositor(function=20, duration=7)";
+                filter:  progid:DXImageTransform.Microsoft.Compositor(function=20, duration=7);
+        }
+
+        #input-b h1,
+        #input-a h1 {
+            font-size: 16px;
+            font-weight: bolder;
+            padding: 5px;
+            color: white;
+            background-color: black;
+        }
+        #input-b h1 {
+            color: black;
+            background-color: transparent;
+        }
+
+        #input-a {
+            position: relative;
+            text-align: center;
+            }
+            #input-a .bar {
+                display: inline-block;
+                box-sizing: border-box;
+                border: 4px solid black;
+                width: 80px;
+                height: 80px;
+                margin: 0 20px -4px;
+            }
+            #input-a .bar.bar-1 {
+                background: red;
+            }
+            #input-a .bar.bar-2 {
+                background: green;
+            }
+            #input-a .bar.bar-3 {
+                background: blue;
+            }
+
+        #input-b {
+            text-align: center;
+            }
+            #input-b img {
+                display: inline-block;
+                margin: 10px auto;
+            }
+            #input-b .bar {
+                box-sizing: border-box;
+                display: inline;
+                margin: 20px auto;
+                width: 95%;
+                padding: 10px;
+                background: #333;
+                color: white;
+                border: 3px solid lightblue;
+
+                font-size: 40px;
+                font-weight: lighter;
+                text-align:center;
+            }
+    </style>
+</head>
+<body>
+<div class="description">
+    <h1>IE Compositor Filter</h1>
+
+    <p><button id="apply-button">Apply Compositor Filter</button></p>
+
+    <p>
+        Choose compositor function: <br>
+        <select id="compositor-function-selector">
+            <option value=0>0: Clear both sets of input.</option>
+            <option value=1>1: Show the minimum color from both sets of input.</option>
+            <option value=2>2: Show the maximum color from both sets of input.</option>
+            <option value=3>3: Show Input A only.</option>
+            <option value=4>4: Show Input A over Input B.</option>
+            <option value=5>5: Only show Input A inside the Input B render area.</option>
+            <option value=6>6: Only show Input A outside the Input B render area.</option>
+            <option value=7>7: Only show Input A and B inside Input B render area.</option>
+            <option value=8>8: Show Input A minus Input B.</option>
+            <option value=9>9: Show Input A plus Input B.</option>
+            <option value=10>10: Show Input A and clear wherever the input intersects.</option>
+            <option value=19>19: Show Input B only.</option>
+            <option value=20 selected>20: Show Input B over Input A.</option>
+            <option value=21>21: Only show Input B inside the Input A render area.</option>
+            <option value=22>22: Only show Input B outside the Input A render area.</option>
+            <option value=23>23: Only show Input A and B inside the Input A render area.</option>
+            <option value=24>24: Show Input B minus Input A.</option>
+            <option value=25>25: Show Input B plus Input A.</option>
+        </select>
+    </p>
+</div> 
+
+<div id="avatar" style="">
+    <div id="input-a">
+        <h1>Input A</h1> 
+        <div class="bar bar-1"></div> 
+        <div class="bar bar-2"></div> 
+        <div class="bar bar-3"></div>
+    </div>
+    <div id="input-b">
+        <h1>Input B</h1>
+        <img src="http://samples.msdn.microsoft.com/workshop/samples/author/filter/banner.gif">
+        <div class="bar bar-1">THIS IS TEXT</div>
+    </div> 
+</div> 
+
+<div id="log-block">
+    <h2>log:</h2>
+    <p id="log-paragraph"></p>
+</div>
+
+<script type="text/javascript">
+    var logParagraph = document.getElementById('log-paragraph');
+    var buttonApplication = document.getElementById('apply-button');
+    var comFuncSelector = document.getElementById('compositor-function-selector');
+    var avatar = document.getElementById('avatar');
+    var inputA = document.getElementById('input-a');
+    var inputB = document.getElementById('input-b');
+
+    inputA.style.display = 'block';
+    inputB.style.display = 'none';
+
+
+    buttonApplication.onclick = function (event) {
+        buttonApplication.disabled = true;
+        buttonApplication.className += 'disabled';
+        buttonApplication.onclick = null;
+
+        swapInputAndTryToApplyFilter();
+    }
+    setTimeout(function () {
+        if (buttonApplication) buttonApplication.focus();
+    }, 20);
+
+
+    var filter;
+    if (avatar && avatar.filters) {
+        try {
+            filter = avatar.filters.item('DXImageTransform.Microsoft.Compositor');
+        } catch(e) {
+            writeLog('Fail to find filter! <br>');
+        }
+    }
+
+
+
+
+
+    function setupSelector() {
+        if (!comFuncSelector) return false;
+        comFuncSelector.onchange = function (event) {
+            if (filter) {
+                filter.Function = comFuncSelector.options(comFuncSelector.selectedIndex).value;
+                writeLog(filter.Function + '; ');
+            }
+        }
+    }
+
+    function writeLog(log) {
+        logParagraph.innerHTML += log;
+    }
+
+    function swapInputAndTryToApplyFilter() {
+        if (filter) {
+            writeLog('Filter applied. <br>')
+            filter.Apply();
+        }
+
+        inputA.style.display = 'none';
+        inputB.style.display = 'block';
+
+        if (filter) {
+            filter.Play();
+            writeLog('Filter played. <br>')
+        }
+
+        if (comFuncSelector) {
+            writeLog('Selector setup works even after playing the filter. <br>');
+            setupSelector();
+
+            comFuncSelector.focus();
+        }
+    }
+</script>
+</body>
+</html>
