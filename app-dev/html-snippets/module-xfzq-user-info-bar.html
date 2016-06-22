@@ -3,39 +3,53 @@
 	<div class="width-wrap">
 		<div class="user-avatar-block">
 			<div id="user-info-bar-user-avatar">
-				<div class="ie-compositor-mask"></div>
-				<div class="ie-image"><img src="../images/_temp/fake-avatar-2.jpg"></div>
+				<div class="ie-compositor-mask">&#xe68c;</div>
+				<div class="ie-image"><img src="../images/_temp/fake-avatar-2111.jpg"></div>
 			</div>
 		</div>
 		<div class="user-info-block"></div>
 	</div>
 	<script type="text/javascript">
 		(function () {
-			updateUserAvatar('../images/_temp/fake-avatar-2.jpg');
+			var avatar = document.getElementById('user-info-bar-user-avatar');
+			var imgParent = $(avatar).find('.ie-image')[0];
+			var img = $(avatar).find('img')[0];
+			var mask = $(avatar).find('.ie-compositor-mask')[0];
+
+			mask.style.display = 'block';
+			imgParent.style.display = 'none';
+
+			setTimeout(function () {
+				updateUserAvatar('../images/_temp/fake-avatar-2.jpg');
+			}, 2000);
 
 			function updateUserAvatar(imageUri) {
-				var avatar = document.getElementById('user-info-bar-user-avatar');
-				var imgParent = $(avatar).find('.ie-image')[0];
-				var img = $(avatar).find('img')[0];
-				var mask = $(avatar).find('.ie-compositor-mask')[0];
 
 				if (!avatar || !imgParent || !img || !mask) return false;
 
-				console.log(avatar.id);
 
-				if (avatar.filters && avatar.filters.item(0)) {
-					// img.src = '';
-					mask.style.display = 'block';
+			    var filter;
+			    if (avatar && avatar.filters) {
+			        try {
+			            filter = avatar.filters.item('DXImageTransform.Microsoft.Compositor');
+			        } catch(e) {
+			            console.error('Fail to find filter! <br>');
+			        }
+			    }
 
-					avatar.filters.item(0).Apply();
+
+				if (filter) {
+					filter.Apply();
 
 					mask.style.display = 'none';
 					imgParent.style.display = 'block';
 
-					avatar.filters.item(0).Play();
-					avatar.filters.item(0).Function='5';
+					img.onload = function (event) {
+						console.log('loaded. filter: ', typeof filter);
+						filter.Play();
+					}
 
-					// img.src = imageUri;
+					img.src = imageUri;
 				} else {
 					mask.style.display = 'none';
 					imgParent.style.display = 'none';

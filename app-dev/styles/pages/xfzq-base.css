@@ -63,23 +63,21 @@
 	border-radius: 1000px;
 	overflow: hidden;
 	-ms-filter: "\
-		progid:DXImageTransform.Microsoft.Compositor(Function=5)\
+		progid:DXImageTransform.Microsoft.Compositor(Function=21)\
 	";
     /* filter: 
-    	progid:DXImageTransform.Microsoft.Compositor(Function=5)
+    	progid:DXImageTransform.Microsoft.Compositor(Function=21)
     ; */
 	}
 	#user-info-bar-user-avatar .ie-compositor-mask {
 		position: absolute;
-		font-size: 84px;
-		line-height: 1;
-		text-indent: 0;
+        top: -8px;
+        text-indent: 0;
+        font-size: 84px;
+        line-height: 90px;
 		text-align: center;
-	}
-	#user-info-bar-user-avatar .ie-compositor-mask:before {
 		font-family: 'iconfont'!important;
-		content: '\e68c';
-		color: green;
+		color: lightgray;
 	}
 	#user-info-bar-user-avatar .ie-image {
 		position: absolute;
