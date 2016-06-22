@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"ava",
+				"avatarIframeForOldIE"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"st",
+				"style	Tag"
+			],
+			[
 				"fil",
 				"filterIris"
 			],
@@ -483,6 +495,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app-dev/html-snippets/module-xfzq-user-info-bar.html",
+			"settings":
+			{
+				"buffer_size": 2217,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app-dev/html/xfzq-index.html",
+			"settings":
+			{
+				"buffer_size": 3988,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app-dev/html/user-avatar.html",
+			"settings":
+			{
+				"buffer_size": 5103,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -553,17 +589,19 @@
 	],
 	"file_history":
 	[
-		"/D/p/dev/taijs/taijs-website2/app-dev/index.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-base.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-head-after-title.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-head-before-title.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/reset.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-index.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/index.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/sample-page-2.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/ie8-test2.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/ie8-test.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-base.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-head-before-title.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/ie8-test4.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/ie8-test4-embed.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-user-info-bar.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-head-after-title.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-footer.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/ie8-test4-demo.html",
 		"/D/p/dev/taijs/taijs-website2/gulpfile.js",
@@ -575,7 +613,6 @@
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-base-ie8.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/fonts.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/sample-page-list.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/sample-snippets.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-sidebar-0.html",
@@ -610,7 +647,6 @@
 		"/D/Users/wulechuan/Desktop/waves.js",
 		"/D/Users/wulechuan/Downloads/install-a-new-font.txt",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/iconfonts/iconfont.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/reset.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/index.js",
 		"/D/Users/wulechuan/Downloads/china.js",
 		"/D/Users/wulechuan/Downloads/china.json",
@@ -702,6 +738,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"disableOldIEMask",
+			"oldIEMaskEnabled",
+			"avatarImage",
+			"iframe",
 			"doctype",
 			"/head>",
 			"argument",
@@ -825,10 +865,6 @@
 			"triangle",
 			"666",
 			"navy",
-			"argument",
-			"button",
-			"buttonApplication",
-			"comFuncSelector",
 			"argument"
 		],
 		"highlight": true,
@@ -849,8 +885,97 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app-dev/html-snippets/module-xfzq-user-info-bar.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2217,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								435,
+								440
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 544.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app-dev/html/xfzq-index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3988,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								172,
+								386
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app-dev/html/user-avatar.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5103,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								519,
+								519
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -903,8 +1028,32 @@
 		"selected_items":
 		[
 			[
+				"reset",
+				"app-dev\\styles\\base\\reset.css"
+			],
+			[
+				"bas",
+				"app-dev\\styles\\base\\base.css"
+			],
+			[
+				"xbas",
+				"app-dev\\styles\\pages\\xfzq-base.css"
+			],
+			[
 				"befor",
 				"app-dev\\html-snippets\\tag-head-before-title.html"
+			],
+			[
+				"xind",
+				"app-dev\\html\\xfzq-index.html"
+			],
+			[
+				"after",
+				"app-dev\\html-snippets\\tag-head-after-title.html"
+			],
+			[
+				"userinfo",
+				"app-dev\\html-snippets\\module-xfzq-user-info-bar.html"
 			],
 			[
 				"ie4",
@@ -925,10 +1074,6 @@
 			[
 				"xfin",
 				"app-dev\\html\\xfzq-index.html"
-			],
-			[
-				"after",
-				"app-dev\\html-snippets\\tag-head-after-title.html"
 			],
 			[
 				"test3",
@@ -1217,10 +1362,6 @@
 			[
 				"info",
 				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
-			],
-			[
-				"reset",
-				"app-dev\\styles\\base\\reset.css"
 			],
 			[
 				"confi",
