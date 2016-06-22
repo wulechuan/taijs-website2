@@ -1,20 +1,57 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
     <title>IE8 Compositor Filter</title>
     <style type="text/css">
         body { 
             margin: 0;
+            padding: 30px;
             color: white;
-            background: #369;
+            background: #888;
             font-family: 'Segoe UI', 'Microsoft Yahei';
+            text-align: center;
         }
 
         .description {
             margin: auto;
-            width: 360px;
-            margin: 20px;
+            text-align: center;
         }
+
+        #apply-button {
+            cursor: pointer;
+            width: 170px;
+            height: 40px;
+            color: #eee;
+            background-color: #000;
+            border-style: solid;
+            border-color: black;
+        }
+            #apply-button:hover {
+                background-color: #222;
+            }
+            #apply-button.disabled:hover,
+            #apply-button.disabled {
+                border-style: dashed;
+                border-color: #777;
+                color: #777;
+                background-color: transparent;
+            }
+
+        #compositor-function-selector {
+        }
+
+        #log-block {
+            width: 400px;
+            text-align: left;
+            background-color: #666;
+            padding: 10px;
+            }
+            #log-block h2 {
+                padding: 10px;
+                margin: -10px;
+                color: white;
+                background-color: black;
+            }
 
         #avatar {
             position: relative;
@@ -33,8 +70,12 @@
             font-size: 16px;
             font-weight: bold;
             padding: 10px;
-            background: black;
             color: white;
+            background-color: black;
+        }
+        #input-b h1 {
+            color: black;
+            background-color: transparent;
         }
 
         #input-a {
@@ -42,14 +83,14 @@
             text-align: center;
             }
             #input-a .bar {
-                display: inline;
+                display: inline-block;
                 box-sizing: border-box;
                 border: 4px solid black;
                 width: 80px;
-                height: 260px;
+                height: 100px;
 
                 top: 60px;
-                margin: 0 20px;
+                margin: 0 20px -4px;
             }
             #input-a .bar.bar-1 {
                 background: red;
@@ -89,27 +130,32 @@
 </head>
 <body>
 <div class="description">
-    <h1>Compositor Function:</h1>
-    <select id="compositor-function-selector">
-        <option value=0>0: Clear both sets of input.</option>
-        <option value=1>1: Show the minimum color from both sets of input.</option>
-        <option value=2>2: Show the maximum color from both sets of input.</option>
-        <option value=3>3: Show Input A only.</option>
-        <option value=4>4: Show Input A over Input B.</option>
-        <option value=5>5: Only show Input A inside the Input B render area.</option>
-        <option value=6>6: Only show Input A outside the Input B render area.</option>
-        <option value=7>7: Only show Input A and B inside Input B render area.</option>
-        <option value=8>8: Show Input A minus Input B.</option>
-        <option value=9>9: Show Input A plus Input B.</option>
-        <option value=10>10: Show Input A and clear wherever the input intersects.</option>
-        <option value=19>19: Show Input B only.</option>
-        <option value=20 selected>20: Show Input B over Input A.</option>
-        <option value=21>21: Only show Input B inside the Input A render area.</option>
-        <option value=22>22: Only show Input B outside the Input A render area.</option>
-        <option value=23>23: Only show Input A and B inside the Input A render area.</option>
-        <option value=24>24: Show Input B minus Input A.</option>
-        <option value=25>25: Show Input B plus Input A.</option>
-    </select>
+    <h1>Compositor Function</h1>
+
+    <p><button id="apply-button">apply</button></p>
+
+    <p>
+        <select id="compositor-function-selector">
+            <option value=0>0: Clear both sets of input.</option>
+            <option value=1>1: Show the minimum color from both sets of input.</option>
+            <option value=2>2: Show the maximum color from both sets of input.</option>
+            <option value=3>3: Show Input A only.</option>
+            <option value=4>4: Show Input A over Input B.</option>
+            <option value=5>5: Only show Input A inside the Input B render area.</option>
+            <option value=6>6: Only show Input A outside the Input B render area.</option>
+            <option value=7>7: Only show Input A and B inside Input B render area.</option>
+            <option value=8>8: Show Input A minus Input B.</option>
+            <option value=9>9: Show Input A plus Input B.</option>
+            <option value=10>10: Show Input A and clear wherever the input intersects.</option>
+            <option value=19>19: Show Input B only.</option>
+            <option value=20 selected>20: Show Input B over Input A.</option>
+            <option value=21>21: Only show Input B inside the Input A render area.</option>
+            <option value=22>22: Only show Input B outside the Input A render area.</option>
+            <option value=23>23: Only show Input A and B inside the Input A render area.</option>
+            <option value=24>24: Show Input B minus Input A.</option>
+            <option value=25>25: Show Input B plus Input A.</option>
+        </select>
+    </p>
 </div> 
 
 <div id="avatar" style="">
@@ -136,27 +182,32 @@
 
 <script type="text/javascript">
     var logParagraph = document.getElementById('log-paragraph');
+    var buttonApplication = document.getElementById('apply-button');
     var comFuncSelector = document.getElementById('compositor-function-selector');
     var avatar = document.getElementById('avatar');
+
+    buttonApplication.onclick = function (event) {
+        buttonApplication.disabled = true;
+        buttonApplication.className += 'disabled';
+        buttonApplication.onclick = null;
+
+        swapInputAndTryToApplyFilter();
+    }
+    setTimeout(function () {
+        if (buttonApplication) buttonApplication.focus();
+    }, 20);
+
 
     var filter;
     if (avatar && avatar.filters) {
         try {
             filter = avatar.filters.item('DXImageTransform.Microsoft.Compositor');
         } catch(e) {
-            writeLog('Fail to find filter');
+            writeLog('Fail to find filter! <br>');
         }
     }
 
-    setTimeout(function () {
-        comFuncSelector.focus();
-    }, 20);
 
-    swapInputAndTryToApplyFilter();
-
-
-    writeLog('Selector setup works even after applying the filter<br>');
-    setupSelector();
 
 
 
@@ -178,6 +229,7 @@
         var inputBContainer = document.getElementById('input-b-container');
 
         if (filter) {
+            writeLog('Filter applied. <br>')
             filter.Apply();
         }
 
@@ -185,7 +237,14 @@
 
         if (filter) {
             filter.Play();
-            writeLog('played <br>')
+            writeLog('Filter played. <br>')
+        }
+
+        if (comFuncSelector) {
+            writeLog('Selector setup works even after playing the filter. <br>');
+            setupSelector();
+
+            comFuncSelector.focus();
         }
     }
 </script>
