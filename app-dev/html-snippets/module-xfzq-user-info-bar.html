@@ -8,20 +8,45 @@
     </div>
     <script type="text/javascript">
         (function () {
-            var avatar = new AvatarController(document.getElementById('user-info-bar-user-avatar'), {
+            var avatar = new AvatarController($('#user-info-bar-user-avatar')[0], {
                 disableOldIEMask: false
             });
-            avatar.update('../images/_temp/fake-avatar-1.png');
 
-            function AvatarController(avatar, options) {
-                if (!avatar) return undefined;
+                avatar.update('../images/_temp/fake-avatar-3.png');
+
+            setTimeout(function () {
+                avatar.update('../images/_temp/fake-avatar-1.png');
+            }, 1000);
+
+            setTimeout(function () {
+                avatar.update('../images/_temp/fake-avatar-2.jpg');
+            }, 2000);
+
+            setTimeout(function () {
+                avatar.update('../images/_temp/fake-avatar-5.jpg');
+            }, 3000);
+
+
+
+
+
+            function AvatarController(avatarContainer, options) {
+                if (!avatarContainer) return undefined;
+
+                var avatarElementClassName = 'avatar';
+                var avatarBordersElementClassName = 'avatar-borders';
+                var avatarIframeSrc = 'user-avatar.html';
+
 
                 options = options || {};
 
-                var filtersEnabled = typeof avatar.filters === 'object'
+                var filtersEnabled = typeof avatarContainer.filters === 'object'
                     && navigator.userAgent.search(' MSIE 8.0') > 0
                     && !options.disableOldIEMask
                 ;
+
+                var avatarELement, avatarBordersElement, avatarIframeForOldIE;
+
 
                 init.call(this);
 
@@ -31,7 +56,9 @@
                 }
 
                 function init() {
-                    avatarIframeForOldIE = $(avatar).find('iframe')[0];
+                    avatarELement = $(avatarContainer).find('.'+avatarElementClassName)[0];
+                    avatarBordersElement = $(avatarContainer).find('.'+avatarBordersElementClassName)[0];
+                    avatarIframeForOldIE = $(avatarContainer).find('iframe')[0];
 
                     if (!filtersEnabled) {
                         // we are going to use background image
@@ -40,21 +67,44 @@
                             avatarIframeForOldIE.parentNode.removeChild(avatarIframeForOldIE);
                         }
 
+                        if (!avatarELement) {
+                            // console.log('Creating avatarELement...');
+                            avatarELement = document.createElement('DIV');
+                            avatarELement.className = avatarElementClassName;
+                            avatarContainer.appendChild(avatarELement);
+                        }
+
+                        if (!avatarBordersElement) {
+                            // console.log('Creating avatarBordersElement...');
+                            avatarBordersElement = document.createElement('DIV');
+                            avatarBordersElement.className = avatarBordersElementClassName;
+                            avatarContainer.appendChild(avatarBordersElement);
+                        }
+
                         return;
                     }
+
+                    if (avatarELement) avatarELement.style.display = 'none';
+                    if (avatarBordersElement) avatarBordersElement.style.display = 'none';
 
                     if (!avatarIframeForOldIE) {
                         // console.log('Creating avatarIframeForOldIE...');
                         avatarIframeForOldIE = document.createElement('IFRAME');
-                        avatarIframeForOldIE.src = 'user-avatar.html';
-                        avatar.appendChild(avatarIframeForOldIE);
+                        avatarIframeForOldIE.src = avatarIframeSrc;
+                        avatarIframeForOldIE.setAttribute('frameborder', '0');
+                        avatarIframeForOldIE.setAttribute('scrolling', 'no');
+                        avatarContainer.appendChild(avatarIframeForOldIE);
                     }
                 }
 
                 function update(imageUri) {
                     if (!filtersEnabled) {
-                        avatar.style.backgroundImage = 'url('+imageUri+')';
+                        avatarELement.style.backgroundImage = 'url('+imageUri+')';
                         return;
+                    }
+
+                    if (avatarIframeForOldIE) {
+                        avatarIframeForOldIE.src = avatarIframeSrc+'?avatarImage='+encodeURIComponent(imageUri);
                     }
                 }
             }

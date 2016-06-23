@@ -2,22 +2,56 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=8,chrome=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
 	<title>user avatar</title>
 	<link rel="stylesheet" href="../styles/base/base.min.css">
-    <link rel="stylesheet" type="text/css" href="../styles/pages/xfzq-base.min.css">
+    <link rel="stylesheet" href="../styles/pages/xfzq-base.min.css">
 	<script src="../scripts/vendors/jquery-1.12.4.min.js"></script>
 </head>
 <body>
-<div id="user-avatar-iframe-bg"><div class="ie-bg"></div></div>
-<div id="user-avatar"></div>
+<div id="ie-user-avatar-iframe-bg"><div class="ie-bg" style="display: block;"></div></div>
+<div id="ie-user-avatar"></div>
+<div id="ie-user-avatar-borders"></div>
 <script type="text/javascript">
-	(function () {
-		var thePerfectPercentage = 70;
-        var avatar = new AvatarController(document.getElementById('user-avatar'), {
+	$(function () {
+        var qString = location.href.match(/\?.*/);
+        if (qString) qString = qString[0].slice(1);
+
+        var qKVPairs = [];
+        if (qString) {
+            qKVPairs = qString.split('&');
+        }
+
+        var imageUri;
+
+        for (var i in qKVPairs){
+            var kvpString = qKVPairs[i];
+            var kvp = kvpString.split('=');
+
+            if (kvp[0] === 'avatarImage') imageUri = kvp[1];
+        }
+
+
+
+        var thePerfectPercentage = 70;
+        var avatar = new AvatarController(document.getElementById('ie-user-avatar'), {
             disableOldIEMask: false
         });
-        avatar.update('../images/_temp/fake-avatar-1.png');
+
+
+        if (imageUri) {
+            avatar.update(imageUri);
+        } else {
+            console.error(
+                'No image uri passed into this iframe page.',
+                '\n\tPlease using "avatarImage" as the query part of the iframe src.',
+                '\n\ti.e. "<url of this html>?avatarImage=<your avatar image source uri>."'
+            );
+        }
+
+
+
+
 
         function AvatarController(avatar, options) {
             if (!avatar) return undefined;
@@ -27,6 +61,14 @@
             var filtersEnabled = typeof avatar.filters === 'object' && navigator.userAgent.search(' MSIE 8.0') > 0;
             var oldIEMaskEnabled = !options.disableOldIEMask && filtersEnabled;
             var filterIris, avatarImage;
+
+            // var offsetXPropertyName = 'left'; // doesn't work
+            // var offsetYPropertyName = 'top';  // doesn't work
+
+            var offsetXPropertyName = 'marginLeft';
+            var offsetYPropertyName = 'marginTop';
+
+
 
             init.call(this);
 
@@ -77,8 +119,8 @@
 
                 avatarImage.style.width  = '';
                 avatarImage.style.height = '';
-                avatarImage.style.left   = '';
-                avatarImage.style.top    = '';
+                avatarImage.style[offsetXPropertyName] = '';
+                avatarImage.style[offsetYPropertyName] = '';
 
                 avatarImage.onload = function (event) {
                     locateImageInside(avatarImage, avatar);
@@ -121,8 +163,8 @@
 
                 img.style.width  = tW + 'px';
                 img.style.height = tH + 'px';
-                img.style.left   = x;
-                img.style.top    = y;
+                img.style[offsetXPropertyName] = x;
+                img.style[offsetYPropertyName] = y;
             }
 
             function getImageNaturalDimention(img) {
@@ -146,7 +188,7 @@
                 };
             }
         }
-	})();
+	});
 </script>
 </body>
 </html>
