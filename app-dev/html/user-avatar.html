@@ -95,6 +95,10 @@
                     avatar.appendChild(avatarImage);
                 }
 
+                avatarImage.onload = function (event) {
+                    locateImageInside(avatarImage, avatar);
+                };
+
                 if (oldIEMaskEnabled) {
                     try {
                         filterIris = avatar.filters.item('DXImageTransform.Microsoft.Iris');
@@ -123,10 +127,6 @@
                 avatarImage.style.height = '';
                 avatarImage.style[offsetXPropertyName] = '';
                 avatarImage.style[offsetYPropertyName] = '';
-
-                avatarImage.onload = function (event) {
-                    locateImageInside(avatarImage, avatar);
-                };
 
                 avatarImage.src = imageUri;
 

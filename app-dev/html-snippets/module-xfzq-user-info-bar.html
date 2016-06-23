@@ -4,12 +4,29 @@
 		<div class="user-avatar-block">
 			<div id="user-info-bar-user-avatar"></div>
         </div>
-        <div class="user-info-block"></div>
+        <div class="user-info-block font-song-ti">
+            <div class="line line-1"
+                ><div class="cell user-name-block"
+                    ><h3 class="font-default" 
+                        ><span class="greeting">您好，</span
+                        ><span class="user-name">用户</span
+                    ></h3
+                ></div
+                ><div class="cell tips-block"
+                    ><p
+                        ><span class="tip-general">总有理财新发现</span>
+                        <a class="tip-for-avatar" href="#">点击修改头像</a
+                    ></p
+                ></div
+            ></div>
+            <div class="line line-2"
+            ></div>
+        </div>
     </div>
     <script type="text/javascript">
         (function () {
             var avatar = new AvatarController($('#user-info-bar-user-avatar')[0], {
-                disableOldIEMask: false
+                disableOldIEMask: true
             });
 
             avatar.update('../images/_temp/fake-avatar-5.jpg');
@@ -45,8 +62,8 @@
 
                 var filtersEnabled = typeof avatarContainer.filters === 'object'
                     && navigator.userAgent.search(' MSIE 8.0') > 0
-                    && !options.disableOldIEMask
                 ;
+                var disableOldIEMask = !!options.disableOldIEMask || !filtersEnabled;
 
                 var avatarELement, avatarBordersElement, avatarIframeForOldIE;
 
