@@ -144,10 +144,17 @@
 					color: white;
 					top: -1.5px;
 					left: -1.33px;
+				    -ms-filter: "\
+				    	progid:DXImageTransform.Microsoft.Alpha(opacity=60)\
+				    	progid:DXImageTransform.Microsoft.Blur(PixelRadius=1)\
+				    ";
 				    filter:
 				    	progid:DXImageTransform.Microsoft.Alpha(opacity=60)
 				    	progid:DXImageTransform.Microsoft.Blur(PixelRadius=1)
 				    ;
+				}
+				#ie-user-avatar img {
+					position: absolute;
 				}
 				#ie-user-avatar-borders:before {
 					font-family: 'iconfont'!important;
@@ -157,8 +164,16 @@
 					position: absolute;
 					top: -2.3px;
 				}
-				#ie-user-avatar img {
-					position: absolute;
+				#ie-user-avatar-borders.rectangle {
+					top: 0;
+					left: 0;
+					border-width: 2px;
+					border-style: solid;
+				    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=60)";
+				        filter:  progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+				}
+				#ie-user-avatar-borders.rectangle:before {
+					content: none;
 				}
 
 
@@ -369,6 +384,7 @@
 
 
 /* ----- theme definition begin ---------------- */
+	#ie-user-avatar-borders.rectangle,
 	#user-info-bar-user-avatar .avatar-borders {
 		border-color: white;
 		border-color: rgba(255, 255, 255, 0.5);
