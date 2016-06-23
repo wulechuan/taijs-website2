@@ -148,9 +148,7 @@ input[type="radio"] {
 label.deco-input {
 	display: inline-block;
 	position: relative;
-	border-width: 1px;
-	border-style: solid;
-	padding: 4px;
+	padding: 5px;
 	box-sizing: border-box;
 	width: 140px;
 	}
@@ -160,6 +158,20 @@ label.deco-input {
 		position: absolute;
 	}
 
+	label.deco-input .ie-borders {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		border-width: 1px;
+		border-style: solid;
+		display: block;
+	}
+
+	label.deco-input .ie-borders [class|="corner"] {
+		display: none;
+	}
 
 	label.deco-input .iconfont {
 		display: none;
@@ -235,7 +247,15 @@ label.deco-input {
 
 [class|="ie"] {
 	display: none;
-}
+	}
+	.ie-bg { /* in case the ie8.css is missing or deprecated */
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: 0;
+	}
 
 .content {
 }
@@ -522,13 +542,14 @@ label.deco-input {
 
 .qrcode {
 	width: 128px;
-	height: 128px;
+	text-align: center;
+	margin: auto;
 	}
 
 	.qrcode > img {
 		width: 128px;
 		height: 128px;
-		margin-bottom: 6px;
+		margin: -2px;
 	}
 
 	.qrcode > .figcaption {
@@ -672,7 +693,7 @@ label.deco-input {
 		position: relative;
 		display: block;
 	}
-	.menu-item:before {
+	.menu.layout-hori > .menu-item:before {
 		content: '';
 		display: inline-block;
 		vertical-align: middle;
@@ -774,6 +795,57 @@ label.deco-input {
 	}
 
 
+.breadcrumbs {
+	font-size: 12px;
+	display: block;
+	clear: both;
+	margin: -5px 0;
+	padding: 10px 0;
+	}
+
+	.breadcrumbs > ul {
+		position: relative;
+		padding: 0;
+		margin: 0;
+		margin-left: -0.5em;
+	}
+
+	.breadcrumbs > ul > li {
+		display: inline-block;
+		line-height: 1.5;
+		padding: 0;
+		margin: 0;
+	}
+
+	.breadcrumbs > ul > li:before,
+	.breadcrumbs > ul > li span,
+	.breadcrumbs > ul > li a {
+		display: inline-block;
+		vertical-align: top;
+		margin: 0;
+		padding: 0.25em 0.5em;
+		}
+
+		.breadcrumbs > ul > li a {
+			text-decoration: none;
+		}
+
+		.breadcrumbs > ul > li > a span {
+			padding: 0;
+		}
+
+		.breadcrumbs > ul > li:before {
+			/* font-family: 'iconfont';
+			content: '\e610'; */
+			content: '>';
+			vertical-align: top;
+			padding-left: 0.25em;
+			padding-right: 0.25em;
+		}
+
+		.breadcrumbs > ul > li:first-child:before {
+			content: none!important;
+		}
 
 
 

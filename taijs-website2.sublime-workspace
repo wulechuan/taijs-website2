@@ -4,6 +4,258 @@
 		"selected_items":
 		[
 			[
+				"wid",
+				"width"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"cla",
+				"className"
+			],
+			[
+				"ini",
+				"initOptions"
+			],
+			[
+				"type",
+				"typeof"
+			],
+			[
+				"dis",
+				"disableOldIEMask"
+			],
+			[
+				"set",
+				"setTimeout"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"baco",
+				"background-color"
+			],
+			[
+				"t",
+				"top"
+			],
+			[
+				"ava",
+				"avatarImage"
+			],
+			[
+				"image",
+				"avatarImage"
+			],
+			[
+				"typ",
+				"typeof"
+			],
+			[
+				"pa",
+				"pageUrl"
+			],
+			[
+				"na",
+				"navigator"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"imeg",
+				"imageUri"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"st",
+				"style	Tag"
+			],
+			[
+				"fil",
+				"filterIris"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"old",
+				"oldIEMaskEnabled"
+			],
+			[
+				"av",
+				"avatar"
+			],
+			[
+				"a",
+				"auto"
+			],
+			[
+				"of",
+				"offsetY"
+			],
+			[
+				"off",
+				"offsetY"
+			],
+			[
+				"pro",
+				"progid"
+			],
+			[
+				"fu",
+				"fun	Function"
+			],
+			[
+				"im",
+				"imageUri"
+			],
+			[
+				"ta",
+				"tagName"
+			],
+			[
+				"A",
+				"AvatarController"
+			],
+			[
+				"nat",
+				"naturalWidth"
+			],
+			[
+				"back",
+				"backgroundImage"
+			],
+			[
+				"ima",
+				"imageUri"
+			],
+			[
+				"brea",
+				"break-word"
+			],
+			[
+				"wor",
+				"word-wrap"
+			],
+			[
+				"vi",
+				"visible"
+			],
+			[
+				"auth",
+				"authorBlock"
+			],
+			[
+				"ge",
+				"getElementById"
+			],
+			[
+				"du",
+				"document"
+			],
+			[
+				"bu",
+				"button	Tag"
+			],
+			[
+				"li",
+				"lighter"
+			],
+			[
+				"backc",
+				"background-color"
+			],
+			[
+				"bordecol",
+				"border-color"
+			],
+			[
+				"bordes",
+				"border-style"
+			],
+			[
+				"file",
+				"filter"
+			],
+			[
+				"op",
+				"options"
+			],
+			[
+				"box",
+				"box-sizing"
+			],
+			[
+				"filter",
+				"filterCmp"
+			],
+			[
+				"ie-",
+				"ie-compositor-mask"
+			],
+			[
+				"l",
+				"left"
+			],
+			[
+				"v",
+				"visibility"
+			],
+			[
+				"borde",
+				"border-color"
+			],
+			[
+				"boderw",
+				"border-width"
+			],
+			[
+				"bord",
+				"border-collapse"
+			],
+			[
+				"tabel",
+				"table-cell"
+			],
+			[
+				"fl",
+				"float"
+			],
+			[
+				"cl",
+				"clip"
+			],
+			[
+				"bak",
+				"background"
+			],
+			[
+				"bordeco",
+				"border-color"
+			],
+			[
+				"b",
+				"block"
+			],
+			[
 				"tran",
 				"transition"
 			],
@@ -18,10 +270,6 @@
 			[
 				"sc",
 				"scaleY()"
-			],
-			[
-				"box",
-				"box-shadow"
 			],
 			[
 				"wav",
@@ -46,10 +294,6 @@
 			[
 				"ne",
 				"newValue"
-			],
-			[
-				"fu",
-				"function"
 			],
 			[
 				"for",
@@ -96,20 +340,12 @@
 				"border-color"
 			],
 			[
-				"t",
-				"type	Attr"
-			],
-			[
 				"min",
 				"min-width"
 			],
 			[
 				"transition",
 				"transition-property"
-			],
-			[
-				"li",
-				"line-height"
 			],
 			[
 				"magion",
@@ -120,32 +356,12 @@
 				"bottom"
 			],
 			[
-				"v",
-				"vertical-align"
-			],
-			[
-				"b",
-				"inline-block"
-			],
-			[
 				"inlin",
 				"inline-block"
 			],
 			[
-				"co",
-				"color"
-			],
-			[
 				"boders",
 				"border-style"
-			],
-			[
-				"op",
-				"opacity"
-			],
-			[
-				"im",
-				"important"
 			],
 			[
 				"border-s",
@@ -166,14 +382,6 @@
 			[
 				"bckc",
 				"background-color"
-			],
-			[
-				"in",
-				"inherit"
-			],
-			[
-				"cl",
-				"clear"
 			],
 			[
 				"boder",
@@ -198,10 +406,6 @@
 			[
 				"borderra",
 				"border-top-left-radius"
-			],
-			[
-				"di",
-				"display"
 			],
 			[
 				"max",
@@ -256,10 +460,6 @@
 				"inline-block"
 			],
 			[
-				"ta",
-				"table-row"
-			],
-			[
 				"fons",
 				"font-size"
 			],
@@ -284,10 +484,6 @@
 				"border-style"
 			],
 			[
-				"borde",
-				"border-style"
-			],
-			[
 				"texal",
 				"text-align"
 			],
@@ -308,10 +504,6 @@
 				"font-size"
 			],
 			[
-				"re",
-				"return"
-			],
-			[
 				"borderc",
 				"border-color"
 			],
@@ -322,72 +514,24 @@
 			[
 				"d",
 				"display"
-			],
-			[
-				"Er",
-				"ERRORLEVEL"
-			],
-			[
-				"back",
-				"background-color"
-			],
-			[
-				"a",
-				"app-dist"
-			],
-			[
-				"htm",
-				"html2"
-			],
-			[
-				"ifram",
-				"iframe"
-			],
-			[
-				"ifr",
-				"iframe"
-			],
-			[
-				"iframe",
-				"iframe-dd"
-			],
-			[
-				"mar",
-				"margin"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "app-dev/styles/pages/index.css",
+			"file": "app-dev/html-snippets/module-xfzq-user-info-bar.html",
 			"settings":
 			{
-				"buffer_size": 13302,
+				"buffer_size": 7515,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app-dev/html-snippets/module-app-header.html",
+			"file": "app-dev/styles/pages/xfzq-base.css",
 			"settings":
 			{
-				"buffer_size": 13184,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app-dev/styles/base/layout.css",
-			"settings":
-			{
-				"buffer_size": 10392,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app-dev/styles/base/theme-base.css",
-			"settings":
-			{
-				"buffer_size": 5483,
+				"buffer_size": 11588,
 				"line_ending": "Windows"
 			}
 		}
@@ -400,9 +544,13 @@
 	"command_palette":
 	{
 		"height": 400.0,
-		"last_filter": "js",
+		"last_filter": "html",
 		"selected_items":
 		[
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
 			[
 				"js",
 				"Set Syntax: JavaScript"
@@ -426,10 +574,6 @@
 			[
 				"install",
 				"Package Control: Install Package"
-			],
-			[
-				"html",
-				"Set Syntax: HTML"
 			],
 			[
 				"i",
@@ -461,42 +605,73 @@
 	],
 	"file_history":
 	[
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/iconfonts/iconfont.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/user-avatar.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-index.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-head-before-title.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8-theme.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/index.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/fonts.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-footer.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/index.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-base.css",
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/_trys/html/ie8-filter-compositor (3).html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-base.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-head-after-title.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/reset.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/sample-page-2.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/ie8-test2.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/ie8-test.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/ie8-test4.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/ie8-test4-embed.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-user-info-bar.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/ie8-test4-demo.html",
+		"/D/p/dev/taijs/taijs-website2/gulpfile.js",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-header.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/ie8-test3.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-base-ie8.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/sample-page-list.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/sample-snippets.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-sidebar-0.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8.theme.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-wrap-end.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-chief-part-wrap-end.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-chief-part-wrap-begin.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-wrap-begin.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-content-wrap-begin.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-content-wrap-end.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.ie8.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.ie8.theme.css",
+		"/D/p/dev/taijs/taijs-website2/package.json",
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/package.json",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-index.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-sidebar-0.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-xfzq-page-chief-content-wrap-end.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-xfzq-page-chief-content-wrap-begin.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-xfzq-page-body-wrap-end.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-xfzq-page-body-wrap-begin.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
+		"/C/Users/wulechuan/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/D/Users/wulechuan/Desktop/OneDrive/事业/canvas-ripples.js",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/docs/configure-env-for-gulp.md",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/docs/configure-env-for-gulp-abstract.md",
 		"/D/Users/wulechuan/Desktop/柱状图.js",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-header.html",
-		"/D/p/dev/taijs/taijs-website2/package.json",
-		"/D/p/dev/taijs/taijs-website2/gulpfile.js",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/index.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/package.json",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/node_modules/gulp-cssnano/node_modules/object-assign/package.json",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/node_modules/graceful-fs/fs.js",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/node_modules/graceful-fs/graceful-fs.js",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/node_modules/gulp-cssnano/node_modules/object-assign/index.js",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-base.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.ie8.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.ie8.theme.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/index.html",
-		"/C/Users/wulechuan/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/D/Users/wulechuan/Desktop/OneDrive/事业/canvas-ripples.js",
 		"/D/Users/wulechuan/Desktop/waves.js",
 		"/D/Users/wulechuan/Downloads/install-a-new-font.txt",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/iconfonts/iconfont.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/reset.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-footer.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/index.js",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/fonts.css",
 		"/D/Users/wulechuan/Downloads/china.js",
 		"/D/Users/wulechuan/Downloads/china.json",
 		"/D/p/dev/taijs/taijs-website2/node_modules/gulp-inject/src/inject/index.js",
 		"/D/Users/wulechuan/Desktop/柱状图.js.qq不让直接传js文件",
 		"/D/Users/wulechuan/Desktop/柱状图.js.qq不然直接传js文件",
-		"/D/p/dev/taijs/taijs-website2/app-dev/sample-snippets.html",
 		"/C/Users/wulechuan/AppData/Roaming/Sublime Text 3/Packages/JSHint Gutter/.jshintrc",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/sample-page-2.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
 		"/D/p/dev/private/wlcJS/app-dev/stylesheets/seedlink/seedlink-app-_theme-_default.css",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/warm-up.sublime-project",
 		"/D/p/dev/taijs/taijs-website2/taijs-website2.sublime-project",
@@ -504,11 +679,8 @@
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/.gitattributes",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/taijs-website2.sublime-project",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-popup-layers-wrap-begin.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-head-after-title.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/sample-page-list.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/sample-test-url-overriding.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-body-wrapper-start.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-head-before-title.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-body-start.html",
 		"/D/p/dev/taijs/taijs-website2/app-dist/index.html",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/styles/base/layout.css",
@@ -516,7 +688,6 @@
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/utilities/vector/svg/IE8圆角矩形 - 字号40像素 - 描边1像素 - 圆角半径2像素.svg",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-body-wrapper-end.html",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/sample-snippets.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-sidebar-0.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/module-sidebar-0.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/vendors/bootstrap.css",
 		"/D/p/dev/g.bat",
@@ -561,34 +732,7 @@
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/docs/configure-env.md",
 		"/D/p/dev/private/warm-up/package.json",
 		"/C/d2f42068.ini",
-		"/D/p/dev/npm.bat",
-		"/C/Windows/System32/cmd.exe",
-		"/D/p/dev/private/warm-up/gulpfile-works.js",
-		"/D/p/dev/private/warm-up/app-dev/styles/base/fonts.css",
-		"/D/p/dev/private/warm-up/app-dev/html/page-list.html",
-		"/D/p/dev/private/warm-up/app-dev/html/page-2.html",
-		"/D/p/dev/private/warm-up/app-dist/styles/base.min.css",
-		"/D/p/dev/private/warm-up/app-dev/styles/default.css",
-		"/D/p/dev/private/warm-up/app-dev/styles/reset-eric-meyer.css",
-		"/D/p/dev/taijs/taijs-website/V11/100_MOCK_DATA/experience-gold.json",
-		"/D/p/dev/taijs/taijs-website/V11/100_MOCK_DATA/booking.json",
-		"/D/p/dev/taijs/taijs-website/V11/100_MOCK_DATA/{productCode}.json",
-		"/D/p/dev/private/warm-up/app-dist/html/page-list.html",
-		"/D/p/dev/private/warm-up/app-dist/styles/default.css",
-		"/D/p/dev/private/warm-up/app-dev/index.html",
-		"/D/p/dev/private/warm-up/gulpfile.js",
-		"/D/Users/wulechuan/Downloads/stats.json",
-		"/D/p/dev/private/warm-up/warm-up.sublime-project",
-		"/D/p/dev/private/warm-up/app-dist/scripts/base.js",
-		"/D/p/dev/private/warm-up/app-dev/scripts/page-2.js",
-		"/D/p/dev/private/warm-up/app-dist/index.html",
-		"/D/p/dev/private/warm-up/app-dev/styles/page-2.css",
-		"/D/p/dev/private/warm-up/node_modules/vinyl-fs/node_modules/graceful-fs/.npmignore",
-		"/D/p/dev/private/warm-up/node_modules/graceful-readlink/index.js",
-		"/D/a.txt",
-		"/D/Users/wulechuan/Downloads/迅雷/js代码高亮功能测试",
-		"/D/p/dev/private/warm-up/Gruntfile.js",
-		"/D/p/dev/private/wlcJS/package.json"
+		"/D/p/dev/npm.bat"
 	],
 	"find":
 	{
@@ -599,6 +743,7 @@
 		"height": 104.0,
 		"where_history":
 		[
+			"*.html",
 			"*.css",
 			"*.html",
 			"*.css"
@@ -609,134 +754,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"cssnano",
-			"vert",
-			"white",
-			":hover",
-			"><label   ",
-			"cssnano",
-			"cssno",
-			"cssnano",
-			"animation",
-			"promotion-card-zoom",
-			"promotion-card",
-			"promotion-card-zoom-in",
-			"scaleYUp",
-			"my-asset-menu-showing",
-			", 1",
-			"scale3d",
-			"X(1.0) scaleY",
-			"top",
-			":hover",
-			"sub-menu-shown",
-			":hover",
-			"item",
-			".menu-ite",
-			"item",
-			".menu-item",
-			"><label",
-			"my-asse",
-			"e",
-			"jygl",
-			"wdjf",
-			"jygl",
-			"cccc",
-			"bbbb",
-			"E5F1FF",
-			"CCE3FF",
-			" cast-shadow",
+			"sidebar",
 			"0",
-			"my-assets",
-			"ccc",
-			"7",
-			"top",
-			"left",
-			"5",
-			"r2px",
-			"none",
-			"rect",
-			"6",
-			"left",
-			"><div class=\"ie-shadow\"></div",
-			"ie-bg ",
-			".ie-bg ",
-			"color-transparen",
-			".color-transparent",
-			"before",
-			"Z",
-			"Y",
-			"transform-origin: top; ",
-			"1.5",
-			"translate",
-			"my-asset-menu-showing",
-			"Y",
-			"my-asset-menu-showing",
-			"3D",
-			"my-asset-menu-showing",
-			"promotion-card-zoom-in",
-			"sharp-corner-tr",
-			"before",
+			"block",
+			"-value",
+			"value",
+			"-value",
+			"circled",
+			"flag",
+			"span",
+			"block",
+			"div",
+			"hidden",
+			"argument",
+			"fatrlse",
+			"avatarIframeForOldIE",
+			"cons",
+			".ie-bg",
+			"rectangle",
+			"#ie-user-avatar-borders",
+			"rectangle",
+			"avatarBordersElementClassName",
+			"oldIEMaskEnabled",
+			"filtersEnabled",
+			"avatarElement",
+			"avatarImageElement",
+			"avatarElement",
+			"avatarContainerElement",
+			"avatarContainer",
+			"avatarBordersElementClassName",
+			"avatarBordersElement",
+			"roundedBordersElement",
+			"avatarBordersElementClassName",
+			"roundedBordersElementClassName",
+			"roundedBordersElementId",
+			"roundedBordersElement",
+			"roundedBordersElementId",
+			"2.5",
+			"className",
+			"ie-user-avatar-borders",
+			"borders",
+			"alpha",
+			"borders",
+			"border",
+			"filterIris",
+			"options",
+			"disableOldIEMask",
+			"disableOldIEMaskDefault",
+			"isOldIE",
+			"oldIEMaskEnabled",
+			"avatarImageElement",
+			"options",
+			"avatar",
+			"avatarImage",
+			"avatarImageElement",
+			"avatarImage",
+			"avatarElement",
+			"avatar",
+			"avatar.",
+			"avatar",
+			"IEAvatar",
+			"ieAvatar",
+			"IEAvatar",
+			"ieAvatar",
+			"AvatarController",
+			"avatar.",
+			"IEAvatar",
+			"ieAvatar",
+			"IEAvatar",
+			"ieAvatar",
+			"IEAvatarController",
+			"IEAvatar",
+			"ieAvatar",
+			"IEAvatar",
+			"ieAvatar",
+			"avatar.",
+			"avatar",
+			"AvatarController",
+			"argument",
+			"avatarBordersElement",
+			"avatarIframeForOldIE",
+			"disableOldIEMask",
+			"filterIris",
+			"oldIEMaskEnabled",
+			"filtersEnabled",
+			"avatarImage",
+			"disableOldIEMask",
+			"isOldIE",
+			"filtersEnabled",
+			"disableOldIEMask",
+			"33FFFFFF",
+			"#000000",
+			"33FFFFFF",
+			"edge",
+			"33",
+			"FFFFFF",
+			"Gradient",
 			":hover",
-			".touch-off ",
-			"#my-assets .menu.level-1 > ",
-			"z-index: 10;",
-			"#my-assets .menu.level-1 >",
-			"app-chief-nav",
-			"> .deco",
-			"wrap",
-			"top",
+			"4d",
+			"4dffffff",
+			"9d99b9",
+			"DXImageTransform",
+			"default-font",
+			"default",
+			"default-font",
+			"info-",
+			"time",
+			"borders-alpha-fixer",
+			"margin",
+			"#ie-user-avatar",
+			"img",
+			"filterIris",
+			"argument",
+			"console",
+			"href",
+			"argument",
+			"offsetXPropertyName",
 			"left",
-			"pink",
-			"0",
-			".deco",
-			"app-chief-nav",
-			".deco",
-			"false, ",
-			"true, ",
-			", null, null",
-			"_safelyUpdateProperty",
-			"effectsRegeneration",
-			"ripples",
-			"ripple",
-			"wave",
-			"ripples",
-			"waveCount",
-			"ripples",
-			"Ripples",
-			"ripples",
-			"wave",
-			"ripples",
-			"Ripples",
-			"ripples",
-			"Ripples",
-			"ripples",
-			"distributeSomeValuesToAllripples",
-			"waves",
-			"Waves",
-			"waves",
-			"Wave",
-			"Wave(",
-			"wave",
-			"Wave",
-			"waves",
-			"Waves",
-			"waves",
-			"Waves",
-			"waves",
-			"wSpeedLim2",
-			"randomBe",
-			"ampPeak",
-			"'positive'",
-			"Offset",
-			"waterLevel",
-			"waterLevelOffsetLim1",
-			"waterLe",
-			"waveColorOptions",
-			"distributeSomeValuesToAllWaves",
-			"decideWaveColors",
-			"conso",
-			"waterLevelOffsetLim",
-			"waterLevelOffsetLim1"
+			"margin",
+			"borders",
+			"0.5",
+			"1",
+			"#ie-user-avatar-borders",
+			"margin",
+			" .ie-bg ",
+			"avatarELementClassName",
+			"avatarBordersELementClassName",
+			"11px",
+			"ie-user-avatar"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -744,6 +889,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			" -->",
+			"-->"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -754,160 +901,70 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app-dev/styles/pages/index.css",
+					"file": "app-dev/html-snippets/module-xfzq-user-info-bar.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13302,
+						"buffer_size": 7515,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12162,
-								12162
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 11733.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app-dev/html-snippets/module-app-header.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 13184,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								10818,
-								10818
-							],
-							[
-								11043,
-								11043
-							],
-							[
-								11265,
-								11265
-							],
-							[
-								11487,
-								11487
-							],
-							[
-								11710,
-								11710
-							],
-							[
-								11933,
-								11933
-							],
-							[
-								12153,
-								12153
-							],
-							[
-								12377,
-								12377
-							],
-							[
-								12602,
-								12602
-							],
-							[
-								12828,
-								12828
-							],
-							[
-								13052,
-								13052
+								1130,
+								1135
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 6587.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app-dev/styles/base/layout.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10392,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								10392,
-								10392
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 11186.0,
+						"translation.x": 179.0,
+						"translation.y": 252.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
 				{
-					"buffer": 3,
-					"file": "app-dev/styles/base/theme-base.css",
+					"buffer": 1,
+					"file": "app-dev/styles/pages/xfzq-base.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5483,
+						"buffer_size": 11588,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4307,
-								4307
+								6209,
+								6209
 							]
 						],
 						"settings":
 						{
+							"history_list_is_closing": true,
 							"syntax": "Packages/CSS/CSS.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4637.0,
+						"translation.y": 2999.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -918,7 +975,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 29.0
 	},
 	"input":
 	{
@@ -933,11 +990,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.364032539221,
 			1.0
 		],
 		"rows":
@@ -955,7 +1019,7 @@
 	"project": "taijs-website2.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 54.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -965,15 +1029,107 @@
 		"selected_items":
 		[
 			[
-				"theme",
+				"iconfon",
+				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
+			],
+			[
+				"befor",
+				"app-dev\\html-snippets\\tag-head-before-title.html"
+			],
+			[
+				"use",
+				"app-dev\\html\\user-avatar.html"
+			],
+			[
+				"xfzqi",
+				"app-dev\\html\\xfzq-index.html"
+			],
+			[
+				"usera",
+				"app-dev\\html\\user-avatar.html"
+			],
+			[
+				"ie8",
+				"app-dev\\styles\\base\\base-ie8.css"
+			],
+			[
+				"iethem",
+				"app-dev\\styles\\base\\base-ie8-theme.css"
+			],
+			[
+				"indexc",
+				"app-dev\\styles\\pages\\index.css"
+			],
+			[
+				"font",
+				"app-dev\\styles\\base\\fonts.css"
+			],
+			[
+				"avatar",
+				"app-dev\\html\\user-avatar.html"
+			],
+			[
+				"themba",
 				"app-dev\\styles\\base\\theme-base.css"
+			],
+			[
+				"x",
+				"app-dev\\styles\\pages\\xfzq-base.css"
+			],
+			[
+				"reset",
+				"app-dev\\styles\\base\\reset.css"
+			],
+			[
+				"bas",
+				"app-dev\\styles\\base\\base.css"
+			],
+			[
+				"xbas",
+				"app-dev\\styles\\pages\\xfzq-base.css"
+			],
+			[
+				"xind",
+				"app-dev\\html\\xfzq-index.html"
+			],
+			[
+				"after",
+				"app-dev\\html-snippets\\tag-head-after-title.html"
+			],
+			[
+				"userinfo",
+				"app-dev\\html-snippets\\module-xfzq-user-info-bar.html"
+			],
+			[
+				"ie4",
+				"app-dev\\html\\ie8-test4.html"
+			],
+			[
+				"footer",
+				"app-dev\\html-snippets\\module-app-footer.html"
 			],
 			[
 				"header",
 				"app-dev\\html-snippets\\module-app-header.html"
 			],
 			[
-				"la",
+				"gul",
+				"gulpfile.js"
+			],
+			[
+				"xfin",
+				"app-dev\\html\\xfzq-index.html"
+			],
+			[
+				"test3",
+				"app-dev\\html\\ie8-test3.html"
+			],
+			[
+				"ie8e",
+				"app-dev\\html\\ie8-test3.html"
+			],
+			[
+				"layou",
 				"app-dev\\styles\\base\\layout.css"
 			],
 			[
@@ -981,7 +1137,159 @@
 				"app-dev\\styles\\pages\\index.css"
 			],
 			[
+				"ind",
+				"app-dev\\index.html"
+			],
+			[
+				"fonts",
+				"app-dev\\styles\\base\\fonts.css"
+			],
+			[
+				"base",
+				"app-dev\\styles\\base\\base.css"
+			],
+			[
+				"ie",
+				"app-dev\\html\\ie8-test.html"
+			],
+			[
+				"lay",
+				"app-dev\\styles\\base\\layout.css"
+			],
+			[
+				"ie8th",
+				"app-dev\\styles\\base\\base-ie8-theme.css"
+			],
+			[
+				"sample",
+				"app-dev\\sample-snippets.html"
+			],
+			[
+				"indexht",
+				"app-dev\\html\\xfzq-index.html"
+			],
+			[
+				"before",
+				"app-dev\\html-snippets\\tag-head-before-title.html"
+			],
+			[
+				"indexcss",
+				"app-dev\\styles\\pages\\index.css"
+			],
+			[
+				"gulp",
+				"gulpfile.js"
+			],
+			[
+				"it",
+				"app-dev\\styles\\base\\base-ie8.theme.css"
+			],
+			[
+				"inde",
+				"app-dev\\styles\\pages\\index.css"
+			],
+			[
+				"tag",
+				"app-dev\\html-snippets\\tag-head-after-title.html"
+			],
+			[
+				"xfi",
+				"app-dev\\html\\xfzq-index.html"
+			],
+			[
 				"layout",
+				"app-dev\\styles\\base\\layout.css"
+			],
+			[
+				"them",
+				"app-dev\\styles\\base\\theme-base.css"
+			],
+			[
+				"sidbar",
+				"app-dev\\html-snippets\\module-xfzq-page-sidebar-0.html"
+			],
+			[
+				"chiefp",
+				"app-dev\\html-snippets\\module-xfzq-page-chief-part-wrap-end.html"
+			],
+			[
+				"page",
+				"app-dev\\html-snippets\\module-xfzq-page-wrap-begin.html"
+			],
+			[
+				"content",
+				"app-dev\\html-snippets\\module-xfzq-page-content-wrap-begin.html"
+			],
+			[
+				"pagwr",
+				"app-dev\\html-snippets\\module-xfzq-page-wrap-end.html"
+			],
+			[
+				"pagewrap",
+				"app-dev\\html-snippets\\module-xfzq-page-wrap-begin.html"
+			],
+			[
+				"head",
+				"app-dev\\html-snippets\\module-app-header.html"
+			],
+			[
+				"",
+				"app-dev\\html\\xfzq-index.html"
+			],
+			[
+				"pagecont",
+				"app-dev\\html-snippets\\module-xfzq-page-content-wrap-end.html"
+			],
+			[
+				"pageo",
+				"app-dev\\html-snippets\\module-xfzq-page-content-wrap-begin.html"
+			],
+			[
+				"wrapend",
+				"app-dev\\html-snippets\\module-xfzq-page-wrap-end.html"
+			],
+			[
+				"chiefpart",
+				"app-dev\\html-snippets\\module-xfzq-page-chief-part-wrap-begin.html"
+			],
+			[
+				"sideba",
+				"app-dev\\html-snippets\\module-xfzq-page-sidebar-0.html"
+			],
+			[
+				"xfzqba",
+				"app-dev\\styles\\pages\\xfzq-base.css"
+			],
+			[
+				"pagewrapend",
+				"app-dev\\html-snippets\\module-xfzq-page-wrap-end.html"
+			],
+			[
+				"pagewra",
+				"app-dev\\html-snippets\\module-xfzq-page-wrap-begin.html"
+			],
+			[
+				"snippxfzq",
+				"app-dev\\html-snippets\\module-xfzq-page-wrap-begin.html"
+			],
+			[
+				"in",
+				"app-dev\\index.html"
+			],
+			[
+				"index.h",
+				"app-dev\\html\\xfzq-index.html"
+			],
+			[
+				"basejs",
+				"app-dev\\scripts\\base\\base.js"
+			],
+			[
+				"theme",
+				"app-dev\\styles\\base\\theme-base.css"
+			],
+			[
+				"la",
 				"app-dev\\styles\\base\\layout.css"
 			],
 			[
@@ -993,36 +1301,8 @@
 				"package.json"
 			],
 			[
-				"gulp",
-				"gulpfile.js"
-			],
-			[
-				"inde",
-				"app-dev\\styles\\pages\\index.css"
-			],
-			[
-				"them",
-				"app-dev\\styles\\base\\theme-base.css"
-			],
-			[
-				"base",
-				"app-dev\\styles\\base\\base.css"
-			],
-			[
 				"basie",
 				"app-dev\\styles\\base\\base.ie8.css"
-			],
-			[
-				"ie",
-				"app-dev\\styles\\base\\base.ie8.css"
-			],
-			[
-				"indexcss",
-				"app-dev\\styles\\pages\\index.css"
-			],
-			[
-				"layou",
-				"app-dev\\styles\\base\\layout.css"
 			],
 			[
 				"icon",
@@ -1041,10 +1321,6 @@
 				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
 			],
 			[
-				"indexc",
-				"app-dev\\styles\\pages\\index.css"
-			],
-			[
 				"index.c",
 				"app-dev\\styles\\pages\\index.css"
 			],
@@ -1053,32 +1329,12 @@
 				"app-dev\\html-snippets\\module-app-header.html"
 			],
 			[
-				"lay",
-				"app-dev\\styles\\base\\layout.css"
-			],
-			[
 				"indexj",
 				"app-dev\\scripts\\pages\\index.js"
 			],
 			[
-				"fonts",
-				"app-dev\\styles\\base\\fonts.css"
-			],
-			[
-				"font",
-				"app-dev\\styles\\base\\fonts.css"
-			],
-			[
 				"iconfo",
 				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
-			],
-			[
-				"ind",
-				"app-dev\\styles\\pages\\index.css"
-			],
-			[
-				"footer",
-				"app-dev\\html-snippets\\module-app-footer.html"
 			],
 			[
 				"indexjs",
@@ -1105,10 +1361,6 @@
 				"app-dev\\scripts\\base\\base.js"
 			],
 			[
-				"gul",
-				"gulpfile.js"
-			],
-			[
 				"ico",
 				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
 			],
@@ -1119,14 +1371,6 @@
 			[
 				"snip",
 				"app-dev\\sample-snippets.html"
-			],
-			[
-				"after",
-				"app-dev\\html-snippets\\tag-head-after-title.html"
-			],
-			[
-				"ie8",
-				"app-dev\\styles\\base\\base.ie8.css"
 			],
 			[
 				"afterti",
@@ -1149,10 +1393,6 @@
 				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
 			],
 			[
-				"reset",
-				"app-dev\\styles\\base\\reset.css"
-			],
-			[
 				"confi",
 				"docs\\configure-env-for-gulp-abstract.md"
 			],
@@ -1171,10 +1411,6 @@
 			[
 				"pageli",
 				"app-dev\\html\\page-list.html"
-			],
-			[
-				"page",
-				"app-dev\\html\\page-2.html"
 			]
 		],
 		"width": 0.0
@@ -1201,7 +1437,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},

@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1466384884'); /* IE9*/
-  src: url('iconfont.eot?t=1466384884#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1466384884') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1466384884') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1466384884#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1466660767'); /* IE9*/
+  src: url('iconfont.eot?t=1466660767#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1466660767') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1466660767') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1466660767#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -87,4 +87,7 @@
 .icon-rounded-corners-fill-s40-r11:before { content: "\e68a"; }
 .icon-rounded-corners-fill-s40-r14:before { content: "\e68b"; }
 .icon-rounded-corners-fill-s40-r19:before { content: "\e68c"; }
-.icon-rounded-corners-fill-s40-r0:before { content: "\e660"; }
+.icon-rounded-corners-stroke1-s40-r0:before { content: "\e660"; }
+.icon-rounded-corners-fill-s40-r0:before { content: "\e680"; }
+.icon-ring-s84-stroke2:before { content: "\e623"; }
+.icon-ring-s84-stroke3:before { content: "\e624"; }

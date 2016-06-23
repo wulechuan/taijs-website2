@@ -1,8 +1,8 @@
-html, body, button, textarea, input, select, option, .default-font {
+html, body, button, textarea, input, select, option, .font-default {
 	font-family: 'Microsoft Yahei', 'Lucida Grande', 'SimHei', 'SimSun';
 }
 
-
+.breadcrumbs,
 #header-info-and-links,
 #app-footer-nav p,
 #app-footer-services-info,
