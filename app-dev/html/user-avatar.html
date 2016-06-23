@@ -14,6 +14,13 @@
 <div id="ie-user-avatar-borders"></div>
 <script type="text/javascript">
 	$(function () {
+        var thePerfectPercentage = 70.7;
+        var avatar = new AvatarController(document.getElementById('ie-user-avatar'), {
+            disableOldIEMask: false
+        });
+
+
+
         var qString = location.href.match(/\?.*/);
         if (qString) qString = qString[0].slice(1);
 
@@ -32,11 +39,6 @@
         }
 
 
-
-        var thePerfectPercentage = 70;
-        var avatar = new AvatarController(document.getElementById('ie-user-avatar'), {
-            disableOldIEMask: false
-        });
 
 
         if (imageUri) {
