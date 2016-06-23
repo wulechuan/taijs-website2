@@ -215,13 +215,40 @@
 		#user-info-bar .user-info-block .cell {
 			display: inline-block;
 			vertical-align: middle;
+			font-size: 12px;
+			line-height: 1.5;
+			padding: 5px;
+			margin: -5px;
+			margin-right: 0;
+		}
+		#user-info-bar .user-info-block li.cell {
+		}
+		#user-info-bar .user-info-block li.cell:before {
+			content: '|';
+			padding: 0 1em;
+			margin-left: -5px;
+		}
+		#user-info-bar .user-info-block li.cell:first-child:before {
+			content: none;
+		}
+		#user-info-bar .user-info-block li.cell ul {
+			display: inline-block;
 		}
 
-		#user-info-bar .user-info-block .cell h3 {
-			font-size: 16px;
+		#user-info-bar .user-info-block .cell .iconfont {
+			font-size: 16.5px;
+			padding: 0;
+			margin-left: 0.5em;
+			margin-right: 0em;
+			margin-top: -1px;
+			margin-top: -2px\0;
 		}
-		#user-info-bar .user-info-block .cell p {
-			font-size: 12px;
+
+
+		#user-info-bar .user-info-block .cell h3 {
+			padding: 5px;
+			margin: -5px;
+			font-size: 16px;
 		}
 		#user-info-bar .user-info-block .cell a {
 			padding: 5px;
@@ -230,8 +257,40 @@
 		}
 
 		#user-info-bar .user-info-block .cell.user-name-block {
-			margin-right: 1em; 
+			margin-right: 1em;
 		}
+
+		#user-info-bar .user-info-block .cell.user-profile-items-block .profile-items-list li label {
+			display: none;
+		}
+
+		#user-info-bar .user-info-block .cell.user-rank-block .user-rank-wrap {
+			position: relative;
+		}
+
+		#user-info-bar .user-info-block .cell.user-rank-block .user-rank-wrap .bg,
+		#user-info-bar .user-info-block .cell.user-rank-block .user-rank-wrap .value {
+			text-align: center;
+			width: 2em;
+		}
+
+		#user-info-bar .user-info-block .cell.user-rank-block .user-rank-wrap .bg {
+			position: absolute;
+			left: 0;
+			right: 0;
+			z-index: 0;
+			line-height: 21px;
+		}
+		#user-info-bar .user-info-block .cell.user-rank-block .user-rank-wrap .value {
+			display: inline-block;
+			position: relative;
+			z-index: 1;
+		}
+		#user-info-bar .user-info-block .cell.user-rank-block .user-rank-wrap .iconfont {
+			margin: 0;
+			font-size: 20px;
+		}
+
 
 
 
@@ -308,6 +367,7 @@
 	#page-sidebar-nav {
 		margin: 0;
 		padding: 0;
+		font-size: 14px;
 		}
 
 		#page-sidebar-nav nav {
@@ -332,8 +392,8 @@
 			padding: 0;
 		}
 
-		#page-sidebar-nav .menu-item > a > label:after,
-		#page-sidebar-nav .menu-item > label:after {
+		#page-sidebar-nav .menu-item.has-sub-menu > a > label:after,
+		#page-sidebar-nav .menu-item.has-sub-menu > label:after {
 			font-family: 'iconfont'!important;
 			display: block;
 			position: absolute;
