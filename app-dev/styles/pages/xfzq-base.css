@@ -63,6 +63,7 @@
 			;
 		}
 		#ie-user-avatar-iframe-bg > .ie-bg {
+			display: block!important;
 			margin-left: -960.45px;
 		}
 

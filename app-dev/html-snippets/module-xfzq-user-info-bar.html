@@ -30,29 +30,23 @@
                 disableOldIEMask: false
             });
 
-            // avatar.update('../images/_temp/fake-avatar-5.jpg');
 
+            var testTimeGapSeconds = 1;
+                // avatar.update('../images/_temp/fake-avatar-3.png');
 
-            // var testTimeGapSeconds = 1;
-            //     avatar.update('../images/_temp/fake-avatar-3.png', {
-            //         disableOldIEMask: true
-            //     });
+            setTimeout(function () {
+                avatar.update('../images/_temp/fake-avatar-1.png', {
+                    disableOldIEMask: false
+                });
+            }, testTimeGapSeconds*1000);
 
-            // setTimeout(function () {
-            //     avatar.update('../images/_temp/fake-avatar-1.png', {
-            //         disableOldIEMask: true
-            //     });
-            // }, testTimeGapSeconds*1000);
+            setTimeout(function () {
+                avatar.update('../images/_temp/fake-avatar-2.jpg');
+            }, testTimeGapSeconds*2000);
 
-            // setTimeout(function () {
-            //     avatar.update('../images/_temp/fake-avatar-2.jpg');
-            // }, testTimeGapSeconds*2000);
-
-            // setTimeout(function () {
-            //     avatar.update('../images/_temp/fake-avatar-5.jpg', {
-            //         disableOldIEMask: true
-            //     });
-            // }, testTimeGapSeconds*3000);
+            setTimeout(function () {
+                avatar.update('../images/_temp/fake-avatar-5.jpg');
+            }, testTimeGapSeconds*3000);
 
 
 
