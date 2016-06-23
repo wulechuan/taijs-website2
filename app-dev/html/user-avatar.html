@@ -7,11 +7,10 @@
 	<link rel="stylesheet" href="../styles/base/base.min.css">
     <link rel="stylesheet" href="../styles/pages/xfzq-base.min.css">
 	<script src="../scripts/vendors/jquery-1.12.4.min.js"></script>
-</head>
-<body onload="onPageLoad();">
+</head>             
+<body id="ie-user-iframe-body" onload="onPageLoad();">
 <div id="ie-user-avatar-iframe-bg"><div class="ie-bg" style="display: block;"></div></div>
 <div id="ie-user-avatar"></div>
-<div id="ie-user-avatar-borders"></div>
 <script type="text/javascript">
     function onPageLoad() {
         var options = processParametersPassedIn();
@@ -60,21 +59,22 @@
         }
     }
 
-    function IEAvatar(avatarElement, initOptions) {
-        if (!avatarElement) return undefined;
+    function IEAvatar(avatarContainerElement, initOptions) {
+        if (!avatarContainerElement) return undefined;
 
         initOptions = initOptions || {};
 
         var thePerfectPercentage = 70.7;
-        var roundedBordersElementId= 'ie-user-avatar-borders';
+        var avatarElementClassName= 'avatar';
+        var avatarBordersElementId= 'ie-user-avatar-borders';
 
         if (typeof initOptions.percentage === 'number' && initOptions.percentage <= 100 && initOptions.percentage >= 0) {
             thePerfectPercentage = initOptions.percentage;
         }
 
-        var filtersEnabled = typeof avatarElement.filters === 'object' && navigator.userAgent.search(' MSIE 8.0') > 0;
+        var filtersEnabled = typeof avatarContainerElement.filters === 'object';
         var oldIEMaskEnabled = !initOptions.disableOldIEMask && filtersEnabled;
-        var filterIris, avatarImageElement, roundedBordersElementId;
+        var filterIris, avatarElement, avatarImageElement, avatarBordersElement;
 
         // var offsetXPropertyName = 'left'; // doesn't work
         // var offsetYPropertyName = 'top';  // doesn't work
@@ -94,14 +94,15 @@
         }
 
         function init() {
-            avatarImageElement = $(avatarElement).find('img')[0];
-            roundedBordersElementId = $('#'+roundedBordersElementId)[0];
+            avatarElement        = $(avatarContainerElement).find('.'+avatarElementClassName)[0];
+            avatarImageElement   = $(avatarContainerElement).find('.'+avatarElementClassName+' img')[0];
+            avatarBordersElement = $(avatarContainerElement).find('.'+avatarBordersElementId)[0];
 
-            if (!filtersEnabled) {
-                // we are going to use background image
-                if (avatarImageElement) avatarImageElement.style.display = 'none';
-
-                return;
+            if (!avatarElement) {
+                // console.log('Creating avatarElement...');
+                avatarElement = document.createElement('DIV');
+                avatarElement.className = avatarElementClassName;
+                avatarContainerElement.appendChild(avatarElement);
             }
 
             if (!avatarImageElement) {
@@ -110,36 +111,48 @@
                 avatarElement.appendChild(avatarImageElement);
             }
 
+            if (!avatarBordersElement) {
+                // console.log('Creating avatarBordersElement...');
+                avatarBordersElement = document.createElement('DIV');
+                avatarBordersElement.id = avatarBordersElementId;
+                avatarContainerElement.appendChild(avatarBordersElement);
+            }
+
             avatarImageElement.onload = function (event) {
                 locateImageInside(avatarImageElement, avatarElement);
             };
+        }
+
+        function update(imageUri) {
+            if (avatarImageElement.src === imageUri) return;
 
             if (oldIEMaskEnabled) {
-                try {
-                    filterIris = avatarElement.filters.item('DXImageTransform.Microsoft.Iris');
-                } catch(e) {
-                    avatarElement.style.filter = 'progid:DXImageTransform.Microsoft.Iris(IrisStyle=circle, Motion=out)';
-                    filterIris = avatarElement.filters.item('DXImageTransform.Microsoft.Iris');
+                if (!filterIris) {
+                    try {
+                        filterIris = avatarElement.filters.item('DXImageTransform.Microsoft.Iris');
+                    } catch(e) {
+                        avatarElement.style.filter = 'progid:DXImageTransform.Microsoft.Iris(IrisStyle=circle, Motion=out)';
+                        filterIris = avatarElement.filters.item('DXImageTransform.Microsoft.Iris');
+                    }
                 }
 
                 avatarImageElement.style.display = 'none';
                 filterIris.Apply();
                 filterIris.Percent = thePerfectPercentage;
                 avatarImageElement.style.display = '';
+
+                if (avatarBordersElement) {
+                    avatarBordersElement.className = '';
+                }
             } else {
-                if (roundedBordersElementId) {
-                    roundedBordersElementId.className = 'rectangle';
+                if (filterIris) {
+                    filterIris.Percent = 100;
+                }
+
+                if (avatarBordersElement) {
+                    avatarBordersElement.className = 'rectangle';
                 }
             }
-        }
-
-        function update(imageUri) {
-            if (!filtersEnabled) {
-                avatarElement.style.backgroundImage = 'url('+imageUri+')';
-                return;
-            }
-
-            if (avatarImageElement.src === imageUri) return;
 
             avatarImageElement.style.width  = '';
             avatarImageElement.style.height = '';

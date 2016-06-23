@@ -27,7 +27,7 @@
         (function () {
             var avatar = new Avatar($('#user-info-bar-user-avatar')[0], {
                 imageUri: '../images/_temp/fake-avatar-5.jpg',
-                disableOldIEMask: true
+                disableOldIEMask: false
             });
 
             // avatar.update('../images/_temp/fake-avatar-5.jpg');
@@ -58,8 +58,8 @@
 
 
 
-            function Avatar(avatarContainer, initOptions) {
-                if (!avatarContainer) return undefined;
+            function Avatar(avatarContainerElement, initOptions) {
+                if (!avatarContainerElement) return undefined;
 
                 var avatarElementClassName = 'avatar';
                 var avatarBordersElementClassName = 'avatar-borders';
@@ -67,7 +67,7 @@
 
                 initOptions = initOptions || {};
 
-                var isOldIE = typeof avatarContainer.filters === 'object'
+                var isOldIE = typeof avatarContainerElement.filters === 'object'
                     && navigator.userAgent.search(' MSIE 8.0') > 0
                 ;
 
@@ -90,22 +90,22 @@
 
 
                 function init() {
-                    avatarELement = $(avatarContainer).find('.'+avatarElementClassName)[0];
-                    avatarBordersElement = $(avatarContainer).find('.'+avatarBordersElementClassName)[0];
+                    avatarELement = $(avatarContainerElement).find('.'+avatarElementClassName)[0];
+                    avatarBordersElement = $(avatarContainerElement).find('.'+avatarBordersElementClassName)[0];
 
                     if (!isOldIE) {
                         if (!avatarELement) {
                             // console.log('Creating avatarELement...');
                             avatarELement = document.createElement('DIV');
                             avatarELement.className = avatarElementClassName;
-                            avatarContainer.appendChild(avatarELement);
+                            avatarContainerElement.appendChild(avatarELement);
                         }
 
                         if (!avatarBordersElement) {
                             // console.log('Creating avatarBordersElement...');
                             avatarBordersElement = document.createElement('DIV');
                             avatarBordersElement.className = avatarBordersElementClassName;
-                            avatarContainer.appendChild(avatarBordersElement);
+                            avatarContainerElement.appendChild(avatarBordersElement);
                         }
 
                         return;
@@ -128,7 +128,7 @@
                         disableOldIEMask = !!options.disableOldIEMask && isOldIE;
                     }
 
-                    var avatarIframeForOldIE = $(avatarContainer).find('iframe')[0];
+                    var avatarIframeForOldIE = $(avatarContainerElement).find('iframe')[0];
                     if (avatarIframeForOldIE) {
                         // console.log('removing old iframe...');
                         avatarIframeForOldIE.src = '';
@@ -150,7 +150,7 @@
                     // console.log('new src: "'+newSrc+'"');
                     avatarIframeForOldIE.src = newSrc;
 
-                    avatarContainer.appendChild(avatarIframeForOldIE);
+                    avatarContainerElement.appendChild(avatarIframeForOldIE);
                 }
             }
         })();

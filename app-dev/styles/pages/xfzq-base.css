@@ -6,13 +6,14 @@
 
 		}
 
+		#ie-user-iframe-body,
 		#ie-user-avatar-iframe-bg,
 		#user-info-bar {
-			background-color: #6b76ad; 
+			background-color: #6b76ad;
 			-ms-filter: "\
 				progid:DXImageTransform.Microsoft.Gradient(startColorstr=#6b76ad, endColorstr=#9d99b9)\
 			";
-			    filter: 
+				filter: 
 				progid:DXImageTransform.Microsoft.Gradient(startColorstr=#6b76ad, endColorstr=#9d99b9)
 			;
 		}
@@ -38,6 +39,9 @@
 		#user-info-bar > .width-wrap {
 			height: 106px;
 			padding: 0;
+		}
+		#ie-user-iframe-body {
+			height: 95px;
 		}
 
 		#ie-user-avatar-iframe-bg > .ie-bg,
@@ -67,9 +71,10 @@
 			overflow: hidden;
 			}
 
-			#ie-user-avatar-borders,
-			#user-info-bar-user-avatar .avatar-borders,
-			#user-info-bar-user-avatar {
+			#ie-user-avatar,
+			#ie-user-avatar #ie-user-avatar-borders,
+			#user-info-bar-user-avatar,
+			#user-info-bar-user-avatar .avatar-borders {
 				box-sizing: border-box;
 				position: absolute;
 				width: 84px;
@@ -80,8 +85,28 @@
 				left: 0;
 				top: 11px;
 			}
-			#ie-user-avatar-iframe-bg > .ie-bg {
+			#ie-user-avatar-iframe-bg {
+				margin-left: 0;
 				margin-top: -11px;
+			}
+
+			#ie-user-avatar .avatar,
+			#user-info-bar-user-avatar .avatar {
+				width: 80px;
+				height: 80px;
+			}
+			#ie-user-avatar .avatar,
+			#user-info-bar-user-avatar .avatar {
+				position: absolute;
+				left: 2px;
+				top: 2px;
+			}
+			#ie-user-avatar #ie-user-avatar-borders.rectangle,
+			#user-info-bar-user-avatar .avatar-borders {
+				left: 0;
+				top: 0;
+				border-width: 2px;
+				border-style: solid;
 			}
 
 
@@ -89,22 +114,6 @@
 			#user-info-bar-user-avatar .avatar {
 				border-radius: 1000px;
 			}
-
-			#ie-user-avatar,
-			#user-info-bar-user-avatar .avatar {
-				width: 80px;
-				height: 80px;
-			}
-			#ie-user-avatar,
-			#user-info-bar-user-avatar .avatar {
-				position: absolute;
-				left: 2px;
-				top: 2px;
-			}
-		    #user-info-bar-user-avatar .avatar-borders {
-		    	border-width: 2px;
-		    	border-style: solid;
-		    }
 
 			#user-info-bar-user-avatar .avatar {
 				border: 0;
@@ -115,12 +124,19 @@
 				overflow: hidden;
 			}
 
-		    #user-info-bar-user-avatar > iframe {
-		    	position: absolute;
+
+
+			#user-info-bar-user-avatar > iframe {
+				position: absolute;
 				top: 0;
-		    	left: 0;
-		    	border: 0;
-			    }
+				left: 0;
+				border: 0;
+				}
+
+				#ie-user-avatar {
+					left: 0;
+					top: 0;
+				}
 
 				#ie-user-avatar-iframe-bg {
 					position: absolute;
@@ -135,28 +151,28 @@
 					margin-left: -960.45px;
 				}
 
-				#ie-user-avatar {
+				#ie-user-avatar .avatar {
 					z-index: 1;
-				    filter:  progid:DXImageTransform.Microsoft.Iris(IrisStyle=circle, Motion=out);
+					filter:  progid:DXImageTransform.Microsoft.Iris(IrisStyle=circle, Motion=out);
 				}
-				#ie-user-avatar-borders {
+				#ie-user-avatar #ie-user-avatar-borders {
 					z-index: 2;
 					color: white;
 					top: -1.5px;
 					left: -1.33px;
-				    -ms-filter: "\
-				    	progid:DXImageTransform.Microsoft.Alpha(opacity=60)\
-				    	progid:DXImageTransform.Microsoft.Blur(PixelRadius=1)\
-				    ";
-				    filter:
-				    	progid:DXImageTransform.Microsoft.Alpha(opacity=60)
-				    	progid:DXImageTransform.Microsoft.Blur(PixelRadius=1)
-				    ;
+					-ms-filter: "\
+						progid:DXImageTransform.Microsoft.Alpha(opacity=60)\
+						progid:DXImageTransform.Microsoft.Blur(PixelRadius=1)\
+					";
+					filter:
+						progid:DXImageTransform.Microsoft.Alpha(opacity=60)
+						progid:DXImageTransform.Microsoft.Blur(PixelRadius=1)
+					;
 				}
 				#ie-user-avatar img {
 					position: absolute;
 				}
-				#ie-user-avatar-borders:before {
+				#ie-user-avatar #ie-user-avatar-borders:before {
 					font-family: 'iconfont'!important;
 					content: '\e623';
 					font-size: 82.5px;
@@ -164,15 +180,13 @@
 					position: absolute;
 					top: -2.3px;
 				}
-				#ie-user-avatar-borders.rectangle {
+				#ie-user-avatar #ie-user-avatar-borders.rectangle {
 					top: 0;
 					left: 0;
-					border-width: 2px;
-					border-style: solid;
-				    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=60)";
-				        filter:  progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+					-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=60)";
+						filter:  progid:DXImageTransform.Microsoft.Alpha(opacity=60);
 				}
-				#ie-user-avatar-borders.rectangle:before {
+				#ie-user-avatar #ie-user-avatar-borders.rectangle:before {
 					content: none;
 				}
 
@@ -384,7 +398,7 @@
 
 
 /* ----- theme definition begin ---------------- */
-	#ie-user-avatar-borders.rectangle,
+	#ie-user-avatar #ie-user-avatar-borders.rectangle,
 	#user-info-bar-user-avatar .avatar-borders {
 		border-color: white;
 		border-color: rgba(255, 255, 255, 0.5);
@@ -395,8 +409,8 @@
 	}
 	#user-info-bar .user-info-block .cell a:hover {
 		background-color: rgba(255, 255, 255, 0.2);
-        -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33FFFFFF, endColorStr=#33FFFFFF)";
-            filter:  progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33FFFFFF, endColorStr=#33FFFFFF);
+		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33FFFFFF, endColorStr=#33FFFFFF)";
+			filter:  progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33FFFFFF, endColorStr=#33FFFFFF);
 	}
 
 
