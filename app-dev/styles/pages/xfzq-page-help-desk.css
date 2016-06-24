@@ -1,21 +1,7 @@
 /* ----- layout definition begin --------------- */
-	.tiles {}
-
-		.tiles > a {
-			text-decoration: none;
-		}
-
 	.tile {
 		height: 311px;
 		text-align: center;
-		}
-
-		.tile:before {
-			content: '';
-			display: inline-block;
-			width: 0;
-			height: 100%;
-			vertical-align: middle;
 		}
 
 		.tile > .content {

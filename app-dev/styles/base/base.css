@@ -730,7 +730,10 @@ label.deco-input {
 }
 
 
-.tiles {
+.tiles {}
+
+	.tiles > a {
+		text-decoration: none;
 	}
 
 	.tiles > a > .tile,
