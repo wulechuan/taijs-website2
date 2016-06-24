@@ -195,7 +195,7 @@
 
 		#app-footer-chief-bar .content {
 			position: relative;
-			padding: 36px 0 14px 0;
+			padding: 36px 0 16px 0;
 		}
 
 		#app-footer-chief-bar .content .col {
@@ -206,12 +206,13 @@
 		}
 
 		#app-footer-chief-bar .content > .col {
-			min-height: 150px;
+			min-height: 148px;
 			min-width: 25%;
 		}
 
 		#app-footer-chief-bar .content > .col.col-1 {
 			width: 328px;
+			margin-bottom: -10px;
 		}
 
 		#app-footer-chief-bar .content > .col.col-3 {
@@ -242,7 +243,7 @@
 			}
 
 			#app-footer-nav .col {
-				width: 33%;
+				width: 102px;
 				padding-right: 24px;
 			}
 
@@ -251,7 +252,7 @@
 			}
 
 			#app-footer-qrcodes > .col {
-				width: 33%;
+				width: 147px;
 				border-top: 1px solid transparent;
 				text-align: center;
 			}
@@ -259,7 +260,10 @@
 			#app-footer-qrcodes .qrcode > img {
 				width: 128px;
 				height: 128px;
-				margin: -2px;
+				margin: -3px;
+			}
+			#app-footer-qrcodes .qrcode .figcaption {
+				margin-bottom: -10px;
 			}
 
 		#app-footer-services-info {
@@ -275,16 +279,17 @@
 
 			#app-footer-services-info > ul > li {
 				position: relative;
-				padding-left: 30px;
-				line-height: 40px;
+				padding: 5px 5px 5px 35px;
+				line-height: 37px;
+				margin: -5px;
 			}
 
 			#app-footer-services-info .iconfont {
 				font-size: 20px;
 				position: absolute;
-				left: 0;
-				top: 0;
-				margin: 2px 0;
+				left: 5px;
+				top: 5px;
+				margin: 2px 0 0 0;
 			}
 
 			#app-footer-services-info em {
@@ -295,8 +300,8 @@
 			}
 
 			#app-footer-services-info p a {
-				margin-top: -6px;
-				margin-bottom: -6px;
+				padding-top: 0;
+				padding-bottom: 0;
 			}
 
 			#app-footer-services-info p > em,
