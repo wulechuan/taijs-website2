@@ -32,7 +32,7 @@
 				background-repeat: no-repeat;
 				background-image: url(../../images/pages/xfzq/help-desk/help-desk-sprite.png);
 				background-position-y: 0;
-				transition: background-position 0.33s ease-out;
+				transition: background-position 0.45s ease-out;
 			}
 			a:hover > .tile > .content .icon {
 				background-position-y: -60px;
