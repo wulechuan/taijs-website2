@@ -617,19 +617,24 @@ button label {
 }
 
 
-.info-block .info-locator {
+.floating-layer-set {
     }
 
-	.info-block .info-locator .info.has-border-triangle .ie-border-triangle {
-		left: 0;
-		top: -4px;
-		margin-left: 3px;
+	.floating-layer-set .floating-layer.has-border-triangle .ie-border-triangle {
+		top: 0;
 		z-index: 1!important;
+		clip: rect(0px, 30px, 10px, 0px);
 
-		clip: rect(0px, 30px, 15px, 0px);
+		left: 50%;
+		margin-left: -11px;
 	}
 
-    .info-block .info-locator .info > .ie-shadow {
+	.floating-layer-set.floating-info-set .floating-layer.has-border-triangle .ie-border-triangle {
+		left: 9px;
+		margin-left: 0;
+	}
+
+    .floating-layer-set .floating-layer > .ie-shadow {
     	display: block;
     	position: absolute;
         left: -10px;
@@ -650,7 +655,7 @@ button label {
         ;
     }
 
-    .info-block .info-locator .info > .content {
+    .floating-layer-set .floating-layer > .content {
     	display: block;
     	position: relative;
     	background: inherit!important;

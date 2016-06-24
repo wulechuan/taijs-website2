@@ -74,6 +74,13 @@
 			display: none;
 		}
 
+		#app-header-info-and-links .sns .weixin .floating-layer .columns {
+			margin: -5px;
+		}
+		#app-header-info-and-links .sns .weixin .floating-layer .col {
+			padding: 5px;
+		}
+
 		#app-header-contacts,
 		#app-header-user-account-commands {
 			vertical-align: top;
