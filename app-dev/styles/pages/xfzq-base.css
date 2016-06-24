@@ -300,10 +300,9 @@
 		padding: 10px 0 20px 0;
 	}
 
-	.page-chief-part {
+	.page-chief-part.cast-shadow {
 		position: relative;
 		margin: 10px 0;
-		overflow: visible; /* for ie-shadow */
 
 		box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 		}

@@ -134,7 +134,7 @@ label.deco-input {
 			;
 			zoom: 1;
 		}
-		.shadow-large-and-blur .ie-shadow .ie-shadow-matte {
+		.cast-shadow.shadow-large-and-blur > .ie-shadow .ie-shadow-matte {
 			-ms-filter: "\
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=12, MakeShadow=true, ShadowOpacity=1)\
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=8,  MakeShadow=true, ShadowOpacity=1)\
