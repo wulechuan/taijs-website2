@@ -290,6 +290,11 @@
 				left: 5px;
 				top: 5px;
 				margin: 2px 0 0 0;
+				margin-top: -1px\0;
+			}
+
+			:root #app-footer-services-info .iconfont {
+				margin-top: 1px\0;
 			}
 
 			#app-footer-services-info em {
