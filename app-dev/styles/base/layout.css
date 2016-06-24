@@ -235,9 +235,12 @@
 				margin: -8px -8px 8px -8px;
 			}
 
-			#app-footer-nav a,
-			#app-footer-nav a:hover,
-			#app-footer-nav a:visited {
+			#app-footer-nav h2 a {
+				padding: 8px;
+				margin: -8px;
+			}
+
+			#app-footer-nav a {
 				margin-top: 1px;
 				margin-bottom: 1px;
 			}
