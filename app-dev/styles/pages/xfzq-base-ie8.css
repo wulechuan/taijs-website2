@@ -1,24 +1,30 @@
-#page-sidebar-nav .menu-item > a > label,
-#page-sidebar-nav .menu-item > label {
-	min-height: 21px;
-}
+/* ----- layout definition begin --------------- */
+	#page-sidebar-nav .menu-item > a > label,
+	#page-sidebar-nav .menu-item > label {
+		min-height: 21px;
+	}
 
-.page-chief-part.cast-shadow {
-	overflow: visible; /* for ie-shadow */
-	}
-	.page-chief-part.cast-shadow > .ie-shadow {
-		-ms-filter: "\
-			progid:DXImageTransform.Microsoft.Alpha(Opacity=90)\
-			progid:DXImageTransform.Microsoft.Blur(PixelRadius=2)\
-			progid:DXImageTransform.Microsoft.Blur(PixelRadius=3)\
-		";
-		filter: 
-			progid:DXImageTransform.Microsoft.Alpha(Opacity=90)
-			progid:DXImageTransform.Microsoft.Blur(PixelRadius=2)
-			progid:DXImageTransform.Microsoft.Blur(PixelRadius=3)
-		;
-		left: -11px;
-		top: -9px;
-		right: 5px;
-		bottom: 6px;
-	}
+	.page-chief-part.cast-shadow {
+		overflow: visible; /* for ie-shadow */
+		}
+		.page-chief-part.cast-shadow > .ie-shadow {
+			-ms-filter: "\
+				progid:DXImageTransform.Microsoft.Alpha(Opacity=90)\
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=2)\
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=3)\
+			";
+			filter: 
+				progid:DXImageTransform.Microsoft.Alpha(Opacity=90)
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=2)
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=3)
+			;
+			left: -11px;
+			top: -9px;
+			right: 5px;
+			bottom: 6px;
+		}
+/* ----- layout definition end ----------------- */
+
+
+/* ----- theme definition begin ---------------- */
+/* ----- theme definition end ------------------ */

@@ -1,21 +1,6 @@
 /* ----- layout definition begin --------------- */
 	#user-info-bar {
 		overflow: hidden;
-
-		color: white;
-
-		}
-
-		#ie-user-iframe-body,
-		#ie-user-avatar-iframe-bg,
-		#user-info-bar {
-			background-color: #6b76ad;
-			-ms-filter: "\
-				progid:DXImageTransform.Microsoft.Gradient(startColorstr=#6b76ad, endColorstr=#9d99b9)\
-			";
-				filter: 
-				progid:DXImageTransform.Microsoft.Gradient(startColorstr=#6b76ad, endColorstr=#9d99b9)
-			;
 		}
 
 		#user-info-bar:before {
@@ -26,13 +11,6 @@
 			right: 0;
 			top: 0;
 			bottom: 0;
-			background-image: 
-				url(../../images/pages/xfzq/_common/user-info-bar-bg.png)
-			; /* ie9 doesn't support css gradient */
-			background-image: 
-				url(../../images/pages/xfzq/_common/user-info-bar-bg.png),
-				linear-gradient(to bottom, #6b76ad, #9d99b9)
-			;
 		}
 
 		#ie-user-avatar-iframe-bg,
@@ -49,18 +27,6 @@
 			width: 1920px;
 			margin-left: -960px;
 			left: 50%;
-
-			-ms-filter: "\
-				progid:DXImageTransform.Microsoft.AlphaImageLoader(\
-					src='../../images/pages/xfzq/_common/user-info-bar-bg.png', sizingMethod='crop'\
-				)\
-			";
-
-			filter:
-				progid:DXImageTransform.Microsoft.AlphaImageLoader(
-					src='../../images/pages/xfzq/_common/user-info-bar-bg.png', sizingMethod='crop'
-				)
-			;
 		}
 		#ie-user-avatar-iframe-bg > .ie-bg {
 			display: block!important;
@@ -158,17 +124,8 @@
 				}
 				#ie-user-avatar #ie-user-avatar-borders {
 					z-index: 2;
-					color: white;
 					top: -1.5px;
 					left: -1.33px;
-					-ms-filter: "\
-						progid:DXImageTransform.Microsoft.Alpha(opacity=60)\
-						progid:DXImageTransform.Microsoft.Blur(PixelRadius=1)\
-					";
-					filter:
-						progid:DXImageTransform.Microsoft.Alpha(opacity=60)
-						progid:DXImageTransform.Microsoft.Blur(PixelRadius=1)
-					;
 				}
 				#ie-user-avatar img {
 					position: absolute;
@@ -184,8 +141,6 @@
 				#ie-user-avatar #ie-user-avatar-borders.rectangle {
 					top: 0;
 					left: 0;
-					-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=60)";
-						filter:  progid:DXImageTransform.Microsoft.Alpha(opacity=60);
 				}
 				#ie-user-avatar #ie-user-avatar-borders.rectangle:before {
 					content: none;
@@ -454,20 +409,83 @@
 
 
 /* ----- theme definition begin ---------------- */
-	#ie-user-avatar #ie-user-avatar-borders.rectangle,
-	#user-info-bar-user-avatar .avatar-borders {
-		border-color: white;
-		border-color: rgba(255, 255, 255, 0.5);
-	}
-
-	#user-info-bar .user-info-block .cell a {
+	#user-info-bar {
 		color: white;
-	}
-	#user-info-bar .user-info-block .cell a:hover {
-		background-color: rgba(255, 255, 255, 0.2);
-		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33FFFFFF, endColorStr=#33FFFFFF)";
-			filter:  progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33FFFFFF, endColorStr=#33FFFFFF);
-	}
+		}
+
+		#ie-user-iframe-body,
+		#ie-user-avatar-iframe-bg,
+		#user-info-bar {
+			background-color: #6b76ad;
+			-ms-filter: "\
+				progid:DXImageTransform.Microsoft.Gradient(startColorstr=#6b76ad, endColorstr=#9d99b9)\
+			";
+				filter: 
+				progid:DXImageTransform.Microsoft.Gradient(startColorstr=#6b76ad, endColorstr=#9d99b9)
+			;
+		}
+
+		#user-info-bar:before {
+			background-image: 
+				url(../../images/pages/xfzq/_common/user-info-bar-bg.png)
+			; /* ie9 doesn't support css gradient */
+			background-image: 
+				url(../../images/pages/xfzq/_common/user-info-bar-bg.png),
+				linear-gradient(to bottom, #6b76ad, #9d99b9)
+			;
+		}
+
+		#ie-user-avatar-iframe-bg > .ie-bg,
+		#user-info-bar > .ie-bg {
+			-ms-filter: "\
+				progid:DXImageTransform.Microsoft.AlphaImageLoader(\
+					src='../../images/pages/xfzq/_common/user-info-bar-bg.png',\
+					sizingMethod='crop'\
+				)\
+			";
+			filter:
+				progid:DXImageTransform.Microsoft.AlphaImageLoader(
+					src='../../images/pages/xfzq/_common/user-info-bar-bg.png',
+					sizingMethod='crop'
+				)
+			;
+		}
+
+		#ie-user-avatar #ie-user-avatar-borders {
+			top: -1.5px;
+			left: -1.33px;
+			color: white;
+			-ms-filter: "\
+				progid:DXImageTransform.Microsoft.Alpha(opacity=60)\
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=1)\
+			";
+			filter:
+				progid:DXImageTransform.Microsoft.Alpha(opacity=60)
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=1)
+			;
+		}
+		#ie-user-avatar #ie-user-avatar-borders.rectangle,
+		#user-info-bar-user-avatar .avatar-borders {
+			border-color: white;
+			border-color: rgba(255, 255, 255, 0.5);
+		}
+		#ie-user-avatar #ie-user-avatar-borders.rectangle {
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=60)";
+				filter:  progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+		}
+
+		#user-info-bar .user-info-block .cell a {
+			color: white;
+		}
+		#user-info-bar .user-info-block .cell a:hover {
+			background-color: rgba(255, 255, 255, 0.2);
+			-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33FFFFFF, endColorStr=#33FFFFFF)";
+				filter:  progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33FFFFFF, endColorStr=#33FFFFFF);
+		}
+		:root #user-info-bar .user-info-block .cell a:hover {
+			-ms-filter: none;
+				filter: none;
+		}
 
 
 
