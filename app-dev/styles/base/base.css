@@ -255,9 +255,10 @@ input[type="radio"] {
 			.icon.icon-in-elements.animation .icon-face-1,
 			.icon.icon-in-elements.animation .icon-face-2 {
 				top: 0;
-				animation-duration: 0.6s;
+				animation-duration: 0.8s;
 				animation-timing-function: ease-out;
 				animation-fill-mode: forwards;
+				transition-property: none;
 			}
 
 			.icon.icon-in-elements.animation .icon-face-1 {
@@ -265,6 +266,7 @@ input[type="radio"] {
 				animation-name: icon-face-1-sliding-downwards;
 			}
 			.icon.icon-in-elements.animation .icon-face-2 {
+				
 				transform: translateY(100%);
 				animation-name: icon-face-2-sliding-downwards;
 			}
@@ -280,22 +282,34 @@ input[type="radio"] {
 				top: 0\0; /* for browsers not supporting animation */
 				animation-name: icon-face-2-sliding-upwards;
 			}
+			:root .icon-hover-trigger:hover .icon.icon-in-elements.animation .icon-face-1,
+			:root .icon.icon-in-elements.animation:hover .icon-face-1 {
+				top: 0\0; /* ie9 and ie10, which support both hack and transform */
+			}
+			:root .icon-hover-trigger:hover .icon.icon-in-elements.animation .icon-face-2,
+			:root .icon.icon-in-elements.animation:hover .icon-face-2 {
+				top: 0\0; /* ie9 and ie10, which support both hack and transform */
+			}
 
 			@keyframes icon-face-1-sliding-downwards {
-				0% { transform: translateY(-100%); }
+				0% { transform: translateY(-100%); opacity: 0; visibility: visible; }
+				45% { opacity: 1; visibility: visible; }
 				to { transform: translateY(0px); }
 			}
 			@keyframes icon-face-1-sliding-upwards {
-				0% { transform: translateY(0px); }
+				0% { transform: translateY(0px); opacity: 1; visibility: visible; }
+				45% { opacity: 0; visibility: hidden; }
 				to { transform: translateY(-100%); }
 			}
 
 			@keyframes icon-face-2-sliding-downwards {
-				0% { transform: translateY(0px); }
+				0% { transform: translateY(0px); opacity: 1; visibility: visible; }
+				45% { opacity: 0; visibility: hidden; }
 				to { transform: translateY(100%); }
 			}
 			@keyframes icon-face-2-sliding-upwards {
-				0% { transform: translateY(100%); }
+				0% { transform: translateY(100%); opacity: 0; visibility: hidden; }
+				45% { opacity: 1; visibility: visible; }
 				to { transform: translateY(0px); }
 			}
 
