@@ -258,6 +258,7 @@ label.deco-input {
 	}
 
 .content {
+	background-color: transparent;
 }
 
 
@@ -421,7 +422,7 @@ label.deco-input {
 		background-color: inherit!important;
 		box-shadow: inherit!important;
 		border-radius: 0;
-		z-index: 1;
+		z-index: 0;
 	}
 
 	.has-border-triangle::before,
@@ -475,6 +476,8 @@ label.deco-input {
 
 		border-radius: inherit!important;
 		background-color: inherit!important;
+		background-color: inherit!important;
+		box-shadow: none!important;
 		z-index: 1;
 	}
 
@@ -558,90 +561,138 @@ label.deco-input {
 		padding: 6px;
 	}
 
-.info-block {
-	display: inline-block;
+.floating-layer-set {
 	position: relative;
 	}
-	.info-block > button.icon {
-		display: inline-block;
-		line-height: inherit;
-		vertical-align: top;
-		padding: 0.3em 0.25em 0.2em;
-		margin: 0;
-		background-color: transparent;
-		border: none;
-		cursor: help;
 
-		z-index: 12;
-	}
-
-	.info-block > button.icon .iconfont {
-		margin: 0;
-		font-size: 14px;
-	}
-
-	.info-block .info-locator {
+	.floating-layer-set .locator {
 		display: block;
 		position: absolute;
-		width: 400px;
 		height: 0;
+		left: 50%;
 		overflow: visible!important;
-		margin-top: 10px;
-		margin-left: -10px;
+		margin-top: 15px;
+
+		width: 500px;
+		margin-left: -250px;
+		text-align: center;
+
 		z-index: 10;
-	}
+		}
 
-	.info-block .info-locator:before { /* for stable hover */
-		content: '';
-		display: block;
-		width: 80px;
-		height: 40px;
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		z-index: 0;
-		background-color: transparent!important;
-	}
+		/* for stable hover */
+		.floating-layer-set .locator .ie-hover-patch,
+		.floating-layer-set .locator:before { /* do NOT use double colons, use single colon for ie8 */
+			position: absolute;
+			width: 120px;
+			height: 80px;
+			top: -50px;
+			left: 50%;
+			margin: 0;
+			margin-left: -60px;
+			bottom: 0;
+			z-index: 0;
+		}
+		.floating-layer-set .locator::before { /* for stable hover */
+			content: '';
+			display: block;
+			background-color: transparent!important;
+		}
 
-	.info-block .info-locator .info {
-		position: relative;
+
+	.floating-layer-set .floating-layer {
 		z-index: 2;
-		float: left;
-		width: auto;
+		display: inline-block;
 		text-align: left;
-		font-size: 12px;
-		padding: 0.25em;
+		padding: 0;
 		border-width: 1px;
 		border-style: solid;
-		line-height: 1.33;
-		margin: 0;
-	}
+		margin: 0 auto;
+		line-height: 1.5; /* always reset to a reasonable value */
+		}
 
-	.info-block .info-locator .info.has-border-triangle::before {
-		left: 0;
-		margin-left: 1em;
-	}
+		.floating-layer-set .floating-layer .content {
+			padding: 15px;
+		}
 
-	.info-block .info-locator .info p {
-		padding: 0.25em 0.75em;
-		margin: 0 -0.25em;
-	}
+		.floating-layer-set .floating-layer.has-border-triangle::before {
+			left: 50%;
+			margin-left: -1em;
+		}
 
-	.info-block.info-auto-hide .info-locator {
+		.floating-layer-set .floating-layer p {
+			padding: 0.25em 0.75em;
+			margin: 0 -0.25em;
+		}
+
+
+	.floating-layer-set.layer-auto-hide .locator {
 		display: none;
-	}
+		}
 
-	.info-block.info-auto-hide.info-hover-to-show .info-locator {
-		display: block;
-		visibility: hidden;
-		opacity: 0;
-	}
+		.floating-layer-set.layer-auto-hide.layer-hover-to-show .locator {
+			display: block;
+			visibility: hidden;
+			opacity: 0;
+		}
 
-	.touch-off .info-block.info-auto-hide.info-hover-to-show:hover .info-locator {
-		display: block;
-		visibility: visible;
-		opacity: 1;
-	}
+		.touch-off .floating-layer-set.layer-shown .locator,
+		.touch-off .floating-layer-set.layer-auto-hide.layer-hover-to-show:hover .locator {
+			display: block;
+			visibility: visible;
+			opacity: 1;
+		}
+
+
+	.floating-layer-set.floating-info-set {
+		display: inline-block;
+		}
+
+		.floating-layer-set.floating-info-set > .info-icon {
+			margin: 0;
+			z-index: 12;
+			display: inline-block;
+			vertical-align: top;
+			line-height: inherit;
+			padding: 0.3em 0.25em 0.2em;
+			background-color: transparent;
+			border: none;
+			cursor: help;
+		}
+
+		.floating-layer-set.floating-info-set > .info-icon .iconfont {
+			margin: 0;
+			font-size: 14px;
+		}
+
+
+		.floating-layer-set.floating-info-set .locator {
+			left: 0;
+			text-align: left;
+			margin-top: 10px;
+			margin-left: -10px;
+		}
+		.floating-layer-set.floating-info-set .locator .ie-hover-patch, /* for stable hover */
+		.floating-layer-set.floating-info-set .locator:before { /* for stable hover */
+			left: -30px;
+			top: -40px;
+			margin-left: 0;
+		}
+
+		.floating-layer-set.floating-info-set .floating-layer {
+			font-size: 12px;
+			line-height: 1.33;
+			margin: 0;
+		}
+
+		.floating-layer-set.floating-info-set .floating-layer .content {
+			padding: 0.25em;
+		}
+
+		.floating-layer-set.floating-info-set .floating-layer.has-border-triangle::before {
+			left: 0;
+			margin-left: 1em;
+		}
 
 
 
@@ -668,13 +719,36 @@ label.deco-input {
 
 
 
-.layout-hori {
+.layout-hori > li {
+	display: inline-block;
+}
+
+
+.columns > .col {
+	display: inline-block;
+	vertical-align: top;
+}
+
+
+.tiles {
 	}
 
-	.layout-hori > li {
+	.tiles > a > .tile,
+	.tiles > .tile {
+		box-sizing: border-box;
 		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		margin: 0;
+		border: 0;
 	}
 
+	.tiles.columns-count-3 > a > .tile,
+	.tiles.columns-count-3 > .tile,
+	.tiles > a > .tile,
+	.tiles > .tile {
+		width: 33.333%;
+	}
 
 
 .toolbar {
@@ -682,10 +756,17 @@ label.deco-input {
 	}
 
 	.toolbar > li {
+		position: relative; /* for z-index */
 		display: inline-block;
 		vertical-align: top;
 		padding: 0.5em;
 		margin: -0.5em 0;
+		z-index: 1;
+	}
+
+	.toolbar > li:hover {
+		position: relative;
+		z-index: 2;
 	}
 
 	.toolbar.has-separator > li:before {

@@ -103,7 +103,7 @@
 			#credit-abstract-pane > .ie-bg {
 				display: block\0;
 				background-color: black;
-				filter: alpha(opacity=50);
+				filter: alpha(opacity=25);
 			}
 
 			:root #credit-abstract-pane > .ie-bg {
@@ -153,7 +153,7 @@
 				color: #157dff;
 			}
 
-			#credit-abstract-pane .info-block {
+			#credit-abstract-pane .floating-layer-set {
 				vertical-align: middle;
 			}
 

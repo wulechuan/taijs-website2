@@ -25,10 +25,10 @@ button {
 
     button.bg-transparent > .ie-bg {
         display: none;
-        left: -1px;
-        right: -1px;
-        top: -1px;
-        bottom: -1px;
+        left: -0.66px;
+        right: 0;
+        top: 0;
+        bottom: 0;
         }
         button.bg-transparent > .ie-bg:before,
         button.bg-transparent > .ie-bg:after {
@@ -65,33 +65,37 @@ label.deco-input .ie-borders {
         color: #157fdd;
     }
 
+.has-border-triangle > .ie-border-triangle-shadow-matte,
+.ie-shadow-matte {
+    background-color: black;
+}
 
-.info-block {
+.floating-layer-set {
     }
 
-    .info-block .info-locator .info > .ie-shadow {
-        background-color: #3af;
+    .floating-layer-set.floating-info-set .floating-layer > .ie-border-triangle-shadow-matte,
+    .floating-layer-set.floating-info-set .floating-layer > .ie-shadow .ie-shadow-matte {
+        background-color: #33ddff;
     }
 
-    .info-block .info-locator .info.has-border-triangle .ie-border-triangle {
+    .floating-layer-set.floating-info-set .floating-layer > .ie-shadow .ie-shadow-matte {
+        margin: -10px 8px 8px -10px;
         -ms-filter: "\
-            progid:DXImageTransform.Microsoft.Glow(\
-                color=#ff3399ff,\
-                strength=4\
-            )\
-            progid:DXImageTransform.Microsoft.Matrix(\
-                M11=0.7071067811865474,\
-                M12=-0.7071067811865477,\
-                M21=0.7071067811865477,\
-                M22=0.7071067811865474,\
-                SizingMethod='auto expand'\
-            )\
+            progid:DXImageTransform.Microsoft.Alpha(Opacity=60)\
+            progid:DXImageTransform.Microsoft.Glow(Color=#33ddff, strength=6)\
+            progid:DXImageTransform.Microsoft.Blur(PixelRadius=3)\
         ";
         filter: 
-            progid:DXImageTransform.Microsoft.Glow(
-                color=#ff3399ff,
-                strength=4
-            )
+            progid:DXImageTransform.Microsoft.Alpha(Opacity=60)
+            progid:DXImageTransform.Microsoft.Glow(Color=#33ddff, strength=6)
+            progid:DXImageTransform.Microsoft.Blur(PixelRadius=3)
+        ;
+    }
+    .floating-layer-set.floating-info-set .floating-layer.has-border-triangle > .ie-border-triangle-shadow-matte {
+        left: 0;
+        top: -24px;
+        margin: 0;
+        filter:
             progid:DXImageTransform.Microsoft.Matrix(
                 M11=0.7071067811865474,
                 M12=-0.7071067811865477,
@@ -99,8 +103,13 @@ label.deco-input .ie-borders {
                 M22=0.7071067811865474,
                 SizingMethod='auto expand'
             )
+            progid:DXImageTransform.Microsoft.Alpha(Opacity=25)
+            progid:DXImageTransform.Microsoft.Glow(Color=#33ddff, strength=6)
+            progid:DXImageTransform.Microsoft.Blur(PixelRadius=3)
         ;
     }
+
+
 
 
 #app-chief-nav {

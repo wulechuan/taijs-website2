@@ -259,7 +259,7 @@
 		box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 		}
 
-		.page-chief-part .content {
+		.page-chief-part > .content {
 			position: relative;
 			z-index: 5;
 			margin: 0;

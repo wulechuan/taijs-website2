@@ -38,6 +38,7 @@
 	#app-header-info-and-links {
 		font-size: 12px;
 		border-bottom: 1px solid;
+		z-index: 2; /* for qrcode floating layers */
 		}
 
 		#app-header-info-and-links button {
@@ -50,14 +51,14 @@
 			text-decoration: none;
 		}
 
-		#app-header-info-and-links button .iconfont {
+		#app-header-info-and-links .iconfont {
 			font-size: 21px;
 			width: 21px;
 			vertical-align: top;
 			margin: 0;
 		}
 
-		#app-header-info-and-links button label {
+		#app-header-info-and-links label {
 			display: inline-block;
 			vertical-align: top;
 			margin-left: 0.5em;
@@ -65,12 +66,19 @@
 			padding: 0;
 		}
 
-		#app-header-info-and-links .mobile-app button label {
+		#app-header-info-and-links .mobile-app label {
 			margin-left: 0; /* the icon is very thin/narrow */
 		}
 
-		#app-header-info-and-links .sns button label {
+		#app-header-info-and-links .sns label {
 			display: none;
+		}
+
+		#app-header-info-and-links .sns .weixin .floating-layer .columns {
+			margin: -5px;
+		}
+		#app-header-info-and-links .sns .weixin .floating-layer .col {
+			padding: 5px;
 		}
 
 		#app-header-contacts,
@@ -194,15 +202,11 @@
 		}
 
 		#app-footer-chief-bar .content {
-			position: relative;
 			padding: 36px 0 16px 0;
 		}
 
 		#app-footer-chief-bar .content .col {
 			box-sizing: border-box;
-			position: relative;
-			display: inline-block;
-			vertical-align: top;
 		}
 
 		#app-footer-chief-bar .content > .col {
@@ -235,9 +239,12 @@
 				margin: -8px -8px 8px -8px;
 			}
 
-			#app-footer-nav a,
-			#app-footer-nav a:hover,
-			#app-footer-nav a:visited {
+			#app-footer-nav h2 a {
+				padding: 8px;
+				margin: -8px;
+			}
+
+			#app-footer-nav a {
 				margin-top: 1px;
 				margin-bottom: 1px;
 			}
@@ -251,7 +258,7 @@
 			text-align: center;
 			}
 
-			#app-footer-qrcodes > .col {
+			#app-footer-qrcodes .columns > .col {
 				width: 147px;
 				border-top: 1px solid transparent;
 				text-align: center;
