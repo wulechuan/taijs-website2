@@ -12,9 +12,12 @@
 
 			.tile > .content .icon {
 				width: 60px;
-				height: 60px;
-				line-height: 60px;
-				font-size: 50px;
+				height: 48px;
+				line-height: 48px;
+				font-size: 40px;
+				}
+				.tile > .content.help-category-bank-card .icon {
+					font-size: 50px;
 				}
 
 				.tile > .content .icon.icon-in-bg {
