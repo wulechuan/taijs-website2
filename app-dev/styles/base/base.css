@@ -251,13 +251,27 @@ input[type="radio"] {
 				transition-delay: 0s;
 			}
 
-		.icon.icon-in-elements.animation {}
+		.icon.icon-in-elements.animation {
+			animation-name: icon-hide-icon-faces-for-a-moment;
+			animation-timing-function: ease-in;
+			}
+			@keyframes icon-hide-icon-faces-for-a-moment {
+				/* so that no initial ugly child animations will be seen */
+				0% { opacity: 0; }
+				50% { opacity: 0.05; }
+				to {  opacity: 1; }
+			}
+			.icon.icon-in-elements.animation,
+			.icon.icon-in-elements.animation .icon-face-1,
+			.icon.icon-in-elements.animation .icon-face-2 {
+				animation-duration: 0.45s;
+			}
+
 			.icon.icon-in-elements.animation .icon-face-1,
 			.icon.icon-in-elements.animation .icon-face-2 {
 				top: 0;
 				transition-property: none;
-				animation-duration: 0.45s;
-				animation-timing-function: ease-out;
+				animation-timing-function: ease-in;
 				animation-fill-mode: none;
 			}
 
@@ -303,10 +317,18 @@ input[type="radio"] {
 			}
 
 
-		.icon.icon-in-elements.animation.animation-zoom { overflow: visible; }
+		.icon.icon-in-elements.animation.animation-zoom {
+			overflow: visible;
+			}
+
+			.icon.icon-in-elements.animation.animation-zoom,
 			.icon.icon-in-elements.animation.animation-zoom .icon-face-1,
 			.icon.icon-in-elements.animation.animation-zoom .icon-face-2 {
 				animation-duration: 0.27s;
+			}
+
+			.icon.icon-in-elements.animation.animation-zoom .icon-face-1,
+			.icon.icon-in-elements.animation.animation-zoom .icon-face-2 {
 				animation-timing-function: ease-in-out;
 			}
 
