@@ -20,13 +20,9 @@
 					font-size: 50px;
 				}
 
-				.tile > .content .icon.icon-in-bg {
-					background-image: url(../../images/pages/xfzq/help-desk/help-desk-sprite.png);
-				}
-
 			.tile > .content label {
-				display: inline-block;
-				margin: 2px 0;
+				display: block;
+				margin: 12px 0;
 			}
 
 	.help-category-new-user-guide .icon.icon-in-bg { background-position: 0px 0px; }
