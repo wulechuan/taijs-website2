@@ -21,13 +21,13 @@
 					background-repeat: no-repeat;
 					background-image: url(../../images/pages/xfzq/help-desk/help-desk-sprite.png);
 				}
+				.tile > .content .icon.animation,
+				.tile > .content .icon.transition {
+					background-image: none;
+				}
 
-				.tile > .content .icon.icon-in-elements .icon-1,
-				.tile > .content .icon.icon-in-elements .icon-2,
 				.tile > .content .icon.icon-in-bg {
-					transition-property: background-position, margin-top;
-					transition-duration: 0.45s;
-					transition-timing-function: ease-out;
+					transition: background-position 0.45s ease-out;
 				}
 
 				.tile > .content .icon .icon-1,
@@ -48,21 +48,80 @@
 						height: 100%;
 						margin: 0;
 					}
-					a:hover .tile > .content .icon.icon-in-elements .icon-1,
-					a:hover .tile > .content .icon.icon-in-elements .icon-2 {
-						margin-top: -100%;
-					}
-					.tile > .content .icon.icon-in-elements .icon-1 {
-						top: 0;
-					}
-					.tile > .content .icon.icon-in-elements .icon-2 {
-						top: 100%;
-					}
+
 					.tile > .content .icon.icon-in-elements .iconfont:before {
 						font-size: 40px;
 						margin: 0;
 					}
 
+
+					.tile > .content .icon.icon-in-elements.transition {}
+						.tile > .content .icon.icon-in-elements.transition .icon-1,
+						.tile > .content .icon.icon-in-elements.transition .icon-2 {
+							transition: top 0.45s ease-out;
+						}
+
+						.tile > .content .icon.icon-in-elements.transition .icon-1 {
+							top: 0;
+						}
+						.tile > .content .icon.icon-in-elements.transition .icon-2 {
+							top: 100%;
+						}
+						a:hover .tile > .content .icon.icon-in-elements.transition .icon-1 {
+							top: -100%;
+						}
+						a:hover .tile > .content .icon.icon-in-elements.transition .icon-2 {
+							top: 0;
+						}
+
+
+					.tile > .content .icon.icon-in-elements.animation {}
+						.tile > .content .icon.icon-in-elements.animation .icon-1,
+						.tile > .content .icon.icon-in-elements.animation .icon-2 {
+							top: 0;
+							animation-duration: 0.45s;
+							animation-timing-function: ease-out;
+							animation-fill-mode: forwards;
+						}
+						.tile > .content .icon.icon-in-elements.animation .icon-1 {
+							transform: translateY(0px);
+						}
+						.tile > .content .icon.icon-in-elements.animation .icon-2 {
+							transform: translateY(100%);
+						}
+
+						.tile > .content .icon.icon-in-elements.animation .icon-1 {
+							animation-name: icon-1-sliding-downwards;
+						}
+						.tile > .content .icon.icon-in-elements.animation .icon-2 {
+							animation-name: icon-2-sliding-downwards;
+						}
+						a:hover .tile > .content .icon.icon-in-elements.animation .icon-1 {
+							top: -100%\0; /* for browsers not supporting animation */
+							animation-name: icon-1-sliding-upwards;
+						}
+						a:hover .tile > .content .icon.icon-in-elements.animation .icon-2 {
+							top: 0\0; /* for browsers not supporting animation */
+							animation-name: icon-2-sliding-upwards;
+						}
+
+						@keyframes icon-1-sliding-downwards {
+							0% { transform: translateY(-100%); }
+							to { transform: translateY(0px); }
+						}
+						@keyframes icon-1-sliding-upwards {
+							0% { transform: translateY(0px); }
+							to { transform: translateY(-100%); }
+						}
+
+						@keyframes icon-2-sliding-downwards {
+							0% { transform: translateY(0px); }
+							to { transform: translateY(100%); }
+						}
+						@keyframes icon-2-sliding-upwards {
+							0% { transform: translateY(100%); }
+							to { transform: translateY(0px); }
+						}
 
 
 			.tile > .content label {
