@@ -82,6 +82,7 @@
 	}
 
 	.ie-bg ~ .content {
+		background-color: inherit!important;
 		position: relative;
 		z-index: 1;
 	}
@@ -107,14 +108,16 @@ label.deco-input {
 		color: white;
 		/* background-color: white; */
 	}
-	.cast-shadow > .ie-shadow {
-		display: block;
+	.ie-shadow {
 		position: absolute;
 		left: 0;
 		right: 0;
 		top: 0;
 		bottom: 0;
 		z-index: 0;
+		}
+		.cast-shadow > .ie-shadow {
+			display: block;
 		}
 		.ie-shadow .ie-shadow-matte {
 			display: block;
@@ -125,7 +128,7 @@ label.deco-input {
 			bottom: 0;
 			z-index: 0;
 
-			background-color: black!important;
+			background-color: black;
 			-ms-filter: "\
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=3, MakeShadow=true, ShadowOpacity=0.2)\
 			";
@@ -134,21 +137,21 @@ label.deco-input {
 			;
 			zoom: 1;
 		}
-		.cast-shadow.shadow-large-and-blur > .ie-shadow .ie-shadow-matte {
+		.shadow-large-and-blur > .ie-shadow .ie-shadow-matte {
 			-ms-filter: "\
-				progid:DXImageTransform.Microsoft.Blur(PixelRadius=12, MakeShadow=true, ShadowOpacity=1)\
-				progid:DXImageTransform.Microsoft.Blur(PixelRadius=8,  MakeShadow=true, ShadowOpacity=1)\
-				progid:DXImageTransform.Microsoft.Blur(PixelRadius=4,  MakeShadow=true, ShadowOpacity=0.32)\
+				progid:DXImageTransform.Microsoft.Alpha(Opacity=55)\
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=8)\
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=12)\
 			";
-			filter: 
-				progid:DXImageTransform.Microsoft.Blur(PixelRadius=12, MakeShadow=true, ShadowOpacity=1)
-				progid:DXImageTransform.Microsoft.Blur(PixelRadius=8,  MakeShadow=true, ShadowOpacity=1)
-				progid:DXImageTransform.Microsoft.Blur(PixelRadius=4,  MakeShadow=true, ShadowOpacity=0.32)
+			filter:
+				progid:DXImageTransform.Microsoft.Alpha(Opacity=55)
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=8)
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=12)
 			;
-			left: -34px;
-			top: -34px;
-			right: 17px;
-			bottom: 17px;
+			left: -24px;
+			top: -24px;
+			right: 14px;
+			bottom: 14px;
 		}
 	.cast-shadow > .ie-bg {
 		z-index: 1;
@@ -627,7 +630,27 @@ button label {
 
 		left: 50%;
 		margin-left: -11px;
-	}
+
+        -ms-filter: "\
+            progid:DXImageTransform.Microsoft.Matrix(\
+                M11=0.7071067811865474,\
+                M12=-0.7071067811865477,\
+                M21=0.7071067811865477,\
+                M22=0.7071067811865474,\
+                SizingMethod='auto expand'\
+            )\
+        ";
+        filter: 
+            progid:DXImageTransform.Microsoft.Matrix(
+                M11=0.7071067811865474,
+                M12=-0.7071067811865477,
+                M21=0.7071067811865477,
+                M22=0.7071067811865474,
+                SizingMethod='auto expand'
+            )
+        ;
+    }
+
 
 	.floating-layer-set.floating-info-set .floating-layer.has-border-triangle .ie-border-triangle {
 		left: 9px;
@@ -636,32 +659,43 @@ button label {
 
     .floating-layer-set .floating-layer > .ie-shadow {
     	display: block;
-    	position: absolute;
-        left: -10px;
-        top: -10px;
-        right: 2px;
-        bottom: 2px;
-        z-index: 0!important;
+    }
+    .floating-layer-set .floating-layer > .ie-shadow .ie-shadow-matte {
+        left: -11px;
+        top: -11px;
+        right: 7px;
+        bottom: 7px;
 
         -ms-filter: "\
-            progid:DXImageTransform.Microsoft.Alpha(Opacity=60)\
-            progid:DXImageTransform.Microsoft.Blur(PixelRadius=3)\
-            progid:DXImageTransform.Microsoft.Blur(PixelRadius=2)\
+            progid:DXImageTransform.Microsoft.Alpha(Opacity=25)\
+            progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
+            progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
         ";
         filter: 
-            progid:DXImageTransform.Microsoft.Alpha(Opacity=60)
-            progid:DXImageTransform.Microsoft.Blur(PixelRadius=3)
-            progid:DXImageTransform.Microsoft.Blur(PixelRadius=2)
+            progid:DXImageTransform.Microsoft.Alpha(Opacity=25)
+            progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
+            progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
         ;
     }
 
-    .floating-layer-set .floating-layer > .content {
-    	display: block;
-    	position: relative;
-    	background: inherit!important;
-    	border: 1px solid transparent;
-    	margin: -3px;
+    .floating-layer-set.floating-info-set .floating-layer > .ie-shadow .ie-shadow-matte {
+        left: -10px;
+        top: -10px;
+        right: 8px;
+        bottom: 8px;
+
+        -ms-filter: "\
+            progid:DXImageTransform.Microsoft.Alpha(Opacity=60)\
+            progid:DXImageTransform.Microsoft.Glow(Color=#33ddff, strength=6)\
+            progid:DXImageTransform.Microsoft.Blur(PixelRadius=3)\
+        ";
+        filter: 
+            progid:DXImageTransform.Microsoft.Alpha(Opacity=60)
+            progid:DXImageTransform.Microsoft.Glow(Color=#33ddff, strength=6)
+            progid:DXImageTransform.Microsoft.Blur(PixelRadius=3)
+        ;
     }
+
 
 #app-chief-nav .menu.level-2 > .ie-shadow .ie-shadow-matte,
 #app-chief-nav .menu.level-1 > .menu-item > .deco .ie-shadow-matte,

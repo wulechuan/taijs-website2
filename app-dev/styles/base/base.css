@@ -258,6 +258,7 @@ label.deco-input {
 	}
 
 .content {
+	background-color: inherit;
 }
 
 
@@ -602,11 +603,15 @@ label.deco-input {
 		z-index: 2;
 		display: inline-block;
 		text-align: left;
-		padding: 15px;
+		padding: 0;
 		border-width: 1px;
 		border-style: solid;
 		margin: 0 auto;
 		line-height: 1.5; /* always reset to a reasonable value */
+		}
+
+		.floating-layer-set .floating-layer .content {
+			padding: 15px;
 		}
 
 		.floating-layer-set .floating-layer.has-border-triangle::before {
@@ -621,7 +626,7 @@ label.deco-input {
 
 
 	.floating-layer-set.layer-auto-hide .locator {
-		/* display: none; */
+		display: none;
 		}
 
 		.floating-layer-set.layer-auto-hide.layer-hover-to-show .locator {
@@ -675,9 +680,12 @@ label.deco-input {
 
 		.floating-layer-set.floating-info-set .floating-layer {
 			font-size: 12px;
-			padding: 0.25em;
 			line-height: 1.33;
 			margin: 0;
+		}
+
+		.floating-layer-set.floating-info-set .floating-layer .content {
+			padding: 0.25em;
 		}
 
 		.floating-layer-set.floating-info-set .floating-layer.has-border-triangle::before {
