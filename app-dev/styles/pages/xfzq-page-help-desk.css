@@ -60,15 +60,11 @@
 	.tiles > a,
 	.tiles {
 		color: #666;
-	}
+		}
 
-		.icon-hover-trigger:hover .tile .icon.icon-in-elements .icon-2,
+		.tiles > a .icon.icon-in-elements .icon-2,
 		.tiles > a:hover {
 			color: #157dff;
-		}
-		.tiles > a .icon.icon-in-elements .icon-2,
-		.icon-hover-trigger:hover .tile .icon.icon-in-elements .icon-1 {
-			color: #f4f6f7;
 		}
 
 		.tile.odd {
