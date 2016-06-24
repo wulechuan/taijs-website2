@@ -2,58 +2,69 @@
 	<header>
 		<div class="row" id="app-header-info-and-links">
 			<div class="width-wrap"
-				><div id="app-header-contacts">
-					<div class="tel"
-						><button class="simple-look"
-							><i class="iconfont icon-classic-phone-circled"></i
-							><label><span>服务热线： </span><em>400-928-2299</em></label
-						></button
-					></div>
-					<div class="sns"
-						><ul class="layout-hori" 
-							><li class="qq"
-								><button class="simple-look"><i class="iconfont icon-tencent-qq"    ></i><label>QQ</label></button
-							></li
-							><li class="weixin"
-								><button class="simple-look"><i class="iconfont icon-tencent-weixin"></i><label>微信</label></button
-							></li
-							><li class="weibo"
-								><button class="simple-look"><i class="iconfont icon-sina-weibo"    ></i><label>微博</label></button
-							></li
-						></ul
-					></div>
-					<div class="apps"
-						><ul class="layout-hori" 
-							><li class="mobile-app"
-								><button class="simple-look"><i class="iconfont icon-smart-phone-iphone-4"></i><label>手机客户端</label></button
-							></li
-						></ul
-					></div>
-				</div
+				><div id="app-header-contacts"
+					><ul class="toolbar tel"
+						><li
+							><button class="simple-look"
+								><i class="iconfont icon-classic-phone-circled"></i
+								><label
+									><span>服务热线： </span
+									><em><span>400-928-2299</span></em
+								></label
+							></button
+						></li
+					></ul
+					><ul class="toolbar sns"
+						><li class="qq"
+							><button class="simple-look"><i class="iconfont icon-tencent-qq"    ></i><label>QQ</label></button
+						></li
+						><li class="weixin"
+							><button class="simple-look"><i class="iconfont icon-tencent-weixin"></i><label>微信</label></button
+						></li
+						><li class="weibo"
+							><button class="simple-look"><i class="iconfont icon-sina-weibo"    ></i><label>微博</label></button
+						></li
+					></ul
+					><ul class="toolbar apps"
+						><li class="mobile-app"
+							><button class="simple-look"><i class="iconfont icon-smart-phone-iphone-4"></i><label>手机客户端</label></button
+						></li
+					></ul
+				></div
 
-				><div id="app-header-user-account-commands">
-					<div class="user-guest">
-					</div>
-					<div class="user-known">
-						<div class="user-id"><p><span>您好，</span
-							><em><span id="app-header-user-id">138****0367</span></em
-						></p></div>
-						<div class="menu user-account-commands">
-							<ul>
-								<li class="has-sub-menu"><label>我的账户</label></li>
+				><div id="app-header-user-account-commands" class="user-has-logged-in">
+					<ul class="user-guest toolbar has-separator"
+						><li class="cell"
+							><a href="#"><em>注册</em></a
+						></li
+						><li class="cell"
+							><a href="#">登录</a
+						></li
+					></ul>
+					<ul class="user-known toolbar"
+						><li class="user-id"
+							><span>您好，</span
+							><em><span id="app-header-user-id">用户</span></em
+						></li
+						><li class="user-account-commands">
+							<ul role="menu" class="menu level-1 layout-hori">
+								<li role="menuitem" class="menu-item">
+									<a href="#"><label>我的账户</label></a>
+								</li>
 							</ul>
-						</div>
-						<div class="message-hint"><p><span>消息</span
+						</li
+						><li class="message-hint"
+							><span>消息</span
 							><em>(<span id="app-header-unread-message-count">2</span>)</em
-						></p></div>
-						<div class="logout-block"><a href="#" id="header-logout">退出</a></div>
-					</div>
-					<div class="links">
-						<ul class="layout-hori" 
-							><li><a href="#" target="_blank">免费开户</a></li
-							><li><a href="#" target="_blank">帮助中心</a></li
-						></ul
-					></div>
+						></li
+						><li class="logout-block"
+							><a href="#" id="header-logout">退出</a
+						></li
+					></ul>
+					<ul class="links toolbar"
+						><li><a href="#" target="_blank">免费开户</a></li
+						><li><a href="#" target="_blank">帮助中心</a></li
+					></ul>
 				</div
 			></div>
 		</div>

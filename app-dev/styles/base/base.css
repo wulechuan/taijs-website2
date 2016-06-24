@@ -674,8 +674,30 @@ label.deco-input {
 	}
 
 	.layout-hori > li {
-		position: relative;
 		display: inline-block;
+	}
+
+
+
+.toolbar {
+	display: inline-block;
+	}
+
+	.toolbar > li {
+		display: inline-block;
+		vertical-align: top;
+		padding: 0.5em;
+		margin: -0.5em 0;
+	}
+
+	.toolbar.has-separator > li:before {
+		content: '|';
+		padding: 0 2px;
+	}
+
+	.toolbar > li:first-child:before,
+	.toolbar.has-separator > li:first-child:before {
+		content: none;
 	}
 
 
