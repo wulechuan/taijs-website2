@@ -370,11 +370,6 @@
 		font-size: 14px;
 		}
 
-		#page-sidebar-nav nav {
-			display: block; /* for IE9 */
-			position: relative; /* for IE9 */
-		}
-
 		#page-sidebar-nav .menu {
 			display: block;
 			position: relative;

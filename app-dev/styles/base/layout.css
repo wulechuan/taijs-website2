@@ -381,11 +381,6 @@
 	vertical-align: top;
 	}
 
-	#app-chief-nav nav {
-		display: block; /* for IE9 */
-		position: relative; /* for IE9 */
-	}
-
 	#app-chief-nav .menu-item > a > label,
 	#app-chief-nav .menu-item > label {
 		padding-left: 20px;
