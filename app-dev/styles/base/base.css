@@ -732,15 +732,20 @@ label.deco-input {
 .tiles {
 	}
 
-	.tiles .tile {
+	.tiles > a > .tile,
+	.tiles > .tile {
 		box-sizing: border-box;
-		display: block;
+		display: inline-block;
+		vertical-align: top;
 		position: relative;
-		float: left;
+		margin: 0;
+		border: 0;
 	}
 
-	.tiles.columns-count-3 .tile,
-	.tiles .tile {
+	.tiles.columns-count-3 > a > .tile,
+	.tiles.columns-count-3 > .tile,
+	.tiles > a > .tile,
+	.tiles > .tile {
 		width: 33.333%;
 	}
 

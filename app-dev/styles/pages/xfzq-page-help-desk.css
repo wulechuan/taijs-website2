@@ -1,46 +1,78 @@
-.tile {
-	}
+/* ----- layout definition begin --------------- */
+	.tiles {}
 
-	.tile > a > .content,
-	.tile > .content {
+		.tiles > a {
+			text-decoration: none;
+		}
+
+	.tile {
 		height: 311px;
-		display: table-cell;
-		width: 10000px;
 		text-align: center;
-		vertical-align: middle;
-	}
+		}
 
-	.tile > a {
-		text-decoration: none;
-	}
+		.tile:before {
+			content: '';
+			display: inline-block;
+			width: 0;
+			height: 100%;
+			vertical-align: middle;
+		}
 
-	.tile > a > .content label,
-	.tile > .content label {
-		display: inline-block;
-		margin-top: 60px;
-	}
+		.tile > .content {
+			display: inline-block;
+			vertical-align: middle;
+			background-color: transparent;
+			}
+
+			.tile > .content .icon {
+				display: inline-block;
+				width: 60px;
+				height: 60px;
+
+				background-repeat: no-repeat;
+				background-image: url(../../images/pages/xfzq/help-desk/help-desk-sprite.png);
+				background-position-y: 0;
+				transition: background-position 0.33s ease-out;
+			}
+			a:hover > .tile > .content .icon {
+				background-position-y: -60px;
+			}
+
+			.tile > .content label {
+				display: inline-block;
+				margin: 2px 0;
+			}
+
+
+
+	.help-category-new-user-guide .icon { background-position-x: 0px; }
+	.help-category-faq            .icon { background-position-x: -60px; }
+	.help-category-account        .icon { background-position-x: -120px; }
+	.help-category-funds          .icon { background-position-x: -180px; }
+	.help-category-bank-card      .icon { background-position-x: -240px; }
+	.help-category-taiyx          .icon { background-position-x: -300px; }
+	.help-category-funds-wiki     .icon { background-position-x: -360px; }
+	.help-category-funds-venture  .icon { background-position-x: -420px; }
+	.help-category-services       .icon { background-position-x: -480px; }
+/* ----- layout definition end ----------------- */
 
 
 
 
-
-.tile {
-	}
-
-	.tile > a,
-	.tile > .content {
+/* ----- theme definition begin ---------------- */
+	.tiles > a,
+	.tiles {
 		color: #666;
 	}
-	.tile > a:hover,
-	.tile > .content {
-		color: #157dff;
-	}
-	.tile.odd > a > .content,
-	.tile.odd > .content {
-		background-color: #f4f6f7;
-	}
-	/* :nth-child will cause ie8 css failure; */
-	/* .tile:nth-child(odd) > a > .content,
-	.tile:nth-child(odd) > .content {
-		background-color: #f4f6f7;
-	} */
+
+		.tiles >a:hover {
+			color: #157dff;
+		}
+		.tile.odd {
+			background-color: #f4f6f7;
+		}
+		/* :nth-child will cause ie8 css failure; */
+		/* .tile:nth-child(odd) {
+			background-color: #f4f6f7;
+		} */
+/* ----- theme definition end ------------------ */
