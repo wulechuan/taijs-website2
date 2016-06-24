@@ -729,6 +729,22 @@ label.deco-input {
 }
 
 
+.tiles {
+	}
+
+	.tiles .tile {
+		box-sizing: border-box;
+		display: block;
+		position: relative;
+		float: left;
+	}
+
+	.tiles.columns-count-3 .tile,
+	.tiles .tile {
+		width: 33.333%;
+	}
+
+
 .toolbar {
 	display: inline-block;
 	}
