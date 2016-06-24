@@ -65,6 +65,7 @@ label.deco-input .ie-borders {
         color: #157fdd;
     }
 
+.has-border-triangle > .ie-border-triangle-shadow-matte,
 .ie-shadow-matte {
     background-color: black;
 }
@@ -72,9 +73,42 @@ label.deco-input .ie-borders {
 .floating-layer-set {
     }
 
+    .floating-layer-set.floating-info-set .floating-layer > .ie-border-triangle-shadow-matte,
     .floating-layer-set.floating-info-set .floating-layer > .ie-shadow .ie-shadow-matte {
-        background-color: #6df;
+        background-color: #33ddff;
     }
+
+    .floating-layer-set.floating-info-set .floating-layer > .ie-shadow .ie-shadow-matte {
+        margin: -10px 8px 8px -10px;
+        -ms-filter: "\
+            progid:DXImageTransform.Microsoft.Alpha(Opacity=60)\
+            progid:DXImageTransform.Microsoft.Glow(Color=#33ddff, strength=6)\
+            progid:DXImageTransform.Microsoft.Blur(PixelRadius=3)\
+        ";
+        filter: 
+            progid:DXImageTransform.Microsoft.Alpha(Opacity=60)
+            progid:DXImageTransform.Microsoft.Glow(Color=#33ddff, strength=6)
+            progid:DXImageTransform.Microsoft.Blur(PixelRadius=3)
+        ;
+    }
+    .floating-layer-set.floating-info-set .floating-layer.has-border-triangle > .ie-border-triangle-shadow-matte {
+        left: 0;
+        top: -24px;
+        margin: 0;
+        filter:
+            progid:DXImageTransform.Microsoft.Matrix(
+                M11=0.7071067811865474,
+                M12=-0.7071067811865477,
+                M21=0.7071067811865477,
+                M22=0.7071067811865474,
+                SizingMethod='auto expand'
+            )
+            progid:DXImageTransform.Microsoft.Alpha(Opacity=25)
+            progid:DXImageTransform.Microsoft.Glow(Color=#33ddff, strength=6)
+            progid:DXImageTransform.Microsoft.Blur(PixelRadius=3)
+        ;
+    }
+
 
 
 

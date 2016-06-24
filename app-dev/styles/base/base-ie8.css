@@ -3,51 +3,46 @@
 	position: absolute;
 }
 
-.has-border-triangle > .ie-border-triangle {
-	box-sizing: border-box;
-	display: block;
-	width: 16px;
-	height: 16px;
+.content {
+	background-color: inherit;
+}
 
-	position: absolute;
-	z-index: 1;
-	padding: 0;
-	margin: 0;
-
-	border-width: inherit!important;
-	border-style: inherit!important;
-	border-color: inherit!important;
-	background-color: inherit!important;
-
-	clip: rect(0px, 100px, 10px, 0px);
-
-	-ms-filter: "\
-		progid:DXImageTransform.Microsoft.Matrix(\
-			M11=0.7071067811865474,\
-			M12=-0.7071067811865477,\
-			M21=0.7071067811865477,\
-			M22=0.7071067811865474,\
-			SizingMethod='auto expand'\
-		)\
-	";
-	filter:
-		progid:DXImageTransform.Microsoft.Matrix(
-			M11=0.7071067811865474,
-			M12=-0.7071067811865477,
-			M21=0.7071067811865477,
-			M22=0.7071067811865474,
-			SizingMethod='auto expand'
-		)
-	;
+.has-border-triangle {
 	}
 
+	.has-border-triangle > .ie-border-triangle-shadow-matte,
+	.has-border-triangle > .ie-border-triangle {
+		box-sizing: border-box;
+		position: absolute;
+		display: block;
+		width: 16px;
+		height: 16px;
+		padding: 0;
+		margin: 0;
+	}
+
+	.has-border-triangle > .ie-border-triangle-shadow-matte {
+		z-index: 0;
+	}
+
+	.has-border-triangle > .ie-border-triangle {
+		z-index: 1;
+		border-width: inherit!important;
+		border-style: inherit!important;
+		border-color: inherit!important;
+		background-color: inherit!important;
+	}
+
+	.has-border-triangle > .ie-border-triangle-shadow-matte,
 	.has-border-triangle > .ie-border-triangle,
+	.has-border-triangle.border-triangle-at-top > .ie-border-triangle-shadow-matte,
 	.has-border-triangle.border-triangle-at-top > .ie-border-triangle {
 		left: 50%;
 		top: 0;
 		margin-top: -11px;
 		margin-left: -11px;
 	}
+	.has-border-triangle.border-triangle-at-bottom > .ie-border-triangle-shadow-matte,
 	.has-border-triangle.border-triangle-at-bottom > .ie-border-triangle {
 		left: 50%;
 		top: auto;
@@ -55,6 +50,29 @@
 		margin-bottom: -8px;
 		margin-left: -8px;
 	}
+	.has-border-triangle > .ie-border-triangle {
+		clip: rect(0px, 100px, 10px, 0px);
+
+		-ms-filter: "\
+			progid:DXImageTransform.Microsoft.Matrix(\
+				M11=0.7071067811865474,\
+				M12=-0.7071067811865477,\
+				M21=0.7071067811865477,\
+				M22=0.7071067811865474,\
+				SizingMethod='auto expand'\
+			)\
+		";
+		filter:
+			progid:DXImageTransform.Microsoft.Matrix(
+				M11=0.7071067811865474,
+				M12=-0.7071067811865477,
+				M21=0.7071067811865477,
+				M22=0.7071067811865474,
+				SizingMethod='auto expand'
+			)
+		;
+	}
+
 
 
 .ie-borders,
@@ -622,50 +640,19 @@ button label {
 
 .floating-layer-set {
     }
-
-	.floating-layer-set .floating-layer.has-border-triangle .ie-border-triangle {
-		top: 0;
-		z-index: 1!important;
-		clip: rect(0px, 30px, 10px, 0px);
-
-		left: 50%;
-		margin-left: -11px;
-
-        -ms-filter: "\
-            progid:DXImageTransform.Microsoft.Matrix(\
-                M11=0.7071067811865474,\
-                M12=-0.7071067811865477,\
-                M21=0.7071067811865477,\
-                M22=0.7071067811865474,\
-                SizingMethod='auto expand'\
-            )\
-        ";
-        filter: 
-            progid:DXImageTransform.Microsoft.Matrix(
-                M11=0.7071067811865474,
-                M12=-0.7071067811865477,
-                M21=0.7071067811865477,
-                M22=0.7071067811865474,
-                SizingMethod='auto expand'
-            )
-        ;
+	.floating-layer-set .floating-layer.has-border-triangle > .ie-border-triangle-shadow-matte,
+    .floating-layer-set .floating-layer > .ie-shadow {
+    	display: block;
     }
 
-
-	.floating-layer-set.floating-info-set .floating-layer.has-border-triangle .ie-border-triangle {
+	.floating-layer-set.floating-info-set .floating-layer.has-border-triangle > .ie-border-triangle-shadow-matte,
+	.floating-layer-set.floating-info-set .floating-layer.has-border-triangle > .ie-border-triangle {
 		left: 9px;
 		margin-left: 0;
 	}
 
-    .floating-layer-set .floating-layer > .ie-shadow {
-    	display: block;
-    }
     .floating-layer-set .floating-layer > .ie-shadow .ie-shadow-matte {
-        left: -11px;
-        top: -11px;
-        right: 7px;
-        bottom: 7px;
-
+        margin: -11px 7px 7px -11px;
         -ms-filter: "\
             progid:DXImageTransform.Microsoft.Alpha(Opacity=25)\
             progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
@@ -677,23 +664,34 @@ button label {
             progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
         ;
     }
-
-    .floating-layer-set.floating-info-set .floating-layer > .ie-shadow .ie-shadow-matte {
-        left: -10px;
-        top: -10px;
-        right: 8px;
-        bottom: 8px;
-
-        -ms-filter: "\
-            progid:DXImageTransform.Microsoft.Alpha(Opacity=60)\
-            progid:DXImageTransform.Microsoft.Glow(Color=#33ddff, strength=6)\
-            progid:DXImageTransform.Microsoft.Blur(PixelRadius=3)\
-        ";
-        filter: 
-            progid:DXImageTransform.Microsoft.Alpha(Opacity=60)
-            progid:DXImageTransform.Microsoft.Glow(Color=#33ddff, strength=6)
-            progid:DXImageTransform.Microsoft.Blur(PixelRadius=3)
-        ;
+	.floating-layer-set .floating-layer.has-border-triangle > .ie-border-triangle-shadow-matte {
+		left: 50%;
+		top: 0;
+        margin: -21px 0 0 -20px;
+		-ms-filter: "\
+			progid:DXImageTransform.Microsoft.Matrix(\
+				M11=0.7071067811865474,\
+				M12=-0.7071067811865477\,\
+				M21=0.7071067811865477,\
+				M22=0.7071067811865474,\
+				SizingMethod='auto expand'\
+			)\
+            progid:DXImageTransform.Microsoft.Alpha(Opacity=25)\
+            progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
+            progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
+		";
+		filter:
+			progid:DXImageTransform.Microsoft.Matrix(
+				M11=0.7071067811865474,
+				M12=-0.7071067811865477,
+				M21=0.7071067811865477,
+				M22=0.7071067811865474,
+				SizingMethod='auto expand'
+			)
+            progid:DXImageTransform.Microsoft.Alpha(Opacity=25)
+            progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
+            progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
+		;
     }
 
 
