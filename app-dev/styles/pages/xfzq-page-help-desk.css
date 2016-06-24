@@ -11,119 +11,19 @@
 			}
 
 			.tile > .content .icon {
-				display: inline-block;
 				width: 60px;
 				height: 60px;
 				line-height: 60px;
 				}
 
 				.tile > .content .icon.icon-in-bg {
-					background-repeat: no-repeat;
 					background-image: url(../../images/pages/xfzq/help-desk/help-desk-sprite.png);
 				}
-				.tile > .content .icon.animation,
-				.tile > .content .icon.transition {
-					background-image: none;
+
+				.tile > .content .icon.icon-in-elements .iconfont:before {
+					font-size: 40px;
+					margin: 0;
 				}
-
-				.tile > .content .icon.icon-in-bg {
-					transition: background-position 0.45s ease-out;
-				}
-
-				.tile > .content .icon .icon-1,
-				.tile > .content .icon .icon-2 {
-					display: none;
-				}
-
-				.tile > .content .icon.icon-in-elements {
-					position: relative;
-					overflow: hidden;
-					}
-					.tile > .content .icon.icon-in-elements .icon-1,
-					.tile > .content .icon.icon-in-elements .icon-2 {
-						display: block;
-						position: absolute;
-						left: 0;
-						width: 100%;
-						height: 100%;
-						margin: 0;
-					}
-
-					.tile > .content .icon.icon-in-elements .iconfont:before {
-						font-size: 40px;
-						margin: 0;
-					}
-
-
-					.tile > .content .icon.icon-in-elements.transition {}
-						.tile > .content .icon.icon-in-elements.transition .icon-1,
-						.tile > .content .icon.icon-in-elements.transition .icon-2 {
-							transition: top 0.45s ease-out;
-						}
-
-						.tile > .content .icon.icon-in-elements.transition .icon-1 {
-							top: 0;
-						}
-						.tile > .content .icon.icon-in-elements.transition .icon-2 {
-							top: 100%;
-						}
-						a:hover .tile > .content .icon.icon-in-elements.transition .icon-1 {
-							top: -100%;
-						}
-						a:hover .tile > .content .icon.icon-in-elements.transition .icon-2 {
-							top: 0;
-						}
-
-
-					.tile > .content .icon.icon-in-elements.animation {}
-						.tile > .content .icon.icon-in-elements.animation .icon-1,
-						.tile > .content .icon.icon-in-elements.animation .icon-2 {
-							top: 0;
-							animation-duration: 0.6s;
-							animation-timing-function: ease-out;
-							animation-fill-mode: forwards;
-							transition: color 0.24s ease-in-out;
-						}
-						.tile > .content .icon.icon-in-elements.animation .icon-1 {
-							transform: translateY(0px);
-						}
-						.tile > .content .icon.icon-in-elements.animation .icon-2 {
-							transform: translateY(100%);
-						}
-
-						.tile > .content .icon.icon-in-elements.animation .icon-1 {
-							animation-name: icon-1-sliding-downwards;
-						}
-						.tile > .content .icon.icon-in-elements.animation .icon-2 {
-							animation-name: icon-2-sliding-downwards;
-						}
-						a:hover .tile > .content .icon.icon-in-elements.animation .icon-1 {
-							top: -100%\0; /* for browsers not supporting animation */
-							animation-name: icon-1-sliding-upwards;
-						}
-						a:hover .tile > .content .icon.icon-in-elements.animation .icon-2 {
-							top: 0\0; /* for browsers not supporting animation */
-							animation-name: icon-2-sliding-upwards;
-						}
-
-						@keyframes icon-1-sliding-downwards {
-							0% { transform: translateY(-100%); }
-							to { transform: translateY(0px); }
-						}
-						@keyframes icon-1-sliding-upwards {
-							0% { transform: translateY(0px); }
-							to { transform: translateY(-100%); }
-						}
-
-						@keyframes icon-2-sliding-downwards {
-							0% { transform: translateY(0px); }
-							to { transform: translateY(100%); }
-						}
-						@keyframes icon-2-sliding-upwards {
-							0% { transform: translateY(100%); }
-							to { transform: translateY(0px); }
-						}
-
 
 			.tile > .content label {
 				display: inline-block;
@@ -141,15 +41,15 @@
 	.help-category-services       .icon.icon-in-bg { background-position: -480px 0px; }
 
 	/* firefox does NOT support transition background-position-x or y but does support background-position as a whole */
-	a:hover .help-category-new-user-guide .icon.icon-in-bg { background-position: 0px -60px; }
-	a:hover .help-category-faq            .icon.icon-in-bg { background-position: -60px -60px; }
-	a:hover .help-category-account        .icon.icon-in-bg { background-position: -120px -60px; }
-	a:hover .help-category-funds          .icon.icon-in-bg { background-position: -180px -60px; }
-	a:hover .help-category-bank-card      .icon.icon-in-bg { background-position: -240px -60px; }
-	a:hover .help-category-taiyx          .icon.icon-in-bg { background-position: -300px -60px; }
-	a:hover .help-category-funds-wiki     .icon.icon-in-bg { background-position: -360px -60px; }
-	a:hover .help-category-funds-venture  .icon.icon-in-bg { background-position: -420px -60px; }
-	a:hover .help-category-services       .icon.icon-in-bg { background-position: -480px -60px; }
+	.icon-hover-trigger:hover .help-category-new-user-guide .icon.icon-in-bg { background-position: 0px -60px; }
+	.icon-hover-trigger:hover .help-category-faq            .icon.icon-in-bg { background-position: -60px -60px; }
+	.icon-hover-trigger:hover .help-category-account        .icon.icon-in-bg { background-position: -120px -60px; }
+	.icon-hover-trigger:hover .help-category-funds          .icon.icon-in-bg { background-position: -180px -60px; }
+	.icon-hover-trigger:hover .help-category-bank-card      .icon.icon-in-bg { background-position: -240px -60px; }
+	.icon-hover-trigger:hover .help-category-taiyx          .icon.icon-in-bg { background-position: -300px -60px; }
+	.icon-hover-trigger:hover .help-category-funds-wiki     .icon.icon-in-bg { background-position: -360px -60px; }
+	.icon-hover-trigger:hover .help-category-funds-venture  .icon.icon-in-bg { background-position: -420px -60px; }
+	.icon-hover-trigger:hover .help-category-services       .icon.icon-in-bg { background-position: -480px -60px; }
 /* ----- layout definition end ----------------- */
 
 
@@ -162,12 +62,12 @@
 		color: #666;
 	}
 
-		a:hover .tile .icon.icon-in-elements .icon-2,
+		.icon-hover-trigger:hover .tile .icon.icon-in-elements .icon-2,
 		.tiles > a:hover {
 			color: #157dff;
 		}
-		a .tile .icon.icon-in-elements .icon-2,
-		a:hover .tile .icon.icon-in-elements .icon-1 {
+		.tiles > a .icon.icon-in-elements .icon-2,
+		.icon-hover-trigger:hover .tile .icon.icon-in-elements .icon-1 {
 			color: #f4f6f7;
 		}
 
