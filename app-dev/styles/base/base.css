@@ -256,7 +256,7 @@ input[type="radio"] {
 			.icon.icon-in-elements.animation .icon-face-2 {
 				top: 0;
 				transition-property: none;
-				animation-duration: 0.7s;
+				animation-duration: 0.45s;
 				animation-timing-function: ease-out;
 				animation-fill-mode: none;
 			}
@@ -282,24 +282,24 @@ input[type="radio"] {
 
 			@keyframes icon-face-1-slides-downwards {
 				0% { transform: translateY(-100%); opacity: 0; visibility: hidden; }
-				75% { opacity: 1; visibility: visible; }
-				to { transform: translateY(0px); }
+				50% { opacity: 0.05; }
+				to { transform: translateY(0px); opacity: 1; visibility: visible; }
 			}
 			@keyframes icon-face-1-slides-upwards {
 				0% { transform: translateY(0px); opacity: 1; visibility: visible; }
-				75% { opacity: 0; visibility: hidden; }
-				to { transform: translateY(-100%); }
+				50% { opacity: 0.05; }
+				to { transform: translateY(-100%); opacity: 0; visibility: hidden; }
 			}
 
 			@keyframes icon-face-2-slides-downwards {
 				0% { transform: translateY(0px); opacity: 1; visibility: visible; }
-				75% { opacity: 0; visibility: hidden; }
-				to { transform: translateY(100%); }
+				50% { opacity: 0.05; }
+				to { transform: translateY(100%); opacity: 0; visibility: hidden; }
 			}
 			@keyframes icon-face-2-slides-upwards {
 				0% { transform: translateY(100%); opacity: 0; visibility: hidden; }
-				75% { opacity: 1; visibility: visible; }
-				to { transform: translateY(0px); }
+				50% { opacity: 0.05; }
+				to { transform: translateY(0px); opacity: 1; visibility: visible; }
 			}
 
 
@@ -331,23 +331,23 @@ input[type="radio"] {
 
 			@keyframes icon-face-1-zooms-in {
 				0% { transform: scale(1.0) rotateZ(0deg); opacity: 1; visibility: visible; }
-				50% { opacity: 0.1; }
+				50% { opacity: 0.05; }
 				to { transform: scale(8.0) rotateZ(0deg); opacity: 0; visibility: hidden;  }
 			}
 			@keyframes icon-face-1-zooms-out {
 				0% { transform: scale(8.0) rotateZ(0deg); opacity: 0; visibility: hidden; }
-				25% { opacity: 0.1; }
+				25% { opacity: 0.05; }
 				50% { transform: scale(1.0) rotateZ(0deg); opacity: 0; visibility: visible; }
 			}
 
 			@keyframes icon-face-2-zooms-in {
 				0% { transform: scale(0.1) rotateZ(-0deg); opacity: 0; visibility: hidden; }
-				50% { opacity: 0.1; }
+				50% { opacity: 0.05; }
 				to { transform: scale(1.0) rotateZ(0deg); opacity: 1; visibility: visible; }
 			}
 			@keyframes icon-face-2-zooms-out {
 				0% { transform: scale(1.0) rotateZ(0deg); opacity: 1; visibility: visible; }
-				50% { opacity: 0.1; }
+				50% { opacity: 0.05; }
 				to { transform: scale(0.1) rotateZ(-0deg); opacity: 0; visibility: hidden; }
 			}
 
