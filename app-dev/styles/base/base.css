@@ -191,9 +191,10 @@ input[type="radio"] {
 		}
 
 		.icon.icon-in-elements .iconfont {
+			vertical-align: baseline;
 			font-size: inherit;
-			transition-property: opacity, color;
-			transition-duration: 0.24s, 0.6s;
+			transition-property: opacity, color, visibility;
+			transition-duration: 0.24s, 0.6s, 0.6s;
 		}
 
 		.icon.icon-in-elements .iconfont:before {
@@ -201,20 +202,24 @@ input[type="radio"] {
 		}
 
 		.icon.icon-in-elements .icon-face-1 {
+			visibility: visible;
 			opacity: 1;
 			transition-delay: 0.1s;
 		}
 		.icon.icon-in-elements .icon-face-2 {
+			visibility: hidden;
 			opacity: 0;
 			transition-delay: 0s;
 		}
 		.icon-hover-trigger:hover .icon.icon-in-elements .icon-face-1,
 		.icon.icon-in-elements:hover .icon-face-1 {
+			visibility: hidden;
 			opacity: 0;
 			transition-delay: 0s;
 		}
 		.icon-hover-trigger:hover .icon.icon-in-elements .icon-face-2,
 		.icon.icon-in-elements:hover .icon-face-2 {
+			visibility: visible;
 			opacity: 1;
 			transition-delay: 0.1s;
 		}
@@ -223,8 +228,8 @@ input[type="radio"] {
 		.icon.icon-in-elements.transition {}
 			.icon.icon-in-elements.transition .icon-face-1,
 			.icon.icon-in-elements.transition .icon-face-2 {
-				transition-property: opacity, top;
-				transition-duration: 0.24s, 0.6s;
+				transition-property: opacity, top, visibility;
+				transition-duration: 0.24s, 0.6s, 0.6s;
 			}
 
 			.icon.icon-in-elements.transition .icon-face-1 {
@@ -253,28 +258,25 @@ input[type="radio"] {
 				animation-duration: 0.6s;
 				animation-timing-function: ease-out;
 				animation-fill-mode: forwards;
-				transition-duration: 0.24s;
-			}
-			.icon.icon-in-elements.animation .icon-face-1 {
-				transform: translateY(0px);
-			}
-			.icon.icon-in-elements.animation .icon-face-2 {
-				transform: translateY(100%);
 			}
 
 			.icon.icon-in-elements.animation .icon-face-1 {
+				transform: translateY(0px);
 				animation-name: icon-face-1-sliding-downwards;
 			}
 			.icon.icon-in-elements.animation .icon-face-2 {
+				transform: translateY(100%);
 				animation-name: icon-face-2-sliding-downwards;
 			}
 			.icon-hover-trigger:hover .icon.icon-in-elements.animation .icon-face-1,
 			.icon.icon-in-elements.animation:hover .icon-face-1 {
+				transform: translateY(-100%);
 				top: -100%\0; /* for browsers not supporting animation */
 				animation-name: icon-face-1-sliding-upwards;
 			}
 			.icon-hover-trigger:hover .icon.icon-in-elements.animation .icon-face-2,
 			.icon.icon-in-elements.animation:hover .icon-face-2 {
+				transform: translateY(0px);
 				top: 0\0; /* for browsers not supporting animation */
 				animation-name: icon-face-2-sliding-upwards;
 			}
