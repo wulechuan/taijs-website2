@@ -191,9 +191,10 @@ input[type="radio"] {
 		}
 
 		.icon.icon-in-elements .iconfont {
+			vertical-align: baseline;
 			font-size: inherit;
-			transition-property: opacity, color;
-			transition-duration: 0.24s, 0.6s;
+			transition-property: opacity, color, visibility;
+			transition-duration: 0.24s, 0.6s, 0.6s;
 		}
 
 		.icon.icon-in-elements .iconfont:before {
@@ -201,20 +202,24 @@ input[type="radio"] {
 		}
 
 		.icon.icon-in-elements .icon-face-1 {
+			visibility: visible;
 			opacity: 1;
 			transition-delay: 0.1s;
 		}
 		.icon.icon-in-elements .icon-face-2 {
+			visibility: hidden;
 			opacity: 0;
 			transition-delay: 0s;
 		}
 		.icon-hover-trigger:hover .icon.icon-in-elements .icon-face-1,
 		.icon.icon-in-elements:hover .icon-face-1 {
+			visibility: hidden;
 			opacity: 0;
 			transition-delay: 0s;
 		}
 		.icon-hover-trigger:hover .icon.icon-in-elements .icon-face-2,
 		.icon.icon-in-elements:hover .icon-face-2 {
+			visibility: visible;
 			opacity: 1;
 			transition-delay: 0.1s;
 		}
@@ -223,8 +228,8 @@ input[type="radio"] {
 		.icon.icon-in-elements.transition {}
 			.icon.icon-in-elements.transition .icon-face-1,
 			.icon.icon-in-elements.transition .icon-face-2 {
-				transition-property: opacity, top;
-				transition-duration: 0.24s, 0.6s;
+				transition-property: opacity, top, visibility;
+				transition-duration: 0.24s, 0.6s, 0.6s;
 			}
 
 			.icon.icon-in-elements.transition .icon-face-1 {
@@ -246,55 +251,126 @@ input[type="radio"] {
 				transition-delay: 0s;
 			}
 
-		.icon.icon-in-elements.animation {}
+		.icon.icon-in-elements.animation {
+			animation-name: icon-hide-icon-faces-for-a-moment;
+			animation-timing-function: ease-in;
+			}
+			@keyframes icon-hide-icon-faces-for-a-moment {
+				/* so that no initial ugly child animations will be seen */
+				0% { opacity: 0; }
+				50% { opacity: 0.05; }
+				to {  opacity: 1; }
+			}
+			.icon.icon-in-elements.animation,
+			.icon.icon-in-elements.animation .icon-face-1,
+			.icon.icon-in-elements.animation .icon-face-2 {
+				animation-duration: 0.45s;
+			}
+
 			.icon.icon-in-elements.animation .icon-face-1,
 			.icon.icon-in-elements.animation .icon-face-2 {
 				top: 0;
-				animation-duration: 0.6s;
-				animation-timing-function: ease-out;
-				animation-fill-mode: forwards;
-				transition-duration: 0.24s;
+				transition-property: none;
+				animation-timing-function: ease-in;
+				animation-fill-mode: none;
 			}
+
 			.icon.icon-in-elements.animation .icon-face-1 {
 				transform: translateY(0px);
+				animation-name: icon-face-1-slides-downwards;
 			}
 			.icon.icon-in-elements.animation .icon-face-2 {
 				transform: translateY(100%);
-			}
-
-			.icon.icon-in-elements.animation .icon-face-1 {
-				animation-name: icon-face-1-sliding-downwards;
-			}
-			.icon.icon-in-elements.animation .icon-face-2 {
-				animation-name: icon-face-2-sliding-downwards;
+				animation-name: icon-face-2-slides-downwards;
 			}
 			.icon-hover-trigger:hover .icon.icon-in-elements.animation .icon-face-1,
 			.icon.icon-in-elements.animation:hover .icon-face-1 {
-				top: -100%\0; /* for browsers not supporting animation */
-				animation-name: icon-face-1-sliding-upwards;
+				transform: translateY(-100%);
+				animation-name: icon-face-1-slides-upwards;
 			}
 			.icon-hover-trigger:hover .icon.icon-in-elements.animation .icon-face-2,
 			.icon.icon-in-elements.animation:hover .icon-face-2 {
-				top: 0\0; /* for browsers not supporting animation */
-				animation-name: icon-face-2-sliding-upwards;
+				transform: translateY(0px);
+				animation-name: icon-face-2-slides-upwards;
 			}
 
-			@keyframes icon-face-1-sliding-downwards {
-				0% { transform: translateY(-100%); }
-				to { transform: translateY(0px); }
+			@keyframes icon-face-1-slides-downwards {
+				0% { transform: translateY(-100%); opacity: 0; visibility: hidden; }
+				50% { opacity: 0.05; }
+				to { transform: translateY(0px); opacity: 1; visibility: visible; }
 			}
-			@keyframes icon-face-1-sliding-upwards {
-				0% { transform: translateY(0px); }
-				to { transform: translateY(-100%); }
+			@keyframes icon-face-1-slides-upwards {
+				0% { transform: translateY(0px); opacity: 1; visibility: visible; }
+				50% { opacity: 0.05; }
+				to { transform: translateY(-100%); opacity: 0; visibility: hidden; }
 			}
 
-			@keyframes icon-face-2-sliding-downwards {
-				0% { transform: translateY(0px); }
-				to { transform: translateY(100%); }
+			@keyframes icon-face-2-slides-downwards {
+				0% { transform: translateY(0px); opacity: 1; visibility: visible; }
+				50% { opacity: 0.05; }
+				to { transform: translateY(100%); opacity: 0; visibility: hidden; }
 			}
-			@keyframes icon-face-2-sliding-upwards {
-				0% { transform: translateY(100%); }
-				to { transform: translateY(0px); }
+			@keyframes icon-face-2-slides-upwards {
+				0% { transform: translateY(100%); opacity: 0; visibility: hidden; }
+				50% { opacity: 0.05; }
+				to { transform: translateY(0px); opacity: 1; visibility: visible; }
+			}
+
+
+		.icon.icon-in-elements.animation.animation-zoom {
+			overflow: visible;
+			}
+
+			.icon.icon-in-elements.animation.animation-zoom,
+			.icon.icon-in-elements.animation.animation-zoom .icon-face-1,
+			.icon.icon-in-elements.animation.animation-zoom .icon-face-2 {
+				animation-duration: 0.27s;
+			}
+
+			.icon.icon-in-elements.animation.animation-zoom .icon-face-1,
+			.icon.icon-in-elements.animation.animation-zoom .icon-face-2 {
+				animation-timing-function: ease-in-out;
+			}
+
+			.icon.icon-in-elements.animation.animation-zoom .icon-face-1 {
+				transform: scale(1.0) rotateZ(0deg);
+				animation-name: icon-face-1-zooms-out;
+			}
+			.icon.icon-in-elements.animation.animation-zoom .icon-face-2 {
+				transform: scale(0.1) rotateZ(-0deg);
+				animation-name: icon-face-2-zooms-out;
+			}
+			.icon-hover-trigger:hover .icon.icon-in-elements.animation.animation-zoom .icon-face-1,
+			.icon.icon-in-elements.animation.animation-zoom:hover .icon-face-1 {
+				transform: scale(8.0) rotateZ(0deg);
+				animation-name: icon-face-1-zooms-in;
+			}
+			.icon-hover-trigger:hover .icon.icon-in-elements.animation.animation-zoom .icon-face-2,
+			.icon.icon-in-elements.animation.animation-zoom:hover .icon-face-2 {
+				transform: scale(1.0) rotateZ(0deg);
+				animation-name: icon-face-2-zooms-in;
+			}
+
+			@keyframes icon-face-1-zooms-in {
+				0% { transform: scale(1.0) rotateZ(0deg); opacity: 1; visibility: visible; }
+				50% { opacity: 0.05; }
+				to { transform: scale(8.0) rotateZ(0deg); opacity: 0; visibility: hidden;  }
+			}
+			@keyframes icon-face-1-zooms-out {
+				0% { transform: scale(8.0) rotateZ(0deg); opacity: 0; visibility: hidden; }
+				25% { opacity: 0.05; }
+				50% { transform: scale(1.0) rotateZ(0deg); opacity: 0; visibility: visible; }
+			}
+
+			@keyframes icon-face-2-zooms-in {
+				0% { transform: scale(0.1) rotateZ(-0deg); opacity: 0; visibility: hidden; }
+				50% { opacity: 0.05; }
+				to { transform: scale(1.0) rotateZ(0deg); opacity: 1; visibility: visible; }
+			}
+			@keyframes icon-face-2-zooms-out {
+				0% { transform: scale(1.0) rotateZ(0deg); opacity: 1; visibility: visible; }
+				50% { opacity: 0.05; }
+				to { transform: scale(0.1) rotateZ(-0deg); opacity: 0; visibility: hidden; }
 			}
 
 
