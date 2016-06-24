@@ -120,6 +120,23 @@ label.deco-input {
 	}
 
 
+.icon-hover-trigger:hover .icon.icon-in-elements.transition .icon-face-1,
+.icon-hover-trigger:hover .icon.icon-in-elements.animation  .icon-face-1,
+.icon.icon-in-elements.transition:hover .icon-face-1,
+.icon.icon-in-elements.animation:hover  .icon-face-1,
+.icon {
+	color: #666;
+	}
+
+	.icon.icon-in-elements.transition .icon-face-2,
+	.icon.icon-in-elements.animation  .icon-face-2,
+	.icon.icon-in-elements            .icon-face-2,
+	.icon:hover {
+		color: #157dff;
+	}
+
+
+
 .qrcode {
 	}
 

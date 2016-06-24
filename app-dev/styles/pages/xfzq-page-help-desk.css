@@ -1,21 +1,7 @@
 /* ----- layout definition begin --------------- */
-	.tiles {}
-
-		.tiles > a {
-			text-decoration: none;
-		}
-
 	.tile {
 		height: 311px;
 		text-align: center;
-		}
-
-		.tile:before {
-			content: '';
-			display: inline-block;
-			width: 0;
-			height: 100%;
-			vertical-align: middle;
 		}
 
 		.tile > .content {
@@ -25,40 +11,44 @@
 			}
 
 			.tile > .content .icon {
-				display: inline-block;
 				width: 60px;
-				height: 60px;
+				height: 48px;
+				line-height: 48px;
+				font-size: 40px;
+				}
+				.tile > .content.help-category-bank-card .icon {
+					font-size: 50px;
+				}
 
-				background-repeat: no-repeat;
-				background-image: url(../../images/pages/xfzq/help-desk/help-desk-sprite.png);
-				transition: background-position 0.45s ease-out;
-			}
+				.tile > .content .icon.icon-in-bg {
+					background-image: url(../../images/pages/xfzq/help-desk/help-desk-sprite.png);
+				}
 
 			.tile > .content label {
 				display: inline-block;
 				margin: 2px 0;
 			}
 
-	.help-category-new-user-guide .icon { background-position: 0px 0px; }
-	.help-category-faq            .icon { background-position: -60px 0px; }
-	.help-category-account        .icon { background-position: -120px 0px; }
-	.help-category-funds          .icon { background-position: -180px 0px; }
-	.help-category-bank-card      .icon { background-position: -240px 0px; }
-	.help-category-taiyx          .icon { background-position: -300px 0px; }
-	.help-category-funds-wiki     .icon { background-position: -360px 0px; }
-	.help-category-funds-venture  .icon { background-position: -420px 0px; }
-	.help-category-services       .icon { background-position: -480px 0px; }
+	.help-category-new-user-guide .icon.icon-in-bg { background-position: 0px 0px; }
+	.help-category-faq            .icon.icon-in-bg { background-position: -60px 0px; }
+	.help-category-account        .icon.icon-in-bg { background-position: -120px 0px; }
+	.help-category-funds          .icon.icon-in-bg { background-position: -180px 0px; }
+	.help-category-bank-card      .icon.icon-in-bg { background-position: -240px 0px; }
+	.help-category-taiyx          .icon.icon-in-bg { background-position: -300px 0px; }
+	.help-category-funds-wiki     .icon.icon-in-bg { background-position: -360px 0px; }
+	.help-category-funds-venture  .icon.icon-in-bg { background-position: -420px 0px; }
+	.help-category-services       .icon.icon-in-bg { background-position: -480px 0px; }
 
 	/* firefox does NOT support transition background-position-x or y but does support background-position as a whole */
-	a:hover .help-category-new-user-guide .icon { background-position: 0px -60px; }
-	a:hover .help-category-faq            .icon { background-position: -60px -60px; }
-	a:hover .help-category-account        .icon { background-position: -120px -60px; }
-	a:hover .help-category-funds          .icon { background-position: -180px -60px; }
-	a:hover .help-category-bank-card      .icon { background-position: -240px -60px; }
-	a:hover .help-category-taiyx          .icon { background-position: -300px -60px; }
-	a:hover .help-category-funds-wiki     .icon { background-position: -360px -60px; }
-	a:hover .help-category-funds-venture  .icon { background-position: -420px -60px; }
-	a:hover .help-category-services       .icon { background-position: -480px -60px; }
+	.icon-hover-trigger:hover .help-category-new-user-guide .icon.icon-in-bg { background-position: 0px -60px; }
+	.icon-hover-trigger:hover .help-category-faq            .icon.icon-in-bg { background-position: -60px -60px; }
+	.icon-hover-trigger:hover .help-category-account        .icon.icon-in-bg { background-position: -120px -60px; }
+	.icon-hover-trigger:hover .help-category-funds          .icon.icon-in-bg { background-position: -180px -60px; }
+	.icon-hover-trigger:hover .help-category-bank-card      .icon.icon-in-bg { background-position: -240px -60px; }
+	.icon-hover-trigger:hover .help-category-taiyx          .icon.icon-in-bg { background-position: -300px -60px; }
+	.icon-hover-trigger:hover .help-category-funds-wiki     .icon.icon-in-bg { background-position: -360px -60px; }
+	.icon-hover-trigger:hover .help-category-funds-venture  .icon.icon-in-bg { background-position: -420px -60px; }
+	.icon-hover-trigger:hover .help-category-services       .icon.icon-in-bg { background-position: -480px -60px; }
 /* ----- layout definition end ----------------- */
 
 
@@ -68,11 +58,12 @@
 	.tiles > a,
 	.tiles {
 		color: #666;
-	}
+		}
 
-		.tiles >a:hover {
+		.tiles > a:hover {
 			color: #157dff;
 		}
+
 		.tile.odd {
 			background-color: #f4f6f7;
 		}
