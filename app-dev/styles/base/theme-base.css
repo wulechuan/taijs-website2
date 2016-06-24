@@ -215,6 +215,7 @@ label.deco-input {
 		}
 
 		#app-header-info-and-links a:hover,
+		#app-header-info-and-links .floating-layer:hover button.simple-look,
 		#app-header-info-and-links button.simple-look:hover {
 			background-color: #f3f3f3;
 		}

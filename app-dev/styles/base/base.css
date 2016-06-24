@@ -668,13 +668,15 @@ label.deco-input {
 
 
 
-.layout-hori {
-	}
+.layout-hori > li {
+	display: inline-block;
+}
 
-	.layout-hori > li {
-		display: inline-block;
-	}
 
+.columns > .col {
+	display: inline-block;
+	vertical-align: top;
+}
 
 
 .toolbar {

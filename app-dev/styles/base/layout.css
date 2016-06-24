@@ -38,6 +38,7 @@
 	#app-header-info-and-links {
 		font-size: 12px;
 		border-bottom: 1px solid;
+		z-index: 2; /* for qrcode floating layers */
 		}
 
 		#app-header-info-and-links button {
@@ -194,15 +195,11 @@
 		}
 
 		#app-footer-chief-bar .content {
-			position: relative;
 			padding: 36px 0 16px 0;
 		}
 
 		#app-footer-chief-bar .content .col {
 			box-sizing: border-box;
-			position: relative;
-			display: inline-block;
-			vertical-align: top;
 		}
 
 		#app-footer-chief-bar .content > .col {
@@ -254,7 +251,7 @@
 			text-align: center;
 			}
 
-			#app-footer-qrcodes > .col {
+			#app-footer-qrcodes .columns > .col {
 				width: 147px;
 				border-top: 1px solid transparent;
 				text-align: center;
