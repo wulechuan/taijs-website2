@@ -50,14 +50,14 @@
 			text-decoration: none;
 		}
 
-		#app-header-info-and-links button .iconfont {
+		#app-header-info-and-links .iconfont {
 			font-size: 21px;
 			width: 21px;
 			vertical-align: top;
 			margin: 0;
 		}
 
-		#app-header-info-and-links button label {
+		#app-header-info-and-links label {
 			display: inline-block;
 			vertical-align: top;
 			margin-left: 0.5em;
@@ -65,11 +65,11 @@
 			padding: 0;
 		}
 
-		#app-header-info-and-links .mobile-app button label {
+		#app-header-info-and-links .mobile-app label {
 			margin-left: 0; /* the icon is very thin/narrow */
 		}
 
-		#app-header-info-and-links .sns button label {
+		#app-header-info-and-links .sns label {
 			display: none;
 		}
 
