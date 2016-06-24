@@ -83,14 +83,14 @@
 		}
 
 		#app-header-contacts {
-			left: -9px;
+			left: -10px;
 		}
 		#app-header-user-account-commands {
-			right: -9px;
+			right: -10px;
 		}
 		#app-header-contacts .toolbar > li,
 		#app-header-user-account-commands .toolbar > li {
-			padding: 0 9px;
+			padding: 0 10px;
 			margin-top: 0;
 			margin-bottom: 0;
 		}
@@ -103,8 +103,8 @@
 		#app-header-user-account-commands a {
 			display: inline-block;
 			vertical-align: top;
-			padding: 0 9px;
-			margin: 0 -9px;
+			padding: 0 10px;
+			margin: 0 -10px;
 		}
 		#app-header-user-account-commands .menu.level-1 > .menu-item:before {
 			content: none;
@@ -360,7 +360,7 @@
 
 
 #app-chief-nav {
-	margin: 0 0 0 130px;
+	margin: 0 0 0 137px;
 	padding: 11px 11px;
 	display: inline-block;
 	vertical-align: top;
