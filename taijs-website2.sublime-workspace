@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"rotat",
+				"rotate()"
+			],
+			[
+				"vi",
+				"visible"
+			],
+			[
+				"v",
+				"vertical-align"
+			],
+			[
 				"fon",
 				"font-size"
 			],
@@ -116,10 +128,6 @@
 				"iframe-dd"
 			],
 			[
-				"v",
-				"visible"
-			],
-			[
 				"pad",
 				"padding"
 			],
@@ -131,6 +139,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app-dev/styles/base/base.css",
+			"settings":
+			{
+				"buffer_size": 26304,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app-dev/html/xfzq-help-desk.html",
+			"settings":
+			{
+				"buffer_size": 6327,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -345,6 +369,43 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"hide-fac",
+			"-2",
+			"0.1;",
+			"0.1",
+			" animation-zoom",
+			"rotate",
+			"25",
+			"0.15",
+			"0.85",
+			"75%",
+			"0.2",
+			"5.0",
+			"180deg",
+			"720",
+			"45%",
+			"45",
+			" scale(",
+			"scale(",
+			"); o",
+			"scale",
+			"zoom-",
+			"zoom",
+			"sliding",
+			"animation",
+			"translateY",
+			"sliding-downwards",
+			".animation",
+			"visibility: visible; ",
+			"visibility: hidden; ",
+			"visibility: visible; ",
+			".icon-hover-trigger:hover .icon.icon-in-elements.animation .icon-face-1",
+			" /* for browsers not supporting animation */",
+			"35",
+			"visibility: visible; ",
+			"hidden",
+			"iconfont",
+			"icon",
 			".iconfont",
 			".icon,",
 			".icon",
@@ -435,44 +496,7 @@
 			"ship-all-temp-files",
 			"finishing-after-shipping",
 			"ship-all-temp-files",
-			"../",
-			"Title",
-			"title",
-			"Title",
-			"title",
-			"pathSrcRoot+'/html-snippets/",
-			"snippetsRoot",
-			"snippetStreamHead",
-			", {read: true}",
-			"fileObject",
-			"-inject-snippets",
-			" transform: getHtmlSnippetStrin",
-			"allHtmlFileGlobs",
-			"{{ext}}",
-			"},\n      transform: getHtmlSnippetString",
-			"() => {\n\n      }",
-			"starttag:",
-			"inject",
-			"sources",
-			"dfsddsg dsf",
-			"Index",
-			"\\u",
-			".r-tmnl,",
-			",",
-			"top: 0",
-			"cssnano",
-			"top: 0",
-			"1.5",
-			"1.5em",
-			"blue",
-			"terminal-",
-			"terminal",
-			"before",
-			".terminal-1",
-			"terminal",
-			".r-cnr",
-			"before",
-			"1:"
+			"../"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -490,8 +514,108 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app-dev/styles/base/base.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 26304,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7919,
+								7919
+							],
+							[
+								7971,
+								7971
+							],
+							[
+								8036,
+								8036
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS3/CSS3.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6056.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app-dev/html/xfzq-help-desk.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6327,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1394,
+								1409
+							],
+							[
+								1893,
+								1908
+							],
+							[
+								2435,
+								2450
+							],
+							[
+								2969,
+								2984
+							],
+							[
+								3533,
+								3548
+							],
+							[
+								4043,
+								4058
+							],
+							[
+								4544,
+								4559
+							],
+							[
+								5061,
+								5076
+							],
+							[
+								5605,
+								5620
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 800.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -543,6 +667,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"helde",
+				"app-dev\\html\\xfzq-help-desk.html"
+			],
 			[
 				"base",
 				"app-dev\\styles\\base\\base.css"
