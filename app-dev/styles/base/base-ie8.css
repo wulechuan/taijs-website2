@@ -157,12 +157,12 @@ label.deco-input {
 		}
 		.shadow-large-and-blur > .ie-shadow .ie-shadow-matte {
 			-ms-filter: "\
-				progid:DXImageTransform.Microsoft.Alpha(Opacity=55)\
+				progid:DXImageTransform.Microsoft.Alpha(Opacity=36)\
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=8)\
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=12)\
 			";
 			filter:
-				progid:DXImageTransform.Microsoft.Alpha(Opacity=55)
+				progid:DXImageTransform.Microsoft.Alpha(Opacity=36)
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=8)
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=12)
 			;
