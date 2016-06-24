@@ -14,15 +14,11 @@
 				width: 60px;
 				height: 60px;
 				line-height: 60px;
+				font-size: 50px;
 				}
 
 				.tile > .content .icon.icon-in-bg {
 					background-image: url(../../images/pages/xfzq/help-desk/help-desk-sprite.png);
-				}
-
-				.tile > .content .icon.icon-in-elements .iconfont:before {
-					font-size: 40px;
-					margin: 0;
 				}
 
 			.tile > .content label {
@@ -56,13 +52,11 @@
 
 
 /* ----- theme definition begin ---------------- */
-	.tile .icon.icon-in-elements .icon-1,
 	.tiles > a,
 	.tiles {
 		color: #666;
 		}
 
-		.tiles > a .icon.icon-in-elements .icon-2,
 		.tiles > a:hover {
 			color: #157dff;
 		}
