@@ -25,10 +25,10 @@ button {
 
     button.bg-transparent > .ie-bg {
         display: none;
-        left: -1px;
-        right: -1px;
-        top: -1px;
-        bottom: -1px;
+        left: -0.66px;
+        right: 0;
+        top: 0;
+        bottom: 0;
         }
         button.bg-transparent > .ie-bg:before,
         button.bg-transparent > .ie-bg:after {

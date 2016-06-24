@@ -640,6 +640,15 @@ button label {
 
 .floating-layer-set {
     }
+
+	.floating-layer-set .locator .ie-hover-patch { /* for stable hover */
+		display: block;
+
+		/* background-color: transprant wont bring us a stable hover interaction */
+		background-color: black;
+		filter: alpha(opacity=0);
+	}
+
 	.floating-layer-set .floating-layer.has-border-triangle > .ie-border-triangle-shadow-matte,
     .floating-layer-set .floating-layer > .ie-shadow {
     	display: block;

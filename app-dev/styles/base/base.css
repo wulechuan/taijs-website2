@@ -580,9 +580,9 @@ label.deco-input {
 		z-index: 10;
 		}
 
-		.floating-layer-set .locator .ie-hover-patch, /* for stable hover */
-		.floating-layer-set .locator:before { /* for stable hover */
-			display: block;
+		/* for stable hover */
+		.floating-layer-set .locator .ie-hover-patch,
+		.floating-layer-set .locator:before { /* do NOT use double colons, use single colon for ie8 */
 			position: absolute;
 			width: 120px;
 			height: 80px;
@@ -592,10 +592,11 @@ label.deco-input {
 			margin-left: -60px;
 			bottom: 0;
 			z-index: 0;
-			background-color: transparent!important;
 		}
 		.floating-layer-set .locator::before { /* for stable hover */
 			content: '';
+			display: block;
+			background-color: transparent!important;
 		}
 
 
