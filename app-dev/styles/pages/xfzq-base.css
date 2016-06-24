@@ -251,8 +251,9 @@
 			font-size: 16px;
 		}
 		#user-info-bar .user-info-block .cell a {
-			padding: 5px;
-			position: relative;
+			display: inline-block;
+			padding: 3px 5px;
+			margin: -3px 0;
 			text-decoration: none;
 		}
 
