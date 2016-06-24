@@ -79,9 +79,10 @@
 						.tile > .content .icon.icon-in-elements.animation .icon-1,
 						.tile > .content .icon.icon-in-elements.animation .icon-2 {
 							top: 0;
-							animation-duration: 0.45s;
+							animation-duration: 0.6s;
 							animation-timing-function: ease-out;
 							animation-fill-mode: forwards;
+							transition: color 0.24s ease-in-out;
 						}
 						.tile > .content .icon.icon-in-elements.animation .icon-1 {
 							transform: translateY(0px);
@@ -155,14 +156,21 @@
 
 
 /* ----- theme definition begin ---------------- */
+	.tile .icon.icon-in-elements .icon-1,
 	.tiles > a,
 	.tiles {
 		color: #666;
 	}
 
-		.tiles >a:hover {
+		a:hover .tile .icon.icon-in-elements .icon-2,
+		.tiles > a:hover {
 			color: #157dff;
 		}
+		a .tile .icon.icon-in-elements .icon-2,
+		a:hover .tile .icon.icon-in-elements .icon-1 {
+			color: #f4f6f7;
+		}
+
 		.tile.odd {
 			background-color: #f4f6f7;
 		}
