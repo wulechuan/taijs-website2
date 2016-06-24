@@ -205,8 +205,13 @@ label.deco-input {
 	}
 
 	#app-header-info-and-links {
-		color: #666;
 		border-bottom-color: #eee;
+		}
+
+		#app-header-user-account-commands .menu.level-1 > .menu-item > a > label,
+		#app-header-user-account-commands .menu.level-1 > .menu-item > label,
+		#app-header-info-and-links {
+			color: #666;
 		}
 
 		#app-header-info-and-links a:hover,
@@ -231,6 +236,11 @@ label.deco-input {
 	#app-header-chief-bar {
 		border-bottom-color: #eee;
 		}
+
+		#app-header-chief-bar > .width-wrap > .docking {
+			background-color: white;
+		}
+
 
 #app-footer {
 	border-color: #ddd;

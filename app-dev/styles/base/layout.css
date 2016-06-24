@@ -53,7 +53,6 @@
 		#app-header-info-and-links button .iconfont {
 			font-size: 21px;
 			width: 21px;
-			height: 35px;
 			vertical-align: top;
 			margin: 0;
 		}
@@ -67,81 +66,67 @@
 		}
 
 		#app-header-info-and-links .mobile-app button label {
-			margin-left: 0;
-		}
-
-		#app-header-info-and-links button label span,
-		#app-header-info-and-links button label em {
-			display: inline-block;
-			vertical-align: top;
-			margin: 0;
-			padding: 0;
+			margin-left: 0; /* the icon is very thin/narrow */
 		}
 
 		#app-header-info-and-links .sns button label {
 			display: none;
 		}
 
-		#app-header-info-and-links .width-wrap {
-		}
-
-		#app-header-contacts, #app-header-user-account-commands {
+		#app-header-contacts,
+		#app-header-user-account-commands {
 			vertical-align: top;
 			display: inline-block;
 			position: relative;
 			width: 50%;
-			min-height: 35px;
 			line-height: 35px;
 		}
 
-		#app-header-contacts div,
-		#app-header-user-account-commands div {
-			vertical-align: top;
-			display: inline-block;
-		}
-
 		#app-header-contacts {
-			left: -0.5em;
+			left: -10px;
 		}
 		#app-header-user-account-commands {
-			right: -1em;
+			right: -10px;
 		}
-
-		#app-header-contacts p,
-		#app-header-contacts a,
+		#app-header-contacts .toolbar > li,
+		#app-header-user-account-commands .toolbar > li {
+			padding: 0 10px;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		#app-header-contacts button,
 		#app-header-contacts span,
-		#app-header-user-account-commands label,
-		#app-header-user-account-commands p,
+		#app-header-contacts a,
+		#app-header-user-account-commands .menu.level-1 > .menu-item > label,
+		#app-header-user-account-commands button,
+		#app-header-user-account-commands span,
 		#app-header-user-account-commands a {
-			vertical-align: top;
 			display: inline-block;
-			padding: 0 1em;
-			min-height: 35px;
+			vertical-align: top;
+			padding: 0 10px;
+			margin: 0 -10px;
 		}
-
-
-
-		#app-header-contacts {
-			position: relative;
-			}
-
-			#app-header-contacts > div {
-				vertical-align: top;
-				display: inline-block;
-			}
-
-			#app-header-contacts p {
-				min-width: 1em;
-			}
+		#app-header-user-account-commands .menu.level-1 > .menu-item:before {
+			content: none;
+		}
+		#app-header-user-account-commands .menu.level-1 > .menu-item > a > label {
+			vertical-align: top;
+			padding: 0;
+			margin: 0;
+		}
 
 		#app-header-user-account-commands {
 			text-align: right;
 			}
 
-			#app-header-user-account-commands div {
-				vertical-align: top;
+			#app-header-user-account-commands .user-known,
+			#app-header-user-account-commands.user-has-logged-in .user-guest {
+				display: none;
+			}
+			#app-header-user-account-commands.user-has-logged-in .user-known {
 				display: inline-block;
 			}
+
 
 
 
@@ -157,14 +142,14 @@
 		#taijs-logo {
 			display: inline-block;
 			vertical-align: top;
-			padding: 13px;
-			margin: 0 15px 0 -13px;
+			padding: 11px;
+			margin: 0 11px 0 -11px;
 		}
 
 		#app-header-chief-bar > .width-wrap > .docking {
 			height: 100%;
-			padding-left: 20px;
-			background-color: white;
+			padding: 0 10px;
+			margin-right: -10px;
 			z-index: 5;
 		}
 
@@ -210,7 +195,7 @@
 
 		#app-footer-chief-bar .content {
 			position: relative;
-			padding: 36px 0 14px 0;
+			padding: 36px 0 16px 0;
 		}
 
 		#app-footer-chief-bar .content .col {
@@ -221,12 +206,13 @@
 		}
 
 		#app-footer-chief-bar .content > .col {
-			min-height: 150px;
+			min-height: 148px;
 			min-width: 25%;
 		}
 
 		#app-footer-chief-bar .content > .col.col-1 {
 			width: 328px;
+			margin-bottom: -10px;
 		}
 
 		#app-footer-chief-bar .content > .col.col-3 {
@@ -257,7 +243,7 @@
 			}
 
 			#app-footer-nav .col {
-				width: 33%;
+				width: 102px;
 				padding-right: 24px;
 			}
 
@@ -266,7 +252,7 @@
 			}
 
 			#app-footer-qrcodes > .col {
-				width: 33%;
+				width: 147px;
 				border-top: 1px solid transparent;
 				text-align: center;
 			}
@@ -274,7 +260,10 @@
 			#app-footer-qrcodes .qrcode > img {
 				width: 128px;
 				height: 128px;
-				margin: -2px;
+				margin: -3px;
+			}
+			#app-footer-qrcodes .qrcode .figcaption {
+				margin-bottom: -10px;
 			}
 
 		#app-footer-services-info {
@@ -290,16 +279,22 @@
 
 			#app-footer-services-info > ul > li {
 				position: relative;
-				padding-left: 30px;
-				line-height: 40px;
+				padding: 5px 5px 5px 35px;
+				line-height: 37px;
+				margin: -5px;
 			}
 
 			#app-footer-services-info .iconfont {
 				font-size: 20px;
 				position: absolute;
-				left: 0;
-				top: 0;
-				margin: 2px 0;
+				left: 5px;
+				top: 5px;
+				margin: 2px 0 0 0;
+				margin-top: -1px\0;
+			}
+
+			:root #app-footer-services-info .iconfont {
+				margin-top: 1px\0;
 			}
 
 			#app-footer-services-info em {
@@ -310,8 +305,8 @@
 			}
 
 			#app-footer-services-info p a {
-				margin-top: -6px;
-				margin-bottom: -6px;
+				padding-top: 0;
+				padding-bottom: 0;
 			}
 
 			#app-footer-services-info p > em,
@@ -375,15 +370,10 @@
 
 
 #app-chief-nav {
-	margin: 0 0 0 130px;
+	margin: 0 0 0 137px;
 	padding: 11px 11px;
 	display: inline-block;
 	vertical-align: top;
-	}
-
-	#app-chief-nav nav {
-		display: block; /* for IE9 */
-		position: relative; /* for IE9 */
 	}
 
 	#app-chief-nav .menu-item > a > label,

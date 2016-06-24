@@ -556,7 +556,6 @@ label.deco-input {
 		font-size: 12px;
 		display: inline-block;
 		padding: 6px;
-		margin-top: 6px;
 	}
 
 .info-block {
@@ -566,7 +565,6 @@ label.deco-input {
 	.info-block > button.icon {
 		display: inline-block;
 		line-height: inherit;
-		position: relative;
 		vertical-align: top;
 		padding: 0.3em 0.25em 0.2em;
 		margin: 0;
@@ -674,8 +672,30 @@ label.deco-input {
 	}
 
 	.layout-hori > li {
-		position: relative;
 		display: inline-block;
+	}
+
+
+
+.toolbar {
+	display: inline-block;
+	}
+
+	.toolbar > li {
+		display: inline-block;
+		vertical-align: top;
+		padding: 0.5em;
+		margin: -0.5em 0;
+	}
+
+	.toolbar.has-separator > li:before {
+		content: '|';
+		padding: 0 2px;
+	}
+
+	.toolbar > li:first-child:before,
+	.toolbar.has-separator > li:first-child:before {
+		content: none;
 	}
 
 
