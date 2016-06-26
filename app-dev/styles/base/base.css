@@ -258,7 +258,7 @@ input[type="radio"] {
 			@keyframes icon-hide-icon-faces-for-a-moment {
 				/* so that no initial ugly child animations will be seen */
 				0% { opacity: 0; }
-				50% { opacity: 0.05; }
+				66% { opacity: 0; }
 				to {  opacity: 1; }
 			}
 			.icon.icon-in-elements.animation,
