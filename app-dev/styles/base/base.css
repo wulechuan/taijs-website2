@@ -69,6 +69,11 @@ a, a:link {
 	text-decoration: none;
 }
 
+a:link label,
+a:link {
+	cursor: pointer;
+}
+
 a:hover {
 	text-decoration: underline;
 }
@@ -81,10 +86,20 @@ button {
 }
 
 
-select.size-wide-std,
-input[type="button"].size-wide-std, input[type="submit"].size-wide-std, input[type="reset"].size-wide-std,
-button.size-wide-std {
+select.size-std-wide,
+input[type="button"].size-std-wide,
+input[type="submit"].size-std-wide,
+input[type="reset"].size-std-wide,
+button.size-std-wide {
 	width: 170px;
+}
+
+select.size-std-regular,
+input[type="button"].size-std-regular,
+input[type="submit"].size-std-regular,
+input[type="reset"].size-std-regular,
+button.size-std-regular {
+	width: 106px;
 }
 
 input[type="button"].simple-look, input[type="submit"].simple-look, input[type="reset"].simple-look,
@@ -132,6 +147,10 @@ input[type="radio"] {
 }
 
 
+
+*[role="html-template"] {
+	display: none!important;
+}
 
 
 .iconfont {
@@ -1048,8 +1067,6 @@ label.deco-input {
 	}
 	.menu-item > a > label,
 	.menu-item > label {
-		cursor: pointer;
-
 		position: relative;
 		z-index: 5;
 
@@ -1301,15 +1318,28 @@ label.deco-input {
 	bottom: 0;
 	z-index: 0;
 	display: none;
+	text-align: center;
+	overflow: auto;
+	}
+
+	.popup-layer:before {
+		content: '';
+		display: inline-block;
+		width: 0;
+		height: 75%;
+		vertical-align: middle;
 	}
 
 	.popup-layer.current {
-		z-index: 1;
+		z-index: 5;
 	}
 
 	.popup-window {
-		position: absolute;
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
 		margin: auto;
+		margin: 20px;
 		padding: 0;
 		border: 0;
 		left: 0;
@@ -1318,6 +1348,9 @@ label.deco-input {
 		bottom: 0;
 		max-width: 90%;
 		max-height: 90%;
+		min-width: 100px;
+		min-height: 100px;
+		text-align: left;
 	}
 
 	.popup-window .content {
@@ -1333,11 +1366,31 @@ label.deco-input {
 	}
 
 	.popup-window.has-dialog > .deco {
+		display: block;
 		position: absolute;
 		left: -4px;
 		right: -4px;
 		top: -4px;
 		bottom: -4px;
+	}
+
+
+
+.buttons-in-single-line {
+	margin-top: 10px;
+	margin-bottom: 4px;
+	}
+
+	.buttons-in-single-line:last-child {
+	}
+
+	.buttons-in-single-line input[type="reset"],
+	.buttons-in-single-line input[type="submit"],
+	.buttons-in-single-line input[type="button"],
+	.buttons-in-single-line button {
+		margin-left: 0;
+		margin-top: 0;
+		margin-bottom: 0;
 	}
 
 
@@ -1400,42 +1453,77 @@ label.deco-input {
 		-webkit-overflow-scrolling: touch;
 		}
 
-		.dialog .dialog-body .content,
+		.dialog .dialog-body > .content,
 		.dialog .dialog-body .icon-column {
 			box-sizing: border-box;
-			padding: 40px;
-			padding: 2.25rem;
+			padding: 0;
 		}
 
+		.dialog .dialog-body {
+			padding: 40px 40px;
+			padding: 2rem 2rem;
+		}
 		.dialog .dialog-body.has-icon-column {
-			padding-left: 100px;
-			min-height: 150px;
+			padding-left: 102px;
+			min-height: 60px;
+		}
+		.dialog .dialog-body.has-icon-column .icon-column {
+			left: 40px;
+			left: 2rem;
+			top: 40px;
+			top: 2rem;
+			width: 60px;
 		}
 
-		.dialog .dialog-body.has-icon-column .content {
-			padding-left: 0;
-		}
+
+		.dialog .dialog-body > .content {
+			}
+
+			.dialog .dialog-body > .content .article .title {
+				margin: 0;
+				margin-bottom: 12px;
+			}
+
+			.dialog .dialog-body > .content .article h1 {
+				font-size: 16px;
+				line-height: 1.5;
+				/* -webkit-text-stroke-width: 0.25px; */
+				text-shadow: 0 0 0.9px rgba(0, 0, 0, 0.75);
+			}
+
+			.dialog .dialog-body > .content .article h2 {
+				font-size: 14px;
+				line-height: 1.5;
+			}
+
+			.dialog .dialog-body > .content .article p {
+				line-height: 2;
+			}
+
+			.dialog .dialog-body > .content .article hr {
+				margin-top: 8px;
+				margin-bottom: 8px;
+			}
+
 
 		.dialog .dialog-body.has-icon-column .icon-column {
 			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100px;
 			margin: 0;
 			padding-right: 0;
 		}
 
 		.dialog .icon-column .iconfont,
 		.dialog .icon-column .icon {
-			width: 42px;
-			height: 42px;
-			line-height: 42px;
-			font-size: 42px;
+			width: 44px;
+			height: 44px;
+			font-size: 43px;
+			line-height: 1;
 			text-indent: 0.25px;
 		}
 
 
-	.popup-window .dailog {
+	.popup-window .dialog {
+		border-width: 0;
 		width: 100%;
 		height: 100%;
 		max-width: 100%;

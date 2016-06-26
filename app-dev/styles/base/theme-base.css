@@ -238,12 +238,23 @@ label.deco-input {
 	}
 
 
+.popup-window > .deco {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+
 .dialog {
 	background-color: white;
 	}
 
-	.dialog .deco {
-		background-color: rgba(0, 0, 0, 0.1);
+	.dialog .dialog-body > .content .article h1 {
+		color: black;
+	}
+
+	.dialog .dialog-body > .content .article h2 {
+	}
+
+	.dialog .dialog-body > .content .article p {
 	}
 
 
