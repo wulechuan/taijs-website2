@@ -33,6 +33,10 @@ html, body {
 	background-color: transparent;
 }
 
+.color-positive {
+	color: #14a153;
+}
+
 
 hr {
 	border-color: #d0d0d0;
@@ -120,20 +124,31 @@ label.deco-input {
 	}
 
 
-.icon-hover-trigger:hover .icon.icon-in-elements.transition .icon-face-1,
-.icon-hover-trigger:hover .icon.icon-in-elements.animation  .icon-face-1,
-.icon.icon-in-elements.transition:hover .icon-face-1,
-.icon.icon-in-elements.animation:hover  .icon-face-1,
-.icon {
-	color: #666;
-	}
+.icon {}
 
-	.icon.icon-in-elements.transition .icon-face-2,
-	.icon.icon-in-elements.animation  .icon-face-2,
-	.icon.icon-in-elements            .icon-face-2,
-	.icon:hover {
-		color: #157dff;
-	}
+	.icon-hover-trigger:hover .icon.icon-in-elements.transition .icon-face-1,
+	.icon-hover-trigger:hover .icon.icon-in-elements.animation  .icon-face-1,
+	.icon.icon-in-elements.transition:hover .icon-face-1,
+	.icon.icon-in-elements.animation:hover  .icon-face-1,
+	.icon {
+		color: #666;
+		}
+
+		.icon.icon-in-elements.transition .icon-face-2,
+		.icon.icon-in-elements.animation  .icon-face-2,
+		.icon.icon-in-elements            .icon-face-2,
+		.icon:hover {
+			color: #157dff;
+		}
+
+
+	.icon.color-positive {
+		color: #14a153;
+		}
+
+		.icon:hover {
+			color: #14a153;
+		}
 
 
 
@@ -220,6 +235,15 @@ label.deco-input {
 
 	.breadcrumbs > ul > li a:hover {
 		background-color: #ddd;
+	}
+
+
+.dialog {
+	background-color: white;
+	}
+
+	.dialog .deco {
+		background-color: rgba(0, 0, 0, 0.1);
 	}
 
 
