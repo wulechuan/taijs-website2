@@ -1,4 +1,4 @@
-/* ----- layout definition begin --------------- */
+----- layout definition begin --------------- */
 	.tile {
 		height: 311px;
 		text-align: center;
@@ -80,7 +80,7 @@
 			border-style: dashed;
 			}
 
-			.article.qna-list dl.qna dd .content { /* for before/after psuedo elements following the sliding animation/transition */
+			.article.qna-list dl.qna dd .content { /* make sure :before/:after psuedo elements following the sliding animation/transition */
 				position: relative;
 			}
 
@@ -109,10 +109,12 @@
 					margin: -0.5em;
 					margin-bottom: 0.5em;
 				}
-			.article.qna-list dl.qna dt:after,
+
+			/* ie8 ignores z-indices of :before :after, so we have to use :before as the bg symbol while using :after showing the Q/A letters. */
 			.article.qna-list dl.qna dt:before,
-			.article.qna-list dl.qna dd > .content:after,
-			.article.qna-list dl.qna dd > .content:before {
+			.article.qna-list dl.qna dt:after,
+			.article.qna-list dl.qna dd > .content:before,
+			.article.qna-list dl.qna dd > .content:after {
 				display: block;
 				position: absolute;
 				width: 26px;
@@ -120,33 +122,31 @@
 				left: 0;
 				top: 20px;
 			}
-			.article.qna-list dl.qna dt:before,
-			.article.qna-list dl.qna dd > .content:before {
-				font-size: 14px;
-				line-height: 25px;
-				z-index: 2;
-			}
 			.article.qna-list dl.qna dt:after,
 			.article.qna-list dl.qna dd > .content:after {
+				font-size: 14px;
+				line-height: 25px;
+			}
+			.article.qna-list dl.qna dt:before,
+			.article.qna-list dl.qna dd > .content:before {
 				font-family: 'iconfont'!important;
 				font-size: 24px;
 				text-indent: 0;
 				line-height: 27px;
-				z-index: 1;
 			}
-			.article.qna-list dl.qna dt:before {
+			.article.qna-list dl.qna dt:after {
 				content: 'Q';
 				text-indent: 3px;
 			}
-			.article.qna-list dl.qna dd > .content:before {
+			.article.qna-list dl.qna dd > .content:after {
 				content: 'A';
 				text-indent: 4px;
 			}
-			.article.qna-list dl.qna dt:after {
+			.article.qna-list dl.qna dt:before {
 				content: '\e62e';
 				text-shadow: none;
 			}
-			.article.qna-list dl.qna dd > .content:after {
+			.article.qna-list dl.qna dd > .content:before {
 				content: '\e62e';
 				text-shadow: none;
 			}
@@ -195,17 +195,17 @@
 				text-shadow: 0 0 1px rgba(51, 51, 51, 0.5);
 				text-shadow: 0 0 1.5px rgba(51, 51, 51, 0.5)\9\0; /* ie10, ie11 */
 			}
-			.article.qna-list dl.qna dt:before {
-				color: white;
-			}
-			.article.qna-list dl.qna dd > .content:before {
-				color: white;
-			}
 			.article.qna-list dl.qna dt:after {
-				color: #fc8510;
+				color: white;
 			}
 			.article.qna-list dl.qna dd > .content:after {
+				color: white;
+			}
+			.article.qna-list dl.qna dt:before {
+				color: #fc8510;
+			}
+			.article.qna-list dl.qna dd > .content:before {
 				color: #19c144;
 			}
 
-/* ----- theme definition end ------------------ */
+/* ----- theme definition end ------------------
