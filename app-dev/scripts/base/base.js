@@ -68,12 +68,20 @@
 
 						dd.style.height = ddExpandedHeight+'px';
 
+						setTimeout(function () {
+							$dd.slideDown();
+						}, 0);
+
 						return ddExpandedHeight;
 					} else {
 						$dd.removeClass('expanded');
 						$thisDT.removeClass('expanded');
 
 						dd.style.height = '';
+
+						setTimeout(function () {
+							$dd.slideUp();
+						}, 0);
 
 						return 0;
 					}
