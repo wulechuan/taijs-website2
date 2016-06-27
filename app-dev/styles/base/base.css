@@ -1555,5 +1555,4 @@ dl.initially-collapsed {
 	dl.initially-collapsed dt.expanded + dd,
 	dl.initially-collapsed dd.expanded {
 		display: block;
-		height: auto;
 	}
