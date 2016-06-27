@@ -7,21 +7,21 @@
 	.page-chief-part.cast-shadow {
 		overflow: visible; /* for ie-shadow */
 		}
-		.page-chief-part.cast-shadow > .ie-shadow {
+		.page-chief-part.cast-shadow > .ie-shadow .ie-shadow-matte {
 			-ms-filter: "\
-				progid:DXImageTransform.Microsoft.Alpha(Opacity=90)\
+				progid:DXImageTransform.Microsoft.Alpha(opacity=10)\
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=2)\
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=3)\
 			";
 			filter: 
-				progid:DXImageTransform.Microsoft.Alpha(Opacity=90)
+				progid:DXImageTransform.Microsoft.Alpha(opacity=10)
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=2)
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=3)
 			;
-			left: -11px;
-			top: -9px;
+			left: -7px;
+			top: -7px;
 			right: 5px;
-			bottom: 6px;
+			bottom: 5px;
 		}
 /* ----- layout definition end ----------------- */
 

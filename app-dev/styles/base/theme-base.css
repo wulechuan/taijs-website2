@@ -33,6 +33,20 @@ html, body {
 	background-color: transparent;
 }
 
+.color-positive {
+	color: #14a153;
+}
+
+.article dd,
+.article dt,
+.article h3,
+.article h2,
+.article h1 {
+	color: black;
+	/* -webkit-text-stroke-width: 0.25px; */ /* cause the animation noticable slow */
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+	text-shadow: 0 0 1.5px rgba(0, 0, 0, 0.5)\9\0; /* ie10, ie11 */
+}
 
 hr {
 	border-color: #d0d0d0;
@@ -120,20 +134,31 @@ label.deco-input {
 	}
 
 
-.icon-hover-trigger:hover .icon.icon-in-elements.transition .icon-face-1,
-.icon-hover-trigger:hover .icon.icon-in-elements.animation  .icon-face-1,
-.icon.icon-in-elements.transition:hover .icon-face-1,
-.icon.icon-in-elements.animation:hover  .icon-face-1,
-.icon {
-	color: #666;
-	}
+.icon {}
 
-	.icon.icon-in-elements.transition .icon-face-2,
-	.icon.icon-in-elements.animation  .icon-face-2,
-	.icon.icon-in-elements            .icon-face-2,
-	.icon:hover {
-		color: #157dff;
-	}
+	.icon-hover-trigger:hover .icon.icons-in-elements.transition .icon-face-1,
+	.icon-hover-trigger:hover .icon.icons-in-elements.animation  .icon-face-1,
+	.icon.icons-in-elements.transition:hover .icon-face-1,
+	.icon.icons-in-elements.animation:hover  .icon-face-1,
+	.icon {
+		color: #666;
+		}
+
+		.icon.icons-in-elements.transition .icon-face-2,
+		.icon.icons-in-elements.animation  .icon-face-2,
+		.icon.icons-in-elements            .icon-face-2,
+		.icon:hover {
+			color: #157dff;
+		}
+
+
+	.icon.color-positive {
+		color: #14a153;
+		}
+
+		.icon:hover {
+			color: #14a153;
+		}
 
 
 
@@ -191,18 +216,16 @@ label.deco-input {
 		background-color: #157dff;
 	}
 
-
-
-.button-x {
+button.button-x {
 	background-color: transparent;
 	color: white;
 	}
 
-	.button-x:hover {
+	button.button-x:hover {
 		background-color: transparent;
 	}
 
-	.button-x:before {
+	button.button-x:before {
 		background-color: white;
 	}
 
@@ -219,8 +242,29 @@ label.deco-input {
 	}
 
 	.breadcrumbs > ul > li a:hover {
-		background-color: #ddd;
+		background-color: #e9e9e9;
 	}
+
+
+
+.dialog {
+	}
+
+	.dialog > .deco {
+		background-color: rgba(0, 0, 0, 0.2);
+	}
+
+	.dialog .dialog-header,
+	.dialog .dialog-footer,
+	.dialog .dialog-body {
+		background-color: white;
+		}
+
+		.dialog .dialog-body > .content .article h4 {
+		}
+
+		.dialog .dialog-body > .content .article p {
+		}
 
 
 #app-header {

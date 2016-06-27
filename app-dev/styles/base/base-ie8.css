@@ -1,7 +1,11 @@
 .ie8-input-fake-placeholder {
 	display: block;
 	position: absolute;
-}
+	}
+	.ie8-input-fake-placeholder ~ input {
+		background-color: transparent;
+		/* filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#AAFFFFFF, endColorstr=#AAFFFFFF); */
+	}
 
 .content {
 	background-color: inherit;
@@ -99,10 +103,16 @@
 		background-color: transparent!important;
 	}
 
-	.ie-bg ~ .content {
-		background-color: inherit!important;
+	.ie-shadow ~ .content {
+		background-color: inherit;
 		position: relative;
-		z-index: 1;
+		z-index: 2;
+	}
+
+	.ie-bg ~ .content {
+		background-color: transparent;
+		position: relative;
+		z-index: 2;
 	}
 
 
@@ -140,29 +150,32 @@ label.deco-input {
 		.ie-shadow .ie-shadow-matte {
 			display: block;
 			position: absolute;
-			left: 0;
-			right: 0;
-			top: 0;
-			bottom: 0;
 			z-index: 0;
 
 			background-color: black;
 			-ms-filter: "\
-				progid:DXImageTransform.Microsoft.Blur(PixelRadius=3, MakeShadow=true, ShadowOpacity=0.2)\
+				progid:DXImageTransform.Microsoft.Alpha(opacity=15)\
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=2)\
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=5)\
 			";
 			filter: 
-				progid:DXImageTransform.Microsoft.Blur(PixelRadius=3, MakeShadow=true, ShadowOpacity=0.2)
+				progid:DXImageTransform.Microsoft.Alpha(opacity=15)
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=2)
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=5)
 			;
-			zoom: 1;
+			left: -4px;
+			top: -4px;
+			right: 4px;
+			bottom: 4px;
 		}
 		.shadow-large-and-blur > .ie-shadow .ie-shadow-matte {
 			-ms-filter: "\
-				progid:DXImageTransform.Microsoft.Alpha(Opacity=36)\
+				progid:DXImageTransform.Microsoft.Alpha(opacity=36)\
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=8)\
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=12)\
 			";
 			filter:
-				progid:DXImageTransform.Microsoft.Alpha(Opacity=36)
+				progid:DXImageTransform.Microsoft.Alpha(opacity=36)
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=8)
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=12)
 			;
@@ -299,7 +312,7 @@ label.deco-input {
 		.rounded-corners > .ie-borders .corner-2,
 		.rounded-corners > .ie-bg      .corner-1,
 		.rounded-corners > .ie-bg      .corner-2 {
-			top: -13px;
+			top: -13.31px;
 		}
 		.rounded-corners > .ie-borders .corner-1,
 		.rounded-corners > .ie-borders .corner-4,
@@ -323,6 +336,10 @@ label.deco-input {
 		.rounded-corners > .ie-bg      .corner-3 {
 			right: -12.96px;
 		}
+		button.rounded-corners > .ie-bg .corner-2,
+		button.rounded-corners > .ie-bg .corner-3 {
+			right: -13.14px;
+		}
 		.rounded-corners.sharp-corner-tr > .ie-borders .corner-2,
 		.rounded-corners.sharp-corner-2  > .ie-borders .corner-2,
 		.rounded-corners.sharp-corner-br > .ie-borders .corner-3,
@@ -337,13 +354,17 @@ label.deco-input {
 		.rounded-corners > .ie-borders .corner-4,
 		.rounded-corners > .ie-bg      .corner-3,
 		.rounded-corners > .ie-bg      .corner-4 {
-			bottom: -13.2px;
+			bottom: -13.05px;
 		}
 
 
+		.rounded-corners > .ie-borders [class|="corner"],
+		.rounded-corners > .ie-bg      [class|="corner"] {
+			font-family: 'iconfont'!important;
+		}
+
 		.rounded-corners > .ie-borders [class|="corner"]:before,
 		.rounded-corners > .ie-bg      [class|="corner"]:before {
-			font-family: 'iconfont'!important;
 			display: block;
 			position: absolute;
 			white-space: nowrap;
@@ -369,7 +390,7 @@ label.deco-input {
 		.rounded-corners > .ie-borders .corner-4:before,
 		.rounded-corners > .ie-bg      .corner-3:before,
 		.rounded-corners > .ie-bg      .corner-4:before {
-			line-height: 56.6px;
+			line-height: 55.88px;
 		}
 
 		.rounded-corners > .ie-borders .corner-1:before,
@@ -614,28 +635,36 @@ button label {
 	margin-top: -0.87px;
 }
 
-.button-x {
+button.button-x {
 	}
 
-	.button-x:before {
+	button.button-x:before {
 		content: none; /* ie8 has :before Alpha(opacity) bug */
 	}
 
-	.button-x:after {
+	button.button-x:after {
 		position: static;
 	}
 
-	.button-x:hover {
+	button.button-x:hover {
 		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorstr=#33FFFFFF, endColorstr=#33FFFFFF)";
 		    filter:  progid:DXImageTransform.Microsoft.Gradient(startColorstr=#33FFFFFF, endColorstr=#33FFFFFF);
 	}
 
-.popup-layers-container-backplate {
-	background-color: black;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=80)";
-	    filter:  progid:DXImageTransform.Microsoft.Alpha(opacity=80);
-	zoom: 1;
-}
+
+.icon {
+	}
+
+	.icon.icons-in-elements .iconfont { /* anti-aliasing */
+		background-color: white;
+        -ms-filter: "\
+        	progid:DXImageTransform.Microsoft.Chroma(color=white)\
+        ";
+		filter:
+			progid:DXImageTransform.Microsoft.Chroma(color=white)
+        ;
+	}
+
 
 
 .floating-layer-set {
@@ -663,12 +692,12 @@ button label {
     .floating-layer-set .floating-layer > .ie-shadow .ie-shadow-matte {
         margin: -11px 7px 7px -11px;
         -ms-filter: "\
-            progid:DXImageTransform.Microsoft.Alpha(Opacity=25)\
+            progid:DXImageTransform.Microsoft.Alpha(opacity=25)\
             progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
             progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
         ";
         filter: 
-            progid:DXImageTransform.Microsoft.Alpha(Opacity=25)
+            progid:DXImageTransform.Microsoft.Alpha(opacity=25)
             progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
             progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
         ;
@@ -685,7 +714,7 @@ button label {
 				M22=0.7071067811865474,\
 				SizingMethod='auto expand'\
 			)\
-            progid:DXImageTransform.Microsoft.Alpha(Opacity=25)\
+            progid:DXImageTransform.Microsoft.Alpha(opacity=25)\
             progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
             progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
 		";
@@ -697,11 +726,40 @@ button label {
 				M22=0.7071067811865474,
 				SizingMethod='auto expand'
 			)
-            progid:DXImageTransform.Microsoft.Alpha(Opacity=25)
+            progid:DXImageTransform.Microsoft.Alpha(opacity=25)
             progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
             progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
 		;
     }
+
+
+.popup-layers-back-plate {
+	background-color: black;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=80)";
+	    filter:  progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+	zoom: 1;
+	}
+
+	.popup-window > .ie-shadow {
+		display: block;
+	}
+
+	.popup-window > .ie-shadow .ie-shadow-matte {
+		-ms-filter: "\
+			progid:DXImageTransform.Microsoft.Alpha(opacity=95)\
+			progid:DXImageTransform.Microsoft.Blur(PixelRadius=8)\
+			progid:DXImageTransform.Microsoft.Blur(PixelRadius=12)\
+		";
+		filter:
+			progid:DXImageTransform.Microsoft.Alpha(opacity=95)
+			progid:DXImageTransform.Microsoft.Blur(PixelRadius=8)
+			progid:DXImageTransform.Microsoft.Blur(PixelRadius=12)
+		;
+		left: -24px;
+		top: -24px;
+		right: 14px;
+		bottom: 14px;
+	}
 
 
 #app-chief-nav .menu.level-2 > .ie-shadow .ie-shadow-matte,
@@ -710,11 +768,11 @@ button label {
 #my-assets .menu.level-2 > .ie-shadow .ie-shadow-matte,
 #my-assets .menu.level-1 > .menu-item > .deco .ie-shadow-matte {
     -ms-filter: "\
-        progid:DXImageTransform.Microsoft.Alpha(Opacity=15)\
+        progid:DXImageTransform.Microsoft.Alpha(opacity=15)\
         progid:DXImageTransform.Microsoft.Blur(PixelRadius=6)\
     ";
     filter: 
-        progid:DXImageTransform.Microsoft.Alpha(Opacity=15)
+        progid:DXImageTransform.Microsoft.Alpha(opacity=15)
         progid:DXImageTransform.Microsoft.Blur(PixelRadius=6)
     ;
 
