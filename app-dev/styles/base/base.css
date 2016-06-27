@@ -474,10 +474,6 @@ button {
 	.rounded-corners.r15px {
 		border-radius: 15px;
 	}
-	.pagination [role="button"],
-	.pagination button {
-		border-radius: 2px;
-	}
 
 	.rounded-corners.sharp-corner-tl,
 	.rounded-corners.sharp-corner-1 {
@@ -1301,7 +1297,7 @@ dl.initially-collapsed {
 		/* display: none; */
 		height: 0;
 		overflow: hidden;
-		transition-property: height, visibility;
+		transition-property: height;
 		transition-duration: 0.5s;
 		transition-timing-function: ease-out;
 	}
@@ -1334,6 +1330,7 @@ dl.initially-collapsed {
 	}
 	.pagination [role="button"],
 	.pagination button {
+		border-radius: 2px;
 		padding: 4px 9px;
 		min-height: 12px;
 		height: 12px;
