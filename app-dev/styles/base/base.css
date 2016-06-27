@@ -42,6 +42,18 @@ dd {
 	}
 
 
+.title,
+dt,
+h6,
+h5,
+h4,
+h3,
+h2,
+h1 {
+	text-indent: 0;
+}
+
+
 hr {
 	font-size: 0;
 	line-height: 0;
@@ -1549,14 +1561,38 @@ label.deco-input {
 		box-shadow: 0em 0.2em 0.5em rgba(0, 0, 0, 0.35);
 		}
 
+
 dl.initially-collapsed {
 	}
+
+	dl.initially-collapsed dt {
+		margin: 0;
+		cursor: pointer;
+	}
+
 	dl.initially-collapsed dd {
+		margin: 0;
 		display: none;
-		/* transition-property: height; */
+		transition-property: height;
 	}
 
 	dl.initially-collapsed dt.expanded + dd,
 	dl.initially-collapsed dd.expanded {
 		display: block;
+	}
+
+	dl.initially-collapsed dt > .content {
+		/* enable paddings for beautiful hover effects */
+		position: static;
+	}
+	dl.initially-collapsed dd > .content {
+		/* make sure :before/:after psuedo elements following the sliding animation/transition, if any */
+		position: relative;
+	}
+	dl.initially-collapsed dd .content,
+	dl.initially-collapsed dd,
+	dl.initially-collapsed dt .content,
+	dl.initially-collapsed dt {
+		border-style: inherit;
+		border-color: inherit;
 	}

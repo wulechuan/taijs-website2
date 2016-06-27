@@ -56,7 +56,11 @@
 		.article.qna-list dl.qna {
 			padding-left: 30px;
 			padding-right: 30px;
-		}
+			}
+			.article.qna-list dl.qna dt .content {
+				margin-left: -30px;
+				margin-right: -30px;
+			}
 
 		.article.qna-list .title {
 			padding-top: 21px;
@@ -80,39 +84,36 @@
 			border-style: dashed;
 			}
 
-			.article.qna-list dl.qna dd .content { /* make sure :before/:after psuedo elements following the sliding animation/transition */
-				position: relative;
-			}
-
 			.article.qna-list dl.qna dd .content,
-			.article.qna-list dl.qna dt {
+			.article.qna-list dl.qna dt .content {
 				padding: 20px 17px 20px 33px;
-				border-width: 0 0 1px 0;
+			}
+			.article.qna-list dl.qna dt .content {
+				padding-left: 63px;
 			}
 			.article.qna-list dl.qna dd .content,
-			.article.qna-list dl.qna dd,
 			.article.qna-list dl.qna dt {
-				border-style: inherit;
-				border-color: inherit;
+				border-width: 0 0 1px 0;
 			}
 			.article.qna-list dl.qna .content-mark { /* content marks are for non-css environments, and are hidden by css by default. */
 				display: none;
 			}
 			.article.qna-list dl.qna dt {
 				line-height: 26px;
-				margin: 0;
 			}
 			.article.qna-list dl.qna dd {
 				line-height: 25px;
-				}
-				.article.qna-list dl.qna dd p {
-					margin: -0.5em;
-					margin-bottom: 0.5em;
-				}
+			}
+
+
+			.article.qna-list dl.qna dd p {
+				margin: -0.5em;
+				margin-bottom: 0.5em;
+			}
 
 			/* ie8 ignores z-indices of :before :after, so we have to use :before as the bg symbol while using :after showing the Q/A letters. */
-			.article.qna-list dl.qna dt:before,
-			.article.qna-list dl.qna dt:after,
+			.article.qna-list dl.qna dt > .content:before,
+			.article.qna-list dl.qna dt > .content:after,
 			.article.qna-list dl.qna dd > .content:before,
 			.article.qna-list dl.qna dd > .content:after {
 				display: block;
@@ -122,19 +123,27 @@
 				left: 0;
 				top: 20px;
 			}
-			.article.qna-list dl.qna dt:after,
+			.article.qna-list dl.qna dt > .content:before,
+			.article.qna-list dl.qna dt > .content:after {
+				left: 0;
+			}
+			.article.qna-list dl.qna dd > .content:before,
+			.article.qna-list dl.qna dd > .content:after {
+				left: 0;
+			}
+			.article.qna-list dl.qna dt > .content:after,
 			.article.qna-list dl.qna dd > .content:after {
 				font-size: 14px;
 				line-height: 25px;
 			}
-			.article.qna-list dl.qna dt:before,
+			.article.qna-list dl.qna dt > .content:before,
 			.article.qna-list dl.qna dd > .content:before {
 				font-family: 'iconfont'!important;
 				font-size: 24px;
 				text-indent: 0;
 				line-height: 27px;
 			}
-			.article.qna-list dl.qna dt:after {
+			.article.qna-list dl.qna dt > .content:after {
 				content: 'Q';
 				text-indent: 3px;
 			}
@@ -142,7 +151,7 @@
 				content: 'A';
 				text-indent: 4px;
 			}
-			.article.qna-list dl.qna dt:before {
+			.article.qna-list dl.qna dt > .content:before {
 				content: '\e62e';
 				text-shadow: none;
 			}
@@ -190,18 +199,21 @@
 			.article.qna-list dl.qna dt {
 				color: #000;
 			}
+			.article.qna-list dl.qna dt > .content:hover {
+				background-color: #f4f6f7;
+			}
 			.article.qna-list dl.qna dd {
 				color: #333;
 				text-shadow: 0 0 1px rgba(51, 51, 51, 0.5);
 				text-shadow: 0 0 1.5px rgba(51, 51, 51, 0.5)\9\0; /* ie10, ie11 */
 			}
-			.article.qna-list dl.qna dt:after {
+			.article.qna-list dl.qna dt > .content:after {
 				color: white;
 			}
 			.article.qna-list dl.qna dd > .content:after {
 				color: white;
 			}
-			.article.qna-list dl.qna dt:before {
+			.article.qna-list dl.qna dt > .content:before {
 				color: #fc8510;
 			}
 			.article.qna-list dl.qna dd > .content:before {
