@@ -1321,6 +1321,7 @@ button.button-x {
 	display: none;
 	text-align: center;
 	overflow: auto;
+	white-space: nowrap;
 	}
 
 	.popup-layer:before {
