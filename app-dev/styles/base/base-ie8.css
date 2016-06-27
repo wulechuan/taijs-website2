@@ -1,7 +1,11 @@
 .ie8-input-fake-placeholder {
 	display: block;
 	position: absolute;
-}
+	}
+	.ie8-input-fake-placeholder ~ input {
+		background-color: transparent;
+		/* filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#AAFFFFFF, endColorstr=#AAFFFFFF); */
+	}
 
 .content {
 	background-color: inherit;
@@ -146,29 +150,32 @@ label.deco-input {
 		.ie-shadow .ie-shadow-matte {
 			display: block;
 			position: absolute;
-			left: 0;
-			right: 0;
-			top: 0;
-			bottom: 0;
 			z-index: 0;
 
 			background-color: black;
 			-ms-filter: "\
-				progid:DXImageTransform.Microsoft.Blur(PixelRadius=3, MakeShadow=true, ShadowOpacity=0.2)\
+				progid:DXImageTransform.Microsoft.Alpha(opacity=15)\
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=2)\
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=5)\
 			";
 			filter: 
-				progid:DXImageTransform.Microsoft.Blur(PixelRadius=3, MakeShadow=true, ShadowOpacity=0.2)
+				progid:DXImageTransform.Microsoft.Alpha(opacity=15)
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=2)
+				progid:DXImageTransform.Microsoft.Blur(PixelRadius=5)
 			;
-			zoom: 1;
+			left: -4px;
+			top: -4px;
+			right: 4px;
+			bottom: 4px;
 		}
 		.shadow-large-and-blur > .ie-shadow .ie-shadow-matte {
 			-ms-filter: "\
-				progid:DXImageTransform.Microsoft.Alpha(Opacity=36)\
+				progid:DXImageTransform.Microsoft.Alpha(opacity=36)\
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=8)\
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=12)\
 			";
 			filter:
-				progid:DXImageTransform.Microsoft.Alpha(Opacity=36)
+				progid:DXImageTransform.Microsoft.Alpha(opacity=36)
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=8)
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=12)
 			;
@@ -347,11 +354,7 @@ label.deco-input {
 		.rounded-corners > .ie-borders .corner-4,
 		.rounded-corners > .ie-bg      .corner-3,
 		.rounded-corners > .ie-bg      .corner-4 {
-			bottom: -12.87px;
-		}
-		.deco-input.rounded-corners > .ie-borders .corner-3,
-		.deco-input.rounded-corners > .ie-borders .corner-4 {
-			bottom: -13.31px;
+			bottom: -13.05px;
 		}
 
 
@@ -689,12 +692,12 @@ button.button-x {
     .floating-layer-set .floating-layer > .ie-shadow .ie-shadow-matte {
         margin: -11px 7px 7px -11px;
         -ms-filter: "\
-            progid:DXImageTransform.Microsoft.Alpha(Opacity=25)\
+            progid:DXImageTransform.Microsoft.Alpha(opacity=25)\
             progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
             progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
         ";
         filter: 
-            progid:DXImageTransform.Microsoft.Alpha(Opacity=25)
+            progid:DXImageTransform.Microsoft.Alpha(opacity=25)
             progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
             progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
         ;
@@ -711,7 +714,7 @@ button.button-x {
 				M22=0.7071067811865474,\
 				SizingMethod='auto expand'\
 			)\
-            progid:DXImageTransform.Microsoft.Alpha(Opacity=25)\
+            progid:DXImageTransform.Microsoft.Alpha(opacity=25)\
             progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
             progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
 		";
@@ -723,7 +726,7 @@ button.button-x {
 				M22=0.7071067811865474,
 				SizingMethod='auto expand'
 			)
-            progid:DXImageTransform.Microsoft.Alpha(Opacity=25)
+            progid:DXImageTransform.Microsoft.Alpha(opacity=25)
             progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
             progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
 		;
@@ -743,12 +746,12 @@ button.button-x {
 
 	.popup-window > .ie-shadow .ie-shadow-matte {
 		-ms-filter: "\
-			progid:DXImageTransform.Microsoft.Alpha(Opacity=95)\
+			progid:DXImageTransform.Microsoft.Alpha(opacity=95)\
 			progid:DXImageTransform.Microsoft.Blur(PixelRadius=8)\
 			progid:DXImageTransform.Microsoft.Blur(PixelRadius=12)\
 		";
 		filter:
-			progid:DXImageTransform.Microsoft.Alpha(Opacity=95)
+			progid:DXImageTransform.Microsoft.Alpha(opacity=95)
 			progid:DXImageTransform.Microsoft.Blur(PixelRadius=8)
 			progid:DXImageTransform.Microsoft.Blur(PixelRadius=12)
 		;
@@ -765,11 +768,11 @@ button.button-x {
 #my-assets .menu.level-2 > .ie-shadow .ie-shadow-matte,
 #my-assets .menu.level-1 > .menu-item > .deco .ie-shadow-matte {
     -ms-filter: "\
-        progid:DXImageTransform.Microsoft.Alpha(Opacity=15)\
+        progid:DXImageTransform.Microsoft.Alpha(opacity=15)\
         progid:DXImageTransform.Microsoft.Blur(PixelRadius=6)\
     ";
     filter: 
-        progid:DXImageTransform.Microsoft.Alpha(Opacity=15)
+        progid:DXImageTransform.Microsoft.Alpha(opacity=15)
         progid:DXImageTransform.Microsoft.Blur(PixelRadius=6)
     ;
 
