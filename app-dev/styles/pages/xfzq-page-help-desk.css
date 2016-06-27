@@ -1,4 +1,5 @@
------ layout definition begin --------------- */
+
+/* ----- layout definition begin --------------- */
 	.tile {
 		height: 311px;
 		text-align: center;
@@ -223,5 +224,4 @@
 			.article.qna-list dl.qna dd > .content:before {
 				color: #19c144;
 			}
-
-/* ----- theme definition end ------------------
+/* ----- theme definition end ------------------ */
