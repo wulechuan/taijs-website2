@@ -24,9 +24,26 @@
 				if (needNoAction) return true;
 
 				if (wasCollapsed) {
-					if (allowTransition) $dd.slideDown();
+					var content = $dd.find('> .content')[0];
+					if (content.knownExpandedHeight > 20) {
+						setTimeout(function () {
+							var newExpandedHeight = $(content).outerHeight();
+							if (newExpandedHeight !== content.knownExpandedHeight) {
+								content.knownExpandedHeight = newExpandedHeight;
+								dd.style.height = content.knownExpandedHeight+'px';
+							}
+						}, 200);
+					} else {
+						content.knownExpandedHeight = $(content).outerHeight();
+					}
+
+					if (allowTransition) {
+						dd.style.height = content.knownExpandedHeight+'px';
+					}
 				} else {
-					if (allowTransition) $dd.slideUp();
+					if (allowTransition) {
+						dd.style.height = '0px';
+					}
 				}
 
 				$dd.toggleClass('expanded');

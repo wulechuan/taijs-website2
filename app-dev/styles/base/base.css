@@ -1572,13 +1572,18 @@ dl.initially-collapsed {
 
 	dl.initially-collapsed dd {
 		margin: 0;
-		display: none;
-		transition-property: height;
+		/* display: none; */
+		height: 0;
+		overflow: hidden;
+		transition-property: height, visibility;
+		transition-duration: 0.5s;
+		transition-timing-function: ease-out;
 	}
 
 	dl.initially-collapsed dt.expanded + dd,
 	dl.initially-collapsed dd.expanded {
 		display: block;
+		height: auto;
 	}
 
 	dl.initially-collapsed dt > .content {
