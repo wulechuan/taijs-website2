@@ -1591,7 +1591,6 @@ dl.initially-collapsed {
 	}
 	dl.initially-collapsed dd .content,
 	dl.initially-collapsed dd,
-	dl.initially-collapsed dt .content,
 	dl.initially-collapsed dt {
 		border-style: inherit;
 		border-color: inherit;

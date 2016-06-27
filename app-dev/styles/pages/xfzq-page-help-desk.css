@@ -91,6 +91,10 @@
 			.article.qna-list dl.qna dt .content {
 				padding-left: 63px;
 			}
+			.article.qna-list dl.qna dd .content {
+				padding-bottom: 5em;
+			}
+
 			.article.qna-list dl.qna dd .content,
 			.article.qna-list dl.qna dt {
 				border-width: 0 0 1px 0;
