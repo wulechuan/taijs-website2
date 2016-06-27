@@ -305,7 +305,7 @@ label.deco-input {
 		.rounded-corners > .ie-borders .corner-2,
 		.rounded-corners > .ie-bg      .corner-1,
 		.rounded-corners > .ie-bg      .corner-2 {
-			top: -13px;
+			top: -13.31px;
 		}
 		.rounded-corners > .ie-borders .corner-1,
 		.rounded-corners > .ie-borders .corner-4,
@@ -347,7 +347,11 @@ label.deco-input {
 		.rounded-corners > .ie-borders .corner-4,
 		.rounded-corners > .ie-bg      .corner-3,
 		.rounded-corners > .ie-bg      .corner-4 {
-			bottom: -13.2px;
+			bottom: -12.87px;
+		}
+		.deco-input.rounded-corners > .ie-borders .corner-3,
+		.deco-input.rounded-corners > .ie-borders .corner-4 {
+			bottom: -13.31px;
 		}
 
 

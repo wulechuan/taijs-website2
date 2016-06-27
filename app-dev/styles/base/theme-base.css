@@ -250,11 +250,15 @@ button.button-x {
 		background-color: white;
 		}
 
+		.dialog .dialog-body > .content .article h3,
+		.dialog .dialog-body > .content .article h2,
 		.dialog .dialog-body > .content .article h1 {
 			color: black;
+			/* -webkit-text-stroke-width: 0.25px; */ /* cause the animation noticable slow */
+			text-shadow: 0 0 0.9px rgba(0, 0, 0, 0.75);
 		}
 
-		.dialog .dialog-body > .content .article h2 {
+		.dialog .dialog-body > .content .article h4 {
 		}
 
 		.dialog .dialog-body > .content .article p {

@@ -1509,11 +1509,9 @@ button.button-x {
 			.dialog .dialog-body > .content .article h1 {
 				font-size: 16px;
 				line-height: 1.5;
-				/* -webkit-text-stroke-width: 0.25px; */ /* cause the animation noticable slow */
-				text-shadow: 0 0 0.9px rgba(0, 0, 0, 0.75);
 			}
 
-			.dialog .dialog-body > .content .article h2 {
+			.dialog .dialog-body > .content .article h3 {
 				font-size: 14px;
 				line-height: 1.5;
 			}
