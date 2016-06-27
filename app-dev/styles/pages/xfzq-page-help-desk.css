@@ -45,6 +45,111 @@
 	.icon-hover-trigger:hover .help-category-funds-wiki     .icon.icon-in-bg { background-position: -360px -60px; }
 	.icon-hover-trigger:hover .help-category-funds-venture  .icon.icon-in-bg { background-position: -420px -60px; }
 	.icon-hover-trigger:hover .help-category-services       .icon.icon-in-bg { background-position: -480px -60px; }
+
+
+
+	.article.qna-list {
+		font-size: 24px;
+		}
+
+		.article.qna-list .title,
+		.article.qna-list dl.qna {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+
+		.article.qna-list .title {
+			padding-top: 21px;
+			padding-bottom: 21px;
+		}
+		.article.qna-list dl.qna {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		.article.qna-list .title h2 {
+			font-size: 16px;
+			line-height: 24px;
+			padding: 8px;
+			margin: -8px;
+		}
+
+		.article.qna-list dl.qna {
+			font-size: 14px;
+			padding-bottom: 2em;
+			border-style: dashed;
+			}
+
+			.article.qna-list dl.qna dd .content { /* for before/after psuedo elements following the sliding animation/transition */
+				position: relative;
+			}
+
+			.article.qna-list dl.qna dd .content,
+			.article.qna-list dl.qna dt {
+				padding: 20px 17px 20px 33px;
+				border-width: 0 0 1px 0;
+			}
+			.article.qna-list dl.qna dd .content,
+			.article.qna-list dl.qna dd,
+			.article.qna-list dl.qna dt {
+				border-style: inherit;
+				border-color: inherit;
+			}
+			.article.qna-list dl.qna .content-mark { /* content marks are for non-css environments, and are hidden by css by default. */
+				display: none;
+			}
+			.article.qna-list dl.qna dt {
+				line-height: 26px;
+				margin: 0;
+			}
+			.article.qna-list dl.qna dd {
+				line-height: 25px;
+				}
+				.article.qna-list dl.qna dd p {
+					margin: -0.5em;
+					margin-bottom: 0.5em;
+				}
+			.article.qna-list dl.qna dt:after,
+			.article.qna-list dl.qna dt:before,
+			.article.qna-list dl.qna dd > .content:after,
+			.article.qna-list dl.qna dd > .content:before {
+				display: block;
+				position: absolute;
+				width: 26px;
+				height: 26px;
+				left: 0;
+				top: 20px;
+			}
+			.article.qna-list dl.qna dt:before,
+			.article.qna-list dl.qna dd > .content:before {
+				font-size: 14px;
+				line-height: 25px;
+				z-index: 2;
+			}
+			.article.qna-list dl.qna dt:after,
+			.article.qna-list dl.qna dd > .content:after {
+				font-family: 'iconfont'!important;
+				font-size: 24px;
+				text-indent: 0;
+				line-height: 27px;
+				z-index: 1;
+			}
+			.article.qna-list dl.qna dt:before {
+				content: 'Q';
+				text-indent: 3px;
+			}
+			.article.qna-list dl.qna dd > .content:before {
+				content: 'A';
+				text-indent: 4px;
+			}
+			.article.qna-list dl.qna dt:after {
+				content: '\e62e';
+				text-shadow: none;
+			}
+			.article.qna-list dl.qna dd > .content:after {
+				content: '\e62e';
+				text-shadow: none;
+			}
 /* ----- layout definition end ----------------- */
 
 
@@ -67,4 +172,40 @@
 		/* .tile:nth-child(odd) {
 			background-color: #f4f6f7;
 		} */
+
+	.article.qna-list {
+		}
+
+		.article.qna-list .title {
+			background-color: #fbfbfc;
+		}
+
+		.article.qna-list .title h2 {
+		}
+
+		.article.qna-list dl.qna {
+			border-color: #ededed;
+			}
+
+			.article.qna-list dl.qna dt {
+				color: #000;
+			}
+			.article.qna-list dl.qna dd {
+				color: #333;
+				text-shadow: 0 0 1px rgba(51, 51, 51, 0.5);
+				text-shadow: 0 0 1.5px rgba(51, 51, 51, 0.5)\9\0; /* ie10, ie11 */
+			}
+			.article.qna-list dl.qna dt:before {
+				color: white;
+			}
+			.article.qna-list dl.qna dd > .content:before {
+				color: white;
+			}
+			.article.qna-list dl.qna dt:after {
+				color: #fc8510;
+			}
+			.article.qna-list dl.qna dd > .content:after {
+				color: #19c144;
+			}
+
 /* ----- theme definition end ------------------ */

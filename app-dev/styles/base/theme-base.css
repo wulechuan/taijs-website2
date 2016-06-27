@@ -37,6 +37,16 @@ html, body {
 	color: #14a153;
 }
 
+.article dd,
+.article dt,
+.article h3,
+.article h2,
+.article h1 {
+	color: black;
+	/* -webkit-text-stroke-width: 0.25px; */ /* cause the animation noticable slow */
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+	text-shadow: 0 0 1.5px rgba(0, 0, 0, 0.5)\9\0; /* ie10, ie11 */
+}
 
 hr {
 	border-color: #d0d0d0;
@@ -232,7 +242,7 @@ button.button-x {
 	}
 
 	.breadcrumbs > ul > li a:hover {
-		background-color: #ddd;
+		background-color: #e9e9e9;
 	}
 
 
@@ -248,14 +258,6 @@ button.button-x {
 	.dialog .dialog-footer,
 	.dialog .dialog-body {
 		background-color: white;
-		}
-
-		.dialog .dialog-body > .content .article h3,
-		.dialog .dialog-body > .content .article h2,
-		.dialog .dialog-body > .content .article h1 {
-			color: black;
-			/* -webkit-text-stroke-width: 0.25px; */ /* cause the animation noticable slow */
-			text-shadow: 0 0 0.9px rgba(0, 0, 0, 0.75);
 		}
 
 		.dialog .dialog-body > .content .article h4 {

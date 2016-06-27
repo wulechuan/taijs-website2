@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Sat Jun 25 02:22:32 2016
+Created by FontForge 20120731 at Mon Jun 27 16:19:48 2016
  By admin
 </metadata>
 <defs>
@@ -246,6 +246,8 @@ h882q9 0 15 7t6 17z" />
     <glyph glyph-name="uniE62D" unicode="&#xe62d;" 
 d="M765 5h-506q-11 0 -18.5 7.5t-7.5 18t7.5 18t18.5 7.5h505q11 0 18.5 -7.5t7.5 -18t-7.5 -18t-17.5 -7.5v0zM867 763q-11 0 -18.5 -7.5t-7.5 -18.5v-759q0 -10 -7.5 -17.5t-18.5 -7.5h-556q-32 0 -54 22t-22 53q0 32 22.5 54t53.5 22h455q32 0 54 22t22 53v609
 q0 32 -22.5 54t-53.5 22h-505q-32 0 -54 -22.5t-22 -53.5v-759q0 -52 37 -89t90 -37h557q31 0 53 22t22 53v761q-1 9 -8.5 16.5t-16.5 7.5zM183 788q0 11 7.5 18.5t18.5 7.5h505q11 0 18.5 -7.5t7.5 -18.5v-606q0 -11 -7.5 -18.5t-18.5 -7.5h-455q-44 0 -76 -25v657z" />
+    <glyph glyph-name="uniE62E" unicode="&#xe62e;" 
+d="M981 405l-256 235v256h-682v-1024h682v299z" />
     <glyph glyph-name="uniE660" unicode="&#xe660;" 
 d="M998 870v-972h-972v972h972zM1024 896h-1024v-1024h1024v1024z" />
     <glyph glyph-name="uniE661" unicode="&#xe661;" 
