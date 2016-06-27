@@ -126,17 +126,17 @@ label.deco-input {
 
 .icon {}
 
-	.icon-hover-trigger:hover .icon.icon-in-elements.transition .icon-face-1,
-	.icon-hover-trigger:hover .icon.icon-in-elements.animation  .icon-face-1,
-	.icon.icon-in-elements.transition:hover .icon-face-1,
-	.icon.icon-in-elements.animation:hover  .icon-face-1,
+	.icon-hover-trigger:hover .icon.icons-in-elements.transition .icon-face-1,
+	.icon-hover-trigger:hover .icon.icons-in-elements.animation  .icon-face-1,
+	.icon.icons-in-elements.transition:hover .icon-face-1,
+	.icon.icons-in-elements.animation:hover  .icon-face-1,
 	.icon {
 		color: #666;
 		}
 
-		.icon.icon-in-elements.transition .icon-face-2,
-		.icon.icon-in-elements.animation  .icon-face-2,
-		.icon.icon-in-elements            .icon-face-2,
+		.icon.icons-in-elements.transition .icon-face-2,
+		.icon.icons-in-elements.animation  .icon-face-2,
+		.icon.icons-in-elements            .icon-face-2,
 		.icon:hover {
 			color: #157dff;
 		}
@@ -206,18 +206,16 @@ label.deco-input {
 		background-color: #157dff;
 	}
 
-
-
-.button-x {
+button.button-x {
 	background-color: transparent;
 	color: white;
 	}
 
-	.button-x:hover {
+	button.button-x:hover {
 		background-color: transparent;
 	}
 
-	.button-x:before {
+	button.button-x:before {
 		background-color: white;
 	}
 
@@ -238,24 +236,29 @@ label.deco-input {
 	}
 
 
-.popup-window > .deco {
-	background-color: rgba(0, 0, 0, 0.2);
-}
-
 
 .dialog {
-	background-color: white;
 	}
 
-	.dialog .dialog-body > .content .article h1 {
-		color: black;
+	.dialog > .deco {
+		background-color: rgba(0, 0, 0, 0.2);
 	}
 
-	.dialog .dialog-body > .content .article h2 {
-	}
+	.dialog .dialog-header,
+	.dialog .dialog-footer,
+	.dialog .dialog-body {
+		background-color: white;
+		}
 
-	.dialog .dialog-body > .content .article p {
-	}
+		.dialog .dialog-body > .content .article h1 {
+			color: black;
+		}
+
+		.dialog .dialog-body > .content .article h2 {
+		}
+
+		.dialog .dialog-body > .content .article p {
+		}
 
 
 #app-header {

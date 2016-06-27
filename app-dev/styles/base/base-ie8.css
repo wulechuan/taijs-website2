@@ -99,10 +99,16 @@
 		background-color: transparent!important;
 	}
 
-	.ie-bg ~ .content {
-		background-color: inherit!important;
+	.ie-shadow ~ .content {
+		background-color: inherit;
 		position: relative;
-		z-index: 1;
+		z-index: 2;
+	}
+
+	.ie-bg ~ .content {
+		background-color: transparent;
+		position: relative;
+		z-index: 2;
 	}
 
 
@@ -323,6 +329,10 @@ label.deco-input {
 		.rounded-corners > .ie-bg      .corner-3 {
 			right: -12.96px;
 		}
+		button.rounded-corners > .ie-bg .corner-2,
+		button.rounded-corners > .ie-bg .corner-3 {
+			right: -13.14px;
+		}
 		.rounded-corners.sharp-corner-tr > .ie-borders .corner-2,
 		.rounded-corners.sharp-corner-2  > .ie-borders .corner-2,
 		.rounded-corners.sharp-corner-br > .ie-borders .corner-3,
@@ -341,9 +351,13 @@ label.deco-input {
 		}
 
 
+		.rounded-corners > .ie-borders [class|="corner"],
+		.rounded-corners > .ie-bg      [class|="corner"] {
+			font-family: 'iconfont'!important;
+		}
+
 		.rounded-corners > .ie-borders [class|="corner"]:before,
 		.rounded-corners > .ie-bg      [class|="corner"]:before {
-			font-family: 'iconfont'!important;
 			display: block;
 			position: absolute;
 			white-space: nowrap;
@@ -614,28 +628,36 @@ button label {
 	margin-top: -0.87px;
 }
 
-.button-x {
+button.button-x {
 	}
 
-	.button-x:before {
+	button.button-x:before {
 		content: none; /* ie8 has :before Alpha(opacity) bug */
 	}
 
-	.button-x:after {
+	button.button-x:after {
 		position: static;
 	}
 
-	.button-x:hover {
+	button.button-x:hover {
 		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorstr=#33FFFFFF, endColorstr=#33FFFFFF)";
 		    filter:  progid:DXImageTransform.Microsoft.Gradient(startColorstr=#33FFFFFF, endColorstr=#33FFFFFF);
 	}
 
-.popup-layers-container-backplate {
-	background-color: black;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=80)";
-	    filter:  progid:DXImageTransform.Microsoft.Alpha(opacity=80);
-	zoom: 1;
-}
+
+.icon {
+	}
+
+	.icon.icons-in-elements .iconfont { /* anti-aliasing */
+		background-color: white;
+        -ms-filter: "\
+        	progid:DXImageTransform.Microsoft.Chroma(color=white)\
+        ";
+		filter:
+			progid:DXImageTransform.Microsoft.Chroma(color=white)
+        ;
+	}
+
 
 
 .floating-layer-set {
@@ -702,6 +724,35 @@ button label {
             progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
 		;
     }
+
+
+.popup-layers-back-plate {
+	background-color: black;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=80)";
+	    filter:  progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+	zoom: 1;
+	}
+
+	.popup-window > .ie-shadow {
+		display: block;
+	}
+
+	.popup-window > .ie-shadow .ie-shadow-matte {
+		-ms-filter: "\
+			progid:DXImageTransform.Microsoft.Alpha(Opacity=95)\
+			progid:DXImageTransform.Microsoft.Blur(PixelRadius=8)\
+			progid:DXImageTransform.Microsoft.Blur(PixelRadius=12)\
+		";
+		filter:
+			progid:DXImageTransform.Microsoft.Alpha(Opacity=95)
+			progid:DXImageTransform.Microsoft.Blur(PixelRadius=8)
+			progid:DXImageTransform.Microsoft.Blur(PixelRadius=12)
+		;
+		left: -24px;
+		top: -24px;
+		right: 14px;
+		bottom: 14px;
+	}
 
 
 #app-chief-nav .menu.level-2 > .ie-shadow .ie-shadow-matte,

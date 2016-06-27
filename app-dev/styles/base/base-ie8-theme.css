@@ -110,6 +110,10 @@ label.deco-input .ie-borders {
     }
 
 
+.dialog > .deco .ie-bg {
+    color: #222;
+    background-color: #222;
+    }
 
 
 #app-chief-nav {
