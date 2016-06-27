@@ -214,12 +214,14 @@ label.deco-input {
 		bottom: 13px;
 		}
 
-		.has-borders.rounded-corners > .ie-borders,
-		.has-borders.rounded-corners > .ie-bg,
-		.deco-input.rounded-corners  > .ie-borders,
-		.deco-input.rounded-corners  > .ie-bg,
-		button.rounded-corners       > .ie-borders,
-		button.rounded-corners       > .ie-bg {
+		.has-borders.rounded-corners    > .ie-borders,
+		.has-borders.rounded-corners    > .ie-bg,
+		.deco-input.rounded-corners     > .ie-borders,
+		.deco-input.rounded-corners     > .ie-bg,
+		[role="button"].rounded-corners > .ie-borders,
+		[role="button"].rounded-corners > .ie-bg,
+		button.rounded-corners          > .ie-borders,
+		button.rounded-corners          > .ie-bg {
 			 /* compensates for borders of parent */
 			left: 12px;
 			right: 12px;
@@ -336,8 +338,10 @@ label.deco-input {
 		.rounded-corners > .ie-bg      .corner-3 {
 			right: -12.96px;
 		}
-		button.rounded-corners > .ie-bg .corner-2,
-		button.rounded-corners > .ie-bg .corner-3 {
+		*[role="button"].rounded-corners > .ie-bg .corner-2,
+		*[role="button"].rounded-corners > .ie-bg .corner-3,
+		button.rounded-corners           > .ie-bg .corner-2,
+		button.rounded-corners           > .ie-bg .corner-3 {
 			right: -13.14px;
 		}
 		.rounded-corners.sharp-corner-tr > .ie-borders .corner-2,
@@ -449,6 +453,12 @@ label.deco-input {
 		.rounded-corners.r10px > .ie-bg      [class|="corner"]:before { content: '\e689'; }
 		.rounded-corners.r12px > .ie-bg      [class|="corner"]:before { content: '\e68a'; }
 		.rounded-corners.r15px > .ie-bg      [class|="corner"]:before { content: '\e68b'; }
+
+		.pagination [role="button"] > .ie-borders [class|="corner"]:before,
+		.pagination button          > .ie-borders [class|="corner"]:before { content: '\e662'; }
+		.pagination [role="button"] > .ie-bg      [class|="corner"]:before,
+		.pagination button          > .ie-bg      [class|="corner"]:before { content: '\e681'; }
+
 
 		.sharp-corner-tl > .ie-borders .corner-1:before,
 		.sharp-corner-1  > .ie-borders .corner-1:before,
@@ -598,10 +608,10 @@ label.deco-input {
 
 
 
-button {
+button, [role="button"] {
 	overflow: visible;
 }
-button label {
+button label, [role="button"] label {
 	position: relative;
 	width: 100%;
 	display: block;

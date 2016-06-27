@@ -105,6 +105,27 @@ button.bg-transparent.color-white:hover {
     background-color: rgba(255, 255, 255, 0.16)!important;
 }
 
+.pagination [role="button"],
+.pagination button {
+	color: #666;
+	border-color: #dadada;
+	background-color: transparent;
+	}
+	.pagination [role="button"]:hover,
+	.pagination button:hover {
+		background-color: #f3f3f3;
+	}
+	.pagination [role="button"].page-number.current,
+	.pagination button.page-number.current {
+		color: white;
+		border-color: #157dff;
+		background-color: #157dff;
+	}
+	.pagination [role="button"].current:hover,
+	.pagination button.current:hover {
+		background-color: #3f93ff;
+	}
+
 input:active,  input:focus,
 select:active, select:focus,
 label:active,  label:focus {
