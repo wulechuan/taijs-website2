@@ -31,7 +31,7 @@ body {
 	line-height: 1.25;
 	}
 
-	body, button, input, select, option {
+	body, button, input, select, option, [role="button"], [role="button"] label {
 		font-size: 16px;
 	}
 
@@ -99,18 +99,30 @@ a, a:link {
 		text-decoration: underline;
 	}
 
+	a[role="button"], a[role="button"]:hover {
+		text-decoration: none;
+	}
 
 select,
-input[type="button"], input[type="submit"], input[type="reset"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+[role="button"],
 button {
 	line-height: 1.25;
 	min-height: 22px;
+	}
+
+	[role="button"] label,
+	button label {
+		font-size: inherit;
 	}
 
 	select.size-std-wide,
 	input[type="button"].size-std-wide,
 	input[type="submit"].size-std-wide,
 	input[type="reset"].size-std-wide,
+	[role="button"].size-std-wide,
 	button.size-std-wide {
 		width: 170px;
 	}
@@ -119,11 +131,15 @@ button {
 	input[type="button"].size-std-regular,
 	input[type="submit"].size-std-regular,
 	input[type="reset"].size-std-regular,
+	[role="button"].size-std-regular,
 	button.size-std-regular {
 		width: 106px;
 	}
 
-	input[type="button"].simple-look, input[type="submit"].simple-look, input[type="reset"].simple-look,
+	input[type="button"].simple-look,
+	input[type="submit"].simple-look,
+	input[type="reset"].simple-look,
+	[role="button"].simple-look,
 	button.simple-look {
 		min-height: 0;
 		font-size: inherit;
@@ -138,6 +154,7 @@ button {
 	input[type="button"].simple-look label,
 	input[type="submit"].simple-look label,
 	input[type="reset"].simple-look label,
+	[role="button"].simple-look label,
 	button.simple-look label {
 		width: auto;
 		border-width: 0px!important;
@@ -147,15 +164,21 @@ button {
 		outline: none;
 	}
 
-	input:active,  input:focus,
-	select:active, select:focus,
-	label:active,  label:focus {
+	select:active,
+	select:focus,
+	input:active,
+	input:focus,
+	label:active,
+	label:focus {
 		outline-offset: -1px;
 		outline-width: 1px;
 		outline-style: none;
 	}
 
-	button:active, button:focus {
+	a[role="button"]:active,
+	a[role="button"]:focus,
+	button:active,
+	button:focus {
 		outline-offset: -1px;
 		outline-width: 0;
 		outline-style: none;
@@ -1079,8 +1102,8 @@ label.deco-input {
 		width: 0;
 		height: 100%;
 	}
-	.menu-item > a > label,
-	.menu-item > label {
+	.menu-item > a > .label,
+	.menu-item > .label {
 		position: relative;
 		z-index: 5;
 
@@ -1098,13 +1121,13 @@ label.deco-input {
 		height: 100%;
 	}
 
-	.menu.layout-hori > .menu-item > a > label,
-	.menu.layout-hori > .menu-item > label {
+	.menu.layout-hori > .menu-item > a > .label,
+	.menu.layout-hori > .menu-item > .label {
 		text-align: center;
 	}
 
-	.menu.layout-hori > .menu-item.has-sub-menu > a > label:after,
-	.menu.layout-hori > .menu-item.has-sub-menu > label:after {
+	.menu.layout-hori > .menu-item.has-sub-menu > a > .label:after,
+	.menu.layout-hori > .menu-item.has-sub-menu > .label:after {
 		font-family:"iconfont" !important;
 		content: '\e607';
 		display: block;
@@ -1132,8 +1155,8 @@ label.deco-input {
 		z-index: 10;
 	}
 
-	.menu.layout-hori > .menu-item.has-sub-menu.sub-menu-shown > a > label:after,
-	.menu.layout-hori > .menu-item.has-sub-menu.sub-menu-shown > label:after {
+	.menu.layout-hori > .menu-item.has-sub-menu.sub-menu-shown > a > .label:after,
+	.menu.layout-hori > .menu-item.has-sub-menu.sub-menu-shown > .label:after {
 		content: '\e605';
 	}
 
@@ -1288,16 +1311,18 @@ dl.initially-collapsed {
 	}
 
 	dl.initially-collapsed dt {
+		position: static;
 		margin: 0;
 		cursor: pointer;
 	}
 
 	dl.initially-collapsed dd {
+		position: static;
 		margin: 0;
 		/* display: none; */
 		height: 0;
 		overflow: hidden;
-		transition-property: height, visibility;
+		transition-property: height;
 		transition-duration: 0.5s;
 		transition-timing-function: ease-out;
 	}
@@ -1308,12 +1333,10 @@ dl.initially-collapsed {
 		height: auto;
 	}
 
-	dl.initially-collapsed dt > .content {
-		/* enable paddings for beautiful hover effects */
-		position: static;
+	dl.initially-collapsed dt > .content { /* enable paddings for beautiful hover effects */
+		position: relative; /* must be relative to make sure jQuery sliding work */
 	}
-	dl.initially-collapsed dd > .content {
-		/* make sure :before/:after psuedo elements following the sliding animation/transition, if any */
+	dl.initially-collapsed dd > .content { /* make sure :before/:after psuedo elements following the sliding animation/transition, if any */
 		position: relative;
 	}
 	dl.initially-collapsed dd .content,
@@ -1327,7 +1350,32 @@ dl.initially-collapsed {
 .pagination {
 	text-align: center;
 	padding: 10px 20px 30px 20px;
-	font-size: 12px;
+	}
+	.pagination [role="button"],
+	.pagination button {
+		border-radius: 2px;
+		padding: 4px 9px;
+		height: 12px;
+		line-height: 12px;
+		min-height: 12px;
+		min-width: 12px;
+		margin: 6.02px;
+	}
+
+	.pagination button.page-number,
+	.pagination [role="button"].page-number {
+		padding-left: 4.16px;
+		padding-right: 4.12px;
+	}
+
+	.page-chief-part > .content.has-sidebar .pagination {
+		text-align: right;
+		margin-right: -20px;
+	}
+	.page-chief-part > .content.has-sidebar .pagination [role="button"],
+	.page-chief-part > .content.has-sidebar .pagination button {
+		margin-left: 12px;
+		margin-right: 0;
 	}
 
 

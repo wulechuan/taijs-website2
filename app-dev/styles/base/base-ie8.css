@@ -194,7 +194,8 @@ label.deco-input {
 		z-index: 2;
 	}
 
-
+.pagination [role="button"],
+.pagination button,
 .rounded-terminals,
 .rounded-corners {
 	position: relative;
@@ -206,6 +207,77 @@ label.deco-input {
 .rounded-corners {
 	}
 
+	/* ----- rounded-corners: definition for borders and bgs begin ----- */
+
+	.pagination [role="button"] > .ie-borders:before,
+	.pagination [role="button"] > .ie-borders:after,
+	.pagination button          > .ie-borders:before,
+	.pagination button          > .ie-borders:after,
+	.rounded-corners            > .ie-borders:before,
+	.rounded-corners            > .ie-borders:after {
+		content: '';
+		display: block;
+		box-sizing: border-box;
+		position: absolute;
+		border-style: inherit!important;
+		border-color: inherit!important;
+		background-color: transparent!important;
+		overflow: hidden;
+	}
+	.pagination [role="button"] > .ie-bg:before,
+	.pagination [role="button"] > .ie-bg:after,
+	.pagination button          > .ie-bg:before,
+	.pagination button          > .ie-bg:after,
+	.rounded-corners            > .ie-bg:before,
+	.rounded-corners            > .ie-bg:after {
+		font-family: 'iconfont'!important;
+		content: '\e681';
+		display: block;
+		box-sizing: border-box;
+		position: absolute;
+		border-style: none!important;
+		border-color: transparent!important;
+		background-color: inherit!important;
+		overflow: hidden!important;
+
+		font-size: 2000px;
+		text-indent: -800px;
+		line-height: 1000px;
+	}
+
+	.pagination [role="button"] > .ie-borders:before,
+	.pagination button          > .ie-borders:before,
+	.rounded-corners            > .ie-borders:before {
+		border-width: 1px 0!important;
+	}
+	.pagination [role="button"] > .ie-borders:after,
+	.pagination button          > .ie-borders:after,
+	.rounded-corners            > .ie-borders:after {
+		border-width: 0 1px!important;
+	}
+
+	.pagination [role="button"] > .ie-borders:before,
+	.pagination [role="button"] > .ie-bg:before,
+	.pagination button          > .ie-borders:before,
+	.pagination button          > .ie-bg:before,
+	.rounded-corners            > .ie-borders:before,
+	.rounded-corners            > .ie-bg:before {
+		left: 0px;
+		right: 0px;
+	}
+	.pagination [role="button"] > .ie-borders:after,
+	.pagination [role="button"] > .ie-bg:after,
+	.pagination button          > .ie-borders:after,
+	.pagination button          > .ie-bg:after,
+	.rounded-corners            > .ie-borders:after,
+	.rounded-corners            > .ie-bg:after {
+		top: 0px;
+		bottom: 0px;
+	}
+
+
+
+
 	.rounded-corners > .ie-borders,
 	.rounded-corners > .ie-bg {
 		left: 13px;
@@ -214,12 +286,14 @@ label.deco-input {
 		bottom: 13px;
 		}
 
-		.has-borders.rounded-corners > .ie-borders,
-		.has-borders.rounded-corners > .ie-bg,
-		.deco-input.rounded-corners  > .ie-borders,
-		.deco-input.rounded-corners  > .ie-bg,
-		button.rounded-corners       > .ie-borders,
-		button.rounded-corners       > .ie-bg {
+		.has-borders.rounded-corners    > .ie-borders,
+		.has-borders.rounded-corners    > .ie-bg,
+		.deco-input.rounded-corners     > .ie-borders,
+		.deco-input.rounded-corners     > .ie-bg,
+		[role="button"].rounded-corners > .ie-borders,
+		[role="button"].rounded-corners > .ie-bg,
+		button.rounded-corners          > .ie-borders,
+		button.rounded-corners          > .ie-bg {
 			 /* compensates for borders of parent */
 			left: 12px;
 			right: 12px;
@@ -228,74 +302,108 @@ label.deco-input {
 			margin: 0px;
 		}
 
-		.rounded-corners > .ie-borders:before,
-		.rounded-corners > .ie-borders:after {
-			content: '';
-			display: block;
-			box-sizing: border-box;
-			position: absolute;
-			border-style: inherit!important;
-			border-color: inherit!important;
-			background-color: transparent!important;
-			overflow: hidden;
-		}
-		.rounded-corners > .ie-bg:before,
-		.rounded-corners > .ie-bg:after {
-			font-family: 'iconfont'!important;
-			content: '\e681';
-			display: block;
-			box-sizing: border-box;
-			position: absolute;
-			border-style: none!important;
-			border-color: transparent!important;
-			background-color: inherit!important;
-			overflow: hidden!important;
-
-			font-size: 2000px;
-			text-indent: -800px;
-			line-height: 1000px;
-		}
-		.rounded-corners > .ie-borders:before,
-		.rounded-corners > .ie-bg:before {
-			left: 0px;
-			right: 0px;
-		}
-		.rounded-corners > .ie-borders:after,
-		.rounded-corners > .ie-bg:after {
-			top: 0px;
-			bottom: 0px;
-		}
-		.rounded-corners > .ie-borders:before {
+		.rounded-corners            > .ie-borders:before {
 			top: -12.96px;
 			bottom: -13.14px;
 		}
-		.rounded-corners > .ie-borders:after {
+		.rounded-corners            > .ie-borders:after {
 			left: -13.14px;
 			right: -12.89px;
 		}
-		.rounded-corners > .ie-bg:before {
+		.rounded-corners            > .ie-bg:before {
 			top: -12.14px;
 			bottom: -12.14px;
 		}
-		.rounded-corners > .ie-bg:after {
+		.rounded-corners            > .ie-bg:after {
 			left: -12.14px;
 			right: -11.86px;
 		}
 
-		.rounded-corners > .ie-borders:before {
-			border-width: 1px 0!important;
+
+	.pagination [role="button"] > .ie-borders,
+	.pagination [role="button"] > .ie-bg,
+	.pagination button          > .ie-borders,
+	.pagination button          > .ie-bg {
+		left: 5px;
+		right: 5px;
+		top: 5px;
+		bottom: 5px;
 		}
-		.rounded-corners > .ie-borders:after {
-			border-width: 0 1px!important;
+
+		.pagination [role="button"] > .ie-borders:before,
+		.pagination button          > .ie-borders:before {
+			top: -5.96px;
+			bottom: -6.14px;
+		}
+		.pagination [role="button"] > .ie-borders:after,
+		.pagination button          > .ie-borders:after {
+			left: -6.14px;
+			right: -5.89px;
+		}
+		.pagination [role="button"] > .ie-bg:before,
+		.pagination button          > .ie-bg:before {
+			top: -5.14px;
+			bottom: -5.14px;
+		}
+		.pagination [role="button"] > .ie-bg:after,
+		.pagination button          > .ie-bg:after {
+			left: -5.14px;
+			right: -5.86px;
 		}
 
 
-	.rounded-corners > .ie-borders [class|="corner"],
-	.rounded-corners > .ie-bg      [class|="corner"] {
+	.pagination [role="button"]    > .ie-bg,
+	.pagination button             > .ie-bg,
+	[role="button"].bg-transparent > .ie-bg,
+	button.bg-transparent          > .ie-bg {
+		visibility: hidden;
+	}
+
+	.pagination [role="button"].page-number.current > .ie-bg,
+	.pagination [role="button"]:hover               > .ie-bg,
+	.pagination button.page-number.current          > .ie-bg,
+	.pagination button:hover                        > .ie-bg,
+	[role="button"].bg-transparent:hover            > .ie-bg,
+	button.bg-transparent:hover                     > .ie-bg {
+		visibility: visible;
+	}
+
+	*[role="button"].bg-transparent > .ie-bg,
+	button.bg-transparent           > .ie-bg {
+		left: -0.66px;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		}
+
+		/* real transparent button need no icontexts for corners, nor those for bg fills */
+		*[role="button"].bg-transparent > .ie-bg:before,
+        *[role="button"].bg-transparent > .ie-bg:after,
+		button.bg-transparent           > .ie-bg:before,
+        button.bg-transparent           > .ie-bg:after {
+            content: none!important;
+        }
+		*[role="button"].bg-transparent > .ie-bg [class|="corner"],
+        button.bg-transparent           > .ie-bg [class|="corner"] {
+            display: none;
+        }
+
+
+	/* ----- rounded-corners: definition for borders and bgs end ------- */
+
+
+
+	/* ----- rounded-corners: definition for corners begin ----- */
+
+	.pagination [role="button"] > .ie-borders [class|="corner"],
+	.pagination [role="button"] > .ie-bg      [class|="corner"],
+	.pagination button          > .ie-borders [class|="corner"],
+	.pagination button          > .ie-bg      [class|="corner"],
+	.rounded-corners            > .ie-borders [class|="corner"],
+	.rounded-corners            > .ie-bg      [class|="corner"] {
+		font-family: 'iconfont'!important;
 		display: block;
 		position: absolute;
-		width: 14px;
-		height: 14px;
 		white-space: nowrap;
 		overflow: hidden;
 		z-index: 0;
@@ -306,6 +414,13 @@ label.deco-input {
 		font-style: normal!important;
 		font-weight: normal!important;
 		background-repeat: no-repeat!important;
+	}
+
+
+	.rounded-corners > .ie-borders [class|="corner"],
+	.rounded-corners > .ie-bg      [class|="corner"] {
+		width: 14px;
+		height: 14px;
 		}
 
 		.rounded-corners > .ie-borders .corner-1,
@@ -313,6 +428,12 @@ label.deco-input {
 		.rounded-corners > .ie-bg      .corner-1,
 		.rounded-corners > .ie-bg      .corner-2 {
 			top: -13.31px;
+		}
+		button.rounded-corners > .ie-borders .corner-1,
+		button.rounded-corners > .ie-borders .corner-2,
+		button.rounded-corners > .ie-bg      .corner-1,
+		button.rounded-corners > .ie-bg      .corner-2 {
+			top: -13.45px;
 		}
 		.rounded-corners > .ie-borders .corner-1,
 		.rounded-corners > .ie-borders .corner-4,
@@ -336,8 +457,10 @@ label.deco-input {
 		.rounded-corners > .ie-bg      .corner-3 {
 			right: -12.96px;
 		}
-		button.rounded-corners > .ie-bg .corner-2,
-		button.rounded-corners > .ie-bg .corner-3 {
+		*[role="button"].rounded-corners > .ie-bg .corner-2,
+		*[role="button"].rounded-corners > .ie-bg .corner-3,
+		button.rounded-corners           > .ie-bg .corner-2,
+		button.rounded-corners           > .ie-bg .corner-3 {
 			right: -13.14px;
 		}
 		.rounded-corners.sharp-corner-tr > .ie-borders .corner-2,
@@ -354,130 +477,214 @@ label.deco-input {
 		.rounded-corners > .ie-borders .corner-4,
 		.rounded-corners > .ie-bg      .corner-3,
 		.rounded-corners > .ie-bg      .corner-4 {
-			bottom: -13.05px;
+			bottom: -13.45px;
+		}
+		button.rounded-corners > .ie-borders .corner-3,
+		button.rounded-corners > .ie-borders .corner-4,
+		button.rounded-corners > .ie-bg      .corner-3,
+		button.rounded-corners > .ie-bg      .corner-4 {
+			bottom: -13.35px;
 		}
 
 
-		.rounded-corners > .ie-borders [class|="corner"],
-		.rounded-corners > .ie-bg      [class|="corner"] {
-			font-family: 'iconfont'!important;
+	.pagination [role="button"] > .ie-borders [class|="corner"],
+	.pagination [role="button"] > .ie-bg      [class|="corner"],
+	.pagination button          > .ie-borders [class|="corner"],
+	.pagination button          > .ie-bg      [class|="corner"] {
+		width: 7px;
+		height: 7px;
 		}
 
-		.rounded-corners > .ie-borders [class|="corner"]:before,
-		.rounded-corners > .ie-bg      [class|="corner"]:before {
-			display: block;
-			position: absolute;
-			white-space: nowrap;
-			text-indent: 0;
-
-			padding: 0;
-			margin: 0;
-			width:  50px;
-			height: 50px;
-
-			background-repeat: no-repeat!important;
-
-			/* the original design was 40px*40px, which makes the strokes being 1px wide */
-			font-size: 40px;
+		.pagination [role="button"] > .ie-borders .corner-1,
+		.pagination [role="button"] > .ie-borders .corner-2,
+		.pagination [role="button"] > .ie-bg      .corner-1,
+		.pagination [role="button"] > .ie-bg      .corner-2,
+		.pagination button          > .ie-borders .corner-1,
+		.pagination button          > .ie-borders .corner-2,
+		.pagination button          > .ie-bg      .corner-1,
+		.pagination button          > .ie-bg      .corner-2 {
+			top: -6.31px;
 		}
-		.rounded-corners > .ie-borders .corner-1:before,
-		.rounded-corners > .ie-borders .corner-2:before,
-		.rounded-corners > .ie-bg      .corner-1:before,
-		.rounded-corners > .ie-bg      .corner-2:before {
+		.pagination [role="button"] > .ie-borders .corner-1,
+		.pagination [role="button"] > .ie-borders .corner-4,
+		.pagination [role="button"] > .ie-bg      .corner-1,
+		.pagination [role="button"] > .ie-bg      .corner-4,
+		.pagination button          > .ie-borders .corner-1,
+		.pagination button          > .ie-borders .corner-4,
+		.pagination button          > .ie-bg      .corner-1,
+		.pagination button          > .ie-bg      .corner-4 {
+			left: -6.12px;
+		}
+
+		.pagination [role="button"] > .ie-borders .corner-2,
+		.pagination [role="button"] > .ie-borders .corner-3,
+		.pagination [role="button"] > .ie-bg      .corner-2,
+		.pagination [role="button"] > .ie-bg      .corner-3,
+		.pagination button          > .ie-borders .corner-2,
+		.pagination button          > .ie-borders .corner-3,
+		.pagination button          > .ie-bg      .corner-2,
+		.pagination button          > .ie-bg      .corner-3 {
+			right: -5.94px;
+		}
+
+		.pagination [role="button"] > .ie-borders .corner-3,
+		.pagination [role="button"] > .ie-borders .corner-4,
+		.pagination [role="button"] > .ie-bg      .corner-3,
+		.pagination [role="button"] > .ie-bg      .corner-4,
+		.pagination button          > .ie-borders .corner-3,
+		.pagination button          > .ie-borders .corner-4,
+		.pagination button          > .ie-bg      .corner-3,
+		.pagination button          > .ie-bg      .corner-4 {
+			bottom: -6.05px;
+		}
+
+	.pagination [role="button"] > .ie-borders [class|="corner"]:before,
+	.pagination [role="button"] > .ie-bg      [class|="corner"]:before,
+	.pagination button          > .ie-borders [class|="corner"]:before,
+	.pagination button          > .ie-bg      [class|="corner"]:before,
+	.rounded-corners            > .ie-borders [class|="corner"]:before,
+	.rounded-corners            > .ie-bg      [class|="corner"]:before {
+		display: block;
+		position: absolute;
+		white-space: nowrap;
+		text-indent: 0;
+
+		padding: 0;
+		margin: 0;
+		width:  50px;
+		height: 50px;
+
+		background-repeat: no-repeat!important;
+
+		/* the original design was 40px*40px, which makes the strokes being 1px wide */
+		font-size: 40px;
+		}
+		.pagination [role="button"] > .ie-borders .corner-1:before,
+		.pagination [role="button"] > .ie-borders .corner-2:before,
+		.pagination [role="button"] > .ie-bg      .corner-1:before,
+		.pagination [role="button"] > .ie-bg      .corner-2:before,
+		.pagination button          > .ie-borders .corner-1:before,
+		.pagination button          > .ie-borders .corner-2:before,
+		.pagination button          > .ie-bg      .corner-1:before,
+		.pagination button          > .ie-bg      .corner-2:before,
+		.rounded-corners            > .ie-borders .corner-1:before,
+		.rounded-corners            > .ie-borders .corner-2:before,
+		.rounded-corners            > .ie-bg      .corner-1:before,
+		.rounded-corners            > .ie-bg      .corner-2:before {
+			top: 0;
 			line-height: 37px;
 		}
-		.rounded-corners > .ie-borders .corner-3:before,
-		.rounded-corners > .ie-borders .corner-4:before,
-		.rounded-corners > .ie-bg      .corner-3:before,
-		.rounded-corners > .ie-bg      .corner-4:before {
+		.pagination [role="button"] > .ie-borders .corner-3:before,
+		.pagination [role="button"] > .ie-borders .corner-4:before,
+		.pagination [role="button"] > .ie-bg      .corner-3:before,
+		.pagination [role="button"] > .ie-bg      .corner-4:before,
+		.pagination button          > .ie-borders .corner-3:before,
+		.pagination button          > .ie-borders .corner-4:before,
+		.pagination button          > .ie-bg      .corner-3:before,
+		.pagination button          > .ie-bg      .corner-4:before,
+		.rounded-corners            > .ie-borders .corner-3:before,
+		.rounded-corners            > .ie-borders .corner-4:before,
+		.rounded-corners            > .ie-bg      .corner-3:before,
+		.rounded-corners            > .ie-bg      .corner-4:before {
 			line-height: 55.88px;
-		}
-
-		.rounded-corners > .ie-borders .corner-1:before,
-		.rounded-corners > .ie-borders .corner-2:before,
-		.rounded-corners > .ie-bg      .corner-1:before,
-		.rounded-corners > .ie-bg      .corner-2:before {
-			top: 0;
-		}
-		.rounded-corners > .ie-borders .corner-3:before,
-		.rounded-corners > .ie-borders .corner-4:before,
-		.rounded-corners > .ie-bg      .corner-3:before,
-		.rounded-corners > .ie-bg      .corner-4:before {
 			bottom: 0;
 		}
-		.rounded-corners > .ie-borders .corner-1:before,
-		.rounded-corners > .ie-borders .corner-4:before,
-		.rounded-corners > .ie-bg      .corner-1:before,
-		.rounded-corners > .ie-bg      .corner-4:before {
+
+		.pagination [role="button"] > .ie-borders .corner-1:before,
+		.pagination [role="button"] > .ie-borders .corner-4:before,
+		.pagination [role="button"] > .ie-bg      .corner-1:before,
+		.pagination [role="button"] > .ie-bg      .corner-4:before,
+		.pagination button          > .ie-borders .corner-1:before,
+		.pagination button          > .ie-borders .corner-4:before,
+		.pagination button          > .ie-bg      .corner-1:before,
+		.pagination button          > .ie-bg      .corner-4:before,
+		.rounded-corners            > .ie-borders .corner-1:before,
+		.rounded-corners            > .ie-borders .corner-4:before,
+		.rounded-corners            > .ie-bg      .corner-1:before,
+		.rounded-corners            > .ie-bg      .corner-4:before {
 			left: 0;
 		}
-		.rounded-corners > .ie-borders .corner-2:before,
-		.rounded-corners > .ie-borders .corner-3:before {
+		.pagination [role="button"] > .ie-borders .corner-2:before,
+		.pagination [role="button"] > .ie-borders .corner-3:before,
+		.pagination [role="button"] > .ie-bg      .corner-2:before,
+		.pagination [role="button"] > .ie-bg      .corner-3:before,
+		.pagination button          > .ie-borders .corner-2:before,
+		.pagination button          > .ie-borders .corner-3:before,
+		.pagination button          > .ie-bg      .corner-2:before,
+		.pagination button          > .ie-bg      .corner-3:before,
+		.rounded-corners            > .ie-borders .corner-2:before,
+		.rounded-corners            > .ie-borders .corner-3:before,
+		.rounded-corners            > .ie-bg      .corner-2:before,
+		.rounded-corners            > .ie-bg      .corner-3:before {
 			text-align: right;
 			direction: rtl;
 			right: 0;
 		}
-		.rounded-corners > .ie-bg      .corner-2:before,
-		.rounded-corners > .ie-bg      .corner-3:before {
-			text-align: right;
-			direction: rtl;
-			right: 0;
-		}
 
-		.rounded-corners       > .ie-borders [class|="corner"]:before { content: '\e665'; }
-		.rounded-corners.r2px  > .ie-borders [class|="corner"]:before { content: '\e662'; }
-		.rounded-corners.r3px  > .ie-borders [class|="corner"]:before { content: '\e663'; }
-		.rounded-corners.r4px  > .ie-borders [class|="corner"]:before { content: '\e664'; }
-		.rounded-corners.r5px  > .ie-borders [class|="corner"]:before { content: '\e665'; }
-		.rounded-corners.r6px  > .ie-borders [class|="corner"]:before { content: '\e666'; }
-		.rounded-corners.r7px  > .ie-borders [class|="corner"]:before { content: '\e667'; }
-		.rounded-corners.r8px  > .ie-borders [class|="corner"]:before { content: '\e668'; }
-		.rounded-corners.r9px  > .ie-borders [class|="corner"]:before { content: '\e669'; }
-		.rounded-corners.r10px > .ie-borders [class|="corner"]:before { content: '\e66a'; }
-		.rounded-corners.r12px > .ie-borders [class|="corner"]:before { content: '\e66b'; }
-		.rounded-corners.r15px > .ie-borders [class|="corner"]:before { content: '\e66c'; }
+	.rounded-corners       > .ie-borders [class|="corner"]:before { content: '\e665'; }
+	.rounded-corners.r2px  > .ie-borders [class|="corner"]:before { content: '\e662'; }
+	.rounded-corners.r3px  > .ie-borders [class|="corner"]:before { content: '\e663'; }
+	.rounded-corners.r4px  > .ie-borders [class|="corner"]:before { content: '\e664'; }
+	.rounded-corners.r5px  > .ie-borders [class|="corner"]:before { content: '\e665'; }
+	.rounded-corners.r6px  > .ie-borders [class|="corner"]:before { content: '\e666'; }
+	.rounded-corners.r7px  > .ie-borders [class|="corner"]:before { content: '\e667'; }
+	.rounded-corners.r8px  > .ie-borders [class|="corner"]:before { content: '\e668'; }
+	.rounded-corners.r9px  > .ie-borders [class|="corner"]:before { content: '\e669'; }
+	.rounded-corners.r10px > .ie-borders [class|="corner"]:before { content: '\e66a'; }
+	.rounded-corners.r12px > .ie-borders [class|="corner"]:before { content: '\e66b'; }
+	.rounded-corners.r15px > .ie-borders [class|="corner"]:before { content: '\e66c'; }
 
-		.rounded-corners       > .ie-bg      [class|="corner"]:before { content: '\e684'; }
-		.rounded-corners.r2px  > .ie-bg      [class|="corner"]:before { content: '\e681'; }
-		.rounded-corners.r3px  > .ie-bg      [class|="corner"]:before { content: '\e682'; }
-		.rounded-corners.r4px  > .ie-bg      [class|="corner"]:before { content: '\e683'; }
-		.rounded-corners.r5px  > .ie-bg      [class|="corner"]:before { content: '\e684'; }
-		.rounded-corners.r6px  > .ie-bg      [class|="corner"]:before { content: '\e685'; }
-		.rounded-corners.r7px  > .ie-bg      [class|="corner"]:before { content: '\e686'; }
-		.rounded-corners.r8px  > .ie-bg      [class|="corner"]:before { content: '\e687'; }
-		.rounded-corners.r9px  > .ie-bg      [class|="corner"]:before { content: '\e688'; }
-		.rounded-corners.r10px > .ie-bg      [class|="corner"]:before { content: '\e689'; }
-		.rounded-corners.r12px > .ie-bg      [class|="corner"]:before { content: '\e68a'; }
-		.rounded-corners.r15px > .ie-bg      [class|="corner"]:before { content: '\e68b'; }
+	.rounded-corners       > .ie-bg      [class|="corner"]:before { content: '\e684'; }
+	.rounded-corners.r2px  > .ie-bg      [class|="corner"]:before { content: '\e681'; }
+	.rounded-corners.r3px  > .ie-bg      [class|="corner"]:before { content: '\e682'; }
+	.rounded-corners.r4px  > .ie-bg      [class|="corner"]:before { content: '\e683'; }
+	.rounded-corners.r5px  > .ie-bg      [class|="corner"]:before { content: '\e684'; }
+	.rounded-corners.r6px  > .ie-bg      [class|="corner"]:before { content: '\e685'; }
+	.rounded-corners.r7px  > .ie-bg      [class|="corner"]:before { content: '\e686'; }
+	.rounded-corners.r8px  > .ie-bg      [class|="corner"]:before { content: '\e687'; }
+	.rounded-corners.r9px  > .ie-bg      [class|="corner"]:before { content: '\e688'; }
+	.rounded-corners.r10px > .ie-bg      [class|="corner"]:before { content: '\e689'; }
+	.rounded-corners.r12px > .ie-bg      [class|="corner"]:before { content: '\e68a'; }
+	.rounded-corners.r15px > .ie-bg      [class|="corner"]:before { content: '\e68b'; }
 
-		.sharp-corner-tl > .ie-borders .corner-1:before,
-		.sharp-corner-1  > .ie-borders .corner-1:before,
+	.pagination [role="button"]                     > .ie-borders [class|="corner"]:before,
+	.pagination button                              > .ie-borders [class|="corner"]:before { content: '\e662'; }
 
-		.sharp-corner-tr > .ie-borders .corner-2:before,
-		.sharp-corner-2  > .ie-borders .corner-2:before,
+	.pagination [role="button"]:hover               > .ie-bg      [class|="corner"]:before,
+	.pagination [role="button"].page-number.current > .ie-bg      [class|="corner"]:before,
+	.pagination button:hover                        > .ie-bg      [class|="corner"]:before,
+	.pagination button.page-number.current          > .ie-bg      [class|="corner"]:before { content: '\e681'; }
 
-		.sharp-corner-br > .ie-borders .corner-3:before,
-		.sharp-corner-3  > .ie-borders .corner-3:before,
 
-		.sharp-corner-bl > .ie-borders .corner-4:before,
-		.sharp-corner-4  > .ie-borders .corner-4:before {
-			content: '\e660'!important;
-		}
+	.sharp-corner-tl > .ie-borders .corner-1:before,
+	.sharp-corner-1  > .ie-borders .corner-1:before,
 
-		.sharp-corner-tl > .ie-bg      .corner-1:before,
-		.sharp-corner-1  > .ie-bg      .corner-1:before,
+	.sharp-corner-tr > .ie-borders .corner-2:before,
+	.sharp-corner-2  > .ie-borders .corner-2:before,
 
-		.sharp-corner-tr > .ie-bg      .corner-2:before,
-		.sharp-corner-2  > .ie-bg      .corner-2:before,
+	.sharp-corner-br > .ie-borders .corner-3:before,
+	.sharp-corner-3  > .ie-borders .corner-3:before,
 
-		.sharp-corner-br > .ie-bg      .corner-3:before,
-		.sharp-corner-3  > .ie-bg      .corner-3:before,
+	.sharp-corner-bl > .ie-borders .corner-4:before,
+	.sharp-corner-4  > .ie-borders .corner-4:before {
+		content: '\e660'!important;
+	}
 
-		.sharp-corner-bl > .ie-bg      .corner-4:before,
-		.sharp-corner-4  > .ie-bg      .corner-4:before {
-			content: '\e680'!important;
-		}
+	.sharp-corner-tl > .ie-bg      .corner-1:before,
+	.sharp-corner-1  > .ie-bg      .corner-1:before,
 
+	.sharp-corner-tr > .ie-bg      .corner-2:before,
+	.sharp-corner-2  > .ie-bg      .corner-2:before,
+
+	.sharp-corner-br > .ie-bg      .corner-3:before,
+	.sharp-corner-3  > .ie-bg      .corner-3:before,
+
+	.sharp-corner-bl > .ie-bg      .corner-4:before,
+	.sharp-corner-4  > .ie-bg      .corner-4:before {
+		content: '\e680'!important;
+	}
+
+	/* ----- rounded-corners: definition for corners end ------- */
 
 
 .rounded-terminals {
@@ -598,10 +805,10 @@ label.deco-input {
 
 
 
-button {
+button, [role="button"] {
 	overflow: visible;
 }
-button label {
+button label, [role="button"] label {
 	position: relative;
 	width: 100%;
 	display: block;
@@ -616,11 +823,11 @@ button label {
 
 
 .ie-borders {
-    color: black;
+	color: black;
 	border-color: black;
 }
 .ie-bg {
-    color: white;
+	color: white;
 	background-color: transparent; /*  */
 }
 .bg-transparent > .ie-bg {
@@ -648,7 +855,7 @@ button.button-x {
 
 	button.button-x:hover {
 		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorstr=#33FFFFFF, endColorstr=#33FFFFFF)";
-		    filter:  progid:DXImageTransform.Microsoft.Gradient(startColorstr=#33FFFFFF, endColorstr=#33FFFFFF);
+			filter:  progid:DXImageTransform.Microsoft.Gradient(startColorstr=#33FFFFFF, endColorstr=#33FFFFFF);
 	}
 
 
@@ -657,18 +864,18 @@ button.button-x {
 
 	.icon.icons-in-elements .iconfont { /* anti-aliasing */
 		background-color: white;
-        -ms-filter: "\
-        	progid:DXImageTransform.Microsoft.Chroma(color=white)\
-        ";
+		-ms-filter: "\
+			progid:DXImageTransform.Microsoft.Chroma(color=white)\
+		";
 		filter:
 			progid:DXImageTransform.Microsoft.Chroma(color=white)
-        ;
+		;
 	}
 
 
 
 .floating-layer-set {
-    }
+	}
 
 	.floating-layer-set .locator .ie-hover-patch { /* for stable hover */
 		display: block;
@@ -679,9 +886,9 @@ button.button-x {
 	}
 
 	.floating-layer-set .floating-layer.has-border-triangle > .ie-border-triangle-shadow-matte,
-    .floating-layer-set .floating-layer > .ie-shadow {
-    	display: block;
-    }
+	.floating-layer-set .floating-layer > .ie-shadow {
+		display: block;
+	}
 
 	.floating-layer-set.floating-info-set .floating-layer.has-border-triangle > .ie-border-triangle-shadow-matte,
 	.floating-layer-set.floating-info-set .floating-layer.has-border-triangle > .ie-border-triangle {
@@ -689,23 +896,23 @@ button.button-x {
 		margin-left: 0;
 	}
 
-    .floating-layer-set .floating-layer > .ie-shadow .ie-shadow-matte {
-        margin: -11px 7px 7px -11px;
-        -ms-filter: "\
-            progid:DXImageTransform.Microsoft.Alpha(opacity=25)\
-            progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
-            progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
-        ";
-        filter: 
-            progid:DXImageTransform.Microsoft.Alpha(opacity=25)
-            progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
-            progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
-        ;
-    }
+	.floating-layer-set .floating-layer > .ie-shadow .ie-shadow-matte {
+		margin: -11px 7px 7px -11px;
+		-ms-filter: "\
+			progid:DXImageTransform.Microsoft.Alpha(opacity=25)\
+			progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
+			progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
+		";
+		filter: 
+			progid:DXImageTransform.Microsoft.Alpha(opacity=25)
+			progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
+			progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
+		;
+	}
 	.floating-layer-set .floating-layer.has-border-triangle > .ie-border-triangle-shadow-matte {
 		left: 50%;
 		top: 0;
-        margin: -21px 0 0 -20px;
+		margin: -21px 0 0 -20px;
 		-ms-filter: "\
 			progid:DXImageTransform.Microsoft.Matrix(\
 				M11=0.7071067811865474,\
@@ -714,9 +921,9 @@ button.button-x {
 				M22=0.7071067811865474,\
 				SizingMethod='auto expand'\
 			)\
-            progid:DXImageTransform.Microsoft.Alpha(opacity=25)\
-            progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
-            progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
+			progid:DXImageTransform.Microsoft.Alpha(opacity=25)\
+			progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
+			progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
 		";
 		filter:
 			progid:DXImageTransform.Microsoft.Matrix(
@@ -726,17 +933,17 @@ button.button-x {
 				M22=0.7071067811865474,
 				SizingMethod='auto expand'
 			)
-            progid:DXImageTransform.Microsoft.Alpha(opacity=25)
-            progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
-            progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
+			progid:DXImageTransform.Microsoft.Alpha(opacity=25)
+			progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
+			progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
 		;
-    }
+	}
 
 
 .popup-layers-back-plate {
 	background-color: black;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=80)";
-	    filter:  progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+		filter:  progid:DXImageTransform.Microsoft.Alpha(opacity=80);
 	zoom: 1;
 	}
 
@@ -762,19 +969,25 @@ button.button-x {
 	}
 
 
+.pagination [role="button"],
+.pagination button {
+	position: relative; /* for ie8 borders */
+}
+
+
 #app-chief-nav .menu.level-2 > .ie-shadow .ie-shadow-matte,
 #app-chief-nav .menu.level-1 > .menu-item > .deco .ie-shadow-matte,
 
 #my-assets .menu.level-2 > .ie-shadow .ie-shadow-matte,
 #my-assets .menu.level-1 > .menu-item > .deco .ie-shadow-matte {
-    -ms-filter: "\
-        progid:DXImageTransform.Microsoft.Alpha(opacity=15)\
-        progid:DXImageTransform.Microsoft.Blur(PixelRadius=6)\
-    ";
-    filter: 
-        progid:DXImageTransform.Microsoft.Alpha(opacity=15)
-        progid:DXImageTransform.Microsoft.Blur(PixelRadius=6)
-    ;
+	-ms-filter: "\
+		progid:DXImageTransform.Microsoft.Alpha(opacity=15)\
+		progid:DXImageTransform.Microsoft.Blur(PixelRadius=6)\
+	";
+	filter: 
+		progid:DXImageTransform.Microsoft.Alpha(opacity=15)
+		progid:DXImageTransform.Microsoft.Blur(PixelRadius=6)
+	;
 
 	left: -7px;
 	top: -7px;

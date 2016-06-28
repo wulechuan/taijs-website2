@@ -87,12 +87,15 @@
 
 			.article.qna-list dl.qna dd .content,
 			.article.qna-list dl.qna dt .content {
-				padding: 20px 17px 20px 33px;
+				padding-right: 30px;
+				padding-top: 20px;
 			}
 			.article.qna-list dl.qna dt .content {
 				padding-left: 63px;
+				padding-bottom: 20px;
 			}
 			.article.qna-list dl.qna dd .content {
+				padding-left: 33px;
 				padding-bottom: 5em;
 			}
 
@@ -125,12 +128,11 @@
 				position: absolute;
 				width: 26px;
 				height: 26px;
-				left: 0;
 				top: 20px;
 			}
 			.article.qna-list dl.qna dt > .content:before,
 			.article.qna-list dl.qna dt > .content:after {
-				left: 0;
+				left: 30px;
 			}
 			.article.qna-list dl.qna dd > .content:before,
 			.article.qna-list dl.qna dd > .content:after {

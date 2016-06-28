@@ -103,7 +103,7 @@
 			#credit-abstract-pane > .ie-bg {
 				display: block\0;
 				background-color: black;
-				filter: alpha(opacity=25);
+				filter: alpha(opacity=60);
 			}
 
 			:root #credit-abstract-pane > .ie-bg {
@@ -651,6 +651,7 @@
 	}
 	
 	#pl-taijs-app-promotion .ie-bg {
+		max-width: 100%;
 	}
 
 	#pl-taijs-app-promotion .title {

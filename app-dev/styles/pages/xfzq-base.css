@@ -270,11 +270,11 @@
 			text-align: left;
 			direction: ltr;
 			white-space: nowrap;
-			overflow: visible; /* for sidebar borders */
 		}
 
 		.page-chief-part > .content .page-sidebar,
 		.page-chief-part > .content .page-content {
+			box-sizing: border-box;
 			position: relative;
 			display: inline-block;
 			vertical-align: top;
@@ -293,6 +293,7 @@
 		.page-chief-part > .content.has-sidebar .page-content,
 		.page-chief-part > .content .page-sidebar ~ .page-content {
 			width: 990px;
+			padding: 40px;
 		}
 		.page-chief-part > .content.has-sidebar:before {
 			content: '';
@@ -304,6 +305,9 @@
 			bottom: -1px;
 			border-width: 1px;
 			border-style: solid;
+		}
+		.page-chief-part > .content.has-sidebar {
+			overflow: visible; /* for sidebar borders */
 		}
 
 
@@ -338,8 +342,8 @@
 			padding: 0;
 		}
 
-		#page-sidebar-nav .menu-item.has-sub-menu > a > label:after,
-		#page-sidebar-nav .menu-item.has-sub-menu > label:after {
+		#page-sidebar-nav .menu-item.has-sub-menu > a > .label:after,
+		#page-sidebar-nav .menu-item.has-sub-menu > .label:after {
 			font-family: 'iconfont'!important;
 			display: block;
 			position: absolute;
@@ -352,12 +356,12 @@
 			font-size: 25px;
 			line-height: 1;
 			}
-			#page-sidebar-nav .menu-item.has-sub-menu > a > label:after,
-			#page-sidebar-nav .menu-item.has-sub-menu > label:after {
+			#page-sidebar-nav .menu-item.has-sub-menu > a > .label:after,
+			#page-sidebar-nav .menu-item.has-sub-menu > .label:after {
 				content: '\e606';
 			}
-			#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > a > label:after,
-			#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > label:after {
+			#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > a > .label:after,
+			#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > .label:after {
 				content: '\e605';
 			}
 
@@ -369,8 +373,8 @@
 			height: auto;
 		}
 
-		#page-sidebar-nav .menu-item > a > label,
-		#page-sidebar-nav .menu-item > label {
+		#page-sidebar-nav .menu-item > a > .label,
+		#page-sidebar-nav .menu-item > .label {
 			box-sizing: border-box;
 			min-height: 46px;
 			line-height: 21px;
@@ -381,17 +385,17 @@
 			margin-bottom: -1px;
 		}
 
-		#page-sidebar-nav .menu-item > a > label,
-		#page-sidebar-nav .menu-item > label {
+		#page-sidebar-nav .menu-item > a > .label,
+		#page-sidebar-nav .menu-item > .label {
 			line-height: 22px\0;
 		}
-		:root #page-sidebar-nav .menu-item > a > label,
-		:root #page-sidebar-nav .menu-item > label {
+		:root #page-sidebar-nav .menu-item > a > .label,
+		:root #page-sidebar-nav .menu-item > .label {
 			line-height: 21px\0;
 		}
 
-		#page-sidebar-nav .menu.level-2 > .menu-item > a > label,
-		#page-sidebar-nav .menu.level-2 > .menu-item > label {
+		#page-sidebar-nav .menu.level-2 > .menu-item > a > .label,
+		#page-sidebar-nav .menu.level-2 > .menu-item > .label {
 			padding-left: 76px;
 		}
 /* ----- layout definition end ----------------- */
@@ -501,22 +505,22 @@
 
 	#page-sidebar-nav {
 		}
-		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > label,
-		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > a > label {
+		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > .label,
+		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > a > .label {
 			color: #333;
 			border-color: transparent;
 			background: transparent;
 		}
-		#page-sidebar-nav .menu-item.current > label,
-		#page-sidebar-nav .menu-item.current > a > label {
+		#page-sidebar-nav .menu-item.current > .label,
+		#page-sidebar-nav .menu-item.current > a > .label {
 			color: #333;
 			background: white;
 			border-color: #ddd;
 		}
-		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > label:hover,
-		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > a:hover > label,
-		#page-sidebar-nav .menu-item > label:hover,
-		#page-sidebar-nav .menu-item > a:hover > label {
+		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > .label:hover,
+		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > a:hover > .label,
+		#page-sidebar-nav .menu-item > .label:hover,
+		#page-sidebar-nav .menu-item > a:hover > .label {
 			color: #333;
 			background: white;
 			border-color: #ddd;
