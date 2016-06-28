@@ -1362,9 +1362,9 @@ dl.initially-collapsed {
 		margin: 6.02px;
 	}
 
-	.pagination button.page-numberm,
+	.pagination button.page-number,
 	.pagination [role="button"].page-number {
-		padding-left: 4.09px;
+		padding-left: 4.16px;
 		padding-right: 4.12px;
 	}
 
