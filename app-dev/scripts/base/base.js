@@ -159,4 +159,78 @@
 			}
 		});
 	});
+
+	setPageSidebarNavCurrentItem(processParametersPassedIn().psn);
+
+    function processParametersPassedIn() {
+        var qString = location.href.match(/\?.*/);
+        if (qString) qString = qString[0].slice(1);
+
+        var qKVPairs = [];
+        if (qString) {
+            qKVPairs = qString.split('&');
+        }
+
+        var psn1; // page sidebar nav Level 1 current
+        var psn2; // page sidebar nav Level 2 current
+
+        for (var i in qKVPairs){
+            var kvpString = qKVPairs[i];
+            var kvp = kvpString.split('=');
+
+            if (kvp[0] === 'psn1') psn1 = kvp[1];
+            if (kvp[0] === 'psn2') psn2 = kvp[1];
+        }
+
+        return {
+            psn: {
+            	level1: psn1,
+            	level2: psn2
+            }
+        }
+    }
+
+    function setPageSidebarNavCurrentItem(conf) {
+    	conf = conf || {};
+		conf.level1IdPrefix = 'menu-psn-1-';
+		var level1CurrentItem = setMenuCurrentItemForLevel(1, 2, $('#page-sidebar-nav'), conf);
+    }
+
+    function setMenuCurrentItemForLevel(level, depth, parentDom, conf) {
+    	level = parseInt(level);
+    	depth = parseInt(depth);
+    	if (!(level > 0) || !(depth >= level)) {
+    		throw('Invalid menu level/depth for configuring a menu tree.');
+    	}
+    	if (typeof conf !== 'object') {
+    		throw('Invalid configuration object for configuring a menu tree.');
+    	}
+
+		var prefix = conf['level'+level+'IdPrefix'];
+		var desiredId = prefix + conf['level'+level];
+
+		var $allItems = $(parentDom).find('.menu.level-'+level+' > .menu-item');
+		var currentItem;
+		var currentItemId;
+		$allItems.each(function (index, menuItem) {
+			var itemLabel = $(menuItem).find('> a > label')[0];
+			var itemId = itemLabel.id;
+
+			if (itemId && desiredId && (itemId===desiredId)) {
+				currentItem = menuItem;
+				currentItemId = itemId;
+				$(menuItem).addClass('current');
+			} else {
+				$(menuItem).removeClass('current');
+			}
+		});
+
+		if (level < depth && currentItem) {
+			var nextLevel = level + 1;
+			conf['level'+nextLevel+'IdPrefix'] = currentItemId + '-' + nextLevel + '-';
+			var subLevelCurrentItem = setMenuCurrentItemForLevel(nextLevel, depth, currentItem, conf);
+		}
+
+		return currentItem;
+    }
 })();

@@ -31,7 +31,7 @@ body {
 	line-height: 1.25;
 	}
 
-	body, button, input, select, option, label, [role="button"] {
+	body, button, input, select, option, [role="button"], [role="button"] label {
 		font-size: 16px;
 	}
 

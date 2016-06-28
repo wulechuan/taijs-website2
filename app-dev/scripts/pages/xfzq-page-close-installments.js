@@ -1,5 +1,5 @@
 (function () {
-	$('.page-chief-part').on('click', function(event) {
+	$('.page-content').on('click', function(event) {
 		$('.popup-layers-back-plate').show();
 		$('#pl-close-installments-succeed').show();
 	});
