@@ -99,9 +99,15 @@ a, a:link {
 		text-decoration: underline;
 	}
 
+	a[role="button"], a[role="button"]:hover {
+		text-decoration: none;
+	}
 
 select,
-input[type="button"], input[type="submit"], input[type="reset"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+[role="button"],
 button {
 	line-height: 1.25;
 	min-height: 22px;
@@ -111,6 +117,7 @@ button {
 	input[type="button"].size-std-wide,
 	input[type="submit"].size-std-wide,
 	input[type="reset"].size-std-wide,
+	[role="button"].size-std-wide,
 	button.size-std-wide {
 		width: 170px;
 	}
@@ -119,11 +126,15 @@ button {
 	input[type="button"].size-std-regular,
 	input[type="submit"].size-std-regular,
 	input[type="reset"].size-std-regular,
+	[role="button"].size-std-regular,
 	button.size-std-regular {
 		width: 106px;
 	}
 
-	input[type="button"].simple-look, input[type="submit"].simple-look, input[type="reset"].simple-look,
+	input[type="button"].simple-look,
+	input[type="submit"].simple-look,
+	input[type="reset"].simple-look,
+	[role="button"].simple-look,
 	button.simple-look {
 		min-height: 0;
 		font-size: inherit;
@@ -138,6 +149,7 @@ button {
 	input[type="button"].simple-look label,
 	input[type="submit"].simple-look label,
 	input[type="reset"].simple-look label,
+	[role="button"].simple-look label,
 	button.simple-look label {
 		width: auto;
 		border-width: 0px!important;
@@ -147,15 +159,21 @@ button {
 		outline: none;
 	}
 
-	input:active,  input:focus,
-	select:active, select:focus,
-	label:active,  label:focus {
+	select:active,
+	select:focus,
+	input:active,
+	input:focus,
+	label:active,
+	label:focus {
 		outline-offset: -1px;
 		outline-width: 1px;
 		outline-style: none;
 	}
 
-	button:active, button:focus {
+	a[role="button"]:active,
+	a[role="button"]:focus,
+	button:active,
+	button:focus {
 		outline-offset: -1px;
 		outline-width: 0;
 		outline-style: none;
