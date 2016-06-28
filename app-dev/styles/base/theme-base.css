@@ -127,13 +127,27 @@ input {
 	.pagination [role="button"],
 	.pagination button {
 		color: #666;
-		border-color: #dadada;
 		background-color: transparent;
 		}
+
+		.pagination a[role="button"].page-number {
+			border-color: transparent;
+		}
+		.pagination [role="button"],
+		.pagination [role="button"].page-number:link,
+		.pagination button {
+			border-color: #dadada;
+		}
+
+		.pagination [role="button"].page-number:hover {
+			background-color: transparent;
+		}
 		.pagination [role="button"]:hover,
+		.pagination [role="button"].page-number:link:hover,
 		.pagination button:hover {
 			background-color: #f3f3f3;
 		}
+
 		.pagination [role="button"].page-number.current,
 		.pagination button.page-number.current {
 			color: white;

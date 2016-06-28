@@ -31,7 +31,7 @@ body {
 	line-height: 1.25;
 	}
 
-	body, button, input, select, option {
+	body, button, input, select, option, label, [role="button"] {
 		font-size: 16px;
 	}
 
@@ -111,6 +111,11 @@ input[type="reset"],
 button {
 	line-height: 1.25;
 	min-height: 22px;
+	}
+
+	[role="button"] label,
+	button label {
+		font-size: inherit;
 	}
 
 	select.size-std-wide,
@@ -1356,6 +1361,7 @@ dl.initially-collapsed {
 		min-width: 12px;
 		margin: 6px;
 	}
+
 	.pagination [role="button"].page-number,
 	.pagination button.page-number {
 		padding-left: 4px;
