@@ -14,13 +14,13 @@ button {
     }
 
     .pagination [role="button"] > .ie-borders,
-    .pagination button > .ie-borders {
+    .pagination button          > .ie-borders {
         border-color: #dadada;
     }
 
     .pagination [role="button"].current > .ie-borders,
-    .pagination button.current > .ie-borders,
-    button > .ie-borders {
+    .pagination button.current          > .ie-borders,
+    button                              > .ie-borders {
         border-color: #157dff;
     }
 
@@ -28,14 +28,30 @@ button {
         /* background-color: #157dff; */
     }
 
-    button > .ie-borders,
-    button > .ie-bg {
-        color: #157dff;
+    .pagination [role="button"] > .ie-borders,
+    .pagination [role="button"] > .ie-bg,
+    .pagination button          > .ie-borders,
+    .pagination button          > .ie-bg {
+        color: #dadada;
     }
 
     .pagination [role="button"]:hover > .ie-bg,
-    .pagination button:hover > .ie-bg,
-    button:hover > .ie-bg {
+    .pagination button:hover          > .ie-bg {
+        color: #f3f3f3;
+    }
+
+    .pagination [role="button"].page-number.current > .ie-borders,
+    .pagination [role="button"].page-number.current > .ie-bg,
+    .pagination button.page-number.current          > .ie-borders,
+    .pagination button.page-number.current          > .ie-bg,
+    button                                          > .ie-borders,
+    button                                          > .ie-bg {
+        color: #157dff;
+    }
+
+    .pagination [role="button"].page-number.current:hover > .ie-bg,
+    .pagination button.page-number.current:hover          > .ie-bg,
+    button:hover                                          > .ie-bg {
         color: #3f93ff;
     }
 

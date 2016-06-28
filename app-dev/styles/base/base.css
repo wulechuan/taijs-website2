@@ -1332,9 +1332,9 @@ dl.initially-collapsed {
 	.pagination button {
 		border-radius: 2px;
 		padding: 4px 9px;
-		min-height: 12px;
 		height: 12px;
 		line-height: 12px;
+		min-height: 12px;
 		min-width: 12px;
 		margin: 6px;
 	}
