@@ -1288,11 +1288,13 @@ dl.initially-collapsed {
 	}
 
 	dl.initially-collapsed dt {
+		position: static;
 		margin: 0;
 		cursor: pointer;
 	}
 
 	dl.initially-collapsed dd {
+		position: static;
 		margin: 0;
 		/* display: none; */
 		height: 0;
@@ -1308,12 +1310,10 @@ dl.initially-collapsed {
 		height: auto;
 	}
 
-	dl.initially-collapsed dt > .content {
-		/* enable paddings for beautiful hover effects */
-		position: static;
+	dl.initially-collapsed dt > .content { /* enable paddings for beautiful hover effects */
+		position: relative; /* must be relative to make sure jQuery sliding work */
 	}
-	dl.initially-collapsed dd > .content {
-		/* make sure :before/:after psuedo elements following the sliding animation/transition, if any */
+	dl.initially-collapsed dd > .content { /* make sure :before/:after psuedo elements following the sliding animation/transition, if any */
 		position: relative;
 	}
 	dl.initially-collapsed dd .content,

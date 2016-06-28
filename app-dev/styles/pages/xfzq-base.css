@@ -270,7 +270,6 @@
 			text-align: left;
 			direction: ltr;
 			white-space: nowrap;
-			overflow: visible; /* for sidebar borders */
 		}
 
 		.page-chief-part > .content .page-sidebar,
@@ -304,6 +303,9 @@
 			bottom: -1px;
 			border-width: 1px;
 			border-style: solid;
+		}
+		.page-chief-part > .content.has-sidebar {
+			overflow: visible; /* for sidebar borders */
 		}
 
 
