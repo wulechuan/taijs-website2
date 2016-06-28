@@ -131,6 +131,23 @@ input {
 	    background-color: rgba(255, 255, 255, 0.16)!important;
 	}
 
+	input[type="reset"].bg-transparent.color-red,
+	input[type="button"].bg-transparent.color-red,
+	input[type="submit"].bg-transparent.color-red,
+	[role="button"].bg-transparent.color-red,
+	button.bg-transparent.color-red {
+	    color: #ff291d;
+	    border-color: #ff291d;
+	}
+
+	input[type="reset"].bg-transparent.color-red:hover,
+	input[type="button"].bg-transparent.color-red:hover,
+	input[type="submit"].bg-transparent.color-red:hover,
+	[role="button"].bg-transparent.color-red:hover,
+	button.bg-transparent.color-red:hover {
+	    background-color: rgba(255, 41, 29, 0.16)!important;
+	}
+
 	.pagination [role="button"],
 	.pagination button {
 		color: #666;
