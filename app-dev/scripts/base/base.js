@@ -119,17 +119,11 @@
 					if (wasCollapsed) {
 						$dd.addClass('expanded');
 						$dt.addClass('expanded');
-
-						setTimeout(function () {
-							$dd.slideDown();
-						}, 0);
+						$dd.slideDown();
 					} else {
 						$dd.removeClass('expanded');
 						$dt.removeClass('expanded');
-
-						setTimeout(function () {
-							$dd.slideUp();
-						}, 0);
+						$dd.slideUp();
 					}
 				} else { // update className AFTER transition
 					if (wasCollapsed) {
