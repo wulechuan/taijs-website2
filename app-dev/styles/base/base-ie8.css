@@ -207,6 +207,8 @@ label.deco-input {
 .rounded-corners {
 	}
 
+	/* ----- rounded-corners: definition for borders and bgs begin ----- */
+
 	.rounded-corners > .ie-borders,
 	.rounded-corners > .ie-bg {
 		left: 13px;
@@ -215,25 +217,10 @@ label.deco-input {
 		bottom: 13px;
 		}
 
-		.pagination [role="button"] > .ie-bg,
-		.pagination button          > .ie-bg {
-			display: none;
-		}
-		.pagination [role="button"].page-number.current > .ie-bg,
-		.pagination [role="button"]:hover               > .ie-bg,
-		.pagination button.page-number.current          > .ie-bg,
-		.pagination button:hover                        > .ie-bg {
-			display: block;
-		}
-
 		.has-borders.rounded-corners    > .ie-borders,
 		.has-borders.rounded-corners    > .ie-bg,
 		.deco-input.rounded-corners     > .ie-borders,
 		.deco-input.rounded-corners     > .ie-bg,
-		.pagination [role="button"]     > .ie-borders,
-		.pagination [role="button"]     > .ie-bg,
-		.pagination button              > .ie-borders,
-		.pagination button              > .ie-bg,
 		[role="button"].rounded-corners > .ie-borders,
 		[role="button"].rounded-corners > .ie-bg,
 		button.rounded-corners          > .ie-borders,
@@ -335,6 +322,54 @@ label.deco-input {
 			border-width: 0 1px!important;
 		}
 
+		.pagination [role="button"] > .ie-borders,
+		.pagination [role="button"] > .ie-bg,
+		.pagination button          > .ie-borders,
+		.pagination button          > .ie-bg {
+			left: 5px;
+			right: 5px;
+			top: 5px;
+			bottom: 5px;
+			}
+
+			.pagination [role="button"] > .ie-borders:before,
+			.pagination button          > .ie-borders:before {
+				top: -5.96px;
+				bottom: -6.14px;
+			}
+			.pagination [role="button"] > .ie-borders:after,
+			.pagination button          > .ie-borders:after {
+				left: -6.14px;
+				right: -5.89px;
+			}
+			.pagination [role="button"] > .ie-bg:before,
+			.pagination button          > .ie-bg:before {
+				top: -5.14px;
+				bottom: -5.14px;
+			}
+			.pagination [role="button"] > .ie-bg:after,
+			.pagination button          > .ie-bg:after {
+				left: -5.14px;
+				right: -5.86px;
+			}
+
+
+		.pagination [role="button"] > .ie-bg,
+		.pagination button          > .ie-bg {
+			display: none;
+		}
+		.pagination [role="button"].page-number.current > .ie-bg,
+		.pagination [role="button"]:hover               > .ie-bg,
+		.pagination button.page-number.current          > .ie-bg,
+		.pagination button:hover                        > .ie-bg {
+			display: block;
+		}
+
+	/* ----- rounded-corners: definition for borders and bgs end ------- */
+
+
+
+	/* ----- rounded-corners: definition for corners begin ----- */
 
 	.pagination [role="button"] > .ie-borders [class|="corner"],
 	.pagination [role="button"] > .ie-bg      [class|="corner"],
@@ -358,28 +393,12 @@ label.deco-input {
 		background-repeat: no-repeat!important;
 		}
 
-		.pagination [role="button"] > .ie-borders .corner-1,
-		.pagination [role="button"] > .ie-borders .corner-2,
-		.pagination [role="button"] > .ie-bg      .corner-1,
-		.pagination [role="button"] > .ie-bg      .corner-2,
-		.pagination button          > .ie-borders .corner-1,
-		.pagination button          > .ie-borders .corner-2,
-		.pagination button          > .ie-bg      .corner-1,
-		.pagination button          > .ie-bg      .corner-2,
 		.rounded-corners            > .ie-borders .corner-1,
 		.rounded-corners            > .ie-borders .corner-2,
 		.rounded-corners            > .ie-bg      .corner-1,
 		.rounded-corners            > .ie-bg      .corner-2 {
 			top: -13.31px;
 		}
-		.pagination [role="button"] > .ie-borders .corner-1,
-		.pagination [role="button"] > .ie-borders .corner-4,
-		.pagination [role="button"] > .ie-bg      .corner-1,
-		.pagination [role="button"] > .ie-bg      .corner-4,
-		.pagination button          > .ie-borders .corner-1,
-		.pagination button          > .ie-borders .corner-4,
-		.pagination button          > .ie-bg      .corner-1,
-		.pagination button          > .ie-bg      .corner-4,
 		.rounded-corners            > .ie-borders .corner-1,
 		.rounded-corners            > .ie-borders .corner-4,
 		.rounded-corners            > .ie-bg      .corner-1,
@@ -402,14 +421,6 @@ label.deco-input {
 		.rounded-corners            > .ie-bg      .corner-3 {
 			right: -12.96px;
 		}
-		.pagination [role="button"] > .ie-borders .corner-2,
-		.pagination [role="button"] > .ie-borders .corner-3,
-		.pagination [role="button"] > .ie-bg      .corner-2,
-		.pagination [role="button"] > .ie-bg      .corner-3,
-		.pagination button          > .ie-borders .corner-2,
-		.pagination button          > .ie-borders .corner-3,
-		.pagination button          > .ie-bg      .corner-2,
-		.pagination button          > .ie-bg      .corner-3,
 		*[role="button"].rounded-corners > .ie-bg .corner-2,
 		*[role="button"].rounded-corners > .ie-bg .corner-3,
 		button.rounded-corners           > .ie-bg .corner-2,
@@ -426,6 +437,54 @@ label.deco-input {
 		.rounded-corners.sharp-corner-3  > .ie-bg      .corner-3 {
 			right: -12.87px;
 		}
+		.rounded-corners            > .ie-borders .corner-3,
+		.rounded-corners            > .ie-borders .corner-4,
+		.rounded-corners            > .ie-bg      .corner-3,
+		.rounded-corners            > .ie-bg      .corner-4 {
+			bottom: -13.05px;
+		}
+
+
+	.pagination [role="button"] > .ie-borders [class|="corner"],
+	.pagination [role="button"] > .ie-bg      [class|="corner"],
+	.pagination button          > .ie-borders [class|="corner"],
+	.pagination button          > .ie-bg      [class|="corner"] {
+		width: 7px;
+		height: 7px;
+		}
+
+		.pagination [role="button"] > .ie-borders .corner-1,
+		.pagination [role="button"] > .ie-borders .corner-2,
+		.pagination [role="button"] > .ie-bg      .corner-1,
+		.pagination [role="button"] > .ie-bg      .corner-2,
+		.pagination button          > .ie-borders .corner-1,
+		.pagination button          > .ie-borders .corner-2,
+		.pagination button          > .ie-bg      .corner-1,
+		.pagination button          > .ie-bg      .corner-2 {
+			top: -6.31px;
+		}
+		.pagination [role="button"] > .ie-borders .corner-1,
+		.pagination [role="button"] > .ie-borders .corner-4,
+		.pagination [role="button"] > .ie-bg      .corner-1,
+		.pagination [role="button"] > .ie-bg      .corner-4,
+		.pagination button          > .ie-borders .corner-1,
+		.pagination button          > .ie-borders .corner-4,
+		.pagination button          > .ie-bg      .corner-1,
+		.pagination button          > .ie-bg      .corner-4 {
+			left: -6.31px;
+		}
+
+		.pagination [role="button"] > .ie-borders .corner-2,
+		.pagination [role="button"] > .ie-borders .corner-3,
+		.pagination [role="button"] > .ie-bg      .corner-2,
+		.pagination [role="button"] > .ie-bg      .corner-3,
+		.pagination button          > .ie-borders .corner-2,
+		.pagination button          > .ie-borders .corner-3,
+		.pagination button          > .ie-bg      .corner-2,
+		.pagination button          > .ie-bg      .corner-3 {
+			right: -6.14px;
+		}
+
 		.pagination [role="button"] > .ie-borders .corner-3,
 		.pagination [role="button"] > .ie-borders .corner-4,
 		.pagination [role="button"] > .ie-bg      .corner-3,
@@ -433,12 +492,8 @@ label.deco-input {
 		.pagination button          > .ie-borders .corner-3,
 		.pagination button          > .ie-borders .corner-4,
 		.pagination button          > .ie-bg      .corner-3,
-		.pagination button          > .ie-bg      .corner-4,
-		.rounded-corners            > .ie-borders .corner-3,
-		.rounded-corners            > .ie-borders .corner-4,
-		.rounded-corners            > .ie-bg      .corner-3,
-		.rounded-corners            > .ie-bg      .corner-4 {
-			bottom: -13.05px;
+		.pagination button          > .ie-bg      .corner-4 {
+			bottom: -6.05px;
 		}
 
 
@@ -595,6 +650,7 @@ label.deco-input {
 			content: '\e680'!important;
 		}
 
+	/* ----- rounded-corners: definition for corners end ------- */
 
 
 .rounded-terminals {
