@@ -352,9 +352,10 @@ label.deco-input {
 		}
 
 
-	.pagination [role="button"] > .ie-bg,
-	.pagination button          > .ie-bg,
-	button.bg-transparent       > .ie-bg {
+	.pagination [role="button"]    > .ie-bg,
+	.pagination button             > .ie-bg,
+	[role="button"].bg-transparent > .ie-bg,
+	button.bg-transparent          > .ie-bg {
 		visibility: hidden;
 	}
 
@@ -362,6 +363,7 @@ label.deco-input {
 	.pagination [role="button"]:hover               > .ie-bg,
 	.pagination button.page-number.current          > .ie-bg,
 	.pagination button:hover                        > .ie-bg,
+	[role="button"].bg-transparent:hover            > .ie-bg,
 	button.bg-transparent:hover                     > .ie-bg {
 		visibility: visible;
 	}
@@ -499,7 +501,7 @@ label.deco-input {
 		.pagination button          > .ie-borders .corner-4,
 		.pagination button          > .ie-bg      .corner-1,
 		.pagination button          > .ie-bg      .corner-4 {
-			left: -6.31px;
+			left: -6.12px;
 		}
 
 		.pagination [role="button"] > .ie-borders .corner-2,
@@ -510,7 +512,7 @@ label.deco-input {
 		.pagination button          > .ie-borders .corner-3,
 		.pagination button          > .ie-bg      .corner-2,
 		.pagination button          > .ie-bg      .corner-3 {
-			right: -6.14px;
+			right: -5.94px;
 		}
 
 		.pagination [role="button"] > .ie-borders .corner-3,

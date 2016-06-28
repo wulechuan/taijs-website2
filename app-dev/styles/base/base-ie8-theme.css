@@ -1,6 +1,7 @@
 hr, hr.dashed {
     background-color: #d0d0d0\0;
-}
+    }
+
 
 .ie8-input-fake-placeholder {
     color: #ddd;
@@ -9,6 +10,7 @@ hr, hr.dashed {
         background-color: white;
         filter: none;
     }
+
 
 button {
     }
@@ -20,12 +22,9 @@ button {
 
     .pagination [role="button"].current > .ie-borders,
     .pagination button.current          > .ie-borders,
+    [role="button"]                     > .ie-borders,
     button                              > .ie-borders {
         border-color: #157dff;
-    }
-
-    button > .ie-bg {
-        /* background-color: #157dff; */
     }
 
     .pagination [role="button"] > .ie-borders,
@@ -44,6 +43,8 @@ button {
     .pagination [role="button"].page-number.current > .ie-bg,
     .pagination button.page-number.current          > .ie-borders,
     .pagination button.page-number.current          > .ie-bg,
+    [role="button"]                                 > .ie-borders,
+    [role="button"]                                 > .ie-bg,
     button                                          > .ie-borders,
     button                                          > .ie-bg {
         color: #157dff;
@@ -51,19 +52,23 @@ button {
 
     .pagination [role="button"].page-number.current:hover > .ie-bg,
     .pagination button.page-number.current:hover          > .ie-bg,
+    [role="button"]                                       > .ie-bg,
     button:hover                                          > .ie-bg {
         color: #3f93ff;
     }
 
-    button.bg-transparent > .ie-bg {
+    *[role="button"].bg-transparent > .ie-bg,
+    button.bg-transparent           > .ie-bg {
         -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33157dff, endColorStr=#33157dff)";
             filter:  progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33157dff, endColorStr=#33157dff);
     }
-    button.bg-transparent.color-white > .ie-borders {
+    *[role="button"].bg-transparent.color-white > .ie-borders,
+    button.bg-transparent.color-white           > .ie-borders {
         color: white;
         border-color: white;
     }
-    button.bg-transparent.color-white > .ie-bg {
+    *[role="button"].bg-transparent.color-white > .ie-bg,
+    button.bg-transparent.color-white           > .ie-bg {
         background-color: transparent;
         -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33FFFFFF, endColorStr=#33FFFFFF)";
             filter:  progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33FFFFFF, endColorStr=#33FFFFFF);
@@ -74,14 +79,16 @@ label.deco-input .ie-borders {
     color: #e6e6e6;
     }
     label.deco-input input:active ~ .ie-borders,
-    label.deco-input input:focus ~ .ie-borders {
+    label.deco-input input:focus  ~ .ie-borders {
         color: #157fdd;
     }
+
 
 .has-border-triangle > .ie-border-triangle-shadow-matte,
 .ie-shadow-matte {
     background-color: black;
-}
+    }
+
 
 .floating-layer-set {
     }
