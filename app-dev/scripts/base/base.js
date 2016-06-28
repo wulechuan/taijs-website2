@@ -17,9 +17,9 @@
 			dd.elements = { dt: dt, content: ddContent };
 			dt.elements = { dd: dd };
 
-
 			// dt.setAttribute('number-in-list', index);
 			// dd.setAttribute('number-in-list', index);
+			dd.setAttribute('aria-expanded', false);
 
 			if (isIE8) {
 				// dd.style.visibility = 'hidden';
@@ -102,14 +102,16 @@
 						ddContentCurrentHeight = $(content).outerHeight();
 						ddNewHeight = ddContentCurrentHeight + ddBottomBorderWidth;
 
-						$dd.addClass('expanded');
+						$dd.addClass('expanded')
+						dd.setAttribute('aria-expanded', true);
 						$dt.addClass('expanded');
 
 						dd.style.height = ddNewHeight + 'px';
 
 						return dtHeight+ddNewHeight;
 					} else {
-						$dd.removeClass('expanded');
+						$dd.removeClass('expanded')
+						dd.setAttribute('aria-expanded', false);
 						$dt.removeClass('expanded');
 
 						dd.style.height = '0px';
@@ -118,11 +120,13 @@
 					}
 				} else if (isIE9) { // update className BEFORE animation
 					if (wasCollapsed) {
-						$dd.addClass('expanded');
+						$dd.addClass('expanded')
+						dd.setAttribute('aria-expanded', true);
 						$dt.addClass('expanded');
 						$dd.slideDown();
 					} else {
-						$dd.removeClass('expanded');
+						$dd.removeClass('expanded')
+						dd.setAttribute('aria-expanded', false);
 						$dt.removeClass('expanded');
 						$dd.slideUp();
 					}
@@ -144,12 +148,14 @@
 						ddNewHeight = content.knownHeight + ddBottomBorderWidth;
 						dd.style.height = ddNewHeight+'px';
 
-						$dd.addClass('expanded');
+						$dd.addClass('expanded')
+						dd.setAttribute('aria-expanded', true);
 						$dt.addClass('expanded');
 					} else {
 						dd.style.height = '';
 
-						$dd.removeClass('expanded');
+						$dd.removeClass('expanded')
+						dd.setAttribute('aria-expanded', false);
 						$dt.removeClass('expanded');
 					}
 				}
