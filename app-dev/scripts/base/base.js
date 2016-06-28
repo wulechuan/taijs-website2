@@ -219,7 +219,7 @@
 		var currentItem;
 		var currentItemId;
 		$allItems.each(function (index, menuItem) {
-			var itemLabel = $(menuItem).find('> a > label')[0];
+			var itemLabel = $(menuItem).find('> a > .label')[0];
 			var itemId = itemLabel.id;
 
 			if (itemId && desiredId && (itemId===desiredId)) {
