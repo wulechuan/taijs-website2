@@ -105,7 +105,7 @@
 		#app-header-contacts button,
 		#app-header-contacts span,
 		#app-header-contacts a,
-		#app-header-user-account-commands .menu.level-1 > .menu-item > label,
+		#app-header-user-account-commands .menu.level-1 > .menu-item > .label,
 		#app-header-user-account-commands button,
 		#app-header-user-account-commands span,
 		#app-header-user-account-commands a {
@@ -117,7 +117,7 @@
 		#app-header-user-account-commands .menu.level-1 > .menu-item:before {
 			content: none;
 		}
-		#app-header-user-account-commands .menu.level-1 > .menu-item > a > label {
+		#app-header-user-account-commands .menu.level-1 > .menu-item > a > .label {
 			vertical-align: top;
 			padding: 0;
 			margin: 0;
@@ -383,8 +383,8 @@
 	vertical-align: top;
 	}
 
-	#app-chief-nav .menu-item > a > label,
-	#app-chief-nav .menu-item > label {
+	#app-chief-nav .menu-item > a > .label,
+	#app-chief-nav .menu-item > .label {
 		padding-left: 20px;
 		padding-right: 20px;
 	}
@@ -399,8 +399,8 @@
 			max-width: 200px; /* just for safety */
 		}
 
-		#app-chief-nav .menu.level-1 > .menu-item > a > label,
-		#app-chief-nav .menu.level-1 > .menu-item > label {
+		#app-chief-nav .menu.level-1 > .menu-item > a > .label,
+		#app-chief-nav .menu.level-1 > .menu-item > .label {
 			padding-top: 7px;
 			padding-bottom: 7px;
 		}
@@ -454,8 +454,8 @@
 			/*height: 30px;  for Microsoft EDGE bug */
 		}
 
-		#app-chief-nav .menu.level-2 > .menu-item > a > label,
-		#app-chief-nav .menu.level-2 > .menu-item > label {
+		#app-chief-nav .menu.level-2 > .menu-item > a > .label,
+		#app-chief-nav .menu.level-2 > .menu-item > .label {
 			padding-top: 7px;
 			padding-bottom: 7px;
 
@@ -463,8 +463,8 @@
 			padding-right: 19px; /* level 2 menu has borders */
 		}
 
-		#app-chief-nav .menu.level-1 > .menu-item.has-sub-menu > a > label:after,
-		#app-chief-nav .menu.level-1 > .menu-item.has-sub-menu > label:after {
+		#app-chief-nav .menu.level-1 > .menu-item.has-sub-menu > a > .label:after,
+		#app-chief-nav .menu.level-1 > .menu-item.has-sub-menu > .label:after {
 			margin-right: 8px!important;
 		}
 
@@ -487,18 +487,18 @@
 		height: 34px; /* for firefox */
 	}
 
-	#my-assets .menu.level-1 > .menu-item > a > label,
-	#my-assets .menu.level-1 > .menu-item > label {
+	#my-assets .menu.level-1 > .menu-item > a > .label,
+	#my-assets .menu.level-1 > .menu-item > .label {
 		font-size: 12px;
 	}
 
-	#my-assets .menu.level-1 > .menu-item > a > label .iconfont,
-	#my-assets .menu.level-1 > .menu-item > label .iconfont {
+	#my-assets .menu.level-1 > .menu-item > a > .label .iconfont,
+	#my-assets .menu.level-1 > .menu-item > .label .iconfont {
 		margin: 0 8px 0 2px;
 	}
 
-	#my-assets .menu.level-1 > .menu-item.has-sub-menu > a > label:after,
-	#my-assets .menu.level-1 > .menu-item.has-sub-menu > label:after {
+	#my-assets .menu.level-1 > .menu-item.has-sub-menu > a > .label:after,
+	#my-assets .menu.level-1 > .menu-item.has-sub-menu > .label:after {
 		font-family: 'iconfont'!important;
 		content: '\e603';
 		font-size: 26px;
@@ -565,8 +565,8 @@
 		}
 
 
-		#my-assets .menu.level-2 > .menu-item > a > label,
-		#my-assets .menu.level-2 > .menu-item > label {
+		#my-assets .menu.level-2 > .menu-item > a > .label,
+		#my-assets .menu.level-2 > .menu-item > .label {
 			padding: 8px 19px;
 		}
 
