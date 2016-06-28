@@ -772,6 +772,12 @@ button.button-x {
 	}
 
 
+.pagination [role="button"],
+.pagination button {
+	position: relative; /* for ie8 borders */
+}
+
+
 #app-chief-nav .menu.level-2 > .ie-shadow .ie-shadow-matte,
 #app-chief-nav .menu.level-1 > .menu-item > .deco .ie-shadow-matte,
 

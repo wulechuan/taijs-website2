@@ -63,10 +63,11 @@
 			}
 
 			if (isIE8) {
+				if (forceUpdatingContainer) forceUpdatingContainer.visibility = 'hidden';
 				dl.style.height = dlNewHeight + 'px';
-				forceUpdatingContainer.visibility = 'hidden';
+
 				setTimeout(function () {
-					forceUpdatingContainer.visibility = '';
+					if (forceUpdatingContainer) forceUpdatingContainer.visibility = '';
 				}, 0);
 			}
 
