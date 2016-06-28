@@ -32,6 +32,7 @@ html, body {
 	}
 
 
+*[role="button"].bg-transparent,
 .bg-transparent {
 	background-color: transparent;
 	}
@@ -51,6 +52,12 @@ html, body {
 	/* -webkit-text-stroke-width: 0.25px; */ /* cause the animation noticable slow */
 	text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
 	text-shadow: 0 0 1.5px rgba(0, 0, 0, 0.5)\9\0; /* ie10, ie11 */
+	}
+.article h3.color-white,
+.article h2.color-white,
+.article h1.color-white {
+	color: white;
+	text-shadow: none;
 	}
 
 

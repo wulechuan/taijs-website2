@@ -351,16 +351,41 @@ label.deco-input {
 			right: -5.86px;
 		}
 
-		.pagination [role="button"] > .ie-bg,
-		.pagination button          > .ie-bg {
-			visibility: hidden;
+
+	.pagination [role="button"] > .ie-bg,
+	.pagination button          > .ie-bg,
+	button.bg-transparent       > .ie-bg {
+		visibility: hidden;
+	}
+
+	.pagination [role="button"].page-number.current > .ie-bg,
+	.pagination [role="button"]:hover               > .ie-bg,
+	.pagination button.page-number.current          > .ie-bg,
+	.pagination button:hover                        > .ie-bg,
+	button.bg-transparent:hover                     > .ie-bg {
+		visibility: visible;
+	}
+
+	*[role="button"].bg-transparent > .ie-bg,
+	button.bg-transparent           > .ie-bg {
+		left: -0.66px;
+		right: 0;
+		top: 0;
+		bottom: 0;
 		}
-		.pagination [role="button"].page-number.current > .ie-bg,
-		.pagination [role="button"]:hover               > .ie-bg,
-		.pagination button.page-number.current          > .ie-bg,
-		.pagination button:hover                        > .ie-bg {
-			visibility: visible;
-		}
+
+		/* real transparent button need no icontexts for corners, nor those for bg fills */
+		*[role="button"].bg-transparent > .ie-bg:before,
+        *[role="button"].bg-transparent > .ie-bg:after,
+		button.bg-transparent           > .ie-bg:before,
+        button.bg-transparent           > .ie-bg:after {
+            content: none!important;
+        }
+		*[role="button"].bg-transparent > .ie-bg [class|="corner"],
+        button.bg-transparent           > .ie-bg [class|="corner"] {
+            display: none;
+        }
+
 
 	/* ----- rounded-corners: definition for borders and bgs end ------- */
 
@@ -608,11 +633,13 @@ label.deco-input {
 	.rounded-corners.r12px > .ie-bg      [class|="corner"]:before { content: '\e68a'; }
 	.rounded-corners.r15px > .ie-bg      [class|="corner"]:before { content: '\e68b'; }
 
-	.pagination [role="button"]            > .ie-borders [class|="corner"]:before,
-	.pagination button                     > .ie-borders [class|="corner"]:before { content: '\e662'; }
+	.pagination [role="button"]                     > .ie-borders [class|="corner"]:before,
+	.pagination button                              > .ie-borders [class|="corner"]:before { content: '\e662'; }
 
-	.pagination button:hover               > .ie-bg      [class|="corner"]:before,
-	.pagination button.page-number.current > .ie-bg      [class|="corner"]:before { content: '\e681'; }
+	.pagination [role="button"]:hover               > .ie-bg      [class|="corner"]:before,
+	.pagination [role="button"].page-number.current > .ie-bg      [class|="corner"]:before,
+	.pagination button:hover                        > .ie-bg      [class|="corner"]:before,
+	.pagination button.page-number.current          > .ie-bg      [class|="corner"]:before { content: '\e681'; }
 
 
 	.sharp-corner-tl > .ie-borders .corner-1:before,
@@ -782,11 +809,11 @@ button label, [role="button"] label {
 
 
 .ie-borders {
-    color: black;
+	color: black;
 	border-color: black;
 }
 .ie-bg {
-    color: white;
+	color: white;
 	background-color: transparent; /*  */
 }
 .bg-transparent > .ie-bg {
@@ -814,7 +841,7 @@ button.button-x {
 
 	button.button-x:hover {
 		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorstr=#33FFFFFF, endColorstr=#33FFFFFF)";
-		    filter:  progid:DXImageTransform.Microsoft.Gradient(startColorstr=#33FFFFFF, endColorstr=#33FFFFFF);
+			filter:  progid:DXImageTransform.Microsoft.Gradient(startColorstr=#33FFFFFF, endColorstr=#33FFFFFF);
 	}
 
 
@@ -823,18 +850,18 @@ button.button-x {
 
 	.icon.icons-in-elements .iconfont { /* anti-aliasing */
 		background-color: white;
-        -ms-filter: "\
-        	progid:DXImageTransform.Microsoft.Chroma(color=white)\
-        ";
+		-ms-filter: "\
+			progid:DXImageTransform.Microsoft.Chroma(color=white)\
+		";
 		filter:
 			progid:DXImageTransform.Microsoft.Chroma(color=white)
-        ;
+		;
 	}
 
 
 
 .floating-layer-set {
-    }
+	}
 
 	.floating-layer-set .locator .ie-hover-patch { /* for stable hover */
 		display: block;
@@ -845,9 +872,9 @@ button.button-x {
 	}
 
 	.floating-layer-set .floating-layer.has-border-triangle > .ie-border-triangle-shadow-matte,
-    .floating-layer-set .floating-layer > .ie-shadow {
-    	display: block;
-    }
+	.floating-layer-set .floating-layer > .ie-shadow {
+		display: block;
+	}
 
 	.floating-layer-set.floating-info-set .floating-layer.has-border-triangle > .ie-border-triangle-shadow-matte,
 	.floating-layer-set.floating-info-set .floating-layer.has-border-triangle > .ie-border-triangle {
@@ -855,23 +882,23 @@ button.button-x {
 		margin-left: 0;
 	}
 
-    .floating-layer-set .floating-layer > .ie-shadow .ie-shadow-matte {
-        margin: -11px 7px 7px -11px;
-        -ms-filter: "\
-            progid:DXImageTransform.Microsoft.Alpha(opacity=25)\
-            progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
-            progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
-        ";
-        filter: 
-            progid:DXImageTransform.Microsoft.Alpha(opacity=25)
-            progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
-            progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
-        ;
-    }
+	.floating-layer-set .floating-layer > .ie-shadow .ie-shadow-matte {
+		margin: -11px 7px 7px -11px;
+		-ms-filter: "\
+			progid:DXImageTransform.Microsoft.Alpha(opacity=25)\
+			progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
+			progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
+		";
+		filter: 
+			progid:DXImageTransform.Microsoft.Alpha(opacity=25)
+			progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
+			progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
+		;
+	}
 	.floating-layer-set .floating-layer.has-border-triangle > .ie-border-triangle-shadow-matte {
 		left: 50%;
 		top: 0;
-        margin: -21px 0 0 -20px;
+		margin: -21px 0 0 -20px;
 		-ms-filter: "\
 			progid:DXImageTransform.Microsoft.Matrix(\
 				M11=0.7071067811865474,\
@@ -880,9 +907,9 @@ button.button-x {
 				M22=0.7071067811865474,\
 				SizingMethod='auto expand'\
 			)\
-            progid:DXImageTransform.Microsoft.Alpha(opacity=25)\
-            progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
-            progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
+			progid:DXImageTransform.Microsoft.Alpha(opacity=25)\
+			progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
+			progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
 		";
 		filter:
 			progid:DXImageTransform.Microsoft.Matrix(
@@ -892,17 +919,17 @@ button.button-x {
 				M22=0.7071067811865474,
 				SizingMethod='auto expand'
 			)
-            progid:DXImageTransform.Microsoft.Alpha(opacity=25)
-            progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
-            progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
+			progid:DXImageTransform.Microsoft.Alpha(opacity=25)
+			progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
+			progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)
 		;
-    }
+	}
 
 
 .popup-layers-back-plate {
 	background-color: black;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=80)";
-	    filter:  progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+		filter:  progid:DXImageTransform.Microsoft.Alpha(opacity=80);
 	zoom: 1;
 	}
 
@@ -939,14 +966,14 @@ button.button-x {
 
 #my-assets .menu.level-2 > .ie-shadow .ie-shadow-matte,
 #my-assets .menu.level-1 > .menu-item > .deco .ie-shadow-matte {
-    -ms-filter: "\
-        progid:DXImageTransform.Microsoft.Alpha(opacity=15)\
-        progid:DXImageTransform.Microsoft.Blur(PixelRadius=6)\
-    ";
-    filter: 
-        progid:DXImageTransform.Microsoft.Alpha(opacity=15)
-        progid:DXImageTransform.Microsoft.Blur(PixelRadius=6)
-    ;
+	-ms-filter: "\
+		progid:DXImageTransform.Microsoft.Alpha(opacity=15)\
+		progid:DXImageTransform.Microsoft.Blur(PixelRadius=6)\
+	";
+	filter: 
+		progid:DXImageTransform.Microsoft.Alpha(opacity=15)
+		progid:DXImageTransform.Microsoft.Blur(PixelRadius=6)
+	;
 
 	left: -7px;
 	top: -7px;
