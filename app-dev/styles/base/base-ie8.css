@@ -429,6 +429,12 @@ label.deco-input {
 		.rounded-corners > .ie-bg      .corner-2 {
 			top: -13.31px;
 		}
+		button.rounded-corners > .ie-borders .corner-1,
+		button.rounded-corners > .ie-borders .corner-2,
+		button.rounded-corners > .ie-bg      .corner-1,
+		button.rounded-corners > .ie-bg      .corner-2 {
+			top: -13.88px;
+		}
 		.rounded-corners > .ie-borders .corner-1,
 		.rounded-corners > .ie-borders .corner-4,
 		.rounded-corners > .ie-bg      .corner-1,
@@ -472,6 +478,12 @@ label.deco-input {
 		.rounded-corners > .ie-bg      .corner-3,
 		.rounded-corners > .ie-bg      .corner-4 {
 			bottom: -13.05px;
+		}
+		button.rounded-corners > .ie-borders .corner-3,
+		button.rounded-corners > .ie-borders .corner-4,
+		button.rounded-corners > .ie-bg      .corner-3,
+		button.rounded-corners > .ie-bg      .corner-4 {
+			bottom: -13.55px;
 		}
 
 
