@@ -58,16 +58,12 @@
 			margin: 0;
 		}
 
-		#app-header-info-and-links label {
-			display: inline-block;
-			vertical-align: top;
-			margin-left: 0.5em;
-			margin-right: 0.5em;
-			padding: 0;
+		#app-header-info-and-links .mobile-app button {
+			padding-left: 0.3em; /* the icon is very thin/narrow */
 		}
 
-		#app-header-info-and-links .mobile-app label {
-			margin-left: 0; /* the icon is very thin/narrow */
+		#app-header-info-and-links .mobile-app button .label {
+			padding-left: 0.7em; /* the icon is very thin/narrow */
 		}
 
 		#app-header-info-and-links .sns .label {
