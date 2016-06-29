@@ -1,6 +1,9 @@
 /* ----- layout definition begin --------------- */
 	.bill-abstract-block {
 		padding: 38px 20px;
+		border-width: 0 0 1px 0;
+		border-style: dashed;
+		margin-bottom: 40px;
 		}
 
 		.bill-abstract-block .columns {
@@ -44,7 +47,11 @@
 
 		.bill-abstract-block .buttons-in-single-line {
 			margin-top: 3px;
-		}
+			margin-bottom: 0;
+			}
+			.bill-abstract-block .buttons-in-single-line button {
+				margin-bottom: 2px;
+			}
 
 		.bill-abstract-block .columns > .col.col-3 dl {
 			padding: 8px;
@@ -76,8 +83,9 @@
 
 
 /* ----- theme definition begin ---------------- */
+		.bill-abstract-block,
 		.bill-abstract-block .columns > .col.col-3 {
-			border-color: #dedede;
+			border-color: #d3d3d3;
 		}
 
 /* ----- theme definition end ------------------ */
