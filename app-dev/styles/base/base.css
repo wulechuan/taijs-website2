@@ -4,6 +4,7 @@
 
 /* transitions: start */
 	div, span, button, input, ol, ul, li, p,
+	[role="button"], [role="button"]:before, [role="button"]:after,
 	div:before, span:before, button:before, input:before, ol:before, ul:before, li:before, p:before,
 	div:after, span:after, button:after, input:after, ol:after, ul:after, li:after, p:after {
 		transition-property: visibility, opacity, color, background-color, border-color;
