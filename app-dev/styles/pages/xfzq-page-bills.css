@@ -15,7 +15,7 @@
 			margin-right: 30px;
 		}
 
-		.bill-abstract-block .columns > .col.col-3 {
+		.bill-abstract-block .columns > .col.col-aside {
 			position: absolute;
 			top: 0;
 			right: 0;
@@ -53,21 +53,21 @@
 				margin-bottom: 2px;
 			}
 
-		.bill-abstract-block .columns > .col.col-3 dl {
+		.bill-abstract-block .columns > .col.col-aside dl {
 			padding: 8px;
 			margin: -8px;
 		}
 
-		.bill-abstract-block .columns > .col.col-3 dt {
+		.bill-abstract-block .columns > .col.col-aside dt {
 			font-size: 14px;
 		}
-		.bill-abstract-block .columns > .col.col-3 dt,
-		.bill-abstract-block .columns > .col.col-3 dd {
+		.bill-abstract-block .columns > .col.col-aside dt,
+		.bill-abstract-block .columns > .col.col-aside dd {
 			padding: 4px;
 			margin: -4px;
 		}
 
-		.bill-abstract-block .columns > .col.col-3 dd {
+		.bill-abstract-block .columns > .col.col-aside dd {
 			margin-bottom: 20px;
 		}
 
@@ -84,7 +84,7 @@
 
 /* ----- theme definition begin ---------------- */
 		.bill-abstract-block,
-		.bill-abstract-block .columns > .col.col-3 {
+		.bill-abstract-block .columns > .col.col-aside {
 			border-color: #d3d3d3;
 		}
 
