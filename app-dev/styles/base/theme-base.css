@@ -43,6 +43,7 @@ html, body {
 	}
 
 
+.tab-list > li,
 .article dd,
 .article dt,
 .article h3,
@@ -263,6 +264,13 @@ label.deco-input {
 	.qrcode > img {
 		background-color: #f3f3f3;
 	}
+
+
+.corner-marker .value {
+	color: white;
+	border-color: #ff291d;
+	background-color: #ff291d;
+}
 
 
 .floating-layer-set .locator .floating-layer {

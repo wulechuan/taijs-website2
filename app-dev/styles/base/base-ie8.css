@@ -873,6 +873,45 @@ button.button-x {
 	}
 
 
+.corner-marker {
+	}
+	.corner-marker .value {
+		min-width: 0;
+		line-height: 16px;
+		padding-left: 0;
+		padding-right: 2px;
+		background-color: red;
+		margin-left: 10px;
+		text-indent: 0;
+	}
+	.corner-marker .value:after,
+	.corner-marker .value:before {
+		content: '\e62f';
+		font-family: 'iconfont'!important;
+		position: absolute;
+		top: 0;
+		width: 6px;
+		height: 17px;
+		font-size: 15px;
+		line-height: 15px;
+		white-space: nowrap;
+		padding: 0;
+		text-indent: 0;
+		text-align: center;
+		border: 0;
+		margin: 0;
+		overflow: hidden;
+		color: red;
+	}
+	.corner-marker .value:before {
+		right: 100%;
+	}
+	.corner-marker .value:after {
+		left: 100%;
+		direction: rtl;
+		text-indent: 2px;
+	}
+
 
 .floating-layer-set {
 	}
