@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"bordr",
+				"border-radius"
+			],
+			[
+				"bords",
+				"border-style"
+			],
+			[
+				"borde",
+				"border-width"
+			],
+			[
+				"co",
+				"content"
+			],
+			[
 				"th",
 				"throw"
 			],
@@ -94,10 +110,6 @@
 			[
 				"v",
 				"visibility"
-			],
-			[
-				"co",
-				"console"
 			],
 			[
 				"e",
@@ -376,10 +388,6 @@
 				"left"
 			],
 			[
-				"borde",
-				"border-color"
-			],
-			[
 				"boderw",
 				"border-width"
 			],
@@ -506,14 +514,6 @@
 			[
 				"boders",
 				"border-style"
-			],
-			[
-				"border-s",
-				"border-style"
-			],
-			[
-				"pad",
-				"padding"
 			]
 		]
 	},
@@ -523,23 +523,15 @@
 			"file": "app-dev/scripts/base/base.js",
 			"settings":
 			{
-				"buffer_size": 8203,
+				"buffer_size": 8298,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app-dev/html/xfzq-bills-list.html",
+			"file": "app-dev/html/xfzq-bill-records-details.html",
 			"settings":
 			{
-				"buffer_size": 21877,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app-dev/html/xfzq-help-desk-qna-list.html",
-			"settings":
-			{
-				"buffer_size": 7505,
+				"buffer_size": 12411,
 				"line_ending": "Windows"
 			}
 		}
@@ -618,18 +610,25 @@
 	],
 	"file_history":
 	[
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-list.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-base.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-past.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-page-bills.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/fonts.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-base.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bill-past-records-details.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-past-records-details.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-recent.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-base.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-header.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-sidebar-0.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-list.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk-qna-list.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-page-bills.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/reset.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-bills-list.js",
-		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-help-desk-index.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk-index.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk-qna-list.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-help-desk-cate-taiyx.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8-theme.css",
@@ -637,9 +636,6 @@
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-footer.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/index.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-header.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-base.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-sidebar-0.html",
 		"/D/Users/wulechuan/Desktop/footer.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/index.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-base-ie8.css",
@@ -741,11 +737,7 @@
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/styles/base/theme-base.css",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dist/styles/base/base.min.css",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/fonts/iconfont.css",
-		"/C/Users/wulechuan/AppData/Local/Temp/Temp1_iconfont.zip/ux_1464749162_838745/iconfont.css",
-		"/D/Users/wulechuan/Desktop/OneDrive/事业/2014-11 Seedlink/tech/settings_local.py",
-		"/D/Users/wulechuan/Desktop/OneDrive/事业/runserver.bat",
-		"/D/Users/wulechuan/Desktop/OneDrive/事业/test_ice_attributes.js",
-		"/D/Users/wulechuan/Desktop/OneDrive/事业/package.json"
+		"/C/Users/wulechuan/AppData/Local/Temp/Temp1_iconfont.zip/ux_1464749162_838745/iconfont.css"
 	],
 	"find":
 	{
@@ -771,6 +763,60 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"panel-bill-records-detail",
+			"controls",
+			"desired",
+			"_processOnePairOfTabPanel",
+			"past-detail?bi",
+			"past-",
+			"issued",
+			"date",
+			"6",
+			"4",
+			"12",
+			"bottom",
+			"-record-list > .subtitl",
+			"bottom-width",
+			"subtitle",
+			"130",
+			"amount",
+			"l\"></a",
+			"><span class=\"last-cell    val",
+			"time",
+			"time class=\"la",
+			"action",
+			"record",
+			"timestamp",
+			"cord-timestamp",
+			"             valu",
+			"record-amount",
+			"record",
+			"tab",
+			"21, 125, 255",
+			"21",
+			".tab-list",
+			"tab-list",
+			"issued",
+			"-bills",
+			"current",
+			"-list",
+			"record",
+			"amount",
+			"caption",
+			"value record-timestamp",
+			" value record-amount",
+			"alue amount",
+			"amount",
+			"record-name",
+			"action-",
+			"timestamp",
+			" caption",
+			"caption",
+			"list-label",
+			"<span class=\"value amount",
+			"caption",
+			"record",
+			"bill-record-",
 			"_showPanelAccordingToTab",
 			"after",
 			"right",
@@ -844,61 +890,7 @@
 			" aria-labelledby=\"panel",
 			"awaiting",
 			"id=\"panel-",
-			"aria-controls=",
-			"dd",
-			"dt",
-			"7",
-			"2",
-			"5",
-			"8",
-			"10",
-			"floating",
-			"7",
-			"<label",
-			" label",
-			"label",
-			"<label",
-			"label",
-			"<label",
-			"</label>",
-			"label",
-			"<label",
-			"label",
-			" label",
-			"label",
-			"<label",
-			"footer",
-			"label",
-			"<label",
-			"cursor",
-			"button\\s",
-			"label",
-			"\\.label",
-			"label",
-			"<label",
-			"\\slabel",
-			"label",
-			"<label",
-			"/span class=\"label\"",
-			"label",
-			"<label",
-			"label",
-			"/span class=\"label\"",
-			"label",
-			"button",
-			"label",
-			"cursor",
-			"label",
-			"pagination",
-			"label",
-			"button",
-			"一",
-			"current",
-			"p-desk-list.",
-			"-desk-list.html",
-			"help-desk-cate",
-			"cate-unkown.html",
-			"http://wwwuat.taijs.com/help.html"
+			"aria-controls="
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -922,7 +914,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -931,15 +923,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8203,
+						"buffer_size": 8298,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								722,
-								722
+								631,
+								631
 							]
 						],
 						"settings":
@@ -948,27 +940,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 120.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app-dev/html/xfzq-bills-list.html",
+					"file": "app-dev/html/xfzq-bill-records-details.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 21877,
+						"buffer_size": 12411,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10276,
-								10608
+								1625,
+								1625
 							]
 						],
 						"settings":
@@ -978,39 +970,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3525.0,
+						"translation.y": 678.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app-dev/html/xfzq-help-desk-qna-list.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7505,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3894,
-								3894
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1659.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1065,6 +1028,42 @@
 		"selected_items":
 		[
 			[
+				"record",
+				"app-dev\\html\\xfzq-bill-records-details.html"
+			],
+			[
+				"base",
+				"app-dev\\scripts\\base\\base.js"
+			],
+			[
+				"billre",
+				"app-dev\\html\\xfzq-bills-recent.html"
+			],
+			[
+				"fon",
+				"app-dev\\styles\\base\\fonts.css"
+			],
+			[
+				"xfzq",
+				"app-dev\\styles\\pages\\xfzq-base.css"
+			],
+			[
+				"them",
+				"app-dev\\styles\\base\\theme-base.css"
+			],
+			[
+				"header",
+				"app-dev\\html-snippets\\module-app-header.html"
+			],
+			[
+				"sidb",
+				"app-dev\\html-snippets\\module-xfzq-page-sidebar-0.html"
+			],
+			[
+				"billl",
+				"app-dev\\html\\xfzq-bills-list.html"
+			],
+			[
 				"qnal",
 				"app-dev\\html\\xfzq-help-desk-qna-list.html"
 			],
@@ -1075,10 +1074,6 @@
 			[
 				"bas",
 				"app-dev\\scripts\\base\\base.js"
-			],
-			[
-				"base",
-				"app-dev\\styles\\base\\base.css"
 			],
 			[
 				"font",
@@ -1095,10 +1090,6 @@
 			[
 				"res",
 				"app-dev\\styles\\base\\reset.css"
-			],
-			[
-				"xfzq",
-				"app-dev\\styles\\pages\\xfzq-base.css"
 			],
 			[
 				"basj",
@@ -1137,10 +1128,6 @@
 				"app-dev\\styles\\base\\layout.css"
 			],
 			[
-				"header",
-				"app-dev\\html-snippets\\module-app-header.html"
-			],
-			[
 				"basth",
 				"app-dev\\styles\\base\\theme-base.css"
 			],
@@ -1155,10 +1142,6 @@
 			[
 				"xfzqb",
 				"app-dev\\styles\\pages\\xfzq-base.css"
-			],
-			[
-				"them",
-				"app-dev\\styles\\base\\base-ie8-theme.css"
 			],
 			[
 				"ind",
@@ -1555,26 +1538,6 @@
 			[
 				"iconf",
 				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
-			],
-			[
-				"index.c",
-				"app-dev\\styles\\pages\\index.css"
-			],
-			[
-				"apphea",
-				"app-dev\\html-snippets\\module-app-header.html"
-			],
-			[
-				"indexj",
-				"app-dev\\scripts\\pages\\index.js"
-			],
-			[
-				"iconfo",
-				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
-			],
-			[
-				"sampl",
-				"app-dev\\sample-snippets.html"
 			]
 		],
 		"width": 0.0

@@ -16,9 +16,10 @@
 		var $allTabs = $(this).find('.tab-list > li');
 
 		$allTabs.each(function (index, tab) {
-			var panel = $('#'+tab.getAttribute('aria-controls'))[0];
+			var panelId = tab.getAttribute('aria-controls');
+			var panel = $('#'+panelId)[0];
 
-			if (!panel) return false;
+			if (!panel) throw('Can not find controlled panel for tab [expected panel id="'+panelId+'"].');
 
 			panel.elements = { tab: tab };
 			tab.elements = { panel: panel };
