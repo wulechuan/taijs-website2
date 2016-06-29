@@ -271,10 +271,6 @@ label.deco-input {
 	border-color: #ff291d;
 	background-color: #ff291d;
 	}
-	.corner-marker:after,
-	.corner-marker:before {
-		color: #ff291d;
-	}
 
 
 .floating-layer-set .locator .floating-layer {

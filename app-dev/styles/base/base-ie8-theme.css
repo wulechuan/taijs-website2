@@ -100,6 +100,14 @@ label.deco-input .ie-borders {
     }
 
 
+.corner-marker {
+    }
+    .corner-marker:after,
+    .corner-marker:before {
+        color: #ff291d;
+    }
+
+
 .floating-layer-set {
     }
 

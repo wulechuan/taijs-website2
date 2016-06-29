@@ -904,6 +904,8 @@ button.button-x {
 		border: 0;
 		margin: 0;
 		overflow: hidden;
+		font-style: normal!important;
+		font-weight: normal!important;
 	}
 	.corner-marker:before {
 		right: 100%;
