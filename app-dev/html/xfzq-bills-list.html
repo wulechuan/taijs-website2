@@ -41,18 +41,20 @@
     <!-- inject:xfzqPageContentWrapBegin:html --><!-- endinject -->
     <div class="tab-panel-set">
         <ul role="tablist" class="tab-list"
-            ><li role="tab" class="current"
+            ><li role="tab"
+                          aria-controls="panel-issued-bills"
                         aria-labelledby="panel-tab-issued-bills"
                 ><span class="label" id="panel-tab-issued-bills">已出账单</span
             ></li
-            ><li role="tab"                
+            ><li role="tab"
+                          aria-controls="panel-awaiting-bills"
                         aria-labelledby="panel-tab-awaiting-bills"
                 ><span class="label" id="panel-tab-awaiting-bills">未出账单</span
                 ><i class="corner-marker"><span class="value">102</span></i
             ></li
         ></ul>
         <div class="panel-group">
-            <div role="tabpanel" class="panel current" aria-hidden="false" aria-controls="panel-tab-issued-bills">
+            <div role="tabpanel" class="panel" aria-hidden="false" id="panel-issued-bills">
                 <div class="bill-abstract-block columns" id="bill-issued-abstract-block">
                     <div class="columns">
                         <div class="col col-1" id="bill-issued-abstract-total">
@@ -143,7 +145,7 @@
                 </div>
             </div>
 
-            <div role="tabpanel" class="panel" aria-hidden="true" aria-controls="panel-tab-awaiting-bills">
+            <div role="tabpanel" class="panel" aria-hidden="true" id="panel-awaiting-bills">
                 <div class="bill-abstract-block columns" id="bill-issued-abstract-block">
                     <div class="columns">
                         <div class="col col-1" id="bill-issued-abstract-total">
