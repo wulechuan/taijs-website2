@@ -874,23 +874,28 @@ button.button-x {
 
 
 .corner-marker {
+	width: auto;
+	margin-left: 10px;
+		background-color: red;
 	}
 	.corner-marker .value {
-		min-width: 0;
-		line-height: 16px;
-		padding-left: 0;
-		padding-right: 2px;
-		background-color: red;
-		margin-left: 10px;
+		position: relative; /* for being on top of parentNode's :before :after psuedo elements; */
+		margin: 0 -12px;
+		padding-left: 6px;
+		padding-right: 4px;
 		text-indent: 0;
+		background-color: transparent;
 	}
-	.corner-marker .value:after,
-	.corner-marker .value:before {
+	.corner-marker .value:first-letter {
+		margin-left: -3px;
+	}
+	.corner-marker:after,
+	.corner-marker:before {
 		content: '\e62f';
 		font-family: 'iconfont'!important;
 		position: absolute;
 		top: 0;
-		width: 6px;
+		width: 8px;
 		height: 17px;
 		font-size: 15px;
 		line-height: 15px;
@@ -903,13 +908,13 @@ button.button-x {
 		overflow: hidden;
 		color: red;
 	}
-	.corner-marker .value:before {
+	.corner-marker:before {
 		right: 100%;
 	}
-	.corner-marker .value:after {
+	.corner-marker:after {
 		left: 100%;
 		direction: rtl;
-		text-indent: 2px;
+		text-indent: 1px;
 	}
 
 
