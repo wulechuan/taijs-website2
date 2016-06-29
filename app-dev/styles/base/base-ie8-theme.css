@@ -80,8 +80,8 @@ button {
     }
     *[role="button"].bg-transparent.color-red > .ie-bg,
     button.bg-transparent.color-red           > .ie-bg {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33ff291d, endColorStr=#33ff291d)";
-            filter:  progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33ff291d, endColorStr=#33ff291d);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr=#12ff291d, endColorStr=#12ff291d)";
+            filter:  progid:DXImageTransform.Microsoft.Gradient(startColorStr=#12ff291d, endColorStr=#12ff291d);
     }
 
 
