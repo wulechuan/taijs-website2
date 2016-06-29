@@ -2,7 +2,7 @@ html, body, button, textarea, input, select, option, .font-default {
 	font-family: 'Microsoft Yahei', 'Lucida Grande', 'SimHei', 'SimSun';
 }
 
-
+.bill-time-exceeded,
 .bill-list > .subtitle,
 .bill-list > .f-list > li,
 .bill-record-list > .subtitle,

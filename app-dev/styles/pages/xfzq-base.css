@@ -38,6 +38,20 @@
 		}
 
 
+	.bill-time-exceeded {
+		display: inline-block;
+		padding: 0 7px;
+		line-height: 16px;
+		border-style: solid;
+		border-width: 1px;
+		border-radius: 2px;
+		margin: -2px 8px; /* margin top/bottom being negative because this height exceeds the <li>'s line-hight */
+		}
+		.bill-time-exceeded:before {
+			content: '逾期';
+		}
+
+
 	.bill-lists-block,
 	.bill-record-lists-block {
 		margin: 20px 0;
@@ -571,6 +585,12 @@
 			.tab-list.has-single-tab > li:hover {
 				background-color: transparent;
 			}
+
+
+	.bill-time-exceeded {
+		background-color: white;
+	}
+
 
 
 	.bill-lists-block,
