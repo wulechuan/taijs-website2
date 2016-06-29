@@ -70,7 +70,8 @@
 			margin-left: 0; /* the icon is very thin/narrow */
 		}
 
-		#app-header-info-and-links .sns label {
+		#app-header-info-and-links .sns .label {
+			margin-left: 0;
 			display: none;
 		}
 
@@ -318,18 +319,18 @@
 
 			#app-footer-services-info p > em,
 			#app-footer-services-info p > span,
-			#app-footer-services-info p > label {
+			#app-footer-services-info p > .list-label {
 				display: inline-block;
 				vertical-align: middle;
 			}
 
 
-			#app-footer-services-info p > label {
+			#app-footer-services-info p > .list-label {
 				width: 60px;
 				margin-right: 6px;
 			}
 
-			#app-footer-services-info p > label:after {
+			#app-footer-services-info p > .list-label:after {
 				content: '：';
 			}
 

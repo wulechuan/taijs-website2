@@ -91,7 +91,6 @@ a, a:link {
 	text-decoration: none;
 	}
 
-	a:link label,
 	a:link {
 		cursor: pointer;
 	}
@@ -112,11 +111,13 @@ input[type="reset"],
 button {
 	line-height: 1.25;
 	min-height: 22px;
+	cursor: pointer;
 	}
 
-	[role="button"] label,
-	button label {
+	[role="button"] > .label,
+	button > .label {
 		font-size: inherit;
+		text-align: center;
 	}
 
 	select.size-std-wide,
@@ -152,11 +153,11 @@ button {
 		background-color: transparent;
 	}
 
-	input[type="button"].simple-look label,
-	input[type="submit"].simple-look label,
-	input[type="reset"].simple-look label,
-	[role="button"].simple-look label,
-	button.simple-look label {
+	input[type="button"].simple-look > .label,
+	input[type="submit"].simple-look > .label,
+	input[type="reset"].simple-look > .label,
+	[role="button"].simple-look > .label,
+	button.simple-look > .label {
 		width: auto;
 		border-width: 0px!important;
 		border-style: none!important;
@@ -461,7 +462,8 @@ button {
 	background-color: transparent;
 	}
 
-.label {
+
+label, .label {
 	cursor: pointer;
 	}
 
@@ -926,6 +928,8 @@ label.deco-input {
 			margin-left: -60px;
 			bottom: 0;
 			z-index: 0;
+
+			cursor: pointer;
 		}
 		.floating-layer-set .locator::before { /* for stable hover */
 			content: '';

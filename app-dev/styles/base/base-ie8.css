@@ -203,7 +203,7 @@ label.deco-input {
 	.cast-shadow > .ie-bg ~ .content {
 		z-index: 2;
 	}
-	.cast-shadow label {
+	.cast-shadow > .label {
 		z-index: 2;
 	}
 
@@ -821,7 +821,7 @@ label.deco-input {
 button, [role="button"] {
 	overflow: visible;
 }
-button label, [role="button"] label {
+button > .label, [role="button"] > .label {
 	position: relative;
 	width: 100%;
 	display: block;

@@ -319,7 +319,7 @@
 			margin-right: 1em;
 		}
 
-		#user-info-bar .user-info-block .user-profile-items-block .profile-items-list li label {
+		#user-info-bar .user-info-block .user-profile-items-block .profile-items-list li .list-label {
 			display: none;
 		}
 
