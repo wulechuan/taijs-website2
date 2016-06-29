@@ -939,7 +939,7 @@ button.button-x {
 	}
 
 	.floating-layer-set .floating-layer > .ie-shadow .ie-shadow-matte {
-		margin: -11px 7px 7px -11px;
+		margin: -6px 3px 3px -6px;
 		-ms-filter: "\
 			progid:DXImageTransform.Microsoft.Alpha(opacity=25)\
 			progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\
