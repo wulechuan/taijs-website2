@@ -875,19 +875,16 @@ button.button-x {
 
 .corner-marker {
 	width: auto;
-	margin-left: 10px;
-		background-color: red;
+	margin-left: 0.75em; /* make some root for left semicircle */
+	padding-left: 0;
+	padding-right: 0;
 	}
 	.corner-marker .value {
 		position: relative; /* for being on top of parentNode's :before :after psuedo elements; */
-		margin: 0 -12px;
-		padding-left: 6px;
-		padding-right: 4px;
-		text-indent: 0;
-		background-color: transparent;
-	}
-	.corner-marker .value:first-letter {
-		margin-left: -3px;
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: -0.25em;
+		margin-right: -0.25em;
 	}
 	.corner-marker:after,
 	.corner-marker:before {
@@ -895,10 +892,10 @@ button.button-x {
 		font-family: 'iconfont'!important;
 		position: absolute;
 		top: 0;
-		width: 8px;
-		height: 17px;
 		font-size: 15px;
-		line-height: 15px;
+		width: 0.5em;
+		height: 1.2em;
+		line-height: 0.875;
 		white-space: nowrap;
 		padding: 0;
 		text-indent: 0;
@@ -906,7 +903,6 @@ button.button-x {
 		border: 0;
 		margin: 0;
 		overflow: hidden;
-		color: red;
 	}
 	.corner-marker:before {
 		right: 100%;
