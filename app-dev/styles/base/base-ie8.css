@@ -11,6 +11,19 @@
 	background-color: inherit;
 }
 
+.font-important,
+.ie-8-text-anti-alias,
+.icon.icons-in-elements .iconfont { /* anti-aliasing */
+	background-color: white;
+	-ms-filter: "\
+		progid:DXImageTransform.Microsoft.Chroma(color=white)\
+	";
+	filter:
+		progid:DXImageTransform.Microsoft.Chroma(color=white)
+	;
+}
+
+
 .has-border-triangle {
 	}
 
@@ -856,20 +869,6 @@ button.button-x {
 	button.button-x:hover {
 		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorstr=#33FFFFFF, endColorstr=#33FFFFFF)";
 			filter:  progid:DXImageTransform.Microsoft.Gradient(startColorstr=#33FFFFFF, endColorstr=#33FFFFFF);
-	}
-
-
-.icon {
-	}
-
-	.icon.icons-in-elements .iconfont { /* anti-aliasing */
-		background-color: white;
-		-ms-filter: "\
-			progid:DXImageTransform.Microsoft.Chroma(color=white)\
-		";
-		filter:
-			progid:DXImageTransform.Microsoft.Chroma(color=white)
-		;
 	}
 
 

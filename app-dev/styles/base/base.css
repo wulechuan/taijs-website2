@@ -1323,20 +1323,25 @@ label.deco-input {
 
 
 .buttons-in-single-line {
-	margin-top: 10px;
-	margin-bottom: 4px;
+	margin-top: 18px;
+	margin-bottom: 18px;
 	}
 
-	.buttons-in-single-line:last-child {
+	.dialog .buttons-in-single-line {
+		margin-top: 10px;
+		margin-bottom: 4px;
 	}
 
 	.buttons-in-single-line input[type="reset"],
 	.buttons-in-single-line input[type="submit"],
 	.buttons-in-single-line input[type="button"],
+	.buttons-in-single-line [role="button"],
 	.buttons-in-single-line button {
+		margin: 0 0 10px 20px;
+	}
+
+	.buttons-in-single-line *:first-child {
 		margin-left: 0;
-		margin-top: 0;
-		margin-bottom: 0;
 	}
 
 
