@@ -3,6 +3,8 @@ html, body, button, textarea, input, select, option, .font-default {
 }
 
 
+.bill-list > .subtitle,
+.bill-list > .f-list > li,
 .bill-record-list > .subtitle,
 .bill-record-list > .f-list > li,
 .pagination [role="button"],
