@@ -37,12 +37,6 @@ body {
 	}
 
 
-dt,
-dd {
-	position: relative;
-	}
-
-
 .title,
 dt,
 h6,
@@ -102,6 +96,7 @@ a, a:link {
 	a[role="button"], a[role="button"]:hover {
 		text-decoration: none;
 	}
+
 
 select,
 input[type="button"],
@@ -190,6 +185,12 @@ button {
 	input[type="checkbox"],
 	input[type="radio"] {
 		min-height: 0;
+	}
+
+
+dt,
+dd {
+	position: relative;
 	}
 
 
@@ -1388,6 +1389,18 @@ dl.initially-collapsed {
 	dl.initially-collapsed dt {
 		border-style: inherit;
 		border-color: inherit;
+	}
+
+
+ol.f-list, ul.f-list { /* function list */
+	padding: 0;
+	}
+
+	ol.f-list > li, ul.f-list > li {
+		padding: 0;
+		margin: 0;
+		display: block;
+		list-style: none;
 	}
 
 

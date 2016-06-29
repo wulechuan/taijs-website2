@@ -47,6 +47,11 @@
 			white-space: nowrap;
 		}
 
+		#app-header-info-and-links button .iconfont ~ .label {
+			margin-left: 0;
+			padding-left: 0.5em;
+		}
+
 		#app-header-info-and-links a:hover {
 			text-decoration: none;
 		}
@@ -59,11 +64,15 @@
 		}
 
 		#app-header-info-and-links .mobile-app button {
-			padding-left: 0.3em; /* the icon is very thin/narrow */
+			padding-left: 0.4em; /* the icon is very thin/narrow */
 		}
 
-		#app-header-info-and-links .mobile-app button .label {
-			padding-left: 0.7em; /* the icon is very thin/narrow */
+		#app-header-info-and-links .mobile-app button .iconfont {
+			width: 0.7em; /* the icon is very thin/narrow */
+		}
+
+		#app-header-info-and-links .mobile-app button > .label {
+			padding-left: 0.2em; /* the icon is very thin/narrow */
 		}
 
 		#app-header-info-and-links .sns .label {
