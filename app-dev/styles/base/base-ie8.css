@@ -873,6 +873,49 @@ button.button-x {
 	}
 
 
+.corner-marker {
+	min-width: 0;
+	width: auto;
+	margin-left: 0.75em; /* make some root for left semicircle */
+	padding-left: 0;
+	padding-right: 0;
+	}
+	.corner-marker .value {
+		position: relative; /* for being on top of parentNode's :before :after psuedo elements; */
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: -0.375em;
+		margin-right: -0.375em;
+	}
+	.corner-marker:after,
+	.corner-marker:before {
+		content: '\e62f';
+		font-family: 'iconfont'!important;
+		position: absolute;
+		top: 0;
+		font-size: 15px;
+		width: 0.5em;
+		height: 1.2em;
+		line-height: 0.875;
+		white-space: nowrap;
+		padding: 0;
+		text-indent: 0;
+		text-align: center;
+		border: 0;
+		margin: 0;
+		overflow: hidden;
+		font-style: normal!important;
+		font-weight: normal!important;
+	}
+	.corner-marker:before {
+		right: 100%;
+	}
+	.corner-marker:after {
+		left: 100%;
+		direction: rtl;
+		text-indent: 1px;
+	}
+
 
 .floating-layer-set {
 	}

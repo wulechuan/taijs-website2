@@ -460,6 +460,10 @@ button {
 	background-color: transparent;
 	}
 
+.label {
+	cursor: pointer;
+	}
+
 
 .rounded-corners {
 	border-radius: 5px;
@@ -860,6 +864,36 @@ label.deco-input {
 	}
 
 
+.corner-marker {
+	position: absolute;
+	left: auto!important;
+	top: auto!important;
+	margin: 0;
+	margin-left: 2px;
+
+	text-align: center;
+	font-size: 12px;
+
+	width: auto;
+	min-width: 1.25em;
+	height: 1.25em;
+	line-height: 1.25;
+	border: 0;
+	padding: 0;
+
+	overflow: visible!important;
+	white-space: nowrap;
+
+	text-shadow: none!important;
+	border-radius: 1000px;
+	}
+	.corner-marker .value {
+		text-indent: 0;
+		padding: 0 0.375em;
+		margin: 0;
+	}
+
+
 .floating-layer-set {
 	position: relative;
 	}
@@ -1040,7 +1074,6 @@ label.deco-input {
 	}
 
 	.toolbar > li:hover {
-		position: relative;
 		z-index: 2;
 	}
 
@@ -1347,151 +1380,6 @@ dl.initially-collapsed {
 	}
 
 
-.pagination {
-	text-align: center;
-	padding: 10px 20px 30px 20px;
-	}
-	.pagination [role="button"],
-	.pagination button {
-		border-radius: 2px;
-		padding: 4px 9px;
-		height: 12px;
-		line-height: 12px;
-		min-height: 12px;
-		min-width: 12px;
-		margin: 6.02px;
-	}
-
-	.pagination button.page-number,
-	.pagination [role="button"].page-number {
-		padding-left: 4.16px;
-		padding-right: 4.12px;
-	}
-
-	.page-chief-part > .content.has-sidebar .pagination {
-		text-align: right;
-		margin-right: -20px;
-	}
-	.page-chief-part > .content.has-sidebar .pagination [role="button"],
-	.page-chief-part > .content.has-sidebar .pagination button {
-		margin-left: 12px;
-		margin-right: 0;
-	}
-
-
-.popup-layers {
-	box-sizing: border-box;
-	display: block;
-	position: fixed;
-	overflow: visible !important;
-	width: 100%;
-	left: 0;
-	top: 0;
-	height: 0;
-	background-color: transparent !important;
-	background-image: none !important;
-
-	z-index: 500;
-	}
-
-	.popup-layers-back-plate {
-		box-sizing: border-box;
-		display: none;
-		width: 100%;
-		height: 100%;
-		padding: 0;
-
-		position: fixed;
-		left: 0;
-		top: 0;
-		margin: 0;
-
-		overflow: hidden;
-
-		font-size: 0;
-		float: none;
-		clear: both;
-
-		z-index: 1;
-
-		background-color: rgba(0, 0, 0, 0.8);
-	}
-
-	.popup-layers-container {
-		position: relative;
-		display: block;
-		width: 0;
-		height: 0;
-		left: 0;
-		top: 0;
-		overflow: visible !important;
-		background-color: transparent!important;
-		background-image: none!important;
-
-		z-index: 2;
-	}
-
-
-.popup-layer {
-	position: fixed;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 0;
-	display: none;
-	text-align: center;
-	overflow: auto;
-	white-space: nowrap;
-	}
-
-	.popup-layer:before {
-		content: '';
-		display: inline-block;
-		width: 0;
-		height: 75%;
-		vertical-align: middle;
-	}
-
-	.popup-layer.current {
-		z-index: 5;
-	}
-
-	.popup-window {
-		display: inline-block;
-		vertical-align: middle;
-		position: relative;
-		margin: auto;
-		margin: 20px;
-		padding: 0;
-		border: 0;
-		left: 0;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		max-width: 90%;
-		max-height: 90%;
-		min-width: 100px;
-		min-height: 100px;
-		text-align: left;
-	}
-	.popup-window,
-	.popup-window.cast-shadow {
-		box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 1);
-	}
-
-	.popup-window > .content {
-		overflow: hidden;
-	}
-
-	.popup-window.has-dialog {
-		min-width: 588px; /* global default value */
-	}
-
-
 .dialog {
 	display: block;
 	box-sizing: border-box;
@@ -1655,3 +1543,180 @@ dl.initially-collapsed {
 		max-height: 100%;
 		box-shadow: 0em 0.2em 0.5em rgba(0, 0, 0, 0.35);
 		}
+
+
+.pagination {
+	text-align: center;
+	padding: 10px 20px 30px 20px;
+	}
+	.pagination [role="button"],
+	.pagination button {
+		border-radius: 2px;
+		padding: 4px 9px;
+		height: 12px;
+		line-height: 12px;
+		min-height: 12px;
+		min-width: 12px;
+		margin: 6.02px;
+	}
+
+	.pagination button.page-number,
+	.pagination [role="button"].page-number {
+		padding-left: 4.16px;
+		padding-right: 4.12px;
+	}
+
+	.page-chief-part > .content.has-sidebar .pagination {
+		text-align: right;
+		margin-right: -20px;
+	}
+	.page-chief-part > .content.has-sidebar .pagination [role="button"],
+	.page-chief-part > .content.has-sidebar .pagination button {
+		margin-left: 12px;
+		margin-right: 0;
+	}
+
+
+.popup-layers {
+	box-sizing: border-box;
+	display: block;
+	position: fixed;
+	overflow: visible !important;
+	width: 100%;
+	left: 0;
+	top: 0;
+	height: 0;
+	background-color: transparent !important;
+	background-image: none !important;
+
+	z-index: 500;
+	}
+
+	.popup-layers-back-plate {
+		box-sizing: border-box;
+		display: none;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+
+		position: fixed;
+		left: 0;
+		top: 0;
+		margin: 0;
+
+		overflow: hidden;
+
+		font-size: 0;
+		float: none;
+		clear: both;
+
+		z-index: 1;
+
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+
+	.popup-layers-container {
+		position: relative;
+		display: block;
+		width: 0;
+		height: 0;
+		left: 0;
+		top: 0;
+		overflow: visible !important;
+		background-color: transparent!important;
+		background-image: none!important;
+
+		z-index: 2;
+	}
+
+
+.popup-layer {
+	position: fixed;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	display: none;
+	text-align: center;
+	overflow: auto;
+	white-space: nowrap;
+	}
+
+	.popup-layer:before {
+		content: '';
+		display: inline-block;
+		width: 0;
+		height: 75%;
+		vertical-align: middle;
+	}
+
+	.popup-layer.current {
+		z-index: 5;
+	}
+
+	.popup-window {
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		margin: auto;
+		margin: 20px;
+		padding: 0;
+		border: 0;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		max-width: 90%;
+		max-height: 90%;
+		min-width: 100px;
+		min-height: 100px;
+		text-align: left;
+	}
+	.popup-window,
+	.popup-window.cast-shadow {
+		box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 1);
+	}
+
+	.popup-window > .content {
+		overflow: hidden;
+	}
+
+	.popup-window.has-dialog {
+		min-width: 588px; /* global default value */
+	}
+
+
+.tab-panel-set {
+	}
+
+	.tab-list {
+		}
+
+		.tab-list > li {
+			position: relative; /* for z-index */
+			display: inline-block;
+			vertical-align: bottom;
+			padding: 0;
+			margin: 0;
+			z-index: 1;
+		}
+
+		.tab-list > li:hover {
+			z-index: 2;
+		}
+
+		.tab-list > li > .label {
+			display: inline;
+		}
+
+
+	.panel-group {
+	}
+
+	.panel {
+	}
+

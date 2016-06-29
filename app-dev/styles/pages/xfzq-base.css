@@ -1,4 +1,41 @@
 /* ----- layout definition begin --------------- */
+	.tab-list {
+		border-width: 0 0 2px 0;
+		border-style: solid;
+		}
+
+		.tab-list > li {
+			position: relative;
+			border-width: inherit;
+			border-style: inherit;
+			border-color: inherit;
+			margin: 0 0 -2px 0;
+			/* font-size: 16px; */
+			line-height: 1.5;
+			padding: 7px 16px;
+			min-width: 75px;
+			text-align: center;
+		}
+
+		.tab-list > li:before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			bottom: 11px;
+			width: 0;
+			height: 16px;
+			border-width: 0 0 0 1px;
+			border-style: solid;
+			margin: 0;
+		}
+
+		.tab-list > li:first-child:before {
+			content: none!important;
+		}
+
+
+
 	#user-info-bar {
 		overflow: hidden;
 		}
@@ -244,9 +281,6 @@
 		}
 
 
-
-
-
 	.page {
 		margin: 0;
 		padding: 10px 0 20px 0;
@@ -409,6 +443,27 @@
 
 
 /* ----- theme definition begin ---------------- */
+	.tab-list > li:before,
+	.tab-list {
+		border-color: #e2e2e2;
+		}
+
+		.tab-list > li {
+			color: black;
+		}
+
+		.tab-list > li.current {
+			color: #157dff;
+			border-color: #157dff;
+			text-shadow: 0 0 1px rgba(21, 125, 255, 0.5);
+			text-shadow: 0 0 1.5px rgba(21, 125, 255, 0.5)\9\0; /* ie10, ie11 */
+		}
+
+		.tab-list > li:hover {
+			background-color: #f3f3f3;
+		}
+
+
 	#user-info-bar {
 		color: white;
 		}

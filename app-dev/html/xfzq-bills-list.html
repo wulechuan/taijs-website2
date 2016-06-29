@@ -2,7 +2,7 @@
 <html>
 <head>
     <!-- inject:headBeforeTitle:html --><!-- endinject -->
-    <title>已出账单</title>
+    <title>账单</title>
     <!-- inject:headAfterTitle:html --><!-- endinject -->
     <link rel="stylesheet" type="text/css" href="../styles/pages/xfzq-base.min.css">
     <!--[if lte IE 8]>
@@ -41,8 +41,15 @@
     <!-- inject:xfzqPageContentWrapBegin:html --><!-- endinject -->
     <div class="tab-panel-set">
         <ul role="tablist" class="tab-list"
-            ><li role="tab" class="current" id="panel-tab-issued-bills">已出账单</li
-            ><li role="tab"                 id="panel-tab-awaiting-bills">未出账单</li
+            ><li role="tab" class="current"
+                        aria-labelledby="panel-tab-issued-bills"
+                ><span class="label" id="panel-tab-issued-bills">已出账单</span
+            ></li
+            ><li role="tab"                
+                        aria-labelledby="panel-tab-awaiting-bills"
+                ><span class="label" id="panel-tab-awaiting-bills">未出账单</span
+                ><i class="corner-marker"><span class="value">102</span></i
+            ></li
         ></ul>
         <div class="panel-group">
             <div role="tabpanel" class="panel" aria-controls="panel-tab-issued-bills">
@@ -55,7 +62,6 @@
 
             <div role="tabpanel" class="panel" aria-controls="panel-tab-awaiting-bills">
             </div>
-
         </div>
     </div>
     <div class="pagination"
