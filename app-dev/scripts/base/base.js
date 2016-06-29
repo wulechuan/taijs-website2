@@ -1,9 +1,18 @@
 (function () {
 	window.console = window.console || { log: function () {} };
+	var isIE8 = !!navigator.userAgent.match(/msie 8/i);
+	var isIE9 = !!navigator.userAgent.match(/msie 9/i);
 
 
 
 	$('.tab-panel-set').each(function () {
+		var forceUpdatingContainer = null;
+		if (isIE8) {
+			forceUpdatingContainer = 
+				$(this).parents('.page')[0] || document.body
+			;
+		}
+
 		var $allTabs = $(this).find('.tab-list > li');
 
 		$allTabs.each(function (index, tab) {
@@ -26,22 +35,24 @@
 		function _showPanelViaTab(theTab) {
 			for (var i = 0; i < $allTabs.length; i++) {
 				var tab = $allTabs[i];
-				_processOnePair(tab, tab === theTab);
+				_processOnePair(tab, (theTab && tab === theTab));
+			}
+
+			if (isIE8) {
+				if (forceUpdatingContainer) {
+					forceUpdatingContainer.visibility = 'hidden';
+					setTimeout(function () {
+						forceUpdatingContainer.visibility = '';
+					}, 0);
+				}
 			}
 		}
 
 		function _processOnePair(tab, isToShownMyPanel) {
+			if (!tab) return false;
+
 			var panel = tab.elements.panel;
-
 			if (!panel) return false;
-
-			// if (isIE8) {
-			// 	var forceUpdatingContainer = dl.parentNode
-			// 		// || $(this).parents('.page-content')[0]
-			// 		// || $(this).parents('.page')[0]
-			// 		// || document.body
-			// 	;
-			// }
 
 			if (isToShownMyPanel) {
 				panel.setAttribute('aria-hidden', false);
@@ -60,9 +71,14 @@
 
 
 	$('dl.initially-collapsed').each(function (index, dl) {
-		var isIE8 = !!navigator.userAgent.match(/msie 8/i);
-		var isIE9 = !!navigator.userAgent.match(/msie 9/i);
-
+		var forceUpdatingContainer = null;
+		if (isIE8) {
+			forceUpdatingContainer = dl.parentNode
+				// || $(this).parents('.page-content')[0]
+				// || $(this).parents('.page')[0]
+				// || document.body
+			;
+		}
 
 		var $allDTs = $(this).find('> dt');
 		var $allDDs = $(this).find('> dd');
@@ -84,29 +100,27 @@
 				dd.style.height = 'auto';
 				// dd.style.transitionProperty = 'none';
 			}
+
+			_showDDViaDT();
 		});
 
 
 
 
 		$allDTs.on('click', function () {
-			var thisDD = this.elements.dd;
+			_showDDViaDT(this);
+		});
 
-			var forceUpdatingContainer = null;
-			if (isIE8) {
-				forceUpdatingContainer = dl.parentNode
-					// || $(this).parents('.page-content')[0]
-					// || $(this).parents('.page')[0]
-					// || document.body
-				;
-			}
+		function _showDDViaDT(dt) {
+			var theDD = null;
+			if (!dt) theDD = dt.elements.dd;
 
 			var dlNewHeight = 0;
 			var accumHeight;
 
 			for (var i = 0; i < $allDDs.length; i++) {
 				var dd = $allDDs[i];
-				if (dd === thisDD) {
+				if (theDD && dd === theDD) {
 					accumHeight = _processOnePair(dd, 'toggle');
 				} else {
 					accumHeight = _processOnePair(dd, 'collapse');
@@ -116,113 +130,113 @@
 			}
 
 			if (isIE8) {
-				if (forceUpdatingContainer) forceUpdatingContainer.visibility = 'hidden';
-				dl.style.height = dlNewHeight + 'px';
+				if (forceUpdatingContainer) {
+					forceUpdatingContainer.visibility = 'hidden';
+					setTimeout(function () {
+						forceUpdatingContainer.visibility = '';
+					}, 0);
+				}
 
-				setTimeout(function () {
-					if (forceUpdatingContainer) forceUpdatingContainer.visibility = '';
-				}, 0);
+				dl.style.height = dlNewHeight + 'px';
+			}
+		}
+
+		function _processOnePair(dd, action) {
+			var $dd = $(dd);
+			var $dt = $(dd.elements.dt);
+			var content = dd.elements.content;
+
+			var dtHeight = 0;
+			var ddNewHeight = 0;
+			var ddContentCurrentHeight;
+
+			if (isIE8) {
+				dtHeight = $dt.outerHeight();
 			}
 
-
-			function _processOnePair(dd, action) {
-				var ddBottomBorderWidth = 1;
-				var $dd = $(dd);
-				var $dt = $(dd.elements.dt);
-				var content = dd.elements.content;
-
-				var dtHeight = 0;
-				var ddNewHeight = 0;
-				var ddContentCurrentHeight;
-
+			var wasCollapsed = !$dd.hasClass('expanded');
+			var needAction = (!wasCollapsed && action==='collapse') || (action==='toggle');
+			if (!needAction) {
 				if (isIE8) {
-					dtHeight = $dt.outerHeight();
+					return dtHeight;
 				}
-
-				var wasCollapsed = !$dd.hasClass('expanded');
-				var needAction = (!wasCollapsed && action==='collapse') || (action==='toggle');
-				if (!needAction) {
-					if (isIE8) {
-						return dtHeight;
-					}
-
-					return 0;
-				}
-
-
-				if (isIE8) { // update className BEFORE animation
-					if (wasCollapsed) {
-						ddContentCurrentHeight = $(content).outerHeight();
-						ddNewHeight = ddContentCurrentHeight + ddBottomBorderWidth;
-
-						$dd.addClass('expanded');
-						dd.setAttribute('aria-expanded', true);
-						dd.setAttribute('aria-hidden',   false);
-						$dt.addClass('expanded');
-
-						dd.style.height = ddNewHeight + 'px';
-
-						return dtHeight+ddNewHeight;
-					} else {
-						$dd.removeClass('expanded');
-						dd.setAttribute('aria-expanded', false);
-						dd.setAttribute('aria-hidden',   true);
-						$dt.removeClass('expanded');
-
-						dd.style.height = '0px';
-
-						return dtHeight;
-					}
-				} else if (isIE9) { // update className BEFORE animation
-					if (wasCollapsed) {
-						$dd.addClass('expanded');
-						dd.setAttribute('aria-expanded', true);
-						dd.setAttribute('aria-hidden',   false);
-						$dt.addClass('expanded');
-						$dd.slideDown();
-					} else {
-						$dd.removeClass('expanded');
-						dd.setAttribute('aria-expanded', false);
-						dd.setAttribute('aria-hidden',   true);
-						$dt.removeClass('expanded');
-						$dd.slideUp();
-					}
-				} else { // update className AFTER transition
-					if (wasCollapsed) {
-						if (content.knownHeight > 20) {
-							setTimeout(function () {
-								var ddContentCurrentHeight = $(content).outerHeight();
-								if (ddContentCurrentHeight !== content.knownHeight) {
-									content.knownHeight = ddContentCurrentHeight;
-									ddNewHeight = ddContentCurrentHeight + ddBottomBorderWidth;
-									dd.style.height = content.ddNewHeight+'px';
-								}
-							}, 100);
-						} else {
-							content.knownHeight = $(content).outerHeight();
-						}
-
-						ddNewHeight = content.knownHeight + ddBottomBorderWidth;
-						dd.style.height = ddNewHeight+'px';
-
-						$dd.addClass('expanded');
-						dd.setAttribute('aria-expanded', true);
-						dd.setAttribute('aria-hidden',   false);
-						$dt.addClass('expanded');
-					} else {
-						dd.style.height = '';
-
-						$dd.removeClass('expanded');
-						dd.setAttribute('aria-expanded', false);
-						dd.setAttribute('aria-hidden',   true);
-						$dt.removeClass('expanded');
-					}
-				}
-
 
 				return 0;
 			}
-		});
+
+
+			if (isIE8) { // update className BEFORE animation
+				if (wasCollapsed) {
+					ddContentCurrentHeight = $(content).outerHeight();
+					ddNewHeight = ddContentCurrentHeight;
+
+					$dd.addClass('expanded');
+					dd.setAttribute('aria-expanded', true);
+					dd.setAttribute('aria-hidden',   false);
+					$dt.addClass('expanded');
+
+					dd.style.height = ddNewHeight + 'px';
+
+					return dtHeight+ddNewHeight;
+				} else {
+					$dd.removeClass('expanded');
+					dd.setAttribute('aria-expanded', false);
+					dd.setAttribute('aria-hidden',   true);
+					$dt.removeClass('expanded');
+
+					dd.style.height = '0px';
+
+					return dtHeight;
+				}
+			} else if (isIE9) { // update className BEFORE animation
+				if (wasCollapsed) {
+					$dd.addClass('expanded');
+					dd.setAttribute('aria-expanded', true);
+					dd.setAttribute('aria-hidden',   false);
+					$dt.addClass('expanded');
+					$dd.slideDown();
+				} else {
+					$dd.removeClass('expanded');
+					dd.setAttribute('aria-expanded', false);
+					dd.setAttribute('aria-hidden',   true);
+					$dt.removeClass('expanded');
+					$dd.slideUp();
+				}
+			} else { // update className AFTER transition
+				if (wasCollapsed) {
+					if (content.knownHeight > 20) {
+						setTimeout(function () {
+							var ddContentCurrentHeight = $(content).outerHeight();
+							if (ddContentCurrentHeight !== content.knownHeight) {
+								content.knownHeight = ddContentCurrentHeight;
+								ddNewHeight = ddContentCurrentHeight;
+								dd.style.height = content.ddNewHeight+'px';
+							}
+						}, 100);
+					} else {
+						content.knownHeight = $(content).outerHeight();
+					}
+
+					ddNewHeight = content.knownHeight;
+					dd.style.height = ddNewHeight+'px';
+
+					$dd.addClass('expanded');
+					dd.setAttribute('aria-expanded', true);
+					dd.setAttribute('aria-hidden',   false);
+					$dt.addClass('expanded');
+				} else {
+					dd.style.height = '';
+
+					$dd.removeClass('expanded');
+					dd.setAttribute('aria-expanded', false);
+					dd.setAttribute('aria-hidden',   true);
+					$dt.removeClass('expanded');
+				}
+			}
+
+
+			return 0;
+		}
 	});
 
 	setPageSidebarNavCurrentItem(processParametersPassedIn().psn);
@@ -293,9 +307,9 @@
 		if (level < depth && currentItem) {
 			var nextLevel = level + 1;
 			conf['level'+nextLevel+'IdPrefix'] = currentItemId + '-' + nextLevel + '-';
-			var subLevelCurrentItem = setMenuCurrentItemForLevel(nextLevel, depth, currentItem, conf);
+			setMenuCurrentItemForLevel(nextLevel, depth, currentItem, conf);
 		}
 
-		return currentItem;
+		return;
     }
 })();

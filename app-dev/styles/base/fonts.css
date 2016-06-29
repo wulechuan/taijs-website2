@@ -2,6 +2,9 @@ html, body, button, textarea, input, select, option, .font-default {
 	font-family: 'Microsoft Yahei', 'Lucida Grande', 'SimHei', 'SimSun';
 }
 
+
+.bill-record-list > .subtitle,
+.bill-record-list > .f-list > li,
 .pagination [role="button"],
 .pagination button,
 .dialog .dialog-body > .content .article p,

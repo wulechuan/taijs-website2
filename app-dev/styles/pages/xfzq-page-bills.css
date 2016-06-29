@@ -78,7 +78,6 @@
 /* ----- theme definition begin ---------------- */
 		.bill-abstract-block,
 		.bill-abstract-block .columns > .col.col-aside {
-			border-color: #d3d3d3;
+			border-color: #dedede;
 		}
-
 /* ----- theme definition end ------------------ */
