@@ -874,6 +874,7 @@ button.button-x {
 
 
 .corner-marker {
+	min-width: 0;
 	width: auto;
 	margin-left: 0.75em; /* make some root for left semicircle */
 	padding-left: 0;
