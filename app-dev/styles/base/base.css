@@ -114,8 +114,9 @@ button {
 	cursor: pointer;
 	}
 
-	[role="button"] > .label,
+	*[role="button"] > .label,
 	button > .label {
+		display: block;
 		font-size: inherit;
 		text-align: center;
 	}
