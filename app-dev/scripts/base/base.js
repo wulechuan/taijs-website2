@@ -23,19 +23,18 @@
 			panel.elements = { tab: tab };
 			tab.elements = { panel: panel };
 
-			if (index === 0) {
-				_processOnePair(tab, true);
-			}
 		});
 
 		$allTabs.on('click', function () {
-			_showPanelViaTab(this);
+			_showPanelAccordingToTab(this);
 		});
 
-		function _showPanelViaTab(theTab) {
+		_showPanelAccordingToTab($allTabs[0]);
+
+		function _showPanelAccordingToTab(theTab) {
 			for (var i = 0; i < $allTabs.length; i++) {
 				var tab = $allTabs[i];
-				_processOnePair(tab, (theTab && tab === theTab));
+				_processOnePairOfTabPanel(tab, (theTab && tab === theTab));
 			}
 
 			if (isIE8) {
@@ -48,7 +47,7 @@
 			}
 		}
 
-		function _processOnePair(tab, isToShownMyPanel) {
+		function _processOnePairOfTabPanel(tab, isToShownMyPanel) {
 			if (!tab) return false;
 
 			var panel = tab.elements.panel;
@@ -85,13 +84,15 @@
 
 		$allDTs.each(function (index, dt) {
 			var dd = $(dt).find('+ dd')[0];
+			if (!dd) throw('Can not find <dd> right after a <dt> element.');
+
 			var ddContent = $(dd).find('> .content')[0];
+			if (!ddContent) throw('Can not find .content within a <dd> element.');
 
 			dd.elements = { dt: dt, content: ddContent };
 			dt.elements = { dd: dd };
 
-			dd.setAttribute('aria-expanded', false);
-			dd.setAttribute('aria-hidden', true);
+			$(dd).removeClass('expanded');
 
 			if (isIE9) {
 				dd.style.display = 'none';
@@ -100,20 +101,21 @@
 				dd.style.height = 'auto';
 				// dd.style.transitionProperty = 'none';
 			}
-
-			_showDDViaDT();
 		});
-
-
 
 
 		$allDTs.on('click', function () {
-			_showDDViaDT(this);
+			_showDDAccordingToDT(this);
 		});
 
-		function _showDDViaDT(dt) {
+
+		_showDDAccordingToDT(null);
+
+
+
+		function _showDDAccordingToDT(dt) {
 			var theDD = null;
-			if (!dt) theDD = dt.elements.dd;
+			if (dt) theDD = dt.elements.dd;
 
 			var dlNewHeight = 0;
 			var accumHeight;
@@ -121,9 +123,9 @@
 			for (var i = 0; i < $allDDs.length; i++) {
 				var dd = $allDDs[i];
 				if (theDD && dd === theDD) {
-					accumHeight = _processOnePair(dd, 'toggle');
+					accumHeight = _processOnePairOfDTDD(dd, 'toggle');
 				} else {
-					accumHeight = _processOnePair(dd, 'collapse');
+					accumHeight = _processOnePairOfDTDD(dd, 'collapse');
 				}
 
 				if (isIE8 && accumHeight) dlNewHeight += accumHeight;
@@ -141,10 +143,18 @@
 			}
 		}
 
-		function _processOnePair(dd, action) {
-			var $dd = $(dd);
-			var $dt = $(dd.elements.dt);
+		function _processOnePairOfDTDD(dd, action) {
+			if (!dd) return false;
+
+			var dt = dd.elements.dt;
 			var content = dd.elements.content;
+
+			if (!dt) return false;
+			if (!content) return false;
+
+			var $dt = $(dt);
+			var $dd = $(dd);
+			var $content = $(content);
 
 			var dtHeight = 0;
 			var ddNewHeight = 0;
@@ -167,7 +177,7 @@
 
 			if (isIE8) { // update className BEFORE animation
 				if (wasCollapsed) {
-					ddContentCurrentHeight = $(content).outerHeight();
+					ddContentCurrentHeight = $content.outerHeight();
 					ddNewHeight = ddContentCurrentHeight;
 
 					$dd.addClass('expanded');
@@ -206,7 +216,7 @@
 				if (wasCollapsed) {
 					if (content.knownHeight > 20) {
 						setTimeout(function () {
-							var ddContentCurrentHeight = $(content).outerHeight();
+							var ddContentCurrentHeight = $content.outerHeight();
 							if (ddContentCurrentHeight !== content.knownHeight) {
 								content.knownHeight = ddContentCurrentHeight;
 								ddNewHeight = ddContentCurrentHeight;
@@ -214,7 +224,7 @@
 							}
 						}, 100);
 					} else {
-						content.knownHeight = $(content).outerHeight();
+						content.knownHeight = $content.outerHeight();
 					}
 
 					ddNewHeight = content.knownHeight;
