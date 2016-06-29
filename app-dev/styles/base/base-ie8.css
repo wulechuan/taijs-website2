@@ -883,8 +883,8 @@ button.button-x {
 		position: relative; /* for being on top of parentNode's :before :after psuedo elements; */
 		padding-left: 0;
 		padding-right: 0;
-		margin-left: -0.25em;
-		margin-right: -0.25em;
+		margin-left: -0.375em;
+		margin-right: -0.375em;
 	}
 	.corner-marker:after,
 	.corner-marker:before {
