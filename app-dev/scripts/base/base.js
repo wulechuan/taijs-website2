@@ -1,29 +1,98 @@
 (function () {
 	window.console = window.console || { log: function () {} };
+	var isIE8 = !!navigator.userAgent.match(/msie 8/i);
+	var isIE9 = !!navigator.userAgent.match(/msie 9/i);
+
+
+
+	$('.tab-panel-set').each(function () {
+		var forceUpdatingContainer = null;
+		if (isIE8) {
+			forceUpdatingContainer = 
+				$(this).parents('.page')[0] || document.body
+			;
+		}
+
+		var $allTabs = $(this).find('.tab-list > li');
+
+		$allTabs.each(function (index, tab) {
+			var panel = $('#'+tab.getAttribute('aria-controls'))[0];
+
+			if (!panel) return false;
+
+			panel.elements = { tab: tab };
+			tab.elements = { panel: panel };
+
+		});
+
+		$allTabs.on('click', function () {
+			_showPanelAccordingToTab(this);
+		});
+
+		_showPanelAccordingToTab($allTabs[0]);
+
+		function _showPanelAccordingToTab(theTab) {
+			for (var i = 0; i < $allTabs.length; i++) {
+				var tab = $allTabs[i];
+				_processOnePairOfTabPanel(tab, (theTab && tab === theTab));
+			}
+
+			if (isIE8) {
+				if (forceUpdatingContainer) {
+					forceUpdatingContainer.visibility = 'hidden';
+					setTimeout(function () {
+						forceUpdatingContainer.visibility = '';
+					}, 0);
+				}
+			}
+		}
+
+		function _processOnePairOfTabPanel(tab, isToShownMyPanel) {
+			if (!tab) return false;
+
+			var panel = tab.elements.panel;
+			if (!panel) return false;
+
+			if (isToShownMyPanel) {
+				panel.setAttribute('aria-hidden', false);
+				$(tab).addClass('current');
+				$(panel).addClass('current');
+			} else {
+				panel.setAttribute('aria-hidden', true);
+				$(tab).removeClass('current');
+				$(panel).removeClass('current');
+			}
+
+			panel.style.display = isToShownMyPanel ? 'block' : 'none';
+		}
+	});
+
 
 
 	$('dl.initially-collapsed').each(function (index, dl) {
-		var isIE8 = !!navigator.userAgent.match(/msie 8/i);
-		var isIE9 = !!navigator.userAgent.match(/msie 9/i);
+		var forceUpdatingContainer = null;
+		if (isIE8) {
+			forceUpdatingContainer = dl.parentNode
+				// || $(this).parents('.page-content')[0]
+				// || $(this).parents('.page')[0]
+				// || document.body
+			;
+		}
 
-
-		$allDTs = $(this).find('> dt');
-		$allDDs = $(this).find('> dd');
+		var $allDTs = $(this).find('> dt');
+		var $allDDs = $(this).find('> dd');
 
 		$allDTs.each(function (index, dt) {
 			var dd = $(dt).find('+ dd')[0];
+			if (!dd) throw('Can not find <dd> right after a <dt> element.');
+
 			var ddContent = $(dd).find('> .content')[0];
+			if (!ddContent) throw('Can not find .content within a <dd> element.');
 
 			dd.elements = { dt: dt, content: ddContent };
 			dt.elements = { dd: dd };
 
-			// dt.setAttribute('number-in-list', index);
-			// dd.setAttribute('number-in-list', index);
-			dd.setAttribute('aria-expanded', false);
-
-			if (isIE8) {
-				// dd.style.visibility = 'hidden';
-			}
+			$(dd).removeClass('expanded');
 
 			if (isIE9) {
 				dd.style.display = 'none';
@@ -35,135 +104,149 @@
 		});
 
 
+		$allDTs.on('click', function () {
+			_showDDAccordingToDT(this);
+		});
 
 
-		$allDTs.on('click', function (event) {
-			var thisDD = this.elements.dd;
+		_showDDAccordingToDT(null);
 
-			if (isIE8) {
-				var forceUpdatingContainer = dl.parentNode
-					// || $(this).parents('.page-content')[0]
-					// || $(this).parents('.page')[0]
-					// || document.body
-				;
-			}
+
+
+		function _showDDAccordingToDT(dt) {
+			var theDD = null;
+			if (dt) theDD = dt.elements.dd;
 
 			var dlNewHeight = 0;
 			var accumHeight;
 
 			for (var i = 0; i < $allDDs.length; i++) {
 				var dd = $allDDs[i];
-				if (dd === thisDD) {
-					accumHeight = _processOnePair(dd, 'toggle');
+				if (theDD && dd === theDD) {
+					accumHeight = _processOnePairOfDTDD(dd, 'toggle');
 				} else {
-					accumHeight = _processOnePair(dd, 'collapse');
+					accumHeight = _processOnePairOfDTDD(dd, 'collapse');
 				}
 
 				if (isIE8 && accumHeight) dlNewHeight += accumHeight;
 			}
 
 			if (isIE8) {
-				if (forceUpdatingContainer) forceUpdatingContainer.visibility = 'hidden';
-				dl.style.height = dlNewHeight + 'px';
+				if (forceUpdatingContainer) {
+					forceUpdatingContainer.visibility = 'hidden';
+					setTimeout(function () {
+						forceUpdatingContainer.visibility = '';
+					}, 0);
+				}
 
-				setTimeout(function () {
-					if (forceUpdatingContainer) forceUpdatingContainer.visibility = '';
-				}, 0);
+				dl.style.height = dlNewHeight + 'px';
+			}
+		}
+
+		function _processOnePairOfDTDD(dd, action) {
+			if (!dd) return false;
+
+			var dt = dd.elements.dt;
+			var content = dd.elements.content;
+
+			if (!dt) return false;
+			if (!content) return false;
+
+			var $dt = $(dt);
+			var $dd = $(dd);
+			var $content = $(content);
+
+			var dtHeight = 0;
+			var ddNewHeight = 0;
+			var ddContentCurrentHeight;
+
+			if (isIE8) {
+				dtHeight = $dt.outerHeight();
 			}
 
-
-			function _processOnePair(dd, action) {
-				var ddBottomBorderWidth = 1;
-				var $dd = $(dd);
-				var $dt = $(dd.elements.dt);
-				var content = dd.elements.content;
-
-				var dtHeight = 0;
-				var ddNewHeight = 0;
-				var ddContentCurrentHeight;
-
+			var wasCollapsed = !$dd.hasClass('expanded');
+			var needAction = (!wasCollapsed && action==='collapse') || (action==='toggle');
+			if (!needAction) {
 				if (isIE8) {
-					dtHeight = $dt.outerHeight();
+					return dtHeight;
 				}
-
-				var wasCollapsed = !$dd.hasClass('expanded');
-				var needAction = (!wasCollapsed && action==='collapse') || (action==='toggle');
-				if (!needAction) {
-					if (isIE8) {
-						return dtHeight;
-					}
-
-					return 0;
-				}
-
-
-				if (isIE8) { // update className BEFORE animation
-					if (wasCollapsed) {
-						ddContentCurrentHeight = $(content).outerHeight();
-						ddNewHeight = ddContentCurrentHeight + ddBottomBorderWidth;
-
-						$dd.addClass('expanded')
-						dd.setAttribute('aria-expanded', true);
-						$dt.addClass('expanded');
-
-						dd.style.height = ddNewHeight + 'px';
-
-						return dtHeight+ddNewHeight;
-					} else {
-						$dd.removeClass('expanded')
-						dd.setAttribute('aria-expanded', false);
-						$dt.removeClass('expanded');
-
-						dd.style.height = '0px';
-
-						return dtHeight;
-					}
-				} else if (isIE9) { // update className BEFORE animation
-					if (wasCollapsed) {
-						$dd.addClass('expanded')
-						dd.setAttribute('aria-expanded', true);
-						$dt.addClass('expanded');
-						$dd.slideDown();
-					} else {
-						$dd.removeClass('expanded')
-						dd.setAttribute('aria-expanded', false);
-						$dt.removeClass('expanded');
-						$dd.slideUp();
-					}
-				} else { // update className AFTER transition
-					if (wasCollapsed) {
-						if (content.knownHeight > 20) {
-							setTimeout(function () {
-								var ddContentCurrentHeight = $(content).outerHeight();
-								if (ddContentCurrentHeight !== content.knownHeight) {
-									content.knownHeight = ddContentCurrentHeight;
-									ddNewHeight = ddContentCurrentHeight + ddBottomBorderWidth;
-									dd.style.height = content.ddNewHeight+'px';
-								}
-							}, 100);
-						} else {
-							content.knownHeight = $(content).outerHeight();
-						}
-
-						ddNewHeight = content.knownHeight + ddBottomBorderWidth;
-						dd.style.height = ddNewHeight+'px';
-
-						$dd.addClass('expanded')
-						dd.setAttribute('aria-expanded', true);
-						$dt.addClass('expanded');
-					} else {
-						dd.style.height = '';
-
-						$dd.removeClass('expanded')
-						dd.setAttribute('aria-expanded', false);
-						$dt.removeClass('expanded');
-					}
-				}
-
 
 				return 0;
 			}
-		});
+
+
+			if (isIE8) { // update className BEFORE animation
+				if (wasCollapsed) {
+					ddContentCurrentHeight = $content.outerHeight();
+					ddNewHeight = ddContentCurrentHeight;
+
+					$dd.addClass('expanded');
+					dd.setAttribute('aria-expanded', true);
+					dd.setAttribute('aria-hidden',   false);
+					$dt.addClass('expanded');
+
+					dd.style.height = ddNewHeight + 'px';
+
+					return dtHeight+ddNewHeight;
+				} else {
+					$dd.removeClass('expanded');
+					dd.setAttribute('aria-expanded', false);
+					dd.setAttribute('aria-hidden',   true);
+					$dt.removeClass('expanded');
+
+					dd.style.height = '0px';
+
+					return dtHeight;
+				}
+			} else if (isIE9) { // update className BEFORE animation
+				if (wasCollapsed) {
+					$dd.addClass('expanded');
+					dd.setAttribute('aria-expanded', true);
+					dd.setAttribute('aria-hidden',   false);
+					$dt.addClass('expanded');
+					$dd.slideDown();
+				} else {
+					$dd.removeClass('expanded');
+					dd.setAttribute('aria-expanded', false);
+					dd.setAttribute('aria-hidden',   true);
+					$dt.removeClass('expanded');
+					$dd.slideUp();
+				}
+			} else { // update className AFTER transition
+				if (wasCollapsed) {
+					if (content.knownHeight > 20) {
+						setTimeout(function () {
+							var ddContentCurrentHeight = $content.outerHeight();
+							if (ddContentCurrentHeight !== content.knownHeight) {
+								content.knownHeight = ddContentCurrentHeight;
+								ddNewHeight = ddContentCurrentHeight;
+								dd.style.height = content.ddNewHeight+'px';
+							}
+						}, 100);
+					} else {
+						content.knownHeight = $content.outerHeight();
+					}
+
+					ddNewHeight = content.knownHeight;
+					dd.style.height = ddNewHeight+'px';
+
+					$dd.addClass('expanded');
+					dd.setAttribute('aria-expanded', true);
+					dd.setAttribute('aria-hidden',   false);
+					$dt.addClass('expanded');
+				} else {
+					dd.style.height = '';
+
+					$dd.removeClass('expanded');
+					dd.setAttribute('aria-expanded', false);
+					dd.setAttribute('aria-hidden',   true);
+					$dt.removeClass('expanded');
+				}
+			}
+
+
+			return 0;
+		}
 	});
 
 	setPageSidebarNavCurrentItem(processParametersPassedIn().psn);
@@ -193,13 +276,13 @@
             	level1: psn1,
             	level2: psn2
             }
-        }
+        };
     }
 
     function setPageSidebarNavCurrentItem(conf) {
     	conf = conf || {};
 		conf.level1IdPrefix = 'menu-psn-1-';
-		var level1CurrentItem = setMenuCurrentItemForLevel(1, 2, $('#page-sidebar-nav'), conf);
+		setMenuCurrentItemForLevel(1, 2, $('#page-sidebar-nav'), conf);
     }
 
     function setMenuCurrentItemForLevel(level, depth, parentDom, conf) {
@@ -234,9 +317,9 @@
 		if (level < depth && currentItem) {
 			var nextLevel = level + 1;
 			conf['level'+nextLevel+'IdPrefix'] = currentItemId + '-' + nextLevel + '-';
-			var subLevelCurrentItem = setMenuCurrentItemForLevel(nextLevel, depth, currentItem, conf);
+			setMenuCurrentItemForLevel(nextLevel, depth, currentItem, conf);
 		}
 
-		return currentItem;
+		return;
     }
 })();

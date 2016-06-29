@@ -72,6 +72,11 @@ em {
 	}
 
 
+blockquote {
+	color: #666;
+	}
+
+
 a, a:link, a:visited {
 	color: #157dff;
 	}
@@ -146,7 +151,7 @@ input {
 	input[type="submit"].bg-transparent.color-red:hover,
 	[role="button"].bg-transparent.color-red:hover,
 	button.bg-transparent.color-red:hover {
-	    background-color: rgba(255, 41, 29, 0.16)!important;
+	    background-color: rgba(255, 41, 29, 0.08)!important;
 	}
 
 	.pagination [role="button"],

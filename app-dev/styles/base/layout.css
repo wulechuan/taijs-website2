@@ -47,6 +47,11 @@
 			white-space: nowrap;
 		}
 
+		#app-header-info-and-links button .iconfont ~ .label {
+			margin-left: 0;
+			padding-left: 0.5em;
+		}
+
 		#app-header-info-and-links a:hover {
 			text-decoration: none;
 		}
@@ -58,19 +63,20 @@
 			margin: 0;
 		}
 
-		#app-header-info-and-links label {
-			display: inline-block;
-			vertical-align: top;
-			margin-left: 0.5em;
-			margin-right: 0.5em;
-			padding: 0;
+		#app-header-info-and-links .mobile-app button {
+			padding-left: 0.4em; /* the icon is very thin/narrow */
 		}
 
-		#app-header-info-and-links .mobile-app label {
-			margin-left: 0; /* the icon is very thin/narrow */
+		#app-header-info-and-links .mobile-app button .iconfont {
+			width: 0.7em; /* the icon is very thin/narrow */
 		}
 
-		#app-header-info-and-links .sns label {
+		#app-header-info-and-links .mobile-app button > .label {
+			padding-left: 0.2em; /* the icon is very thin/narrow */
+		}
+
+		#app-header-info-and-links .sns .label {
+			margin-left: 0;
 			display: none;
 		}
 
@@ -318,18 +324,18 @@
 
 			#app-footer-services-info p > em,
 			#app-footer-services-info p > span,
-			#app-footer-services-info p > label {
+			#app-footer-services-info p > .list-label {
 				display: inline-block;
 				vertical-align: middle;
 			}
 
 
-			#app-footer-services-info p > label {
+			#app-footer-services-info p > .list-label {
 				width: 60px;
 				margin-right: 6px;
 			}
 
-			#app-footer-services-info p > label:after {
+			#app-footer-services-info p > .list-label:after {
 				content: '：';
 			}
 

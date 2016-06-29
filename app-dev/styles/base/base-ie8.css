@@ -11,6 +11,19 @@
 	background-color: inherit;
 }
 
+.font-important,
+.ie-8-text-anti-alias,
+.icon.icons-in-elements .iconfont { /* anti-aliasing */
+	background-color: white;
+	-ms-filter: "\
+		progid:DXImageTransform.Microsoft.Chroma(color=white)\
+	";
+	filter:
+		progid:DXImageTransform.Microsoft.Chroma(color=white)
+	;
+}
+
+
 .has-border-triangle {
 	}
 
@@ -190,7 +203,7 @@ label.deco-input {
 	.cast-shadow > .ie-bg ~ .content {
 		z-index: 2;
 	}
-	.cast-shadow label {
+	.cast-shadow > .label {
 		z-index: 2;
 	}
 
@@ -808,7 +821,7 @@ label.deco-input {
 button, [role="button"] {
 	overflow: visible;
 }
-button label, [role="button"] label {
+button > .label, [role="button"] > .label {
 	position: relative;
 	width: 100%;
 	display: block;
@@ -856,20 +869,6 @@ button.button-x {
 	button.button-x:hover {
 		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorstr=#33FFFFFF, endColorstr=#33FFFFFF)";
 			filter:  progid:DXImageTransform.Microsoft.Gradient(startColorstr=#33FFFFFF, endColorstr=#33FFFFFF);
-	}
-
-
-.icon {
-	}
-
-	.icon.icons-in-elements .iconfont { /* anti-aliasing */
-		background-color: white;
-		-ms-filter: "\
-			progid:DXImageTransform.Microsoft.Chroma(color=white)\
-		";
-		filter:
-			progid:DXImageTransform.Microsoft.Chroma(color=white)
-		;
 	}
 
 
@@ -940,7 +939,7 @@ button.button-x {
 	}
 
 	.floating-layer-set .floating-layer > .ie-shadow .ie-shadow-matte {
-		margin: -11px 7px 7px -11px;
+		margin: -6px 3px 3px -6px;
 		-ms-filter: "\
 			progid:DXImageTransform.Microsoft.Alpha(opacity=25)\
 			progid:DXImageTransform.Microsoft.Blur(PixelRadius=4)\

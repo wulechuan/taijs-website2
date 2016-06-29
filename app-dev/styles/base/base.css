@@ -4,6 +4,7 @@
 
 /* transitions: start */
 	div, span, button, input, ol, ul, li, p,
+	[role="button"], [role="button"]:before, [role="button"]:after,
 	div:before, span:before, button:before, input:before, ol:before, ul:before, li:before, p:before,
 	div:after, span:after, button:after, input:after, ol:after, ul:after, li:after, p:after {
 		transition-property: visibility, opacity, color, background-color, border-color;
@@ -33,12 +34,6 @@ body {
 
 	body, button, input, select, option, [role="button"], [role="button"] label {
 		font-size: 16px;
-	}
-
-
-dt,
-dd {
-	position: relative;
 	}
 
 
@@ -90,7 +85,6 @@ a, a:link {
 	text-decoration: none;
 	}
 
-	a:link label,
 	a:link {
 		cursor: pointer;
 	}
@@ -103,6 +97,7 @@ a, a:link {
 		text-decoration: none;
 	}
 
+
 select,
 input[type="button"],
 input[type="submit"],
@@ -111,11 +106,14 @@ input[type="reset"],
 button {
 	line-height: 1.25;
 	min-height: 22px;
+	cursor: pointer;
 	}
 
-	[role="button"] label,
-	button label {
+	*[role="button"] > .label,
+	button > .label {
+		display: block;
 		font-size: inherit;
+		text-align: center;
 	}
 
 	select.size-std-wide,
@@ -151,11 +149,11 @@ button {
 		background-color: transparent;
 	}
 
-	input[type="button"].simple-look label,
-	input[type="submit"].simple-look label,
-	input[type="reset"].simple-look label,
-	[role="button"].simple-look label,
-	button.simple-look label {
+	input[type="button"].simple-look > .label,
+	input[type="submit"].simple-look > .label,
+	input[type="reset"].simple-look > .label,
+	[role="button"].simple-look > .label,
+	button.simple-look > .label {
 		width: auto;
 		border-width: 0px!important;
 		border-style: none!important;
@@ -187,6 +185,12 @@ button {
 	input[type="checkbox"],
 	input[type="radio"] {
 		min-height: 0;
+	}
+
+
+dt,
+dd {
+	position: relative;
 	}
 
 
@@ -460,7 +464,8 @@ button {
 	background-color: transparent;
 	}
 
-.label {
+
+label, .label {
 	cursor: pointer;
 	}
 
@@ -925,6 +930,8 @@ label.deco-input {
 			margin-left: -60px;
 			bottom: 0;
 			z-index: 0;
+
+			cursor: pointer;
 		}
 		.floating-layer-set .locator::before { /* for stable hover */
 			content: '';
@@ -1323,20 +1330,25 @@ label.deco-input {
 
 
 .buttons-in-single-line {
-	margin-top: 10px;
-	margin-bottom: 4px;
+	margin-top: 18px;
+	margin-bottom: 18px;
 	}
 
-	.buttons-in-single-line:last-child {
+	.dialog .buttons-in-single-line {
+		margin-top: 10px;
+		margin-bottom: 4px;
 	}
 
 	.buttons-in-single-line input[type="reset"],
 	.buttons-in-single-line input[type="submit"],
 	.buttons-in-single-line input[type="button"],
+	.buttons-in-single-line [role="button"],
 	.buttons-in-single-line button {
+		margin: 0 0 10px 20px;
+	}
+
+	.buttons-in-single-line *:first-child {
 		margin-left: 0;
-		margin-top: 0;
-		margin-bottom: 0;
 	}
 
 
@@ -1377,6 +1389,18 @@ dl.initially-collapsed {
 	dl.initially-collapsed dt {
 		border-style: inherit;
 		border-color: inherit;
+	}
+
+
+ol.f-list, ul.f-list { /* function list */
+	padding: 0;
+	}
+
+	ol.f-list > li, ul.f-list > li {
+		padding: 0;
+		margin: 0;
+		display: block;
+		list-style: none;
 	}
 
 
@@ -1547,7 +1571,8 @@ dl.initially-collapsed {
 
 .pagination {
 	text-align: center;
-	padding: 10px 20px 30px 20px;
+	padding: 15px 20px;
+	margin-bottom: 30px;
 	}
 	.pagination [role="button"],
 	.pagination button {
@@ -1718,5 +1743,10 @@ dl.initially-collapsed {
 	}
 
 	.panel {
+		display: none;
+	}
+
+	.panel.current {
+		display: block;
 	}
 
