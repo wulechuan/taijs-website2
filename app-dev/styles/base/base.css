@@ -3,7 +3,7 @@
 }
 
 /* transitions: start */
-	div, span, button, input, ol, ul, li, p,
+	div, span, button, input, ol, ul, li, p, a,
 	[role="button"], [role="button"]:before, [role="button"]:after,
 	div:before, span:before, button:before, input:before, ol:before, ul:before, li:before, p:before,
 	div:after, span:after, button:after, input:after, ol:after, ul:after, li:after, p:after {
@@ -462,6 +462,11 @@ dd {
 
 .content {
 	background-color: transparent;
+	}
+
+
+.digits {
+	text-align: right;
 	}
 
 
@@ -1728,6 +1733,10 @@ ol.f-list, ul.f-list { /* function list */
 			padding: 0;
 			margin: 0;
 			z-index: 1;
+		}
+
+		.tab-list.has-single-tab > li > .label {
+			cursor: default;
 		}
 
 		.tab-list > li:hover {

@@ -11,9 +11,13 @@
 			border-color: inherit;
 			margin: 0 0 -2px 0;
 			line-height: 1.5;
-			padding: 7px 16px;
+			padding: 7px 20px;
 			min-width: 90px;
 			text-align: center;
+		}
+
+		.tab-list.has-single-tab > li {
+			min-width: 0;
 		}
 
 		.tab-list > li:before {
@@ -34,24 +38,51 @@
 		}
 
 
-	.bill-record-lists-block {
+	.bill-time-exceeded {
+		display: inline-block;
+		padding: 0 7px;
+		line-height: 16px;
+		border-style: solid;
+		border-width: 1px;
+		border-radius: 2px;
+		margin: -2px 8px; /* margin top/bottom being negative because this height exceeds the <li>'s line-hight */
+		}
+		.bill-time-exceeded:before {
+			content: '逾期';
 		}
 
+
+	.bill-lists-block,
+	.bill-record-lists-block {
+		margin: 20px 0;
+		}
+
+		.bill-lists-block > .title,
+		.bill-list > .subtitle,
+		.bill-list > .f-list > li,
 		.bill-record-lists-block > .title,
 		.bill-record-list > .subtitle,
 		.bill-record-list > .f-list > li {
 			padding-left: 20px;
 			padding-right: 20px;
+
 			border-style: solid;
+			border-width: 1px 0;
+			margin-bottom: -1px;
 		}
+		.bill-lists-block > .title,
 		.bill-record-lists-block > .title {
 			padding-top: 11px;
 			padding-bottom: 11px;
-			border-width: 1px 0;
 
 			line-height: 21px;
 			min-height: 21px;
+
+			position: relative;
+			z-index: 2;
 		}
+		.bill-list > .subtitle,
+		.bill-list > .f-list > li,
 		.bill-record-list > .subtitle,
 		.bill-record-list > .f-list > li {
 			padding-top: 13px;
@@ -61,39 +92,57 @@
 			min-height: 17px;
 		}
 
+		.bill-list > .subtitle,
 		.bill-record-list > .subtitle {
-			border-width: 1px 0 0 0;
-			margin-top: -1px;
 			font-weight: bold;
+
+			position: relative;
+			z-index: 1;
 		}
 
+		.bill-list > .f-list,
 		.bill-record-list > .f-list {
 			}
+			.bill-list > .f-list > li,
 			.bill-record-list > .f-list > li {
-				border-width: 0 0 1px 0;
 				position: relative;
+				z-index: 0;
 			}
+			.bill-list > .f-list > li > *,
 			.bill-record-list > .f-list > li > * {
 				display: inline-block;
 				vertical-align: top;
+				padding: 8px 12px;
+				margin: -8px -12px;
 			}
-			.bill-record-list > .f-list > li .caption {
-				width: 376px;
+
+			.bill-list > .f-list > li .caption-cell,
+			.bill-record-list > .f-list > li .caption-cell {
+				width: 360px;
+				margin-right: 4px;
 			}
-			.bill-record-list > .f-list > li .timestamp {
-				/* width: 130px; */
-			}
-			.bill-record-list > .f-list > li .amount {
+
+			.bill-list > .f-list > li .last-cell,
+			.bill-record-list > .f-list > li .last-cell {
 				display: block;
 				position: absolute;
 				right: 20px;
 				top: 0;
 				bottom: 0;
 				height: 17px;
-				margin: auto;
+				margin-top: auto;
+				margin-bottom: auto;
 				text-align: right;
-				/* width: 364px; */
 			}
+
+			.bill-list > .f-list > li .bill-total-amount {
+				width: 128px;
+			}
+
+			.bill-record-list > .f-list > li .record-timestamp {
+				width: 128px;
+			}
+
 
 
 	.page {
@@ -523,31 +572,71 @@
 			background-color: #f3f3f3;
 		}
 
+		.tab-list.has-single-tab > li:before,
+		.tab-list.has-single-tab {
+			border-color: transparent;
+			}
+			.tab-list.has-single-tab > li.current {
+				color: black;
+				border-color: transparent;
+				text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+				text-shadow: 0 0 1.5px rgba(0, 0, 0, 0.5)\9\0; /* ie10, ie11 */
+			}
+			.tab-list.has-single-tab > li:hover {
+				background-color: transparent;
+			}
 
+
+	.bill-time-exceeded {
+		background-color: white;
+	}
+
+
+
+	.bill-lists-block,
 	.bill-record-lists-block {
 		}
 
+		.bill-lists-block > .title,
+		.bill-list > .subtitle,
+		.bill-list > .f-list > li,
 		.bill-record-lists-block > .title,
 		.bill-record-list > .subtitle,
 		.bill-record-list > .f-list > li {
 			border-color: #ededed;
 		}
 
+		.bill-lists-block > .title,
+		.bill-list > .subtitle,
 		.bill-record-lists-block > .title,
 		.bill-record-list > .subtitle {
 			background-color: #fbfbfc;
 		}
 
+		.bill-list > .subtitle,
+		.bill-record-list > .subtitle {
+			border-bottom-color: #fbfbfc;
+		}
+
+		.bill-lists-block > .title,
 		.bill-record-lists-block > .title {
 			/* color: #333; */
 		}
 
+		.bill-list > .subtitle,
+		.bill-list > .f-list > li,
 		.bill-record-list > .subtitle,
 		.bill-record-list > .f-list > li {
 			color: #666;
 		}
 
+		.bill-list > .f-list > li:hover,
 		.bill-record-list > .f-list > li:hover {
+			background-color: #fbfbfc;
+		}
+
+		.bill-list > .f-list > li a:hover,
+		.bill-record-list > .f-list > li a:hover {
 			background-color: #ededed;
 		}
 
