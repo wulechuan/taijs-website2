@@ -34,9 +34,13 @@
 		}
 
 
+	.bill-lists-block,
 	.bill-record-lists-block {
 		}
 
+		.bill-lists-block > .title,
+		.bill-list > .subtitle,
+		.bill-list > .f-list > li,
 		.bill-record-lists-block > .title,
 		.bill-record-list > .subtitle,
 		.bill-record-list > .f-list > li {
@@ -44,6 +48,7 @@
 			padding-right: 20px;
 			border-style: solid;
 		}
+		.bill-lists-block > .title,
 		.bill-record-lists-block > .title {
 			padding-top: 11px;
 			padding-bottom: 11px;
@@ -52,6 +57,8 @@
 			line-height: 21px;
 			min-height: 21px;
 		}
+		.bill-list > .subtitle,
+		.bill-list > .f-list > li,
 		.bill-record-list > .subtitle,
 		.bill-record-list > .f-list > li {
 			padding-top: 13px;
@@ -61,29 +68,35 @@
 			min-height: 17px;
 		}
 
+		.bill-list > .subtitle,
 		.bill-record-list > .subtitle {
 			border-width: 1px 0 0 0;
 			margin-top: -1px;
 			font-weight: bold;
 		}
 
+		.bill-list > .f-list,
 		.bill-record-list > .f-list {
 			}
+			.bill-list > .f-list > li,
 			.bill-record-list > .f-list > li {
 				border-width: 0 0 1px 0;
 				position: relative;
 			}
+			.bill-list > .f-list > li > *,
 			.bill-record-list > .f-list > li > * {
 				display: inline-block;
 				vertical-align: top;
 			}
-			.bill-record-list > .f-list > li .caption {
-				width: 376px;
+
+			.bill-list > .f-list > li .caption-cell,
+			.bill-record-list > .f-list > li .caption-cell {
+				width: 360px;
+				margin-right: 16px;
 			}
-			.bill-record-list > .f-list > li .timestamp {
-				/* width: 130px; */
-			}
-			.bill-record-list > .f-list > li .amount {
+
+			.bill-list > .f-list > li .last-cell,
+			.bill-record-list > .f-list > li .last-cell {
 				display: block;
 				position: absolute;
 				right: 20px;
@@ -92,8 +105,16 @@
 				height: 17px;
 				margin: auto;
 				text-align: right;
-				/* width: 364px; */
 			}
+
+			.bill-list > .f-list > li .bill-total-amount {
+				/* width: 130px; */
+			}
+
+			.bill-record-list > .f-list > li .record-timestamp {
+				/* width: 130px; */
+			}
+
 
 
 	.page {
