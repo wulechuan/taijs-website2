@@ -545,29 +545,39 @@
 		}
 
 
+	.bill-lists-block,
 	.bill-record-lists-block {
 		}
 
+		.bill-lists-block > .title,
+		.bill-list > .subtitle,
+		.bill-list > .f-list > li,
 		.bill-record-lists-block > .title,
 		.bill-record-list > .subtitle,
 		.bill-record-list > .f-list > li {
 			border-color: #ededed;
 		}
 
+		.bill-lists-block > .title,
+		.bill-list > .subtitle,
 		.bill-record-lists-block > .title,
 		.bill-record-list > .subtitle {
 			background-color: #fbfbfc;
 		}
 
+		.bill-lists-block > .title,
 		.bill-record-lists-block > .title {
 			/* color: #333; */
 		}
 
+		.bill-list > .subtitle,
+		.bill-list > .f-list > li,
 		.bill-record-list > .subtitle,
 		.bill-record-list > .f-list > li {
 			color: #666;
 		}
 
+		.bill-list > .f-list > li:hover,
 		.bill-record-list > .f-list > li:hover {
 			background-color: #ededed;
 		}
