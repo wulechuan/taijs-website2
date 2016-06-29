@@ -460,6 +460,10 @@ button {
 	background-color: transparent;
 	}
 
+.label {
+	cursor: pointer;
+	}
+
 
 .rounded-corners {
 	border-radius: 5px;
