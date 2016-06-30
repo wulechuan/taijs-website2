@@ -211,8 +211,8 @@
 			}
 			.article.qna-list dl.qna dd {
 				color: #333;
-				text-shadow: 0 0 1px rgba(51, 51, 51, 0.5);
-				text-shadow: 0 0 1.5px rgba(51, 51, 51, 0.5)\9\0; /* ie10, ie11 */
+				text-shadow: 0 0 1px rgba(33, 33, 33, 0.5);
+				text-shadow: 0 0 1.5px rgba(33, 33, 33, 0.5)\9\0; /* ie10, ie11 */
 			}
 			.article.qna-list dl.qna dt > .content:after {
 				color: white;
