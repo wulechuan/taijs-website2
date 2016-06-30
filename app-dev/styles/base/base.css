@@ -1400,7 +1400,7 @@ label.deco-input {
 		position: relative;
 		z-index: 1; /* covering empty-content-hint in case the hint is not hidden correctly */
 	}
-	.lists-block > .block-title {
+	.lists-block > .block-header {
 		position: relative;
 		z-index: 2;
 	}
@@ -1409,8 +1409,8 @@ label.deco-input {
 .tabular-lists {
 	}
 
-	.tabular-lists > .block-title,
-	.tabular > .title,
+	.tabular-lists > .block-header,
+	.tabular > .header,
 	.tabular > .f-list > li {
 		border-style: solid;
 		border-width: 1px 0;
@@ -1423,7 +1423,7 @@ label.deco-input {
 		text-decoration: none;
 	}
 
-	.tabular > .title {
+	.tabular > .header {
 		position: relative;
 		z-index: 1;
 	}

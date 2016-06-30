@@ -389,26 +389,26 @@ label.deco-input {
 		background-color: white;
 	}
 
-	.tabular-lists > .block-title,
-	.tabular > .title,
+	.tabular-lists > .block-header,
+	.tabular > .header,
 	.tabular > .f-list > li {
 		border-color: #ededed;
 	}
 
-	.tabular-lists > .block-title,
-	.tabular > .title {
+	.tabular-lists > .block-header,
+	.tabular > .header {
 		background-color: #fbfbfc;
 	}
 
-	.tabular > .title {
+	.tabular > .header {
 		border-bottom-color: #fbfbfc;
 	}
 
-	.tabular-lists > .title {
+	.tabular-lists > .header {
 		/* color: #333; */
 	}
 
-	.tabular > .title,
+	.tabular > .header,
 	.tabular > .f-list > li {
 		color: #666;
 	}
