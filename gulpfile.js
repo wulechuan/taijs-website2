@@ -83,11 +83,11 @@ gulp.task('before-everything', () => {
 
 var baseCssGlobs = [
   // 下面壹壹列出各个glob，目的是保证这些css文件合并的顺序。我们知道，错误的顺序将导致错误的结果。
-  pathSrcRoot+'/styles/base/iconfonts/*.css',
   pathSrcRoot+'/styles/base/_reset*.css',
+  pathSrcRoot+'/styles/base/iconfonts/*.css',
+  pathSrcRoot+'/styles/base/_fonts*.css',
   pathSrcRoot+'/styles/base/base.css',
   pathSrcRoot+'/styles/base/layout.css',
-  pathSrcRoot+'/styles/base/fonts*.css'
 ];
 
 gulp.task('styles-base', ['before-everything'], () => {
