@@ -519,6 +519,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app-dev/html/xfzq-close-installments.html",
+			"settings":
+			{
+				"buffer_size": 11284,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -594,14 +602,15 @@
 	],
 	"file_history":
 	[
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-orders.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-repayments.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-recent.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bill-records-details.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-sidebar-0.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-orders.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-past.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-repayments.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-page-help-desk.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default-ie8.css",
@@ -609,7 +618,6 @@
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-bills-list.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/_fonts.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/_reset.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-footer.html",
 		"/D/p/dev/taijs/taijs-website2/gulpfile.js",
@@ -748,6 +756,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"has-border ",
+			"has-border",
+			"borders",
+			"summary",
+			"还款成功",
+			"status",
+			"nk-card\"><i class=\"icon bank-cn-cmb\"></i>招商",
+			"cell value timestampe\">2016-02-22 12:11:01<",
+			"银卡还款",
+			"l caption-cell value approach\">银卡还",
+			"repayment-records",
 			"value record-",
 			"ecord-amount",
 			"alue record-",
@@ -864,18 +883,7 @@
 			"issued-bills",
 			"375",
 			"corner-mar",
-			"4",
-			"375",
-			"block",
-			"corner",
-			"mark",
-			"exceed",
-			"exceeded",
-			"em",
-			"mark",
-			"<i",
-			"theme-base",
-			"baseCssGlobs"
+			"4"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -902,8 +910,39 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app-dev/html/xfzq-close-installments.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11284,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3807,
+								3807
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 67.0,
+						"translation.y": 1480.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -955,6 +994,22 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"order",
+				"app-dev\\html\\xfzq-orders.html"
+			],
+			[
+				"ie",
+				"app-dev\\styles\\base\\base-ie8.css"
+			],
+			[
+				"repa",
+				"app-dev\\html\\xfzq-repayments.html"
+			],
+			[
+				"clos",
+				"app-dev\\html\\xfzq-close-installments.html"
+			],
 			[
 				"rece",
 				"app-dev\\html\\xfzq-bills-recent.html"
@@ -1038,10 +1093,6 @@
 			[
 				"them",
 				"app-dev\\styles\\base\\theme-_default.css"
-			],
-			[
-				"ie",
-				"app-dev\\styles\\base\\base-ie8.css"
 			],
 			[
 				"themd",
@@ -1170,10 +1221,6 @@
 			[
 				"ind",
 				"app-dev\\index.html"
-			],
-			[
-				"clos",
-				"app-dev\\styles\\pages\\xfzq-page-close-installments.css"
 			],
 			[
 				"ie8",
@@ -1458,14 +1505,6 @@
 			[
 				"chiefp",
 				"app-dev\\html-snippets\\module-xfzq-page-chief-part-wrap-end.html"
-			],
-			[
-				"page",
-				"app-dev\\html-snippets\\module-xfzq-page-wrap-begin.html"
-			],
-			[
-				"content",
-				"app-dev\\html-snippets\\module-xfzq-page-content-wrap-begin.html"
 			]
 		],
 		"width": 0.0
