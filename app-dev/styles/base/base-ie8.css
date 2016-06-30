@@ -883,8 +883,8 @@ button.button-x {
 		position: relative; /* for being on top of parentNode's :before :after psuedo elements; */
 		padding-left: 0;
 		padding-right: 0;
-		margin-left: -0.375em;
-		margin-right: -0.375em;
+		margin-left: -0.4em;
+		margin-right: -0.4em;
 	}
 	.corner-marker:after,
 	.corner-marker:before {
@@ -893,26 +893,26 @@ button.button-x {
 		position: absolute;
 		top: 0;
 		font-size: 15px;
-		width: 0.5em;
-		height: 1.2em;
-		line-height: 0.875;
+		width: 0.55em;
+		height: 1em;
 		white-space: nowrap;
 		padding: 0;
 		text-indent: 0;
-		text-align: center;
 		border: 0;
 		margin: 0;
 		overflow: hidden;
 		font-style: normal!important;
 		font-weight: normal!important;
+		text-indent: -0.5em;
 	}
 	.corner-marker:before {
 		right: 100%;
+		direction: rtl;
+		text-align: right;
 	}
 	.corner-marker:after {
 		left: 100%;
-		direction: rtl;
-		text-indent: 1px;
+		text-align: left;
 	}
 	sup.corner-marker { /* ie8 bug */
 		font-size: 0.9em;
