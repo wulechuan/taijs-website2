@@ -31,6 +31,11 @@
 		margin-bottom: 0;
 	}
 
+	.card .card-head p {
+		padding: 0.5em;
+		margin: -0.5em;
+	}
+
 	.card .card-body {
 		border-width: 0;
 		margin: 0;
