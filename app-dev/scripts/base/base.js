@@ -330,7 +330,6 @@
 	var $listsBlocks = $('.lists-block').filter(function () {
 		return !$(this).hasClass('close-installments');
 	});
-	console.log($listsBlocks);
 	$listsBlocks.each(function () {
 		var $listsBlock = $(this);
 

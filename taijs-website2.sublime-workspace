@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"in",
+				"input	Tag"
+			],
+			[
 				"h",
 				"hidden"
 			],
@@ -224,42 +228,26 @@
 	"buffers":
 	[
 		{
-			"file": "app-dev/html/xfzq-close-installments.html",
-			"settings":
-			{
-				"buffer_size": 13144,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app-dev/styles/base/base.css",
-			"settings":
-			{
-				"buffer_size": 37988,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app-dev/styles/pages/xfzq-layout.css",
-			"settings":
-			{
-				"buffer_size": 18828,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "app-dev/scripts/pages/xfzq-page-close-installments.js",
 			"settings":
 			{
-				"buffer_size": 760,
+				"buffer_size": 1250,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app-dev/styles/base/theme-_default.css",
+			"file": "app-dev/html/xfzq-close-installments-step-2-proceed.html",
 			"settings":
 			{
-				"buffer_size": 12939,
+				"buffer_size": 7603,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app-dev/html/xfzq-close-installments-step-1-choose-bank-card.html",
+			"settings":
+			{
+				"buffer_size": 5579,
 				"line_ending": "Windows"
 			}
 		}
@@ -333,18 +321,21 @@
 	],
 	"file_history":
 	[
+		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
+		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-list.html",
+		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-step-1-chose-bank-card.html",
+		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-sidebar-0.html",
+		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments.html",
+		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
 		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout.css",
 		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-close-installments.js",
 		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default.css",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
 		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
 		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html/xfzq-repayments.html",
 		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bill-records-details.html",
 		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-recent.html",
 		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/base/_fonts.css",
 		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk-cate-taiyx.html",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments.html",
 		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8-theme.css",
 		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/base/fonts.css",
 		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-base.css",
@@ -354,7 +345,6 @@
 		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/base/iconfonts/iconfont.css",
 		"/D/Users/wulechuan/Documents/p/dev/wlc/g.bat",
 		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-page-close-installments.css",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-sidebar-0.html",
 		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html/xfzq-index.html",
 		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-header.html",
 		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk.html",
@@ -458,9 +448,7 @@
 		"/D/p/dev/private/warm-up/app-dist/index.html",
 		"/D/p/dev/private/warm-up/app-dev/styles/page-2.css",
 		"/D/p/dev/private/warm-up/node_modules/vinyl-fs/node_modules/graceful-fs/.npmignore",
-		"/D/p/dev/private/warm-up/node_modules/graceful-readlink/index.js",
-		"/D/a.txt",
-		"/D/Users/wulechuan/Downloads/迅雷/js代码高亮功能测试"
+		"/D/p/dev/private/warm-up/node_modules/graceful-readlink/index.js"
 	],
 	"find":
 	{
@@ -471,6 +459,7 @@
 		"height": 104.0,
 		"where_history":
 		[
+			"D:\\Users\\wulechuan\\Documents\\p\\dev\\taijs\\taijs-website2\\app-dev",
 			"D:\\Users\\wulechuan\\Documents\\p\\dev\\taijs\\taijs-website2\\app-dev, *.css",
 			"D:\\Users\\wulechuan\\Documents\\p\\dev\\taijs\\taijs-website2\\app-dev",
 			"D:\\Users\\wulechuan\\Documents\\p\\dev\\taijs\\taijs-website2\\app-dev\\styles",
@@ -482,6 +471,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"password",
+			"bank",
+			"buttons-in-single-line",
+			"button",
+			"span",
+			"close-installments.html",
 			"ededed",
 			"border",
 			"addClass",
@@ -603,13 +598,7 @@
 			"button>\n				<butt",
 			">\n				<",
 			"left",
-			"button",
-			" bg-transparent color-gray",
-			"6",
-			"42",
-			"10",
-			"2",
-			"4px"
+			"button"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -628,112 +617,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app-dev/html/xfzq-close-installments.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 13144,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2630,
-								2630
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 18.0,
-						"translation.y": 962.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app-dev/styles/base/base.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 37988,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								19595,
-								19595
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS3/CSS3.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 17855.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app-dev/styles/pages/xfzq-layout.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 18828,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS3/CSS3.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "app-dev/scripts/pages/xfzq-page-close-installments.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 760,
+						"buffer_size": 1250,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								576,
+								576
 							]
 						],
 						"settings":
@@ -745,33 +646,64 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "app-dev/styles/base/theme-_default.css",
+					"buffer": 1,
+					"file": "app-dev/html/xfzq-close-installments-step-2-proceed.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12939,
+						"buffer_size": 7603,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10023,
-								10023
+								1968,
+								1968
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS3/CSS3.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 8995.0,
+						"translation.x": 9.0,
+						"translation.y": 861.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app-dev/html/xfzq-close-installments-step-1-choose-bank-card.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5579,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1956,
+								1956
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 780.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -828,6 +760,22 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"basej",
+				"app-dev\\scripts\\base\\base.js"
+			],
+			[
+				"step",
+				"app-dev\\html\\xfzq-close-installments-step-1-choose-bank-card.html"
+			],
+			[
+				"closlis",
+				"app-dev\\html\\xfzq-close-installments-list.html"
+			],
+			[
+				"clos",
+				"app-dev\\scripts\\pages\\xfzq-page-close-installments.js"
+			],
 			[
 				"cljs",
 				"app-dev\\scripts\\pages\\xfzq-page-close-installments.js"
@@ -919,10 +867,6 @@
 			[
 				"basethem",
 				"app-dev\\styles\\base\\theme-base.css"
-			],
-			[
-				"clos",
-				"app-dev\\html\\xfzq-close-installments.html"
 			],
 			[
 				"index",
