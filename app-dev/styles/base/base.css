@@ -1401,6 +1401,13 @@ label.deco-input {
 		position: relative;
 		z-index: 2;
 	}
+
+	.tabular a:hover,
+	.tabular a:link,
+	.tabular a {
+		text-decoration: none;
+	}
+
 	.tabular > .title {
 		position: relative;
 		z-index: 1;

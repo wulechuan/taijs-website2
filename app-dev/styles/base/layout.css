@@ -356,16 +356,38 @@
 			margin-top: 20px;
 			}
 
-			#app-footer-attestations a,
-			#app-footer-attestations img {
+			#app-footer-attestations a {
+				position: static;
+				display: inline;
+				padding: 0;
+				margin: 0;
+			}
+			#app-footer-attestations .attestation-logo {
 				position: relative;
 				display: inline-block;
 				margin: 0 12px;
 				padding: 0;
 				vertical-align: top;
+				height: 28px;
+				background-repeat: no-repeat;
+				background-image: url(../../images/common/attestation-logos.png);
+				background-position-y: 0;
 			}
-			#app-footer-attestations a img {
-				margin: 0;
+			#app-footer-attestations .attestation-logo:hover {
+				background-position-y: -28px;
+			}
+
+			#app-footer-attestations .attestation-logo.cheng-xin-wang-zhan {
+				width: 78px;
+				background-position-x: 0;
+			}
+			#app-footer-attestations .attestation-logo.ke-xin-wang-zhan {
+				width: 76px;
+				background-position-x: -88px;
+			}
+			#app-footer-attestations .attestation-logo.guan-wang-yan-zheng-an-quan-lian-meng {
+				width: 75px;
+				background-position-x: -174px;
 			}
 
 
