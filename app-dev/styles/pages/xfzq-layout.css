@@ -1,23 +1,26 @@
 /* ----- layout definition begin --------------- */
-	.bill-lists-block .empty-content-hint,
-	.bill-record-lists-block .empty-content-hint,
 	.empty-content-hint {
 		background-image: url(../../images/pages/xfzq/_common/empty-content-hint-money-bag-in-hand.png);
 		}
-		.bill-lists-block .empty-content-hint:after,
-		.bill-record-lists-block .empty-content-hint:after,
 		.empty-content-hint:after {
 			content: '犇宝宝心里空荡荡的';
 		}
 
-	.order-lists-block .empty-content-hint,
-	.empty-content-hint {
-		background-image: url(../../images/pages/xfzq/_common/empty-content-hint-floating-balloon.png);
-		}
-		.order-lists-block .empty-content-hint:after,
-		.empty-content-hint:after {
-			content: '亲，暂时没有订单哦';
-		}
+		.bills .empty-content-hint,
+		.bill-records .empty-content-hint {
+			background-image: url(../../images/pages/xfzq/_common/empty-content-hint-money-bag-in-hand.png);
+			}
+			.bills .empty-content-hint:after,
+			.bill-records .empty-content-hint:after {
+				content: '犇宝宝心里空荡荡的';
+			}
+
+		.orders .empty-content-hint {
+			background-image: url(../../images/pages/xfzq/_common/empty-content-hint-floating-balloon.png);
+			}
+			.orders .empty-content-hint:after {
+				content: '亲，暂时没有订单哦';
+			}
 
 
 	.tab-list {
@@ -107,10 +110,6 @@
 		.tabular > .f-list {
 			}
 
-/* 			.tabular > .f-list > li .caption-cell {
-				width: 360px;
-				margin-right: 4px;
-			} */
 
 	.tabular-lists-block.bills .tabular > .f-list > li .caption-cell,
 	.tabular-lists-block.bill-records .tabular > .f-list > li .caption-cell {
