@@ -346,6 +346,46 @@ label.deco-input {
 	}
 
 
+.tabular-lists-block {
+	}
+
+	.tabular-lists-block .lists {
+		background-color: white;
+	}
+
+	.tabular-lists-block > .block-title,
+	.tabular > .title,
+	.tabular > .f-list > li {
+		border-color: #ededed;
+	}
+
+	.tabular-lists-block > .block-title,
+	.tabular > .title {
+		background-color: #fbfbfc;
+	}
+
+	.tabular > .title {
+		border-bottom-color: #fbfbfc;
+	}
+
+	.tabular-lists-block > .title {
+		/* color: #333; */
+	}
+
+	.tabular > .title,
+	.tabular > .f-list > li {
+		color: #666;
+	}
+
+	.tabular > .f-list > li:hover {
+		background-color: #fbfbfc;
+	}
+
+	.tabular > .f-list > li a:hover {
+		background-color: #ededed;
+	}
+
+
 .dialog {
 	}
 

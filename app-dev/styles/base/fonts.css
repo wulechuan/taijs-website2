@@ -3,10 +3,8 @@ html, body, button, textarea, input, select, option, .font-default {
 }
 
 .bill-time-exceeded,
-.bill-list > .subtitle,
-.bill-list > .f-list > li,
-.bill-record-list > .subtitle,
-.bill-record-list > .f-list > li,
+.tabular > .title,
+.tabular > .f-list > li,
 .pagination [role="button"],
 .pagination button,
 .dialog .dialog-body > .content .article p,
