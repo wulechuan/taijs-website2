@@ -1384,23 +1384,30 @@ label.deco-input {
 	}
 
 
-.tabular-lists-block {
+.lists-block {
+	position: relative; /* for empty-content-hint positioning */
+	min-height: 400px; /* make some room for empty-content-hint */
 	}
 
-	.tabular-lists-block .lists {
+	.lists-block .lists {
 		position: relative;
 		z-index: 1; /* covering empty-content-hint in case the hint is not hidden correctly */
 	}
-	.tabular-lists-block > .block-title,
+	.lists-block > .block-title {
+		position: relative;
+		z-index: 2;
+	}
+
+
+.tabular-lists {
+	}
+
+	.tabular-lists > .block-title,
 	.tabular > .title,
 	.tabular > .f-list > li {
 		border-style: solid;
 		border-width: 1px 0;
 		margin-bottom: -1px;
-	}
-	.tabular-lists-block > .block-title {
-		position: relative;
-		z-index: 2;
 	}
 
 	.tabular a:hover,
@@ -1413,6 +1420,7 @@ label.deco-input {
 		position: relative;
 		z-index: 1;
 	}
+
 	.tabular > .f-list {
 		}
 		.tabular > .f-list > li {

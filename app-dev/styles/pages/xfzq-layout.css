@@ -76,18 +76,17 @@
 		}
 
 
-	.tabular-lists-block {
-		position: relative; /* for empty-content-hint positioning */
-		min-height: 400px;
+	.tabular-lists {
 		margin: 20px 0;
 		}
-		.tabular-lists-block > .block-title,
+
+		.tabular-lists > .block-title,
 		.tabular > .title,
 		.tabular > .f-list > li {
 			padding-left: 20px;
 			padding-right: 20px;
 		}
-		.tabular-lists-block > .block-title {
+		.tabular-lists > .block-title {
 			padding-top: 11px;
 			padding-bottom: 11px;
 
@@ -102,35 +101,31 @@
 			line-height: 17px;
 			min-height: 17px;
 		}
-
 		.tabular > .title {
 			font-weight: bold;
 		}
 
-		.tabular > .f-list {
-			}
 
-
-	.tabular-lists-block.bills .tabular > .f-list > li .caption-cell,
-	.tabular-lists-block.bill-records .tabular > .f-list > li .caption-cell {
+	.tabular-lists.bills .tabular > .f-list > li .caption-cell,
+	.tabular-lists.bill-records .tabular > .f-list > li .caption-cell {
 		width: 360px;
 		margin-right: 4px;
 	}
 
-	.tabular-lists-block.bills .tabular > .f-list > li .bill-total-amount {
+	.tabular-lists.bills .tabular > .f-list > li .bill-total-amount {
 		width: 128px;
 	}
 
-	.tabular-lists-block.bill-records .tabular > .f-list > li .record-timestamp {
+	.tabular-lists.bill-records .tabular > .f-list > li .record-timestamp {
 		width: 128px;
 	}
-
 
 
 	.page {
 		margin: 0;
 		padding: 10px 0 20px 0;
-	}
+		}
+
 
 	.page-chief-part.cast-shadow {
 		position: relative;

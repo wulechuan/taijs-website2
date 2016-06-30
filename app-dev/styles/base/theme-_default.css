@@ -346,20 +346,28 @@ label.deco-input {
 	}
 
 
-.tabular-lists-block {
+.lists-block {
 	}
 
-	.tabular-lists-block .lists {
+	.lists-block .lists {
 		background-color: white;
 	}
 
-	.tabular-lists-block > .block-title,
+
+.tabular-lists {
+	}
+
+	.tabular-lists .lists {
+		background-color: white;
+	}
+
+	.tabular-lists > .block-title,
 	.tabular > .title,
 	.tabular > .f-list > li {
 		border-color: #ededed;
 	}
 
-	.tabular-lists-block > .block-title,
+	.tabular-lists > .block-title,
 	.tabular > .title {
 		background-color: #fbfbfc;
 	}
@@ -368,7 +376,7 @@ label.deco-input {
 		border-bottom-color: #fbfbfc;
 	}
 
-	.tabular-lists-block > .title {
+	.tabular-lists > .title {
 		/* color: #333; */
 	}
 
