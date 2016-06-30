@@ -1451,6 +1451,9 @@ label.deco-input {
 			margin-bottom: auto;
 			text-align: right;
 		}
+		.tabular > .f-list > li a {
+			border-radius: 4px;
+		}
 
 
 dl.initially-collapsed {
