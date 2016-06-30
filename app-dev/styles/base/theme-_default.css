@@ -44,16 +44,39 @@ html, body {
 
 
 .tab-list > li,
-.article dd,
 .article dt,
 .article h3,
 .article h2,
-.article h1 {
+.article h1,
+.thick-text-rendering {
 	color: black;
 	/* -webkit-text-stroke-width: 0.25px; */ /* cause the animation noticable slow */
 	text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
 	text-shadow: 0 0 1.5px rgba(0, 0, 0, 0.5)\9\0; /* ie10, ie11 */
+}
+
+
+em {
+	color: #ff291d;
 	}
+
+	.tab-list > li em,
+	.article dt em,
+	.article h3 em,
+	.article h2 em,
+	.article h1 em,
+	.article em dt,
+	.article em h3,
+	.article em h2,
+	.article em h1,
+	em.thick-text-rendering,
+	.thick-text-rendering em,
+	em .thick-text-rendering {
+		color: #ff291d;
+		text-shadow: 0 0 1px rgba(255, 41, 29, 0.5);
+		text-shadow: 0 0 1.5px rgba(255, 41, 29, 0.5)\9\0; /* ie10, ie11 */
+	}
+
 .article h3.color-white,
 .article h2.color-white,
 .article h1.color-white {
@@ -64,11 +87,6 @@ html, body {
 
 hr {
 	border-color: #d0d0d0;
-	}
-
-
-em {
-	color: #ff291d;
 	}
 
 
