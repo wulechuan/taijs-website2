@@ -195,7 +195,6 @@
 
 		.card.order-info .cell.price {
 			line-height: 21px;
-			right: 0;
 			bottom: 0;
 			top: 0;
 			width: 170px;
@@ -206,6 +205,28 @@
 			.card.order-info .cell.price .value {
 				display: block;
 			}
+
+		.open-orders .card.order-info .cell.price {
+			right: 171px;
+			}
+			.open-orders .card.order-info .cell.price p:before {
+				content: '应付';
+			}
+
+		.closed-orders .card.order-info .cell.price {
+			right: 0;
+			}
+			.closed-orders .card.order-info .cell.price p:before {
+				content: '已付';
+			}
+
+		.invalid-orders .card.order-info .cell.price {
+			right: 0;
+			}
+			.invalid-orders .card.order-info .cell.price p:before {
+				content: '应付';
+			}
+
 
 
 	.page {
