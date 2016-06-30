@@ -370,7 +370,7 @@
 				vertical-align: top;
 				height: 28px;
 				background-repeat: no-repeat;
-				background-image: url(../../images/common/attestation-logos.png);
+				background-image: url(../../images/_common/attestation-logos.png);
 				background-position-y: 0;
 			}
 			#app-footer-attestations .attestation-logo:hover {
