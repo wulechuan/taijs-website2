@@ -89,11 +89,19 @@
 		}
 
 		.tabular-lists > .block-header,
+		.tabular-lists > .block-footer,
 		.tabular > .header,
+		.tabular > .footer,
 		.tabular > .f-list > li {
 			padding-left: 20px;
 			padding-right: 20px;
 		}
+		.tabular > .header .last-cell,
+		.tabular > .footer .last-cell,
+		.tabular > .f-list > li .last-cell {
+			right: 20px;
+		}
+
 		.tabular-lists > .block-header {
 			padding-top: 11px;
 			padding-bottom: 11px;
@@ -101,7 +109,16 @@
 			line-height: 21px;
 			min-height: 21px;
 		}
+		.tabular-lists > .block-footer {
+			padding-top: 15px;
+			padding-bottom: 15px;
+
+			line-height: 21px;
+			min-height: 21px;
+		}
+		.tabular > .header .last-cell,
 		.tabular > .header,
+		.tabular > .f-list > li .last-cell,
 		.tabular > .f-list > li {
 			padding-top: 13px;
 			padding-bottom: 13px;
@@ -117,6 +134,22 @@
 		.tabular > .header h2 {
 			font-weight: normal;
 		} */
+		.tabular > .footer .last-cell,
+		.tabular > .footer {
+			font-size: 14px;
+			padding-top: 25px;
+			padding-bottom: 25px;
+
+			line-height: 30px;
+			min-height: 30px;
+		}
+
+		.tabular > .footer em .currency {
+			font-size: 22px;
+			display: inline-block;
+			vertical-align: middle;
+			padding-bottom: 4px;
+		}
 
 		.tabular-lists.bills .tabular > .f-list > li .caption-cell,
 		.tabular-lists.bill-records .tabular > .f-list > li .caption-cell {
@@ -130,6 +163,12 @@
 
 		.tabular-lists.bill-records .tabular > .f-list > li .timestamp {
 			width: 128px;
+		}
+
+		.tabular-lists.close-installments .tabular > .f-list > li .amount {
+			position: absolute;
+			left: 380px;
+			width: 100px;
 		}
 
 
