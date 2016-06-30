@@ -914,6 +914,16 @@ button.button-x {
 		direction: rtl;
 		text-indent: 1px;
 	}
+	sup.corner-marker { /* ie8 bug */
+		font-size: 0.9em;
+		height: 15px;
+		line-height: 15px;
+		}
+		sup.corner-marker:after,
+		sup.corner-marker:before {
+			font-size: 18px;
+			line-height: 0.75;
+		}
 
 
 .floating-layer-set {

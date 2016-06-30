@@ -902,6 +902,7 @@ label.deco-input {
 
 .corner-marker {
 	position: absolute;
+	display: inline-block;
 	left: auto!important;
 	top: auto!important;
 	margin: 0;
