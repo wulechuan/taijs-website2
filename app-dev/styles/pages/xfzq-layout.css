@@ -139,7 +139,7 @@
 
 		.card .card-head {
 			padding-top: 13px;
-			padding-bottom: 13px;
+			padding-bottom: 12px;
 
 			line-height: 17px;
 			min-height: 17px;
@@ -193,6 +193,7 @@
 				line-height: 21px;
 			}
 
+		.card.order-info .cell.checkout,
 		.card.order-info .cell.price {
 			line-height: 21px;
 			bottom: 0;
@@ -206,6 +207,30 @@
 				display: block;
 			}
 
+		.open-orders .card.order-info .cell.remaining-time {
+			top: 0;
+			padding: 10px;
+			margin: 10px 0;
+			padding: 0;
+			line-height: 23px;
+			height: 23px;
+			}
+			.open-orders .card.order-info .cell.remaining-time:before {
+				font-family: 'iconfont'!important;
+				content: '\e61c';
+				font-size: 18.8px;
+				margin-right: 0.5em;
+				vertical-align: middle;
+				display: inline-block;
+				margin-top: -3px;
+			}
+			.open-orders .card.order-info .cell.remaining-time:after {
+				content: '后失效';
+				margin-left: 0.25em;
+			}
+		.open-orders .card.order-info .cell.checkout {
+			right: 0;
+			}
 		.open-orders .card.order-info .cell.price {
 			right: 171px;
 			}

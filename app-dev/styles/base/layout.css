@@ -31,9 +31,21 @@
 		margin-bottom: 0;
 	}
 
-	.card .card-head p {
+	.card .card-head .cell {
 		padding: 0.5em;
 		margin: -0.5em;
+	}
+
+	.card .card-head .cell.caption-cell {
+		position: static;
+		display: inline;
+	}
+
+	.card .card-head .cell.last-cell {
+		position: absolute;
+		right: 20px;
+		top: 0.5em;
+		bottom: 0.5em;
 	}
 
 	.card .card-body {
