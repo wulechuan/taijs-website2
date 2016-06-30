@@ -491,6 +491,13 @@ dd {
 	}
 
 
+.currency {
+	}
+	.currency.currency-rmb:before {
+		content: '¥';
+	}
+
+
 label, .label {
 	cursor: pointer;
 	}

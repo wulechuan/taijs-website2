@@ -10,6 +10,7 @@
 
 
 .card {
+	font-size: 14px;
 	display: block;
 	margin: 20px 0;
 	border-style: solid;
@@ -33,7 +34,6 @@
 	.card .card-body {
 		border-width: 0;
 		margin: 0;
-		height: 100px; /* a default value */
 	}
 
 	.card .cell {
