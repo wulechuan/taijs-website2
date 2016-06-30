@@ -1816,8 +1816,10 @@ ol.f-list, ul.f-list { /* function list */
 			padding: 0;
 			margin: 0;
 			z-index: 1;
+			cursor: pointer;
 		}
 
+		.tab-list.has-single-tab > li,
 		.tab-list.has-single-tab > li > .label {
 			cursor: default;
 		}
