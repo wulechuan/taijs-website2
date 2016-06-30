@@ -327,7 +327,9 @@
 
 
 (function fakeLogics() {
-	var $listsBlocks = $('.lists-block');
+	var $listsBlocks = $('.lists-block').filter(function () {
+		return !$(this).hasClass('close-installments');
+	});
 	$listsBlocks.each(function () {
 		var $listsBlock = $(this);
 

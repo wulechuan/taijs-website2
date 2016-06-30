@@ -60,6 +60,7 @@ em {
 	color: #ff291d;
 	}
 
+	em .currency,
 	.tab-list > li em,
 	.article dt em,
 	.article h3 em,
@@ -285,6 +286,58 @@ label.deco-input {
 		border-color: #157dff;
 	}
 
+	input[type="radio"]    + label.deco-input[for],
+	input[type="checkbox"] + label.deco-input[for] {
+		background-color: transparent;
+		}
+		input[type="radio"] + label.deco-input[for]:before {
+			color: #c5c5c5;
+			}
+			input[type="radio"] + label.deco-input[for]:hover:before {
+				color: #333;
+			}
+
+		input[type="checkbox"] + label.deco-input[for]:before {
+			border-color: #c5c5c5;
+			}
+			input[type="checkbox"] + label.deco-input[for]:hover:before {
+				border-color: #333;
+			}
+
+		input[type="radio"]:checked    + label.deco-input[for],
+		input[type="checkbox"]:checked + label.deco-input[for] {
+			background-color: black;
+			}
+			input[type="radio"]:checked    + label.deco-input[for]:before {
+				color: black;
+			}
+			input[type="checkbox"]:checked + label.deco-input[for]:before {
+				border-color: black;
+			}
+			input[type="radio"]:checked    + label.deco-input[for]:after,
+			input[type="checkbox"]:checked + label.deco-input[for]:after {
+				color: white;
+			}
+
+
+
+	.selected input[type="radio"]:checked    + label.deco-input[for],
+	.selected input[type="checkbox"]:checked + label.deco-input[for],
+	.selected input[type="radio"]            + label.deco-input[for],
+	.selected input[type="checkbox"]         + label.deco-input[for] {
+		background-color: transparent;
+		}
+		.selected input[type="radio"] + label.deco-input[for]:before,
+		.selected input[type="radio"] + label.deco-input[for]:after {
+			color: white;
+		}
+		.selected input[type="checkbox"] + label.deco-input[for]:before {
+			border-color: white;
+		}
+		.selected input[type="checkbox"] + label.deco-input[for]:after {
+			color: white;
+		}
+
 
 .qrcode {
 	}
@@ -389,26 +442,28 @@ label.deco-input {
 		background-color: white;
 	}
 
-	.tabular-lists > .block-title,
-	.tabular > .title,
+	.tabular-lists > .block-header,
+	.tabular-lists > .block-footer,
+	.tabular > .header,
+	.tabular > .footer,
 	.tabular > .f-list > li {
 		border-color: #ededed;
 	}
 
-	.tabular-lists > .block-title,
-	.tabular > .title {
+	.tabular-lists > .block-header,
+	.tabular > .header {
 		background-color: #fbfbfc;
 	}
 
-	.tabular > .title {
+	.tabular > .header {
 		border-bottom-color: #fbfbfc;
 	}
 
-	.tabular-lists > .title {
+	.tabular-lists > .header {
 		/* color: #333; */
 	}
 
-	.tabular > .title,
+	.tabular > .header,
 	.tabular > .f-list > li {
 		color: #666;
 	}
@@ -419,6 +474,11 @@ label.deco-input {
 
 	.tabular > .f-list > li a:hover {
 		/* background-color: #ededed; */
+		color: white;
+		background-color: #157dff;
+	}
+
+	.tabular > .f-list > li.selected {
 		color: white;
 		background-color: #157dff;
 	}
