@@ -491,9 +491,11 @@ dd {
 
 
 .currency {
+	text-align: right;
 	}
 	.currency.currency-rmb:before {
 		content: '¥';
+		margin-right: 0.125em;
 	}
 
 

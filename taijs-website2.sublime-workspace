@@ -520,26 +520,10 @@
 	"buffers":
 	[
 		{
-			"file": "app-dev/html/xfzq-bills-recent.html",
+			"file": "app-dev/html/xfzq-close-installments.html",
 			"settings":
 			{
-				"buffer_size": 27478,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app-dev/styles/base/theme-_default.css",
-			"settings":
-			{
-				"buffer_size": 11160,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app-dev/styles/pages/xfzq-page-help-desk.css",
-			"settings":
-			{
-				"buffer_size": 6442,
+				"buffer_size": 11284,
 				"line_ending": "Windows"
 			}
 		}
@@ -618,21 +602,23 @@
 	],
 	"file_history":
 	[
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default-ie8.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-orders.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bill-records-details.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-repayments.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-recent.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bill-records-details.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-sidebar-0.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-past.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-page-help-desk.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default-ie8.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-bills-list.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/_fonts.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/_reset.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-sidebar-0.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-footer.html",
 		"/D/p/dev/taijs/taijs-website2/gulpfile.js",
 		"/D/p/dev/taijs/taijs-website2/app-dist/styles/base/base.min.css",
@@ -660,7 +646,6 @@
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-base-ie8.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-close-installments.js",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-page-help-desk.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk-cate-taiyx.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/vendors/jquery-1.12.4.min.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk.html",
@@ -744,8 +729,7 @@
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/test-url-overriding.html",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dist/index.html",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/html-snippets/tag-head.html",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/html/snippets/tag-head.html",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/html/snippets/tag-body-end.html"
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/html/snippets/tag-head.html"
 	],
 	"find":
 	{
@@ -772,6 +756,43 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"has-border ",
+			"has-border",
+			"borders",
+			"summary",
+			"还款成功",
+			"status",
+			"nk-card\"><i class=\"icon bank-cn-cmb\"></i>招商",
+			"cell value timestampe\">2016-02-22 12:11:01<",
+			"银卡还款",
+			"l caption-cell value approach\">银卡还",
+			"repayment-records",
+			"value record-",
+			"ecord-amount",
+			"alue record-",
+			"record-",
+			"alue record-",
+			"last-cell  ",
+			"record-amoun",
+			"digits",
+			"digits cu",
+			"digits",
+			"caption-cell ",
+			"currenc",
+			"bill-records",
+			"lass=\"tabular\"",
+			"\"cell last-cell value status\">还款成功",
+			">全部</em></li>\n                                    <li><span>还款成功</span></li>\n                                    <li><span>部分还款成功",
+			"tme",
+			" class=\"cel",
+			">",
+			"time",
+			"amount",
+			"span",
+			"全部",
+			"awaiting-bills",
+			"issued-bills",
+			"payment-records",
 			"51",
 			"em class=\"thick-text-rendering\"",
 			"<dt>可用额度（元）<",
@@ -862,44 +883,7 @@
 			"issued-bills",
 			"375",
 			"corner-mar",
-			"4",
-			"375",
-			"block",
-			"corner",
-			"mark",
-			"exceed",
-			"exceeded",
-			"em",
-			"mark",
-			"<i",
-			"theme-base",
-			"baseCssGlobs",
-			"reset",
-			"user-avatar.html",
-			"images/_common/",
-			"images/common/",
-			"xfzq-base-ie8.min",
-			"xfzq-base.min",
-			"xfzq-base.",
-			"xfzq-base.css",
-			"href=",
-			"img",
-			"cert-logo",
-			"footer",
-			"link",
-			"#",
-			"tails.html?billI",
-			"list",
-			"tabular-list",
-			"bill-record-",
-			"bill-record",
-			"bill-list",
-			"bill",
-			"argument",
-			"bill-list",
-			"subtitle",
-			"bill-lists-block",
-			"bill-record-list"
+			"4"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -926,28 +910,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app-dev/html/xfzq-bills-recent.html",
+					"file": "app-dev/html/xfzq-close-installments.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 27478,
+						"buffer_size": 11284,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3307,
-								3338
-							],
-							[
-								16738,
-								16769
+								3807,
+								3807
 							]
 						],
 						"settings":
@@ -956,66 +936,8 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": -0.0,
-						"translation.y": 4749.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app-dev/styles/base/theme-_default.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 11160,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1013,
-								1013
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 840.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app-dev/styles/pages/xfzq-page-help-desk.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6442,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6069,
-								5972
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3822.0,
+						"translation.x": 67.0,
+						"translation.y": 1480.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1073,20 +995,56 @@
 		"selected_items":
 		[
 			[
-				"hel",
-				"app-dev\\styles\\pages\\xfzq-page-help-desk.css"
+				"order",
+				"app-dev\\html\\xfzq-orders.html"
+			],
+			[
+				"ie",
+				"app-dev\\styles\\base\\base-ie8.css"
+			],
+			[
+				"repa",
+				"app-dev\\html\\xfzq-repayments.html"
+			],
+			[
+				"clos",
+				"app-dev\\html\\xfzq-close-installments.html"
+			],
+			[
+				"rece",
+				"app-dev\\html\\xfzq-bills-recent.html"
+			],
+			[
+				"layou",
+				"app-dev\\styles\\pages\\xfzq-layout.css"
+			],
+			[
+				"deta",
+				"app-dev\\html\\xfzq-bill-records-details.html"
+			],
+			[
+				"pas",
+				"app-dev\\html\\xfzq-bills-past.html"
+			],
+			[
+				"base",
+				"app-dev\\styles\\base\\base.css"
+			],
+			[
+				"sideba",
+				"app-dev\\html-snippets\\module-xfzq-page-sidebar-0.html"
 			],
 			[
 				"bills",
 				"app-dev\\html\\xfzq-bills-recent.html"
 			],
 			[
-				"theme",
-				"app-dev\\styles\\base\\theme-_default.css"
+				"hel",
+				"app-dev\\styles\\pages\\xfzq-page-help-desk.css"
 			],
 			[
-				"layou",
-				"app-dev\\styles\\base\\layout.css"
+				"theme",
+				"app-dev\\styles\\base\\theme-_default.css"
 			],
 			[
 				"la",
@@ -1095,10 +1053,6 @@
 			[
 				"orders",
 				"app-dev\\html\\xfzq-orders.html"
-			],
-			[
-				"base",
-				"app-dev\\styles\\base\\base.css"
 			],
 			[
 				"detail",
@@ -1139,10 +1093,6 @@
 			[
 				"them",
 				"app-dev\\styles\\base\\theme-_default.css"
-			],
-			[
-				"ie",
-				"app-dev\\styles\\base\\base-ie8.css"
 			],
 			[
 				"themd",
@@ -1261,10 +1211,6 @@
 				"app-dev\\styles\\base\\theme-base.css"
 			],
 			[
-				"sideba",
-				"app-dev\\html-snippets\\module-xfzq-page-sidebar-0.html"
-			],
-			[
 				"helpdeskin",
 				"app-dev\\html\\xfzq-help-desk-index.html"
 			],
@@ -1275,10 +1221,6 @@
 			[
 				"ind",
 				"app-dev\\index.html"
-			],
-			[
-				"clos",
-				"app-dev\\styles\\pages\\xfzq-page-close-installments.css"
 			],
 			[
 				"ie8",
@@ -1563,26 +1505,6 @@
 			[
 				"chiefp",
 				"app-dev\\html-snippets\\module-xfzq-page-chief-part-wrap-end.html"
-			],
-			[
-				"page",
-				"app-dev\\html-snippets\\module-xfzq-page-wrap-begin.html"
-			],
-			[
-				"content",
-				"app-dev\\html-snippets\\module-xfzq-page-content-wrap-begin.html"
-			],
-			[
-				"pagwr",
-				"app-dev\\html-snippets\\module-xfzq-page-wrap-end.html"
-			],
-			[
-				"pagewrap",
-				"app-dev\\html-snippets\\module-xfzq-page-wrap-begin.html"
-			],
-			[
-				"pagecont",
-				"app-dev\\html-snippets\\module-xfzq-page-content-wrap-end.html"
 			]
 		],
 		"width": 0.0
