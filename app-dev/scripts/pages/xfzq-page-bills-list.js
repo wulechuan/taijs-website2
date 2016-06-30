@@ -1,7 +1,9 @@
 (function () {
-	console.log('this is "xfzq-page-bills-list.js"');
 	var $lists = $('.lists');
-	$lists.parent().on('click', function () {
-		$lists.toggle();
-	})
+	$lists.each(function () {
+		var $list = $(this);
+		$list.parent().on('click', function () {
+			$list.toggle();
+		});
+	});
 })();
