@@ -354,6 +354,16 @@ label.deco-input {
 	}
 
 
+.card {
+	border-color: #ededed;
+	}
+
+	.card .card-head {
+		color: #666;
+		background-color: #fbfbfc;
+	}
+
+
 .tabular-lists {
 	}
 

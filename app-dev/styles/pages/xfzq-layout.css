@@ -15,10 +15,10 @@
 				content: '犇宝宝心里空荡荡的';
 			}
 
-		.orders .empty-content-hint {
+		.orders-info .empty-content-hint {
 			background-image: url(../../images/pages/xfzq/_common/empty-content-hint-floating-balloon.png);
 			}
-			.orders .empty-content-hint:after {
+			.orders-info .empty-content-hint:after {
 				content: '亲，暂时没有订单哦';
 			}
 
@@ -76,8 +76,16 @@
 		}
 
 
-	.tabular-lists {
+	.lists-block {
 		margin: 20px 0;
+		}
+
+		.lists-block.cards {
+			margin: 43px 0;
+		}
+
+
+	.tabular-lists {
 		}
 
 		.tabular-lists > .block-title,
@@ -105,19 +113,44 @@
 			font-weight: bold;
 		}
 
+		.tabular-lists.bills .tabular > .f-list > li .caption-cell,
+		.tabular-lists.bill-records .tabular > .f-list > li .caption-cell {
+			width: 360px;
+			margin-right: 4px;
+		}
 
-	.tabular-lists.bills .tabular > .f-list > li .caption-cell,
-	.tabular-lists.bill-records .tabular > .f-list > li .caption-cell {
-		width: 360px;
-		margin-right: 4px;
-	}
+		.tabular-lists.bills .tabular > .f-list > li .bill-total-amount {
+			width: 128px;
+		}
 
-	.tabular-lists.bills .tabular > .f-list > li .bill-total-amount {
-		width: 128px;
-	}
+		.tabular-lists.bill-records .tabular > .f-list > li .record-timestamp {
+			width: 128px;
+		}
 
-	.tabular-lists.bill-records .tabular > .f-list > li .record-timestamp {
-		width: 128px;
+
+	.card {
+		}
+		.card .card-head,
+		.card .card-body {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		.card .card-head {
+			padding-top: 13px;
+			padding-bottom: 13px;
+
+			line-height: 17px;
+			min-height: 17px;
+		}
+
+		.card .card-body {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
+
+	.card.order-info {
 	}
 
 
