@@ -1,4 +1,25 @@
 /* ----- layout definition begin --------------- */
+	.bill-lists-block .empty-content-hint,
+	.bill-record-lists-block .empty-content-hint,
+	.empty-content-hint {
+		background-image: url(../../images/pages/xfzq/_common/empty-content-hint-money-bag-in-hand.png);
+		}
+		.bill-lists-block .empty-content-hint:after,
+		.bill-record-lists-block .empty-content-hint:after,
+		.empty-content-hint:after {
+			content: '犇宝宝心里空荡荡的';
+		}
+
+	.order-lists-block .empty-content-hint,
+	.empty-content-hint {
+		background-image: url(../../images/pages/xfzq/_common/empty-content-hint-floating-balloon.png);
+		}
+		.order-lists-block .empty-content-hint:after,
+		.empty-content-hint:after {
+			content: '亲，暂时没有订单哦';
+		}
+
+
 	.tab-list {
 		border-width: 0 0 2px 0;
 		border-style: solid;
@@ -54,7 +75,15 @@
 
 	.bill-lists-block,
 	.bill-record-lists-block {
+		position: relative;
+		min-height: 400px;
 		margin: 20px 0;
+		}
+
+		.bill-lists-block .lists,
+		.bill-record-lists-block .lists {
+			position: relative;
+			z-index: 1; /* covering empty-content-hint in case the hint is not hidden correctly */
 		}
 
 		.bill-lists-block > .title,
@@ -595,6 +624,11 @@
 
 	.bill-lists-block,
 	.bill-record-lists-block {
+		}
+
+		.bill-lists-block .lists,
+		.bill-record-lists-block .lists {
+			background-color: white;
 		}
 
 		.bill-lists-block > .title,

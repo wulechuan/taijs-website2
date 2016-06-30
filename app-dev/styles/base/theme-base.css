@@ -235,6 +235,11 @@ input {
 		}
 
 
+.empty-content-hint {
+	color: #999;
+	}
+
+
 button.button-x {
 	background-color: transparent;
 	color: white;

@@ -438,6 +438,31 @@ dd {
 			}
 
 
+.empty-content-hint {
+	box-sizing: border-box;
+	display: none;
+	display: block;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 240px;
+	height: 160px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 40%;
+	margin: -80px auto 0 auto;
+	text-align: center;
+	/* font-size: 16px; */
+	line-height: 1.5;
+	}
+	.empty-content-hint:after {
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 100%;
+	}
+
 [class|="ie"] {
 	display: none;
 	}
@@ -460,11 +485,6 @@ dd {
 	}
 
 
-.content {
-	background-color: transparent;
-	}
-
-
 .digits {
 	text-align: right;
 	}
@@ -472,6 +492,11 @@ dd {
 
 label, .label {
 	cursor: pointer;
+	}
+
+
+.content {
+	background-color: transparent;
 	}
 
 
