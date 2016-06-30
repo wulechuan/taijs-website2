@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"in",
+				"inline"
+			],
+			[
+				"back",
+				"background-repeat"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
 				"bordr",
 				"border-radius"
 			],
@@ -54,10 +74,6 @@
 			[
 				"fonts",
 				"font-style"
-			],
-			[
-				"in",
-				"inline-block"
 			],
 			[
 				"mar",
@@ -188,10 +204,6 @@
 				"background-color"
 			],
 			[
-				"bac",
-				"background-size"
-			],
-			[
 				"ba",
 				"background-color"
 			],
@@ -318,10 +330,6 @@
 			[
 				"nat",
 				"naturalWidth"
-			],
-			[
-				"back",
-				"backgroundImage"
 			],
 			[
 				"ima",
@@ -496,10 +504,6 @@
 				"border-color"
 			],
 			[
-				"min",
-				"min-width"
-			],
-			[
 				"transition",
 				"transition-property"
 			],
@@ -510,28 +514,34 @@
 			[
 				"inlin",
 				"inline-block"
-			],
-			[
-				"boders",
-				"border-style"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "app-dev/scripts/base/base.js",
+			"contents": "Searching 73 files for \"user-avatar.html\"\n\nD:\\p\\dev\\taijs\\taijs-website2\\app-dev\\html-snippets\\module-xfzq-user-info-bar.html:\n   89                  var avatarElementClassName = 'avatar';\n   90                  var avatarBordersElementClassName = 'avatar-borders';\n   91:                 var avatarIframeSrc = 'user-avatar.html';\n   92  \n   93                  initOptions = initOptions || {};\n\n1 match in 1 file\n",
 			"settings":
 			{
-				"buffer_size": 8298,
+				"buffer_size": 414,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "app-dev/html-snippets/module-xfzq-user-info-bar.html",
+			"settings":
+			{
+				"buffer_size": 7654,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app-dev/html/xfzq-bill-records-details.html",
+			"file": "app-dev/styles/base/base-ie8.css",
 			"settings":
 			{
-				"buffer_size": 12411,
+				"buffer_size": 30449,
 				"line_ending": "Windows"
 			}
 		}
@@ -610,38 +620,39 @@
 	],
 	"file_history":
 	[
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-past.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/fonts.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-base.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bill-past-records-details.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-past-records-details.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-recent.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-base.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8-theme.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-footer.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-header.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-sidebar-0.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-list.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk-qna-list.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-page-bills.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/reset.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-bills-list.js",
-		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-help-desk-index.js",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bill-records-details.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk-qna-list.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk-index.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-recent.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-past.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/user-avatar.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-base.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-bills-list.js",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/fonts.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bill-past-records-details.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-past-records-details.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-list.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-page-bills.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/reset.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-help-desk-index.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-help-desk-cate-taiyx.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8-theme.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-user-info-bar.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-footer.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/index.html",
 		"/D/Users/wulechuan/Desktop/footer.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/index.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-base-ie8.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-close-installments.js",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/user-avatar.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-head-after-title.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-page-help-desk.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk-cate-taiyx.html",
@@ -736,8 +747,7 @@
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/styles/base/reset.css",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/styles/base/theme-base.css",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dist/styles/base/base.min.css",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/fonts/iconfont.css",
-		"/C/Users/wulechuan/AppData/Local/Temp/Temp1_iconfont.zip/ux_1464749162_838745/iconfont.css"
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/fonts/iconfont.css"
 	],
 	"find":
 	{
@@ -748,6 +758,7 @@
 		"height": 104.0,
 		"where_history":
 		[
+			"D:\\p\\dev\\taijs\\taijs-website2\\app-dev",
 			"D:\\p\\dev\\taijs\\taijs-website2\\app-dev, *.html",
 			"D:\\p\\dev\\taijs\\taijs-website2\\app-dev",
 			"",
@@ -763,6 +774,40 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"user-avatar.html",
+			"images/_common/",
+			"images/common/",
+			"xfzq-base-ie8.min",
+			"xfzq-base.min",
+			"xfzq-base.",
+			"xfzq-base.css",
+			"href=",
+			"img",
+			"cert-logo",
+			"footer",
+			"link",
+			"#",
+			"tails.html?billI",
+			"list",
+			"tabular-list",
+			"bill-record-",
+			"bill-record",
+			"bill-list",
+			"bill",
+			"argument",
+			"bill-list",
+			"subtitle",
+			"bill-lists-block",
+			"bill-record-list",
+			"bill-list",
+			"list-title",
+			"bill-record-list",
+			"bill-lists-block",
+			"classic",
+			"argument",
+			"function_name",
+			"200",
+			"height",
 			"panel-bill-records-detail",
 			"controls",
 			"desired",
@@ -856,41 +901,7 @@
 			"                                </li>",
 			"                                <li>",
 			"<span",
-			"130px",
-			"21",
-			"11",
-			"11px ",
-			"left",
-			"bill-lists-block",
-			"bill-records-list",
-			"bill-records",
-			"class=\"bill-records",
-			"bill-records",
-			"fbfbfc",
-			"<div class=\"title\">\n                            <div></div>\n                        </div>",
-			"section",
-			"bill-lists-section",
-			"2015年11月账单分期3/3",
-			".bill-records",
-			"width",
-			"header",
-			"li",
-			"[role=\"button\"]",
-			"level1CurrentItem",
-			"showPanelViaTab",
-			"tabPanelSet",
-			"argument",
-			"allPanels",
-			"if (panel) ",
-			"expanded",
-			"dd",
-			"initiallyHidden",
-			"_processOnePair",
-			"id=\"panel-",
-			" aria-labelledby=\"panel",
-			"awaiting",
-			"id=\"panel-",
-			"aria-controls="
+			"130px"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -898,6 +909,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"images/_common/",
+			"xfzq-layout-ie8.min",
+			"xfzq-layout.min",
 			"opacity=",
 			"help-desk-index.html",
 			"icons-in-elements",
@@ -914,53 +928,70 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app-dev/scripts/base/base.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8298,
+						"buffer_size": 414,
 						"regions":
 						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										312,
+										328
+									]
+								],
+								"scope": ""
+							}
 						},
 						"selection":
 						[
 							[
-								631,
-								631
+								323,
+								323
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ 	].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app-dev/html/xfzq-bill-records-details.html",
+					"file": "app-dev/html-snippets/module-xfzq-user-info-bar.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12411,
+						"buffer_size": 7654,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1625,
-								1625
+								3700,
+								3700
 							]
 						],
 						"settings":
@@ -970,7 +1001,36 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 678.0,
+						"translation.y": 1354.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app-dev/styles/base/base-ie8.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 30449,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 300.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1028,28 +1088,60 @@
 		"selected_items":
 		[
 			[
-				"record",
+				"themba",
+				"app-dev\\styles\\base\\theme-base.css"
+			],
+			[
+				"lay",
+				"app-dev\\styles\\base\\layout.css"
+			],
+			[
+				"foot",
+				"app-dev\\html-snippets\\module-app-footer.html"
+			],
+			[
+				"detail",
 				"app-dev\\html\\xfzq-bill-records-details.html"
 			],
 			[
-				"base",
-				"app-dev\\scripts\\base\\base.js"
+				"past",
+				"app-dev\\html\\xfzq-bills-past.html"
 			],
 			[
-				"billre",
-				"app-dev\\html\\xfzq-bills-recent.html"
+				"billj",
+				"app-dev\\scripts\\pages\\xfzq-page-bills-list.js"
 			],
 			[
-				"fon",
+				"font",
 				"app-dev\\styles\\base\\fonts.css"
+			],
+			[
+				"billjs",
+				"app-dev\\scripts\\pages\\xfzq-page-bills-list.js"
+			],
+			[
+				"them",
+				"app-dev\\styles\\base\\theme-base.css"
 			],
 			[
 				"xfzq",
 				"app-dev\\styles\\pages\\xfzq-base.css"
 			],
 			[
-				"them",
-				"app-dev\\styles\\base\\theme-base.css"
+				"base",
+				"app-dev\\styles\\base\\base.css"
+			],
+			[
+				"billre",
+				"app-dev\\html\\xfzq-bills-recent.html"
+			],
+			[
+				"record",
+				"app-dev\\html\\xfzq-bill-records-details.html"
+			],
+			[
+				"fon",
+				"app-dev\\styles\\base\\fonts.css"
 			],
 			[
 				"header",
@@ -1074,10 +1166,6 @@
 			[
 				"bas",
 				"app-dev\\scripts\\base\\base.js"
-			],
-			[
-				"font",
-				"app-dev\\styles\\base\\fonts.css"
 			],
 			[
 				"xbill",
@@ -1174,10 +1262,6 @@
 			[
 				"xfz",
 				"app-dev\\styles\\pages\\xfzq-base-ie8.css"
-			],
-			[
-				"lay",
-				"app-dev\\styles\\base\\layout.css"
 			],
 			[
 				"xf",
@@ -1400,10 +1484,6 @@
 				"app-dev\\html\\user-avatar.html"
 			],
 			[
-				"themba",
-				"app-dev\\styles\\base\\theme-base.css"
-			],
-			[
 				"reset",
 				"app-dev\\styles\\base\\reset.css"
 			],
@@ -1518,26 +1598,6 @@
 			[
 				"pack",
 				"package.json"
-			],
-			[
-				"pa",
-				"package.json"
-			],
-			[
-				"basie",
-				"app-dev\\styles\\base\\base.ie8.css"
-			],
-			[
-				"icon",
-				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
-			],
-			[
-				"incon",
-				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
-			],
-			[
-				"iconf",
-				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
 			]
 		],
 		"width": 0.0
