@@ -438,6 +438,32 @@ dd {
 			}
 
 
+.empty-content-hint {
+	box-sizing: border-box;
+	display: none;
+	display: block;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 240px;
+	height: 160px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 40%;
+	margin: -80px auto 0 auto;
+	text-align: center;
+	/* font-size: 16px; */
+	line-height: 1.5;
+	}
+	.empty-content-hint:after {
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 100%;
+	}
+
+
 [class|="ie"] {
 	display: none;
 	}
@@ -460,11 +486,6 @@ dd {
 	}
 
 
-.content {
-	background-color: transparent;
-	}
-
-
 .digits {
 	text-align: right;
 	}
@@ -472,6 +493,11 @@ dd {
 
 label, .label {
 	cursor: pointer;
+	}
+
+
+.content {
+	background-color: transparent;
 	}
 
 
@@ -1355,6 +1381,55 @@ label.deco-input {
 	.buttons-in-single-line *:first-child {
 		margin-left: 0;
 	}
+
+
+.tabular-lists-block {
+	}
+
+	.tabular-lists-block .lists {
+		position: relative;
+		z-index: 1; /* covering empty-content-hint in case the hint is not hidden correctly */
+	}
+	.tabular-lists-block > .block-title,
+	.tabular > .title,
+	.tabular > .f-list > li {
+		border-style: solid;
+		border-width: 1px 0;
+		margin-bottom: -1px;
+	}
+	.tabular-lists-block > .block-title {
+		position: relative;
+		z-index: 2;
+	}
+	.tabular > .title {
+		position: relative;
+		z-index: 1;
+	}
+	.tabular > .f-list {
+		}
+		.tabular > .f-list > li {
+			position: relative;
+			z-index: 0;
+		}
+		.tabular > .f-list > li > * {
+			display: inline-block;
+			vertical-align: top;
+			padding: 8px 12px;
+			margin: -8px -12px;
+		}
+		.tabular > .f-list > li .caption-cell {
+		}
+		.tabular > .f-list > li .last-cell {
+			display: block;
+			position: absolute;
+			right: 20px;
+			top: 0;
+			bottom: 0;
+			height: 17px;
+			margin-top: auto;
+			margin-bottom: auto;
+			text-align: right;
+		}
 
 
 dl.initially-collapsed {
