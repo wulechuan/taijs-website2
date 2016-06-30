@@ -441,7 +441,6 @@ dd {
 .empty-content-hint {
 	box-sizing: border-box;
 	display: none;
-	display: block;
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 240px;
@@ -1395,7 +1394,6 @@ label.deco-input {
 	position: relative; /* for empty-content-hint positioning */
 	min-height: 400px; /* make some room for empty-content-hint */
 	}
-
 	.lists-block .lists {
 		position: relative;
 		z-index: 1; /* covering empty-content-hint in case the hint is not hidden correctly */
