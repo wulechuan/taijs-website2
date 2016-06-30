@@ -324,3 +324,19 @@
 		return;
     }
 })();
+
+
+(function fakeLogics() {
+	var $listsBlocks = $('.lists-block');
+	$listsBlocks.each(function () {
+		var $listsBlock = $(this);
+
+		var $lists = $listsBlock.find('.lists').show();
+		var $empty = $listsBlock.find('.empty-content-hint').hide();
+
+		$listsBlock.on('click', function () {
+			$lists.toggle();
+			$empty.toggle();
+		});
+	});
+})();

@@ -1,23 +1,26 @@
 /* ----- layout definition begin --------------- */
-	.bill-lists-block .empty-content-hint,
-	.bill-record-lists-block .empty-content-hint,
 	.empty-content-hint {
 		background-image: url(../../images/pages/xfzq/_common/empty-content-hint-money-bag-in-hand.png);
 		}
-		.bill-lists-block .empty-content-hint:after,
-		.bill-record-lists-block .empty-content-hint:after,
 		.empty-content-hint:after {
 			content: '犇宝宝心里空荡荡的';
 		}
 
-	.order-lists-block .empty-content-hint,
-	.empty-content-hint {
-		background-image: url(../../images/pages/xfzq/_common/empty-content-hint-floating-balloon.png);
-		}
-		.order-lists-block .empty-content-hint:after,
-		.empty-content-hint:after {
-			content: '亲，暂时没有订单哦';
-		}
+		.bills        .empty-content-hint,
+		.bill-records .empty-content-hint {
+			background-image: url(../../images/pages/xfzq/_common/empty-content-hint-money-bag-in-hand.png);
+			}
+			.bills        .empty-content-hint:after,
+			.bill-records .empty-content-hint:after {
+				content: '犇宝宝心里空荡荡的';
+			}
+
+		.orders-info .empty-content-hint {
+			background-image: url(../../images/pages/xfzq/_common/empty-content-hint-floating-balloon.png);
+			}
+			.orders-info .empty-content-hint:after {
+				content: '亲，暂时没有订单哦';
+			}
 
 
 	.tab-list {
@@ -73,18 +76,25 @@
 		}
 
 
-	.tabular-lists-block {
-		position: relative; /* for empty-content-hint positioning */
-		min-height: 400px;
+	.lists-block {
 		margin: 20px 0;
 		}
-		.tabular-lists-block > .block-title,
+
+		.lists-block.cards {
+			margin: 43px 0;
+		}
+
+
+	.tabular-lists {
+		}
+
+		.tabular-lists > .block-title,
 		.tabular > .title,
 		.tabular > .f-list > li {
 			padding-left: 20px;
 			padding-right: 20px;
 		}
-		.tabular-lists-block > .block-title {
+		.tabular-lists > .block-title {
 			padding-top: 11px;
 			padding-bottom: 11px;
 
@@ -99,39 +109,156 @@
 			line-height: 17px;
 			min-height: 17px;
 		}
-
 		.tabular > .title {
 			font-weight: bold;
+			letter-spacing: 0.125em;
 		}
 
-		.tabular > .f-list {
+		.tabular-lists.bills .tabular > .f-list > li .caption-cell,
+		.tabular-lists.bill-records .tabular > .f-list > li .caption-cell {
+			width: 360px;
+			margin-right: 4px;
+		}
+
+		.tabular-lists.bills .tabular > .f-list > li .bill-total-amount {
+			width: 128px;
+		}
+
+		.tabular-lists.bill-records .tabular > .f-list > li .record-timestamp {
+			width: 128px;
+		}
+
+
+	.card {
+		}
+		.card .card-head,
+		.card .card-body {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		.card .card-head {
+			padding-top: 13px;
+			padding-bottom: 12px;
+
+			line-height: 17px;
+			min-height: 17px;
+		}
+
+		.card .card-body {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
+
+	.card.order-info {
+		}
+
+		.card.order-info .card-body {
+			box-sizing: border-box;
+			height: 96px;
+		}
+
+		.card.order-info .cell {
+			position: absolute;
+		}
+
+		.card.order-info .cell.avatar {
+			left: 20px;
+			top: 15px;
+			bottom: 15px;
+			width: 64px;
+			border-width: 1px;
+			}
+			.card.order-info .cell.avatar .value {
+				display: block;
+				width: 100%;
+				height: 100%;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 100%;
+				background-size: cover;
 			}
 
-/* 			.tabular > .f-list > li .caption-cell {
-				width: 360px;
-				margin-right: 4px;
-			} */
+		.card.order-info .cell.timestamp,
+		.card.order-info .cell.involved-brand {
+			left: 96px;
+			}
+			.card.order-info .cell.involved-brand {
+				top: 23px;
+				line-height: 21px;
+			}
+			.card.order-info .cell.timestamp {
+				top: 55px;
+				line-height: 21px;
+			}
 
-	.tabular-lists-block.bills .tabular > .f-list > li .caption-cell,
-	.tabular-lists-block.bill-records .tabular > .f-list > li .caption-cell {
-		width: 360px;
-		margin-right: 4px;
-	}
+		.card.order-info .cell.checkout,
+		.card.order-info .cell.price {
+			line-height: 21px;
+			bottom: 0;
+			top: 0;
+			width: 170px;
+			border-width: 1px;
+			margin: -1px;
+			text-align: center;
+			}
+			.card.order-info .cell.price .value {
+				display: block;
+			}
 
-	.tabular-lists-block.bills .tabular > .f-list > li .bill-total-amount {
-		width: 128px;
-	}
+		.open-orders .card.order-info .cell.remaining-time {
+			top: 0;
+			padding: 10px;
+			margin: 10px 0;
+			padding: 0;
+			line-height: 23px;
+			height: 23px;
+			}
+			.open-orders .card.order-info .cell.remaining-time:before {
+				font-family: 'iconfont'!important;
+				content: '\e61c';
+				font-size: 18.8px;
+				margin-right: 0.5em;
+				vertical-align: middle;
+				display: inline-block;
+				margin-top: -3px;
+			}
+			.open-orders .card.order-info .cell.remaining-time:after {
+				content: '后失效';
+				margin-left: 0.25em;
+			}
+		.open-orders .card.order-info .cell.checkout {
+			right: 0;
+			}
+		.open-orders .card.order-info .cell.price {
+			right: 171px;
+			}
+			.open-orders .card.order-info .cell.price p:before {
+				content: '应付';
+			}
 
-	.tabular-lists-block.bill-records .tabular > .f-list > li .record-timestamp {
-		width: 128px;
-	}
+		.closed-orders .card.order-info .cell.price {
+			right: 0;
+			}
+			.closed-orders .card.order-info .cell.price p:before {
+				content: '已付';
+			}
+
+		.invalid-orders .card.order-info .cell.price {
+			right: 0;
+			}
+			.invalid-orders .card.order-info .cell.price p:before {
+				content: '应付';
+			}
 
 
 
 	.page {
 		margin: 0;
 		padding: 10px 0 20px 0;
-	}
+		}
+
 
 	.page-chief-part.cast-shadow {
 		position: relative;
@@ -573,6 +700,22 @@
 	.bill-time-exceeded {
 		background-color: white;
 	}
+
+
+	.card.order-info {
+		}
+		/* .card.order-info .cell.involved-brand {
+			color: #333;
+		} */
+		.card.order-info .cell.timestamp {
+			color: #666;
+		}
+		.card.order-info .cell.price {
+			color: #666;
+		}
+		.card.order-info .cell.price .value {
+			color: #333;
+		}
 
 
 	#user-info-bar {

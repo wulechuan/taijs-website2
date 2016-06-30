@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1467170739'); /* IE9*/
-  src: url('iconfont.eot?t=1467170739#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1467170739') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1467170739') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1467170739#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1467283932'); /* IE9*/
+  src: url('iconfont.eot?t=1467283932#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1467283932') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1467283932') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1467283932#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -69,7 +69,6 @@
 .icon-smart-phone-iphone-4:before { content: "\e618"; }
 .icon-alarm-clock:before { content: "\e619"; }
 .icon-alarm-clock-circled:before { content: "\e61a"; }
-.icon-stopwatch:before { content: "\e61c"; }
 .icon-info-tip-circled1:before { content: "\e61d"; }
 .icon-question-mark-circled:before { content: "\e61b"; }
 .icon-clipboard-with-dollar-sign:before { content: "\e61f"; }
@@ -102,3 +101,4 @@
 .icon-book-thick:before { content: "\e62d"; }
 .icon-rectange-with-trianle-rightside:before { content: "\e62e"; }
 .icon-circle-filled:before { content: "\e62f"; }
+.icon-stopwatch:before { content: "\e61c"; }
