@@ -1,9 +1,4 @@
 (function () {
-	$('#button-close-selected-installments').on('click', function(event) {
-		if (event) event.preventDefault();
-		location.assign('../html/xfzq-close-installments-step-1-choose-bank-card.html');
-	});
-
 	$('#button-submit-closing-installments').on('click', function(event) {
 		if (event) event.preventDefault();
 		$('.popup-layers-back-plate').show();
