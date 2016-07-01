@@ -1503,6 +1503,7 @@ label.deco-input {
 	}
 
 	.tabular > .f-list {
+		animation: tabular-list-reveal-items 0.35s ease-out;
 		}
 		.tabular > .header {
 			position: relative;
@@ -1520,6 +1521,11 @@ label.deco-input {
 		}
 		.tabular > .f-list > li.selected {
 			animation: tabular-list-item-selected 0.5s ease-out;
+		}
+		@keyframes tabular-list-reveal-items {
+			0%   { opacity: 0; }
+			50%  { opacity: 0; }
+			100% { opacity: 1; }
 		}
 		@keyframes tabular-list-item-deselected {
 			0%   { transform: scale(1); }
