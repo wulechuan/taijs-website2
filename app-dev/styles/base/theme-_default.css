@@ -102,7 +102,25 @@ a, a:link, a:visited {
 
 
 input {
+	border-color: #dcdcdc;
 	background-color: white;
+	}
+
+	select:hover,
+	option:hover,
+	input:hover,
+	label:hover {
+		border-color: #157dff;
+	}
+
+	select:active,
+	select:focus,
+	input:active,
+	input:focus,
+	label:active,
+	label:focus {
+		border-color: #157dff;
+		outline-color: #157dff;
 	}
 
 	input[type="button"],
@@ -207,16 +225,6 @@ input {
 		.pagination button.current:hover {
 			background-color: #3f93ff;
 		}
-
-	select:active,
-	select:focus,
-	input:active,
-	input:focus,
-	label:active,
-	label:focus {
-		border-color: #157dff;
-		outline-color: #157dff;
-	}
 
 	a[role="button"]:active,
 	a[role="button"]:focus,
@@ -447,13 +455,11 @@ label.deco-input {
 		background-color: white;
 	}
 
-
-.form {
+	.drop-down-list:hover,
+	.drop-down-list.options-list-shown {
+		border-color: #157dff;
 	}
 
-	.form input {
-		border-color: #dcdcdc;
-	}
 
 
 .lists-block {

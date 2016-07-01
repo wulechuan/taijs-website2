@@ -1438,11 +1438,12 @@ label.deco-input {
 		left: -1px;
 		top: 100%;
 		width: 100%;
-		margin: 0;
+		margin: 1px 0 0 0;
 		padding: 0;
 		z-index: 50;
 		border-style: inherit;
 		border-width: inherit;
+		border-top-width: 0; 
 	}
 	.drop-down-list.hover-to-show-options:hover .drop-down-list-options-list,
 	.drop-down-list.options-list-shown .drop-down-list-options-list {
