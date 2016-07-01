@@ -498,6 +498,15 @@ dd {
 		content: '¥';
 		margin-right: 0.15em;
 	}
+	.tabular .header .currency.currency-rmb {
+		margin-left: 9px; /* for Chinese parenthese */
+		}
+		.tabular .header .currency.currency-rmb.last-cell {
+			margin-right: -9px; /* for Chinese parenthese */
+		}
+		.header .currency.currency-rmb:before {
+			content: none;
+		}
 
 
 label, .label {
