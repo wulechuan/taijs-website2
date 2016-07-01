@@ -336,15 +336,25 @@
 		var listItem = this;
 		var $listItem = $(this);
 
-		var $checkbox = $listItem.find('input[type="checkbox"]');
-		$checkbox.on('click', function(event) {
-			if (event) event.stopPropagation();
+		function _updateListItemAccordingToCheckboxStatus(checkbox) {
+			if (!checkbox) return false;
 
-			if (this.checked) {
+			if (checkbox.checked) {
 				$listItem.addClass('selected');
 			} else {
 				$listItem.removeClass('selected');
 			}
+		}
+
+		var $checkbox = $listItem.find('input[type="checkbox"]');
+		setTimeout(function () { /* must dealy because ie8 to ie11 updates cached "checked" statuses very late */
+			_updateListItemAccordingToCheckboxStatus($checkbox[0]);
+		}, 100);
+
+		$checkbox.on('change', function(event) {
+			if (event) event.stopPropagation();
+
+			_updateListItemAccordingToCheckboxStatus(this);
 
 			if (isIE8 || isIE9) {
 				function _zoomToFactor(factor) {
@@ -400,7 +410,7 @@
 				}
 
 				var currentAniStage = 0;
-				var minFactor = 0.95;
+				var minFactor = 0.984;
 				var frameGapMS, tempStageCounter;
 
 				var originalVertMargin, oldHeight, oldWidth;
