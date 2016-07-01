@@ -1535,6 +1535,8 @@ label.deco-input {
 			text-align: right;
 		}
 		.tabular > .f-list > li a {
+			padding: 10px;
+			margin: -10px;
 			border-radius: 4px;
 		}
 		.tabular > .header      input,
