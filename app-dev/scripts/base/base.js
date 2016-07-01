@@ -342,11 +342,6 @@
 			}
 
 			if (isIE8 || isIE9) {
-				var originalVertMargin = -1; // set by css file
-
-				var oldHeight = $listItem.outerHeight();
-				var oldWidth  = $listItem.outerWidth();
-
 				function _zoomToFactor(factor) {
 					if (factor===1) {
 						if (isIE8) {
@@ -361,10 +356,15 @@
 					}
 
 					if (isIE8) {
-						var tempMarginHori = oldWidth  * (1-factor) / 2;
-						var tempMarginVert = oldHeight * (1-factor) / 2 + originalVertMargin;
+						var tempMarginHori = oldWidth  * (1 - factor) / 2;
+						var tempMarginVert = oldHeight * (1 - factor) / 2 + originalVertMargin;
 
-						listItem.style.zoom = factor;
+						if (factor) {
+							listItem.style.zoom = factor;
+						} else {
+							console.error('Invalid zooming factor: ', factor);
+							return false;
+						}
 						listItem.style.margin = tempMarginVert+'px' + ' ' + tempMarginHori+'px';
 					}
 
@@ -372,54 +372,50 @@
 						listItem.style.msTransform = 'scale('+factor+')';
 					}
 				}
-				function _doZoomDelay(targetStage, zoomFactor) {
+				function _doZoomDelay(targetStage) {
+					var zoomFactor = 1;
+					if (targetStage !== tempStageCounter-1) {
+						var lastSegRatioBetweenPiAndTwoPi = 0.75;
+						var ratio = Math.cos(targetStage/(tempStageCounter-1) * Math.PI * lastSegRatioBetweenPiAndTwoPi + Math.PI * (2 - lastSegRatioBetweenPiAndTwoPi)) * 0.5 + 0.5;
+						ratio = Math.sqrt(ratio);
+						zoomFactor = minFactor + (1 - minFactor) * ratio;
+					}
+
 					if (targetStage === 0) {
 						_zoomToFactor(zoomFactor);
 					} else {
+						var delayMS = frameGapMS*targetStage;
 						setTimeout(function () {
-							// console.log(currentAniStage, ':', targetStage, '  play', currentAniStage < targetStage, '  f: ', zoomFactor);
 							if (currentAniStage < targetStage) {
 								currentAniStage = targetStage;
 								_zoomToFactor(zoomFactor);
 							}
-						}, frameGapMS*tempStageCounter);
+						}, delayMS);
 					}
 				}
 
 				var currentAniStage = 0;
+				var minFactor = 0.95;
 				var frameGapMS, tempStageCounter;
+
+				var originalVertMargin, oldHeight, oldWidth;
 				if (isIE8) {
-					frameGapMS = 30;
-					tempStageCounter = 0;
-					_doZoomDelay(tempStageCounter++, 0.996);
-					_doZoomDelay(tempStageCounter++, 0.992);
-					_doZoomDelay(tempStageCounter++, 0.994);
-					_doZoomDelay(tempStageCounter++, 0.998);
-					_doZoomDelay(tempStageCounter++, 1);
+					originalVertMargin = -1; // set by css file
+					oldHeight = $listItem.outerHeight();
+					oldWidth  = $listItem.outerWidth();
+				}
+
+				if (isIE8) {
+					frameGapMS = 14;
+					tempStageCounter = 18;
 				}
 				if (isIE9) {
-					frameGapMS = 13;
-					tempStageCounter = 0;
-					_doZoomDelay(tempStageCounter++, 0.9886);
-					_doZoomDelay(tempStageCounter++, 0.9874);
-					_doZoomDelay(tempStageCounter++, 0.9868);
-					_doZoomDelay(tempStageCounter++, 0.9870);
-					_doZoomDelay(tempStageCounter++, 0.9872);
-					_doZoomDelay(tempStageCounter++, 0.9876);
-					_doZoomDelay(tempStageCounter++, 0.9882);
-					_doZoomDelay(tempStageCounter++, 0.9888);
-					_doZoomDelay(tempStageCounter++, 0.9894);
-					_doZoomDelay(tempStageCounter++, 0.9900);
-					_doZoomDelay(tempStageCounter++, 0.9908);
-					_doZoomDelay(tempStageCounter++, 0.9916);
-					_doZoomDelay(tempStageCounter++, 0.9926);
-					_doZoomDelay(tempStageCounter++, 0.9936);
-					_doZoomDelay(tempStageCounter++, 0.9948);
-					_doZoomDelay(tempStageCounter++, 0.9960);
-					_doZoomDelay(tempStageCounter++, 0.9975);
-					_doZoomDelay(tempStageCounter++, 0.9990);
-					// _doZoomDelay(tempStageCounter++, 0.999);
-					_doZoomDelay(tempStageCounter++, 1);
+					frameGapMS = 11;
+					tempStageCounter = 27;
+				}
+
+				for (var i = 0; i < tempStageCounter; i++) {
+					_doZoomDelay(i);
 				}
 			}
 		});

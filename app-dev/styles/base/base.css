@@ -1513,6 +1513,7 @@ label.deco-input {
 			z-index: 3;
 		}
 		.tabular > .f-list > li {
+			-ms-backface-visibility: visible;
 			position: relative;
 			animation: tabular-list-item-deselected 0.5s ease-out;
 			z-index: 0;
