@@ -11,6 +11,13 @@
 	background-color: inherit;
 }
 
+
+.selected .currency.currency-rmb:before {
+	content: '¥ '; /* force ie8 to redraw :before pseudo element; */
+	margin-right: -0.35em; /* compensate the extra space */
+}
+
+
 .font-important,
 .ie-8-text-anti-alias,
 .icon.icons-in-elements .iconfont { /* anti-aliasing */
