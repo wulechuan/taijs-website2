@@ -264,6 +264,11 @@
         var psn1; // page sidebar nav Level 1 current
         var psn2; // page sidebar nav Level 2 current
 
+        if (typeof window.psn === 'object') {
+        	if (window.psn.level1) psn1 = window.psn.level1;
+        	if (window.psn.level2) psn2 = window.psn.level2;
+        }
+
         for (var i in qKVPairs){
             var kvpString = qKVPairs[i];
             var kvp = kvpString.split('=');

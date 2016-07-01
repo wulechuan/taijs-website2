@@ -1,12 +1,12 @@
 (function () {
 	$('#button-close-selected-installments').on('click', function(event) {
 		if (event) event.preventDefault();
-		location.assign('../html/xfzq-close-installments-step-1-choose-bank-card.html?psn1=taiyx&psn2=close-installments');
+		location.assign('../html/xfzq-close-installments-step-1-choose-bank-card.html');
 	});
 
 	$('#button-submit-chosen-bank-card').on('click', function(event) {
 		if (event) event.preventDefault();
-		location.assign('../html/xfzq-close-installments-step-2-proceed.html?psn1=taiyx&psn2=close-installments');
+		location.assign('../html/xfzq-close-installments-step-2-proceed.html');
 	});
 
 	$('#button-submit-closing-installments').on('click', function(event) {
