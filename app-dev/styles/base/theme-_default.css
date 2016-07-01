@@ -413,6 +413,14 @@ label.deco-input {
 		color: white;
 		background-color: #157dff;
 	}
+	.menu.layout-vert > .menu-item > a > .label:hover em,
+	.menu.layout-vert > .menu-item > .label:hover em,
+	.menu.layout-vert > .menu-item.sub-menu-shown > a > .label em,
+	.menu.layout-vert > .menu-item.sub-menu-shown > .label em,
+	.menu.layout-vert > .menu-item.current-cate > a > .label em,
+	.menu.layout-vert > .menu-item.current-cate > .label em {
+		color: white;
+	}
 
 
 .breadcrumbs {
@@ -428,6 +436,23 @@ label.deco-input {
 
 	.breadcrumbs > ul > li a:hover {
 		background-color: #e9e9e9;
+	}
+
+
+.drop-down-list {
+	}
+	.drop-down-list,
+	.drop-down-list .drop-down-list-options-list {
+		border-color: #dcdcdc;
+		background-color: white;
+	}
+
+
+.form {
+	}
+
+	.form input {
+		border-color: #dcdcdc;
 	}
 
 
