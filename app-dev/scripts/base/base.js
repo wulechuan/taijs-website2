@@ -342,7 +342,6 @@
 			}
 
 			if (isIE8 || isIE9) {
-				var zoomOutFactor = 0.998;
 				var originalVertMargin = -1; // set by css file
 
 				var oldHeight = $listItem.outerHeight();
@@ -356,7 +355,7 @@
 							return true;
 						}
 						if (isIE9) {
-							listItem.style.transform = '';
+							listItem.style.msTransform = '';
 							return true;
 						}
 					}
@@ -370,7 +369,7 @@
 					}
 
 					if (isIE9) {
-						listItem.style.transform = 'scale('+factor+')';
+						listItem.style.msTransform = 'scale('+factor+')';
 					}
 				}
 				function _doZoomDelay(targetStage, zoomFactor) {
@@ -378,22 +377,50 @@
 						_zoomToFactor(zoomFactor);
 					} else {
 						setTimeout(function () {
-							if (aniStage < targetStage) {
-								aniStage = targetStage;
+							// console.log(currentAniStage, ':', targetStage, '  play', currentAniStage < targetStage, '  f: ', zoomFactor);
+							if (currentAniStage < targetStage) {
+								currentAniStage = targetStage;
 								_zoomToFactor(zoomFactor);
 							}
 						}, frameGapMS*tempStageCounter);
 					}
 				}
 
-				var aniStage = 0;
-				var frameGapMS = 40;
-				var tempStageCounter = 0;
-				_doZoomDelay(tempStageCounter++, 0.996);
-				_doZoomDelay(tempStageCounter++, 0.992);
-				_doZoomDelay(tempStageCounter++, 0.994);
-				_doZoomDelay(tempStageCounter++, 0.998);
-				_doZoomDelay(tempStageCounter++, 1);
+				var currentAniStage = 0;
+				var frameGapMS, tempStageCounter;
+				if (isIE8) {
+					frameGapMS = 30;
+					tempStageCounter = 0;
+					_doZoomDelay(tempStageCounter++, 0.996);
+					_doZoomDelay(tempStageCounter++, 0.992);
+					_doZoomDelay(tempStageCounter++, 0.994);
+					_doZoomDelay(tempStageCounter++, 0.998);
+					_doZoomDelay(tempStageCounter++, 1);
+				}
+				if (isIE9) {
+					frameGapMS = 13;
+					tempStageCounter = 0;
+					_doZoomDelay(tempStageCounter++, 0.9886);
+					_doZoomDelay(tempStageCounter++, 0.9874);
+					_doZoomDelay(tempStageCounter++, 0.9868);
+					_doZoomDelay(tempStageCounter++, 0.9870);
+					_doZoomDelay(tempStageCounter++, 0.9872);
+					_doZoomDelay(tempStageCounter++, 0.9876);
+					_doZoomDelay(tempStageCounter++, 0.9882);
+					_doZoomDelay(tempStageCounter++, 0.9888);
+					_doZoomDelay(tempStageCounter++, 0.9894);
+					_doZoomDelay(tempStageCounter++, 0.9900);
+					_doZoomDelay(tempStageCounter++, 0.9908);
+					_doZoomDelay(tempStageCounter++, 0.9916);
+					_doZoomDelay(tempStageCounter++, 0.9926);
+					_doZoomDelay(tempStageCounter++, 0.9936);
+					_doZoomDelay(tempStageCounter++, 0.9948);
+					_doZoomDelay(tempStageCounter++, 0.9960);
+					_doZoomDelay(tempStageCounter++, 0.9975);
+					_doZoomDelay(tempStageCounter++, 0.9990);
+					// _doZoomDelay(tempStageCounter++, 0.999);
+					_doZoomDelay(tempStageCounter++, 1);
+				}
 			}
 		});
 	});
