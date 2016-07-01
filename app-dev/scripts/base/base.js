@@ -335,7 +335,13 @@
 		$checkbox.on('click', function(event) {
 			if (event) event.stopPropagation();
 
-			if (isIE8) {
+			if (this.checked) {
+				$listItem.addClass('selected');
+			} else {
+				$listItem.removeClass('selected');
+			}
+
+			if (isIE8 || isIE9) {
 				var zoomOutFactor = 0.998;
 				var originalVertMargin = -1; // set by css file
 
@@ -344,15 +350,28 @@
 
 				function _zoomToFactor(factor) {
 					if (factor===1) {
-						listItem.style.zoom = '';
-						listItem.style.margin = '';
-						return true;
+						if (isIE8) {
+							listItem.style.zoom = '';
+							listItem.style.margin = '';
+							return true;
+						}
+						if (isIE9) {
+							listItem.style.transform = '';
+							return true;
+						}
 					}
-					var tempMarginHori = oldWidth  * (1-factor) / 2;
-					var tempMarginVert = oldHeight * (1-factor) / 2 + originalVertMargin;
 
-					listItem.style.zoom = factor;
-					listItem.style.margin = tempMarginVert+'px' + ' ' + tempMarginHori+'px';
+					if (isIE8) {
+						var tempMarginHori = oldWidth  * (1-factor) / 2;
+						var tempMarginVert = oldHeight * (1-factor) / 2 + originalVertMargin;
+
+						listItem.style.zoom = factor;
+						listItem.style.margin = tempMarginVert+'px' + ' ' + tempMarginHori+'px';
+					}
+
+					if (isIE9) {
+						listItem.style.transform = 'scale('+factor+')';
+					}
 				}
 				function _doZoomDelay(targetStage, zoomFactor) {
 					if (targetStage === 0) {
@@ -375,12 +394,6 @@
 				_doZoomDelay(tempStageCounter++, 0.994);
 				_doZoomDelay(tempStageCounter++, 0.998);
 				_doZoomDelay(tempStageCounter++, 1);
-			}
-
-			if (this.checked) {
-				$listItem.addClass('selected');
-			} else {
-				$listItem.removeClass('selected');
 			}
 		});
 	});

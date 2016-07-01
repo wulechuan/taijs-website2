@@ -1514,8 +1514,24 @@ label.deco-input {
 		}
 		.tabular > .f-list > li {
 			position: relative;
+			animation: tabular-list-item-deselected 0.5s ease-out;
 			z-index: 0;
 		}
+		.tabular > .f-list > li.selected {
+			animation: tabular-list-item-selected 0.5s ease-out;
+		}
+		@keyframes tabular-list-item-deselected {
+			0%   { transform: scale(1); }
+			20%  { transform: scale(0.987); }
+			100% { transform: scale(1); }
+		}
+		@keyframes tabular-list-item-selected {
+			0%   { transform: scale(1); }
+			20%  { transform: scale(0.987); }
+			100% { transform: scale(1); }
+		}
+
+
 		.tabular > .header      > *,
 		.tabular > .footer      > *,
 		.tabular > .f-list > li > * {
@@ -1523,6 +1539,9 @@ label.deco-input {
 			vertical-align: top;
 			padding: 8px 12px;
 			margin: -8px -12px;
+		}
+		.tabular > .f-list > li * {
+			transition-duration: 0.1s;
 		}
 		.tabular > .f-list > li .caption-cell {
 		}
@@ -1973,4 +1992,3 @@ ol.f-list, ul.f-list { /* function list */
 	.panel.current {
 		display: block;
 	}
-
