@@ -494,8 +494,9 @@ dd {
 	text-align: right;
 	}
 	.currency.currency-rmb:before {
+		transition: none; /* for webkit */
 		content: '¥';
-		margin-right: 0.125em;
+		margin-right: 0.15em;
 	}
 
 
@@ -882,23 +883,33 @@ label.deco-input {
 
 	input[type="radio"],
 	input[type="checkbox"] {
+		position: relative;
 		display: inline-block;
-		visibility: hidden;
-		opacity: 0;
 
-		width: 0em!important;
-		height: 0em!important;
-		margin: 0.1em!important;
+		z-index: 5;
+		opacity: 0;
+		background-color: transparent!important;
+
+		font-size: 1.6em;
+
+		line-height: 1;
+		padding: 0!important; /* for ie8 */
+		width: 1.2em!important;
+		height: 1.2em!important;
+		margin: -0.1em -0.1em!important;
+
+		border-style: none;
 	}
 
 	input[type="radio"]    + label.deco-input[for],
 	input[type="checkbox"] + label.deco-input[for] {
-		width: 1.25em;
-		height: 1.25em;
+		z-index: 1;
+		width: 1.4em;
+		height: 1.4em;
 		padding: 0;
-		margin-left: -1.25em;
+		margin-left: -1.5em;
+		margin-top: 0.1em;
 		overflow: hidden;
-		background-color: white; /* for hiding real input element */
 	}
 	input[type="checkbox"] + label.deco-input[for]:before {
 		content: '';
@@ -918,6 +929,7 @@ label.deco-input {
 		content: '\e622';
 		box-sizing: border-box;
 		display: block;
+		visibility: hidden;
 		position: absolute;
 		font-size: 2em;
 		text-indent: 0;
@@ -932,10 +944,11 @@ label.deco-input {
 		height: 150%;
 		border-width: 0;
 		border-style: none;
-		visibility: hidden;
 	}
-	input[type="radio"]:checked    + label.deco-input[for]:after,
-	input[type="checkbox"]:checked + label.deco-input[for]:after {
+	input[type="radio"][checked]    + label.deco-input[for]:after,
+	input[type="radio"]:checked     + label.deco-input[for]:after,
+	input[type="checkbox"][checked] + label.deco-input[for]:after,
+	input[type="checkbox"]:checked  + label.deco-input[for]:after {
 		visibility: visible;
 	}
 

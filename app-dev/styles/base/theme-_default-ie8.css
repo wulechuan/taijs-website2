@@ -92,7 +92,9 @@ label.deco-input .ie-borders {
     label.deco-input input:focus  ~ .ie-borders {
         color: #157fdd;
     }
-
+    .selected input[type="checkbox"] + label.deco-input[for]:before {
+        border-color: #c4deff;
+    }
 
 .has-border-triangle > .ie-border-triangle-shadow-matte,
 .ie-shadow-matte {

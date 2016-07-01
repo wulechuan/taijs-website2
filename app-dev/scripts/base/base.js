@@ -323,6 +323,59 @@
 
 		return;
     }
+
+
+	var $allListItems = $('.tabular .f-list > li');
+
+	$allListItems.each(function () {
+		var listItem = this;
+		var $listItem = $(this);
+
+		var shouldForceUpdatingThisListItem = false;
+
+		var $checkbox = $listItem.find('input[type="checkbox"]');
+		$checkbox.on('click', function(event) {
+			if (event) event.stopPropagation();
+
+			if (isIE8) {
+				var oldHeight = $listItem.outerHeight();
+				var originalVertMargin = -1; // set by css file
+
+				if (shouldForceUpdatingThisListItem) {
+					var $elementsHaveBeforeAfterTexts = $listItem.find('.currency');
+					if ($elementsHaveBeforeAfterTexts.length) {
+						var nextLitsItem = $listItem.find('+ li')[0];
+						if (nextLitsItem) {
+							nextLitsItem.style.margin = (oldHeight+originalVertMargin)+'px ' + '0px ' + originalVertMargin+'px ' + '0px';
+						}
+						listItem.style.display = 'none';
+						setTimeout(function () {
+							listItem.style.display = '';
+							if (nextLitsItem) nextLitsItem.style.margin = '';
+						}, 0);
+					}
+				} else {
+					var oldWidth  = $listItem.outerWidth();
+					var zoomOutFactor = 0.996;
+					var tempMarginHori = oldWidth  * (1-zoomOutFactor) / 2;
+					var tempMarginVert = oldHeight * (1-zoomOutFactor) / 2 + originalVertMargin;
+					listItem.style.zoom = zoomOutFactor;
+					listItem.style.margin = tempMarginVert+'px' + ' ' + tempMarginHori+'px';
+
+					setTimeout(function () {
+						listItem.style.zoom = '';
+						listItem.style.margin = '';
+					}, 10);
+				}
+			}
+
+			if (this.checked) {
+				$listItem.addClass('selected');
+			} else {
+				$listItem.removeClass('selected');
+			}
+		});
+	});
 })();
 
 
