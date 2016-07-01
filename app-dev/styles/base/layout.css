@@ -67,6 +67,22 @@
 		border-color: inherit;
 	}
 
+.drop-down-list {
+	}
+
+	.drop-down-list .drop-down-list-options-list {
+		transition: none!important;
+		transform: scaleY(1) translate(0,0);
+		animation: menu-scales-up 0.22s;
+	    animation-timing-function: cubic-bezier(.19,1.08,.63,1.36);
+	}
+
+	.drop-down-list-option.choose-bank {
+		padding: 11px 20px;
+		min-height: 47px;
+		line-height: 25px;
+	}
+
 
 #app-header {
 	position: relative;
@@ -646,7 +662,7 @@
 
 		#my-assets .menu.level-1 > .menu-item:hover .menu.level-2 {
 			transform: scaleY(1) translate(0,0);
-			animation: menu-scales-up 0.2s ease-out;
+			animation: menu-scales-up-and-slides 0.2s ease-out;
 		}
 
 
@@ -657,6 +673,12 @@
 
 
 @keyframes menu-scales-up {
+	0%   { opacity: 0; transform: scaleY(0.2); }
+	50%  { opacity: 0.66; }
+	100% { opacity: 1; transform: scaleY(1); }
+}
+
+@keyframes menu-scales-up-and-slides {
 	0%   { transform: translate(0, -16px) scaleY(0.64); }
 	100% { transform: translate(0, 0) scaleY(1); }
 }

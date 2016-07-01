@@ -48,6 +48,10 @@ input, select, option, button, [role="button"] {
     display: inline-block;
     vertical-align: top;
 }
+input, select, option {
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
 button, input, select, label,
 button label:active, button label:focus, a[role="button"] label:active, a[role="button"] label:focus, {
     outline: none;

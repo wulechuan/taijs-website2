@@ -11,6 +11,13 @@
 	background-color: inherit;
 }
 
+
+.selected .currency.currency-rmb:before {
+	content: '¥ '; /* force ie8 to redraw :before pseudo element; */
+	margin-right: -0.35em; /* compensate the extra space */
+}
+
+
 .font-important,
 .ie-8-text-anti-alias,
 .icon.icons-in-elements .iconfont { /* anti-aliasing */
@@ -140,6 +147,23 @@ label.deco-input {
 		display: block;
 	}
 
+	input[type="radio"],
+	input[type="checkbox"] {
+		padding: 0!important;
+		margin: -2px 0 0 -2px!important;
+		width: 18px;
+		height: 18px;
+
+		position: absolute; /* for clipping */
+		clip: rect(2px, 17px, 17px, 2px);
+	}
+	input[type="radio"]    + label.deco-input[for],
+	input[type="checkbox"] + label.deco-input[for] {
+		width: 16px;
+		height: 16px;
+		margin-left: 0;
+		margin-top: 0;
+	}
 
 
 .cast-shadow {

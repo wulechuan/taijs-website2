@@ -264,6 +264,11 @@
         var psn1; // page sidebar nav Level 1 current
         var psn2; // page sidebar nav Level 2 current
 
+        if (typeof window.psn === 'object') {
+        	if (window.psn.level1) psn1 = window.psn.level1;
+        	if (window.psn.level2) psn2 = window.psn.level2;
+        }
+
         for (var i in qKVPairs){
             var kvpString = qKVPairs[i];
             var kvp = kvpString.split('=');
@@ -323,6 +328,113 @@
 
 		return;
     }
+
+
+	var $allListItems = $('.tabular .f-list > li');
+
+	$allListItems.each(function () {
+		var listItem = this;
+		var $listItem = $(this);
+
+		function _updateListItemAccordingToCheckboxStatus(checkbox) {
+			if (!checkbox) return false;
+
+			if (checkbox.checked) {
+				$listItem.addClass('selected');
+			} else {
+				$listItem.removeClass('selected');
+			}
+		}
+
+		var $checkbox = $listItem.find('input[type="checkbox"]');
+		setTimeout(function () { /* must dealy because ie8 to ie11 updates cached "checked" statuses very late */
+			_updateListItemAccordingToCheckboxStatus($checkbox[0]);
+		}, 100);
+
+		$checkbox.on('change', function(event) {
+			if (event) event.stopPropagation();
+
+			_updateListItemAccordingToCheckboxStatus(this);
+
+			if (isIE8 || isIE9) {
+				function _zoomToFactor(factor) {
+					if (factor===1) {
+						if (isIE8) {
+							listItem.style.zoom = '';
+							listItem.style.margin = '';
+							return true;
+						}
+						if (isIE9) {
+							listItem.style.msTransform = '';
+							return true;
+						}
+					}
+
+					if (isIE8) {
+						var tempMarginHori = oldWidth  * (1 - factor) / 2;
+						var tempMarginVert = oldHeight * (1 - factor) / 2 + originalVertMargin;
+
+						if (factor) {
+							listItem.style.zoom = factor;
+						} else {
+							console.error('Invalid zooming factor: ', factor);
+							return false;
+						}
+						listItem.style.margin = tempMarginVert+'px' + ' ' + tempMarginHori+'px';
+					}
+
+					if (isIE9) {
+						listItem.style.msTransform = 'scale('+factor+')';
+					}
+				}
+				function _doZoomDelay(targetStage) {
+					var zoomFactor = 1;
+					if (targetStage !== tempStageCounter-1) {
+						var lastSegRatioBetweenPiAndTwoPi = 0.75;
+						var ratio = Math.cos(targetStage/(tempStageCounter-1) * Math.PI * lastSegRatioBetweenPiAndTwoPi + Math.PI * (2 - lastSegRatioBetweenPiAndTwoPi)) * 0.5 + 0.5;
+						ratio = Math.sqrt(ratio);
+						zoomFactor = minFactor + (1 - minFactor) * ratio;
+					}
+
+					if (targetStage === 0) {
+						_zoomToFactor(zoomFactor);
+					} else {
+						var delayMS = frameGapMS*targetStage;
+						setTimeout(function () {
+							if (currentAniStage < targetStage) {
+								currentAniStage = targetStage;
+								_zoomToFactor(zoomFactor);
+							}
+						}, delayMS);
+					}
+				}
+
+				var currentAniStage = 0;
+				var minFactor = 0.984;
+				var frameGapMS, tempStageCounter;
+
+				var originalVertMargin, oldHeight, oldWidth;
+				if (isIE8) {
+					originalVertMargin = -1; // set by css file
+					oldHeight = $listItem.outerHeight();
+					oldWidth  = $listItem.outerWidth();
+				}
+
+				if (isIE8) {
+					frameGapMS = 14;
+					tempStageCounter = 18;
+				}
+				if (isIE9) {
+					frameGapMS = 11;
+					tempStageCounter = 27;
+				}
+
+				for (var i = 0; i < tempStageCounter; i++) {
+					_doZoomDelay(i);
+				}
+			}
+		});
+	});
 })();
 
 

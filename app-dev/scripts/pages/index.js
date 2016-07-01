@@ -12,4 +12,8 @@
 		$('.popup-layers-back-plate').hide();
 		$('#pl-taijs-app-promotion').hide();
 	});
+
+	$('#button-login-in-splash-block').on('click', function () {
+		$('html').addClass('user-has-logged-in');
+	});
 })();

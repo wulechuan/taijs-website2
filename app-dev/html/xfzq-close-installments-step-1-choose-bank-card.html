@@ -36,6 +36,7 @@
 <!-- inject:xfzqPageChiefPartWrapBegin:html --><!-- endinject -->
 
 <div class="content has-sidebar">
+    <script type="text/javascript">window.psn = { level1: 'taiyx', level2: 'close-installments' };</script>
     <!-- inject:xfzqPageSidebar0:html --><!-- endinject -->
 
     <!-- inject:xfzqPageContentWrapBegin:html --><!-- endinject -->
@@ -51,33 +52,51 @@
             <div role="tabpanel" class="panel" aria-hidden="false" id="panel-close-installments">
                 <div class="article">
                     <article>
-                        <form name="choose-bank-card" action="../html/xfzq-close-installments-step-2-proceed.html?psn1=taiyx&psn2=close-installments">
-                            <div>
-                                <div>
-                                    <div class="col">还款金额</div>
-                                    <div class="col"><span class="value currency currency-rmb"></span></div>
+                        <form name="choose-bank-card" action="../html/xfzq-close-installments-step-2-proceed.html">
+                            <div class="form">
+                                <div class="row">
+                                    <div class="col"><span class="label">还款金额</span></div>
+                                    <div class="col"><span class="value currency currency-rmb thick-text-rendering">1234.56</span></div>
                                 </div>
-                                <div>
-                                    <div class="col">选装还款方式</div>
+                                <div class="row">
+                                    <div class="col"><span class="label">选装还款方式</span></div>
                                     <div class="col">
-                                        <div class="drop-down-list">
+                                        <div class="drop-down-list hover-to-show-options">
                                             <div class="drop-down-list-current-value"></div>
-                                            <ul role="menu" class="menu level-1">
+                                            <ul role="menu" class="drop-down-list-options-list menu level-1 layout-vert">
                                                 <li role="menuitem" class="menu-item">
-                                                    <i class="iconfont icon-bank-cn-abc" ></i><span class="label">农业银行|3678 [单笔<em>5</em>万；日累计<em>5</em>万</em>]</span>
-                                                    <i class="iconfont icon-bank-cn-icbc"></i><span class="label">工商银行|5992 [单笔<em>5</em>万；日累计<em>5</em>万</em>]</span>
-                                                    <i class="iconfont icon-bank-cn-ccb "></i><span class="label">建设银行|5568 [单笔<em>5</em>万；日累计<em>5</em>万</em>]</span>
-                                                    <i class="iconfont icon-bank-cn-cmb "></i><span class="label">招商银行|8785 [单笔<em>5</em>万；日累计<em>5</em>万</em>]</span>
+                                                    <span class="label drop-down-list-option choose-bank"
+                                                        ><i class="iconfont icon-bank-cn-abc" ></i
+                                                        ><span class="value">农业银行|3678 [单笔<em>5</em>万；日累计<em>5</em>万</em>]</span
+                                                    ></span>
+                                                </li>
+                                                <li role="menuitem" class="menu-item">
+                                                    <span class="label drop-down-list-option choose-bank"
+                                                        ><i class="iconfont icon-bank-cn-icbc"></i
+                                                        ><span class="label">工商银行|5992 [单笔<em>5</em>万；日累计<em>5</em>万</em>]</span
+                                                    ></span>
+                                                </li>
+                                                <li role="menuitem" class="menu-item">
+                                                    <span class="label drop-down-list-option choose-bank"
+                                                        ><i class="iconfont icon-bank-cn-ccb "></i
+                                                        ><span class="label">建设银行|5568 [单笔<em>5</em>万；日累计<em>5</em>万</em>]</span
+                                                    ></span>
+                                                </li>
+                                                <li role="menuitem" class="menu-item">
+                                                    <span class="label drop-down-list-option choose-bank"
+                                                        ><i class="iconfont icon-bank-cn-cmb "></i
+                                                        ><span class="label">招商银行|8785 [单笔<em>5</em>万；日累计<em>5</em>万</em>]</span
+                                                    ></span>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
-                                <div>
-                                    <div class="col">输入密码</div>
-                                    <div class="col"><input type="password" name="password" id=""><a href="#">忘记密码？</a></div>
+                                <div class="row">
+                                    <div class="col"><span class="label">输入密码</span></div>
+                                    <div class="col"><input type="password" name="password" id=""><span><a href="#">忘记密码？</a></span></div>
                                 </div>
-                                <div>
+                                <div class="row">
                                     <div class="col"></div>
                                     <div class="col buttons-in-single-line">
                                         <button class="rounded-corners size-std-regular" button-action="confirm" id="button-submit-chosen-bank-card">

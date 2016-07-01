@@ -36,6 +36,7 @@
 <!-- inject:xfzqPageChiefPartWrapBegin:html --><!-- endinject -->
 
 <div class="content has-sidebar">
+    <script type="text/javascript">window.psn = { level1: 'taiyx', level2: 'close-installments' };</script>
     <!-- inject:xfzqPageSidebar0:html --><!-- endinject -->
 
     <!-- inject:xfzqPageContentWrapBegin:html --><!-- endinject -->
@@ -52,32 +53,29 @@
                 <div class="article">
                     <article>
                         <form name="proceed-closing-installments" action>
-                            <div>
-                                <div>
-                                    <div class="col">还款金额</div>
-                                    <div class="col"><span class="value currency currency-rmb"></span></div>
+                            <div class="form">
+                                <div class="row">
+                                    <div class="col"><span class="label">还款金额</span></div>
+                                    <div class="col"><span class="value currency currency-rmb thick-text-rendering">1234.56</span></div>
                                 </div>
-                                <div>
-                                    <div class="col">选装还款方式</div>
+                                <div class="row">
+                                    <div class="col"><span class="label">选装还款方式</span></div>
                                     <div class="col">
                                         <div class="drop-down-list">
-                                            <div class="drop-down-list-current-value"></div>
-                                            <ul role="menu" class="menu level-1">
-                                                <li role="menuitem" class="menu-item">
-                                                    <i class="iconfont icon-bank-cn-abc" ></i><span class="label">农业银行|3678 [单笔<em>5</em>万；日累计<em>5</em>万</em>]</span>
-                                                    <i class="iconfont icon-bank-cn-icbc"></i><span class="label">工商银行|5992 [单笔<em>5</em>万；日累计<em>5</em>万</em>]</span>
-                                                    <i class="iconfont icon-bank-cn-ccb "></i><span class="label">建设银行|5568 [单笔<em>5</em>万；日累计<em>5</em>万</em>]</span>
-                                                    <i class="iconfont icon-bank-cn-cmb "></i><span class="label">招商银行|8785 [单笔<em>5</em>万；日累计<em>5</em>万</em>]</span>
-                                                </li>
-                                            </ul>
+                                            <div class="drop-down-list-current-value">
+                                                <span class="drop-down-list-option choose-bank"
+                                                    ><i class="iconfont icon-bank-cn-ccb "></i
+                                                    ><span class="label">建设银行|5568 [单笔<em>5</em>万；日累计<em>5</em>万</em>]</span
+                                                ></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div>
-                                    <div class="col">还款金额</div>
+                                <div class="row">
+                                    <div class="col"><span class="label">还款金额</span></div>
                                     <div class="col"><input type="number" name="amount" id=""></div>
                                 </div>
-                                <div>
+                                <div class="row">
                                     <div class="col"></div>
                                     <div class="col buttons-in-single-line">
                                         <button class="rounded-corners size-std-regular" button-action="confirm" id="button-submit-closing-installments">

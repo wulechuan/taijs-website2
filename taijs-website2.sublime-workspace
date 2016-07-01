@@ -4,228 +4,516 @@
 		"selected_items":
 		[
 			[
-				"st",
-				"static"
-			],
-			[
-				"in",
-				"input	Tag"
-			],
-			[
-				"h",
-				"hidden"
-			],
-			[
-				"border-b",
-				"border-box"
-			],
-			[
-				"list",
-				"listsBlocks"
-			],
-			[
-				"fon",
-				"font-family"
-			],
-			[
-				"borcol",
-				"border-color"
-			],
-			[
-				"m",
-				"middle"
-			],
-			[
-				"marg",
-				"margin"
-			],
-			[
-				"dle",
-				"deltaHeight"
-			],
-			[
-				"exp",
-				"expanded"
-			],
-			[
-				"expan",
-				"newExpandedHeight"
-			],
-			[
-				"con",
-				"console"
-			],
-			[
-				"is",
-				"isIE8"
-			],
-			[
-				"border",
-				"border-color"
-			],
-			[
-				"boderw",
-				"border-width"
-			],
-			[
-				"marginbo",
-				"margin-bottom"
-			],
-			[
-				"font",
-				"font-family"
-			],
-			[
-				"min",
-				"min-width"
-			],
-			[
-				"ve",
-				"vertical-align"
-			],
-			[
-				"di",
-				"display"
-			],
-			[
-				"hei",
-				"height"
-			],
-			[
-				"co",
-				"color"
-			],
-			[
-				"a",
-				"absolute"
-			],
-			[
-				"r",
-				"rgba()"
-			],
-			[
-				"wi",
-				"width"
-			],
-			[
-				"re",
-				"relative"
-			],
-			[
-				"tabc",
-				"table-cell"
-			],
-			[
-				"rotat",
-				"rotate()"
-			],
-			[
-				"vi",
-				"visible"
-			],
-			[
-				"v",
-				"vertical-align"
-			],
-			[
-				"ease",
-				"ease-out"
-			],
-			[
-				"fons",
-				"font-size"
-			],
-			[
-				"head",
-				"header	Tag"
-			],
-			[
-				"whi",
-				"within"
-			],
-			[
-				"html",
-				"html-snippets"
-			],
-			[
-				"path",
-				"pathTempRoot"
-			],
-			[
-				"borders",
-				"border-style"
-			],
-			[
-				"borde",
-				"border-style"
-			],
-			[
-				"texal",
-				"text-align"
-			],
-			[
-				"nor",
-				"nowrap"
-			],
-			[
-				"col",
-				"color"
-			],
-			[
-				"w",
-				"width"
-			],
-			[
-				"fonts",
-				"font-size"
-			],
-			[
-				"borderc",
-				"border-color"
-			],
-			[
-				"d",
-				"display"
-			],
-			[
-				"Er",
-				"ERRORLEVEL"
+				"i",
+				"initial"
 			],
 			[
 				"box",
 				"box-sizing"
 			],
 			[
+				"chec",
+				"checked"
+			],
+			[
+				"che",
+				"checkbox"
+			],
+			[
+				"tr",
+				"transition"
+			],
+			[
+				"z",
+				"zoomFactor"
+			],
+			[
+				"vi",
+				"visible"
+			],
+			[
+				"ms-",
+				"-ms-backface-visibility"
+			],
+			[
+				"ease",
+				"ease-out"
+			],
+			[
+				"mar",
+				"marginTop"
+			],
+			[
+				"zo",
+				"zoomOutFactor"
+			],
+			[
+				"old",
+				"oldWidth"
+			],
+			[
+				"s",
+				"style"
+			],
+			[
+				"pag",
+				"page-content"
+			],
+			[
+				"hid",
+				"hidden"
+			],
+			[
+				"lis",
+				"listItem"
+			],
+			[
+				"rgb",
+				"rgba()"
+			],
+			[
+				"co",
+				"content"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"c",
+				"class	Attr"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"disl",
+				"display"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"v",
+				"vertical-align"
+			],
+			[
+				"im",
+				"important"
+			],
+			[
+				"texa",
+				"text-align"
+			],
+			[
 				"back",
 				"background-color"
 			],
 			[
-				"inlin",
+				"text-",
+				"text-indent"
+			],
+			[
+				"textal",
+				"text-align"
+			],
+			[
+				"inline",
 				"inline-block"
 			],
 			[
-				"htm",
-				"html2"
+				"tex",
+				"text-decoration"
 			],
 			[
-				"ifram",
-				"iframe"
+				"min",
+				"min-height"
 			],
 			[
-				"ifr",
-				"iframe"
+				"bordr",
+				"border-radius"
 			],
 			[
-				"iframe",
-				"iframe-dd"
+				"bords",
+				"border-style"
 			],
 			[
-				"pad",
-				"padding"
+				"borde",
+				"border-width"
 			],
 			[
-				"mar",
-				"margin"
+				"th",
+				"throw"
+			],
+			[
+				"r",
+				"right"
+			],
+			[
+				"bo",
+				"bold"
+			],
+			[
+				"minh",
+				"min-height"
+			],
+			[
+				"bordec",
+				"border-color"
+			],
+			[
+				"border",
+				"border-style"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"fonts",
+				"font-style"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"t",
+				"top"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"cur",
+				"currentItem"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"cu",
+				"currentItem"
+			],
+			[
+				"men",
+				"menuItem"
+			],
+			[
+				"me",
+				"menuItem"
+			],
+			[
+				"sli",
+				"slice"
+			],
+			[
+				"e",
+				"else"
+			],
+			[
+				"el",
+				"elements"
+			],
+			[
+				"isIE",
+				"isIE9"
+			],
+			[
+				"lo",
+				"logCount"
+			],
+			[
+				"is",
+				"isIE8"
+			],
+			[
+				"ie",
+				"isIE8"
+			],
+			[
+				"isE",
+				"isIE9"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"cont",
+				"contentHeight"
+			],
+			[
+				"texsh",
+				"text-shadow"
+			],
+			[
+				"borders",
+				"border-style"
+			],
+			[
+				"content",
+				"contextmenu	Attr"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"sca",
+				"scale()"
+			],
+			[
+				"bakc",
+				"background-color"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"cla",
+				"className"
+			],
+			[
+				"ini",
+				"initOptions"
+			],
+			[
+				"type",
+				"typeof"
+			],
+			[
+				"set",
+				"setTimeout"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"baco",
+				"background-color"
+			],
+			[
+				"ava",
+				"avatarImage"
+			],
+			[
+				"image",
+				"avatarImage"
+			],
+			[
+				"typ",
+				"typeof"
+			],
+			[
+				"pa",
+				"pageUrl"
+			],
+			[
+				"na",
+				"navigator"
+			],
+			[
+				"imeg",
+				"imageUri"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"st",
+				"style	Tag"
+			],
+			[
+				"fil",
+				"filterIris"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"av",
+				"avatar"
+			],
+			[
+				"a",
+				"auto"
+			],
+			[
+				"of",
+				"offsetY"
+			],
+			[
+				"off",
+				"offsetY"
+			],
+			[
+				"pro",
+				"progid"
+			],
+			[
+				"fu",
+				"fun	Function"
+			],
+			[
+				"ta",
+				"tagName"
+			],
+			[
+				"A",
+				"AvatarController"
+			],
+			[
+				"nat",
+				"naturalWidth"
+			],
+			[
+				"ima",
+				"imageUri"
+			],
+			[
+				"brea",
+				"break-word"
+			],
+			[
+				"wor",
+				"word-wrap"
+			],
+			[
+				"auth",
+				"authorBlock"
+			],
+			[
+				"ge",
+				"getElementById"
+			],
+			[
+				"du",
+				"document"
+			],
+			[
+				"bu",
+				"button	Tag"
+			],
+			[
+				"li",
+				"lighter"
+			],
+			[
+				"backc",
+				"background-color"
+			],
+			[
+				"bordecol",
+				"border-color"
+			],
+			[
+				"bordes",
+				"border-style"
+			],
+			[
+				"file",
+				"filter"
+			],
+			[
+				"op",
+				"options"
+			],
+			[
+				"filter",
+				"filterCmp"
+			],
+			[
+				"ie-",
+				"ie-compositor-mask"
+			],
+			[
+				"l",
+				"left"
+			],
+			[
+				"boderw",
+				"border-width"
+			],
+			[
+				"bord",
+				"border-collapse"
+			],
+			[
+				"tabel",
+				"table-cell"
+			],
+			[
+				"fl",
+				"float"
+			],
+			[
+				"cl",
+				"clip"
+			],
+			[
+				"bak",
+				"background"
+			],
+			[
+				"bordeco",
+				"border-color"
+			],
+			[
+				"b",
+				"block"
+			],
+			[
+				"tran",
+				"transition"
+			],
+			[
+				"sc",
+				"scaleY()"
+			],
+			[
+				"wav",
+				"waveComponent"
+			],
+			[
+				"wPhaseO",
+				"wPhaseOffsetLim1"
+			],
+			[
+				"wCol",
+				"wColorStroke"
+			],
+			[
+				"par",
+				"parseInt"
+			],
+			[
+				"new",
+				"newValue"
 			]
 		]
 	},
@@ -240,9 +528,17 @@
 	"command_palette":
 	{
 		"height": 400.0,
-		"last_filter": "",
+		"last_filter": "html",
 		"selected_items":
 		[
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
 			[
 				"",
 				"Build With: Markdown"
@@ -264,15 +560,11 @@
 				"Package Control: Install Package"
 			],
 			[
-				"html",
-				"Set Syntax: HTML"
-			],
-			[
 				"i",
 				"Package Control: Install Package"
 			]
 		],
-		"width": 408.0
+		"width": 440.0
 	},
 	"console":
 	{
@@ -293,78 +585,134 @@
 	},
 	"expanded_folders":
 	[
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/scripts",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/scripts/pages"
+		"/D/p/dev/taijs/taijs-website2",
+		"/D/p/dev/taijs/taijs-website2/app-dev",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/scripts",
+		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base",
+		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages"
 	],
 	"file_history":
 	[
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-close-installments.js",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-step-1-choose-bank-card.html",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-step-2-proceed.html",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-list.html",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-step-1-chose-bank-card.html",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-sidebar-0.html",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments.html",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout.css",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default.css",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html/xfzq-repayments.html",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bill-records-details.html",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-recent.html",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/base/_fonts.css",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk-cate-taiyx.html",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8-theme.css",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/base/fonts.css",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-base.css",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8.css",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/base/reset.css",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/index.html",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/base/iconfonts/iconfont.css",
-		"/D/Users/wulechuan/Documents/p/dev/wlc/g.bat",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-page-close-installments.css",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html/xfzq-index.html",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-header.html",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk.html",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-base.css",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-page-help-desk.css",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/gulpfile.js",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/node_modules/graceful-fs/package.json",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/node_modules/graceful-fs/polyfills.js",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/package.json",
-		"/D/Users/wulechuan/Documents/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-body-wrapper-start.html",
-		"/D/Users/wulechuan/Documents/p/dev/wlc/wlc-web-front-end-learning-and-warming-up/app-dev/styles/base/iconfonts/iconfont.css",
-		"/D/Users/wulechuan/Documents/p/dev/wlc/wlcJS/wlcjs.bat",
-		"/D/p/dev/taijs/taijs-website2/app-dist/index.html",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/styles/base/layout.css",
-		"/D/p/dev/taijs/taijs-website2/gulpfile.js",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-base.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.ie8.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-step-1-choose-bank-card.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-step-2-proceed.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-list.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-close-installments.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/_reset.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout-ie8.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-footer.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-head-after-title.html",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/styles/base/iconfonts/iconfont.css",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/utilities/vector/svg/IE8圆角矩形 - 字号40像素 - 描边1像素 - 圆角半径2像素.svg",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.ie8.theme.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-body-wrapper-end.html",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/sample-snippets.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/sample-snippets.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-repayments.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-past.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bill-records-details.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-sidebar-0.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-header.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-sidebar-0.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/module-sidebar-0.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-recent.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-orders.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/index.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/index.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/index.js",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk-index.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default-ie8.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-page-help-desk.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-bills-list.js",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/_fonts.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-footer.html",
+		"/D/p/dev/taijs/taijs-website2/gulpfile.js",
+		"/D/p/dev/taijs/taijs-website2/app-dist/styles/base/base.min.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/fonts.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-head-after-title.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-user-info-bar.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-base.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8-theme.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk-qna-list.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/user-avatar.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-base.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bill-past-records-details.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-past-records-details.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-list.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-page-bills.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/reset.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-help-desk-index.js",
+		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-help-desk-cate-taiyx.js",
+		"/D/Users/wulechuan/Desktop/footer.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-base-ie8.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk-cate-taiyx.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/vendors/jquery-1.12.4.min.js",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-page-close-installments.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-popup-layers-wrap-begin.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/iconfonts/iconfont.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-index.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-chief-part-wrap-begin.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-head-before-title.html",
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/_trys/html/ie8-filter-compositor (3).html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/sample-page-2.html",
-		"/D/p/dev/taijs/taijs-website2/taijs-website2.sublime-project",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/ie8-test2.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/ie8-test.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/ie8-test4.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/ie8-test4-embed.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/ie8-test4-demo.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/ie8-test3.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/sample-page-list.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/vendors/bootstrap.css",
-		"/D/p/dev/g.bat",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/warm-up.sublime-project",
+		"/D/p/dev/taijs/taijs-website2/app-dev/sample-snippets.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8.theme.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-wrap-end.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-chief-part-wrap-end.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-wrap-begin.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-content-wrap-begin.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-content-wrap-end.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.ie8.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.ie8.theme.css",
+		"/D/p/dev/taijs/taijs-website2/package.json",
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/package.json",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-index.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-sidebar-0.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-xfzq-page-chief-content-wrap-end.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-xfzq-page-chief-content-wrap-begin.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-xfzq-page-body-wrap-end.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-xfzq-page-body-wrap-begin.html",
+		"/C/Users/wulechuan/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/D/Users/wulechuan/Desktop/OneDrive/事业/canvas-ripples.js",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/docs/configure-env-for-gulp.md",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/docs/configure-env-for-gulp-abstract.md",
+		"/D/Users/wulechuan/Desktop/柱状图.js",
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/node_modules/gulp-cssnano/node_modules/object-assign/package.json",
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/node_modules/graceful-fs/fs.js",
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/node_modules/graceful-fs/graceful-fs.js",
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/node_modules/gulp-cssnano/node_modules/object-assign/index.js",
+		"/D/Users/wulechuan/Desktop/waves.js",
+		"/D/Users/wulechuan/Downloads/install-a-new-font.txt",
+		"/D/Users/wulechuan/Downloads/china.js",
+		"/D/Users/wulechuan/Downloads/china.json",
+		"/D/p/dev/taijs/taijs-website2/node_modules/gulp-inject/src/inject/index.js",
+		"/D/Users/wulechuan/Desktop/柱状图.js.qq不让直接传js文件",
+		"/D/Users/wulechuan/Desktop/柱状图.js.qq不然直接传js文件",
+		"/C/Users/wulechuan/AppData/Roaming/Sublime Text 3/Packages/JSHint Gutter/.jshintrc",
+		"/D/p/dev/private/wlcJS/app-dev/stylesheets/seedlink/seedlink-app-_theme-_default.css",
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/warm-up.sublime-project",
+		"/D/p/dev/taijs/taijs-website2/taijs-website2.sublime-project",
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/.gitignore",
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/.gitattributes",
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/taijs-website2.sublime-project",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/sample-test-url-overriding.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-body-wrapper-start.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-body-start.html",
+		"/D/p/dev/taijs/taijs-website2/app-dist/index.html",
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/styles/base/layout.css",
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/styles/base/iconfonts/iconfont.css",
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/utilities/vector/svg/IE8圆角矩形 - 字号40像素 - 描边1像素 - 圆角半径2像素.svg",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-body-wrapper-end.html",
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/sample-snippets.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/module-sidebar-0.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/vendors/bootstrap.css",
+		"/D/p/dev/g.bat",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/html/page-list.html",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/html/page-2.html",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/gulpfile.js",
@@ -373,62 +721,7 @@
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/html-snippets/tag-head-before-title.html",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/html-snippets/tag-body-start.html",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/html-snippets/tag-head-after-title.html",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dist/html-snippets/tag-body-end.html",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/test-url-overriding.html",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dist/index.html",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/html-snippets/tag-head.html",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/html/snippets/tag-head.html",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/html/snippets/tag-body-end.html",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/html/snippets/tag-body-start.html",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/styles/base/base.css",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/styles/base/base.ie8.css",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/styles/base/reset.css",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/styles/base/theme-base.css",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dist/styles/base/base.min.css",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/fonts/iconfont.css",
-		"/C/Users/wulechuan/AppData/Local/Temp/Temp1_iconfont.zip/ux_1464749162_838745/iconfont.css",
-		"/D/Users/wulechuan/Desktop/OneDrive/事业/2014-11 Seedlink/tech/settings_local.py",
-		"/D/Users/wulechuan/Desktop/OneDrive/事业/runserver.bat",
-		"/D/Users/wulechuan/Desktop/OneDrive/事业/test_ice_attributes.js",
-		"/D/Users/wulechuan/Desktop/OneDrive/事业/package.json",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dist/styles/base/theme-base.css",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/styles/base/fonts.css",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dist/styles/page-2.css",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dist/styles/base.min.css",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dist/styles/base.ie8.css",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/styles/page-list.css",
-		"/D/p/dev/taijs/taijs-website/V11/100_MOCK_DATA/strategys.json",
-		"/D/p/dev/taijs/taijs-website/V11/100_MOCK_DATA/private-placements.json",
-		"/D/p/dev/taijs/taijs-website/V11/100_MOCK_DATA/companys.json",
-		"/D/p/dev/taijs/taijs-website/V11/100_MOCK_DATA/fixed-income-list.json",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/readme.md",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/docs/configure-env.rst",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/docs/configure-env.md",
-		"/D/p/dev/private/warm-up/package.json",
-		"/C/d2f42068.ini",
-		"/D/p/dev/npm.bat",
-		"/C/Windows/System32/cmd.exe",
-		"/D/p/dev/private/warm-up/gulpfile-works.js",
-		"/D/p/dev/private/warm-up/app-dev/styles/base/fonts.css",
-		"/D/p/dev/private/warm-up/app-dev/html/page-list.html",
-		"/D/p/dev/private/warm-up/app-dev/html/page-2.html",
-		"/D/p/dev/private/warm-up/app-dist/styles/base.min.css",
-		"/D/p/dev/private/warm-up/app-dev/styles/default.css",
-		"/D/p/dev/private/warm-up/app-dev/styles/reset-eric-meyer.css",
-		"/D/p/dev/taijs/taijs-website/V11/100_MOCK_DATA/experience-gold.json",
-		"/D/p/dev/taijs/taijs-website/V11/100_MOCK_DATA/booking.json",
-		"/D/p/dev/taijs/taijs-website/V11/100_MOCK_DATA/{productCode}.json",
-		"/D/p/dev/private/warm-up/app-dist/html/page-list.html",
-		"/D/p/dev/private/warm-up/app-dist/styles/default.css",
-		"/D/p/dev/private/warm-up/app-dev/index.html",
-		"/D/p/dev/private/warm-up/gulpfile.js",
-		"/D/Users/wulechuan/Downloads/stats.json",
-		"/D/p/dev/private/warm-up/warm-up.sublime-project",
-		"/C/Users/wulechuan/AppData/Roaming/Sublime Text 3/Packages/JSHint Gutter/.jshintrc",
-		"/D/p/dev/private/warm-up/app-dist/scripts/base.js",
-		"/D/p/dev/private/warm-up/app-dev/scripts/page-2.js",
-		"/D/p/dev/private/warm-up/app-dist/index.html",
-		"/D/p/dev/private/warm-up/app-dev/styles/page-2.css"
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dist/html-snippets/tag-body-end.html"
 	],
 	"find":
 	{
@@ -439,11 +732,15 @@
 		"height": 104.0,
 		"where_history":
 		[
-			"D:\\Users\\wulechuan\\Documents\\p\\dev\\taijs\\taijs-website2\\app-dev",
-			"D:\\Users\\wulechuan\\Documents\\p\\dev\\taijs\\taijs-website2\\app-dev, *.css",
-			"D:\\Users\\wulechuan\\Documents\\p\\dev\\taijs\\taijs-website2\\app-dev",
-			"D:\\Users\\wulechuan\\Documents\\p\\dev\\taijs\\taijs-website2\\app-dev\\styles",
-			"D:\\Users\\wulechuan\\Documents\\p\\dev\\seedlink\\osqa\\osqa\\"
+			"D:\\p\\dev\\taijs\\taijs-website2\\app-dev",
+			"D:\\p\\dev\\taijs\\taijs-website2\\app-dev, *.html",
+			"D:\\p\\dev\\taijs\\taijs-website2\\app-dev",
+			"",
+			"*.css",
+			"*.html",
+			"*.css",
+			"*.html",
+			"*.css"
 		]
 	},
 	"find_state":
@@ -451,134 +748,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			":hover",
-			"n:hover",
-			"ion-x",
-			"-x",
-			":hover",
-			"#app-footer-attestations ",
-			"-y",
-			"left",
-			"12px",
-			"block",
-			"relative",
-			"attestation-logo",
-			"static",
-			"password",
-			"bank",
-			"buttons-in-single-line",
-			"button",
-			"span",
-			"close-installments.html",
-			"ededed",
-			"border",
-			"addClass",
-			"toggleClass",
-			"if (event) event.stopPropagation();\n		$('.popup-layers-back-plate').hide();\n		$('#pl-close-installments-succeed').hide();",
-			"	.on('click', function(event) {\n		if (event) event.stopPropagation();\n		$('.popup-layers-back-plate').hide();\n		$('#pl-close-installments-succeed').hide();\n	});",
-			"argument",
-			"before",
-			"input[ty",
-			"input",
-			"0.1",
-			"5",
-			"0.5em",
-			"checkbox",
-			"checked",
-			"    ",
-			"white",
-			"before",
-			"ededed",
-			"input[ty",
-			"top",
-			"1.25",
-			"width",
-			"1em",
-			" + label.deco-input[for]",
-			"c5c5c5",
-			"fefefe",
-			"17",
-			"argument",
-			"ut\"></label",
-			"12",
-			"130",
-			"15",
-			" 0",
-			"33",
-			"100%",
-			"pink",
-			"solid",
-			"1px",
-			"checkbox",
-			"for=\"close-installment",
-			"for",
-			"close-installments-checkbox-",
-			"checkbox",
-			"<input type=\"checkbox\">",
-			"360",
-			"footer",
-			"[role=\"button\"]",
-			"button",
+			"label",
+			"hover",
+			" opacity: ",
+			"menu-scales-up ",
 			"inline",
-			"button",
-			"> *",
-			"20",
-			"30",
-			"header",
-			"footer",
-			"17",
-			"13px",
-			"header",
-			"20px",
-			",",
-			".last-cell",
-			"header",
-			"last-cell",
-			"11",
-			"lists",
-			"ass=\"title\"",
-			"bold",
-			"title",
-			"v class=\"title\"><h3",
-			"ass=\"title",
-			"title",
-			"block-title",
-			"title",
-			".title",
-			"-title",
-			"title",
+			"top",
+			"right",
+			"initial",
+			"menu-scales-up ",
+			"menu-scales-up",
+			"menu-scales-u",
+			"solid",
+			"li",
+			"animation",
+			"article",
+			"pink",
+			"><i class=\"iconfont icon-bank-cn-abc\" ></i\n                                                        ><span class=\"value\">农业银行|3678 [单笔<em>5</em>万；日累计<em>5</em>万</em>]</span",
+			"argument",
+			"minFactor",
+			"-25",
+			"150",
+			"-25",
+			"checkbox",
+			"金额（元）",
+			"> .f-list > li",
+			"> .f-list >",
+			"> .f-list > li",
+			"records",
+			"timestamp",
+			"timestampe",
+			"psn1=taiyx&psn2=bills-past&",
+			"1",
+			"object",
+			"processParametersPassedIn",
+			"setPageSidebarNavCurrentItem",
+			"margin",
+			"argument",
+			".user-is-guest",
+			"0.986",
+			"var",
+			" =",
+			"zoomFactor",
+			"frameGapMS*targetStage",
+			"factor",
+			"(tempStageCounter++,",
+			"0.9870",
+			"tempStageCounter",
+			"msPerspective",
+			"1px",
+			"aniStage",
+			"oldHeight",
+			"originalVertMargin",
+			"zoomOutFactor",
+			"factor",
+			"990",
+			"selected",
+			"deselected",
+			"lar-list-ite",
+			"item",
+			"selected",
+			"deselected",
+			"play",
+			"abular-list-item-selected",
+			"Y",
+			"translate(0, -16px)",
+			"scales",
 			"tabular",
-			"title",
-			"-title",
-			"title",
-			"lass=\"tabula",
-			"lass=\"tabular",
+			"tempStageCounter",
+			"currency",
+			"zoomToFactor",
+			"zoomOutFactor",
 			"argument",
-			".pagination",
+			"10",
+			"white",
+			"this",
+			"style",
+			"display",
+			"listItem",
 			"argument",
-			"thisDT",
-			"thisDD",
+			"none",
+			"display",
 			"argument",
-			"dt",
-			"DTDDPairHeight",
-			"thisDT",
-			"deltaHeight",
-			"expandedHeight",
-			"$(thisDT)",
-			"myDD",
-			"needNoAction",
-			"newHeightOfDL",
-			"allDTsAndAllDDs",
-			"allDDs",
-			"..",
-			"pagination",
-			"padding",
+			"position",
+			"hidden",
+			"none",
+			"display",
+			"hide",
+			"nextLitsItem",
+			"hide",
+			"shouldForceUpdatingSomeElements",
+			"thisFList",
+			"2px",
+			"left",
+			"hidden",
+			"thisFList",
+			"show",
+			"s=\"cell value amount currency currency-",
+			"an class=\"cell value amount currency currency",
+			"pan class=\"cell              value bill-total-amount currency currency-rmb\"",
+			"currency",
+			"argument",
+			"elementsHaveBeforeAfterTexts",
+			"$listItem[0]",
+			"none",
+			"visibility",
+			"argument",
+			"none",
+			"[checked]",
+			"16",
+			"18",
+			"1",
+			"18",
 			"20",
-			"pagination",
-			"button",
-			">",
-			"button",
-			"       "
+			"15",
+			"14",
+			"1.4",
+			"9",
+			"1.2",
+			"4",
+			"1",
+			"1.4em",
+			"1.4",
+			"2",
+			"0",
+			"1.3",
+			"1",
+			"1.2",
+			":checked"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -586,7 +883,16 @@
 		"regex": false,
 		"replace_history":
 		[
-			"size-std-wide"
+			"timestamp",
+			"images/_common/",
+			"xfzq-layout-ie8.min",
+			"xfzq-layout.min",
+			"opacity=",
+			"help-desk-index.html",
+			"icons-in-elements",
+			"back-plate",
+			" -->",
+			"-->"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -651,216 +957,516 @@
 		"selected_items":
 		[
 			[
-				"lay",
-				"app-dev\\styles\\base\\layout.css"
-			],
-			[
-				"basej",
-				"app-dev\\scripts\\base\\base.js"
-			],
-			[
-				"step",
-				"app-dev\\html\\xfzq-close-installments-step-1-choose-bank-card.html"
-			],
-			[
-				"closlis",
+				"clos",
 				"app-dev\\html\\xfzq-close-installments-list.html"
 			],
 			[
-				"clos",
+				"clo",
 				"app-dev\\scripts\\pages\\xfzq-page-close-installments.js"
 			],
 			[
-				"cljs",
-				"app-dev\\scripts\\pages\\xfzq-page-close-installments.js"
-			],
-			[
-				"basejs",
-				"app-dev\\scripts\\base\\base.js"
-			],
-			[
-				"closj",
-				"app-dev\\scripts\\pages\\xfzq-page-close-installments.js"
+				"ie",
+				"app-dev\\styles\\pages\\xfzq-layout-ie8.css"
 			],
 			[
 				"them",
 				"app-dev\\styles\\base\\theme-_default.css"
 			],
 			[
+				"res",
+				"app-dev\\styles\\base\\_reset.css"
+			],
+			[
+				"lay",
+				"app-dev\\styles\\base\\layout.css"
+			],
+			[
 				"base",
 				"app-dev\\styles\\base\\base.css"
 			],
 			[
-				"cl",
-				"app-dev\\html\\xfzq-close-installments.html"
+				"step2",
+				"app-dev\\html\\xfzq-close-installments-step-2-proceed.html"
+			],
+			[
+				"step",
+				"app-dev\\html\\xfzq-close-installments-step-1-choose-bank-card.html"
+			],
+			[
+				"basej",
+				"app-dev\\scripts\\base\\base.js"
+			],
+			[
+				"bas",
+				"app-dev\\styles\\base\\base.css"
 			],
 			[
 				"rep",
 				"app-dev\\html\\xfzq-repayments.html"
 			],
 			[
-				"details",
+				"xlay",
+				"app-dev\\styles\\pages\\xfzq-layout.css"
+			],
+			[
+				"det",
 				"app-dev\\html\\xfzq-bill-records-details.html"
+			],
+			[
+				"pas",
+				"app-dev\\html\\xfzq-bills-past.html"
+			],
+			[
+				"cls",
+				"app-dev\\scripts\\pages\\xfzq-page-close-installments.js"
+			],
+			[
+				"order",
+				"app-dev\\html\\xfzq-orders.html"
+			],
+			[
+				"hea",
+				"app-dev\\html-snippets\\module-app-header.html"
+			],
+			[
+				"sid",
+				"app-dev\\html-snippets\\module-xfzq-page-sidebar-0.html"
 			],
 			[
 				"rec",
 				"app-dev\\html\\xfzq-bills-recent.html"
 			],
 			[
-				"xf",
-				"app-dev\\styles\\pages\\xfzq-layout.css"
+				"or",
+				"app-dev\\html\\xfzq-orders.html"
 			],
 			[
-				"font",
-				"app-dev\\styles\\base\\_fonts.css"
-			],
-			[
-				"xfl",
-				"app-dev\\styles\\pages\\xfzq-layout.css"
-			],
-			[
-				"layou",
-				"app-dev\\styles\\base\\layout.css"
-			],
-			[
-				"bae",
-				"app-dev\\styles\\base\\base.css"
-			],
-			[
-				"clso",
-				"app-dev\\html\\xfzq-close-installments.html"
-			],
-			[
-				"ie",
-				"app-dev\\styles\\base\\base-ie8.css"
-			],
-			[
-				"cate",
-				"app-dev\\html\\xfzq-help-desk-cate-taiyx.html"
-			],
-			[
-				"res",
-				"app-dev\\styles\\base\\reset.css"
-			],
-			[
-				"fonts",
-				"app-dev\\styles\\base\\fonts.css"
-			],
-			[
-				"inde",
-				"app-dev\\index.html"
-			],
-			[
-				"bs",
-				"app-dev\\styles\\base\\base.css"
-			],
-			[
-				"basethem",
-				"app-dev\\styles\\base\\theme-base.css"
-			],
-			[
-				"index",
-				"app-dev\\index.html"
-			],
-			[
-				"basth",
-				"app-dev\\styles\\base\\theme-base.css"
-			],
-			[
-				"helpde",
-				"app-dev\\styles\\pages\\xfzq-page-help-desk.css"
-			],
-			[
-				"icn",
-				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
-			],
-			[
-				"xfzqin",
-				"app-dev\\html\\xfzq-index.html"
+				"sideba",
+				"app-dev\\html-snippets\\module-xfzq-page-sidebar-0.html"
 			],
 			[
 				"header",
 				"app-dev\\html-snippets\\module-app-header.html"
 			],
 			[
-				"sidba",
-				"app-dev\\html-snippets\\module-xfzq-page-sidebar-0.html"
+				"inde",
+				"app-dev\\styles\\pages\\index.css"
 			],
 			[
-				"",
-				"app-dev\\styles\\base\\base.css"
+				"indexj",
+				"app-dev\\scripts\\pages\\index.js"
 			],
 			[
-				"helde",
-				"app-dev\\html\\xfzq-help-desk.html"
+				"index",
+				"app-dev\\html\\xfzq-help-desk-index.html"
+			],
+			[
+				"closh",
+				"app-dev\\html\\xfzq-close-installments-list.html"
+			],
+			[
+				"xfzqr",
+				"app-dev\\html\\xfzq-repayments.html"
+			],
+			[
+				"closjs",
+				"app-dev\\scripts\\pages\\xfzq-page-close-installments.js"
+			],
+			[
+				"themie",
+				"app-dev\\styles\\base\\theme-_default-ie8.css"
+			],
+			[
+				"basie",
+				"app-dev\\styles\\base\\base-ie8.css"
+			],
+			[
+				"past",
+				"app-dev\\html\\xfzq-bills-past.html"
+			],
+			[
+				"layou",
+				"app-dev\\styles\\pages\\xfzq-layout.css"
+			],
+			[
+				"layout",
+				"app-dev\\styles\\base\\layout.css"
+			],
+			[
+				"repa",
+				"app-dev\\html\\xfzq-repayments.html"
+			],
+			[
+				"rece",
+				"app-dev\\html\\xfzq-bills-recent.html"
+			],
+			[
+				"deta",
+				"app-dev\\html\\xfzq-bill-records-details.html"
+			],
+			[
+				"bills",
+				"app-dev\\html\\xfzq-bills-recent.html"
 			],
 			[
 				"hel",
 				"app-dev\\styles\\pages\\xfzq-page-help-desk.css"
 			],
 			[
-				"xfzqbas",
-				"app-dev\\styles\\pages\\xfzq-base.css"
+				"theme",
+				"app-dev\\styles\\base\\theme-_default.css"
 			],
 			[
-				"help",
-				"app-dev\\html\\xfzq-help-desk.html"
+				"la",
+				"app-dev\\styles\\pages\\xfzq-layout.css"
 			],
 			[
-				"helpdes",
-				"app-dev\\styles\\pages\\xfzq-page-help-desk.css"
+				"orders",
+				"app-dev\\html\\xfzq-orders.html"
+			],
+			[
+				"detail",
+				"app-dev\\html\\xfzq-bill-records-details.html"
+			],
+			[
+				"xfla",
+				"app-dev\\styles\\pages\\xfzq-layout.css"
+			],
+			[
+				"billre",
+				"app-dev\\html\\xfzq-bills-recent.html"
+			],
+			[
+				"biljs",
+				"app-dev\\scripts\\pages\\xfzq-page-bills-list.js"
+			],
+			[
+				"bill",
+				"app-dev\\html\\xfzq-bills-past.html"
+			],
+			[
+				"font",
+				"app-dev\\styles\\base\\_fonts.css"
+			],
+			[
+				"themf",
+				"app-dev\\styles\\base\\theme-_default.css"
+			],
+			[
+				"themd",
+				"app-dev\\styles\\base\\theme-_default.css"
+			],
+			[
+				"rest",
+				"app-dev\\styles\\base\\_reset.css"
+			],
+			[
+				"side",
+				"app-dev\\html-snippets\\module-xfzq-page-sidebar-0.html"
+			],
+			[
+				"foot",
+				"app-dev\\html-snippets\\module-app-footer.html"
+			],
+			[
+				"g",
+				"gulpfile.js"
 			],
 			[
 				"gul",
 				"gulpfile.js"
 			],
 			[
-				"gulp",
-				"gulpfile.js"
-			],
-			[
-				"css",
-				"app-dev\\styles\\base\\base.css"
-			],
-			[
-				"info",
-				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
-			],
-			[
-				"reset",
-				"app-dev\\styles\\base\\reset.css"
-			],
-			[
-				"icon",
-				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
-			],
-			[
-				"confi",
-				"docs\\configure-env-for-gulp-abstract.md"
-			],
-			[
-				"configmd",
-				"docs\\configure-env-for-gulp.md"
-			],
-			[
-				"base.css",
-				"app-dev\\styles\\base\\base.css"
-			],
-			[
-				"theme",
+				"themba",
 				"app-dev\\styles\\base\\theme-base.css"
 			],
 			[
-				"config",
-				"docs\\configure-env-for-gulp.md"
+				"billj",
+				"app-dev\\scripts\\pages\\xfzq-page-bills-list.js"
 			],
 			[
-				"pageli",
-				"app-dev\\html\\page-list.html"
+				"billjs",
+				"app-dev\\scripts\\pages\\xfzq-page-bills-list.js"
 			],
 			[
-				"page",
-				"app-dev\\html\\page-2.html"
+				"xfzq",
+				"app-dev\\styles\\pages\\xfzq-base.css"
+			],
+			[
+				"record",
+				"app-dev\\html\\xfzq-bill-records-details.html"
+			],
+			[
+				"fon",
+				"app-dev\\styles\\base\\fonts.css"
+			],
+			[
+				"sidb",
+				"app-dev\\html-snippets\\module-xfzq-page-sidebar-0.html"
+			],
+			[
+				"billl",
+				"app-dev\\html\\xfzq-bills-list.html"
+			],
+			[
+				"qnal",
+				"app-dev\\html\\xfzq-help-desk-qna-list.html"
+			],
+			[
+				"billli",
+				"app-dev\\html\\xfzq-bills-list.html"
+			],
+			[
+				"xbill",
+				"app-dev\\styles\\pages\\xfzq-page-bills.css"
+			],
+			[
+				"layo",
+				"app-dev\\styles\\base\\layout.css"
+			],
+			[
+				"basj",
+				"app-dev\\scripts\\base\\base.js"
+			],
+			[
+				"qna",
+				"app-dev\\html\\xfzq-help-desk-qna-list.html"
+			],
+			[
+				"cate",
+				"app-dev\\scripts\\pages\\xfzq-page-help-desk-cate-taiyx.js"
+			],
+			[
+				"ie8th",
+				"app-dev\\styles\\base\\base-ie8-theme.css"
+			],
+			[
+				"footer",
+				"app-dev\\html-snippets\\module-app-footer.html"
+			],
+			[
+				"basth",
+				"app-dev\\styles\\base\\theme-base.css"
+			],
+			[
+				"helpdeskin",
+				"app-dev\\html\\xfzq-help-desk-index.html"
+			],
+			[
+				"xfzqb",
+				"app-dev\\styles\\pages\\xfzq-base.css"
+			],
+			[
+				"ind",
+				"app-dev\\index.html"
+			],
+			[
+				"ie8",
+				"app-dev\\styles\\base\\base-ie8-theme.css"
+			],
+			[
+				"head",
+				"app-dev\\html-snippets\\module-app-header.html"
+			],
+			[
+				"x",
+				"app-dev\\styles\\pages\\xfzq-base.css"
+			],
+			[
+				"baseie",
+				"app-dev\\styles\\base\\base-ie8.css"
+			],
+			[
+				"xfz",
+				"app-dev\\styles\\pages\\xfzq-base-ie8.css"
+			],
+			[
+				"xf",
+				"app-dev\\styles\\pages\\xfzq-base.css"
+			],
+			[
+				"ie8the",
+				"app-dev\\styles\\base\\base-ie8-theme.css"
+			],
+			[
+				"basthem",
+				"app-dev\\styles\\base\\theme-base.css"
+			],
+			[
+				"sideb",
+				"app-dev\\html-snippets\\module-xfzq-page-sidebar-0.html"
+			],
+			[
+				"close",
+				"app-dev\\html\\xfzq-close-installments.html"
+			],
+			[
+				"sidbar",
+				"app-dev\\html-snippets\\module-xfzq-page-sidebar-0.html"
+			],
+			[
+				"user",
+				"app-dev\\html\\user-avatar.html"
+			],
+			[
+				"ba",
+				"app-dev\\scripts\\base\\base.js"
+			],
+			[
+				"taiyx",
+				"app-dev\\scripts\\pages\\xfzq-page-help-desk-cate-taiyx.js"
+			],
+			[
+				"sida",
+				"app-dev\\html-snippets\\module-xfzq-page-sidebar-0.html"
+			],
+			[
+				"after",
+				"app-dev\\html-snippets\\tag-head-after-title.html"
+			],
+			[
+				"xfhelcss",
+				"app-dev\\styles\\pages\\xfzq-page-help-desk.css"
+			],
+			[
+				"tayxh",
+				"app-dev\\html\\xfzq-help-desk-cate-taiyx.html"
+			],
+			[
+				"basec",
+				"app-dev\\styles\\base\\base.css"
+			],
+			[
+				"re",
+				"app-dev\\styles\\base\\reset.css"
+			],
+			[
+				"basethe",
+				"app-dev\\styles\\base\\theme-base.css"
+			],
+			[
+				"taiyxjs",
+				"app-dev\\scripts\\pages\\xfzq-page-help-desk-cate-taiyx.js"
+			],
+			[
+				"helpdesc",
+				"app-dev\\styles\\pages\\xfzq-page-help-desk.css"
+			],
+			[
+				"helin",
+				"app-dev\\scripts\\pages\\xfzq-page-help-desk-index.js"
+			],
+			[
+				"xfzqhe",
+				"app-dev\\html\\xfzq-help-desk-cate-taiyx.html"
+			],
+			[
+				"xfie",
+				"app-dev\\styles\\pages\\xfzq-base-ie8.css"
+			],
+			[
+				"it",
+				"app-dev\\styles\\base\\base-ie8-theme.css"
+			],
+			[
+				"helpca",
+				"app-dev\\html\\xfzq-help-desk-cate-taiyx.html"
+			],
+			[
+				"closijs",
+				"app-dev\\scripts\\pages\\xfzq-page-close-installments.js"
+			],
+			[
+				"helpd",
+				"app-dev\\styles\\pages\\xfzq-page-help-desk.css"
+			],
+			[
+				"basht",
+				"app-dev\\styles\\base\\theme-base.css"
+			],
+			[
+				"basieth",
+				"app-dev\\styles\\base\\base-ie8-theme.css"
+			],
+			[
+				"ic",
+				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
+			],
+			[
+				"helpde",
+				"app-dev\\html\\xfzq-help-desk.html"
+			],
+			[
+				"heade",
+				"app-dev\\html-snippets\\module-app-header.html"
+			],
+			[
+				"helpdesk",
+				"app-dev\\styles\\pages\\xfzq-page-help-desk.css"
+			],
+			[
+				"iethem",
+				"app-dev\\styles\\base\\base-ie8-theme.css"
+			],
+			[
+				"xfba",
+				"app-dev\\styles\\pages\\xfzq-base.css"
+			],
+			[
+				"indexjs",
+				"app-dev\\scripts\\pages\\index.js"
+			],
+			[
+				"xfbas",
+				"app-dev\\styles\\pages\\xfzq-base.css"
+			],
+			[
+				"indexc",
+				"app-dev\\styles\\pages\\index.css"
+			],
+			[
+				"indexcss",
+				"app-dev\\styles\\pages\\index.css"
+			],
+			[
+				"foo",
+				"app-dev\\html-snippets\\module-app-footer.html"
+			],
+			[
+				"in",
+				"app-dev\\index.html"
+			],
+			[
+				"userinf",
+				"app-dev\\html-snippets\\module-xfzq-user-info-bar.html"
+			],
+			[
+				"rese",
+				"app-dev\\styles\\base\\reset.css"
+			],
+			[
+				"",
+				"app-dev\\styles\\pages\\xfzq-base.css"
+			],
+			[
+				"userinfo",
+				"app-dev\\html-snippets\\module-xfzq-user-info-bar.html"
+			],
+			[
+				"chiefpart",
+				"app-dev\\html-snippets\\module-xfzq-page-chief-part-wrap-begin.html"
+			],
+			[
+				"indexht",
+				"app-dev\\index.html"
+			],
+			[
+				"iconfon",
+				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
+			],
+			[
+				"befor",
+				"app-dev\\html-snippets\\tag-head-before-title.html"
 			]
 		],
 		"width": 0.0
@@ -895,7 +1501,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": false,
-	"side_bar_width": 300.0,
+	"side_bar_width": 220.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

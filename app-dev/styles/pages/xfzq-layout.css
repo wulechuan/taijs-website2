@@ -171,6 +171,42 @@
 			width: 100px;
 		}
 
+		.tabular-lists.repayment-records .tabular .bank-card {
+			position: absolute;
+			left: 190px;
+			width: 200px;
+		}
+		.tabular-lists.repayment-records .tabular .bank-card .icon {
+			vertical-align: top;
+		}
+		.tabular-lists.repayment-records .tabular .timestamp {
+			position: absolute;
+			left: 420px;
+			width: 160px;
+		}
+		.tabular-lists.repayment-records .tabular .amount {
+			position: absolute;
+			left: 615px;
+			width: 100px;
+		}
+
+		.tabular-lists.repayment-requests {
+			margin-top: 0;
+		}
+		.tabular-lists.repayment-requests .tabular .bank-card {
+			position: absolute;
+			left: 250px;
+			width: 200px;
+		}
+		.tabular-lists.repayment-requests .tabular .bank-card .icon {
+			vertical-align: top;
+		}
+		.tabular-lists.repayment-requests .tabular .timestamp {
+			position: absolute;
+			left: 540px;
+			width: 160px;
+		}
+
 
 	.card {
 		}

@@ -51,13 +51,16 @@
 		;
 	}
 
+
 	#splash-slogan {
 		position: absolute;
-		width: 70%;
-		left: 15%;
-		top: 0;
-		margin: 70px 0 10px 0;
+		width: 50%;
+		left: 25%;
+		top: 70px;
+		margin: 0;
 		text-align: center;
+		transition-property: margin; 
+		transition-timing-function: ease-out; 
 		}
 
 		#splash-slogan h1 {
@@ -81,6 +84,7 @@
 	}
 
 	#splash-credit-info-block {
+		display: none;
 		position: absolute;
 		left: 0;
 		top: 36px;
@@ -503,6 +507,21 @@
 			}
 
 
+	.user-has-logged-in #splash-block {
+		}
+
+		.user-has-logged-in #splash-block #splash-slogan {
+			/* margin-left: 175px; */
+			margin-top: 45px;
+		}
+
+		.user-has-logged-in #splash-block #splash-login-block {
+			display: none;
+		}
+
+		.user-has-logged-in #splash-block #splash-credit-info-block {
+			display: block;
+		}
 
 
 #promotion-cards {
