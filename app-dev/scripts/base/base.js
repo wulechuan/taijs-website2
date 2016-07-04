@@ -3,6 +3,45 @@
 	var isIE8 = !!navigator.userAgent.match(/msie 8/i);
 	var isIE9 = !!navigator.userAgent.match(/msie 9/i);
 
+    function processParametersPassedIn() {
+        var qString = location.href.match(/\?.*/);
+        if (qString) qString = qString[0].slice(1);
+
+        var qKVPairs = [];
+        if (qString) {
+            qKVPairs = qString.split('&');
+        }
+
+        var psn1; // page sidebar nav Level 1 current
+        var psn2; // page sidebar nav Level 2 current
+        var tabLabel; // id of tabLabel to show if any
+
+        if (typeof window.psn === 'object') {
+        	if (window.psn.level1) psn1 = window.psn.level1;
+        	if (window.psn.level2) psn2 = window.psn.level2;
+        }
+
+        for (var i in qKVPairs){
+            var kvpString = qKVPairs[i];
+            var kvp = kvpString.split('=');
+
+            if (kvp[0] === 'psn1') psn1 = kvp[1];
+            if (kvp[0] === 'psn2') psn2 = kvp[1];
+            if (kvp[0] === 'tabLabel') tabLabel = kvp[1];
+        }
+
+        return {
+        	tabLabel: tabLabel,
+            psn: {
+            	level1: psn1,
+            	level2: psn2
+            }
+        };
+    }
+
+
+    var urlParameters = processParametersPassedIn();
+
 
 
 	$('.tab-panel-set').each(function () {
@@ -26,11 +65,14 @@
 
 		});
 
-		$allTabs.on('click', function () {
-			_showPanelAccordingToTab(this);
-		});
+		if ($allTabs.length > 1) {
+			$allTabs.on('click', function () {
+				_showPanelAccordingToTab(this);
+			});
+		}
 
-		_showPanelAccordingToTab($allTabs[0]);
+		var tabToShowAtBegining = $('#panel-tab-'+urlParameters.tabLabel).parent()[0] || $allTabs[0];
+		_showPanelAccordingToTab(tabToShowAtBegining);
 
 		function _showPanelAccordingToTab(theTab) {
 			for (var i = 0; i < $allTabs.length; i++) {
@@ -250,40 +292,9 @@
 		}
 	});
 
-	setPageSidebarNavCurrentItem(processParametersPassedIn().psn);
+	setPageSidebarNavCurrentItem(urlParameters.psn);
 
-    function processParametersPassedIn() {
-        var qString = location.href.match(/\?.*/);
-        if (qString) qString = qString[0].slice(1);
 
-        var qKVPairs = [];
-        if (qString) {
-            qKVPairs = qString.split('&');
-        }
-
-        var psn1; // page sidebar nav Level 1 current
-        var psn2; // page sidebar nav Level 2 current
-
-        if (typeof window.psn === 'object') {
-        	if (window.psn.level1) psn1 = window.psn.level1;
-        	if (window.psn.level2) psn2 = window.psn.level2;
-        }
-
-        for (var i in qKVPairs){
-            var kvpString = qKVPairs[i];
-            var kvp = kvpString.split('=');
-
-            if (kvp[0] === 'psn1') psn1 = kvp[1];
-            if (kvp[0] === 'psn2') psn2 = kvp[1];
-        }
-
-        return {
-            psn: {
-            	level1: psn1,
-            	level2: psn2
-            }
-        };
-    }
 
     function setPageSidebarNavCurrentItem(conf) {
     	conf = conf || {};
