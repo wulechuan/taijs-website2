@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"b",
+				"content-box"
+			],
+			[
+				"panel",
+				"panelId"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"op",
+				"option"
+			],
+			[
+				"o",
+				"option"
+			],
+			[
 				"borderc",
 				"border-color"
 			],
@@ -74,10 +94,6 @@
 			[
 				"rgb",
 				"rgba()"
-			],
-			[
-				"co",
-				"content"
 			],
 			[
 				"bac",
@@ -444,10 +460,6 @@
 				"filter"
 			],
 			[
-				"op",
-				"options"
-			],
-			[
 				"filter",
 				"filterCmp"
 			],
@@ -488,10 +500,6 @@
 				"border-color"
 			],
 			[
-				"b",
-				"block"
-			],
-			[
 				"tran",
 				"transition"
 			],
@@ -506,24 +514,40 @@
 			[
 				"wPhaseO",
 				"wPhaseOffsetLim1"
-			],
-			[
-				"wCol",
-				"wColorStroke"
-			],
-			[
-				"par",
-				"parseInt"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "app-dev/styles/base/theme-_default.css",
+			"file": "app-dev/scripts/base/base.js",
 			"settings":
 			{
-				"buffer_size": 14555,
+				"buffer_size": 12225,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app-dev/html/xfzq-close-installments-step-1-choose-bank-card.html",
+			"settings":
+			{
+				"buffer_size": 7227,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app-dev/html/xfzq-close-installments-step-2-proceed.html",
+			"settings":
+			{
+				"buffer_size": 7358,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/Users/wulechuan/Desktop/OneDrive/事业/tab-panel/乐川的tab-panel-pair逻辑.js",
+			"settings":
+			{
+				"buffer_size": 2227,
 				"line_ending": "Windows"
 			}
 		},
@@ -531,7 +555,23 @@
 			"file": "app-dev/styles/base/base.css",
 			"settings":
 			{
-				"buffer_size": 41301,
+				"buffer_size": 41335,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app-dev/styles/base/layout.css",
+			"settings":
+			{
+				"buffer_size": 13393,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app-dev/styles/pages/xfzq-layout.css",
+			"settings":
+			{
+				"buffer_size": 19657,
 				"line_ending": "Windows"
 			}
 		}
@@ -610,23 +650,29 @@
 	],
 	"file_history":
 	[
+		"/D/Users/wulechuan/Desktop/OneDrive/事业/tab-panel/乐川的tab-panel-pair逻辑.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-step-1-choose-bank-card.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-step-2-proceed.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-list.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-close-installments.js",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/_reset.css",
+		"/D/Users/wulechuan/Desktop/OneDrive/事业/tab-panel/乐川的tab-panel-pair的页面.html",
+		"/D/Users/wulechuan/Desktop/tab-panel/乐川的tab-panel-pair逻辑.js",
+		"/D/Users/wulechuan/Desktop/tab-panel/乐川的tab-panel-pair的页面.html",
+		"/D/Users/wulechuan/Desktop/乐川的tab-panel-pair的页面.html",
+		"/D/Users/wulechuan/Desktop/乐川的tab-panel-pair逻辑.js",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-recent.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-close-installments.js",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-step-2-proceed.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-list.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/_reset.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout-ie8.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-repayments.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-past.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bill-records-details.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-sidebar-0.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-header.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-recent.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-orders.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/index.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/index.css",
@@ -731,13 +777,7 @@
 		"/D/p/dev/g.bat",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/html/page-list.html",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/html/page-2.html",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/gulpfile.js",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/index.html",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/html-snippets/tag-body-end.html",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/html-snippets/tag-head-before-title.html",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/html-snippets/tag-body-start.html",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/html-snippets/tag-head-after-title.html",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dist/html-snippets/tag-body-end.html"
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/gulpfile.js"
 	],
 	"find":
 	{
@@ -764,6 +804,25 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"argument",
+			"type",
+			"panel-2",
+			"panel-1111111",
+			"panel",
+			"你自己的css class",
+			"class=\"label\" ",
+			".choose-bank",
+			"option",
+			"drop-down-list-option",
+			"options",
+			"innerHTML",
+			"option",
+			"drop-down-list-options",
+			"drop-down-list-options-list",
+			"drop-down-list-options",
+			"argument",
+			"allListItems",
+			"argument",
 			"active",
 			"focus",
 			"label",
@@ -872,26 +931,7 @@
 			"none",
 			"visibility",
 			"argument",
-			"none",
-			"[checked]",
-			"16",
-			"18",
-			"1",
-			"18",
-			"20",
-			"15",
-			"14",
-			"1.4",
-			"9",
-			"1.2",
-			"4",
-			"1",
-			"1.4em",
-			"1.4",
-			"2",
-			"0",
-			"1.3",
-			"1"
+			"none"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -899,6 +939,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"drop-down-list-options",
 			"timestamp",
 			"images/_common/",
 			"xfzq-layout-ie8.min",
@@ -919,53 +960,142 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app-dev/styles/base/theme-_default.css",
+					"file": "app-dev/scripts/base/base.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 14555,
+						"buffer_size": 12225,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1705,
-								1705
+								15,
+								15
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2040.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app-dev/html/xfzq-close-installments-step-1-choose-bank-card.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7227,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2769,
+								2781
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 1020.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app-dev/html/xfzq-close-installments-step-2-proceed.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7358,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2717,
+								2717
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 1000.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "app-dev/styles/base/base.css",
+					"buffer": 3,
+					"file": "/D/Users/wulechuan/Desktop/OneDrive/事业/tab-panel/乐川的tab-panel-pair逻辑.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 41301,
+						"buffer_size": 2227,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								29157,
-								29157
+								634,
+								634
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1080.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app-dev/styles/base/base.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 41335,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								29216,
+								29216
 							]
 						],
 						"settings":
@@ -974,10 +1104,68 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2385.0,
+						"translation.y": 28413.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app-dev/styles/base/layout.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13393,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1221,
+								1221
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1333.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app-dev/styles/pages/xfzq-layout.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19657,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1585,
+								1587
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1073.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -1032,16 +1220,44 @@
 		"selected_items":
 		[
 			[
+				"step",
+				"app-dev\\html\\xfzq-close-installments-step-2-proceed.html"
+			],
+			[
+				"closst",
+				"app-dev\\html\\xfzq-close-installments-step-1-choose-bank-card.html"
+			],
+			[
+				"recen",
+				"app-dev\\html\\xfzq-bills-recent.html"
+			],
+			[
+				"basejs",
+				"app-dev\\scripts\\base\\base.js"
+			],
+			[
+				"xfly",
+				"app-dev\\styles\\pages\\xfzq-layout.css"
+			],
+			[
+				"layou",
+				"app-dev\\styles\\base\\layout.css"
+			],
+			[
+				"ba",
+				"app-dev\\scripts\\base\\base.js"
+			],
+			[
+				"clos",
+				"app-dev\\scripts\\pages\\xfzq-page-close-installments.js"
+			],
+			[
 				"base",
 				"app-dev\\styles\\base\\base.css"
 			],
 			[
 				"them",
 				"app-dev\\styles\\base\\theme-_default.css"
-			],
-			[
-				"clos",
-				"app-dev\\html\\xfzq-close-installments-list.html"
 			],
 			[
 				"clo",
@@ -1062,10 +1278,6 @@
 			[
 				"step2",
 				"app-dev\\html\\xfzq-close-installments-step-2-proceed.html"
-			],
-			[
-				"step",
-				"app-dev\\html\\xfzq-close-installments-step-1-choose-bank-card.html"
 			],
 			[
 				"basej",
@@ -1158,10 +1370,6 @@
 			[
 				"past",
 				"app-dev\\html\\xfzq-bills-past.html"
-			],
-			[
-				"layou",
-				"app-dev\\styles\\pages\\xfzq-layout.css"
 			],
 			[
 				"layout",
@@ -1384,10 +1592,6 @@
 				"app-dev\\html\\user-avatar.html"
 			],
 			[
-				"ba",
-				"app-dev\\scripts\\base\\base.js"
-			],
-			[
 				"taiyx",
 				"app-dev\\scripts\\pages\\xfzq-page-help-desk-cate-taiyx.js"
 			],
@@ -1526,22 +1730,6 @@
 			[
 				"userinfo",
 				"app-dev\\html-snippets\\module-xfzq-user-info-bar.html"
-			],
-			[
-				"chiefpart",
-				"app-dev\\html-snippets\\module-xfzq-page-chief-part-wrap-begin.html"
-			],
-			[
-				"indexht",
-				"app-dev\\index.html"
-			],
-			[
-				"iconfon",
-				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
-			],
-			[
-				"befor",
-				"app-dev\\html-snippets\\tag-head-before-title.html"
 			]
 		],
 		"width": 0.0

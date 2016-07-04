@@ -1425,14 +1425,12 @@ label.deco-input {
 	}
 
 	.drop-down-list .drop-down-list-current-value {
-		width: 100%;
-		height: 100%;
-		margin: 0;
 		border: 0;
 		padding: 0;
+		margin: -1px 0; /* borders */
 	}
 
-	.drop-down-list .drop-down-list-options-list {
+	.drop-down-list .drop-down-list-options {
 		display: none;
 		position: absolute;
 		left: -1px;
@@ -1445,12 +1443,15 @@ label.deco-input {
 		border-width: inherit;
 		border-top-width: 0; 
 	}
-	.drop-down-list.hover-to-show-options:hover .drop-down-list-options-list,
-	.drop-down-list.options-list-shown .drop-down-list-options-list {
+	.drop-down-list .drop-down-list-option {
+		box-sizing: border-box;
+	}
+	.drop-down-list.hover-to-show-options:hover .drop-down-list-options,
+	.drop-down-list.options-list-shown .drop-down-list-options {
 		display: block;
 	}
-	.drop-down-list-options-list .menu-item > .label *,
-	.drop-down-list-options-list .menu-item > .label{
+	.drop-down-list-options .menu-item > .label *,
+	.drop-down-list-options .menu-item > .label{
 		transition-property: background-color; /* avoiding transition text colors for webkit */
 	}
 

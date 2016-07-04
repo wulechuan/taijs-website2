@@ -70,14 +70,15 @@
 .drop-down-list {
 	}
 
-	.drop-down-list .drop-down-list-options-list {
+	.drop-down-list .drop-down-list-options {
 		transition: none!important;
 		transform: scaleY(1) translate(0,0);
 		animation: menu-scales-up 0.22s;
 	    animation-timing-function: cubic-bezier(.19,1.08,.63,1.36);
 	}
 
-	.drop-down-list-option.choose-bank {
+	.drop-down-list.choose-bank .drop-down-list-option {
+		display: block;
 		padding: 11px 20px;
 		min-height: 47px;
 		line-height: 25px;

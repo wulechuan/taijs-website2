@@ -330,9 +330,9 @@
     }
 
 
-	var $allListItems = $('.tabular .f-list > li');
+	var $allTabularListItems = $('.tabular .f-list > li');
 
-	$allListItems.each(function () {
+	$allTabularListItems.each(function () {
 		var listItem = this;
 		var $listItem = $(this);
 
@@ -434,6 +434,26 @@
 				}
 			}
 		});
+	});
+
+
+	var allDropDownLists = $('.drop-down-list').each(function () {
+		var $currentValueContainer = $(this).find('.drop-down-list-current-value');
+		var $options = $(this).find('.drop-down-list-options > li'); // assuming there is one one level of menu
+
+		_chooseOption(null);
+
+		$options.on('click', function () {
+			_chooseOption(this);
+		});
+
+		function _chooseOption(chosenOption) {
+			if (!chosenOption) {
+				$currentValueContainer.innerHTML = '';
+				return true;
+			}
+			$currentValueContainer.html($(chosenOption).html());
+		}
 	});
 })();
 

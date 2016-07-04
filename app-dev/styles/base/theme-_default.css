@@ -450,7 +450,7 @@ label.deco-input {
 .drop-down-list {
 	}
 	.drop-down-list,
-	.drop-down-list .drop-down-list-options-list {
+	.drop-down-list .drop-down-list-options {
 		border-color: #dcdcdc;
 		background-color: white;
 	}
