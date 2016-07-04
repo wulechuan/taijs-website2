@@ -437,6 +437,53 @@ dd {
 				to { transform: scale(0.1) rotateZ(-0deg); opacity: 0; visibility: hidden; }
 			}
 
+		*[class*="icon-bank-cn"] {
+			position: relative;
+		}
+		*[class*="icon-bank-cn"]:before {
+			content: '';
+			position: absolute;
+			left: -2.5px;
+			top: -2.5px;
+			display: block;
+			width: 25px;
+			height: 25px;
+			background-repeat: no-repeat;
+			background-image: url(../../images/_common/sprite-logos-china-banks-20x20.png);
+		}
+
+		.icon-bank-cn-icbc:before           { background-position: 0px   -25px; }
+		.icon-bank-cn-cmb:before            { background-position: 0px   -50px; }
+		.icon-bank-cn-ccb:before            { background-position: 0px   -75px; }
+		.icon-bank-cn-abc:before            { background-position: 0px  -100px; }
+		.icon-bank-cn-boc:before            { background-position: 0px  -125px; }
+		.icon-bank-cn-bankcomm:before       { background-position: 0px  -150px; }
+		.icon-bank-cn-psbc:before           { background-position: 0px  -175px; }
+		.icon-bank-cn-citic:before          { background-position: 0px  -200px; }
+		.icon-bank-cn-cmbc:before           { background-position: 0px  -225px; }
+		.icon-bank-cn-cib:before            { background-position: 0px  -250px; }
+		.icon-bank-cn-hxb:before            { background-position: 0px  -275px; }
+		.icon-bank-cn-ceb:before            { background-position: 0px  -300px; }
+		.icon-bank-cn-spdb:before           { background-position: 0px  -325px; }
+		.icon-bank-cn-bankofbeijing:before  { background-position: 0px  -350px; }
+		.icon-bank-cn-bankofshanghai:before { background-position: 0px  -375px; }
+
+		.icon-hover-trigger:hover .icon-bank-cn-icbc:before           { background-position: -25px   -25px; }
+		.icon-hover-trigger:hover .icon-bank-cn-cmb:before            { background-position: -25px   -50px; }
+		.icon-hover-trigger:hover .icon-bank-cn-ccb:before            { background-position: -25px   -75px; }
+		.icon-hover-trigger:hover .icon-bank-cn-abc:before            { background-position: -25px  -100px; }
+		.icon-hover-trigger:hover .icon-bank-cn-boc:before            { background-position: -25px  -125px; }
+		.icon-hover-trigger:hover .icon-bank-cn-bankcomm:before       { background-position: -25px  -150px; }
+		.icon-hover-trigger:hover .icon-bank-cn-psbc:before           { background-position: -25px  -175px; }
+		.icon-hover-trigger:hover .icon-bank-cn-citic:before          { background-position: -25px  -200px; }
+		.icon-hover-trigger:hover .icon-bank-cn-cmbc:before           { background-position: -25px  -225px; }
+		.icon-hover-trigger:hover .icon-bank-cn-cib:before            { background-position: -25px  -250px; }
+		.icon-hover-trigger:hover .icon-bank-cn-hxb:before            { background-position: -25px  -275px; }
+		.icon-hover-trigger:hover .icon-bank-cn-ceb:before            { background-position: -25px  -300px; }
+		.icon-hover-trigger:hover .icon-bank-cn-spdb:before           { background-position: -25px  -325px; }
+		.icon-hover-trigger:hover .icon-bank-cn-bankofbeijing:before  { background-position: -25px  -350px; }
+		.icon-hover-trigger:hover .icon-bank-cn-bankofshanghai:before { background-position: -25px  -375px; }
+
 
 .empty-content-hint {
 	box-sizing: border-box;

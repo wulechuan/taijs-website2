@@ -82,7 +82,12 @@
 		padding: 11px 20px;
 		min-height: 47px;
 		line-height: 25px;
-	}
+		}
+		.drop-down-list.choose-bank .drop-down-list-option .icon {
+			vertical-align: middle;
+			margin-top: -5px;
+			margin-right: 0.5em;
+		}
 
 
 #app-header {

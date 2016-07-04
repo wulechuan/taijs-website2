@@ -1,8 +1,7 @@
 /* ----- layout definition begin --------------- */
-	.drop-down-list-option.choose-bank {
+	.drop-down-list.choose-bank .drop-down-list-option {
 		min-height: 25px;
 	}
-
 	#page-sidebar-nav .menu-item > a > .label,
 	#page-sidebar-nav .menu-item > .label {
 		min-height: 21px;
