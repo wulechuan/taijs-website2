@@ -346,16 +346,7 @@
 			}
 		}
 
-		var $checkbox = $listItem.find('input[type="checkbox"]');
-		setTimeout(function () { /* must dealy because ie8 to ie11 updates cached "checked" statuses very late */
-			_updateListItemAccordingToCheckboxStatus($checkbox[0]);
-		}, 100);
-
-		$checkbox.on('change', function(event) {
-			if (event) event.stopPropagation();
-
-			_updateListItemAccordingToCheckboxStatus(this);
-
+		function _playAnimationForIE8AndIE9OnCheckboxChange() {
 			if (isIE8 || isIE9) {
 				function _zoomToFactor(factor) {
 					if (factor===1) {
@@ -433,7 +424,30 @@
 					_doZoomDelay(i);
 				}
 			}
-		});
+		}
+
+		var $checkbox = $listItem.find('input[type="checkbox"]');
+		var checkbox = $checkbox[0];
+		if (checkbox) {
+			setTimeout(function () { /* Initializing selection status; And this must dealy because ie8 to ie11 updates cached "checked" statuses very late */
+				_updateListItemAccordingToCheckboxStatus(checkbox);
+			}, 100);
+
+			$checkbox.on('change', function() {
+				_updateListItemAccordingToCheckboxStatus(this);
+				_playAnimationForIE8AndIE9OnCheckboxChange();
+			});
+
+			$checkbox.on('click', function(event) {
+				if (event) event.stopPropagation();
+			});
+
+			$listItem.on('click', function () {
+				checkbox.checked = !checkbox.checked;
+				_updateListItemAccordingToCheckboxStatus(checkbox);
+				_playAnimationForIE8AndIE9OnCheckboxChange();
+			});
+		}
 	});
 
 
