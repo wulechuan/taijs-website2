@@ -130,10 +130,11 @@
 			font-weight: bold;
 			letter-spacing: 0.125em;
 		}
-		/* .tabular > .header h3,
+		.tabular > .header h3,
 		.tabular > .header h2 {
-			font-weight: normal;
-		} */
+			/* font-weight: normal; */
+			text-shadow: none;
+		}
 		.tabular > .footer .last-cell,
 		.tabular > .footer {
 			font-size: 14px;
