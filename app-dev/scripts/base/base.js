@@ -478,6 +478,7 @@
 			}, 100);
 
 			$radio.on('change', function() {
+				console.log(this, this.checked, this.value);
 				_updateListItemAccordingToRadioStatus(this);
 				_playAnimationForIE8AndIE9OnStatusChange();
 			});

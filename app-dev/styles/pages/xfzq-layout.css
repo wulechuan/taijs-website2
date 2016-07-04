@@ -754,8 +754,8 @@
 		.tab-list > li.current {
 			color: #157dff;
 			border-color: #157dff;
-			text-shadow: 0 0 1px rgba(21, 125, 255, 0.5);
-			text-shadow: 0 0 1.5px rgba(21, 125, 255, 0.5)\9\0; /* ie10, ie11 */
+			/* text-shadow: 0 0 1px rgba(21, 125, 255, 0.5);
+			text-shadow: 0 0 1.5px rgba(21, 125, 255, 0.5)\9\0; */ /* ie10, ie11 */
 		}
 
 		.tab-list > li:hover {
@@ -769,8 +769,8 @@
 			.tab-list.has-single-tab > li.current {
 				color: black;
 				border-color: transparent;
-				text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
-				text-shadow: 0 0 1.5px rgba(0, 0, 0, 0.5)\9\0; /* ie10, ie11 */
+				/* text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+				text-shadow: 0 0 1.5px rgba(0, 0, 0, 0.5)\9\0; */ /* ie10, ie11 */
 			}
 			.tab-list.has-single-tab > li:hover {
 				background-color: transparent;

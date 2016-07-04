@@ -1686,7 +1686,10 @@ label.deco-input {
 			animation: tabular-list-item-deselected 0.5s ease-out;
 			z-index: 0;
 		}
-		.tabular > .f-list > li.selected {
+		.tabular > .f-list > li.selectable {
+			cursor: pointer;
+		}
+		.tabular > .f-list > li.selectable.selected {
 			animation: tabular-list-item-selected 0.5s ease-out;
 		}
 		@keyframes tabular-list-reveal-items {

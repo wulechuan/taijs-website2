@@ -51,8 +51,8 @@ html, body {
 .thick-text-rendering {
 	color: black;
 	/* -webkit-text-stroke-width: 0.25px; */ /* cause the animation noticable slow */
-	text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
-	text-shadow: 0 0 1.5px rgba(0, 0, 0, 0.5)\9\0; /* ie10, ie11 */
+	/* text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+	text-shadow: 0 0 1.5px rgba(0, 0, 0, 0.5)\9\0; */ /* ie10, ie11 */
 }
 
 
@@ -74,8 +74,8 @@ em {
 	.thick-text-rendering em,
 	em .thick-text-rendering {
 		color: #ff291d;
-		text-shadow: 0 0 1px rgba(255, 41, 29, 0.5);
-		text-shadow: 0 0 1.5px rgba(255, 41, 29, 0.5)\9\0; /* ie10, ie11 */
+		/* text-shadow: 0 0 1px rgba(255, 41, 29, 0.5);
+		text-shadow: 0 0 1.5px rgba(255, 41, 29, 0.5)\9\0; */ /* ie10, ie11 */
 	}
 
 .article h3.color-white,
