@@ -483,19 +483,21 @@
 })();
 
 
-(function fakeLogics() {
-	var $listsBlocks = $('.lists-block').filter(function () {
-		return !$(this).hasClass('close-installments');
-	});
-	$listsBlocks.each(function () {
-		var $listsBlock = $(this);
+// (function fakeLogics() {
+// 	return false;
 
-		var $lists = $listsBlock.find('.lists').show();
-		var $empty = $listsBlock.find('.empty-content-hint').hide();
+// 	var $listsBlocks = $('.lists-block').filter(function () {
+// 		return !$(this).hasClass('close-installments');
+// 	});
+// 	$listsBlocks.each(function () {
+// 		var $listsBlock = $(this);
 
-		$listsBlock.on('click', function () {
-			$lists.toggle();
-			$empty.toggle();
-		});
-	});
-})();
+// 		var $lists = $listsBlock.find('.lists').show();
+// 		var $empty = $listsBlock.find('.empty-content-hint').hide();
+
+// 		$listsBlock.on('click', function () {
+// 			$lists.toggle();
+// 			$empty.toggle();
+// 		});
+// 	});
+// })();

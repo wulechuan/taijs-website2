@@ -1605,6 +1605,11 @@ label.deco-input {
 		text-align: right;
 		}
 
+		.form > .row > .col.narrow:first-child {
+			width: auto;
+			text-align: left;
+		}
+
 		.form > .row > .col:first-child .label {
 			/* display: inline-block; */
 			margin-right: 36px;

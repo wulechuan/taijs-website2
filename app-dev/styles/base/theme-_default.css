@@ -96,7 +96,7 @@ blockquote {
 	}
 
 
-a, a:link, a:visited {
+a, a:visited {
 	color: #157dff;
 	}
 
@@ -126,7 +126,8 @@ input {
 	input[type="button"],
 	input[type="submit"],
 	input[type="reset"],
-	[role="button"],
+	a[role="button"],/* this line is for ie8 */
+	a[role="button"],
 	button {
 		color: white;
 		border-color: #157dff;

@@ -52,7 +52,7 @@ button {
 
     .pagination [role="button"].page-number.current:hover > .ie-bg,
     .pagination button.page-number.current:hover          > .ie-bg,
-    [role="button"]                                       > .ie-bg,
+    [role="button"]:hover                                 > .ie-bg,
     button:hover                                          > .ie-bg {
         color: #3f93ff;
     }

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"chec",
+				"checkbox"
+			],
+			[
 				"b",
 				"content-box"
 			],
@@ -34,10 +38,6 @@
 			[
 				"box",
 				"box-sizing"
-			],
-			[
-				"chec",
-				"checked"
 			],
 			[
 				"che",
@@ -520,58 +520,13 @@
 	"buffers":
 	[
 		{
-			"file": "app-dev/scripts/base/base.js",
+			"contents": "<!DOCTYPE html>\n<html>\n<head>\n    <!-- inject:headBeforeTitle:html --><!-- endinject -->\n    <title>分期</title>\n    <!-- inject:headAfterTitle:html --><!-- endinject -->\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"../styles/pages/xfzq-layout.min.css\">\n    <!--[if lte IE 8]>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"../styles/pages/xfzq-layout-ie8.min.css\">\n    <![endif]-->\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"../styles/pages/xfzq-page-opening-installments.min.css\">\n</head>\n<body>\n<!-- inject:bodyBegin:html --><!-- endinject -->\n\n<!-- inject:appHeader:html --><!-- endinject -->\n\n<!-- inject:appBodyWrapBegin:html --><!-- endinject -->\n\n<!-- inject:xfzqUserInfoBar:html --><!-- endinject -->\n\n<!-- inject:xfzqPageWrapBegin:html --><!-- endinject -->\n\n<div role=\"breadcrumbs\">\n    <nav class=\"breadcrumbs\">\n        <ul>\n            <li><a href=\"http://wwwuat.taijs.com/\">首页</a></li>\n            <li><a href=\"#\">用户中心</a></li>\n            <li><a href=\"../index.html\">泰有信</a></li>\n            <li><a href=\"../html/xfzq-bills-recent.html\">账单</a></li>\n            <li><span>分期</span></li>\n        </ul>\n    </nav>\n</div>\n\n<!-- inject:xfzqPageChiefPartWrapBegin:html --><!-- endinject -->\n\n<div class=\"content has-sidebar\">\n    <script type=\"text/javascript\">window.psn = { level1: 'taiyx', level2: 'opening-installments' };</script>\n    <!-- inject:xfzqPageSidebar0:html --><!-- endinject -->\n\n    <!-- inject:xfzqPageContentWrapBegin:html --><!-- endinject -->\n    <div class=\"tab-panel-set\">\n        <ul role=\"tablist\" class=\"tab-list has-single-tab\"\n            ><li role=\"tab\"\n                          aria-controls=\"panel-opening-installments\"\n                        aria-labelledby=\"panel-tab-opening-installments\"\n                ><span class=\"label\" id=\"panel-tab-opening-installments\">分期</span\n            ></li\n        ></ul>\n        <div class=\"panel-group\">\n            <div role=\"tabpanel\" class=\"panel\" aria-hidden=\"false\" id=\"panel-opening-installments\">\n                <form action=\"../html/xfzq-opening-installments-step-1-choose-bank-card.html\">\n                <div class=\"article\">\n                    <article>\n                        <div class=\"lists-block tabular-lists opening-installments\">\n                            <div class=\"empty-content-hint\"></div>\n\n                            <div class=\"lists\">\n                                <div class=\"tabular\">\n                                    <ul class=\"f-list\">\n                                        <li\n                                            ><span class=\"cell caption-cell value approach\">2015年10月账单第2-6期</span\n                                            ><span class=\"cell value amount currency currency-rmb\">300.00</span\n                                            ><span class=\"cell last-cell row-radio\"\n                                                ><input type=\"checkbox\" name=\"opening-installments-radio-1\"\n                                                                          id=\"opening-installments-radio-1\"\n                                                ><label                  for=\"opening-installments-radio-1\"\n                                                    class=\"deco-input\"\n                                                ></label\n                                            ></span\n                                        ></li>\n                                        <li\n                                            ><span class=\"cell caption-cell value approach\">2015年11月账单第2-9期</span\n                                            ><span class=\"cell value amount currency currency-rmb\">100.00</span\n                                            ><span class=\"cell last-cell row-radio\"\n                                                ><input type=\"checkbox\" name=\"opening-installments-radio-2\"\n                                                                          id=\"opening-installments-radio-2\"\n                                                ><label                  for=\"opening-installments-radio-2\"\n                                                    class=\"deco-input\"\n                                                ></label\n                                            ></span\n                                        ></li>\n                                        <li\n                                            ><span class=\"cell caption-cell value approach\">2016年01月账单第1-3期</span\n                                            ><span class=\"cell value amount currency currency-rmb\">200.00</span\n                                            ><span class=\"cell last-cell row-radio\"\n                                                ><input type=\"checkbox\" name=\"opening-installments-radio-3\"\n                                                                          id=\"opening-installments-radio-3\"\n                                                ><label                  for=\"opening-installments-radio-3\"\n                                                    class=\"deco-input\"\n                                                ></label\n                                            ></span\n                                        ></li>\n                                        <li\n                                            ><span class=\"cell caption-cell value approach\">2016年02月账单第1-3期</span\n                                            ><span class=\"cell value amount currency currency-rmb\">1,253.00</span\n                                            ><span class=\"cell last-cell row-radio\"\n                                                ><input type=\"checkbox\" name=\"opening-installments-radio-4\"\n                                                                          id=\"opening-installments-radio-4\"\n                                                ><label                  for=\"opening-installments-radio-4\"\n                                                    class=\"deco-input\"\n                                                ></label\n                                            ></span\n                                        ></li>\n                                        <li\n                                            ><span class=\"cell caption-cell value approach\">2016年03月账单第2-6期</span\n                                            ><span class=\"cell value amount currency currency-rmb\">300.00</span\n                                            ><span class=\"cell last-cell row-radio\"\n                                                ><input type=\"checkbox\" name=\"opening-installments-radio-5\"\n                                                                          id=\"opening-installments-radio-5\"\n                                                ><label                  for=\"opening-installments-radio-5\"\n                                                    class=\"deco-input\"\n                                                ></label\n                                            ></span\n                                        ></li>\n                                    </ul>\n\n                                    <div class=\"footer\"\n                                        ><span class=\"cell last-cell\">\n                                            <button class=\"rounded-corners has-borders size-std-regular\" id=\"button-opening-selected-installments\">\n                                                <span class=\"ie-borders\"><i class=\"corner-1\"></i><i class=\"corner-2\"></i><i class=\"corner-3\"></i><i class=\"corner-4\"></i></span>\n                                                <span class=\"ie-bg\"><i class=\"corner-1\"></i><i class=\"corner-2\"></i><i class=\"corner-3\"></i><i class=\"corner-4\"></i></span>\n                                                <span class=\"label\">确认分期</span>\n                                            </button>\n                                        </span\n                                    ></div>\n                                </div>\n\n                                <div class=\"pagination\"\n                                    ><a role=\"button\" href=\"http://fake-url.com/sub-page?page=1\" \n                                        >\n                                        <span class=\"ie-bg\"><i class=\"corner-1\"></i><i class=\"corner-2\"></i><i class=\"corner-3\"></i><i class=\"corner-4\"></i></span>\n                                        <span class=\"ie-borders\"><i class=\"corner-1\"></i><i class=\"corner-2\"></i><i class=\"corner-3\"></i><i class=\"corner-4\"></i></span>\n                                        <span class=\"label\">上一页</span>\n                                    </a\n                                    ><a role=\"button\" href=\"http://fake-url.com/sub-page?page=1\" \n                                         class=\"page-number\">\n                                        <span class=\"ie-bg\"><i class=\"corner-1\"></i><i class=\"corner-2\"></i><i class=\"corner-3\"></i><i class=\"corner-4\"></i></span>\n                                        <span class=\"ie-borders\"><i class=\"corner-1\"></i><i class=\"corner-2\"></i><i class=\"corner-3\"></i><i class=\"corner-4\"></i></span>\n                                        <span class=\"label\">1</span>\n                                    </a\n                                    ><a role=\"button\"\n                                        class=\"page-number current\">\n                                        <span class=\"ie-bg\"><i class=\"corner-1\"></i><i class=\"corner-2\"></i><i class=\"corner-3\"></i><i class=\"corner-4\"></i></span>\n                                        <span class=\"ie-borders\"><i class=\"corner-1\"></i><i class=\"corner-2\"></i><i class=\"corner-3\"></i><i class=\"corner-4\"></i></span>\n                                        <span class=\"label\">2</span>\n                                    </a\n                                    ><a role=\"button\" href=\"http://fake-url.com/sub-page?page=3\" \n                                        class=\"page-number\">\n                                        <span class=\"ie-bg\"><i class=\"corner-1\"></i><i class=\"corner-2\"></i><i class=\"corner-3\"></i><i class=\"corner-4\"></i></span>\n                                        <span class=\"ie-borders\"><i class=\"corner-1\"></i><i class=\"corner-2\"></i><i class=\"corner-3\"></i><i class=\"corner-4\"></i></span>\n                                        <span class=\"label\">3</span>\n                                    </a\n                                    ><a role=\"button\" href=\"http://fake-url.com/sub-page?page=4\" \n                                        >\n                                        <span class=\"ie-bg\"><i class=\"corner-1\"></i><i class=\"corner-2\"></i><i class=\"corner-3\"></i><i class=\"corner-4\"></i></span>\n                                        <span class=\"ie-borders\"><i class=\"corner-1\"></i><i class=\"corner-2\"></i><i class=\"corner-3\"></i><i class=\"corner-4\"></i></span>\n                                        <span class=\"label\">下一页</span>\n                                    </a\n                                ></div>\n                            </div>\n                        </div>\n                    </article>\n                </div>\n                </form>\n            </div>\n        </div>\n    </div>\n    <!-- inject:xfzqPageContentWrapEnd:html --><!-- endinject -->\n</div>\n\n<!-- inject:xfzqPageChiefPartWrapEnd:html --><!-- endinject -->\n\n<!-- inject:xfzqPageWrapEnd:html --><!-- endinject -->\n\n<!-- inject:appBodyWrapEnd:html --><!-- endinject -->\n\n<!-- inject:appFooter:html --><!-- endinject -->\n\n<!-- inject:popupLayersWrapBegin:html --><!-- endinject -->\n<!-- inject:popupLayersWrapEnd:html --><!-- endinject -->\n\n<!-- inject:bodyEnd:html --><!-- endinject -->\n<script src=\"../scripts/pages/xfzq-page-opening-installments.min.js\"></script>\n</body></html>",
+			"file": "app-dev/html/xfzq-opening-installments-list.html",
+			"file_size": 11471,
+			"file_write_time": 131120995167094025,
 			"settings":
 			{
-				"buffer_size": 12225,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app-dev/html/xfzq-close-installments-step-1-choose-bank-card.html",
-			"settings":
-			{
-				"buffer_size": 7227,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app-dev/html/xfzq-close-installments-step-2-proceed.html",
-			"settings":
-			{
-				"buffer_size": 7358,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/D/Users/wulechuan/Desktop/OneDrive/事业/tab-panel/乐川的tab-panel-pair逻辑.js",
-			"settings":
-			{
-				"buffer_size": 2227,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app-dev/styles/base/base.css",
-			"settings":
-			{
-				"buffer_size": 41335,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app-dev/styles/base/layout.css",
-			"settings":
-			{
-				"buffer_size": 13393,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app-dev/styles/pages/xfzq-layout.css",
-			"settings":
-			{
-				"buffer_size": 19657,
+				"buffer_size": 11707,
 				"line_ending": "Windows"
 			}
 		}
@@ -650,36 +605,39 @@
 	],
 	"file_history":
 	[
-		"/D/Users/wulechuan/Desktop/OneDrive/事业/tab-panel/乐川的tab-panel-pair逻辑.js",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-recent.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-step-1-choose-bank-card.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-step-2-proceed.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-create-installments.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default-ie8.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-repayments.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk-index.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk-qna-list.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-orders.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bill-records-details.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-past.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-list.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-header.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/index.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/index.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-sidebar-0.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout-ie8.css",
+		"/D/Users/wulechuan/Desktop/构建思路讲解001.txt",
+		"/D/Users/wulechuan/Desktop/OneDrive/事业/tab-panel/乐川的tab-panel-pair逻辑.js",
 		"/D/Users/wulechuan/Desktop/OneDrive/事业/tab-panel/乐川的tab-panel-pair的页面.html",
 		"/D/Users/wulechuan/Desktop/tab-panel/乐川的tab-panel-pair逻辑.js",
 		"/D/Users/wulechuan/Desktop/tab-panel/乐川的tab-panel-pair的页面.html",
 		"/D/Users/wulechuan/Desktop/乐川的tab-panel-pair的页面.html",
 		"/D/Users/wulechuan/Desktop/乐川的tab-panel-pair逻辑.js",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-recent.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-close-installments.js",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-step-2-proceed.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-list.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/_reset.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout-ie8.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-repayments.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-past.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bill-records-details.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-sidebar-0.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-header.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-orders.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/index.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/index.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/index.js",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk-index.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default-ie8.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-page-help-desk.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-bills-list.js",
@@ -692,7 +650,6 @@
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-user-info-bar.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-base.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8-theme.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk-qna-list.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/user-avatar.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-base.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bill-past-records-details.html",
@@ -775,9 +732,7 @@
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/module-sidebar-0.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/vendors/bootstrap.css",
 		"/D/p/dev/g.bat",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/html/page-list.html",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/html/page-2.html",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/gulpfile.js"
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/app-dev/html/page-list.html"
 	],
 	"find":
 	{
@@ -804,6 +759,64 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"checkbox",
+			"-checkbox-",
+			"id=\"opening-installments-checkbox-",
+			"checkbox",
+			"row-checkbox",
+			"close-",
+			"<li><a href=\"#\">分期</a></li>",
+			"button",
+			"a clas",
+			"<a clas",
+			"<li><a href=\"#\">账单</a></li>",
+			"<li><a href=\"../html/index.html\">泰有信</a></li>",
+			"li><a href=\"../index.html\">首页</a></li>",
+			"<li><a href=\"#\">泰有信</a></li>",
+			" <li><a href=\"#\">泰有信</a></li>",
+			"div class=\"ie-bg\"",
+			"div class=\"ie-bg\"><i class=\"corner-1\"></i><i class=\"corner-2\"></i><i class=\"corner-3\"></i><i class=\"corner-4\"></i></div",
+			"<div class=\"ie-borders\"><i class=\"corner-1\"></i><i class=\"corner-2\"></i><i class=\"corner-3\"></i><i class=\"corner-4\"></i></div",
+			"ded-corners bg-transparent",
+			"button",
+			"<div class=\"ie-borders\"><i class=\"corner-1\"></i><i class=\"corner-2\"></i><i class=\"corner-3\"></i><i class=\"corner-4\"></i></div",
+			"lass=\"ie-borders",
+			"div",
+			"xfzq-.h",
+			"button",
+			"close-i",
+			"invalid",
+			"#",
+			"tab",
+			"panel-tab-issued-bills",
+			"panel",
+			"processParametersPassedIn",
+			"length",
+			"_updateListItemAccordingToCheckboxStatus",
+			"_playAnimationForIE8AndIE9OnCheckboxChange",
+			"_updateListItemAccordingToCheckboxStatus",
+			"_playAnimationForIE8AndIE9",
+			"_toggleCheckboxForListItem",
+			"_updateListItemAccordingToCheckboxStatus",
+			"argument",
+			"h1",
+			" icon-hover-trigger",
+			"on: -50p",
+			"-50p",
+			"icon-hover-trigger",
+			"label drop-down-list-option",
+			" choose-bank",
+			"label drop-down-list-option",
+			"tion: 0",
+			"{ backg",
+			" { backgr",
+			" {",
+			":   0",
+			"   ",
+			"iconfont",
+			"pagination",
+			"argument",
+			"我:",
 			"argument",
 			"type",
 			"panel-2",
@@ -873,65 +886,7 @@
 			"0.9870",
 			"tempStageCounter",
 			"msPerspective",
-			"1px",
-			"aniStage",
-			"oldHeight",
-			"originalVertMargin",
-			"zoomOutFactor",
-			"factor",
-			"990",
-			"selected",
-			"deselected",
-			"lar-list-ite",
-			"item",
-			"selected",
-			"deselected",
-			"play",
-			"abular-list-item-selected",
-			"Y",
-			"translate(0, -16px)",
-			"scales",
-			"tabular",
-			"tempStageCounter",
-			"currency",
-			"zoomToFactor",
-			"zoomOutFactor",
-			"argument",
-			"10",
-			"white",
-			"this",
-			"style",
-			"display",
-			"listItem",
-			"argument",
-			"none",
-			"display",
-			"argument",
-			"position",
-			"hidden",
-			"none",
-			"display",
-			"hide",
-			"nextLitsItem",
-			"hide",
-			"shouldForceUpdatingSomeElements",
-			"thisFList",
-			"2px",
-			"left",
-			"hidden",
-			"thisFList",
-			"show",
-			"s=\"cell value amount currency currency-",
-			"an class=\"cell value amount currency currency",
-			"pan class=\"cell              value bill-total-amount currency currency-rmb\"",
-			"currency",
-			"argument",
-			"elementsHaveBeforeAfterTexts",
-			"$listItem[0]",
-			"none",
-			"visibility",
-			"argument",
-			"none"
+			"1px"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -939,6 +894,14 @@
 		"regex": false,
 		"replace_history":
 		[
+			"<li><a href=\"../html/xfzq-opening-installments-list.html\">分期</a></li>",
+			"<li><a href=\"../html/xfzq-installments.html\">分期</a></li>",
+			"<li><a href=\"../html/xfzq-bills-recent.html\">账单</a></li>",
+			"<li><a href=\"../index.html\">泰有信</a></li>",
+			"li><a href=\"http://wwwuat.taijs.com/\">首页</a></li>",
+			"<li><a href=\"../html/index.html\">泰有信</a></li>",
+			"span class=\"ie-bg\"><i class=\"corner-1\"></i><i class=\"corner-2\"></i><i class=\"corner-3\"></i><i class=\"corner-4\"></i></span",
+			"<span class=\"ie-borders\"><i class=\"corner-1\"></i><i class=\"corner-2\"></i><i class=\"corner-3\"></i><i class=\"corner-4\"></i></span",
 			"drop-down-list-options",
 			"timestamp",
 			"images/_common/",
@@ -960,212 +923,37 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app-dev/scripts/base/base.js",
+					"file": "app-dev/html/xfzq-opening-installments-list.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12225,
+						"buffer_size": 11707,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								15,
-								15
+								4704,
+								4737
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app-dev/html/xfzq-close-installments-step-1-choose-bank-card.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7227,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2769,
-								2781
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 1020.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app-dev/html/xfzq-close-installments-step-2-proceed.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7358,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2717,
-								2717
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 1000.0,
+						"translation.y": 1420.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/D/Users/wulechuan/Desktop/OneDrive/事业/tab-panel/乐川的tab-panel-pair逻辑.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2227,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								634,
-								634
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1080.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app-dev/styles/base/base.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 41335,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								29216,
-								29216
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 28413.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app-dev/styles/base/layout.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 13393,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1221,
-								1221
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1333.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app-dev/styles/pages/xfzq-layout.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 19657,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1585,
-								1587
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1073.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -1220,8 +1008,88 @@
 		"selected_items":
 		[
 			[
+				"rece",
+				"app-dev\\html\\xfzq-bills-recent.html"
+			],
+			[
+				"ie",
+				"app-dev\\styles\\base\\theme-_default-ie8.css"
+			],
+			[
+				"ie8",
+				"app-dev\\styles\\base\\base-ie8.css"
+			],
+			[
+				"themed",
+				"app-dev\\styles\\base\\theme-_default.css"
+			],
+			[
+				"installme",
+				"app-dev\\html\\xfzq-create-installments.html"
+			],
+			[
 				"step",
+				"app-dev\\html\\xfzq-close-installments-step-1-choose-bank-card.html"
+			],
+			[
+				"indexcss",
+				"app-dev\\styles\\pages\\index.css"
+			],
+			[
+				"index",
+				"app-dev\\index.html"
+			],
+			[
+				"billr",
+				"app-dev\\html\\xfzq-bills-recent.html"
+			],
+			[
+				"repay",
+				"app-dev\\html\\xfzq-repayments.html"
+			],
+			[
+				"insta",
+				"app-dev\\html\\xfzq-close-installments-list.html"
+			],
+			[
+				"order",
+				"app-dev\\html\\xfzq-orders.html"
+			],
+			[
+				"basejs",
+				"app-dev\\scripts\\base\\base.js"
+			],
+			[
+				"bills",
+				"app-dev\\html\\xfzq-bills-recent.html"
+			],
+			[
+				"sideba",
+				"app-dev\\html-snippets\\module-xfzq-page-sidebar-0.html"
+			],
+			[
+				"base",
+				"app-dev\\scripts\\base\\base.js"
+			],
+			[
+				"layou",
+				"app-dev\\styles\\pages\\xfzq-layout.css"
+			],
+			[
+				"rec",
+				"app-dev\\html\\xfzq-bills-recent.html"
+			],
+			[
+				"theme",
+				"app-dev\\styles\\base\\theme-_default.css"
+			],
+			[
+				"step2",
 				"app-dev\\html\\xfzq-close-installments-step-2-proceed.html"
+			],
+			[
+				"lay",
+				"app-dev\\styles\\base\\layout.css"
 			],
 			[
 				"closst",
@@ -1232,16 +1100,8 @@
 				"app-dev\\html\\xfzq-bills-recent.html"
 			],
 			[
-				"basejs",
-				"app-dev\\scripts\\base\\base.js"
-			],
-			[
 				"xfly",
 				"app-dev\\styles\\pages\\xfzq-layout.css"
-			],
-			[
-				"layou",
-				"app-dev\\styles\\base\\layout.css"
 			],
 			[
 				"ba",
@@ -1252,10 +1112,6 @@
 				"app-dev\\scripts\\pages\\xfzq-page-close-installments.js"
 			],
 			[
-				"base",
-				"app-dev\\styles\\base\\base.css"
-			],
-			[
 				"them",
 				"app-dev\\styles\\base\\theme-_default.css"
 			],
@@ -1264,20 +1120,8 @@
 				"app-dev\\scripts\\pages\\xfzq-page-close-installments.js"
 			],
 			[
-				"ie",
-				"app-dev\\styles\\pages\\xfzq-layout-ie8.css"
-			],
-			[
 				"res",
 				"app-dev\\styles\\base\\_reset.css"
-			],
-			[
-				"lay",
-				"app-dev\\styles\\base\\layout.css"
-			],
-			[
-				"step2",
-				"app-dev\\html\\xfzq-close-installments-step-2-proceed.html"
 			],
 			[
 				"basej",
@@ -1308,10 +1152,6 @@
 				"app-dev\\scripts\\pages\\xfzq-page-close-installments.js"
 			],
 			[
-				"order",
-				"app-dev\\html\\xfzq-orders.html"
-			],
-			[
 				"hea",
 				"app-dev\\html-snippets\\module-app-header.html"
 			],
@@ -1320,16 +1160,8 @@
 				"app-dev\\html-snippets\\module-xfzq-page-sidebar-0.html"
 			],
 			[
-				"rec",
-				"app-dev\\html\\xfzq-bills-recent.html"
-			],
-			[
 				"or",
 				"app-dev\\html\\xfzq-orders.html"
-			],
-			[
-				"sideba",
-				"app-dev\\html-snippets\\module-xfzq-page-sidebar-0.html"
 			],
 			[
 				"header",
@@ -1342,10 +1174,6 @@
 			[
 				"indexj",
 				"app-dev\\scripts\\pages\\index.js"
-			],
-			[
-				"index",
-				"app-dev\\html\\xfzq-help-desk-index.html"
 			],
 			[
 				"closh",
@@ -1380,24 +1208,12 @@
 				"app-dev\\html\\xfzq-repayments.html"
 			],
 			[
-				"rece",
-				"app-dev\\html\\xfzq-bills-recent.html"
-			],
-			[
 				"deta",
 				"app-dev\\html\\xfzq-bill-records-details.html"
 			],
 			[
-				"bills",
-				"app-dev\\html\\xfzq-bills-recent.html"
-			],
-			[
 				"hel",
 				"app-dev\\styles\\pages\\xfzq-page-help-desk.css"
-			],
-			[
-				"theme",
-				"app-dev\\styles\\base\\theme-_default.css"
 			],
 			[
 				"la",
@@ -1542,10 +1358,6 @@
 			[
 				"ind",
 				"app-dev\\index.html"
-			],
-			[
-				"ie8",
-				"app-dev\\styles\\base\\base-ie8-theme.css"
 			],
 			[
 				"head",
@@ -1704,32 +1516,8 @@
 				"app-dev\\styles\\pages\\index.css"
 			],
 			[
-				"indexcss",
-				"app-dev\\styles\\pages\\index.css"
-			],
-			[
 				"foo",
 				"app-dev\\html-snippets\\module-app-footer.html"
-			],
-			[
-				"in",
-				"app-dev\\index.html"
-			],
-			[
-				"userinf",
-				"app-dev\\html-snippets\\module-xfzq-user-info-bar.html"
-			],
-			[
-				"rese",
-				"app-dev\\styles\\base\\reset.css"
-			],
-			[
-				"",
-				"app-dev\\styles\\pages\\xfzq-base.css"
-			],
-			[
-				"userinfo",
-				"app-dev\\html-snippets\\module-xfzq-user-info-bar.html"
 			]
 		],
 		"width": 0.0
@@ -1737,9 +1525,13 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "",
+		"last_filter": "tep",
 		"selected_items":
 		[
+			[
+				"tep",
+				"D:\\p\\dev\\taijs\\taijs-website2\\taijs-website2.sublime-project"
+			],
 			[
 				"",
 				"D:\\p\\dev\\private\\wlc-web-front-end-learning-and-warming-up\\warm-up.sublime-project"
