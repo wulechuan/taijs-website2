@@ -498,6 +498,7 @@
 				margin-left: -0.25px\0; /* for fixing IE 8 rendering bug */
 			}
 
+			#credit-details-pane .content-panel .button-container [role="button"],
 			#credit-details-pane .content-panel .button-container button {
 				margin: 9.8px 0;
 				font-size: 12px;
