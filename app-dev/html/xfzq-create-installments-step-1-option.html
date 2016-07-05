@@ -8,7 +8,6 @@
     <!--[if lte IE 8]>
     <link rel="stylesheet" type="text/css" href="../styles/pages/xfzq-layout-ie8.min.css">
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="../styles/pages/xfzq-page-create-installments.min.css">
 </head>
 <body>
 <!-- inject:bodyBegin:html --><!-- endinject -->
@@ -43,14 +42,14 @@
     <div class="tab-panel-set">
         <ul role="tablist" class="tab-list has-single-tab"
             ><li role="tab"
-                          aria-controls="panel-create-installments"
-                        aria-labelledby="panel-tab-create-installments"
-                ><span class="label" id="panel-tab-create-installments">分期</span
+                          aria-controls="panel-choose-installments-plan"
+                        aria-labelledby="panel-tab-choose-installments-plan"
+                ><span class="label" id="panel-tab-choose-installments-plan">分期</span
             ></li
         ></ul>
         <div class="panel-group">
-            <div role="tabpanel" class="panel" aria-hidden="false" id="panel-create-installments">
-                <form action="../html/xfzq-create-installment-step-2-proceed.html">
+            <div role="tabpanel" class="panel" aria-hidden="false" id="panel-choose-installments-plan">
+                <form action="../html/xfzq-create-installments-step-2-proceed.html">
                 <div class="article">
                     <article>
                         <p>当前可分期还款金额<span value="">3,476.00</span
@@ -58,7 +57,7 @@
                         <div class="form">
                             <div class="row">
                                 <div class="col narrow"><span class="label">分期金额：</span></div>
-                                <div class="col"><input type="number" name="installment-amout"
+                                <div class="col"><input type="number" name="installmentsAmout" 
                                     ><div class="floating-layer-set floating-info-set layer-auto-hide layer-hover-to-show"
                                         ><div class="info-icon"><i class="iconfont icon-info-tip-circled"></i></div
                                         ><div class="locator">
@@ -76,7 +75,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="lists-block tabular-lists create-installments">
+                        <div class="lists-block tabular-lists choose-installments-plan">
                             <div class="empty-content-hint"></div>
 
                             <div class="lists">
@@ -93,9 +92,9 @@
                                             ><span class="cell value service-fee currency currency-rmb">2.00</span
                                             ><span class="cell last-cell row-radio"
                                                 ><input type="radio" class="selectable-list-item-selector"
-                                                       name="createInstallment"
-                                                         id="create-installment-radio-1" value="3"
-                                                ><label for="create-installment-radio-1"
+                                                       name="installmentsPlane"
+                                                         id="choose-installment-plan-radio-1" value="3"
+                                                ><label for="choose-installment-plan-radio-1"
                                                     class="deco-input"
                                                 ></label
                                             ></span
@@ -106,9 +105,9 @@
                                             ><span class="cell value service-fee currency currency-rmb">4.00</span
                                             ><span class="cell last-cell row-radio"
                                                 ><input type="radio" class="selectable-list-item-selector"
-                                                       name="createInstallment"
-                                                         id="create-installment-radio-2" value="6"
-                                                ><label for="create-installment-radio-2"
+                                                       name="installmentsPlane"
+                                                         id="choose-installment-plan-radio-2" value="6"
+                                                ><label for="choose-installment-plan-radio-2"
                                                     class="deco-input"
                                                 ></label
                                             ></span
@@ -119,9 +118,9 @@
                                             ><span class="cell value service-fee currency currency-rmb">6.00</span
                                             ><span class="cell last-cell row-radio"
                                                 ><input type="radio" class="selectable-list-item-selector"
-                                                       name="createInstallment"
-                                                         id="create-installment-radio-3" value="9"
-                                                ><label for="create-installment-radio-3"
+                                                       name="installmentsPlane"
+                                                         id="choose-installment-plan-radio-3" value="9"
+                                                ><label for="choose-installment-plan-radio-3"
                                                     class="deco-input"
                                                 ></label
                                             ></span
@@ -132,9 +131,9 @@
                                             ><span class="cell value service-fee currency currency-rmb">8.00</span
                                             ><span class="cell last-cell row-radio"
                                                 ><input type="radio" class="selectable-list-item-selector"
-                                                       name="createInstallment"
-                                                         id="create-installment-radio-4" value="12"
-                                                ><label for="create-installment-radio-4"
+                                                       name="installmentsPlane"
+                                                         id="choose-installment-plan-radio-4" value="12"
+                                                ><label for="choose-installment-plan-radio-4"
                                                     class="deco-input"
                                                 ></label
                                             ></span
@@ -145,9 +144,9 @@
                                             ><span class="cell value service-fee currency currency-rmb">10.00</span
                                             ><span class="cell last-cell row-radio"
                                                 ><input type="radio" class="selectable-list-item-selector"
-                                                       name="createInstallment"
-                                                         id="create-installment-radio-5" value="18"
-                                                ><label for="create-installment-radio-5"
+                                                       name="installmentsPlane"
+                                                         id="choose-installment-plan-radio-5" value="18"
+                                                ><label for="choose-installment-plan-radio-5"
                                                     class="deco-input"
                                                 ></label
                                             ></span
@@ -158,9 +157,9 @@
                                             ><span class="cell value service-fee currency currency-rmb">12.00</span
                                             ><span class="cell last-cell row-radio"
                                                 ><input type="radio" class="selectable-list-item-selector"
-                                                       name="createInstallment"
-                                                         id="create-installment-radio-6" value="24"
-                                                ><label for="create-installment-radio-6"
+                                                       name="installmentsPlane"
+                                                         id="choose-installment-plan-radio-6" value="24"
+                                                ><label for="choose-installment-plan-radio-6"
                                                     class="deco-input"
                                                 ></label
                                             ></span
