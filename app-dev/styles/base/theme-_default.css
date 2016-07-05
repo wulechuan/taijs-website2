@@ -55,6 +55,9 @@ html, body {
 	text-shadow: 0 0 1.5px rgba(0, 0, 0, 0.5)\9\0; */ /* ie10, ie11 */
 }
 
+.tip {
+	color: #999;
+}
 
 em {
 	color: #ff291d;
@@ -189,6 +192,34 @@ input {
 	input[type="submit"].bg-transparent.color-red:hover,
 	[role="button"].bg-transparent.color-red:hover,
 	button.bg-transparent.color-red:hover {
+	    background-color: rgba(255, 41, 29, 0.08)!important;
+	}
+
+	input[type="reset"].simple-look,
+	input[type="button"].simple-look,
+	input[type="submit"].simple-look,
+	button.simple-look {
+		color: #157dff;
+		background-color: transparent;
+	}
+	input[type="reset"].simple-look:hover,
+	input[type="button"].simple-look:hover,
+	input[type="submit"].simple-look:hover,
+	button.simple-look:hover {
+		/* background-color: transparent; */
+		background-color: #e5f1ff;
+	}
+	input[type="reset"].simple-look.color-red,
+	input[type="button"].simple-look.color-red,
+	input[type="submit"].simple-look.color-red,
+	button.simple-look.color-red {
+	    color: #ff291d;
+	}
+	input[type="reset"].simple-look.color-red:hover,
+	input[type="button"].simple-look.color-red:hover,
+	input[type="submit"].simple-look.color-red:hover,
+	button.simple-look.color-red:hover {
+		/* background-color: transparent; */
 	    background-color: rgba(255, 41, 29, 0.08)!important;
 	}
 
@@ -524,10 +555,21 @@ label.deco-input {
 		background-color: #157dff;
 	}
 
-	.tabular > .f-list > li.selected {
+	.tabular > .f-list > li.selectable.selected {
 		color: white;
 		background-color: #157dff;
 	}
+
+	.tabular.dialog-summary-sheet > .f-list > li {
+		color: #333;
+		}
+		.tabular.dialog-summary-sheet > .f-list > li h5 {
+			color: #999;
+		}
+		.tabular.dialog-summary-sheet > .f-list > li:hover {
+			background-color: transparent;
+		}
+
 
 
 .dialog {

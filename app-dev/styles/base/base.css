@@ -1,5 +1,6 @@
 .iconfont {
-  -webkit-text-stroke-width: 0; /* reset iconfont default settings */
+	font-weight: normal;
+    -webkit-text-stroke-width: 0; /* reset iconfont default settings */
 }
 
 /* transitions: start */
@@ -140,10 +141,12 @@ button {
 	[role="button"].simple-look,
 	button.simple-look {
 		min-height: 0;
+		font-family: inherit;
 		font-size: inherit;
 		line-height: inherit;
 		color: inherit;
-		padding: 0;
+		padding: 8px;
+		margin: -8px 0;
 		border: none;
 		background: none;
 		background-color: transparent;
@@ -1002,6 +1005,35 @@ label.deco-input {
 		border-width: 0;
 		border-style: none;
 	}
+	input[type="radio"] + label.deco-input[for]:before {
+		font-family: 'iconfont'!important;
+		content: '\e631';
+		box-sizing: border-box;
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		border-width: 0;
+		border-style: none;
+	}
+	input[type="radio"] + label.deco-input[for]:after {
+		font-family: 'iconfont'!important;
+		content: '\e632';
+		box-sizing: border-box;
+		display: block;
+		visibility: hidden;
+		position: absolute;
+		text-indent: 0;
+
+		left: 0%;
+		top: 0%;
+		width: 100%;
+		height: 100%;
+		border-width: 0;
+		border-style: none;
+	}
 	input[type="radio"][checked]    + label.deco-input[for]:after,
 	input[type="radio"]:checked     + label.deco-input[for]:after,
 	input[type="checkbox"][checked] + label.deco-input[for]:after,
@@ -1201,8 +1233,23 @@ label.deco-input {
 
 		.floating-layer-set.floating-info-set .floating-layer.has-border-triangle::before {
 			left: 0;
-			margin-left: 1em;
+			margin-left: 0.9em;
 		}
+
+	.form .floating-layer-set.floating-info-set {
+		margin: 7px;
+	}
+	.tabular .cell .floating-layer-set.floating-info-set {
+		position: absolute;
+		right: -12px;
+		top: 4px;
+		}
+
+		.form .floating-layer-set.floating-info-set > .info-icon .iconfont,
+		.tabular .cell .floating-layer-set.floating-info-set > .info-icon .iconfont {
+			font-size: 18px;
+		}
+
 
 
 .expandable {
@@ -1593,7 +1640,10 @@ label.deco-input {
 		padding: 12px 0;
 	}
 
-	.form > .row > .col > * {
+	.form > .row > .col > label.deco-input,
+	.form > .row > .col > select,
+	.form > .row > .col > input,
+	.form > .row > .col > span {
 		display: inline-block;
 	}
 
@@ -1666,12 +1716,33 @@ label.deco-input {
 		margin: 0 0 -1px 0;
 	}
 
-	.tabular > .f-list.layout-hori > li {
-		display: inline-block;
-		padding: 0 1em;
-		border-width: 0 1px;
-		margin: 0 -1px 0 0;
-	}
+	.tabular.dialog-summary-sheet {
+		margin: 1em 0;
+		}
+		.tabular.dialog-summary-sheet > .f-list.layout-hori > li {
+			display: inline-block;
+			padding: 0 1em;
+			border-width: 0 1px;
+			margin: 0 -1px 0 0;
+			min-width: 80px;
+			padding: 0 1em 25px 1em;
+		}
+		.tabular.dialog-summary-sheet > .f-list.layout-hori > li h5 {
+			position: absolute;
+			bottom: 0;
+		}
+		.tabular.dialog-summary-sheet > .f-list.layout-hori > li:first-child {
+			border-left-width: 0;
+			margin-left: -1em;
+		}
+		.tabular.dialog-summary-sheet > .f-list.layout-hori > li.last-child {/* for ie8 */
+			border-right-width: 0;
+			margin-right: -1em;
+		} 
+		/* .tabular.dialog-summary-sheet > .f-list.layout-hori > li:last-child { 
+			border-right-width: 0;
+			margin-right: -1em;
+		} */
 
 	.tabular a:hover,
 	.tabular a:link,
@@ -2105,7 +2176,7 @@ ol.f-list, ul.f-list { /* function list */
 		content: '';
 		display: inline-block;
 		width: 0;
-		height: 75%;
+		height: 95%;
 		vertical-align: middle;
 	}
 

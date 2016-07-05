@@ -4,6 +4,7 @@ html, body, button, textarea, input, select, option, .font-default {
 
 .card .card-head,
 .bill-time-exceeded,
+.tabular-lists .toolbar,
 .tabular > .header,
 .tabular > .f-list > li,
 .pagination [role="button"],

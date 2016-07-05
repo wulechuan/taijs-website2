@@ -90,6 +90,7 @@
 
 		.tabular-lists > .block-header,
 		.tabular-lists > .block-footer,
+		.tabular-lists .list-item-filters,
 		.tabular > .header,
 		.tabular > .footer,
 		.tabular > .f-list > li {
@@ -116,6 +117,7 @@
 			line-height: 21px;
 			min-height: 21px;
 		}
+		.tabular-lists .list-item-filters,
 		.tabular > .header .last-cell,
 		.tabular > .header,
 		.tabular > .f-list > li .last-cell,
@@ -169,28 +171,19 @@
 		.tabular.choose-installments-plan .amount-per-installment {
 			position: absolute;
 			left: 240px;
-			width: 100px;
+			width: 120px;
 			}
 
 			.tabular.choose-installments-plan .service-fee {
 				position: absolute;
 				left: 480px;
-				width: 100px;
-			}
-
-		.tabular.dialog-summary-sheet > .f-list.layout-hori > li {
-			padding-bottom: 20px;
-			}
-
-			.tabular.dialog-summary-sheet > .f-list.layout-hori > li h5 {
-				position: absolute;
-				bottom: 0;
+				width: 120px;
 			}
 
 		.tabular.close-installments > .f-list > li .amount {
 			position: absolute;
-			left: 380px;
-			width: 100px;
+			left: 360px;
+			width: 120px;
 			}
 
 		.tabular.repayment-records .bank-card {
@@ -208,8 +201,8 @@
 			}
 			.tabular.repayment-records .amount {
 				position: absolute;
-				left: 615px;
-				width: 100px;
+				left: 595px;
+				width: 120px;
 			}
 
 			.tabular.repayment-requests .bank-card {
@@ -778,7 +771,7 @@
 		}
 
 		.tab-list > li:hover {
-			background-color: #f3f3f3;
+			/* background-color: #f3f3f3; */
 		}
 
 		.tab-list.has-single-tab > li:before,
