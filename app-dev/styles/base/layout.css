@@ -158,6 +158,10 @@
 			display: none;
 		}
 
+		#app-header-info-and-links .sns .weixin .floating-layer-set .locator::before {
+			width: 60px;
+			margin-left: -30px;
+		}
 		#app-header-info-and-links .sns .weixin .floating-layer .columns {
 			margin: -5px;
 		}
