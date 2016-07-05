@@ -1126,6 +1126,7 @@ label.deco-input {
 		}
 
 		.floating-layer-set .floating-layer p {
+			font-weight: normal;
 			padding: 0.25em 0.75em;
 			margin: 0 -0.25em;
 		}
@@ -1647,6 +1648,9 @@ label.deco-input {
 
 .tabular-lists {
 	}
+	.tabular-lists.snap-top {
+		margin-top: 0;
+	}
 
 	.tabular-lists > .block-header,
 	.tabular-lists > .block-footer,
@@ -1655,7 +1659,14 @@ label.deco-input {
 	.tabular > .f-list > li {
 		border-style: solid;
 		border-width: 1px 0;
-		margin-bottom: -1px;
+		margin: 0 0 -1px 0;
+	}
+
+	.tabular > .f-list.layout-hori > li {
+		display: inline-block;
+		padding: 0 1em;
+		border-width: 0 1px;
+		margin: 0 -1px 0 0;
 	}
 
 	.tabular a:hover,

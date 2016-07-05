@@ -152,61 +152,80 @@
 			padding-bottom: 4px;
 		}
 
-		.tabular-lists.bills .tabular > .f-list > li .caption-cell,
-		.tabular-lists.bill-records .tabular > .f-list > li .caption-cell {
+		.tabular.bills        > .f-list > li .caption-cell,
+		.tabular.bill-records > .f-list > li .caption-cell {
 			width: 360px;
 			margin-right: 4px;
-		}
+			}
 
-		.tabular-lists.bills .tabular > .f-list > li .bill-total-amount {
-			width: 128px;
-		}
+			.tabular.bills > .f-list > li .bill-total-amount {
+				width: 128px;
+			}
 
-		.tabular-lists.bill-records .tabular > .f-list > li .timestamp {
-			width: 128px;
-		}
+			.tabular.bill-records > .f-list > li .timestamp {
+				width: 128px;
+			}
 
-		.tabular-lists.close-installments .tabular > .f-list > li .amount {
+		.tabular.choose-installments-plan .amount-per-installment {
+			position: absolute;
+			left: 240px;
+			width: 100px;
+			}
+
+			.tabular.choose-installments-plan .service-fee {
+				position: absolute;
+				left: 480px;
+				width: 100px;
+			}
+
+		.tabular.dialog-summary-sheet > .f-list.layout-hori > li {
+			padding-bottom: 20px;
+			}
+
+			.tabular.dialog-summary-sheet > .f-list.layout-hori > li h5 {
+				position: absolute;
+				bottom: 0;
+			}
+
+		.tabular.close-installments > .f-list > li .amount {
 			position: absolute;
 			left: 380px;
 			width: 100px;
-		}
+			}
 
-		.tabular-lists.repayment-records .tabular .bank-card {
+		.tabular.repayment-records .bank-card {
 			position: absolute;
 			left: 190px;
 			width: 200px;
-		}
-		.tabular-lists.repayment-records .tabular .bank-card .icon {
-			vertical-align: top;
-		}
-		.tabular-lists.repayment-records .tabular .timestamp {
-			position: absolute;
-			left: 420px;
-			width: 160px;
-		}
-		.tabular-lists.repayment-records .tabular .amount {
-			position: absolute;
-			left: 615px;
-			width: 100px;
-		}
+			}
+			.tabular.repayment-records .bank-card .icon {
+				vertical-align: top;
+			}
+			.tabular.repayment-records .timestamp {
+				position: absolute;
+				left: 420px;
+				width: 160px;
+			}
+			.tabular.repayment-records .amount {
+				position: absolute;
+				left: 615px;
+				width: 100px;
+			}
 
-		.tabular-lists.repayment-requests {
-			margin-top: 0;
-		}
-		.tabular-lists.repayment-requests .tabular .bank-card {
-			position: absolute;
-			left: 250px;
-			width: 200px;
-		}
-		.tabular-lists.repayment-requests .tabular .bank-card .icon {
-			vertical-align: top;
-		}
-		.tabular-lists.repayment-requests .tabular .timestamp {
-			position: absolute;
-			left: 540px;
-			width: 160px;
-		}
+			.tabular.repayment-requests .bank-card {
+				position: absolute;
+				left: 250px;
+				width: 200px;
+			}
+			.tabular.repayment-requests .bank-card .icon {
+				vertical-align: top;
+			}
+			.tabular.repayment-requests .timestamp {
+				position: absolute;
+				left: 540px;
+				width: 160px;
+			}
+
 
 
 	.card {
