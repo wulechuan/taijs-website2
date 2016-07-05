@@ -101,6 +101,7 @@
 		.tabular > .footer .last-cell,
 		.tabular > .f-list > li .last-cell {
 			right: 20px;
+			min-width: 100px;
 		}
 
 		.tabular-lists > .block-header {
@@ -477,13 +478,16 @@
 				margin-top: -11px;
 			}
 
+			#user-info-bar-user-avatar .avatar-borders, /* borders covers .avatar */
+			#user-info-bar-user-avatar .avatar,
+			#ie-user-avatar #ie-user-avatar-borders,
+			#ie-user-avatar {
+				cursor: pointer;
+			}
 			#ie-user-avatar .avatar,
 			#user-info-bar-user-avatar .avatar {
 				width: 80px;
 				height: 80px;
-			}
-			#ie-user-avatar .avatar,
-			#user-info-bar-user-avatar .avatar {
 				position: absolute;
 				left: 2px;
 				top: 2px;
@@ -852,23 +856,26 @@
 			;
 		}
 
-		#ie-user-avatar #ie-user-avatar-borders {
-			color: white;
-		}
 		#ie-user-avatar #ie-user-avatar-borders.rectangle,
 		#user-info-bar-user-avatar .avatar-borders {
 			border-color: white;
 			border-color: rgba(255, 255, 255, 0.5);
 		}
+		#ie-user-avatar:hover #ie-user-avatar-borders.rectangle,
+		#user-info-bar-user-avatar:hover .avatar-borders {
+			border-color: white;
+		}
 
 		#user-info-bar .user-info-block a {
 			color: white;
+			background-color: rgba(255, 255, 255, 0.19);
 		}
 		#user-info-bar .user-info-block a:hover {
-			background-color: rgba(255, 255, 255, 0.2);
+			background-color: rgba(255, 255, 255, 0.3);
 		}
 
 		#ie-user-avatar #ie-user-avatar-borders { /* should NOT move into a separate css file, otherwise won't work */
+			color: white;
 			top: -1.5px;
 			left: -1.33px;
 			-ms-filter: "\
@@ -880,7 +887,13 @@
 				progid:DXImageTransform.Microsoft.Blur(PixelRadius=1)
 			;
 		}
-
+		#ie-user-avatar:hover #ie-user-avatar-borders {
+			color: white;
+			-ms-filter: none;
+			filter: none;
+			top: 0.25px;
+			left: 0.25px;
+		}
 		#ie-user-avatar #ie-user-avatar-borders.rectangle { /* should NOT move into a separate css file, otherwise won't work */
 			top: 0;
 			left: 0;
@@ -912,16 +925,20 @@
 			border-color: transparent;
 			background: transparent;
 		}
-		#page-sidebar-nav .menu-item.current > .label,
-		#page-sidebar-nav .menu-item.current > a > .label {
-			color: #333;
-			background: white;
-			border-color: #ddd;
-		}
 		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > .label:hover,
 		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > a:hover > .label,
 		#page-sidebar-nav .menu-item > .label:hover,
 		#page-sidebar-nav .menu-item > a:hover > .label {
+			color: #333;
+			background: #dce0e9;
+			border-color: #ddd;
+		}
+		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown.current > .label:hover,
+		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown.current > a:hover > .label,
+		#page-sidebar-nav .menu-item.current > .label:hover,
+		#page-sidebar-nav .menu-item.current > a:hover > .label,
+		#page-sidebar-nav .menu-item.current > .label,
+		#page-sidebar-nav .menu-item.current > a > .label {
 			color: #333;
 			background: white;
 			border-color: #ddd;

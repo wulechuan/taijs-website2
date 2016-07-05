@@ -195,21 +195,48 @@ input {
 	    background-color: rgba(255, 41, 29, 0.08)!important;
 	}
 
+	input[type="reset"].simple-look .iconfont,
 	input[type="reset"].simple-look,
+	input[type="button"].simple-look .iconfont,
 	input[type="button"].simple-look,
+	input[type="submit"].simple-look .iconfont,
 	input[type="submit"].simple-look,
+	button.simple-look .iconfont,
 	button.simple-look {
-		color: #157dff;
+		color: inherit;
 		background-color: transparent;
 	}
-	input[type="reset"].simple-look:hover,
-	input[type="button"].simple-look:hover,
-	input[type="submit"].simple-look:hover,
-	button.simple-look:hover {
-		/* background-color: transparent; */
-		background-color: #e5f1ff;
+
+	input[type="reset"].simple-look *,
+	input[type="reset"].simple-look,
+	input[type="button"].simple-look *,
+	input[type="button"].simple-look,
+	input[type="submit"].simple-look *,
+	input[type="submit"].simple-look,
+	button.simple-look *,
+	button.simple-look {
+		transition-property: background-color;
 	}
-	input[type="reset"].simple-look.color-red,
+	.floating-layer-set:hover input[type="reset"].simple-look .iconfont,
+	.floating-layer-set:hover input[type="reset"].simple-look,
+	.floating-layer-set:hover input[type="button"].simple-look .iconfont,
+	.floating-layer-set:hover input[type="button"].simple-look,
+	.floating-layer-set:hover input[type="submit"].simple-look .iconfont,
+	.floating-layer-set:hover input[type="submit"].simple-look,
+	.floating-layer-set:hover button.simple-look .iconfont,
+	.floating-layer-set:hover button.simple-look,
+	input[type="reset"].simple-look:hover .iconfont,
+	input[type="reset"].simple-look:hover,
+	input[type="button"].simple-look:hover .iconfont,
+	input[type="button"].simple-look:hover,
+	input[type="submit"].simple-look:hover .iconfont,
+	input[type="submit"].simple-look:hover,
+	button.simple-look:hover .iconfont,
+	button.simple-look:hover {
+		color: #157dff;
+		/* background-color: #e5f1ff; */
+	}
+	/* input[type="reset"].simple-look.color-red,
 	input[type="button"].simple-look.color-red,
 	input[type="submit"].simple-look.color-red,
 	button.simple-look.color-red {
@@ -219,9 +246,8 @@ input {
 	input[type="button"].simple-look.color-red:hover,
 	input[type="submit"].simple-look.color-red:hover,
 	button.simple-look.color-red:hover {
-		/* background-color: transparent; */
 	    background-color: rgba(255, 41, 29, 0.08)!important;
-	}
+	} */
 
 	.pagination [role="button"],
 	.pagination button {
@@ -430,8 +456,8 @@ label.deco-input {
 		color: #333;
 	}
 
-	.menu.layout-hori > .menu-item> a > .label:hover ,
-	.menu.layout-hori > .menu-item > .label:hover,
+	.menu.layout-hori > .menu-item:hover > a > .label,
+	.menu.layout-hori > .menu-item:hover > .label,
 	.menu.layout-hori > .menu-item.sub-menu-shown > a > .label,
 	.menu.layout-hori > .menu-item.sub-menu-shown > .label,
 	.menu.layout-hori > .menu-item.current-cate > a > .label,
@@ -597,20 +623,22 @@ label.deco-input {
 	}
 
 	#app-header-info-and-links {
+		color: #666;
 		border-bottom-color: #eee;
 		}
 
 		#app-header-user-account-commands .menu.level-1 > .menu-item > a > .label,
 		#app-header-user-account-commands .menu.level-1 > .menu-item > .label,
 		#app-header-info-and-links {
-			color: #666;
+			color: inherit;
 		}
 
-		#app-header-info-and-links a:hover,
+		/* #app-header-info-and-links a:hover,
 		#app-header-info-and-links .floating-layer-set:hover button.simple-look,
 		#app-header-info-and-links button.simple-look:hover {
+			color: #157dff;
 			background-color: #f3f3f3;
-		}
+		} */
 
 		#app-header-info-and-links a,
 		#app-header-info-and-links a:link,
@@ -618,13 +646,21 @@ label.deco-input {
 			color: #666;
 		}
 
+		#app-header-info-and-links a:hover,
+		#app-header-info-and-links a:link:hover,
+		#app-header-info-and-links a:visited:hover {
+			color: #157dff;
+		}
+
 		#app-header-info-and-links .iconfont {
 			color: #999;
 		}
-
-		#app-header-contacts .tel em {
-			color: #666;
+		#app-header-info-and-links a:hover .iconfont,
+		#app-header-info-and-links .floating-layer-set:hover button.simple-look .iconfont,
+		#app-header-info-and-links button.simple-look:hover .iconfont {
+			color: inherit;
 		}
+
 
 	#app-header-chief-bar {
 		border-bottom-color: #eee;
