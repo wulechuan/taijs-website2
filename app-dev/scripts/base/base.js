@@ -1,7 +1,16 @@
 (function () {
 	window.console = window.console || { log: function () {} };
-	var isIE8 = !!navigator.userAgent.match(/msie 8/i);
-	var isIE9 = !!navigator.userAgent.match(/msie 9/i);
+	var ua = navigator.userAgent;
+	var isIE = !!ua.match(/(\bmsie|\btrident\b)/i);
+	var isMSEdge = !!ua.match(/\bedge\b/i);
+	var isIE8 = !!ua.match(/\bmsie 8/i);
+	var isIE9 = !!ua.match(/\bmsie 9/i);
+
+	var isWebkit = !!ua.match(/\bapplewebkit\b/i) && !isMSEdge;
+
+	if (isWebkit) {
+		$('body').addClass('webkit');
+	}
 
     function processParametersPassedIn() {
         var qString = location.href.match(/\?.*/);
@@ -41,6 +50,53 @@
 
 
     var urlParameters = processParametersPassedIn();
+
+
+
+    $('input[placeholder]').each(function () {
+		function _updateInputStyleForGroomingPlaceholder(field) {
+			if (!field) {
+				return false;
+			}
+
+			var tagNameLC = field.tagName.toLowerCase();
+			if (tagNameLC !== 'input' && tagNameLC !== 'textarea') {
+				return false;
+			}
+
+			var classNameToDealWith = 'empty-field';
+			if (field.value) {
+				$(field).removeClass(classNameToDealWith);
+			} else {
+				$(field).addClass(classNameToDealWith);
+			}
+		}
+
+		_updateInputStyleForGroomingPlaceholder(this);
+
+		if (isIE8) {
+	    	$(this).on('focus', function () {
+	    		_updateInputStyleForGroomingPlaceholder(this);
+	    	});
+
+	    	$(this).on('blur', function () {
+	    		_updateInputStyleForGroomingPlaceholder(this);
+	    	});
+
+	    	$(this).on('change', function () {
+	    		_updateInputStyleForGroomingPlaceholder(this);
+	    	});
+
+	    	$(this).on('keypress', function () {
+	    		_updateInputStyleForGroomingPlaceholder(this);
+	    	});
+		} else {
+	    	$(this).on('input', function () {
+	    		_updateInputStyleForGroomingPlaceholder(this);
+	    	});
+		}
+    });
+
 
 
 

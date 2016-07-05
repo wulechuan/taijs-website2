@@ -4,6 +4,54 @@
 		"selected_items":
 		[
 			[
+				"magin",
+				"margin-top"
+			],
+			[
+				"transition",
+				"transition-property"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"e",
+				"elements"
+			],
+			[
+				"che",
+				"checked"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"_ra",
+				"_radioInitValue"
+			],
+			[
+				"tab",
+				"tabluar"
+			],
+			[
+				"rad",
+				"radioLatestValue"
+			],
+			[
+				"r",
+				"radio"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
 				"chec",
 				"checkbox"
 			],
@@ -38,10 +86,6 @@
 			[
 				"box",
 				"box-sizing"
-			],
-			[
-				"che",
-				"checkbox"
 			],
 			[
 				"tr",
@@ -148,10 +192,6 @@
 				"text-decoration"
 			],
 			[
-				"min",
-				"min-height"
-			],
-			[
 				"bordr",
 				"border-radius"
 			],
@@ -166,10 +206,6 @@
 			[
 				"th",
 				"throw"
-			],
-			[
-				"r",
-				"right"
 			],
 			[
 				"bo",
@@ -234,10 +270,6 @@
 			[
 				"sli",
 				"slice"
-			],
-			[
-				"e",
-				"else"
 			],
 			[
 				"el",
@@ -482,59 +514,32 @@
 			[
 				"tabel",
 				"table-cell"
-			],
-			[
-				"fl",
-				"float"
-			],
-			[
-				"cl",
-				"clip"
-			],
-			[
-				"bak",
-				"background"
-			],
-			[
-				"bordeco",
-				"border-color"
-			],
-			[
-				"tran",
-				"transition"
-			],
-			[
-				"sc",
-				"scaleY()"
-			],
-			[
-				"wav",
-				"waveComponent"
-			],
-			[
-				"wPhaseO",
-				"wPhaseOffsetLim1"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"contents": "(function () {\n	window.console = window.console || { log: function () {} };\n	var isIE8 = !!navigator.userAgent.match(/msie 8/i);\n	var isIE9 = !!navigator.userAgent.match(/msie 9/i);\n\n    function processParametersPassedIn() {\n        var qString = location.href.match(/\\?.*/);\n        if (qString) qString = qString[0].slice(1);\n\n        var qKVPairs = [];\n        if (qString) {\n            qKVPairs = qString.split('&');\n        }\n\n        var psn1; // page sidebar nav Level 1 current\n        var psn2; // page sidebar nav Level 2 current\n        var tabLabel; // id of tabLabel to show if any\n\n        if (typeof window.psn === 'object') {\n        	if (window.psn.level1) psn1 = window.psn.level1;\n        	if (window.psn.level2) psn2 = window.psn.level2;\n        }\n\n        for (var i in qKVPairs){\n            var kvpString = qKVPairs[i];\n            var kvp = kvpString.split('=');\n\n            if (kvp[0] === 'psn1') psn1 = kvp[1];\n            if (kvp[0] === 'psn2') psn2 = kvp[1];\n            if (kvp[0] === 'tabLabel') tabLabel = kvp[1];\n        }\n\n        return {\n        	tabLabel: tabLabel,\n            psn: {\n            	level1: psn1,\n            	level2: psn2\n            }\n        };\n    }\n\n\n    var urlParameters = processParametersPassedIn();\n\n\n\n	$('.tab-panel-set').each(function () {\n		var forceUpdatingContainer = null;\n		if (isIE8) {\n			forceUpdatingContainer = \n				$(this).parents('.page')[0] || document.body\n			;\n		}\n\n		var $allTabs = $(this).find('.tab-list > li');\n\n		$allTabs.each(function (index, tab) {\n			var panelId = tab.getAttribute('aria-controls');\n			var panel = $('#'+panelId)[0];\n\n			if (!panel) throw('Can not find controlled panel for tab [expected panel id=\"'+panelId+'\"].');\n\n			panel.elements = { tab: tab };\n			tab.elements = { panel: panel };\n\n		});\n\n		if ($allTabs.length > 1) {\n			$allTabs.on('click', function () {\n				_showPanelAccordingToTab(this);\n			});\n		}\n\n		var tabToShowAtBegining = $('#panel-tab-'+urlParameters.tabLabel).parent()[0] || $allTabs[0];\n		_showPanelAccordingToTab(tabToShowAtBegining);\n\n		function _showPanelAccordingToTab(theTab) {\n			for (var i = 0; i < $allTabs.length; i++) {\n				var tab = $allTabs[i];\n				_processOnePairOfTabPanel(tab, (theTab && tab === theTab));\n			}\n\n			if (isIE8) {\n				if (forceUpdatingContainer) {\n					forceUpdatingContainer.visibility = 'hidden';\n					setTimeout(function () {\n						forceUpdatingContainer.visibility = '';\n					}, 0);\n				}\n			}\n		}\n\n		function _processOnePairOfTabPanel(tab, isToShownMyPanel) {\n			if (!tab) return false;\n\n			var panel = tab.elements.panel;\n			if (!panel) return false;\n\n			if (isToShownMyPanel) {\n				panel.setAttribute('aria-hidden', false);\n				$(tab).addClass('current');\n				$(panel).addClass('current');\n			} else {\n				panel.setAttribute('aria-hidden', true);\n				$(tab).removeClass('current');\n				$(panel).removeClass('current');\n			}\n\n			panel.style.display = isToShownMyPanel ? 'block' : 'none';\n		}\n	});\n\n\n\n	$('dl.initially-collapsed').each(function (index, dl) {\n		var forceUpdatingContainer = null;\n		if (isIE8) {\n			forceUpdatingContainer = dl.parentNode\n				// || $(this).parents('.page-content')[0]\n				// || $(this).parents('.page')[0]\n				// || document.body\n			;\n		}\n\n		var $allDTs = $(this).find('> dt');\n		var $allDDs = $(this).find('> dd');\n\n		$allDTs.each(function (index, dt) {\n			var dd = $(dt).find('+ dd')[0];\n			if (!dd) throw('Can not find <dd> right after a <dt> element.');\n\n			var ddContent = $(dd).find('> .content')[0];\n			if (!ddContent) throw('Can not find .content within a <dd> element.');\n\n			dd.elements = { dt: dt, content: ddContent };\n			dt.elements = { dd: dd };\n\n			$(dd).removeClass('expanded');\n\n			if (isIE9) {\n				dd.style.display = 'none';\n\n				// height values and transitions would effect jQuery sliding\n				dd.style.height = 'auto';\n				// dd.style.transitionProperty = 'none';\n			}\n		});\n\n\n		$allDTs.on('click', function () {\n			_showDDAccordingToDT(this);\n		});\n\n\n		_showDDAccordingToDT(null);\n\n\n\n		function _showDDAccordingToDT(dt) {\n			var theDD = null;\n			if (dt) theDD = dt.elements.dd;\n\n			var dlNewHeight = 0;\n			var accumHeight;\n\n			for (var i = 0; i < $allDDs.length; i++) {\n				var dd = $allDDs[i];\n				if (theDD && dd === theDD) {\n					accumHeight = _processOnePairOfDTDD(dd, 'toggle');\n				} else {\n					accumHeight = _processOnePairOfDTDD(dd, 'collapse');\n				}\n\n				if (isIE8 && accumHeight) dlNewHeight += accumHeight;\n			}\n\n			if (isIE8) {\n				if (forceUpdatingContainer) {\n					forceUpdatingContainer.visibility = 'hidden';\n					setTimeout(function () {\n						forceUpdatingContainer.visibility = '';\n					}, 0);\n				}\n\n				dl.style.height = dlNewHeight + 'px';\n			}\n		}\n\n		function _processOnePairOfDTDD(dd, action) {\n			if (!dd) return false;\n\n			var dt = dd.elements.dt;\n			var content = dd.elements.content;\n\n			if (!dt) return false;\n			if (!content) return false;\n\n			var $dt = $(dt);\n			var $dd = $(dd);\n			var $content = $(content);\n\n			var dtHeight = 0;\n			var ddNewHeight = 0;\n			var ddContentCurrentHeight;\n\n			if (isIE8) {\n				dtHeight = $dt.outerHeight();\n			}\n\n			var wasCollapsed = !$dd.hasClass('expanded');\n			var needAction = (!wasCollapsed && action==='collapse') || (action==='toggle');\n			if (!needAction) {\n				if (isIE8) {\n					return dtHeight;\n				}\n\n				return 0;\n			}\n\n\n			if (isIE8) { // update className BEFORE animation\n				if (wasCollapsed) {\n					ddContentCurrentHeight = $content.outerHeight();\n					ddNewHeight = ddContentCurrentHeight;\n\n					$dd.addClass('expanded');\n					dd.setAttribute('aria-expanded', true);\n					dd.setAttribute('aria-hidden',   false);\n					$dt.addClass('expanded');\n\n					dd.style.height = ddNewHeight + 'px';\n\n					return dtHeight+ddNewHeight;\n				} else {\n					$dd.removeClass('expanded');\n					dd.setAttribute('aria-expanded', false);\n					dd.setAttribute('aria-hidden',   true);\n					$dt.removeClass('expanded');\n\n					dd.style.height = '0px';\n\n					return dtHeight;\n				}\n			} else if (isIE9) { // update className BEFORE animation\n				if (wasCollapsed) {\n					$dd.addClass('expanded');\n					dd.setAttribute('aria-expanded', true);\n					dd.setAttribute('aria-hidden',   false);\n					$dt.addClass('expanded');\n					$dd.slideDown();\n				} else {\n					$dd.removeClass('expanded');\n					dd.setAttribute('aria-expanded', false);\n					dd.setAttribute('aria-hidden',   true);\n					$dt.removeClass('expanded');\n					$dd.slideUp();\n				}\n			} else { // update className AFTER transition\n				if (wasCollapsed) {\n					if (content.knownHeight > 20) {\n						setTimeout(function () {\n							var ddContentCurrentHeight = $content.outerHeight();\n							if (ddContentCurrentHeight !== content.knownHeight) {\n								content.knownHeight = ddContentCurrentHeight;\n								ddNewHeight = ddContentCurrentHeight;\n								dd.style.height = content.ddNewHeight+'px';\n							}\n						}, 100);\n					} else {\n						content.knownHeight = $content.outerHeight();\n					}\n\n					ddNewHeight = content.knownHeight;\n					dd.style.height = ddNewHeight+'px';\n\n					$dd.addClass('expanded');\n					dd.setAttribute('aria-expanded', true);\n					dd.setAttribute('aria-hidden',   false);\n					$dt.addClass('expanded');\n				} else {\n					dd.style.height = '';\n\n					$dd.removeClass('expanded');\n					dd.setAttribute('aria-expanded', false);\n					dd.setAttribute('aria-hidden',   true);\n					$dt.removeClass('expanded');\n				}\n			}\n\n\n			return 0;\n		}\n	});\n\n	setPageSidebarNavCurrentItem(urlParameters.psn);\n\n\n\n    function setPageSidebarNavCurrentItem(conf) {\n    	conf = conf || {};\n		conf.level1IdPrefix = 'menu-psn-1-';\n		setMenuCurrentItemForLevel(1, 2, $('#page-sidebar-nav'), conf);\n    }\n\n    function setMenuCurrentItemForLevel(level, depth, parentDom, conf) {\n    	level = parseInt(level);\n    	depth = parseInt(depth);\n    	if (!(level > 0) || !(depth >= level)) {\n    		throw('Invalid menu level/depth for configuring a menu tree.');\n    	}\n    	if (typeof conf !== 'object') {\n    		throw('Invalid configuration object for configuring a menu tree.');\n    	}\n\n		var prefix = conf['level'+level+'IdPrefix'];\n		var desiredId = prefix + conf['level'+level];\n\n		var $allItems = $(parentDom).find('.menu.level-'+level+' > .menu-item');\n		var currentItem;\n		var currentItemId;\n		$allItems.each(function (index, menuItem) {\n			var itemLabel = $(menuItem).find('> a > .label')[0];\n			var itemId = itemLabel.id;\n\n			if (itemId && desiredId && (itemId===desiredId)) {\n				currentItem = menuItem;\n				currentItemId = itemId;\n				$(menuItem).addClass('current');\n			} else {\n				$(menuItem).removeClass('current');\n			}\n		});\n\n		if (level < depth && currentItem) {\n			var nextLevel = level + 1;\n			conf['level'+nextLevel+'IdPrefix'] = currentItemId + '-' + nextLevel + '-';\n			setMenuCurrentItemForLevel(nextLevel, depth, currentItem, conf);\n		}\n\n		return;\n    }\n\n\n	var $allTabularListItems = $('.tabular .f-list > li');\n\n	$allTabularListItems.each(function () {\n		var listItem = this;\n		var $listItem = $(this);\n\n		function _updateListItemAccordingToCheckboxStatus(checkbox) {\n			if (!checkbox) return false;\n\n			if (checkbox.checked) {\n				$listItem.addClass('selected');\n			} else {\n				$listItem.removeClass('selected');\n			}\n		}\n\n		function _updateListItemAccordingToRadioStatus(radio) {\n			if (!radio) return false;\n\n			if (radio.checked) {\n				$listItem.addClass('selected');\n			} else {\n				$listItem.removeClass('selected');\n			}\n		}\n\n		function _playAnimationForIE8AndIE9OnStatusChange() {\n			if (isIE8 || isIE9) {\n				function _zoomToFactor(factor) {\n					if (factor===1) {\n						if (isIE8) {\n							listItem.style.zoom = '';\n							listItem.style.margin = '';\n							return true;\n						}\n						if (isIE9) {\n							listItem.style.msTransform = '';\n							return true;\n						}\n					}\n\n					if (isIE8) {\n						var tempMarginHori = oldWidth  * (1 - factor) / 2;\n						var tempMarginVert = oldHeight * (1 - factor) / 2 + originalVertMargin;\n\n						if (factor) {\n							listItem.style.zoom = factor;\n						} else {\n							console.error('Invalid zooming factor: ', factor);\n							return false;\n						}\n						listItem.style.margin = tempMarginVert+'px' + ' ' + tempMarginHori+'px';\n					}\n\n					if (isIE9) {\n						listItem.style.msTransform = 'scale('+factor+')';\n					}\n				}\n				function _doZoomDelay(targetStage) {\n					var zoomFactor = 1;\n					if (targetStage !== tempStageCounter-1) {\n						var lastSegRatioBetweenPiAndTwoPi = 0.75;\n						var ratio = Math.cos(targetStage/(tempStageCounter-1) * Math.PI * lastSegRatioBetweenPiAndTwoPi + Math.PI * (2 - lastSegRatioBetweenPiAndTwoPi)) * 0.5 + 0.5;\n						ratio = Math.sqrt(ratio);\n						zoomFactor = minFactor + (1 - minFactor) * ratio;\n					}\n\n					if (targetStage === 0) {\n						_zoomToFactor(zoomFactor);\n					} else {\n						var delayMS = frameGapMS*targetStage;\n						setTimeout(function () {\n							if (currentAniStage < targetStage) {\n								currentAniStage = targetStage;\n								_zoomToFactor(zoomFactor);\n							}\n						}, delayMS);\n					}\n				}\n\n				var currentAniStage = 0;\n				var minFactor = 0.984;\n				var frameGapMS, tempStageCounter;\n\n				var originalVertMargin, oldHeight, oldWidth;\n				if (isIE8) {\n					originalVertMargin = -1; // set by css file\n					oldHeight = $listItem.outerHeight();\n					oldWidth  = $listItem.outerWidth();\n				}\n\n				if (isIE8) {\n					frameGapMS = 14;\n					tempStageCounter = 18;\n				}\n				if (isIE9) {\n					frameGapMS = 11;\n					tempStageCounter = 27;\n				}\n\n				for (var i = 0; i < tempStageCounter; i++) {\n					_doZoomDelay(i);\n				}\n			}\n		}\n\n		var $checkbox = $listItem.find('input[type=\"checkbox\"]');\n		var checkbox = $checkbox[0];\n		if (checkbox) {\n			setTimeout(function () { /* Initializing selection status; And this must dealy because ie8 to ie11 updates cached \"checked\" statuses very late */\n				_updateListItemAccordingToCheckboxStatus(checkbox);\n			}, 100);\n\n			$checkbox.on('change', function() {\n				_updateListItemAccordingToCheckboxStatus(this);\n				_playAnimationForIE8AndIE9OnStatusChange();\n			});\n\n			$checkbox.on('click', function(event) {\n				if (event) event.stopPropagation();\n			});\n\n			$listItem.on('click', function () {\n				checkbox.checked = !checkbox.checked;\n				_updateListItemAccordingToCheckboxStatus(checkbox);\n				_playAnimationForIE8AndIE9OnStatusChange();\n			});\n		}\n\n		var $radio = $listItem.find('input[type=\"radio\"]');\n		var radio = $radio[0];\n		if (radio) {\n			setTimeout(function () { /* Initializing selection status; And this must dealy because ie8 to ie11 updates cached \"checked\" statuses very late */\n				_updateListItemAccordingToRadioStatus(radio);\n			}, 100);\n\n			$radio.on('change', function() {\n				conso1le.log(this, this.checked, this.value);\n				_updateListItemAccordingToRadioStatus(this);\n				_playAnimationForIE8AndIE9OnStatusChange();\n			});\n\n			$radio.on('click', function(event) {\n				if (event) event.stopPropagation();\n			});\n\n			$listItem.on('click', function () {\n				radio.checked = true;\n				_updateListItemAccordingToRadioStatus(radio);\n				_playAnimationForIE8AndIE9OnStatusChange();\n			});\n		}\n	});\n\n\n	var allDropDownLists = $('.drop-down-list').each(function () {\n		var $currentValueContainer = $(this).find('.drop-down-list-current-value');\n		var $options = $(this).find('.drop-down-list-options > li'); // assuming there is one one level of menu\n\n		_chooseOption(null);\n\n		$options.on('click', function () {\n			_chooseOption(this);\n		});\n\n		function _chooseOption(chosenOption) {\n			if (!chosenOption) {\n				$currentValueContainer.innerHTML = '';\n				return true;\n			}\n			$currentValueContainer.html($(chosenOption).html());\n		}\n	});\n})();\n\n\n// (function fakeLogics() {\n// 	return false;\n\n// 	var $listsBlocks = $('.lists-block').filter(function () {\n// 		return !$(this).hasClass('close-installments');\n// 	});\n// 	$listsBlocks.each(function () {\n// 		var $listsBlock = $(this);\n\n// 		var $lists = $listsBlock.find('.lists').show();\n// 		var $empty = $listsBlock.find('.empty-content-hint').hide();\n\n// 		$listsBlock.on('click', function () {\n// 			$lists.toggle();\n// 			$empty.toggle();\n// 		});\n// 	});\n// })();",
-			"file": "app-dev/scripts/base/base.js",
-			"file_size": 14557,
-			"file_write_time": 131121046123644811,
+			"file": "app-dev/styles/base/base.css",
 			"settings":
 			{
-				"buffer_size": 14022,
+				"buffer_size": 48477,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app-dev/html/xfzq-create-installment-step-1-option.html",
+			"file": "app-dev/styles/base/layout.css",
 			"settings":
 			{
-				"buffer_size": 15574,
+				"buffer_size": 13881,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app-dev/styles/base/_fonts.css",
+			"settings":
+			{
+				"buffer_size": 1203,
 				"line_ending": "Windows"
 			}
 		}
@@ -613,22 +618,37 @@
 	],
 	"file_history":
 	[
-		"/D/p/dev/taijs/taijs-website2/app-dev/index.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-create-installment-step-1-option.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-list.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-repayments.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-step-1-choose-bank-card.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-recent.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-quick-repayment-step-2-proceed.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-quick-repayment.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-quick-repayment-step-1-choose-bank-card.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-quick-repayment.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-create-installment-step-2-proceed.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-step-2-proceed.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-step-1-choose-bank-card.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-create-installments-step-1-option.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/_fonts.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/_reset.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout-ie8.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-header.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/index.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default-ie8.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-create-installments-step-2-proceed.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/index.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-repayments.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-list.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-recent.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-past.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bill-records-details.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-create-installment-step-1-option.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-close-installments.js",
+		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-create-installments.js",
+		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-quick-repayment.js",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-create-installment-step-2-proceed.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-page-help-desk.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-quick-repayment.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-page-create-installment - 副本.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-page-create-installment.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-page-close-installments.css",
@@ -637,18 +657,10 @@
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-create-installment-step-1-type.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-opening-installments-list.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/iconfonts/iconfont.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default-ie8.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk-index.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk-qna-list.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-orders.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bill-records-details.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-past.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-header.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/index.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-sidebar-0.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout-ie8.css",
 		"/D/Users/wulechuan/Desktop/构建思路讲解001.txt",
 		"/D/Users/wulechuan/Desktop/OneDrive/事业/tab-panel/乐川的tab-panel-pair逻辑.js",
 		"/D/Users/wulechuan/Desktop/OneDrive/事业/tab-panel/乐川的tab-panel-pair的页面.html",
@@ -656,13 +668,9 @@
 		"/D/Users/wulechuan/Desktop/tab-panel/乐川的tab-panel-pair的页面.html",
 		"/D/Users/wulechuan/Desktop/乐川的tab-panel-pair的页面.html",
 		"/D/Users/wulechuan/Desktop/乐川的tab-panel-pair逻辑.js",
-		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-close-installments.js",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/_reset.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/index.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-page-help-desk.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-bills-list.js",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/_fonts.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-footer.html",
 		"/D/p/dev/taijs/taijs-website2/gulpfile.js",
 		"/D/p/dev/taijs/taijs-website2/app-dist/styles/base/base.min.css",
@@ -737,10 +745,7 @@
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/warm-up.sublime-project",
 		"/D/p/dev/taijs/taijs-website2/taijs-website2.sublime-project",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/.gitignore",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/.gitattributes",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/taijs-website2.sublime-project",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/sample-test-url-overriding.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-body-wrapper-start.html"
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/.gitattributes"
 	],
 	"find":
 	{
@@ -767,134 +772,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"_updateListItemAccordingToRadioStatus",
-			"opening",
-			"id=\"opening-installments",
-			"opening-installments",
-			"name=\"opening-installments-radio\"",
-			"opening-installments-radio",
-			"name=\"opening-installments-radio\"",
-			"opening-installments-radio",
-			"radio",
-			"                                        <li",
-			"ext-shadow",
-			"../",
-			"icon bank-",
-			"_updateListItemAccordingToRadioStatus",
-			"Checkbox",
-			"checkbox",
-			"Checkbox",
-			"checkbox",
-			"Checkbox",
-			"checkbox",
-			"_playAnimationForIE8AndIE9OnCheckboxChange",
-			"checkbox",
-			"$('.popup-layers-back-plate')",
-			"$('#pl-quick-repayment-succeed')",
-			"pl-quick-repayment-succeed",
-			"installments",
-			"忘记",
-			"floating-info",
-			"floating",
-			"form",
-			" id=\"opening-installments-radio-",
-			"5",
-			"                                            ><span class=\"cell caption-cell value approach\">2015年10月账单第2-6期</span\n                                            ><span class=\"cell value amount currency currency-rmb\">300.00</span\n                                            ><span class=\"cell last-cell row-radio\"\n",
-			"amount",
-			"checkbox",
-			"type=\"checkbox\"",
-			"name=\"opening-installments-radio-",
-			"checkbox",
-			"-checkbox-",
-			"id=\"opening-installments-checkbox-",
-			"checkbox",
-			"row-checkbox",
-			"close-",
-			"<li><a href=\"#\">分期</a></li>",
-			"button",
-			"a clas",
-			"<a clas",
-			"<li><a href=\"#\">账单</a></li>",
-			"<li><a href=\"../html/index.html\">泰有信</a></li>",
-			"li><a href=\"../index.html\">首页</a></li>",
-			"<li><a href=\"#\">泰有信</a></li>",
-			" <li><a href=\"#\">泰有信</a></li>",
-			"div class=\"ie-bg\"",
-			"div class=\"ie-bg\"><i class=\"corner-1\"></i><i class=\"corner-2\"></i><i class=\"corner-3\"></i><i class=\"corner-4\"></i></div",
-			"<div class=\"ie-borders\"><i class=\"corner-1\"></i><i class=\"corner-2\"></i><i class=\"corner-3\"></i><i class=\"corner-4\"></i></div",
-			"ded-corners bg-transparent",
-			"button",
-			"<div class=\"ie-borders\"><i class=\"corner-1\"></i><i class=\"corner-2\"></i><i class=\"corner-3\"></i><i class=\"corner-4\"></i></div",
-			"lass=\"ie-borders",
-			"div",
-			"xfzq-.h",
-			"button",
-			"close-i",
-			"invalid",
-			"#",
-			"tab",
-			"panel-tab-issued-bills",
-			"panel",
-			"processParametersPassedIn",
-			"length",
-			"_updateListItemAccordingToCheckboxStatus",
-			"_playAnimationForIE8AndIE9OnCheckboxChange",
-			"_updateListItemAccordingToCheckboxStatus",
-			"_playAnimationForIE8AndIE9",
-			"_toggleCheckboxForListItem",
-			"_updateListItemAccordingToCheckboxStatus",
-			"argument",
-			"h1",
-			" icon-hover-trigger",
-			"on: -50p",
-			"-50p",
-			"icon-hover-trigger",
-			"label drop-down-list-option",
-			" choose-bank",
-			"label drop-down-list-option",
-			"tion: 0",
-			"{ backg",
-			" { backgr",
-			" {",
-			":   0",
-			"   ",
-			"iconfont",
-			"pagination",
-			"argument",
-			"我:",
-			"argument",
-			"type",
-			"panel-2",
-			"panel-1111111",
-			"panel",
-			"你自己的css class",
-			"class=\"label\" ",
-			".choose-bank",
-			"option",
-			"drop-down-list-option",
-			"options",
-			"innerHTML",
-			"option",
-			"drop-down-list-options",
-			"drop-down-list-options-list",
-			"drop-down-list-options",
-			"argument",
-			"allListItems",
-			"argument",
-			"active",
-			"focus",
-			"label",
-			"hover",
-			" opacity: ",
-			"menu-scales-up ",
-			"inline",
+			"9",
+			"animation",
+			"s-sub-menu",
+			"tates-from-90-degrees-bac",
+			"18",
+			"otates-from-180-degrees-back-to-0",
+			"menu-scales-up-a",
+			"current-value",
+			"type=\"number\"",
+			"type=\"num",
 			"top",
-			"right",
-			"initial",
-			"menu-scales-up ",
-			"menu-scales-up",
-			"menu-scales-u",
-			"solid"
+			"empty",
+			"html",
+			"transparent",
+			"line",
+			"'ie-edge-empty-input'",
+			"_updateInputStyleForGroomingPlaceholder",
+			"isIE8",
+			"navigator.userAgent",
+			"updateInputStyleForGroomingPlaceholder",
+			"input",
+			"argument",
+			"each",
+			"this",
+			"argument",
+			"placeholder",
+			"999",
+			"placeholder",
+			"33",
+			"locator",
+			"weixin",
+			"menu",
+			"user",
+			"menu-item > a > .lab",
+			"333",
+			"box-shadow: 0 0 8px",
+			"u.level-1 > .menu-item > a > .labe",
+			"333",
+			"menu.level-1 > .menu-item > a > .la",
+			".iconfont",
+			"simple-look",
+			"button",
+			"background",
+			"simple",
+			"z-index",
+			"0",
+			"#ie-user-avatar-borders",
+			"e-user-avatar-border",
+			"#ie-user-avatar-borders",
+			"borders",
+			" .avatar",
+			"#ie-user-avatar .avatar,\n			#user-info-bar-user-avatar .avatar",
+			"user-avatar",
+			"14",
+			"2",
+			"10",
+			"14",
+			"17",
+			"16",
+			"18",
+			"checkbox",
+			"100px",
+			"checkbox",
+			"check",
+			".tab",
+			"tab-list",
+			"popup-window",
+			"log",
+			"left",
+			"child",
+			".dialog-summary-sheet",
+			"tabular",
+			"bread",
+			"tabular",
+			"8px",
+			"0",
+			".form",
+			"create",
+			"iconfont",
+			"cell",
+			"left",
+			"info",
+			"tip",
+			"abel.",
+			"input",
+			".color-red",
+			".red",
+			":hover",
+			".simple-look",
+			"<em>",
+			"hover",
+			".bg-transparent.color-red",
+			"#app-header-info-and-links ",
+			"simple",
+			"style",
+			"button",
+			"span",
+			"header",
+			"icbc",
+			"ccb",
+			"absolute",
+			"tabular",
+			"-fee currency currency-rmb\">每期应",
+			"tabular",
+			" tabular-lists",
+			"tabular",
+			"close-installments",
+			"tabular",
+			"repayment-records",
+			"tabular",
+			"tabular-lists",
+			"font-important",
+			".tabular-lists ",
+			".repayment-records ",
+			"tabular",
+			"installmentsPlane",
+			"createInstallments",
+			"create-insta",
+			"create-instal",
+			"create-insta",
+			"createInstallment",
+			"create",
+			"$('#pl-close-installments-succeed')",
+			"pl-close-installments-succeed",
+			"$('.popup-layers-back-plate')",
+			"opening",
+			"close-",
+			"close"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -902,6 +907,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"type=\"number1\"",
 			"<li><a href=\"../html/xfzq-opening-installments-list.html\">分期</a></li>",
 			"<li><a href=\"../html/xfzq-installments.html\">分期</a></li>",
 			"<li><a href=\"../html/xfzq-bills-recent.html\">账单</a></li>",
@@ -936,28 +942,28 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app-dev/scripts/base/base.js",
+					"file": "app-dev/styles/base/base.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 14022,
+						"buffer_size": 48477,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12822,
-								12822
+								31308,
+								31308
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": -0.0,
-						"translation.y": 7774.0,
+						"translation.x": 0.0,
+						"translation.y": 28190.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -965,52 +971,60 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app-dev/html/xfzq-create-installment-step-1-option.html",
+					"file": "app-dev/styles/base/layout.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 15574,
+						"buffer_size": 13881,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5385,
-								5385
-							],
-							[
-								6429,
-								6429
-							],
-							[
-								7473,
-								7473
-							],
-							[
-								8519,
-								8519
-							],
-							[
-								9566,
-								9566
-							],
-							[
-								10613,
-								10613
+								12115,
+								12164
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": -0.0,
-						"translation.y": 2720.0,
+						"translation.x": 0.0,
+						"translation.y": 4983.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app-dev/styles/base/_fonts.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1203,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								50,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -1065,36 +1079,136 @@
 		"selected_items":
 		[
 			[
-				"creat",
-				"app-dev\\html\\xfzq-create-installment-step-1-option.html"
-			],
-			[
 				"base",
-				"app-dev\\scripts\\base\\base.js"
-			],
-			[
-				"create",
-				"app-dev\\html\\xfzq-create-installment-step-1-option.html"
-			],
-			[
-				"ba",
 				"app-dev\\styles\\base\\base.css"
 			],
 			[
-				"clos",
-				"app-dev\\html\\xfzq-close-installments-list.html"
+				"font",
+				"app-dev\\styles\\base\\_fonts.css"
 			],
 			[
-				"them",
-				"app-dev\\styles\\base\\theme-_default.css"
+				"lay",
+				"app-dev\\styles\\base\\layout.css"
+			],
+			[
+				"ba",
+				"app-dev\\scripts\\base\\base.js"
+			],
+			[
+				"bas",
+				"app-dev\\styles\\base\\base.css"
+			],
+			[
+				"reset",
+				"app-dev\\styles\\base\\_reset.css"
+			],
+			[
+				"res",
+				"app-dev\\styles\\base\\_reset.css"
+			],
+			[
+				"ie",
+				"app-dev\\styles\\base\\base-ie8.css"
+			],
+			[
+				"ie8",
+				"app-dev\\styles\\base\\theme-_default-ie8.css"
+			],
+			[
+				"header",
+				"app-dev\\html-snippets\\module-app-header.html"
+			],
+			[
+				"xfzqcss",
+				"app-dev\\styles\\pages\\xfzq-layout.css"
+			],
+			[
+				"",
+				"app-dev\\styles\\base\\base.css"
+			],
+			[
+				"indexcss",
+				"app-dev\\styles\\pages\\index.css"
 			],
 			[
 				"index",
 				"app-dev\\index.html"
 			],
 			[
+				"step2",
+				"app-dev\\html\\xfzq-create-installments-step-2-proceed.html"
+			],
+			[
+				"xl",
+				"app-dev\\styles\\pages\\xfzq-layout.css"
+			],
+			[
+				"them",
+				"app-dev\\styles\\base\\theme-_default.css"
+			],
+			[
+				"quick",
+				"app-dev\\html\\xfzq-quick-repayment-step-1-choose-bank-card.html"
+			],
+			[
+				"quickr",
+				"app-dev\\html\\xfzq-quick-repayment-step-2-proceed.html"
+			],
+			[
+				"fon",
+				"app-dev\\styles\\base\\_fonts.css"
+			],
+			[
+				"rep",
+				"app-dev\\html\\xfzq-repayments.html"
+			],
+			[
+				"xfl",
+				"app-dev\\styles\\pages\\xfzq-layout.css"
+			],
+			[
 				"repay",
 				"app-dev\\html\\xfzq-repayments.html"
+			],
+			[
+				"repya",
+				"app-dev\\html\\xfzq-repayments.html"
+			],
+			[
+				"xfla",
+				"app-dev\\styles\\pages\\xfzq-layout.css"
+			],
+			[
+				"closjs",
+				"app-dev\\scripts\\pages\\xfzq-page-close-installments.js"
+			],
+			[
+				"createins",
+				"app-dev\\scripts\\pages\\xfzq-page-create-installments.js"
+			],
+			[
+				"step",
+				"app-dev\\html\\xfzq-create-installment-step-2-proceed.html"
+			],
+			[
+				"creatjs",
+				"app-dev\\scripts\\pages\\xfzq-page-create-installments.js"
+			],
+			[
+				"helpd",
+				"app-dev\\styles\\pages\\xfzq-page-help-desk.css"
+			],
+			[
+				"clos",
+				"app-dev\\html\\xfzq-close-installments-list.html"
+			],
+			[
+				"creat",
+				"app-dev\\html\\xfzq-create-installment-step-1-option.html"
+			],
+			[
+				"create",
+				"app-dev\\html\\xfzq-create-installment-step-1-option.html"
 			],
 			[
 				"billr",
@@ -1109,20 +1223,12 @@
 				"app-dev\\html\\xfzq-quick-repayment-step-1-choose-bank-card.html"
 			],
 			[
-				"step",
-				"app-dev\\html\\xfzq-close-installments-step-2-proceed.html"
-			],
-			[
 				"installmentscss",
 				"app-dev\\styles\\pages\\xfzq-page-close-installments.css"
 			],
 			[
 				"iconf",
 				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
-			],
-			[
-				"bas",
-				"app-dev\\styles\\base\\base.css"
 			],
 			[
 				"in",
@@ -1133,24 +1239,12 @@
 				"app-dev\\html\\xfzq-bills-recent.html"
 			],
 			[
-				"ie",
-				"app-dev\\styles\\base\\theme-_default-ie8.css"
-			],
-			[
-				"ie8",
-				"app-dev\\styles\\base\\base-ie8.css"
-			],
-			[
 				"themed",
 				"app-dev\\styles\\base\\theme-_default.css"
 			],
 			[
 				"installme",
 				"app-dev\\html\\xfzq-create-installments.html"
-			],
-			[
-				"indexcss",
-				"app-dev\\styles\\pages\\index.css"
 			],
 			[
 				"insta",
@@ -1185,14 +1279,6 @@
 				"app-dev\\styles\\base\\theme-_default.css"
 			],
 			[
-				"step2",
-				"app-dev\\html\\xfzq-close-installments-step-2-proceed.html"
-			],
-			[
-				"lay",
-				"app-dev\\styles\\base\\layout.css"
-			],
-			[
 				"closst",
 				"app-dev\\html\\xfzq-close-installments-step-1-choose-bank-card.html"
 			],
@@ -1209,16 +1295,8 @@
 				"app-dev\\scripts\\pages\\xfzq-page-close-installments.js"
 			],
 			[
-				"res",
-				"app-dev\\styles\\base\\_reset.css"
-			],
-			[
 				"basej",
 				"app-dev\\scripts\\base\\base.js"
-			],
-			[
-				"rep",
-				"app-dev\\html\\xfzq-repayments.html"
 			],
 			[
 				"xlay",
@@ -1249,10 +1327,6 @@
 				"app-dev\\html\\xfzq-orders.html"
 			],
 			[
-				"header",
-				"app-dev\\html-snippets\\module-app-header.html"
-			],
-			[
 				"inde",
 				"app-dev\\styles\\pages\\index.css"
 			],
@@ -1267,10 +1341,6 @@
 			[
 				"xfzqr",
 				"app-dev\\html\\xfzq-repayments.html"
-			],
-			[
-				"closjs",
-				"app-dev\\scripts\\pages\\xfzq-page-close-installments.js"
 			],
 			[
 				"themie",
@@ -1313,10 +1383,6 @@
 				"app-dev\\html\\xfzq-bill-records-details.html"
 			],
 			[
-				"xfla",
-				"app-dev\\styles\\pages\\xfzq-layout.css"
-			],
-			[
 				"billre",
 				"app-dev\\html\\xfzq-bills-recent.html"
 			],
@@ -1327,10 +1393,6 @@
 			[
 				"bill",
 				"app-dev\\html\\xfzq-bills-past.html"
-			],
-			[
-				"font",
-				"app-dev\\styles\\base\\_fonts.css"
 			],
 			[
 				"themf",
@@ -1379,10 +1441,6 @@
 			[
 				"record",
 				"app-dev\\html\\xfzq-bill-records-details.html"
-			],
-			[
-				"fon",
-				"app-dev\\styles\\base\\fonts.css"
 			],
 			[
 				"sidb",
@@ -1531,50 +1589,6 @@
 			[
 				"helin",
 				"app-dev\\scripts\\pages\\xfzq-page-help-desk-index.js"
-			],
-			[
-				"xfzqhe",
-				"app-dev\\html\\xfzq-help-desk-cate-taiyx.html"
-			],
-			[
-				"xfie",
-				"app-dev\\styles\\pages\\xfzq-base-ie8.css"
-			],
-			[
-				"it",
-				"app-dev\\styles\\base\\base-ie8-theme.css"
-			],
-			[
-				"helpca",
-				"app-dev\\html\\xfzq-help-desk-cate-taiyx.html"
-			],
-			[
-				"closijs",
-				"app-dev\\scripts\\pages\\xfzq-page-close-installments.js"
-			],
-			[
-				"helpd",
-				"app-dev\\styles\\pages\\xfzq-page-help-desk.css"
-			],
-			[
-				"basht",
-				"app-dev\\styles\\base\\theme-base.css"
-			],
-			[
-				"basieth",
-				"app-dev\\styles\\base\\base-ie8-theme.css"
-			],
-			[
-				"ic",
-				"app-dev\\styles\\base\\iconfonts\\iconfont.css"
-			],
-			[
-				"helpde",
-				"app-dev\\html\\xfzq-help-desk.html"
-			],
-			[
-				"heade",
-				"app-dev\\html-snippets\\module-app-header.html"
 			]
 		],
 		"width": 0.0

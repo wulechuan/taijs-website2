@@ -3,6 +3,11 @@
 	position: absolute;
 	}
 	.ie8-input-fake-placeholder ~ input {
+		background-color: white;
+		-ms-filter: none;
+		filter: none;
+	}
+	.ie8-input-fake-placeholder ~ input.ms-ie-ms-edge-empty-field {
 		background-color: transparent;
 		/* filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#AAFFFFFF, endColorstr=#AAFFFFFF); */
 	}
@@ -1053,6 +1058,12 @@ button.button-x {
 .pagination [role="button"],
 .pagination button {
 	position: relative; /* for ie8 borders */
+}
+
+
+#app-header-info-and-links .sns .weixin .floating-layer-set .locator .ie-hover-patch {
+	width: 60px;
+	margin-left: -30px;
 }
 
 

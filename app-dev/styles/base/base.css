@@ -36,6 +36,10 @@ body {
 	body, button, input, select, option, [role="button"], [role="button"] label {
 		font-size: 16px;
 	}
+	input.empty-field:focus,
+	input.empty-field:active {
+		font-size: 16px;
+	}
 
 
 .title,
@@ -935,7 +939,6 @@ label.deco-input {
 		margin: 0!important;
 	}
 
-	label.deco-input input:empty,
 	label.deco-input input {
 		background-color: transparent; /* for ie8 input fake placeholder */
 	}
@@ -1414,6 +1417,16 @@ label.deco-input {
 		top: 0;
 		bottom: 0;
 		margin: auto 0 auto 0;
+
+		perspective: 1px;
+		transform-origin: 55% 45%;
+		animation: rotates-from-n180-degrees-back-to-0 0.2s ease-out forwards;
+	}
+	.menu.layout-hori > .menu-item.has-sub-menu.sub-menu-shown > a > .label:after,
+	.menu.layout-hori > .menu-item.has-sub-menu.sub-menu-shown > .label:after,
+	.menu.layout-hori > .menu-item.has-sub-menu:hover > a > .label:after,
+	.menu.layout-hori > .menu-item.has-sub-menu:hover > .label:after {
+		animation: rotates-n180-degrees 0.2s ease-out forwards;
 	}
 
 	.menu-item.has-sub-menu.sub-menu-shown {
@@ -2256,3 +2269,46 @@ ol.f-list, ul.f-list { /* function list */
 	.panel.current {
 		display: block;
 	}
+
+
+
+@keyframes menu-scales-up {
+	0%   { opacity: 0; transform: scaleY(0.2); }
+	50%  { opacity: 0.66; }
+	100% { opacity: 1; transform: scaleY(1); }
+}
+
+@keyframes menu-scales-up-and-slides {
+	0%   { transform: translate(0, -16px) scaleY(0.64); }
+	100% { transform: translate(0, 0) scaleY(1); }
+}
+
+@keyframes rotates-180-degrees {
+	0%   { transform: rotate(0deg); }
+	100% { transform: rotate(180deg); }
+}
+
+@keyframes rotates-from-180-degrees-back-to-0 {
+	0%   { transform: rotate(180deg); }
+	100% { transform: rotate(0deg); }
+}
+
+@keyframes rotates-n180-degrees {
+	0%   { transform: rotate(0deg); }
+	100% { transform: rotate(-180deg); }
+}
+
+@keyframes rotates-from-n180-degrees-back-to-0 {
+	0%   { transform: rotate(-180deg); }
+	100% { transform: rotate(0deg); }
+}
+
+@keyframes rotates-90-degrees {
+	0%   { transform: rotate(0deg); }
+	100% { transform: rotate(90deg); }
+}
+
+@keyframes rotates-from-90-degrees-back-to-0 {
+	0%   { transform: rotate(90deg); }
+	100% { transform: rotate(0deg); }
+}

@@ -35,8 +35,12 @@
 
 
 /* ----- theme definition begin ---------------- */
+	#user-info-bar .user-info-block a {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr=#31FFFFFF, endColorStr=#31FFFFFF)";
+			filter:  progid:DXImageTransform.Microsoft.Gradient(startColorStr=#31FFFFFF, endColorStr=#31FFFFFF);	
+	}
 	#user-info-bar .user-info-block a:hover {
-		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33FFFFFF, endColorStr=#33FFFFFF)";
-			filter:  progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33FFFFFF, endColorStr=#33FFFFFF);
+		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr=#44FFFFFF, endColorStr=#44FFFFFF)";
+			filter:  progid:DXImageTransform.Microsoft.Gradient(startColorStr=#44FFFFFF, endColorStr=#44FFFFFF);
 	}
 /* ----- theme definition end ------------------ */
