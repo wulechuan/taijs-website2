@@ -1,8 +1,8 @@
 (function () {
-	var $pL = $('#pl-quick-repayment-succeed');
+	var $pL = $('#pl-create-installments-succeed');
 	var $bP = $('.popup-layers-back-plate');
-
-	$('#button-submit-quick-repayment').on('click', function(event) {
+	
+	$('#button-submit-creating-installments').on('click', function(event) {
 		if (event) event.preventDefault();
 		$bP.show();
 		$pL.show();

@@ -43,16 +43,16 @@
     <div class="tab-panel-set">
         <ul role="tablist" class="tab-list has-single-tab"
             ><li role="tab"
-                          aria-controls="panel-close-installments"
-                        aria-labelledby="panel-tab-close-installments"
-                ><span class="label" id="panel-tab-close-installments">分期</span
+                          aria-controls="panel-create-installments"
+                        aria-labelledby="panel-tab-create-installments"
+                ><span class="label" id="panel-tab-create-installments">分期</span
             ></li
         ></ul>
         <div class="panel-group">
-            <div role="tabpanel" class="panel" aria-hidden="false" id="panel-close-installments">
+            <div role="tabpanel" class="panel" aria-hidden="false" id="panel-create-installments">
                 <div class="article">
                     <article>
-                        <form name="proceed-closing-installments" action>
+                        <form name="proceed-create-installments" action>
                             <div class="form">
                                 <div class="row">
                                     <div class="col"><span class="label">分期金额</span></div>
@@ -65,7 +65,7 @@
                                 <div class="row">
                                     <div class="col"></div>
                                     <div class="col buttons-in-single-line">
-                                        <button class="rounded-corners size-std-regular" button-action="confirm" id="button-submit-closing-installments">
+                                        <button class="rounded-corners size-std-regular" button-action="confirm" id="button-submit-creating-installments">
                                             <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
                                             <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
                                             <span class="label">确定</span>
@@ -91,7 +91,7 @@
 <!-- inject:appFooter:html --><!-- endinject -->
 
 <!-- inject:popupLayersWrapBegin:html --><!-- endinject -->
-<div role="dialog" class="popup-layer" id="pl-close-installments-succeed">
+<div role="dialog" class="popup-layer" id="pl-create-installments-succeed">
     <div class="popup-window has-dialog">
         <div class="ie-shadow"><div class="ie-shadow-matte"></div></div>
         <!-- <button class="button-x"></button> -->
@@ -107,14 +107,33 @@
                     <div class="article">
                         <article>
                             <div class="title">
-                                <h1>恭喜您，结束分期申请成功！</h1>
-                                <h4 class="subtitle">还款金额：<span class="value payment-amount">0.00</span
-                                    ><span class="currency-unit">元</span
+                                <h1>恭喜您，分期成功！</h1>
+                                <h4 class="subtitle"><span class="value bill-name">2月账单（1.27-2.26消费）</span
                                 ></h4>
                             </div>
                             <hr>
-                            <p>系统将从您指定的银行卡扣除还款金额，<br>
-                                由于不同银行卡的扣款限额不同，您的还款可能分笔扣除。</p>
+                            <div class="tabular dialog-summary-sheet">
+                                <ul class="f-list layout-hori">
+                                    <li><h5>分期金额</h5
+                                        ><p class="cell amount"><span class="value currency currency-rmb">2,400.00</span>元</p
+                                    ></li>
+                                    <li><h5>分期数量</h5
+                                        ><p class="cell installments-plan"><span class="value">6</span>期</p
+                                    ></li>
+                                    <li><h5>分期服务费</h5
+                                        ><p class="cell service-fee"><span class="value currency currency-rmb">4.00</span>元</p
+                                    ></li>
+                                    <li><h5>分期日期</h5
+                                        ><p class="cell installments-creation-timestamp"><time class="value">2016-02-19</time></p
+                                    ></li>
+                                    <li><h5>首期还款日期</h5
+                                        ><p class="cell installments-first-repayment-time"><time class="value">2016-05-15</time></p
+                                    ></li>
+                                    <li><h5>首期还款金额</h5
+                                        ><p class="cell installments-first-repayment-amount"><span class="value currency currency-rmb">404.00</span>元</p
+                                    ></li>
+                                </ul>
+                            </div>
                             <div class="buttons-in-single-line">
                                 <button class="rounded-corners size-std-regular" button-action="confirm">
                                     <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
@@ -132,5 +151,5 @@
 <!-- inject:popupLayersWrapEnd:html --><!-- endinject -->
 
 <!-- inject:bodyEnd:html --><!-- endinject -->
-<script src="../scripts/pages/xfzq-page-close-installments.min.js"></script>
+<script src="../scripts/pages/xfzq-page-create-installments.min.js"></script>
 </body></html>

@@ -341,157 +341,199 @@
     }
 
 
-	var $allTabularListItems = $('.tabular .f-list > li');
+	var $allTabularLists = $('.tabular .f-list');
 
-	$allTabularListItems.each(function () {
-		var listItem = this;
-		var $listItem = $(this);
+	$allTabularLists.each(function () {
+		var tabluar = this;
+		var $allListItems  = $(this).find(' > li.selectable');
+		var $allCheckboxes = $allListItems.find('input[type="checkbox"].selectable-list-item-selector');
+		var $allRadios     = $allListItems.find('input[type="radio"].selectable-list-item-selector');
+		// console.log('has checkboxes: ', $allCheckboxes.length > 0, '\nhas radios: ', $allRadios.length > 0);
 
-		function _updateListItemAccordingToCheckboxStatus(checkbox) {
-			if (!checkbox) return false;
-
-			if (checkbox.checked) {
-				$listItem.addClass('selected');
-			} else {
-				$listItem.removeClass('selected');
+		if ($allCheckboxes.length > 0) {
+			function _updateListItemAccordingToCheckboxStatus(listItem, isChecked) {
+				if (isChecked === true) {
+					$(listItem).addClass('selected');
+				} else {
+					$(listItem).removeClass('selected');
+				}
 			}
-		}
 
-		function _updateListItemAccordingToRadioStatus(radio) {
-			if (!radio) return false;
+			$allListItems.each(function () {
+				var listItem = this;
+				var $listItem = $(this);
 
-			if (radio.checked) {
-				$listItem.addClass('selected');
-			} else {
-				$listItem.removeClass('selected');
-			}
-		}
 
-		function _playAnimationForIE8AndIE9OnStatusChange() {
-			if (isIE8 || isIE9) {
-				function _zoomToFactor(factor) {
-					if (factor===1) {
-						if (isIE8) {
-							listItem.style.zoom = '';
-							listItem.style.margin = '';
-							return true;
-						}
-						if (isIE9) {
-							listItem.style.msTransform = '';
-							return true;
-						}
+				var $myCheckbox = $listItem.find('input[type="checkbox"].selectable-list-item-selector');
+				var myCheckbox = $myCheckbox[0];
+
+				var isInitiallyChecked = myCheckbox && myCheckbox.checked;
+				var _myCheckboxUntouchedYet = true;
+				setTimeout(function () { /* Initializing selection status; And this must dealy because ie8 to ie11 updates cached "checked" statuses very late */
+					if (_myCheckboxUntouchedYet) {
+						_updateListItemAccordingToCheckboxStatus(listItem, isInitiallyChecked);
 					}
+				}, 100);
 
+				if (myCheckbox) {
+					$myCheckbox.on('click', function(event) {
+						_myCheckboxUntouchedYet = false;
+						if (event) event.stopPropagation();
+					});
+
+					$listItem.on('click', function () {
+						myCheckbox.checked = !myCheckbox.checked;
+						_myCheckboxUntouchedYet = false;
+						_updateListItemAccordingToCheckboxStatus(this, myCheckbox.checked);
+						_playAnimationForIE8AndIE9OnStatusChange(this);
+					});
+
+					$myCheckbox.on('change', function() {
+						_updateListItemAccordingToCheckboxStatus(listItem, this.checked);
+						_playAnimationForIE8AndIE9OnStatusChange(listItem);
+					});
+				}
+			});
+		}
+
+		if ($allRadios.length > 0) {
+			function _updateAllListItemsAccordingToRadioValue(checkedRadioValue) {
+				if (!_radioUntouchedYet && checkedRadioValue === tabluar.radioLatestValue) return true;
+
+				for (var i = 0; i < $allListItems.length; i++) {
+					var _li = $allListItems[i];
+					var _radio = _li.elements && _li.elements.radio;
+					if (_radio.value === checkedRadioValue) {
+						$(_li).addClass('selected');
+						_playAnimationForIE8AndIE9OnStatusChange(_li);
+					} else if (_radio.value === tabluar.radioLatestValue) {
+						$(_li).removeClass('selected');
+						// _playAnimationForIE8AndIE9OnStatusChange(_li);
+					}
+				}
+
+				tabluar.radioLatestValue = checkedRadioValue;
+			}
+
+			tabluar.radioLatestValue = null;
+			for (var i = 0; i < $allRadios.length; i++) {
+				var _radio = $allRadios[i];
+				if (_radio.checked) {
+					tabluar.radioLatestValue = _radio.value;
+					break;
+				}
+			}
+
+			var _radioUntouchedYet = true;
+			setTimeout(function () { /* Initializing selection status; And this must dealy because ie8 to ie11 updates cached "checked" statuses very late */
+				if (_radioUntouchedYet) {
+					// console.log('init radioLatestValue: ', tabluar.radioLatestValue);
+					_updateAllListItemsAccordingToRadioValue(tabluar.radioLatestValue);
+				}
+			}, 100);
+
+			$allListItems.each(function () {
+				var listItem = this;
+				var $listItem = $(this);
+
+				var $myRadio = $listItem.find('input[type="radio"].selectable-list-item-selector');
+				var myRadio = $myRadio[0];
+				if (myRadio) {
+					if (typeof listItem.elements !== 'object') listItem.elements = {};
+					listItem.elements.radio = myRadio;
+
+					$myRadio.on('click', function(event) {
+					});
+
+					$listItem.on('click', function () {
+						_radioUntouchedYet = false;
+						myRadio.checked = true;
+						_updateAllListItemsAccordingToRadioValue(myRadio.value);
+					});
+				}
+			});
+		}
+
+		function _playAnimationForIE8AndIE9OnStatusChange(listItem) {
+			if (!isIE8 && !isIE9) {
+				return true;
+			}
+
+			function _zoomToFactor(factor) {
+				if (factor===1) {
 					if (isIE8) {
-						var tempMarginHori = oldWidth  * (1 - factor) / 2;
-						var tempMarginVert = oldHeight * (1 - factor) / 2 + originalVertMargin;
-
-						if (factor) {
-							listItem.style.zoom = factor;
-						} else {
-							console.error('Invalid zooming factor: ', factor);
-							return false;
-						}
-						listItem.style.margin = tempMarginVert+'px' + ' ' + tempMarginHori+'px';
+						listItem.style.zoom = '';
+						listItem.style.margin = '';
+						return true;
 					}
-
 					if (isIE9) {
-						listItem.style.msTransform = 'scale('+factor+')';
+						listItem.style.msTransform = '';
+						return true;
 					}
 				}
-				function _doZoomDelay(targetStage) {
-					var zoomFactor = 1;
-					if (targetStage !== tempStageCounter-1) {
-						var lastSegRatioBetweenPiAndTwoPi = 0.75;
-						var ratio = Math.cos(targetStage/(tempStageCounter-1) * Math.PI * lastSegRatioBetweenPiAndTwoPi + Math.PI * (2 - lastSegRatioBetweenPiAndTwoPi)) * 0.5 + 0.5;
-						ratio = Math.sqrt(ratio);
-						zoomFactor = minFactor + (1 - minFactor) * ratio;
-					}
 
-					if (targetStage === 0) {
-						_zoomToFactor(zoomFactor);
+				if (isIE8) {
+					var tempMarginHori = oldWidth  * (1 - factor) / 2;
+					var tempMarginVert = oldHeight * (1 - factor) / 2 + originalVertMargin;
+
+					if (factor) {
+						listItem.style.zoom = factor;
 					} else {
-						var delayMS = frameGapMS*targetStage;
-						setTimeout(function () {
-							if (currentAniStage < targetStage) {
-								currentAniStage = targetStage;
-								_zoomToFactor(zoomFactor);
-							}
-						}, delayMS);
+						console.error('Invalid zooming factor: ', factor);
+						return false;
 					}
+					listItem.style.margin = tempMarginVert+'px' + ' ' + tempMarginHori+'px';
 				}
 
-				var currentAniStage = 0;
-				var minFactor = 0.984;
-				var frameGapMS, tempStageCounter;
-
-				var originalVertMargin, oldHeight, oldWidth;
-				if (isIE8) {
-					originalVertMargin = -1; // set by css file
-					oldHeight = $listItem.outerHeight();
-					oldWidth  = $listItem.outerWidth();
-				}
-
-				if (isIE8) {
-					frameGapMS = 14;
-					tempStageCounter = 18;
-				}
 				if (isIE9) {
-					frameGapMS = 11;
-					tempStageCounter = 27;
-				}
-
-				for (var i = 0; i < tempStageCounter; i++) {
-					_doZoomDelay(i);
+					listItem.style.msTransform = 'scale('+factor+')';
 				}
 			}
-		}
+			function _doZoomDelay(targetStage) {
+				var zoomFactor = 1;
+				if (targetStage !== tempStageCounter-1) {
+					var lastSegRatioBetweenPiAndTwoPi = 0.75;
+					var ratio = Math.cos(targetStage/(tempStageCounter-1) * Math.PI * lastSegRatioBetweenPiAndTwoPi + Math.PI * (2 - lastSegRatioBetweenPiAndTwoPi)) * 0.5 + 0.5;
+					ratio = Math.sqrt(ratio);
+					zoomFactor = minFactor + (1 - minFactor) * ratio;
+				}
 
-		var $checkbox = $listItem.find('input[type="checkbox"]');
-		var checkbox = $checkbox[0];
-		if (checkbox) {
-			setTimeout(function () { /* Initializing selection status; And this must dealy because ie8 to ie11 updates cached "checked" statuses very late */
-				_updateListItemAccordingToCheckboxStatus(checkbox);
-			}, 100);
+				if (targetStage === 0) {
+					_zoomToFactor(zoomFactor);
+				} else {
+					var delayMS = frameGapMS*targetStage;
+					setTimeout(function () {
+						if (currentAniStage < targetStage) {
+							currentAniStage = targetStage;
+							_zoomToFactor(zoomFactor);
+						}
+					}, delayMS);
+				}
+			}
 
-			$checkbox.on('change', function() {
-				_updateListItemAccordingToCheckboxStatus(this);
-				_playAnimationForIE8AndIE9OnStatusChange();
-			});
+			var currentAniStage = 0;
+			var minFactor = 0.984;
+			var frameGapMS, tempStageCounter;
 
-			$checkbox.on('click', function(event) {
-				if (event) event.stopPropagation();
-			});
+			var originalVertMargin, oldHeight, oldWidth;
+			if (isIE8) {
+				originalVertMargin = -1; // set by css file
+				oldHeight = $(listItem).outerHeight();
+				oldWidth  = $(listItem).outerWidth();
+			}
 
-			$listItem.on('click', function () {
-				checkbox.checked = !checkbox.checked;
-				_updateListItemAccordingToCheckboxStatus(checkbox);
-				_playAnimationForIE8AndIE9OnStatusChange();
-			});
-		}
+			if (isIE8) {
+				frameGapMS = 14;
+				tempStageCounter = 18;
+			}
+			if (isIE9) {
+				frameGapMS = 11;
+				tempStageCounter = 27;
+			}
 
-		var $radio = $listItem.find('input[type="radio"]');
-		var radio = $radio[0];
-		if (radio) {
-			setTimeout(function () { /* Initializing selection status; And this must dealy because ie8 to ie11 updates cached "checked" statuses very late */
-				_updateListItemAccordingToRadioStatus(radio);
-			}, 100);
-
-			$radio.on('change', function() {
-				console.log(this, this.checked, this.value);
-				_updateListItemAccordingToRadioStatus(this);
-				_playAnimationForIE8AndIE9OnStatusChange();
-			});
-
-			$radio.on('click', function(event) {
-				if (event) event.stopPropagation();
-			});
-
-			$listItem.on('click', function () {
-				radio.checked = true;
-				_updateListItemAccordingToRadioStatus(radio);
-				_playAnimationForIE8AndIE9OnStatusChange();
-			});
+			for (var i = 0; i < tempStageCounter; i++) {
+				_doZoomDelay(i);
+			}
 		}
 	});
 

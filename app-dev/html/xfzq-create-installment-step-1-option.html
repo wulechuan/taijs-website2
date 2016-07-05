@@ -8,7 +8,7 @@
     <!--[if lte IE 8]>
     <link rel="stylesheet" type="text/css" href="../styles/pages/xfzq-layout-ie8.min.css">
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="../styles/pages/xfzq-page-create-installment.min.css">
+    <link rel="stylesheet" type="text/css" href="../styles/pages/xfzq-page-create-installments.min.css">
 </head>
 <body>
 <!-- inject:bodyBegin:html --><!-- endinject -->
@@ -43,13 +43,13 @@
     <div class="tab-panel-set">
         <ul role="tablist" class="tab-list has-single-tab"
             ><li role="tab"
-                          aria-controls="panel-opening-installments"
-                        aria-labelledby="panel-tab-opening-installments"
-                ><span class="label" id="panel-tab-opening-installments">分期</span
+                          aria-controls="panel-create-installments"
+                        aria-labelledby="panel-tab-create-installments"
+                ><span class="label" id="panel-tab-create-installments">分期</span
             ></li
         ></ul>
         <div class="panel-group">
-            <div role="tabpanel" class="panel" aria-hidden="false" id="panel-opening-installments">
+            <div role="tabpanel" class="panel" aria-hidden="false" id="panel-create-installments">
                 <form action="../html/xfzq-create-installment-step-2-proceed.html">
                 <div class="article">
                     <article>
@@ -76,7 +76,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="lists-block tabular-lists opening-installments">
+                        <div class="lists-block tabular-lists create-installments">
                             <div class="empty-content-hint"></div>
 
                             <div class="lists">
@@ -87,74 +87,80 @@
                                         ><span class="cell value service-fee currency currency-rmb">每期应还（元）</span
                                     ></div>
                                     <ul class="f-list">
-                                        <li class="selectable"
+                                        <li class="selectable seletcor-is-radio"
                                             ><span class="cell caption-cell value installment-option">3期</span
                                             ><span class="cell value amount-per-installment currency currency-rmb">800.00</span
                                             ><span class="cell value service-fee currency currency-rmb">2.00</span
                                             ><span class="cell last-cell row-radio"
-                                                ><input type="radio" name="createInstallment"
-                                                                          id="create-installment-radio-1" value="3"
-                                                ><label                  for="create-installment-radio-1"
+                                                ><input type="radio" class="selectable-list-item-selector"
+                                                       name="createInstallment"
+                                                         id="create-installment-radio-1" value="3"
+                                                ><label for="create-installment-radio-1"
                                                     class="deco-input"
                                                 ></label
                                             ></span
                                         ></li>
-                                        <li class="selectable"
+                                        <li class="selectable seletcor-is-radio"
                                             ><span class="cell caption-cell value installment-option">6期</span
                                             ><span class="cell value amount-per-installment currency currency-rmb">400.00</span
                                             ><span class="cell value service-fee currency currency-rmb">4.00</span
                                             ><span class="cell last-cell row-radio"
-                                                ><input type="radio" name="createInstallment"
-                                                                          id="create-installment-radio-2" value="6"
-                                                ><label                  for="create-installment-radio-2"
+                                                ><input type="radio" class="selectable-list-item-selector"
+                                                       name="createInstallment"
+                                                         id="create-installment-radio-2" value="6"
+                                                ><label for="create-installment-radio-2"
                                                     class="deco-input"
                                                 ></label
                                             ></span
                                         ></li>
-                                        <li class="selectable"
+                                        <li class="selectable seletcor-is-radio"
                                             ><span class="cell caption-cell value installment-option">9期</span
                                             ><span class="cell value amount-per-installment currency currency-rmb">266.67</span
                                             ><span class="cell value service-fee currency currency-rmb">6.00</span
                                             ><span class="cell last-cell row-radio"
-                                                ><input type="radio" name="createInstallment"
-                                                                          id="create-installment-radio-3" value="9"
-                                                ><label                  for="create-installment-radio-3"
+                                                ><input type="radio" class="selectable-list-item-selector"
+                                                       name="createInstallment"
+                                                         id="create-installment-radio-3" value="9"
+                                                ><label for="create-installment-radio-3"
                                                     class="deco-input"
                                                 ></label
                                             ></span
                                         ></li>
-                                        <li class="selectable"
+                                        <li class="selectable seletcor-is-radio"
                                             ><span class="cell caption-cell value installment-option">12期</span
                                             ><span class="cell value amount-per-installment currency currency-rmb">200.00</span
                                             ><span class="cell value service-fee currency currency-rmb">8.00</span
                                             ><span class="cell last-cell row-radio"
-                                                ><input type="radio" name="createInstallment"
-                                                                          id="create-installment-radio-4" value="12"
-                                                ><label                  for="create-installment-radio-4"
+                                                ><input type="radio" class="selectable-list-item-selector"
+                                                       name="createInstallment"
+                                                         id="create-installment-radio-4" value="12"
+                                                ><label for="create-installment-radio-4"
                                                     class="deco-input"
                                                 ></label
                                             ></span
                                         ></li>
-                                        <li class="selectable"
+                                        <li class="selectable seletcor-is-radio"
                                             ><span class="cell caption-cell value installment-option">18期</span
                                             ><span class="cell value amount-per-installment currency currency-rmb">133.33</span
                                             ><span class="cell value service-fee currency currency-rmb">10.00</span
                                             ><span class="cell last-cell row-radio"
-                                                ><input type="radio" name="createInstallment"
-                                                                          id="create-installment-radio-5" value="18"
-                                                ><label                  for="create-installment-radio-5"
+                                                ><input type="radio" class="selectable-list-item-selector"
+                                                       name="createInstallment"
+                                                         id="create-installment-radio-5" value="18"
+                                                ><label for="create-installment-radio-5"
                                                     class="deco-input"
                                                 ></label
                                             ></span
                                         ></li>
-                                        <li class="selectable"
+                                        <li class="selectable seletcor-is-radio"
                                             ><span class="cell caption-cell value installment-option">24期</span
                                             ><span class="cell value amount-per-installment currency currency-rmb">100.00</span
                                             ><span class="cell value service-fee currency currency-rmb">12.00</span
                                             ><span class="cell last-cell row-radio"
-                                                ><input type="radio" name="createInstallment"
-                                                                          id="create-installment-radio-6" value="24"
-                                                ><label                  for="create-installment-radio-6"
+                                                ><input type="radio" class="selectable-list-item-selector"
+                                                       name="createInstallment"
+                                                         id="create-installment-radio-6" value="24"
+                                                ><label for="create-installment-radio-6"
                                                     class="deco-input"
                                                 ></label
                                             ></span
@@ -163,7 +169,7 @@
 
                                     <div class="footer"
                                         ><span class="cell last-cell">
-                                            <button class="rounded-corners has-borders size-std-regular" id="button-opening-selected-installments">
+                                            <button class="rounded-corners has-borders size-std-regular" id="button-create-selected-installments">
                                                 <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
                                                 <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
                                                 <span class="label">确认分期</span>
@@ -227,5 +233,5 @@
 <!-- inject:popupLayersWrapEnd:html --><!-- endinject -->
 
 <!-- inject:bodyEnd:html --><!-- endinject -->
-<script src="../scripts/pages/xfzq-page-opening-installments.min.js"></script>
+<script src="../scripts/pages/xfzq-page-create-installments.min.js"></script>
 </body></html>

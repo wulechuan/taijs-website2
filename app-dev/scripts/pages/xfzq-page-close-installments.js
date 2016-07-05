@@ -1,13 +1,16 @@
 (function () {
+	var $pL = $('#pl-close-installments-succeed');
+	var $bP = $('.popup-layers-back-plate');
+
 	$('#button-submit-closing-installments').on('click', function(event) {
 		if (event) event.preventDefault();
-		$('.popup-layers-back-plate').show();
-		$('#pl-close-installments-succeed').show();
+		$bP.show();
+		$pL.show();
 	});
 
-	$('#pl-close-installments-succeed').on('click', function(event) {
+	$pL.find('button[button-action="confirm"]').on('click', function(event) {
 		if (event) event.stopPropagation();
-		$('.popup-layers-back-plate').hide();
-		$('#pl-close-installments-succeed').hide();
+		$bP.hide();
+		$pL.hide();
 	});
 })();
