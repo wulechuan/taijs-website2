@@ -421,7 +421,8 @@
 				event.preventDefault();
 				event.stopPropagation();
 			}
-			for (var p in event) console.log(p, ': ', event[p]);
+
+			$(menuItem).toggleClass('coupled-shown');
 		});
 	});
 
