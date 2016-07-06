@@ -1056,13 +1056,30 @@ button.button-x {
 		.menu.layout-hori > .menu-item.has-sub-menu     > .sub-menu-hint,
 		.menu.layout-hori > .menu-item.has-sub-menu > a > .label:after,
 		.menu.layout-hori > .menu-item.has-sub-menu     > .label:after {
+			text-indent: -2px;
 			line-height: 16px;
 		}
 
+	.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown > a > .sub-menu-hint:after,
+	.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown     > .sub-menu-hint:after,
 	.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown > a > .label:after,
 	.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown     > .label:after,
+	.menu.layout-hori > .menu-item.has-sub-menu.hover-to-show-coupled:hover > a > .sub-menu-hint:after,
+	.menu.layout-hori > .menu-item.has-sub-menu.hover-to-show-coupled:hover     > .sub-menu-hint:after,
 	.menu.layout-hori > .menu-item.has-sub-menu.hover-to-show-coupled:hover > a > .label:after,
 	.menu.layout-hori > .menu-item.has-sub-menu.hover-to-show-coupled:hover     > .label:after {
+		content: '\e605';
+		}
+		.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown > a > .sub-menu-hint,
+		.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown     > .sub-menu-hint,
+		.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown > a > .label:after,
+		.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown     > .label:after,
+		.menu.layout-hori > .menu-item.has-sub-menu.hover-to-show-coupled:hover > a > .sub-menu-hint,
+		.menu.layout-hori > .menu-item.has-sub-menu.hover-to-show-coupled:hover     > .sub-menu-hint,
+		.menu.layout-hori > .menu-item.has-sub-menu.hover-to-show-coupled:hover > a > .label:after,
+		.menu.layout-hori > .menu-item.has-sub-menu.hover-to-show-coupled:hover     > .label:after {
+			text-indent: -2px;
+			line-height: 20px;
 		}
 
 
