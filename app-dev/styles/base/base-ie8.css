@@ -1026,6 +1026,21 @@ button.button-x {
 	}
 
 
+.menu {
+	}
+	.menu > .menu-item.has-sub-menu:hover > a > .label:after,
+	.menu > .menu-item.has-sub-menu:hover > .label:after {
+		content: '\e607';
+	}
+	.menu > .menu-item.has-sub-menu.sub-menu-shown > a > .label:after,
+	.menu > .menu-item.has-sub-menu.sub-menu-shown > .label:after,
+	.menu > .menu-item.has-sub-menu.hover-to-show-coupled:hover > a > .label:after,
+	.menu > .menu-item.has-sub-menu.hover-to-show-coupled:hover > .label:after {
+		content: '\e605';
+	}
+
+
+
 .popup-layers-back-plate {
 	background-color: black;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=80)";
@@ -1086,3 +1101,12 @@ button.button-x {
 	right: 5px;
 	bottom: 5px;
 }
+
+#my-assets {
+	}
+	#my-assets .menu.level-1 > .menu-item.has-sub-menu.coupled-shown > a > .label:after,
+	#my-assets .menu.level-1 > .menu-item.has-sub-menu.coupled-shown > .label:after,
+	#my-assets .menu.level-1 > .menu-item.has-sub-menu.hover-to-show-coupled:hover > a > .label:after,
+	#my-assets .menu.level-1 > .menu-item.has-sub-menu.hover-to-show-coupled:hover > .label:after {
+		content: '\e609';
+	}

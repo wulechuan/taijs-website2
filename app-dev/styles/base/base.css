@@ -1175,14 +1175,14 @@ label.deco-input {
 		display: none;
 		}
 
-		.floating-layer-set.layer-auto-hide.layer-hover-to-show .locator {
+		.floating-layer-set.layer-auto-hide.hover-to-show-coupled .locator {
 			display: block;
 			visibility: hidden;
 			opacity: 0;
 		}
 
 		.touch-off .floating-layer-set.layer-shown .locator,
-		.touch-off .floating-layer-set.layer-auto-hide.layer-hover-to-show:hover .locator {
+		.touch-off .floating-layer-set.layer-auto-hide.hover-to-show-coupled:hover .locator {
 			display: block;
 			visibility: visible;
 			opacity: 1;
@@ -1401,17 +1401,30 @@ label.deco-input {
 	.menu > .menu-item.has-sub-menu > a > .label:after,
 	.menu > .menu-item.has-sub-menu > .label:after {
 		font-family:"iconfont" !important;
+		content: '\e606';
 		display: block;
 		position: absolute;
+		left: auto;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		direction: rtl;
+		text-indent: 0;
+
 		z-index: 1;
 		overflow: hidden;
 		margin: auto 0;
+		line-height: 1;
 
 		perspective: 1px;
 		animation-duration: 0.25s;
 		animation-timing-function: ease-out;
 
 		transform: rotate(0deg);
+	}
+
+	.menu > .menu-item.has-sub-menu > a > .label:after,
+	.menu > .menu-item.has-sub-menu > .label:after {
 		animation-name: rotates-from-90-degrees-back-to-0;
 	}
 	.menu > .menu-item.has-sub-menu:hover > a > .label:after,
@@ -1421,8 +1434,19 @@ label.deco-input {
 	}
 	.menu > .menu-item.has-sub-menu.sub-menu-shown > a > .label:after,
 	.menu > .menu-item.has-sub-menu.sub-menu-shown > .label:after {
-		transform: rotate(-180deg);
-		animation-name: rotates-n180-degrees;
+		transform: rotate(-90deg);
+		animation-name: rotates-n90-degrees;
+	}
+
+	.menu > .menu-item.has-sub-menu.hover-to-show-coupled > a > .label:after,
+	.menu > .menu-item.has-sub-menu.hover-to-show-coupled > .label:after {
+		animation-name: rotates-from-n90-degrees-back-to-0;
+	}
+
+	.menu > .menu-item.has-sub-menu.hover-to-show-coupled:hover > a > .label:after,
+	.menu > .menu-item.has-sub-menu.hover-to-show-coupled:hover > .label:after {
+		transform: rotate(-90deg);
+		animation-name: rotates-n90-degrees;
 	}
 
 	.menu.layout-hori > .menu-item.has-sub-menu > a > .label:after,
@@ -1431,15 +1455,12 @@ label.deco-input {
 		width: 10px;
 		height: 10px;
 		line-height: 10px;
-		text-indent: 0;
 		font-size: 12px;
 
-		left: auto;
-		right: 0;
-		top: 0;
-		bottom: 0;
-
-		transform-origin: 55% 45%;
+		transform-origin: 45% 45%;
+	}
+	.menu.layout-hori > .menu-item.has-sub-menu > a > .label:after,
+	.menu.layout-hori > .menu-item.has-sub-menu > .label:after {
 		animation-name: rotates-from-n180-degrees-back-to-0;
 	}
 	.menu.layout-hori > .menu-item.has-sub-menu.sub-menu-shown > a > .label:after,
@@ -1579,7 +1600,7 @@ label.deco-input {
 	.drop-down-list .drop-down-list-option {
 		box-sizing: border-box;
 	}
-	.drop-down-list.hover-to-show-options:hover .drop-down-list-options,
+	.drop-down-list.hover-to-show-coupled:hover .drop-down-list-options,
 	.drop-down-list.options-list-shown .drop-down-list-options {
 		display: block;
 	}

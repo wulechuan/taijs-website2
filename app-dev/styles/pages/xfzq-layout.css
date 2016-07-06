@@ -693,9 +693,6 @@
 
 		#page-sidebar-nav .menu-item.has-sub-menu > a > .label:after,
 		#page-sidebar-nav .menu-item.has-sub-menu > .label:after {
-			font-family: 'iconfont'!important;
-			display: block;
-			position: absolute;
 			top: 9px;
 			margin: 0;
 			right: 25px;
@@ -703,16 +700,7 @@
 
 			height: 25px;
 			font-size: 25px;
-			line-height: 1;
-			}
-			#page-sidebar-nav .menu-item.has-sub-menu > a > .label:after,
-			#page-sidebar-nav .menu-item.has-sub-menu > .label:after {
-				content: '\e606';
-			}
-			#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > a > .label:after,
-			#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > .label:after {
-				content: '\e605';
-			}
+		}
 
 		#page-sidebar-nav .menu-item.has-sub-menu > .menu {
 			height: 0;
