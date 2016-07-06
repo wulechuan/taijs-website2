@@ -610,29 +610,25 @@
 
 	#my-assets .menu.level-1 > .menu-item.has-sub-menu > a > .label:after,
 	#my-assets .menu.level-1 > .menu-item.has-sub-menu > .label:after {
-		font-family: 'iconfont'!important;
 		content: '\e603';
 		font-size: 26px;
 		line-height: 1;
-		position: absolute;
 		right: 10px;
 		top: 1px;
 		bottom: 1px;
 		height: 26px;
-		margin: auto 0;
 		direction: rtl;
 		text-indent: -9px;
-
-		perspective: 1px;
 		transform-origin: 74% 50%;
-		animation: rotates-from-90-degrees-back-to-0 0.2s ease-out forwards;
+		animation-name: rotates-from-n90-degrees-back-to-0;
 	}
 
 	#my-assets .menu.level-1 > .menu-item.has-sub-menu.sub-menu-shown:hover > a > .label:after,
 	#my-assets .menu.level-1 > .menu-item.has-sub-menu.sub-menu-shown:hover > .label:after,
 	#my-assets .menu.level-1 > .menu-item.has-sub-menu:hover > a > .label:after,
 	#my-assets .menu.level-1 > .menu-item.has-sub-menu:hover > .label:after {
-		animation: rotates-90-degrees 0.2s ease-out forwards;
+		transform: rotate(-90deg);
+		animation-name: rotates-n90-degrees;
 	}
 
 	#my-assets .menu.level-2,
