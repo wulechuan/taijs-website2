@@ -685,8 +685,8 @@
 			overflow: visible; /* for menu-item label borders, because the margin top/bottom is negative */
 		}
 		#page-sidebar-nav .menu-item.has-sub-menu > .menu {
-			height: 0;
-			overflow: hidden;
+			/* height: 0; */
+			/* overflow: hidden; */
 		}
 
 		#page-sidebar-nav .menu-item.has-sub-menu.coupled-shown > .menu {

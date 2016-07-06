@@ -350,7 +350,26 @@
 
 	setPageSidebarNavCurrentItem(urlParameters.psn);
 
+	function updatePageSidebarNavSubMenuForMenuItem(menuItem, action) {
+		var $subMenu = $(menuItem).find('> .menu');
+		var subMenuWasExpanded = $(menuItem).hasClass('coupled-shown');
+		var needAction =
+			(!subMenuWasExpanded && action==='expand')
+			|| (subMenuWasExpanded && action==='collapse')
+			|| (action==='toggle')
+		;
+		if (!needAction) {
+			return 0;
+		}
 
+		if (subMenuWasExpanded) {
+			$(menuItem).removeClass('coupled-shown');
+			$subMenu.slideUp();
+		} else {
+			$(menuItem).addClass('coupled-shown');
+			$subMenu.slideDown();
+		}
+	}
 
 	function setPageSidebarNavCurrentItem(conf) {
 		conf = conf || {};
@@ -422,7 +441,7 @@
 				event.stopPropagation();
 			}
 
-			$(menuItem).toggleClass('coupled-shown');
+			updatePageSidebarNavSubMenuForMenuItem(menuItem, 'toggle');
 		});
 	});
 
