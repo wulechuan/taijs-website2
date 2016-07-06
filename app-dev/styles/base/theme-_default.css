@@ -520,7 +520,7 @@ label.deco-input {
 	}
 
 	.drop-down-list:hover,
-	.drop-down-list.options-list-shown {
+	.drop-down-list.coupled-shown {
 		border-color: #157dff;
 	}
 

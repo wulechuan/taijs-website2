@@ -4,6 +4,90 @@
 		"selected_items":
 		[
 			[
+				"bank",
+				"bankHTML"
+			],
+			[
+				"chos",
+				"chosenValue"
+			],
+			[
+				"choo",
+				"chosenOption"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"cho",
+				"chosenValue"
+			],
+			[
+				"t",
+				"type	Attr"
+			],
+			[
+				"texal",
+				"text-align"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"ex",
+				"expandableContent"
+			],
+			[
+				"tr",
+				"trigger"
+			],
+			[
+				"exp",
+				"expand"
+			],
+			[
+				"co",
+				"collapsed"
+			],
+			[
+				"e",
+				"expandable"
+			],
+			[
+				"solo",
+				"soloViaTrigger"
+			],
+			[
+				"col",
+				"collpaseAll"
+			],
+			[
+				"the",
+				"theTrigger"
+			],
+			[
+				"slo",
+				"soloViaTrigger"
+			],
+			[
+				"cont",
+				"contentContainer"
+			],
+			[
+				"to",
+				"toggle"
+			],
+			[
+				"te",
+				"text-indent"
+			],
+			[
+				"isC",
+				"isCurrentItem"
+			],
+			[
 				"magin",
 				"margin-top"
 			],
@@ -18,10 +102,6 @@
 			[
 				"font",
 				"font-size"
-			],
-			[
-				"e",
-				"elements"
 			],
 			[
 				"che",
@@ -64,10 +144,6 @@
 				"panelId"
 			],
 			[
-				"co",
-				"color"
-			],
-			[
 				"op",
 				"option"
 			],
@@ -88,10 +164,6 @@
 				"box-sizing"
 			],
 			[
-				"tr",
-				"transition"
-			],
-			[
 				"z",
 				"zoomFactor"
 			],
@@ -106,10 +178,6 @@
 			[
 				"ease",
 				"ease-out"
-			],
-			[
-				"mar",
-				"marginTop"
 			],
 			[
 				"zo",
@@ -236,16 +304,8 @@
 				"inline-block"
 			],
 			[
-				"t",
-				"top"
-			],
-			[
 				"h",
 				"height"
-			],
-			[
-				"col",
-				"color"
 			],
 			[
 				"cur",
@@ -272,10 +332,6 @@
 				"slice"
 			],
 			[
-				"el",
-				"elements"
-			],
-			[
 				"isIE",
 				"isIE9"
 			],
@@ -294,14 +350,6 @@
 			[
 				"isE",
 				"isIE9"
-			],
-			[
-				"te",
-				"text-align"
-			],
-			[
-				"cont",
-				"contentHeight"
 			],
 			[
 				"texsh",
@@ -466,80 +514,72 @@
 			[
 				"du",
 				"document"
-			],
-			[
-				"bu",
-				"button	Tag"
-			],
-			[
-				"li",
-				"lighter"
-			],
-			[
-				"backc",
-				"background-color"
-			],
-			[
-				"bordecol",
-				"border-color"
-			],
-			[
-				"bordes",
-				"border-style"
-			],
-			[
-				"file",
-				"filter"
-			],
-			[
-				"filter",
-				"filterCmp"
-			],
-			[
-				"ie-",
-				"ie-compositor-mask"
-			],
-			[
-				"l",
-				"left"
-			],
-			[
-				"boderw",
-				"border-width"
-			],
-			[
-				"bord",
-				"border-collapse"
-			],
-			[
-				"tabel",
-				"table-cell"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
+			"file": "app-dev/scripts/base/base.js",
+			"settings":
+			{
+				"buffer_size": 19874,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "app-dev/styles/base/base.css",
 			"settings":
 			{
-				"buffer_size": 48477,
+				"buffer_size": 53712,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app-dev/styles/base/layout.css",
+			"file": "app-dev/styles/pages/xfzq-layout.css",
 			"settings":
 			{
-				"buffer_size": 13881,
+				"buffer_size": 21760,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app-dev/styles/base/_fonts.css",
+			"file": "app-dev/styles/base/theme-_default.css",
 			"settings":
 			{
-				"buffer_size": 1203,
+				"buffer_size": 17527,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app-dev/html/xfzq-close-installments-step-1-choose-bank-card.html",
+			"settings":
+			{
+				"buffer_size": 9733,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app-dev/html/xfzq-quick-repayment-step-1-choose-bank-card.html",
+			"settings":
+			{
+				"buffer_size": 9799,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app-dev/html/xfzq-close-installments-step-2-proceed.html",
+			"settings":
+			{
+				"buffer_size": 7447,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app-dev/html/xfzq-quick-repayment-step-2-proceed.html",
+			"settings":
+			{
+				"buffer_size": 7465,
 				"line_ending": "Windows"
 			}
 		}
@@ -618,25 +658,27 @@
 	],
 	"file_history":
 	[
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-quick-repayment-step-2-proceed.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-quick-repayment-step-1-choose-bank-card.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-step-2-proceed.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-step-1-choose-bank-card.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-create-installments-step-1-option.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default-ie8.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-sidebar-0.html",
+		"/D/Users/wulechuan/Desktop/expandable.js",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-header.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-create-installments-step-1-option.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/index.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-step-1-choose-bank-card.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-quick-repayment-step-1-choose-bank-card.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/_fonts.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/_reset.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout-ie8.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-header.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/index.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default-ie8.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-create-installments-step-2-proceed.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/index.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-repayments.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-list.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-bills-recent.html",
@@ -660,7 +702,6 @@
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk-index.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-help-desk-qna-list.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-orders.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-page-sidebar-0.html",
 		"/D/Users/wulechuan/Desktop/构建思路讲解001.txt",
 		"/D/Users/wulechuan/Desktop/OneDrive/事业/tab-panel/乐川的tab-panel-pair逻辑.js",
 		"/D/Users/wulechuan/Desktop/OneDrive/事业/tab-panel/乐川的tab-panel-pair的页面.html",
@@ -744,8 +785,7 @@
 		"/D/p/dev/private/wlcJS/app-dev/stylesheets/seedlink/seedlink-app-_theme-_default.css",
 		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/warm-up.sublime-project",
 		"/D/p/dev/taijs/taijs-website2/taijs-website2.sublime-project",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/.gitignore",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/.gitattributes"
+		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/.gitignore"
 	],
 	"find":
 	{
@@ -772,134 +812,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"9",
+			"bankHTML",
+			"console",
+			"_chooseOption",
+			"inputForStoringHTML",
+			"chosenValueHTML",
+			"chosenOptionHTML",
+			"chosenOption",
+			"bank",
+			"decodeURIComponent",
+			"bank",
+			"chosenValue",
+			"chosenOption",
+			"inputForStoringValue",
+			"中信银行",
+			"class=\"value\"",
+			"eveal-conte",
+			"tabular-list-reveal-item",
+			"animation:",
 			"animation",
-			"s-sub-menu",
-			"tates-from-90-degrees-bac",
-			"18",
-			"otates-from-180-degrees-back-to-0",
-			"menu-scales-up-a",
-			"current-value",
-			"type=\"number\"",
-			"type=\"num",
-			"top",
-			"empty",
-			"html",
-			"transparent",
-			"line",
-			"'ie-edge-empty-input'",
-			"_updateInputStyleForGroomingPlaceholder",
-			"isIE8",
-			"navigator.userAgent",
-			"updateInputStyleForGroomingPlaceholder",
-			"input",
+			"re",
+			"reveal",
+			"options-list-shown",
+			"dropDownList",
+			"$('.drop-down-list').each(function () {",
+			"dropDownList",
 			"argument",
-			"each",
-			"this",
+			"nimation-name: rot",
+			"otates-n180-degr",
+			"rotates-180-degre",
+			"class=\"drop-down-list ",
+			"class=\"drop-down-list",
+			"drop-down",
+			"border",
+			"dtHeight",
+			"_processOnePair",
+			"dd",
+			"toggleViaTrigger",
+			"_processOnePairOfDTDD",
+			"selectorOfContent",
+			"selectorOfContentRelativeToContainer",
+			"might",
+			"selectorOfContent",
+			"ddContent",
+			"after",
+			"right",
+			"selectorOfContentContainer",
+			"element",
+			"dt",
+			"allDTs",
 			"argument",
-			"placeholder",
-			"999",
-			"placeholder",
-			"33",
-			"locator",
-			"weixin",
-			"menu",
-			"user",
-			"menu-item > a > .lab",
-			"333",
-			"box-shadow: 0 0 8px",
-			"u.level-1 > .menu-item > a > .labe",
-			"333",
-			"menu.level-1 > .menu-item > a > .la",
-			".iconfont",
-			"simple-look",
-			"button",
-			"background",
-			"simple",
-			"z-index",
-			"0",
-			"#ie-user-avatar-borders",
-			"e-user-avatar-border",
-			"#ie-user-avatar-borders",
-			"borders",
-			" .avatar",
-			"#ie-user-avatar .avatar,\n			#user-info-bar-user-avatar .avatar",
-			"user-avatar",
-			"14",
-			"2",
-			"10",
-			"14",
-			"17",
-			"16",
-			"18",
-			"checkbox",
-			"100px",
-			"checkbox",
-			"check",
-			".tab",
-			"tab-list",
-			"popup-window",
-			"log",
-			"left",
-			"child",
-			".dialog-summary-sheet",
-			"tabular",
-			"bread",
-			"tabular",
-			"8px",
-			"0",
-			".form",
-			"create",
-			"iconfont",
-			"cell",
-			"left",
-			"info",
-			"tip",
-			"abel.",
-			"input",
-			".color-red",
-			".red",
-			":hover",
-			".simple-look",
-			"<em>",
+			"collpase",
+			"ExpandableContentSet",
+			"contentContainer",
+			"argument",
+			"allDDs",
+			"dom",
+			"forceUpdatingContainer",
+			"containerForForcingRefreshContentInOldIE",
+			"selectorOfForcingRefreshContentInOldIE",
+			"selectorOfForcingRefreshContent",
+			"Content",
+			"Trigger",
+			"triggersSelector",
+			"expanda",
+			"expand",
+			"expandable",
+			"Expandable",
+			"throw",
+			"instanceof",
+			"argument",
+			"_toggleSubMenuForMenuItem",
+			"#page-sidebar-nav .menu",
+			"$(menuItem).slid",
+			"argument",
+			"age-sidebar-nav ",
+			"after",
+			".label",
+			"after",
+			"sub-menu-hint",
+			"before",
+			"100%",
+			"sub-menu-hint",
+			"item",
+			".menu-item.has-sub-menu:hover > a > .sub-menu-hint:after,\n	.menu-item.has-sub-menu:hover     > .sub-menu-hint:after,\n	.menu-item.has-sub-menu:hover > a > .label:after,\n	.menu-item.has-sub-menu:hover     > .label:after",
+			"item",
+			".menu-item.has-sub-menu:hover > a > .sub-menu-item:after,",
+			".menu-item.has-sub-menu:hover > a > .sub-menu-item:after,\n	.menu-item.has-sub-menu:hover     > .sub-menu-item:after,\n	.menu-item.has-sub-menu:hover > a > .label:after,\n	.menu-item.has-sub-menu:hover     > .label:after",
 			"hover",
-			".bg-transparent.color-red",
-			"#app-header-info-and-links ",
-			"simple",
-			"style",
-			"button",
-			"span",
-			"header",
-			"icbc",
-			"ccb",
-			"absolute",
-			"tabular",
-			"-fee currency currency-rmb\">每期应",
-			"tabular",
-			" tabular-lists",
-			"tabular",
-			"close-installments",
-			"tabular",
-			"repayment-records",
-			"tabular",
-			"tabular-lists",
-			"font-important",
-			".tabular-lists ",
-			".repayment-records ",
-			"tabular",
-			"installmentsPlane",
-			"createInstallments",
-			"create-insta",
-			"create-instal",
-			"create-insta",
-			"createInstallment",
-			"create",
-			"$('#pl-close-installments-succeed')",
-			"pl-close-installments-succeed",
-			"$('.popup-layers-back-plate')",
-			"opening",
-			"close-",
-			"close"
+			"coupled-shown",
+			".menu-item.has-sub-menu > a > .sub-menu-hint:before,\n	.menu-item.has-sub-menu     > .sub-menu-hint:before",
+			"#page-sidebar-nav .menu-item.has-sub-menu > a > .sub-menu-hint,\n		#page-sidebar-nav .menu-item.has-sub-menu     > .sub-menu-hint,\n		#page-sidebar-nav .menu-item.has-sub-menu > a > .label:after,\n		#page-sidebar-nav .menu-item.has-sub-menu     > .label:after {\n			top: 10px;\n			bottom: auto;\n			right: 24px;\n			width: 25px;\n			height: 25px;\n			line-height: 25px;\n			font-size: 25px;\n			line-height: 23px\\0;\n			text-indent: 1px\\0;\n		}\n\n		:root #page-sidebar-nav .menu-item.has-sub-menu > a > .sub-menu-hint,\n		:root #page-sidebar-nav .menu-item.has-sub-menu     > .sub-menu-hint,\n		:root #page-sidebar-nav .menu-item.has-sub-menu > a > .label:after,\n		:root #page-sidebar-nav .menu-item.has-sub-menu     > .label:after {\n			line-height: 25px\\0;\n			text-indent: 0px\\0;\n		}",
+			"20px",
+			"after",
+			"20",
+			"black",
+			"20px",
+			"after",
+			"-menu-hint",
+			"after",
+			"ub-menu-hint:after",
+			":after",
+			".hover-to-show-coupled",
+			"605",
+			"e607",
+			"shown",
+			"coupled-shown",
+			"label",
+			"nu-hin",
+			"label:after",
+			"rotates-90-degrees",
+			".menu.layout-hori > .menu-item.has-sub-menu > a > .sub-menu-hint:after,\n	.menu.layout-hori > .menu-item.has-sub-menu     > .sub-menu-hint:after,\n	.menu.layout-hori > .menu-item.has-sub-menu > a > .label:after,\n	.menu.layout-hori > .menu-item.has-sub-menu     > .label:after",
+			".menu > ",
+			".coupled-shown",
+			"label:after",
+			":hover",
+			"red",
+			"22",
+			".layout-hori ",
+			"patch",
+			"rrent-pare",
+			"cate",
+			"current-cate",
+			"cate",
+			"deco",
+			"27",
+			".layout-vert",
+			".layout-hori",
+			"25"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -907,6 +947,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"coupled-shown",
+			"hover-to-show-coupled",
 			"type=\"number1\"",
 			"<li><a href=\"../html/xfzq-opening-installments-list.html\">分期</a></li>",
 			"<li><a href=\"../html/xfzq-installments.html\">分期</a></li>",
@@ -942,28 +984,28 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app-dev/styles/base/base.css",
+					"file": "app-dev/scripts/base/base.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 48477,
+						"buffer_size": 19874,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								31308,
-								31308
+								1353,
+								1353
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 28190.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -971,19 +1013,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app-dev/styles/base/layout.css",
+					"file": "app-dev/styles/base/base.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13881,
+						"buffer_size": 53712,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12115,
-								12164
+								39137,
+								39137
 							]
 						],
 						"settings":
@@ -992,26 +1034,26 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4983.0,
+						"translation.y": 33233.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "app-dev/styles/base/_fonts.css",
+					"file": "app-dev/styles/pages/xfzq-layout.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1203,
+						"buffer_size": 21760,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								50,
+								0,
 								0
 							]
 						],
@@ -1025,6 +1067,155 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app-dev/styles/base/theme-_default.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17527,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								13029,
+								13029
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 9994.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app-dev/html/xfzq-close-installments-step-1-choose-bank-card.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9733,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3590,
+								3598
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 992.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app-dev/html/xfzq-quick-repayment-step-1-choose-bank-card.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9799,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3572,
+								3572
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 989.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app-dev/html/xfzq-close-installments-step-2-proceed.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7447,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3135,
+								3135
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 840.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app-dev/html/xfzq-quick-repayment-step-2-proceed.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7465,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3111,
+								3111
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 900.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -1079,24 +1270,52 @@
 		"selected_items":
 		[
 			[
-				"base",
-				"app-dev\\styles\\base\\base.css"
-			],
-			[
-				"font",
-				"app-dev\\styles\\base\\_fonts.css"
+				"xf",
+				"app-dev\\styles\\pages\\xfzq-layout.css"
 			],
 			[
 				"lay",
 				"app-dev\\styles\\base\\layout.css"
 			],
 			[
-				"ba",
+				"bas",
 				"app-dev\\scripts\\base\\base.js"
 			],
 			[
-				"bas",
+				"base",
 				"app-dev\\styles\\base\\base.css"
+			],
+			[
+				"them",
+				"app-dev\\styles\\base\\theme-_default.css"
+			],
+			[
+				"themie",
+				"app-dev\\styles\\base\\theme-_default-ie8.css"
+			],
+			[
+				"header",
+				"app-dev\\html-snippets\\module-app-header.html"
+			],
+			[
+				"ie",
+				"app-dev\\styles\\base\\base-ie8.css"
+			],
+			[
+				"xfla",
+				"app-dev\\styles\\pages\\xfzq-layout.css"
+			],
+			[
+				"theme",
+				"app-dev\\styles\\base\\theme-_default.css"
+			],
+			[
+				"font",
+				"app-dev\\styles\\base\\_fonts.css"
+			],
+			[
+				"ba",
+				"app-dev\\scripts\\base\\base.js"
 			],
 			[
 				"reset",
@@ -1107,16 +1326,8 @@
 				"app-dev\\styles\\base\\_reset.css"
 			],
 			[
-				"ie",
-				"app-dev\\styles\\base\\base-ie8.css"
-			],
-			[
 				"ie8",
 				"app-dev\\styles\\base\\theme-_default-ie8.css"
-			],
-			[
-				"header",
-				"app-dev\\html-snippets\\module-app-header.html"
 			],
 			[
 				"xfzqcss",
@@ -1141,10 +1352,6 @@
 			[
 				"xl",
 				"app-dev\\styles\\pages\\xfzq-layout.css"
-			],
-			[
-				"them",
-				"app-dev\\styles\\base\\theme-_default.css"
 			],
 			[
 				"quick",
@@ -1173,10 +1380,6 @@
 			[
 				"repya",
 				"app-dev\\html\\xfzq-repayments.html"
-			],
-			[
-				"xfla",
-				"app-dev\\styles\\pages\\xfzq-layout.css"
 			],
 			[
 				"closjs",
@@ -1275,10 +1478,6 @@
 				"app-dev\\html\\xfzq-bills-recent.html"
 			],
 			[
-				"theme",
-				"app-dev\\styles\\base\\theme-_default.css"
-			],
-			[
 				"closst",
 				"app-dev\\html\\xfzq-close-installments-step-1-choose-bank-card.html"
 			],
@@ -1341,10 +1540,6 @@
 			[
 				"xfzqr",
 				"app-dev\\html\\xfzq-repayments.html"
-			],
-			[
-				"themie",
-				"app-dev\\styles\\base\\theme-_default-ie8.css"
 			],
 			[
 				"basie",
@@ -1517,10 +1712,6 @@
 			[
 				"xfz",
 				"app-dev\\styles\\pages\\xfzq-base-ie8.css"
-			],
-			[
-				"xf",
-				"app-dev\\styles\\pages\\xfzq-base.css"
 			],
 			[
 				"ie8the",

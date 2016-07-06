@@ -24,6 +24,8 @@
 		var psn1; // page sidebar nav Level 1 current
 		var psn2; // page sidebar nav Level 2 current
 		var tabLabel; // id of tabLabel to show if any
+		var bank;
+		var bankHTML;
 
 		if (typeof window.psn === 'object') {
 			if (window.psn.level1) psn1 = window.psn.level1;
@@ -37,9 +39,13 @@
 			if (kvp[0] === 'psn1') psn1 = kvp[1];
 			if (kvp[0] === 'psn2') psn2 = kvp[1];
 			if (kvp[0] === 'tabLabel') tabLabel = kvp[1];
+			if (kvp[0] === 'bank') bank = kvp[1];
+			if (kvp[0] === 'bankHTML') bankHTML = kvp[1];
 		}
 
 		return {
+			bank: decodeURIComponent(bank),
+			bankHTML: decodeURIComponent(bankHTML).replace(/\+/g, ' '),
 			tabLabel: tabLabel,
 			psn: {
 				level1: psn1,
@@ -96,8 +102,6 @@
 			});
 		}
 	});
-
-
 
 
 	$('.tab-panel-set').each(function () {
@@ -347,6 +351,7 @@
 			return 0;
 		}
 	});
+
 
 	setPageSidebarNavCurrentItem(urlParameters.psn);
 
@@ -643,22 +648,60 @@
 	});
 
 
-	var allDropDownLists = $('.drop-down-list').each(function () {
+	$('.drop-down-list').each(function () {
+		var dropDownList = this;
 		var $currentValueContainer = $(this).find('.drop-down-list-current-value');
-		var $options = $(this).find('.drop-down-list-options > li'); // assuming there is one one level of menu
+		var inputForStoringValue = $(this).find('input.drop-down-list-value');
+		var inputForStoringHTML = $(this).find('input.drop-down-list-value-html');
+		var $options = $(this).find('.drop-down-list-options > li'); // assuming there is only one level of menu
 
-		_chooseOption(null);
+		console.log('passed in:', urlParameters.bank, typeof urlParameters.bank, urlParameters.bankHTML);
+		if (urlParameters.bank && urlParameters.bank !== 'undefined') {
+			_chooseOption(urlParameters.bank, urlParameters.bankHTML);
+		} else {
+			if ($options.length > 0) {
+				_chooseOption(0);
+			} else {
+				_chooseOption(null);
+			}
+		}
+
+		$currentValueContainer.on('click', function () {
+			$(dropDownList).toggleClass('coupled-shown');
+		});
 
 		$options.on('click', function () {
 			_chooseOption(this);
+			$(dropDownList).removeClass('coupled-shown');
 		});
 
-		function _chooseOption(chosenOption) {
+		function _chooseOption(chosenOption, chosenOptionHTML) {
+			if (typeof chosenOption === 'number') {
+				chosenOption = $options[chosenOption];
+			}
+
+			var chosenValue;
+
+			if (chosenOption && typeof chosenOption === 'string' && chosenOptionHTML && typeof chosenOptionHTML === 'string') {
+				$currentValueContainer.html(chosenOptionHTML);
+				$(inputForStoringValue).val(chosenOption);
+				$(inputForStoringHTML).val(chosenOptionHTML);
+			}
+
 			if (!chosenOption) {
-				$currentValueContainer.innerHTML = '';
+				$currentValueContainer[0].innerHTML = '';
+				$(inputForStoringValue).val('');
+				$(inputForStoringHTML).val('');
 				return true;
 			}
-			$currentValueContainer.html($(chosenOption).html());
+
+			if (!chosenValue) chosenValue = $(chosenOption).find('.value')[0];
+			if (chosenValue) chosenValue = chosenValue.getAttribute('data-value');
+
+			chosenOptionHTML = $(chosenOption).html();
+			$currentValueContainer.html(chosenOptionHTML);
+			$(inputForStoringValue).val(chosenValue);
+			$(inputForStoringHTML).val(chosenOptionHTML);
 		}
 	});
 })();
