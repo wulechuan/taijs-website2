@@ -701,6 +701,8 @@
 
 		#page-sidebar-nav .menu-item.has-sub-menu > a > .sub-menu-hint,
 		#page-sidebar-nav .menu-item.has-sub-menu     > .sub-menu-hint,
+		#page-sidebar-nav .menu-item.has-sub-menu > a > .label:before,
+		#page-sidebar-nav .menu-item.has-sub-menu     > .label:before,
 		#page-sidebar-nav .menu-item.has-sub-menu > a > .label:after,
 		#page-sidebar-nav .menu-item.has-sub-menu     > .label:after {
 			top: 10px;
@@ -721,6 +723,26 @@
 			line-height: 25px\0;
 			text-indent: 0px\0;
 		}
+
+
+		#page-sidebar-nav .menu-item.has-sub-menu:hover > a > .sub-menu-hint,
+		#page-sidebar-nav .menu-item.has-sub-menu:hover     > .sub-menu-hint,
+		#page-sidebar-nav .menu-item.has-sub-menu:hover > a > .label:after,
+		#page-sidebar-nav .menu-item.has-sub-menu:hover     > .label:after {
+			line-height: 24px\0;
+			text-indent: 1px\0;
+		}
+		#page-sidebar-nav .menu-item.has-sub-menu.coupled-shown > a > .sub-menu-hint,
+		#page-sidebar-nav .menu-item.has-sub-menu.coupled-shown     > .sub-menu-hint,
+		#page-sidebar-nav .menu-item.has-sub-menu.coupled-shown > a > .label:after,
+		#page-sidebar-nav .menu-item.has-sub-menu.coupled-shown     > .label:after {
+			line-height: 25px;
+			text-indent: 1px\0;
+		}
+
+
+
+
 
 		#page-sidebar-nav .menu-item > a > .label,
 		#page-sidebar-nav .menu-item     > .label {

@@ -149,6 +149,13 @@ label.deco-input .ie-borders {
         ;
     }
 
+.menu {
+    }
+    .menu-item.has-sub-menu > a > .label:before,
+    .menu-item.has-sub-menu     > .label:before {
+        /* color: #c8cbcf; */
+        color: white;
+    }
 
 .dialog > .deco .ie-bg {
     color: #222;

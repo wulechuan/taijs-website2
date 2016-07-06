@@ -490,6 +490,10 @@ label.deco-input {
 		color: #157dff;
 	}
 
+    .menu-item.has-sub-menu > a > .label:before,
+    .menu-item.has-sub-menu     > .label:before {
+        background-color: white;
+    }
 
 .breadcrumbs {
 	}

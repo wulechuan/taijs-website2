@@ -1028,16 +1028,24 @@ button.button-x {
 
 .menu {
 	}
-	.menu-item.has-sub-menu:hover > a > .sub-menu-item:after,
-	.menu-item.has-sub-menu:hover     > .sub-menu-item:after,
+	.menu-item.has-sub-menu > a > .sub-menu-hint,
+	.menu-item.has-sub-menu     > .sub-menu-hint,
+	.menu-item.has-sub-menu > a > .label:after,
+	.menu-item.has-sub-menu     > .label:after {
+		text-indent: -1px;
+		line-height: 18px;
+	}
+
+	.menu-item.has-sub-menu:hover > a > .sub-menu-hint:after,
+	.menu-item.has-sub-menu:hover     > .sub-menu-hint:after,
 	.menu-item.has-sub-menu:hover > a > .label:after,
 	.menu-item.has-sub-menu:hover     > .label:after {
 		content: '\e607';
 		}
-		.menu-item.has-sub-menu > a > .sub-menu-hint,
-		.menu-item.has-sub-menu     > .sub-menu-hint,
-		.menu-item.has-sub-menu > a > .label:after,
-		.menu-item.has-sub-menu     > .label:after {
+		.menu-item.has-sub-menu:hover > a > .sub-menu-hint,
+		.menu-item.has-sub-menu:hover     > .sub-menu-hint,
+		.menu-item.has-sub-menu:hover > a > .label:after,
+		.menu-item.has-sub-menu:hover     > .label:after {
 			text-indent: -1px;
 			line-height: 18px;
 		}
@@ -1045,17 +1053,13 @@ button.button-x {
 	.menu-item.has-sub-menu.coupled-shown > a > .sub-menu-hint:after,
 	.menu-item.has-sub-menu.coupled-shown     > .sub-menu-hint:after,
 	.menu-item.has-sub-menu.coupled-shown > a > .label:after,
-	.menu-item.has-sub-menu.coupled-shown     > .label:after,
-	.menu-item.has-sub-menu:hover > a > .sub-menu-hint:after,
-	.menu-item.has-sub-menu:hover     > .sub-menu-hint:after,
-	.menu-item.has-sub-menu:hover > a > .label:after,
-	.menu-item.has-sub-menu:hover     > .label:after {
+	.menu-item.has-sub-menu.coupled-shown     > .label:after {
 		content: '\e605';
 		}
-		.menu.layout-hori > .menu-item.has-sub-menu > a > .sub-menu-hint,
-		.menu.layout-hori > .menu-item.has-sub-menu     > .sub-menu-hint,
-		.menu.layout-hori > .menu-item.has-sub-menu > a > .label:after,
-		.menu.layout-hori > .menu-item.has-sub-menu     > .label:after {
+		.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown > a > .sub-menu-hint,
+		.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown     > .sub-menu-hint,
+		.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown > a > .label:after,
+		.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown     > .label:after {
 			text-indent: -2px;
 			line-height: 16px;
 		}
@@ -1081,6 +1085,43 @@ button.button-x {
 			text-indent: -2px;
 			line-height: 20px;
 		}
+
+	.menu-item.has-sub-menu > a > .sub-menu-hint:after,
+	.menu-item.has-sub-menu     > .sub-menu-hint:after {
+		position: relative;
+		z-index: 2;
+	}
+	.menu-item.has-sub-menu > a > .label:before,
+	.menu-item.has-sub-menu     > .label:before {
+		font-family: 'iconfont'!important;
+		content: none;
+		display: block;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		left: auto;
+		right: 0.5em;
+		top: 0;
+		bottom: 0;
+		margin: auto 0;
+
+		direction: rtl;
+		text-align: center;
+		text-indent: 0;
+
+		overflow: hidden;
+		font-size: 18px;
+		line-height: 18px;
+
+		background-color: transparent;
+
+		z-index: 1;
+	}
+	.menu-item.has-sub-menu > a:hover > .sub-menu-hint ~ .label:before,
+	.menu-item.has-sub-menu           > .sub-menu-hint ~ .label:hover:before {
+		/* content: '\e62f'; */
+		content: '\e68c';
+	}
 
 
 .popup-layers-back-plate {
