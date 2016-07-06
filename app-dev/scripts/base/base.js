@@ -3,8 +3,8 @@
 	var ua = navigator.userAgent;
 	var isIE = !!ua.match(/(\bmsie|\btrident\b)/i);
 	var isMSEdge = !!ua.match(/\bedge\b/i);
-	var isIE8 = !!ua.match(/\bmsie 8/i);
-	var isIE9 = !!ua.match(/\bmsie 9/i);
+	var isIE8 = !!ua.match(/\bmsie\s+8/i);
+	var isIE9 = !!ua.match(/\bmsie\s+9/i);
 
 	var isWebkit = !!ua.match(/\bapplewebkit\b/i) && !isMSEdge;
 
@@ -12,48 +12,48 @@
 		$('body').addClass('webkit');
 	}
 
-    function processParametersPassedIn() {
-        var qString = location.href.match(/\?.*/);
-        if (qString) qString = qString[0].slice(1);
+	function processParametersPassedIn() {
+		var qString = location.href.match(/\?.*/);
+		if (qString) qString = qString[0].slice(1);
 
-        var qKVPairs = [];
-        if (qString) {
-            qKVPairs = qString.split('&');
-        }
+		var qKVPairs = [];
+		if (qString) {
+			qKVPairs = qString.split('&');
+		}
 
-        var psn1; // page sidebar nav Level 1 current
-        var psn2; // page sidebar nav Level 2 current
-        var tabLabel; // id of tabLabel to show if any
+		var psn1; // page sidebar nav Level 1 current
+		var psn2; // page sidebar nav Level 2 current
+		var tabLabel; // id of tabLabel to show if any
 
-        if (typeof window.psn === 'object') {
-        	if (window.psn.level1) psn1 = window.psn.level1;
-        	if (window.psn.level2) psn2 = window.psn.level2;
-        }
+		if (typeof window.psn === 'object') {
+			if (window.psn.level1) psn1 = window.psn.level1;
+			if (window.psn.level2) psn2 = window.psn.level2;
+		}
 
-        for (var i in qKVPairs){
-            var kvpString = qKVPairs[i];
-            var kvp = kvpString.split('=');
+		for (var i in qKVPairs){
+			var kvpString = qKVPairs[i];
+			var kvp = kvpString.split('=');
 
-            if (kvp[0] === 'psn1') psn1 = kvp[1];
-            if (kvp[0] === 'psn2') psn2 = kvp[1];
-            if (kvp[0] === 'tabLabel') tabLabel = kvp[1];
-        }
+			if (kvp[0] === 'psn1') psn1 = kvp[1];
+			if (kvp[0] === 'psn2') psn2 = kvp[1];
+			if (kvp[0] === 'tabLabel') tabLabel = kvp[1];
+		}
 
-        return {
-        	tabLabel: tabLabel,
-            psn: {
-            	level1: psn1,
-            	level2: psn2
-            }
-        };
-    }
-
-
-    var urlParameters = processParametersPassedIn();
+		return {
+			tabLabel: tabLabel,
+			psn: {
+				level1: psn1,
+				level2: psn2
+			}
+		};
+	}
 
 
+	var urlParameters = processParametersPassedIn();
 
-    $('input[placeholder]').each(function () {
+
+
+	$('input[placeholder]').each(function () {
 		function _updateInputStyleForGroomingPlaceholder(field) {
 			if (!field) {
 				return false;
@@ -75,27 +75,27 @@
 		_updateInputStyleForGroomingPlaceholder(this);
 
 		if (isIE8) {
-	    	$(this).on('focus', function () {
-	    		_updateInputStyleForGroomingPlaceholder(this);
-	    	});
+			$(this).on('focus', function () {
+				_updateInputStyleForGroomingPlaceholder(this);
+			});
 
-	    	$(this).on('blur', function () {
-	    		_updateInputStyleForGroomingPlaceholder(this);
-	    	});
+			$(this).on('blur', function () {
+				_updateInputStyleForGroomingPlaceholder(this);
+			});
 
-	    	$(this).on('change', function () {
-	    		_updateInputStyleForGroomingPlaceholder(this);
-	    	});
+			$(this).on('change', function () {
+				_updateInputStyleForGroomingPlaceholder(this);
+			});
 
-	    	$(this).on('keypress', function () {
-	    		_updateInputStyleForGroomingPlaceholder(this);
-	    	});
+			$(this).on('keypress', function () {
+				_updateInputStyleForGroomingPlaceholder(this);
+			});
 		} else {
-	    	$(this).on('input', function () {
-	    		_updateInputStyleForGroomingPlaceholder(this);
-	    	});
+			$(this).on('input', function () {
+				_updateInputStyleForGroomingPlaceholder(this);
+			});
 		}
-    });
+	});
 
 
 
@@ -352,21 +352,21 @@
 
 
 
-    function setPageSidebarNavCurrentItem(conf) {
-    	conf = conf || {};
+	function setPageSidebarNavCurrentItem(conf) {
+		conf = conf || {};
 		conf.level1IdPrefix = 'menu-psn-1-';
 		setMenuCurrentItemForLevel(1, 2, $('#page-sidebar-nav'), conf);
-    }
+	}
 
-    function setMenuCurrentItemForLevel(level, depth, parentDom, conf) {
-    	level = parseInt(level);
-    	depth = parseInt(depth);
-    	if (!(level > 0) || !(depth >= level)) {
-    		throw('Invalid menu level/depth for configuring a menu tree.');
-    	}
-    	if (typeof conf !== 'object') {
-    		throw('Invalid configuration object for configuring a menu tree.');
-    	}
+	function setMenuCurrentItemForLevel(level, depth, parentDom, conf) {
+		level = parseInt(level);
+		depth = parseInt(depth);
+		if (!(level > 0) || !(depth >= level)) {
+			throw('Invalid menu level/depth for configuring a menu tree.');
+		}
+		if (typeof conf !== 'object') {
+			throw('Invalid configuration object for configuring a menu tree.');
+		}
 
 		var prefix = conf['level'+level+'IdPrefix'];
 		var desiredId = prefix + conf['level'+level];
@@ -374,6 +374,7 @@
 		var $allItems = $(parentDom).find('.menu.level-'+level+' > .menu-item');
 		var currentItem;
 		var currentItemId;
+
 		$allItems.each(function (index, menuItem) {
 			var itemLabel = $(menuItem).find('> a > .label')[0];
 			var itemId = itemLabel.id;
@@ -396,14 +397,33 @@
 			}
 		});
 
+		var currentSubMenuItem = null;
 		if (level < depth && currentItem) {
 			var nextLevel = level + 1;
 			conf['level'+nextLevel+'IdPrefix'] = currentItemId + '-' + nextLevel + '-';
-			setMenuCurrentItemForLevel(nextLevel, depth, currentItem, conf);
+			currentSubMenuItem = setMenuCurrentItemForLevel(nextLevel, depth, currentItem, conf);
+			if (currentSubMenuItem) {
+				$(currentItem).addClass('has-sub-menu'); // update this for robustness
+				$(currentItem).addClass('coupled-shown');
+			}
 		}
 
-		return;
-    }
+		return currentSubMenuItem || currentItem;
+	}
+
+	$('.menu-item.has-sub-menu').each(function () {
+		var menuItem = this;
+		var $subMenuHint = $(this).find('> a > .sub-menu-hint, > .sub-menu-hint');
+		var subMenuHint = $subMenuHint[0];
+
+		$subMenuHint.on('click', function (event) {
+			if (event) {
+				event.preventDefault();
+				event.stopPropagation();
+			}
+			for (var p in event) console.log(p, ': ', event[p]);
+		});
+	});
 
 
 	var $allTabularLists = $('.tabular .f-list');

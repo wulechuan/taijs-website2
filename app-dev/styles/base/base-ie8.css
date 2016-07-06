@@ -1028,17 +1028,42 @@ button.button-x {
 
 .menu {
 	}
-	.menu > .menu-item.has-sub-menu:hover > a > .label:after,
-	.menu > .menu-item.has-sub-menu:hover > .label:after {
+	.menu-item.has-sub-menu:hover > a > .sub-menu-item:after,
+	.menu-item.has-sub-menu:hover     > .sub-menu-item:after,
+	.menu-item.has-sub-menu:hover > a > .label:after,
+	.menu-item.has-sub-menu:hover     > .label:after {
 		content: '\e607';
-	}
-	.menu > .menu-item.has-sub-menu.sub-menu-shown > a > .label:after,
-	.menu > .menu-item.has-sub-menu.sub-menu-shown > .label:after,
-	.menu > .menu-item.has-sub-menu.hover-to-show-coupled:hover > a > .label:after,
-	.menu > .menu-item.has-sub-menu.hover-to-show-coupled:hover > .label:after {
-		content: '\e605';
-	}
+		}
+		.menu-item.has-sub-menu > a > .sub-menu-hint,
+		.menu-item.has-sub-menu     > .sub-menu-hint,
+		.menu-item.has-sub-menu > a > .label:after,
+		.menu-item.has-sub-menu     > .label:after {
+			text-indent: -1px;
+			line-height: 18px;
+		}
 
+	.menu-item.has-sub-menu.coupled-shown > a > .sub-menu-hint:after,
+	.menu-item.has-sub-menu.coupled-shown     > .sub-menu-hint:after,
+	.menu-item.has-sub-menu.coupled-shown > a > .label:after,
+	.menu-item.has-sub-menu.coupled-shown     > .label:after,
+	.menu-item.has-sub-menu:hover > a > .sub-menu-hint:after,
+	.menu-item.has-sub-menu:hover     > .sub-menu-hint:after,
+	.menu-item.has-sub-menu:hover > a > .label:after,
+	.menu-item.has-sub-menu:hover     > .label:after {
+		content: '\e605';
+		}
+		.menu.layout-hori > .menu-item.has-sub-menu > a > .sub-menu-hint,
+		.menu.layout-hori > .menu-item.has-sub-menu     > .sub-menu-hint,
+		.menu.layout-hori > .menu-item.has-sub-menu > a > .label:after,
+		.menu.layout-hori > .menu-item.has-sub-menu     > .label:after {
+			line-height: 16px;
+		}
+
+	.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown > a > .label:after,
+	.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown     > .label:after,
+	.menu.layout-hori > .menu-item.has-sub-menu.hover-to-show-coupled:hover > a > .label:after,
+	.menu.layout-hori > .menu-item.has-sub-menu.hover-to-show-coupled:hover     > .label:after {
+		}
 
 
 .popup-layers-back-plate {
@@ -1084,7 +1109,6 @@ button.button-x {
 
 #app-chief-nav .menu.level-2 > .ie-shadow .ie-shadow-matte,
 #app-chief-nav .menu.level-1 > .menu-item > .deco .ie-shadow-matte,
-
 #my-assets .menu.level-2 > .ie-shadow .ie-shadow-matte,
 #my-assets .menu.level-1 > .menu-item > .deco .ie-shadow-matte {
 	-ms-filter: "\
@@ -1100,13 +1124,31 @@ button.button-x {
 	top: -7px;
 	right: 5px;
 	bottom: 5px;
-}
+	}
 
-#my-assets {
-	}
-	#my-assets .menu.level-1 > .menu-item.has-sub-menu.coupled-shown > a > .label:after,
-	#my-assets .menu.level-1 > .menu-item.has-sub-menu.coupled-shown > .label:after,
-	#my-assets .menu.level-1 > .menu-item.has-sub-menu.hover-to-show-coupled:hover > a > .label:after,
-	#my-assets .menu.level-1 > .menu-item.has-sub-menu.hover-to-show-coupled:hover > .label:after {
-		content: '\e609';
-	}
+	#page-sidebar-nav {
+		}
+		#page-sidebar-nav .menu-item.has-sub-menu > a > .sub-menu-hint,
+		#page-sidebar-nav .menu-item.has-sub-menu     > .sub-menu-hint,
+		#page-sidebar-nav .menu-item.has-sub-menu > a > .label:after,
+		#page-sidebar-nav .menu-item.has-sub-menu     > .label:after {
+			line-height: 23px;
+		}
+
+	#my-assets {
+		}
+		#my-assets .menu.level-1 > .menu-item.has-sub-menu > a > .label:after,
+		#my-assets .menu.level-1 > .menu-item.has-sub-menu     > .label:after,
+		#my-assets .menu.level-1 > .menu-item.has-sub-menu.hover-to-show-coupled:hover > a > .label:after,
+		#my-assets .menu.level-1 > .menu-item.has-sub-menu.hover-to-show-coupled:hover     > .label:after {
+			text-indent: -1px;
+			line-height: 20px;
+		}
+		#my-assets .menu.level-1 > .menu-item.has-sub-menu.coupled-shown > a > .label:after,
+		#my-assets .menu.level-1 > .menu-item.has-sub-menu.coupled-shown     > .label:after,
+		#my-assets .menu.level-1 > .menu-item.has-sub-menu.hover-to-show-coupled:hover > a > .label:after,
+		#my-assets .menu.level-1 > .menu-item.has-sub-menu.hover-to-show-coupled:hover     > .label:after {
+			content: '\e609';
+			text-indent: 1px;
+			line-height: 17px;
+		}

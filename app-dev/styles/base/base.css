@@ -1374,6 +1374,9 @@ label.deco-input {
 		width: 0;
 		height: 100%;
 	}
+	.menu.layout-hori > .menu-item.has-sub-menu {
+		padding-right: 10px;
+	}
 	.menu-item > a > .label,
 	.menu-item > .label {
 		position: relative;
@@ -1398,90 +1401,135 @@ label.deco-input {
 		text-align: center;
 	}
 
-	.menu > .menu-item.has-sub-menu > a > .label:after,
-	.menu > .menu-item.has-sub-menu > .label:after {
-		font-family:"iconfont" !important;
-		content: '\e606';
-		display: block;
+	.menu-item > a .sub-menu-hint,
+	.menu-item     .sub-menu-hint {
+		display: none;
+	}
+
+	.menu-item.has-sub-menu > a > .sub-menu-hint,
+	.menu-item.has-sub-menu     > .sub-menu-hint,
+	.menu-item.has-sub-menu > a > .label:after,
+	.menu-item.has-sub-menu     > .label:after {
 		position: absolute;
 		left: auto;
 		right: 0;
 		top: 0;
 		bottom: 0;
 		direction: rtl;
+		text-align: center;
 		text-indent: 0;
 
-		z-index: 1;
 		overflow: hidden;
 		margin: auto 0;
-		line-height: 1;
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+
+		font-size: 16px;
 
 		perspective: 1px;
 		animation-duration: 0.25s;
 		animation-timing-function: ease-out;
-
-		transform: rotate(0deg);
+		/* background-color: lightgreen; */
+	}
+	.menu-item.has-sub-menu > a > .sub-menu-hint,
+	.menu-item.has-sub-menu     > .sub-menu-hint {
+		display: block;
+		z-index: 9;
+	}
+	.menu-item.has-sub-menu > a > .sub-menu-hint:after,
+	.menu-item.has-sub-menu     > .sub-menu-hint:after {
+		line-height: inherit;
+	}
+	.menu-item.has-sub-menu > a > .label:after,
+	.menu-item.has-sub-menu     > .label:after {
+		z-index: 1;
 	}
 
-	.menu > .menu-item.has-sub-menu > a > .label:after,
-	.menu > .menu-item.has-sub-menu > .label:after {
+	.menu-item.has-sub-menu > a > .sub-menu-hint:after,
+	.menu-item.has-sub-menu     > .sub-menu-hint:after,
+	.menu-item.has-sub-menu > a > .label:after,
+	.menu-item.has-sub-menu     > .label:after {
+		font-family:"iconfont" !important;
+		content: '\e606';
+	}
+
+	.menu-item.has-sub-menu > a > .sub-menu-hint ~ .label:after,
+	.menu-item.has-sub-menu     > .sub-menu-hint ~ .label:after {
+		content: none!important;
+	}
+
+	.menu-item.has-sub-menu > a > .sub-menu-hint,
+	.menu-item.has-sub-menu     > .sub-menu-hint,
+	.menu-item.has-sub-menu > a > .label:after,
+	.menu-item.has-sub-menu     > .label:after {
+		transform: rotate(0deg);
 		animation-name: rotates-from-90-degrees-back-to-0;
 	}
-	.menu > .menu-item.has-sub-menu:hover > a > .label:after,
-	.menu > .menu-item.has-sub-menu:hover > .label:after {
+	.menu-item.has-sub-menu:hover > a > .sub-menu-hint,
+	.menu-item.has-sub-menu:hover     > .sub-menu-hint,
+	.menu-item.has-sub-menu:hover > a > .label:after,
+	.menu-item.has-sub-menu:hover     > .label:after {
 		transform: rotate(90deg);
 		animation-name: rotates-90-degrees;
 	}
-	.menu > .menu-item.has-sub-menu.sub-menu-shown > a > .label:after,
-	.menu > .menu-item.has-sub-menu.sub-menu-shown > .label:after {
+	.menu-item.has-sub-menu.coupled-shown > a > .sub-menu-hint,
+	.menu-item.has-sub-menu.coupled-shown     > .sub-menu-hint,
+	.menu-item.has-sub-menu.coupled-shown > a > .label:after,
+	.menu-item.has-sub-menu.coupled-shown     > .label:after {
 		transform: rotate(-90deg);
 		animation-name: rotates-n90-degrees;
 	}
 
-	.menu > .menu-item.has-sub-menu.hover-to-show-coupled > a > .label:after,
-	.menu > .menu-item.has-sub-menu.hover-to-show-coupled > .label:after {
+	.menu-item.has-sub-menu.hover-to-show-coupled > a > .sub-menu-hint,
+	.menu-item.has-sub-menu.hover-to-show-coupled     > .sub-menu-hint,
+	.menu-item.has-sub-menu.hover-to-show-coupled > a > .label:after,
+	.menu-item.has-sub-menu.hover-to-show-coupled     > .label:after {
 		animation-name: rotates-from-n90-degrees-back-to-0;
 	}
 
-	.menu > .menu-item.has-sub-menu.hover-to-show-coupled:hover > a > .label:after,
-	.menu > .menu-item.has-sub-menu.hover-to-show-coupled:hover > .label:after {
+	.menu-item.has-sub-menu.hover-to-show-coupled:hover > a > .sub-menu-hint,
+	.menu-item.has-sub-menu.hover-to-show-coupled:hover     > .sub-menu-hint,
+	.menu-item.has-sub-menu.hover-to-show-coupled:hover > a > .label:after,
+	.menu-item.has-sub-menu.hover-to-show-coupled:hover     > .label:after {
 		transform: rotate(-90deg);
 		animation-name: rotates-n90-degrees;
 	}
 
+	.menu.layout-hori > .menu-item.has-sub-menu > a > .sub-menu-hint,
+	.menu.layout-hori > .menu-item.has-sub-menu     > .sub-menu-hint,
 	.menu.layout-hori > .menu-item.has-sub-menu > a > .label:after,
-	.menu.layout-hori > .menu-item.has-sub-menu > .label:after {
-		content: '\e607';
-		width: 10px;
-		height: 10px;
-		line-height: 10px;
-		font-size: 12px;
-
-		transform-origin: 45% 45%;
+	.menu.layout-hori > .menu-item.has-sub-menu     > .label:after {
+		font-size: 24px;
+		text-indent: -2px;
+		line-height: 18px;
 	}
+	.menu.layout-hori > .menu-item.has-sub-menu > a > .sub-menu-hint:after,
+	.menu.layout-hori > .menu-item.has-sub-menu     > .sub-menu-hint:after,
 	.menu.layout-hori > .menu-item.has-sub-menu > a > .label:after,
-	.menu.layout-hori > .menu-item.has-sub-menu > .label:after {
+	.menu.layout-hori > .menu-item.has-sub-menu     > .label:after {
+		content: '\e607';
 		animation-name: rotates-from-n180-degrees-back-to-0;
 	}
-	.menu.layout-hori > .menu-item.has-sub-menu.sub-menu-shown > a > .label:after,
-	.menu.layout-hori > .menu-item.has-sub-menu.sub-menu-shown > .label:after,
-	.menu.layout-hori > .menu-item.has-sub-menu:hover > a > .label:after,
-	.menu.layout-hori > .menu-item.has-sub-menu:hover > .label:after {
+
+	.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown > a > .sub-menu-hint,
+	.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown     > .sub-menu-hint,
+	.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown > a > .label:after,
+	.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown     > .label:after,
+	.menu.layout-hori > .menu-item.has-sub-menu.hover-to-show-coupled:hover > a > .sub-menu-hint,
+	.menu.layout-hori > .menu-item.has-sub-menu.hover-to-show-coupled:hover     > .sub-menu-hint,
+	.menu.layout-hori > .menu-item.has-sub-menu.hover-to-show-coupled:hover > a > .label:after,
+	.menu.layout-hori > .menu-item.has-sub-menu.hover-to-show-coupled:hover     > .label:after {
 		transform: rotate(-180deg);
 		animation-name: rotates-n180-degrees;
 	}
 
-	.menu-item.has-sub-menu.sub-menu-shown {
+	.menu-item.has-sub-menu.coupled-shown {
 		z-index: 9;
 	}
 
 	.menu-item:hover {
 		z-index: 10;
-	}
-
-	.menu.layout-hori > .menu-item.has-sub-menu.sub-menu-shown > a > .label:after,
-	.menu.layout-hori > .menu-item.has-sub-menu.sub-menu-shown > .label:after {
-		content: '\e605';
 	}
 
 	.menu-item > .deco {
@@ -1508,9 +1556,9 @@ label.deco-input {
 	.touch-off .menu-item.has-sub-menu:hover > .deco,
 	.touch-off .menu-item.has-sub-menu:hover > .menu-wrap,
 	.touch-off .menu-item.has-sub-menu:hover > .menu,
-	.menu-item.has-sub-menu.sub-menu-shown .deco,
-	.menu-item.has-sub-menu.sub-menu-shown > .menu-wrap,
-	.menu-item.has-sub-menu.sub-menu-shown > .menu {
+	.menu-item.has-sub-menu.coupled-shown    > .deco,
+	.menu-item.has-sub-menu.coupled-shown    > .menu-wrap,
+	.menu-item.has-sub-menu.coupled-shown    > .menu {
 		visibility: visible;
 		opacity: 1;
 	}

@@ -451,41 +451,43 @@ label.deco-input {
 .menu-item {
 	}
 
-	.menu.layout-hori > .menu-item > a > .label,
-	.menu.layout-hori > .menu-item > .label {
-		color: #333;
-	}
-
-	.menu.layout-hori > .menu-item:hover > a > .label,
-	.menu.layout-hori > .menu-item:hover > .label,
-	.menu.layout-hori > .menu-item.sub-menu-shown > a > .label,
-	.menu.layout-hori > .menu-item.sub-menu-shown > .label,
-	.menu.layout-hori > .menu-item.current-cate > a > .label,
-	.menu.layout-hori > .menu-item.current-cate > .label {
-		color: #157dff;
-	}
-
+	.menu.layout-vert > .menu-item > a > .sub-menu-hint,
 	.menu.layout-vert > .menu-item > a > .label,
 	.menu.layout-vert > .menu-item > .label {
 		color: #333;
 	}
 
 	.menu.layout-vert > .menu-item > a > .label:hover,
-	.menu.layout-vert > .menu-item > .label:hover,
-	.menu.layout-vert > .menu-item.sub-menu-shown > a > .label,
-	.menu.layout-vert > .menu-item.sub-menu-shown > .label,
-	.menu.layout-vert > .menu-item.current-cate > a > .label,
-	.menu.layout-vert > .menu-item.current-cate > .label {
+	.menu.layout-vert > .menu-item     > .label:hover,
+	.menu.layout-vert > .menu-item.coupled-shown  > a > .label,
+	.menu.layout-vert > .menu-item.coupled-shown      > .label,
+	.menu.layout-vert > .menu-item.current-parent > a > .label,
+	.menu.layout-vert > .menu-item.current-parent     > .label {
 		color: white;
 		background-color: #157dff;
 	}
 	.menu.layout-vert > .menu-item > a > .label:hover em,
-	.menu.layout-vert > .menu-item > .label:hover em,
-	.menu.layout-vert > .menu-item.sub-menu-shown > a > .label em,
-	.menu.layout-vert > .menu-item.sub-menu-shown > .label em,
-	.menu.layout-vert > .menu-item.current-cate > a > .label em,
-	.menu.layout-vert > .menu-item.current-cate > .label em {
+	.menu.layout-vert > .menu-item     > .label:hover em,
+	.menu.layout-vert > .menu-item.coupled-shown  > a > .label em,
+	.menu.layout-vert > .menu-item.coupled-shown      > .label em,
+	.menu.layout-vert > .menu-item.current-parent > a > .label em,
+	.menu.layout-vert > .menu-item.current-parent     > .label em {
 		color: white;
+	}
+
+	.menu.layout-hori > .menu-item > a > .sub-menu-hint,
+	.menu.layout-hori > .menu-item > a > .label,
+	.menu.layout-hori > .menu-item     > .label {
+		color: #333;
+	}
+
+	.menu.layout-hori > .menu-item:hover > a > .label,
+	.menu.layout-hori > .menu-item:hover     > .label,
+	.menu.layout-hori > .menu-item.coupled-shown  > a > .label,
+	.menu.layout-hori > .menu-item.coupled-shown      > .label,
+	.menu.layout-hori > .menu-item.current-parent > a > .label,
+	.menu.layout-hori > .menu-item.current-parent     > .label {
+		color: #157dff;
 	}
 
 
@@ -709,10 +711,10 @@ label.deco-input {
 		color: #666;
 	}
 
-	#app-chief-nav .menu.level-2 > .menu-item.current-cate > a > .label,
-	#app-chief-nav .menu.level-2 > .menu-item.current-cate > .label,
-	#app-chief-nav .menu.level-2 > .menu-item.sub-menu-shown > a > .label,
-	#app-chief-nav .menu.level-2 > .menu-item.sub-menu-shown > .label,
+	#app-chief-nav .menu.level-2 > .menu-item.coupled-shown  > a > .label,
+	#app-chief-nav .menu.level-2 > .menu-item.coupled-shown      > .label,
+	#app-chief-nav .menu.level-2 > .menu-item.current-parent > a > .label,
+	#app-chief-nav .menu.level-2 > .menu-item.current-parent     > .label,
 	#app-chief-nav .menu.level-2 > .menu-item:hover > a > .label,
 	#app-chief-nav .menu.level-2 > .menu-item:hover > .label {
 		color: white;

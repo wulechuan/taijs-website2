@@ -684,34 +684,46 @@
 			margin: 0;
 			overflow: visible; /* for menu-item label borders, because the margin top/bottom is negative */
 		}
+		#page-sidebar-nav .menu-item.has-sub-menu > .menu {
+			height: 0;
+			overflow: hidden;
+		}
 
+		#page-sidebar-nav .menu-item.has-sub-menu.coupled-shown > .menu {
+			height: auto;
+			overflow: visible;
+		}
 		#page-sidebar-nav .menu-item {
 			display: block;
 			position: relative;
 			padding: 0;
 		}
 
+		#page-sidebar-nav .menu-item.has-sub-menu > a > .sub-menu-hint,
+		#page-sidebar-nav .menu-item.has-sub-menu     > .sub-menu-hint,
 		#page-sidebar-nav .menu-item.has-sub-menu > a > .label:after,
-		#page-sidebar-nav .menu-item.has-sub-menu > .label:after {
-			top: 9px;
-			margin: 0;
-			right: 25px;
-			z-index: 5;
-
+		#page-sidebar-nav .menu-item.has-sub-menu     > .label:after {
+			top: 10px;
+			bottom: auto;
+			right: 24px;
+			width: 25px;
 			height: 25px;
+			line-height: 25px;
 			font-size: 25px;
+			line-height: 23px\0;
+			text-indent: 1px\0;
 		}
 
-		#page-sidebar-nav .menu-item.has-sub-menu > .menu {
-			height: 0;
-		}
-
-		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > .menu {
-			height: auto;
+		:root #page-sidebar-nav .menu-item.has-sub-menu > a > .sub-menu-hint,
+		:root #page-sidebar-nav .menu-item.has-sub-menu     > .sub-menu-hint,
+		:root #page-sidebar-nav .menu-item.has-sub-menu > a > .label:after,
+		:root #page-sidebar-nav .menu-item.has-sub-menu     > .label:after {
+			line-height: 25px\0;
+			text-indent: 0px\0;
 		}
 
 		#page-sidebar-nav .menu-item > a > .label,
-		#page-sidebar-nav .menu-item > .label {
+		#page-sidebar-nav .menu-item     > .label {
 			box-sizing: border-box;
 			min-height: 46px;
 			line-height: 21px;
@@ -723,16 +735,16 @@
 		}
 
 		#page-sidebar-nav .menu-item > a > .label,
-		#page-sidebar-nav .menu-item > .label {
+		#page-sidebar-nav .menu-item     > .label {
 			line-height: 22px\0;
 		}
 		:root #page-sidebar-nav .menu-item > a > .label,
-		:root #page-sidebar-nav .menu-item > .label {
+		:root #page-sidebar-nav .menu-item     > .label {
 			line-height: 21px\0;
 		}
 
 		#page-sidebar-nav .menu.level-2 > .menu-item > a > .label,
-		#page-sidebar-nav .menu.level-2 > .menu-item > .label {
+		#page-sidebar-nav .menu.level-2 > .menu-item     > .label {
 			padding-left: 76px;
 		}
 /* ----- layout definition end ----------------- */
@@ -907,28 +919,28 @@
 
 	#page-sidebar-nav {
 		}
-		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown.current-parent > .label,
-		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown.current-parent > a > .label,
-		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > .label,
-		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > a > .label {
+		#page-sidebar-nav .menu-item.has-sub-menu.coupled-shown.current-parent > a > .label,
+		#page-sidebar-nav .menu-item.has-sub-menu.coupled-shown.current-parent     > .label,
+		#page-sidebar-nav .menu-item.has-sub-menu.coupled-shown > a > .label,
+		#page-sidebar-nav .menu-item.has-sub-menu.coupled-shown     > .label {
 			color: #333;
 			border-color: transparent;
 			background: transparent;
 		}
-		#page-sidebar-nav .menu-item.has-sub-menu.current-parent > .label,
-		#page-sidebar-nav .menu-item.has-sub-menu.current-parent > a > .label,
-		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > .label:hover,
-		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > a:hover > .label,
-		#page-sidebar-nav .menu-item > .label:hover,
-		#page-sidebar-nav .menu-item > a:hover > .label {
+		#page-sidebar-nav .menu-item.has-sub-menu.current-parent > a       > .label,
+		#page-sidebar-nav .menu-item.has-sub-menu.current-parent           > .label,
+		#page-sidebar-nav .menu-item.has-sub-menu.coupled-shown  > a:hover > .label,
+		#page-sidebar-nav .menu-item.has-sub-menu.coupled-shown            > .label:hover,
+		#page-sidebar-nav .menu-item > a:hover > .label,
+		#page-sidebar-nav .menu-item           > .label:hover {
 			color: #333;
 			background: #dce0e9;
 			border-color: #ddd;
 		}
-		#page-sidebar-nav .menu-item.current > .label:hover,
 		#page-sidebar-nav .menu-item.current > a:hover > .label,
-		#page-sidebar-nav .menu-item.current > .label,
-		#page-sidebar-nav .menu-item.current > a > .label {
+		#page-sidebar-nav .menu-item.current           > .label:hover,
+		#page-sidebar-nav .menu-item.current > a       > .label,
+		#page-sidebar-nav .menu-item.current           > .label {
 			color: #333;
 			background: white;
 			border-color: #ddd;
