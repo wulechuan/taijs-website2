@@ -215,6 +215,7 @@ input {
 	input[type="submit"].simple-look,
 	button.simple-look *,
 	button.simple-look {
+		color: #157dff;
 		transition-property: background-color;
 	}
 	.floating-layer-set:hover input[type="reset"].simple-look .iconfont,
@@ -236,13 +237,13 @@ input {
 		color: #157dff;
 		/* background-color: #e5f1ff; */
 	}
-	/* input[type="reset"].simple-look.color-red,
+	input[type="reset"].simple-look.color-red,
 	input[type="button"].simple-look.color-red,
 	input[type="submit"].simple-look.color-red,
 	button.simple-look.color-red {
 	    color: #ff291d;
 	}
-	input[type="reset"].simple-look.color-red:hover,
+	/* input[type="reset"].simple-look.color-red:hover,
 	input[type="button"].simple-look.color-red:hover,
 	input[type="submit"].simple-look.color-red:hover,
 	button.simple-look.color-red:hover {
