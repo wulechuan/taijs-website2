@@ -378,12 +378,21 @@
 			var itemLabel = $(menuItem).find('> a > .label')[0];
 			var itemId = itemLabel.id;
 
-			if (itemId && desiredId && (itemId===desiredId)) {
+			var isCurrentItemOrParentOfCurrentItem = itemId && desiredId && (itemId===desiredId);
+			var isCurrentItem = isCurrentItemOrParentOfCurrentItem && level === depth;
+			if (isCurrentItemOrParentOfCurrentItem) {
 				currentItem = menuItem;
 				currentItemId = itemId;
-				$(menuItem).addClass('current');
+				if (isCurrentItem) {
+					$(menuItem).addClass('current');
+					$(menuItem).removeClass('current-parent');
+				} else {
+					$(menuItem).addClass('current-parent');
+					$(menuItem).removeClass('current');
+				}
 			} else {
 				$(menuItem).removeClass('current');
+				$(menuItem).removeClass('current-parent');
 			}
 		});
 

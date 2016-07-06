@@ -919,12 +919,16 @@
 
 	#page-sidebar-nav {
 		}
+		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown.current-parent > .label,
+		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown.current-parent > a > .label,
 		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > .label,
 		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > a > .label {
 			color: #333;
 			border-color: transparent;
 			background: transparent;
 		}
+		#page-sidebar-nav .menu-item.has-sub-menu.current-parent > .label,
+		#page-sidebar-nav .menu-item.has-sub-menu.current-parent > a > .label,
 		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > .label:hover,
 		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown > a:hover > .label,
 		#page-sidebar-nav .menu-item > .label:hover,
@@ -933,8 +937,6 @@
 			background: #dce0e9;
 			border-color: #ddd;
 		}
-		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown.current > .label:hover,
-		#page-sidebar-nav .menu-item.has-sub-menu.sub-menu-shown.current > a:hover > .label,
 		#page-sidebar-nav .menu-item.current > .label:hover,
 		#page-sidebar-nav .menu-item.current > a:hover > .label,
 		#page-sidebar-nav .menu-item.current > .label,
