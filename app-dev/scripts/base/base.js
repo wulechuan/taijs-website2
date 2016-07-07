@@ -681,14 +681,10 @@
 			}
 
 			if (isIE8) {
-				// frameGapMS = 14;
-				// tempStageCounter = 18;
-				frameGapMS = 22;
-				tempStageCounter = 14;
+				frameGapMS = 26;
+				tempStageCounter = 13;
 			}
 			if (isIE9) {
-				// frameGapMS = 11;
-				// tempStageCounter = 27;
 				frameGapMS = 18;
 				tempStageCounter = 19;
 			}
