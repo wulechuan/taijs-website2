@@ -129,10 +129,18 @@ q:before, q:after {
 	/* font-style: normal; */
 }
 
-
 input[type="search"]::-webkit-search-cancel-button {
 	display: none;
 }
 input[type="search"]::-ms-clear {
 	display: none;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }

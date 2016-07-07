@@ -452,9 +452,12 @@ label.deco-input {
 	.floating-layer-set.floating-info-set .locator .floating-layer {
 		color: #333;
 		border-color: #157dff;
-		background-color: white;
+		background-color: #f4f9ff;
+		box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.22);
+	}
 
-		box-shadow: 0 0 8px 0 rgba(33, 222, 255, 0.77);
+	.floating-layer-set.floating-info-set .locator .floating-layer.style-has-glow {
+		box-shadow: 0 0 8px 0 rgba(33, 222, 255, 0.44);
 	}
 
 

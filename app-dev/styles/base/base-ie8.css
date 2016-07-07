@@ -154,26 +154,29 @@ label.deco-input {
 
 	input[type="checkbox"] {
 		padding: 0!important;
-		margin: -2px 0 0 -2px!important;
-		width: 18px;
-		height: 18px;
-
+		margin: 1px 0 0 -2px!important;
 		position: absolute; /* for both positioning and clipping */
-		clip: rect(2px, 17px, 17px, 2px);
-	}
+		clip: rect(4px, 15px, 16px, 2px);
+		}
+		input[type="checkbox"] + label.deco-input[for] {
+			width: 14px;
+			height: 14px;
+			margin-left: 0;
+			margin-top: 0;
+		}
 	input[type="radio"] {
 		padding: 0!important;
-		margin: 1px 0 0 -2px!important;
-		font-size: 14px; /* for browswer native icon size */
+		margin: 4px 0 0 -1px!important;
+		font-size: 12px; /* for browswer native icon size */
 		position: absolute;
-	}
-	input[type="radio"]    + label.deco-input[for],
-	input[type="checkbox"] + label.deco-input[for] {
-		width: 16px;
-		height: 16px;
-		margin-left: 0;
-		margin-top: 0;
-	}
+		}
+		input[type="radio"]    + label.deco-input[for] {
+			visibility: hidden;
+			width: 16px;
+			height: 16px;
+			margin-left: 0;
+			margin-top: 0;
+		}
 
 
 .cast-shadow {

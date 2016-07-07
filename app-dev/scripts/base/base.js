@@ -576,6 +576,7 @@
 
 				var $myCheckbox = $listItem.find('input[type="checkbox"].selectable-list-item-selector');
 				var myCheckbox = $myCheckbox[0];
+				var $myCheckboxLabel = $myCheckbox.find('+ label.deco-input[for]');
 
 				var isInitiallyChecked = myCheckbox && myCheckbox.checked;
 				var _myCheckboxUntouchedYet = true;
@@ -586,9 +587,19 @@
 				}, 100);
 
 				if (myCheckbox) {
+					if (isIE8) {
+						$myCheckboxLabel.on('click', function (event) {
+							_myCheckboxUntouchedYet = false;
+							if (event) event.stopPropagation();
+						});
+					}
 					$myCheckbox.on('click', function(event) {
 						_myCheckboxUntouchedYet = false;
 						if (event) event.stopPropagation();
+						if (isIE8) {
+							_updateListItemAccordingToCheckboxStatus(listItem, this.checked);
+							_playAnimationForIE8AndIE9OnStatusChange(listItem);
+						}
 					});
 
 					$listItem.on('click', function () {
@@ -600,7 +611,7 @@
 
 					$myCheckbox.on('change', function() {
 						_updateListItemAccordingToCheckboxStatus(listItem, this.checked);
-						_playAnimationForIE8AndIE9OnStatusChange(listItem);
+						// _playAnimationForIE8AndIE9OnStatusChange(listItem);
 					});
 				}
 			});
@@ -806,7 +817,7 @@
 			$(inputForStoringHTML).val(chosenOptionHTML);
 		}
 
-		function onClickOutside(clickedEl) {
+		function onClickOutside() {
 			$(dropDownList).removeClass('coupled-shown');
 		}
 	});

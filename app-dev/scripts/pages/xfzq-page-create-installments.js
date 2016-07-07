@@ -12,5 +12,8 @@
 		if (event) event.stopPropagation();
 		$bP.hide();
 		$pL.hide();
+		setTimeout(function (argument) {
+			location.assign('../html/xfzq-bills-recent.html');
+		}, 500);
 	});
 })();

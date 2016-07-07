@@ -956,17 +956,17 @@ label.deco-input {
 		position: relative;
 		display: inline-block;
 
+		font-size: 21px; /* this value is optimized for tabular f-lists */
+
 		z-index: 5;
 		opacity: 0;
 		background-color: transparent!important;
 
-		font-size: 1.6em;
-
 		line-height: 1;
 		padding: 0!important; /* for ie8 */
-		width: 1.2em!important;
-		height: 1.2em!important;
-		margin: -0.1em -0.1em!important;
+		width: 1em!important;
+		height: 1em!important;
+		margin: 0;
 
 		border-style: none;
 	}
@@ -974,73 +974,79 @@ label.deco-input {
 	input[type="radio"]    + label.deco-input[for],
 	input[type="checkbox"] + label.deco-input[for] {
 		z-index: 1;
-		width: 1.4em;
-		height: 1.4em;
+		width: 1em;
+		height: 1em;
 		padding: 0;
-		margin-left: -1.5em;
-		margin-top: 0.1em;
-		/* overflow: hidden; */
 	}
-	input[type="checkbox"] + label.deco-input[for]:before {
-		content: '';
-		box-sizing: border-box;
-		display: block;
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		border-width: 1px;
-		border-style: solid;
-		border-radius: 2px;
-	}
-	input[type="checkbox"] + label.deco-input[for]:after {
-		font-family: 'iconfont'!important;
-		content: '\e630';
-		box-sizing: border-box;
-		display: block;
-		visibility: hidden;
-		position: absolute;
-		font-size: 1.4em;
-		text-indent: 0;
-		line-height: 1.1;
+	input[type="checkbox"] + label.deco-input[for] {
+		font-size: 14px;
+		margin-left: -17px;
+		top: 3px;
+		}
+		input[type="checkbox"] + label.deco-input[for]:before {
+			content: '';
+			box-sizing: border-box;
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			border-width: 1px;
+			border-style: solid;
+			border-radius: 2px;
+		}
+		input[type="checkbox"] + label.deco-input[for]:after {
+			font-family: 'iconfont'!important;
+			content: '\e630';
+			box-sizing: border-box;
+			display: block;
+			visibility: hidden;
+			position: absolute;
+			text-indent: 0;
+			line-height: 1;
 
-		left: 0%;
-		top: 0%;
-		width: 100%;
-		height: 100%;
-		border-width: 0;
-		border-style: none;
-	}
-	input[type="radio"] + label.deco-input[for]:before {
-		font-family: 'iconfont'!important;
-		content: '\e631';
-		box-sizing: border-box;
-		display: block;
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		border-width: 0;
-		border-style: none;
-	}
-	input[type="radio"] + label.deco-input[for]:after {
-		font-family: 'iconfont'!important;
-		content: '\e632';
-		box-sizing: border-box;
-		display: block;
-		visibility: hidden;
-		position: absolute;
-		text-indent: 0;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			border-width: 0;
+			border-style: none;
+		}
+	input[type="radio"]    + label.deco-input[for] {
+		font-size: 12px;
+		margin-left: -17px;
+		top: -2px;
+		}
+		input[type="radio"] + label.deco-input[for]:before {
+			font-family: 'iconfont'!important;
+			content: '\e631';
+			box-sizing: border-box;
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			border-width: 0;
+			border-style: none;
+		}
+		input[type="radio"] + label.deco-input[for]:after {
+			font-family: 'iconfont'!important;
+			content: '\e632';
+			box-sizing: border-box;
+			display: block;
+			visibility: hidden;
+			position: absolute;
+			text-indent: 0;
 
-		left: 0%;
-		top: 0%;
-		width: 100%;
-		height: 100%;
-		border-width: 0;
-		border-style: none;
-	}
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			border-width: 0;
+			border-style: none;
+		}
 	input[type="radio"][checked]    + label.deco-input[for]:after,
 	input[type="radio"]:checked     + label.deco-input[for]:after,
 	input[type="checkbox"][checked] + label.deco-input[for]:after,
@@ -1976,8 +1982,8 @@ label.deco-input {
 		.tabular > .f-list > li > * {
 			display: inline-block;
 			vertical-align: top;
-			padding: 8px 12px;
-			margin: -8px -12px;
+			padding: 6px 8px;
+			margin: -6px -8px;
 		}
 		.tabular > .f-list > li * {
 			transition-duration: 0.1s;
@@ -2000,7 +2006,7 @@ label.deco-input {
 			right: 0;
 			top: 0;
 			bottom: 0;
-			height: 17px;
+			height: 19px;
 			margin-top: auto;
 			margin-bottom: auto;
 			text-align: right;
