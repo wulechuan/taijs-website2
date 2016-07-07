@@ -107,7 +107,7 @@
 			#credit-abstract-pane > .ie-bg {
 				display: block\0;
 				background-color: black;
-				filter: alpha(opacity=60);
+				filter: alpha(opacity=38);
 			}
 
 			:root #credit-abstract-pane > .ie-bg {
@@ -522,6 +522,27 @@
 		.user-has-logged-in #splash-block #splash-credit-info-block {
 			display: block;
 		}
+
+
+#pl-index-user-guide {
+	}
+	#pl-index-user-guide .user-guide-step-block {
+		position: absolute;
+		left: 0;
+		width: 100%;
+	}
+	#pl-index-user-guide img.user-guide-step {
+		position: absolute;
+		cursor: pointer;
+	}
+
+	#index-user-guide-step-1 {
+		top: 109px;
+	}
+	#index-user-guide-step-1 img {
+		left: 315px;
+		top: 130px;
+	}
 
 
 #promotion-cards {

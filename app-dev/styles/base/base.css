@@ -2365,6 +2365,11 @@ ol.f-list, ul.f-list { /* function list */
 		vertical-align: middle;
 	}
 
+	.popup-layer.has-no-popup-window:before {
+		content: none;
+		white-space: normal;
+	}
+
 	.popup-layer.current {
 		z-index: 5;
 	}
