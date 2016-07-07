@@ -1,4 +1,14 @@
 /* ----- layout definition begin --------------- */
+	.form input {
+		font-size: 20px;
+		line-height: 24px;
+		padding: 7px 10px;
+		}
+		.form input[type="password"] {
+			font-size: 16px;
+		}
+
+
 	.empty-content-hint {
 		background-image: url(../../images/pages/xfzq/_common/empty-content-hint-money-bag-in-hand.png);
 		}
