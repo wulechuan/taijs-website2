@@ -120,7 +120,7 @@
 		var currentWidth = $(popupWindow).outerWidth();
 
 		if (popupWindow) popupWindow.style.width = currentWidth + 'px';
-	}
+	};
 
 
 	$('input[placeholder]').each(function () {
@@ -329,18 +329,13 @@
 			var theDD = null;
 			if (dt) theDD = dt.elements.dd;
 
-			var dlNewHeight = 0;
-			var accumHeight;
-
 			for (var i = 0; i < $allDDs.length; i++) {
 				var dd = $allDDs[i];
 				if (theDD && dd === theDD) {
-					accumHeight = _processOnePairOfDTDD(dd, 'toggle');
+					_processOnePairOfDTDD(dd, 'toggle');
 				} else {
-					accumHeight = _processOnePairOfDTDD(dd, 'collapse');
+					_processOnePairOfDTDD(dd, 'collapse');
 				}
-
-				if (isIE8 && accumHeight) dlNewHeight += accumHeight;
 			}
 
 			if (isIE8) {
@@ -350,8 +345,6 @@
 						forceUpdatingContainer.visibility = '';
 					}, 0);
 				}
-
-				dl.style.height = dlNewHeight + 'px';
 			}
 		}
 
@@ -368,22 +361,13 @@
 			var $dd = $(dd);
 			var $content = $(content);
 
-			var dtHeight = 0;
-			var ddNewHeight = 0;
+			var ddNewHeight;
 			var ddContentCurrentHeight;
-
-			if (isIE8) {
-				dtHeight = $dt.outerHeight();
-			}
 
 			var wasCollapsed = !$dd.hasClass('expanded');
 			var needAction = (!wasCollapsed && action==='collapse') || (action==='toggle');
 			if (!needAction) {
-				if (isIE8) {
-					return dtHeight;
-				}
-
-				return 0;
+				return true;
 			}
 
 
@@ -399,16 +383,16 @@
 
 					dd.style.height = ddNewHeight + 'px';
 
-					return dtHeight+ddNewHeight;
+					return true;
 				} else {
 					$dd.removeClass('expanded');
 					dd.setAttribute('aria-expanded', false);
 					dd.setAttribute('aria-hidden',   true);
 					$dt.removeClass('expanded');
 
-					dd.style.height = '0px';
+					dd.style.height = '';
 
-					return dtHeight;
+					return true;
 				}
 			} else if (isIE9) { // update className BEFORE animation
 				if (wasCollapsed) {
@@ -465,6 +449,7 @@
 	setPageSidebarNavCurrentItem(urlParameters.psn);
 
 	function updatePageSidebarNavSubMenuForMenuItem(menuItem, action) {
+		var forceUpdatingContainer = $('.page')[0];
 		var $subMenu = $(menuItem).find('> .menu');
 		var subMenuWasExpanded = $(menuItem).hasClass('coupled-shown');
 		var needAction =
@@ -478,10 +463,21 @@
 
 		if (subMenuWasExpanded) {
 			$(menuItem).removeClass('coupled-shown');
-			$subMenu.slideUp();
+			$subMenu.slideUp(null, _onAnimationEnd);
 		} else {
 			$(menuItem).addClass('coupled-shown');
-			$subMenu.slideDown();
+			$subMenu.slideDown(null, _onAnimationEnd);
+		}
+
+		function _onAnimationEnd() {
+			if (!isIE8) return true;
+
+			if (forceUpdatingContainer) {
+				forceUpdatingContainer.visibility = 'hidden';
+				setTimeout(function () {
+					forceUpdatingContainer.visibility = '';
+				}, 0);
+			}
 		}
 	}
 
