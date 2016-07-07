@@ -12,6 +12,12 @@
 		$('body').addClass('webkit');
 	}
 
+	if (!Array.isArray) {
+		Array.isArray = function(arg) {
+			return Object.prototype.toString.call(arg) === '[object Array]';
+		};
+	}
+
 	function processParametersPassedIn() {
 		var qString = location.href.match(/\?.*/);
 		if (qString) qString = qString[0].slice(1);
