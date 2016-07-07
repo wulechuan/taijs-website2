@@ -1,7 +1,7 @@
 (function () {
 	window.console = window.console || { log: function () {} };
 	var ua = navigator.userAgent;
-	var isIE = !!ua.match(/(\bmsie|\btrident\b)/i);
+	// var isIE = !!ua.match(/(\bmsie|\btrident\b)/i);
 	var isMSEdge = !!ua.match(/\bedge\b/i);
 	var isIE8 = !!ua.match(/\bmsie\s+8/i);
 	var isIE9 = !!ua.match(/\bmsie\s+9/i);
@@ -57,6 +57,55 @@
 
 	var urlParameters = processParametersPassedIn();
 
+
+	var bodyClickListener = new function () {
+		this.registeredElements = [];
+
+		this.register = function (elements, callback) {
+			if (typeof callback !== 'function') return false;
+
+			if (!Array.isArray(elements)) elements = [elements];
+			for (var i = 0; i < elements.length; i++) {
+				var el = elements[i];
+				if (!el) continue;
+				this.registeredElements.push({
+					element: el,
+					callback: callback
+				});
+			}
+		};
+
+		this.broadCastOutsideClickToRegisteredElements = function (clickedEl) {
+			for (var i = 0; i < this.registeredElements.length; i++) {
+				var record = this.registeredElements[i];
+				var el = record.element;
+				var isOutside = this.testClickOutsideElement(el, clickedEl);
+				if (isOutside) {
+					record.callback(clickedEl);
+				}
+			}
+		};
+
+		this.testClickOutsideElement = function (testEl, clickedEl) {
+			if (!testEl || !clickedEl) return true;
+
+			while (clickedEl && clickedEl!==document.body && clickedEl!==testEl) {
+				clickedEl = clickedEl.parentNode;
+			}
+
+			return testEl !== clickedEl;
+		};
+
+		var thisController = this;
+		function _init() {
+			$('body').on('click', function (event) {
+				var clickedEl = event.target;
+				thisController.broadCastOutsideClickToRegisteredElements(clickedEl);
+			});
+		}
+
+		_init.call(this);
+	}();
 
 
 	$('input[placeholder]').each(function () {
@@ -404,9 +453,9 @@
 		var $subMenu = $(menuItem).find('> .menu');
 		var subMenuWasExpanded = $(menuItem).hasClass('coupled-shown');
 		var needAction =
-			(!subMenuWasExpanded && action==='expand')
-			|| (subMenuWasExpanded && action==='collapse')
-			|| (action==='toggle')
+			(!subMenuWasExpanded && action==='expand') ||
+			(subMenuWasExpanded && action==='collapse') ||
+			(action==='toggle')
 		;
 		if (!needAction) {
 			return 0;
@@ -483,7 +532,6 @@
 	$('.menu-item.has-sub-menu').each(function () {
 		var menuItem = this;
 		var $subMenuHint = $(this).find('> a > .sub-menu-hint, > .sub-menu-hint');
-		var subMenuHint = $subMenuHint[0];
 
 		$subMenuHint.on('click', function (event) {
 			if (event) {
@@ -505,14 +553,15 @@
 		var $allRadios     = $allListItems.find('input[type="radio"].selectable-list-item-selector');
 		// console.log('has checkboxes: ', $allCheckboxes.length > 0, '\nhas radios: ', $allRadios.length > 0);
 
-		if ($allCheckboxes.length > 0) {
-			function _updateListItemAccordingToCheckboxStatus(listItem, isChecked) {
-				if (isChecked === true) {
-					$(listItem).addClass('selected');
-				} else {
-					$(listItem).removeClass('selected');
-				}
+		function _updateListItemAccordingToCheckboxStatus(listItem, isChecked) {
+			if (isChecked === true) {
+				$(listItem).addClass('selected');
+			} else {
+				$(listItem).removeClass('selected');
 			}
+		}
+
+		if ($allCheckboxes.length > 0) {
 
 			$allListItems.each(function () {
 				var listItem = this;
@@ -551,24 +600,25 @@
 			});
 		}
 
-		if ($allRadios.length > 0) {
-			function _updateAllListItemsAccordingToRadioValue(checkedRadioValue) {
-				if (!_radioUntouchedYet && checkedRadioValue === tabluar.radioLatestValue) return true;
+		function _updateAllListItemsAccordingToRadioValue(checkedRadioValue) {
+			if (!_radioUntouchedYet && checkedRadioValue === tabluar.radioLatestValue) return true;
 
-				for (var i = 0; i < $allListItems.length; i++) {
-					var _li = $allListItems[i];
-					var _radio = _li.elements && _li.elements.radio;
-					if (_radio.value === checkedRadioValue) {
-						$(_li).addClass('selected');
-						_playAnimationForIE8AndIE9OnStatusChange(_li);
-					} else if (_radio.value === tabluar.radioLatestValue) {
-						$(_li).removeClass('selected');
-						// _playAnimationForIE8AndIE9OnStatusChange(_li);
-					}
+			for (var i = 0; i < $allListItems.length; i++) {
+				var _li = $allListItems[i];
+				var _radio = _li.elements && _li.elements.radio;
+				if (_radio.value === checkedRadioValue) {
+					$(_li).addClass('selected');
+					_playAnimationForIE8AndIE9OnStatusChange(_li);
+				} else if (_radio.value === tabluar.radioLatestValue) {
+					$(_li).removeClass('selected');
+					// _playAnimationForIE8AndIE9OnStatusChange(_li);
 				}
-
-				tabluar.radioLatestValue = checkedRadioValue;
 			}
+
+			tabluar.radioLatestValue = checkedRadioValue;
+		}
+
+		if ($allRadios.length > 0) {
 
 			tabluar.radioLatestValue = null;
 			for (var i = 0; i < $allRadios.length; i++) {
@@ -596,9 +646,6 @@
 				if (myRadio) {
 					if (typeof listItem.elements !== 'object') listItem.elements = {};
 					listItem.elements.radio = myRadio;
-
-					$myRadio.on('click', function(event) {
-					});
 
 					$listItem.on('click', function () {
 						_radioUntouchedYet = false;
@@ -696,6 +743,7 @@
 	});
 
 
+
 	$('.drop-down-list').each(function () {
 		var dropDownList = this;
 		var $currentValueContainer = $(this).find('.drop-down-list-current-value');
@@ -707,6 +755,7 @@
 			_chooseOption(urlParameters.bank, urlParameters.bankHTML);
 		} else {
 			if ($options.length > 0) {
+				bodyClickListener.register(this, onClickOutside);
 				_chooseOption(0);
 			} else {
 				_chooseOption(null);
@@ -749,6 +798,10 @@
 			$currentValueContainer.html(chosenOptionHTML);
 			$(inputForStoringValue).val(chosenValue);
 			$(inputForStoringHTML).val(chosenOptionHTML);
+		}
+
+		function onClickOutside(clickedEl) {
+			$(dropDownList).removeClass('coupled-shown');
 		}
 	});
 })();
