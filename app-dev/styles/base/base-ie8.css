@@ -154,28 +154,40 @@ label.deco-input {
 
 	input[type="checkbox"] {
 		padding: 0!important;
-		margin: 1px 0 0 -2px!important;
+		margin: 1px 16px 0 auto;
 		position: absolute; /* for both positioning and clipping */
 		clip: rect(4px, 15px, 16px, 2px);
 		}
 		input[type="checkbox"] + label.deco-input[for] {
 			width: 14px;
 			height: 14px;
-			margin-left: 0;
+			margin-left: 2px;
 			margin-top: 0;
+			top: 14px;
 		}
 	input[type="radio"] {
 		padding: 0!important;
-		margin: 4px 0 0 -1px!important;
+		margin: 0 16px 0 auto;
+		top: 15px;
 		font-size: 12px; /* for browswer native icon size */
 		position: absolute;
 		}
-		input[type="radio"]    + label.deco-input[for] {
-			visibility: hidden;
-			width: 16px;
-			height: 16px;
-			margin-left: 0;
-			margin-top: 0;
+		input[type="radio"] + label.deco-input[for] {
+			display: none;
+		}
+
+	.tabular .cell.row-checkbox input[type="checkbox"] + label.deco-input[for],
+	.tabular .cell.row-radio    input[type="radio"],
+	.tabular .cell.row-checkbox input[type="checkbox"] {
+		right: 0;
+		}
+		.tabular .cell.row-radio    input[type="radio"],
+		.tabular .cell.row-checkbox input[type="checkbox"] {
+			margin-right: 11px;
+		}
+		.tabular .cell.row-checkbox input[type="checkbox"] + label.deco-input[for] {
+			margin-left: auto;
+			margin-right: 16px;
 		}
 
 

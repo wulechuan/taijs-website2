@@ -973,6 +973,7 @@ label.deco-input {
 
 	input[type="radio"]    + label.deco-input[for],
 	input[type="checkbox"] + label.deco-input[for] {
+		position: absolute; /* for ie8/ie9 stable layout during zoom/transform-scaling animation */
 		z-index: 1;
 		width: 1em;
 		height: 1em;
@@ -981,7 +982,7 @@ label.deco-input {
 	input[type="checkbox"] + label.deco-input[for] {
 		font-size: 14px;
 		margin-left: -17px;
-		top: 3px;
+		margin-top: 3px;
 		}
 		input[type="checkbox"] + label.deco-input[for]:before {
 			content: '';
@@ -1016,7 +1017,7 @@ label.deco-input {
 	input[type="radio"]    + label.deco-input[for] {
 		font-size: 12px;
 		margin-left: -17px;
-		top: -2px;
+		margin-top: 1px;
 		}
 		input[type="radio"] + label.deco-input[for]:before {
 			font-family: 'iconfont'!important;
@@ -2017,8 +2018,8 @@ label.deco-input {
 			text-align: right;
 		}
 		.tabular > .f-list > li a {
-			padding: 10px;
-			margin: -10px;
+			padding: 6px 10px;
+			margin: -6px -10px;
 			border-radius: 4px;
 		}
 		.tabular > .header      input,
