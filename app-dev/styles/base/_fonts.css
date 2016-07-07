@@ -47,10 +47,12 @@ blockquote,
 	font-size: 14px;
 }
 
-
+.form input,
 .font-important {
 	font-family: 'Arial', sans-serif;
+	font-weight: bolder;
+}
+.font-important {
 	font-size: 38px;
 	line-height: 1.5; /* 57px */
-	font-weight: bolder;
 }
