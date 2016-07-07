@@ -148,19 +148,18 @@
 		.tabular > .header,
 		.tabular > .f-list > li .last-cell,
 		.tabular > .f-list > li {
-			padding-top: 13px;
-			padding-bottom: 13px;
+			padding-top: 11px;
+			padding-bottom: 11px;
 
-			line-height: 17px;
-			min-height: 17px;
+			line-height: 21px;
+			min-height: 21px;
 		}
 		.tabular > .header {
-			font-weight: bold;
-			letter-spacing: 0.125em;
+			/* font-weight: bold; */
+			/* letter-spacing: 0.125em; */
 		}
 		.tabular > .header h3,
 		.tabular > .header h2 {
-			/* font-weight: normal; */
 			text-shadow: none;
 		}
 		.tabular > .footer .last-cell,
@@ -191,7 +190,7 @@
 			}
 
 			.tabular.bill-records > .f-list > li .timestamp {
-				width: 128px;
+				width: 200px;
 			}
 
 		.tabular.choose-installments-plan .amount-per-installment {

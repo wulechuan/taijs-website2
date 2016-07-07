@@ -25,11 +25,7 @@ input.empty-field {
 }
 
 .ie8-input-fake-placeholder,
-.card .card-head,
 .bill-time-exceeded,
-.tabular-lists .toolbar,
-.tabular > .header,
-.tabular > .f-list > li,
 .pagination [role="button"],
 .pagination button,
 .dialog .dialog-body > .content .article p,
@@ -41,6 +37,14 @@ blockquote,
 .font-song-ti {
 	font-family: 'SimSun', serif;
 	font-size: 12px;
+}
+
+.card .card-head,
+.tabular-lists .toolbar,
+.tabular > .header,
+.tabular > .f-list > li {
+	/* font-family: 'SimSun', serif; */
+	font-size: 14px;
 }
 
 
