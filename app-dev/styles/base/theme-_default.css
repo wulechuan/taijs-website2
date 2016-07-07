@@ -449,6 +449,10 @@ label.deco-input {
 	box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.25);
 	}
 
+	.floating-layer-set.floating-info-set > .info-icon {
+		color: #157dff;
+	}
+
 	.floating-layer-set.floating-info-set .locator .floating-layer {
 		color: #333;
 		border-color: #157dff;

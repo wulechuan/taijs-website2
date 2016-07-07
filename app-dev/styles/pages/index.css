@@ -161,6 +161,10 @@
 				vertical-align: middle;
 			}
 
+			#credit-abstract-pane .floating-layer-set > .info-icon {
+				color: white;
+			}
+
 
 		#credit-details-pane {
 			z-index: 1;
