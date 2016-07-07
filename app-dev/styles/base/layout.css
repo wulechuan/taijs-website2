@@ -278,8 +278,7 @@
 	}
 
 	#app-footer a,
-	#app-footer a:hover,
-	#app-footer a:visited {
+	#app-footer a:hover {
 		text-decoration: none;
 	}
 

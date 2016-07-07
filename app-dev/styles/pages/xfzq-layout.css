@@ -155,12 +155,11 @@
 			min-height: 21px;
 		}
 		.tabular > .header {
-			font-weight: bold;
-			letter-spacing: 0.125em;
+			/* font-weight: bold; */
+			/* letter-spacing: 0.125em; */
 		}
 		.tabular > .header h3,
 		.tabular > .header h2 {
-			/* font-weight: normal; */
 			text-shadow: none;
 		}
 		.tabular > .footer .last-cell,

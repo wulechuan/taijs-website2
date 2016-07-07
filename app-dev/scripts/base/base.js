@@ -114,6 +114,15 @@
 	}();
 
 
+	window.onPopupLayerShow = function(popupLayer) {
+		if (!isIE9) return true;
+		var popupWindow = $(popupLayer).find('.popup-window')[0];
+		var currentWidth = $(popupWindow).outerWidth();
+
+		if (popupWindow) popupWindow.style.width = currentWidth + 'px';
+	}
+
+
 	$('input[placeholder]').each(function () {
 		function _updateInputStyleForGroomingPlaceholder(field) {
 			if (!field) {

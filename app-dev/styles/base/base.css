@@ -1255,7 +1255,12 @@ label.deco-input {
 	.tabular .cell .floating-layer-set.floating-info-set {
 		position: absolute;
 		right: -12px;
-		top: 4px;
+		top: 1px;
+		top: -2px\0;
+		}
+
+		:root .tabular .cell .floating-layer-set.floating-info-set {
+			top: 1px\0;
 		}
 
 		.form .floating-layer-set.floating-info-set > .info-icon .iconfont,
@@ -1790,11 +1795,6 @@ label.deco-input {
 	margin-bottom: 18px;
 	}
 
-	.dialog .buttons-in-single-line {
-		margin-top: 10px;
-		margin-bottom: 4px;
-	}
-
 	.buttons-in-single-line input[type="reset"],
 	.buttons-in-single-line input[type="submit"],
 	.buttons-in-single-line input[type="button"],
@@ -1805,6 +1805,11 @@ label.deco-input {
 
 	.buttons-in-single-line *:first-child {
 		margin-left: 0;
+	}
+
+	.dialog .buttons-in-single-line {
+		margin-top: 10px;
+		margin-bottom: 4px;
 	}
 
 
@@ -2150,14 +2155,12 @@ ol.f-list, ul.f-list { /* function list */
 
 	.dialog .dialog-footer {
 		box-sizing: border-box;
-		width: 100%; /* for wide inputs and buttons */
 		clear: both;
 		padding: 16px;
 		padding: 1em;
 		}
 
 		.dialog .dialog-footer .width-wrap {
-			width: 100%;
 			margin: 0;
 			padding-left: 0;
 			padding-right: 0;
@@ -2356,7 +2359,7 @@ ol.f-list, ul.f-list { /* function list */
 	.popup-layer:before {
 		content: '';
 		display: inline-block;
-		width: 0;
+		width: 1px;
 		height: 95%;
 		vertical-align: middle;
 	}
@@ -2369,20 +2372,19 @@ ol.f-list, ul.f-list { /* function list */
 		display: inline-block;
 		vertical-align: middle;
 		position: relative;
-		margin: auto;
 		margin: 20px;
 		padding: 0;
 		border: 0;
 		left: 0;
 		top: 0;
-		right: 0;
-		bottom: 0;
 		max-width: 90%;
 		max-height: 90%;
 		min-width: 100px;
 		min-height: 100px;
 		text-align: left;
+		white-space: normal;
 	}
+
 	.popup-window,
 	.popup-window.cast-shadow {
 		box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 1);
@@ -2394,6 +2396,10 @@ ol.f-list, ul.f-list { /* function list */
 
 	.popup-window.has-dialog {
 		min-width: 588px; /* global default value */
+	}
+
+	:root .popup-window.has-dialog {
+		max-width: none \0; /* ie9 randomly redraw "inline-block" popup-window, using the max-width as the actual width of the popup-window */
 	}
 
 

@@ -43,7 +43,7 @@ blockquote,
 .tabular-lists .toolbar,
 .tabular > .header,
 .tabular > .f-list > li {
-	font-family: 'SimSun', serif;
+	/* font-family: 'SimSun', serif; */
 	font-size: 14px;
 }
 
