@@ -215,9 +215,14 @@ input {
 	input[type="submit"].simple-look,
 	button.simple-look *,
 	button.simple-look {
-		color: #157dff;
+		/* color: #157dff; */
 		transition-property: background-color;
 	}
+
+	.item-filters button.simple-look {
+		color: #157dff;
+	}
+
 	.floating-layer-set:hover input[type="reset"].simple-look .iconfont,
 	.floating-layer-set:hover input[type="reset"].simple-look,
 	.floating-layer-set:hover input[type="button"].simple-look .iconfont,
@@ -236,6 +241,10 @@ input {
 	button.simple-look:hover {
 		color: #157dff;
 		/* background-color: #e5f1ff; */
+	}
+
+	.item-filters li.filter-option.current button.simple-look {
+	    color: #ff291d;
 	}
 	input[type="reset"].simple-look.color-red,
 	input[type="button"].simple-look.color-red,
@@ -647,25 +656,26 @@ label.deco-input {
 			background-color: #f3f3f3;
 		} */
 
+		#app-header-info-and-links button.simple-look,
 		#app-header-info-and-links a,
 		#app-header-info-and-links a:link,
 		#app-header-info-and-links a:visited {
 			color: #666;
 		}
 
+		#app-header-info-and-links .iconfont {
+			color: #999;
+		}
+
+		#app-header-info-and-links a:hover .iconfont,
+		#app-header-info-and-links .floating-layer-set:hover button.simple-look .iconfont,
+		#app-header-info-and-links .floating-layer-set:hover button.simple-look,
+		#app-header-info-and-links button.simple-look:hover .iconfont,
+		#app-header-info-and-links button.simple-look:hover,
 		#app-header-info-and-links a:hover,
 		#app-header-info-and-links a:link:hover,
 		#app-header-info-and-links a:visited:hover {
 			color: #157dff;
-		}
-
-		#app-header-info-and-links .iconfont {
-			color: #999;
-		}
-		#app-header-info-and-links a:hover .iconfont,
-		#app-header-info-and-links .floating-layer-set:hover button.simple-look .iconfont,
-		#app-header-info-and-links button.simple-look:hover .iconfont {
-			color: inherit;
 		}
 
 
