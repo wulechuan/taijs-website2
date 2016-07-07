@@ -112,7 +112,11 @@
 			;
 		}
 
-		var $allTabs = $(this).find('.tab-list > li');
+		var $tabList = $(this).find('.tab-list');
+
+		var $allTabs = $tabList.find('> li');
+		var currentTab = null;
+		var currentItemHint = $tabList.find('> .current-item-hint')[0];
 
 		$allTabs.each(function (index, tab) {
 			var panelId = tab.getAttribute('aria-controls');
@@ -129,12 +133,51 @@
 			$allTabs.on('click', function () {
 				_showPanelAccordingToTab(this);
 			});
+			$allTabs.on('mouseover', function () {
+				_slideHintToTab(this);
+			});
+			$tabList.on('mouseout', function () {
+				_slideHintToTab(currentTab);
+			});
 		}
 
 		var tabToShowAtBegining = $('#panel-tab-'+urlParameters.tabLabel).parent()[0] || $allTabs[0];
 		_showPanelAccordingToTab(tabToShowAtBegining);
 
+		function _slideHintToTab(theTab) {
+			if (!currentItemHint) return false;
+
+			var currentItemHintCssLeft = -20;
+
+			if (!theTab) {
+				currentItemHint.style.clip = '';
+				return true;
+			}
+
+			var _P = $(theTab).offsetParent();
+			var _L = $(theTab).offset().left;
+			var _LP = $(_P).offset().left;
+
+			_L -= _LP;
+			_L -= currentItemHintCssLeft;
+
+			var _W = $(theTab).outerWidth();
+
+			var _R = _L+_W;
+
+
+			currentItemHint.style.clip = 'rect(0px, '+
+				_R+'px, 2px, '+
+				_L+'px)'
+			;
+
+			return true;
+		}
+
 		function _showPanelAccordingToTab(theTab) {
+			currentTab = theTab;
+			_slideHintToTab(theTab);
+
 			for (var i = 0; i < $allTabs.length; i++) {
 				var tab = $allTabs[i];
 				_processOnePairOfTabPanel(tab, (theTab && tab === theTab));
@@ -160,13 +203,15 @@
 				panel.setAttribute('aria-hidden', false);
 				$(tab).addClass('current');
 				$(panel).addClass('current');
+				panel.style.display = 'block';
 			} else {
 				panel.setAttribute('aria-hidden', true);
 				$(tab).removeClass('current');
 				$(panel).removeClass('current');
+				panel.style.display = 'none';
 			}
 
-			panel.style.display = isToShownMyPanel ? 'block' : 'none';
+			return true;
 		}
 	});
 
@@ -655,7 +700,6 @@
 		var inputForStoringHTML = $(this).find('input.drop-down-list-value-html');
 		var $options = $(this).find('.drop-down-list-options > li'); // assuming there is only one level of menu
 
-		console.log('passed in:', urlParameters.bank, typeof urlParameters.bank, urlParameters.bankHTML);
 		if (urlParameters.bank && urlParameters.bank !== 'undefined') {
 			_chooseOption(urlParameters.bank, urlParameters.bankHTML);
 		} else {
