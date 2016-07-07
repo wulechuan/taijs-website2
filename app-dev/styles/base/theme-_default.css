@@ -51,10 +51,13 @@ html, body {
 .thick-text-rendering {
 	color: black;
 	/* -webkit-text-stroke-width: 0.25px; */ /* cause the animation noticable slow */
-	text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
-	text-shadow: 0 0 1.5px rgba(0, 0, 0, 0.5)\9\0; /* ie10, ie11 */
+	/* text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+	text-shadow: 0 0 1.5px rgba(0, 0, 0, 0.5)\9\0; */ /* ie10, ie11 */
 }
 
+.tip {
+	color: #999;
+}
 
 em {
 	color: #ff291d;
@@ -74,8 +77,8 @@ em {
 	.thick-text-rendering em,
 	em .thick-text-rendering {
 		color: #ff291d;
-		text-shadow: 0 0 1px rgba(255, 41, 29, 0.5);
-		text-shadow: 0 0 1.5px rgba(255, 41, 29, 0.5)\9\0; /* ie10, ie11 */
+		/* text-shadow: 0 0 1px rgba(255, 41, 29, 0.5);
+		text-shadow: 0 0 1.5px rgba(255, 41, 29, 0.5)\9\0; */ /* ie10, ie11 */
 	}
 
 .article h3.color-white,
@@ -96,19 +99,38 @@ blockquote {
 	}
 
 
-a, a:link, a:visited {
+a, a:visited {
 	color: #157dff;
 	}
 
 
 input {
+	border-color: #dcdcdc;
 	background-color: white;
+	}
+
+	select:hover,
+	option:hover,
+	input:hover,
+	label:hover {
+		border-color: #157dff;
+	}
+
+	select:active,
+	select:focus,
+	input:active,
+	input:focus,
+	label:active,
+	label:focus {
+		border-color: #157dff;
+		outline-color: #157dff;
 	}
 
 	input[type="button"],
 	input[type="submit"],
 	input[type="reset"],
-	[role="button"],
+	a[role="button"],/* this line is for ie8 */
+	a[role="button"],
 	button {
 		color: white;
 		border-color: #157dff;
@@ -173,6 +195,70 @@ input {
 	    background-color: rgba(255, 41, 29, 0.08)!important;
 	}
 
+	input[type="reset"].simple-look .iconfont,
+	input[type="reset"].simple-look,
+	input[type="button"].simple-look .iconfont,
+	input[type="button"].simple-look,
+	input[type="submit"].simple-look .iconfont,
+	input[type="submit"].simple-look,
+	button.simple-look .iconfont,
+	button.simple-look {
+		color: inherit;
+		background-color: transparent;
+	}
+
+	input[type="reset"].simple-look *,
+	input[type="reset"].simple-look,
+	input[type="button"].simple-look *,
+	input[type="button"].simple-look,
+	input[type="submit"].simple-look *,
+	input[type="submit"].simple-look,
+	button.simple-look *,
+	button.simple-look {
+		/* color: #157dff; */
+		transition-property: background-color;
+	}
+
+	.item-filters button.simple-look {
+		color: #157dff;
+	}
+
+	.floating-layer-set:hover input[type="reset"].simple-look .iconfont,
+	.floating-layer-set:hover input[type="reset"].simple-look,
+	.floating-layer-set:hover input[type="button"].simple-look .iconfont,
+	.floating-layer-set:hover input[type="button"].simple-look,
+	.floating-layer-set:hover input[type="submit"].simple-look .iconfont,
+	.floating-layer-set:hover input[type="submit"].simple-look,
+	.floating-layer-set:hover button.simple-look .iconfont,
+	.floating-layer-set:hover button.simple-look,
+	input[type="reset"].simple-look:hover .iconfont,
+	input[type="reset"].simple-look:hover,
+	input[type="button"].simple-look:hover .iconfont,
+	input[type="button"].simple-look:hover,
+	input[type="submit"].simple-look:hover .iconfont,
+	input[type="submit"].simple-look:hover,
+	button.simple-look:hover .iconfont,
+	button.simple-look:hover {
+		color: #157dff;
+		/* background-color: #e5f1ff; */
+	}
+
+	.item-filters li.filter-option.current button.simple-look {
+	    color: #ff291d;
+	}
+	input[type="reset"].simple-look.color-red,
+	input[type="button"].simple-look.color-red,
+	input[type="submit"].simple-look.color-red,
+	button.simple-look.color-red {
+	    color: #ff291d;
+	}
+	/* input[type="reset"].simple-look.color-red:hover,
+	input[type="button"].simple-look.color-red:hover,
+	input[type="submit"].simple-look.color-red:hover,
+	button.simple-look.color-red:hover {
+	    background-color: rgba(255, 41, 29, 0.08)!important;
+	} */
+
 	.pagination [role="button"],
 	.pagination button {
 		color: #666;
@@ -207,16 +293,6 @@ input {
 		.pagination button.current:hover {
 			background-color: #3f93ff;
 		}
-
-	select:active,
-	select:focus,
-	input:active,
-	input:focus,
-	label:active,
-	label:focus {
-		border-color: #157dff;
-		outline-color: #157dff;
-	}
 
 	a[role="button"]:active,
 	a[role="button"]:focus,
@@ -385,43 +461,49 @@ label.deco-input {
 .menu-item {
 	}
 
-	.menu.layout-hori > .menu-item > a > .label,
-	.menu.layout-hori > .menu-item > .label {
-		color: #333;
-	}
-
-	.menu.layout-hori > .menu-item> a > .label:hover ,
-	.menu.layout-hori > .menu-item > .label:hover,
-	.menu.layout-hori > .menu-item.sub-menu-shown > a > .label,
-	.menu.layout-hori > .menu-item.sub-menu-shown > .label,
-	.menu.layout-hori > .menu-item.current-cate > a > .label,
-	.menu.layout-hori > .menu-item.current-cate > .label {
-		color: #157dff;
-	}
-
+	.menu.layout-vert > .menu-item > a > .sub-menu-hint,
 	.menu.layout-vert > .menu-item > a > .label,
 	.menu.layout-vert > .menu-item > .label {
 		color: #333;
 	}
 
 	.menu.layout-vert > .menu-item > a > .label:hover,
-	.menu.layout-vert > .menu-item > .label:hover,
-	.menu.layout-vert > .menu-item.sub-menu-shown > a > .label,
-	.menu.layout-vert > .menu-item.sub-menu-shown > .label,
-	.menu.layout-vert > .menu-item.current-cate > a > .label,
-	.menu.layout-vert > .menu-item.current-cate > .label {
+	.menu.layout-vert > .menu-item     > .label:hover,
+	.menu.layout-vert > .menu-item.coupled-shown  > a > .label,
+	.menu.layout-vert > .menu-item.coupled-shown      > .label,
+	.menu.layout-vert > .menu-item.current-parent > a > .label,
+	.menu.layout-vert > .menu-item.current-parent     > .label {
 		color: white;
 		background-color: #157dff;
 	}
 	.menu.layout-vert > .menu-item > a > .label:hover em,
-	.menu.layout-vert > .menu-item > .label:hover em,
-	.menu.layout-vert > .menu-item.sub-menu-shown > a > .label em,
-	.menu.layout-vert > .menu-item.sub-menu-shown > .label em,
-	.menu.layout-vert > .menu-item.current-cate > a > .label em,
-	.menu.layout-vert > .menu-item.current-cate > .label em {
+	.menu.layout-vert > .menu-item     > .label:hover em,
+	.menu.layout-vert > .menu-item.coupled-shown  > a > .label em,
+	.menu.layout-vert > .menu-item.coupled-shown      > .label em,
+	.menu.layout-vert > .menu-item.current-parent > a > .label em,
+	.menu.layout-vert > .menu-item.current-parent     > .label em {
 		color: white;
 	}
 
+	.menu.layout-hori > .menu-item > a > .sub-menu-hint,
+	.menu.layout-hori > .menu-item > a > .label,
+	.menu.layout-hori > .menu-item     > .label {
+		color: #333;
+	}
+
+	.menu.layout-hori > .menu-item:hover > a > .label,
+	.menu.layout-hori > .menu-item:hover     > .label,
+	.menu.layout-hori > .menu-item.coupled-shown  > a > .label,
+	.menu.layout-hori > .menu-item.coupled-shown      > .label,
+	.menu.layout-hori > .menu-item.current-parent > a > .label,
+	.menu.layout-hori > .menu-item.current-parent     > .label {
+		color: #157dff;
+	}
+
+    .menu-item.has-sub-menu > a > .label:before,
+    .menu-item.has-sub-menu     > .label:before {
+        background-color: white;
+    }
 
 .breadcrumbs {
 	}
@@ -442,18 +524,16 @@ label.deco-input {
 .drop-down-list {
 	}
 	.drop-down-list,
-	.drop-down-list .drop-down-list-options-list {
+	.drop-down-list .drop-down-list-options {
 		border-color: #dcdcdc;
 		background-color: white;
 	}
 
-
-.form {
+	.drop-down-list:hover,
+	.drop-down-list.coupled-shown {
+		border-color: #157dff;
 	}
 
-	.form input {
-		border-color: #dcdcdc;
-	}
 
 
 .lists-block {
@@ -517,10 +597,21 @@ label.deco-input {
 		background-color: #157dff;
 	}
 
-	.tabular > .f-list > li.selected {
+	.tabular > .f-list > li.selectable.selected {
 		color: white;
 		background-color: #157dff;
 	}
+
+	.tabular.dialog-summary-sheet > .f-list > li {
+		color: #333;
+		}
+		.tabular.dialog-summary-sheet > .f-list > li h5 {
+			color: #999;
+		}
+		.tabular.dialog-summary-sheet > .f-list > li:hover {
+			background-color: transparent;
+		}
+
 
 
 .dialog {
@@ -548,21 +639,24 @@ label.deco-input {
 	}
 
 	#app-header-info-and-links {
+		color: #666;
 		border-bottom-color: #eee;
 		}
 
 		#app-header-user-account-commands .menu.level-1 > .menu-item > a > .label,
 		#app-header-user-account-commands .menu.level-1 > .menu-item > .label,
 		#app-header-info-and-links {
-			color: #666;
+			color: inherit;
 		}
 
-		#app-header-info-and-links a:hover,
+		/* #app-header-info-and-links a:hover,
 		#app-header-info-and-links .floating-layer-set:hover button.simple-look,
 		#app-header-info-and-links button.simple-look:hover {
+			color: #157dff;
 			background-color: #f3f3f3;
-		}
+		} */
 
+		#app-header-info-and-links button.simple-look,
 		#app-header-info-and-links a,
 		#app-header-info-and-links a:link,
 		#app-header-info-and-links a:visited {
@@ -573,9 +667,17 @@ label.deco-input {
 			color: #999;
 		}
 
-		#app-header-contacts .tel em {
-			color: #666;
+		#app-header-info-and-links a:hover .iconfont,
+		#app-header-info-and-links .floating-layer-set:hover button.simple-look .iconfont,
+		#app-header-info-and-links .floating-layer-set:hover button.simple-look,
+		#app-header-info-and-links button.simple-look:hover .iconfont,
+		#app-header-info-and-links button.simple-look:hover,
+		#app-header-info-and-links a:hover,
+		#app-header-info-and-links a:link:hover,
+		#app-header-info-and-links a:visited:hover {
+			color: #157dff;
 		}
+
 
 	#app-header-chief-bar {
 		border-bottom-color: #eee;
@@ -624,10 +726,10 @@ label.deco-input {
 		color: #666;
 	}
 
-	#app-chief-nav .menu.level-2 > .menu-item.current-cate > a > .label,
-	#app-chief-nav .menu.level-2 > .menu-item.current-cate > .label,
-	#app-chief-nav .menu.level-2 > .menu-item.sub-menu-shown > a > .label,
-	#app-chief-nav .menu.level-2 > .menu-item.sub-menu-shown > .label,
+	#app-chief-nav .menu.level-2 > .menu-item.coupled-shown  > a > .label,
+	#app-chief-nav .menu.level-2 > .menu-item.coupled-shown      > .label,
+	#app-chief-nav .menu.level-2 > .menu-item.current-parent > a > .label,
+	#app-chief-nav .menu.level-2 > .menu-item.current-parent     > .label,
 	#app-chief-nav .menu.level-2 > .menu-item:hover > a > .label,
 	#app-chief-nav .menu.level-2 > .menu-item:hover > .label {
 		color: white;

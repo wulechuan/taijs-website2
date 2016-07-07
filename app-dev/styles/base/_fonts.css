@@ -1,9 +1,33 @@
+input.empty-field:focus,
+input.empty-field:active,
 html, body, button, textarea, input, select, option, .font-default {
 	font-family: 'Microsoft Yahei', 'Lucida Grande', 'SimHei', 'SimSun';
 }
 
+
+::-webkit-input-placeholder { /* WebKit browsers */
+	font-family: 'SimSun', serif;
+	font-size: 12px;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	font-family: 'SimSun', serif;
+	font-size: 12px;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	font-family: 'SimSun', serif;
+	font-size: 12px;
+}
+
+input.empty-field {
+	/* this is for placeholder texts in IE/Edge, which inherit styls from the input real values texts. */
+	font-family: 'SimSun', serif;
+	font-size: 12px!important;
+}
+
+.ie8-input-fake-placeholder,
 .card .card-head,
 .bill-time-exceeded,
+.tabular-lists .toolbar,
 .tabular > .header,
 .tabular > .f-list > li,
 .pagination [role="button"],
@@ -21,7 +45,7 @@ blockquote,
 
 
 .font-important {
-	font-family: 'Tahoma';
+	font-family: 'Arial', sans-serif;
 	font-size: 38px;
 	line-height: 1.5; /* 57px */
 	font-weight: bolder;

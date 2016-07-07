@@ -24,10 +24,10 @@
 <div role="breadcrumbs">
     <nav class="breadcrumbs">
         <ul>
-            <li><a href="../index.html">首页</a></li>
+            <li><a href="http://wwwuat.taijs.com/">首页</a></li>
             <li><a href="#">用户中心</a></li>
-            <li><a href="#">泰有信</a></li>
-            <li><a href="#">账单</a></li>
+            <li><a href="../index.html">泰有信</a></li>
+            <li><a href="../html/xfzq-bills-recent.html">账单</a></li>
             <li><span>已出账单</span></li>
         </ul>
     </nav>
@@ -52,6 +52,7 @@
                         aria-labelledby="panel-tab-awaiting-bills"
                 ><span class="label" id="panel-tab-awaiting-bills">未出账单</span
             ></li
+            ><div class="current-item-hint"></div
         ></ul>
         <div class="panel-group">
             <div role="tabpanel" class="panel" aria-hidden="false" id="panel-issued-bills">
@@ -91,27 +92,29 @@
                             </div>
 
                             <div class="buttons-in-single-line"
-                                ><button class="rounded-corners size-std-regular">
-                                    <div class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
-                                    <div class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
+                                ><a role="button" class="rounded-corners size-std-regular"
+                                    href="../html/xfzq-quick-repayment-step-1-choose-bank-card.html">
+                                    <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                    <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
                                     <span class="label">快速还款</span>
-                                </button
+                                </a
 
-                                ><button class="rounded-corners size-std-regular bg-transparent color-red">
-                                    <div class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
-                                    <div class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
+                                ><a role="button" class="rounded-corners size-std-regular bg-transparent color-red"
+                                    href="../html/xfzq-create-installments-step-1-option.html">
+                                    <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                    <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
                                     <span class="label">分期</span>
-                                </button
+                                </a
                             ></div>
                         </div>
 
-                        <div class="lists-block tabular-lists bill-records">
+                        <div class="lists-block tabular-lists">
                             <div class="block-header"><h2>已出账单明细</h2></div>
 
                             <div class="empty-content-hint"></div>
 
                             <div class="lists">
-                                <div class="tabular" id="issued-bill-records-abstract">
+                                <div class="tabular bill-records" id="issued-bill-records-abstract">
                                     <ul class="f-list">
                                         <li
                                             ><span class="cell caption-cell value action">已还款</span
@@ -126,7 +129,7 @@
                                     </ul>
                                 </div>
 
-                                <div class="tabular" id="issued-bill-records-others">
+                                <div class="tabular bill-records" id="issued-bill-records-others">
                                     <div class="header"><h3>其他</h3></div>
                                     <ul class="f-list">
                                         <li
@@ -147,7 +150,7 @@
                                     </ul>
                                 </div>
 
-                                <div class="tabular" id="issued-bill-records-consumption">
+                                <div class="tabular bill-records" id="issued-bill-records-consumption">
                                     <div class="header"><h3>账单明细（1.27-2.26的消费明细）</h3></div>
                                     <ul class="f-list">
                                         <li
@@ -206,32 +209,32 @@
                                 <div class="pagination"
                                     ><a role="button" href="http://fake-url.com/sub-page?page=1" 
                                         >
-                                        <div class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
-                                        <div class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
+                                        <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
                                         <span class="label">上一页</span>
                                     </a
                                     ><a role="button" href="http://fake-url.com/sub-page?page=1" 
                                          class="page-number">
-                                        <div class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
-                                        <div class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
+                                        <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
                                         <span class="label">1</span>
                                     </a
                                     ><a role="button"
                                         class="page-number current">
-                                        <div class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
-                                        <div class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
+                                        <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
                                         <span class="label">2</span>
                                     </a
                                     ><a role="button" href="http://fake-url.com/sub-page?page=3" 
                                         class="page-number">
-                                        <div class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
-                                        <div class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
+                                        <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
                                         <span class="label">3</span>
                                     </a
                                     ><a role="button" href="http://fake-url.com/sub-page?page=4" 
                                         >
-                                        <div class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
-                                        <div class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
+                                        <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
                                         <span class="label">下一页</span>
                                     </a
                                 ></div>
@@ -268,15 +271,16 @@
                             </div>
 
                             <div class="buttons-in-single-line"
-                                ><button class="rounded-corners size-std-regular">
-                                    <div class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
-                                    <div class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
+                                ><a role="button" class="rounded-corners size-std-regular"
+                                    href="../html/xfzq-quick-repayment-step-1-choose-bank-card.html">
+                                    <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                    <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
                                     <span class="label">快速还款</span>
-                                </button
+                                </a
                             ></div>
                         </div>
 
-                        <div class="lists-block tabular-lists bill-records">
+                        <div class="lists-block tabular-lists">
                             <div class="block-header">
                                 <h2>未出账单明细</h2>
                             </div>
@@ -284,7 +288,7 @@
                             <div class="empty-content-hint"></div>
 
                             <div class="lists">
-                                <div class="tabular" id="awaiting-bill-records-abstract">
+                                <div class="tabular bill-records" id="awaiting-bill-records-abstract">
                                     <ul class="f-list">
                                         <li
                                             ><span class="cell caption-cell value action">已还款</span
@@ -299,7 +303,7 @@
                                     </ul>
                                 </div>
 
-                                <div class="tabular" id="awaiting-bill-records-consumption">
+                                <div class="tabular bill-records" id="awaiting-bill-records-consumption">
                                     <div class="header"><h3>账单明细（1.27-2.26的消费明细）</h3></div>
                                     <ul class="f-list">
                                         <li
@@ -333,32 +337,32 @@
                                 <div class="pagination"
                                     ><a role="button" href="http://fake-url.com/sub-page?page=1" 
                                         >
-                                        <div class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
-                                        <div class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
+                                        <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
                                         <span class="label">上一页</span>
                                     </a
                                     ><a role="button" href="http://fake-url.com/sub-page?page=1" 
                                          class="page-number">
-                                        <div class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
-                                        <div class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
+                                        <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
                                         <span class="label">1</span>
                                     </a
                                     ><a role="button"
                                         class="page-number current">
-                                        <div class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
-                                        <div class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
+                                        <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
                                         <span class="label">2</span>
                                     </a
                                     ><a role="button" href="http://fake-url.com/sub-page?page=3" 
                                         class="page-number">
-                                        <div class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
-                                        <div class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
+                                        <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
                                         <span class="label">3</span>
                                     </a
                                     ><a role="button" href="http://fake-url.com/sub-page?page=4" 
                                         >
-                                        <div class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
-                                        <div class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
+                                        <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
+                                        <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
                                         <span class="label">下一页</span>
                                     </a
                                 ></div>
@@ -381,44 +385,6 @@
 <!-- inject:appFooter:html --><!-- endinject -->
 
 <!-- inject:popupLayersWrapBegin:html --><!-- endinject -->
-<div class="popup-layer" id="pl-close-installments-succeed">
-    <div class="popup-window has-dialog">
-        <div class="ie-shadow"><div class="ie-shadow-matte"></div></div>
-        <!-- <button class="button-x"></button> -->
-        <div class="dialog">
-            <div class="deco rounded-corners r4px">
-                <div class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
-            </div>
-            <div class="dialog-body has-icon-column">
-                <div class="icon-column">
-                    <i class="icon icons-in-elements color-positive"><i class="iconface-1 iconfont icon-check-mark-circled"></i></i>
-                </div>
-                <div class="content">
-                    <div class="article">
-                        <article>
-                            <div class="title">
-                                <h1>恭喜您，还款申请成功！</h1>
-                                <h4 class="subtitle">还款金额：<span class="value payment-amount">0.00</span
-                                    ><span class="currency-unit">元</span
-                                ></h4>
-                            </div>
-                            <hr>
-                            <p>系统将从您指定的银行卡扣除还款金额，<br>
-                                由于不同银行卡的扣款限额不同，您的还款可能分笔扣除。</p>
-                            <div class="buttons-in-single-line">
-                                <button class="rounded-corners size-std-regular" button-action="confirm">
-                                    <div class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
-                                    <div class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></div>
-                                    <span class="label">确定</span>
-                                </button>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- inject:popupLayersWrapEnd:html --><!-- endinject -->
 
 <!-- inject:bodyEnd:html --><!-- endinject -->

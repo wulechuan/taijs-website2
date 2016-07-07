@@ -3,6 +3,11 @@
 	position: absolute;
 	}
 	.ie8-input-fake-placeholder ~ input {
+		background-color: white;
+		-ms-filter: none;
+		filter: none;
+	}
+	.ie8-input-fake-placeholder ~ input.ms-ie-ms-edge-empty-field {
 		background-color: transparent;
 		/* filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#AAFFFFFF, endColorstr=#AAFFFFFF); */
 	}
@@ -147,15 +152,20 @@ label.deco-input {
 		display: block;
 	}
 
-	input[type="radio"],
 	input[type="checkbox"] {
 		padding: 0!important;
 		margin: -2px 0 0 -2px!important;
 		width: 18px;
 		height: 18px;
 
-		position: absolute; /* for clipping */
+		position: absolute; /* for both positioning and clipping */
 		clip: rect(2px, 17px, 17px, 2px);
+	}
+	input[type="radio"] {
+		padding: 0!important;
+		margin: 1px 0 0 -2px!important;
+		font-size: 14px; /* for browswer native icon size */
+		position: absolute;
 	}
 	input[type="radio"]    + label.deco-input[for],
 	input[type="checkbox"] + label.deco-input[for] {
@@ -1016,6 +1026,104 @@ button.button-x {
 	}
 
 
+.menu {
+	}
+	.menu-item.has-sub-menu > a > .sub-menu-hint,
+	.menu-item.has-sub-menu     > .sub-menu-hint,
+	.menu-item.has-sub-menu > a > .label:after,
+	.menu-item.has-sub-menu     > .label:after {
+		text-indent: -1px;
+		line-height: 18px;
+	}
+
+	.menu-item.has-sub-menu:hover > a > .sub-menu-hint:after,
+	.menu-item.has-sub-menu:hover     > .sub-menu-hint:after,
+	.menu-item.has-sub-menu:hover > a > .label:after,
+	.menu-item.has-sub-menu:hover     > .label:after {
+		content: '\e607';
+		}
+		.menu-item.has-sub-menu:hover > a > .sub-menu-hint,
+		.menu-item.has-sub-menu:hover     > .sub-menu-hint,
+		.menu-item.has-sub-menu:hover > a > .label:after,
+		.menu-item.has-sub-menu:hover     > .label:after {
+			text-indent: -1px;
+			line-height: 18px;
+		}
+
+	.menu-item.has-sub-menu.coupled-shown > a > .sub-menu-hint:after,
+	.menu-item.has-sub-menu.coupled-shown     > .sub-menu-hint:after,
+	.menu-item.has-sub-menu.coupled-shown > a > .label:after,
+	.menu-item.has-sub-menu.coupled-shown     > .label:after {
+		content: '\e605';
+		}
+		.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown > a > .sub-menu-hint,
+		.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown     > .sub-menu-hint,
+		.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown > a > .label:after,
+		.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown     > .label:after {
+			text-indent: -2px;
+			line-height: 16px;
+		}
+
+	.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown > a > .sub-menu-hint:after,
+	.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown     > .sub-menu-hint:after,
+	.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown > a > .label:after,
+	.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown     > .label:after,
+	.menu.layout-hori > .menu-item.has-sub-menu.hover-to-show-coupled:hover > a > .sub-menu-hint:after,
+	.menu.layout-hori > .menu-item.has-sub-menu.hover-to-show-coupled:hover     > .sub-menu-hint:after,
+	.menu.layout-hori > .menu-item.has-sub-menu.hover-to-show-coupled:hover > a > .label:after,
+	.menu.layout-hori > .menu-item.has-sub-menu.hover-to-show-coupled:hover     > .label:after {
+		content: '\e605';
+		}
+		.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown > a > .sub-menu-hint,
+		.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown     > .sub-menu-hint,
+		.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown > a > .label:after,
+		.menu.layout-hori > .menu-item.has-sub-menu.coupled-shown     > .label:after,
+		.menu.layout-hori > .menu-item.has-sub-menu.hover-to-show-coupled:hover > a > .sub-menu-hint,
+		.menu.layout-hori > .menu-item.has-sub-menu.hover-to-show-coupled:hover     > .sub-menu-hint,
+		.menu.layout-hori > .menu-item.has-sub-menu.hover-to-show-coupled:hover > a > .label:after,
+		.menu.layout-hori > .menu-item.has-sub-menu.hover-to-show-coupled:hover     > .label:after {
+			text-indent: -2px;
+			line-height: 20px;
+		}
+
+	.menu-item.has-sub-menu > a > .sub-menu-hint:after,
+	.menu-item.has-sub-menu     > .sub-menu-hint:after {
+		position: relative;
+		z-index: 2;
+	}
+	.menu-item.has-sub-menu > a > .label:before,
+	.menu-item.has-sub-menu     > .label:before {
+		font-family: 'iconfont'!important;
+		content: none;
+		display: block;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		left: auto;
+		right: 0.5em;
+		top: 0;
+		bottom: 0;
+		margin: auto 0;
+
+		direction: rtl;
+		text-align: center;
+		text-indent: 0;
+
+		overflow: hidden;
+		font-size: 18px;
+		line-height: 18px;
+
+		background-color: transparent;
+
+		z-index: 1;
+	}
+	.menu-item.has-sub-menu > a:hover > .sub-menu-hint ~ .label:before,
+	.menu-item.has-sub-menu           > .sub-menu-hint ~ .label:hover:before {
+		/* content: '\e62f'; */
+		content: '\e68c';
+	}
+
+
 .popup-layers-back-plate {
 	background-color: black;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=80)";
@@ -1051,9 +1159,14 @@ button.button-x {
 }
 
 
+#app-header-info-and-links .sns .weixin .floating-layer-set .locator .ie-hover-patch {
+	width: 60px;
+	margin-left: -30px;
+}
+
+
 #app-chief-nav .menu.level-2 > .ie-shadow .ie-shadow-matte,
 #app-chief-nav .menu.level-1 > .menu-item > .deco .ie-shadow-matte,
-
 #my-assets .menu.level-2 > .ie-shadow .ie-shadow-matte,
 #my-assets .menu.level-1 > .menu-item > .deco .ie-shadow-matte {
 	-ms-filter: "\
@@ -1069,4 +1182,31 @@ button.button-x {
 	top: -7px;
 	right: 5px;
 	bottom: 5px;
-}
+	}
+
+	#page-sidebar-nav {
+		}
+		#page-sidebar-nav .menu-item.has-sub-menu > a > .sub-menu-hint,
+		#page-sidebar-nav .menu-item.has-sub-menu     > .sub-menu-hint,
+		#page-sidebar-nav .menu-item.has-sub-menu > a > .label:after,
+		#page-sidebar-nav .menu-item.has-sub-menu     > .label:after {
+			line-height: 23px;
+		}
+
+	#my-assets {
+		}
+		#my-assets .menu.level-1 > .menu-item.has-sub-menu > a > .label:after,
+		#my-assets .menu.level-1 > .menu-item.has-sub-menu     > .label:after,
+		#my-assets .menu.level-1 > .menu-item.has-sub-menu.hover-to-show-coupled:hover > a > .label:after,
+		#my-assets .menu.level-1 > .menu-item.has-sub-menu.hover-to-show-coupled:hover     > .label:after {
+			text-indent: -1px;
+			line-height: 20px;
+		}
+		#my-assets .menu.level-1 > .menu-item.has-sub-menu.coupled-shown > a > .label:after,
+		#my-assets .menu.level-1 > .menu-item.has-sub-menu.coupled-shown     > .label:after,
+		#my-assets .menu.level-1 > .menu-item.has-sub-menu.hover-to-show-coupled:hover > a > .label:after,
+		#my-assets .menu.level-1 > .menu-item.has-sub-menu.hover-to-show-coupled:hover     > .label:after {
+			content: '\e609';
+			text-indent: 1px;
+			line-height: 17px;
+		}

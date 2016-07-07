@@ -1,8 +1,107 @@
 (function () {
 	window.console = window.console || { log: function () {} };
-	var isIE8 = !!navigator.userAgent.match(/msie 8/i);
-	var isIE9 = !!navigator.userAgent.match(/msie 9/i);
+	var ua = navigator.userAgent;
+	var isIE = !!ua.match(/(\bmsie|\btrident\b)/i);
+	var isMSEdge = !!ua.match(/\bedge\b/i);
+	var isIE8 = !!ua.match(/\bmsie\s+8/i);
+	var isIE9 = !!ua.match(/\bmsie\s+9/i);
 
+	var isWebkit = !!ua.match(/\bapplewebkit\b/i) && !isMSEdge;
+
+	if (isWebkit) {
+		$('body').addClass('webkit');
+	}
+
+	function processParametersPassedIn() {
+		var qString = location.href.match(/\?.*/);
+		if (qString) qString = qString[0].slice(1);
+
+		var qKVPairs = [];
+		if (qString) {
+			qKVPairs = qString.split('&');
+		}
+
+		var psn1; // page sidebar nav Level 1 current
+		var psn2; // page sidebar nav Level 2 current
+		var tabLabel; // id of tabLabel to show if any
+		var bank;
+		var bankHTML;
+
+		if (typeof window.psn === 'object') {
+			if (window.psn.level1) psn1 = window.psn.level1;
+			if (window.psn.level2) psn2 = window.psn.level2;
+		}
+
+		for (var i in qKVPairs){
+			var kvpString = qKVPairs[i];
+			var kvp = kvpString.split('=');
+
+			if (kvp[0] === 'psn1') psn1 = kvp[1];
+			if (kvp[0] === 'psn2') psn2 = kvp[1];
+			if (kvp[0] === 'tabLabel') tabLabel = kvp[1];
+			if (kvp[0] === 'bank') bank = kvp[1];
+			if (kvp[0] === 'bankHTML') bankHTML = kvp[1];
+		}
+
+		return {
+			bank: decodeURIComponent(bank),
+			bankHTML: decodeURIComponent(bankHTML).replace(/\+/g, ' '),
+			tabLabel: tabLabel,
+			psn: {
+				level1: psn1,
+				level2: psn2
+			}
+		};
+	}
+
+
+	var urlParameters = processParametersPassedIn();
+
+
+
+	$('input[placeholder]').each(function () {
+		function _updateInputStyleForGroomingPlaceholder(field) {
+			if (!field) {
+				return false;
+			}
+
+			var tagNameLC = field.tagName.toLowerCase();
+			if (tagNameLC !== 'input' && tagNameLC !== 'textarea') {
+				return false;
+			}
+
+			var classNameToDealWith = 'empty-field';
+			if (field.value) {
+				$(field).removeClass(classNameToDealWith);
+			} else {
+				$(field).addClass(classNameToDealWith);
+			}
+		}
+
+		_updateInputStyleForGroomingPlaceholder(this);
+
+		if (isIE8) {
+			$(this).on('focus', function () {
+				_updateInputStyleForGroomingPlaceholder(this);
+			});
+
+			$(this).on('blur', function () {
+				_updateInputStyleForGroomingPlaceholder(this);
+			});
+
+			$(this).on('change', function () {
+				_updateInputStyleForGroomingPlaceholder(this);
+			});
+
+			$(this).on('keypress', function () {
+				_updateInputStyleForGroomingPlaceholder(this);
+			});
+		} else {
+			$(this).on('input', function () {
+				_updateInputStyleForGroomingPlaceholder(this);
+			});
+		}
+	});
 
 
 	$('.tab-panel-set').each(function () {
@@ -13,7 +112,11 @@
 			;
 		}
 
-		var $allTabs = $(this).find('.tab-list > li');
+		var $tabList = $(this).find('.tab-list');
+
+		var $allTabs = $tabList.find('> li');
+		var currentTab = null;
+		var currentItemHint = $tabList.find('> .current-item-hint')[0];
 
 		$allTabs.each(function (index, tab) {
 			var panelId = tab.getAttribute('aria-controls');
@@ -26,13 +129,55 @@
 
 		});
 
-		$allTabs.on('click', function () {
-			_showPanelAccordingToTab(this);
-		});
+		if ($allTabs.length > 1) {
+			$allTabs.on('click', function () {
+				_showPanelAccordingToTab(this);
+			});
+			$allTabs.on('mouseover', function () {
+				_slideHintToTab(this);
+			});
+			$tabList.on('mouseout', function () {
+				_slideHintToTab(currentTab);
+			});
+		}
 
-		_showPanelAccordingToTab($allTabs[0]);
+		var tabToShowAtBegining = $('#panel-tab-'+urlParameters.tabLabel).parent()[0] || $allTabs[0];
+		_showPanelAccordingToTab(tabToShowAtBegining);
+
+		function _slideHintToTab(theTab) {
+			if (!currentItemHint) return false;
+
+			var currentItemHintCssLeft = -20;
+
+			if (!theTab) {
+				currentItemHint.style.clip = '';
+				return true;
+			}
+
+			var _P = $(theTab).offsetParent();
+			var _L = $(theTab).offset().left;
+			var _LP = $(_P).offset().left;
+
+			_L -= _LP;
+			_L -= currentItemHintCssLeft;
+
+			var _W = $(theTab).outerWidth();
+
+			var _R = _L+_W;
+
+
+			currentItemHint.style.clip = 'rect(0px, '+
+				_R+'px, 2px, '+
+				_L+'px)'
+			;
+
+			return true;
+		}
 
 		function _showPanelAccordingToTab(theTab) {
+			currentTab = theTab;
+			_slideHintToTab(theTab);
+
 			for (var i = 0; i < $allTabs.length; i++) {
 				var tab = $allTabs[i];
 				_processOnePairOfTabPanel(tab, (theTab && tab === theTab));
@@ -58,13 +203,15 @@
 				panel.setAttribute('aria-hidden', false);
 				$(tab).addClass('current');
 				$(panel).addClass('current');
+				panel.style.display = 'block';
 			} else {
 				panel.setAttribute('aria-hidden', true);
 				$(tab).removeClass('current');
 				$(panel).removeClass('current');
+				panel.style.display = 'none';
 			}
 
-			panel.style.display = isToShownMyPanel ? 'block' : 'none';
+			return true;
 		}
 	});
 
@@ -250,56 +397,45 @@
 		}
 	});
 
-	setPageSidebarNavCurrentItem(processParametersPassedIn().psn);
 
-    function processParametersPassedIn() {
-        var qString = location.href.match(/\?.*/);
-        if (qString) qString = qString[0].slice(1);
+	setPageSidebarNavCurrentItem(urlParameters.psn);
 
-        var qKVPairs = [];
-        if (qString) {
-            qKVPairs = qString.split('&');
-        }
+	function updatePageSidebarNavSubMenuForMenuItem(menuItem, action) {
+		var $subMenu = $(menuItem).find('> .menu');
+		var subMenuWasExpanded = $(menuItem).hasClass('coupled-shown');
+		var needAction =
+			(!subMenuWasExpanded && action==='expand')
+			|| (subMenuWasExpanded && action==='collapse')
+			|| (action==='toggle')
+		;
+		if (!needAction) {
+			return 0;
+		}
 
-        var psn1; // page sidebar nav Level 1 current
-        var psn2; // page sidebar nav Level 2 current
+		if (subMenuWasExpanded) {
+			$(menuItem).removeClass('coupled-shown');
+			$subMenu.slideUp();
+		} else {
+			$(menuItem).addClass('coupled-shown');
+			$subMenu.slideDown();
+		}
+	}
 
-        if (typeof window.psn === 'object') {
-        	if (window.psn.level1) psn1 = window.psn.level1;
-        	if (window.psn.level2) psn2 = window.psn.level2;
-        }
-
-        for (var i in qKVPairs){
-            var kvpString = qKVPairs[i];
-            var kvp = kvpString.split('=');
-
-            if (kvp[0] === 'psn1') psn1 = kvp[1];
-            if (kvp[0] === 'psn2') psn2 = kvp[1];
-        }
-
-        return {
-            psn: {
-            	level1: psn1,
-            	level2: psn2
-            }
-        };
-    }
-
-    function setPageSidebarNavCurrentItem(conf) {
-    	conf = conf || {};
+	function setPageSidebarNavCurrentItem(conf) {
+		conf = conf || {};
 		conf.level1IdPrefix = 'menu-psn-1-';
 		setMenuCurrentItemForLevel(1, 2, $('#page-sidebar-nav'), conf);
-    }
+	}
 
-    function setMenuCurrentItemForLevel(level, depth, parentDom, conf) {
-    	level = parseInt(level);
-    	depth = parseInt(depth);
-    	if (!(level > 0) || !(depth >= level)) {
-    		throw('Invalid menu level/depth for configuring a menu tree.');
-    	}
-    	if (typeof conf !== 'object') {
-    		throw('Invalid configuration object for configuring a menu tree.');
-    	}
+	function setMenuCurrentItemForLevel(level, depth, parentDom, conf) {
+		level = parseInt(level);
+		depth = parseInt(depth);
+		if (!(level > 0) || !(depth >= level)) {
+			throw('Invalid menu level/depth for configuring a menu tree.');
+		}
+		if (typeof conf !== 'object') {
+			throw('Invalid configuration object for configuring a menu tree.');
+		}
 
 		var prefix = conf['level'+level+'IdPrefix'];
 		var desiredId = prefix + conf['level'+level];
@@ -307,150 +443,329 @@
 		var $allItems = $(parentDom).find('.menu.level-'+level+' > .menu-item');
 		var currentItem;
 		var currentItemId;
+
 		$allItems.each(function (index, menuItem) {
 			var itemLabel = $(menuItem).find('> a > .label')[0];
 			var itemId = itemLabel.id;
 
-			if (itemId && desiredId && (itemId===desiredId)) {
+			var isCurrentItemOrParentOfCurrentItem = itemId && desiredId && (itemId===desiredId);
+			var isCurrentItem = isCurrentItemOrParentOfCurrentItem && level === depth;
+			if (isCurrentItemOrParentOfCurrentItem) {
 				currentItem = menuItem;
 				currentItemId = itemId;
-				$(menuItem).addClass('current');
+				if (isCurrentItem) {
+					$(menuItem).addClass('current');
+					$(menuItem).removeClass('current-parent');
+				} else {
+					$(menuItem).addClass('current-parent');
+					$(menuItem).removeClass('current');
+				}
 			} else {
 				$(menuItem).removeClass('current');
+				$(menuItem).removeClass('current-parent');
 			}
 		});
 
+		var currentSubMenuItem = null;
 		if (level < depth && currentItem) {
 			var nextLevel = level + 1;
 			conf['level'+nextLevel+'IdPrefix'] = currentItemId + '-' + nextLevel + '-';
-			setMenuCurrentItemForLevel(nextLevel, depth, currentItem, conf);
-		}
-
-		return;
-    }
-
-
-	var $allListItems = $('.tabular .f-list > li');
-
-	$allListItems.each(function () {
-		var listItem = this;
-		var $listItem = $(this);
-
-		function _updateListItemAccordingToCheckboxStatus(checkbox) {
-			if (!checkbox) return false;
-
-			if (checkbox.checked) {
-				$listItem.addClass('selected');
-			} else {
-				$listItem.removeClass('selected');
+			currentSubMenuItem = setMenuCurrentItemForLevel(nextLevel, depth, currentItem, conf);
+			if (currentSubMenuItem) {
+				$(currentItem).addClass('has-sub-menu'); // update this for robustness
+				$(currentItem).addClass('coupled-shown');
 			}
 		}
 
-		var $checkbox = $listItem.find('input[type="checkbox"]');
-		setTimeout(function () { /* must dealy because ie8 to ie11 updates cached "checked" statuses very late */
-			_updateListItemAccordingToCheckboxStatus($checkbox[0]);
-		}, 100);
+		return currentSubMenuItem || currentItem;
+	}
 
-		$checkbox.on('change', function(event) {
-			if (event) event.stopPropagation();
+	$('.menu-item.has-sub-menu').each(function () {
+		var menuItem = this;
+		var $subMenuHint = $(this).find('> a > .sub-menu-hint, > .sub-menu-hint');
+		var subMenuHint = $subMenuHint[0];
 
-			_updateListItemAccordingToCheckboxStatus(this);
+		$subMenuHint.on('click', function (event) {
+			if (event) {
+				event.preventDefault();
+				event.stopPropagation();
+			}
 
-			if (isIE8 || isIE9) {
-				function _zoomToFactor(factor) {
-					if (factor===1) {
-						if (isIE8) {
-							listItem.style.zoom = '';
-							listItem.style.margin = '';
-							return true;
-						}
-						if (isIE9) {
-							listItem.style.msTransform = '';
-							return true;
-						}
+			updatePageSidebarNavSubMenuForMenuItem(menuItem, 'toggle');
+		});
+	});
+
+
+	var $allTabularLists = $('.tabular .f-list');
+
+	$allTabularLists.each(function () {
+		var tabluar = this;
+		var $allListItems  = $(this).find(' > li.selectable');
+		var $allCheckboxes = $allListItems.find('input[type="checkbox"].selectable-list-item-selector');
+		var $allRadios     = $allListItems.find('input[type="radio"].selectable-list-item-selector');
+		// console.log('has checkboxes: ', $allCheckboxes.length > 0, '\nhas radios: ', $allRadios.length > 0);
+
+		if ($allCheckboxes.length > 0) {
+			function _updateListItemAccordingToCheckboxStatus(listItem, isChecked) {
+				if (isChecked === true) {
+					$(listItem).addClass('selected');
+				} else {
+					$(listItem).removeClass('selected');
+				}
+			}
+
+			$allListItems.each(function () {
+				var listItem = this;
+				var $listItem = $(this);
+
+
+				var $myCheckbox = $listItem.find('input[type="checkbox"].selectable-list-item-selector');
+				var myCheckbox = $myCheckbox[0];
+
+				var isInitiallyChecked = myCheckbox && myCheckbox.checked;
+				var _myCheckboxUntouchedYet = true;
+				setTimeout(function () { /* Initializing selection status; And this must dealy because ie8 to ie11 updates cached "checked" statuses very late */
+					if (_myCheckboxUntouchedYet) {
+						_updateListItemAccordingToCheckboxStatus(listItem, isInitiallyChecked);
 					}
+				}, 100);
 
+				if (myCheckbox) {
+					$myCheckbox.on('click', function(event) {
+						_myCheckboxUntouchedYet = false;
+						if (event) event.stopPropagation();
+					});
+
+					$listItem.on('click', function () {
+						myCheckbox.checked = !myCheckbox.checked;
+						_myCheckboxUntouchedYet = false;
+						_updateListItemAccordingToCheckboxStatus(this, myCheckbox.checked);
+						_playAnimationForIE8AndIE9OnStatusChange(this);
+					});
+
+					$myCheckbox.on('change', function() {
+						_updateListItemAccordingToCheckboxStatus(listItem, this.checked);
+						_playAnimationForIE8AndIE9OnStatusChange(listItem);
+					});
+				}
+			});
+		}
+
+		if ($allRadios.length > 0) {
+			function _updateAllListItemsAccordingToRadioValue(checkedRadioValue) {
+				if (!_radioUntouchedYet && checkedRadioValue === tabluar.radioLatestValue) return true;
+
+				for (var i = 0; i < $allListItems.length; i++) {
+					var _li = $allListItems[i];
+					var _radio = _li.elements && _li.elements.radio;
+					if (_radio.value === checkedRadioValue) {
+						$(_li).addClass('selected');
+						_playAnimationForIE8AndIE9OnStatusChange(_li);
+					} else if (_radio.value === tabluar.radioLatestValue) {
+						$(_li).removeClass('selected');
+						// _playAnimationForIE8AndIE9OnStatusChange(_li);
+					}
+				}
+
+				tabluar.radioLatestValue = checkedRadioValue;
+			}
+
+			tabluar.radioLatestValue = null;
+			for (var i = 0; i < $allRadios.length; i++) {
+				var _radio = $allRadios[i];
+				if (_radio.checked) {
+					tabluar.radioLatestValue = _radio.value;
+					break;
+				}
+			}
+
+			var _radioUntouchedYet = true;
+			setTimeout(function () { /* Initializing selection status; And this must dealy because ie8 to ie11 updates cached "checked" statuses very late */
+				if (_radioUntouchedYet) {
+					// console.log('init radioLatestValue: ', tabluar.radioLatestValue);
+					_updateAllListItemsAccordingToRadioValue(tabluar.radioLatestValue);
+				}
+			}, 100);
+
+			$allListItems.each(function () {
+				var listItem = this;
+				var $listItem = $(this);
+
+				var $myRadio = $listItem.find('input[type="radio"].selectable-list-item-selector');
+				var myRadio = $myRadio[0];
+				if (myRadio) {
+					if (typeof listItem.elements !== 'object') listItem.elements = {};
+					listItem.elements.radio = myRadio;
+
+					$myRadio.on('click', function(event) {
+					});
+
+					$listItem.on('click', function () {
+						_radioUntouchedYet = false;
+						myRadio.checked = true;
+						_updateAllListItemsAccordingToRadioValue(myRadio.value);
+					});
+				}
+			});
+		}
+
+		function _playAnimationForIE8AndIE9OnStatusChange(listItem) {
+			if (!isIE8 && !isIE9) {
+				return true;
+			}
+
+			function _zoomToFactor(factor) {
+				if (factor===1) {
 					if (isIE8) {
-						var tempMarginHori = oldWidth  * (1 - factor) / 2;
-						var tempMarginVert = oldHeight * (1 - factor) / 2 + originalVertMargin;
-
-						if (factor) {
-							listItem.style.zoom = factor;
-						} else {
-							console.error('Invalid zooming factor: ', factor);
-							return false;
-						}
-						listItem.style.margin = tempMarginVert+'px' + ' ' + tempMarginHori+'px';
+						listItem.style.zoom = '';
+						listItem.style.margin = '';
+						return true;
 					}
-
 					if (isIE9) {
-						listItem.style.msTransform = 'scale('+factor+')';
+						listItem.style.msTransform = '';
+						return true;
 					}
 				}
-				function _doZoomDelay(targetStage) {
-					var zoomFactor = 1;
-					if (targetStage !== tempStageCounter-1) {
-						var lastSegRatioBetweenPiAndTwoPi = 0.75;
-						var ratio = Math.cos(targetStage/(tempStageCounter-1) * Math.PI * lastSegRatioBetweenPiAndTwoPi + Math.PI * (2 - lastSegRatioBetweenPiAndTwoPi)) * 0.5 + 0.5;
-						ratio = Math.sqrt(ratio);
-						zoomFactor = minFactor + (1 - minFactor) * ratio;
-					}
 
-					if (targetStage === 0) {
-						_zoomToFactor(zoomFactor);
+				if (isIE8) {
+					var tempMarginHori = oldWidth  * (1 - factor) / 2;
+					var tempMarginVert = oldHeight * (1 - factor) / 2 + originalVertMargin;
+
+					if (factor) {
+						listItem.style.zoom = factor;
 					} else {
-						var delayMS = frameGapMS*targetStage;
-						setTimeout(function () {
-							if (currentAniStage < targetStage) {
-								currentAniStage = targetStage;
-								_zoomToFactor(zoomFactor);
-							}
-						}, delayMS);
+						console.error('Invalid zooming factor: ', factor);
+						return false;
 					}
+					listItem.style.margin = tempMarginVert+'px' + ' ' + tempMarginHori+'px';
 				}
 
-				var currentAniStage = 0;
-				var minFactor = 0.984;
-				var frameGapMS, tempStageCounter;
-
-				var originalVertMargin, oldHeight, oldWidth;
-				if (isIE8) {
-					originalVertMargin = -1; // set by css file
-					oldHeight = $listItem.outerHeight();
-					oldWidth  = $listItem.outerWidth();
-				}
-
-				if (isIE8) {
-					frameGapMS = 14;
-					tempStageCounter = 18;
-				}
 				if (isIE9) {
-					frameGapMS = 11;
-					tempStageCounter = 27;
-				}
-
-				for (var i = 0; i < tempStageCounter; i++) {
-					_doZoomDelay(i);
+					listItem.style.msTransform = 'scale('+factor+')';
 				}
 			}
+			function _doZoomDelay(targetStage) {
+				var zoomFactor = 1;
+				if (targetStage !== tempStageCounter-1) {
+					var lastSegRatioBetweenPiAndTwoPi = 0.75;
+					var ratio = Math.cos(targetStage/(tempStageCounter-1) * Math.PI * lastSegRatioBetweenPiAndTwoPi + Math.PI * (2 - lastSegRatioBetweenPiAndTwoPi)) * 0.5 + 0.5;
+					ratio = Math.sqrt(ratio);
+					zoomFactor = minFactor + (1 - minFactor) * ratio;
+				}
+
+				if (targetStage === 0) {
+					_zoomToFactor(zoomFactor);
+				} else {
+					var delayMS = frameGapMS*targetStage;
+					setTimeout(function () {
+						if (currentAniStage < targetStage) {
+							currentAniStage = targetStage;
+							_zoomToFactor(zoomFactor);
+						}
+					}, delayMS);
+				}
+			}
+
+			var currentAniStage = 0;
+			var minFactor = 0.984;
+			var frameGapMS, tempStageCounter;
+
+			var originalVertMargin, oldHeight, oldWidth;
+			if (isIE8) {
+				originalVertMargin = -1; // set by css file
+				oldHeight = $(listItem).outerHeight();
+				oldWidth  = $(listItem).outerWidth();
+			}
+
+			if (isIE8) {
+				frameGapMS = 14;
+				tempStageCounter = 18;
+			}
+			if (isIE9) {
+				frameGapMS = 11;
+				tempStageCounter = 27;
+			}
+
+			for (var i = 0; i < tempStageCounter; i++) {
+				_doZoomDelay(i);
+			}
+		}
+	});
+
+
+	$('.drop-down-list').each(function () {
+		var dropDownList = this;
+		var $currentValueContainer = $(this).find('.drop-down-list-current-value');
+		var inputForStoringValue = $(this).find('input.drop-down-list-value');
+		var inputForStoringHTML = $(this).find('input.drop-down-list-value-html');
+		var $options = $(this).find('.drop-down-list-options > li'); // assuming there is only one level of menu
+
+		if (urlParameters.bank && urlParameters.bank !== 'undefined') {
+			_chooseOption(urlParameters.bank, urlParameters.bankHTML);
+		} else {
+			if ($options.length > 0) {
+				_chooseOption(0);
+			} else {
+				_chooseOption(null);
+			}
+		}
+
+		$currentValueContainer.on('click', function () {
+			$(dropDownList).toggleClass('coupled-shown');
 		});
+
+		$options.on('click', function () {
+			_chooseOption(this);
+			$(dropDownList).removeClass('coupled-shown');
+		});
+
+		function _chooseOption(chosenOption, chosenOptionHTML) {
+			if (typeof chosenOption === 'number') {
+				chosenOption = $options[chosenOption];
+			}
+
+			var chosenValue;
+
+			if (chosenOption && typeof chosenOption === 'string' && chosenOptionHTML && typeof chosenOptionHTML === 'string') {
+				$currentValueContainer.html(chosenOptionHTML);
+				$(inputForStoringValue).val(chosenOption);
+				$(inputForStoringHTML).val(chosenOptionHTML);
+			}
+
+			if (!chosenOption) {
+				$currentValueContainer[0].innerHTML = '';
+				$(inputForStoringValue).val('');
+				$(inputForStoringHTML).val('');
+				return true;
+			}
+
+			if (!chosenValue) chosenValue = $(chosenOption).find('.value')[0];
+			if (chosenValue) chosenValue = chosenValue.getAttribute('data-value');
+
+			chosenOptionHTML = $(chosenOption).html();
+			$currentValueContainer.html(chosenOptionHTML);
+			$(inputForStoringValue).val(chosenValue);
+			$(inputForStoringHTML).val(chosenOptionHTML);
+		}
 	});
 })();
 
 
-(function fakeLogics() {
-	var $listsBlocks = $('.lists-block').filter(function () {
-		return !$(this).hasClass('close-installments');
-	});
-	$listsBlocks.each(function () {
-		var $listsBlock = $(this);
+// (function fakeLogics() {
+// 	return false;
 
-		var $lists = $listsBlock.find('.lists').show();
-		var $empty = $listsBlock.find('.empty-content-hint').hide();
+// 	var $listsBlocks = $('.lists-block').filter(function () {
+// 		return !$(this).hasClass('close-installments');
+// 	});
+// 	$listsBlocks.each(function () {
+// 		var $listsBlock = $(this);
 
-		$listsBlock.on('click', function () {
-			$lists.toggle();
-			$empty.toggle();
-		});
-	});
-})();
+// 		var $lists = $listsBlock.find('.lists').show();
+// 		var $empty = $listsBlock.find('.empty-content-hint').hide();
+
+// 		$listsBlock.on('click', function () {
+// 			$lists.toggle();
+// 			$empty.toggle();
+// 		});
+// 	});
+// })();

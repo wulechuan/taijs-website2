@@ -52,7 +52,7 @@ button {
 
     .pagination [role="button"].page-number.current:hover > .ie-bg,
     .pagination button.page-number.current:hover          > .ie-bg,
-    [role="button"]                                       > .ie-bg,
+    [role="button"]:hover                                 > .ie-bg,
     button:hover                                          > .ie-bg {
         color: #3f93ff;
     }
@@ -149,6 +149,13 @@ label.deco-input .ie-borders {
         ;
     }
 
+.menu {
+    }
+    .menu-item.has-sub-menu > a > .label:before,
+    .menu-item.has-sub-menu     > .label:before {
+        /* color: #c8cbcf; */
+        color: white;
+    }
 
 .dialog > .deco .ie-bg {
     color: #222;

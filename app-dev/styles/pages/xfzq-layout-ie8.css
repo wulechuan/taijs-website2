@@ -1,8 +1,7 @@
 /* ----- layout definition begin --------------- */
-	.drop-down-list-option.choose-bank {
+	.drop-down-list.choose-bank .drop-down-list-option {
 		min-height: 25px;
 	}
-
 	#page-sidebar-nav .menu-item > a > .label,
 	#page-sidebar-nav .menu-item > .label {
 		min-height: 21px;
@@ -36,8 +35,12 @@
 
 
 /* ----- theme definition begin ---------------- */
+	#user-info-bar .user-info-block a {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr=#31FFFFFF, endColorStr=#31FFFFFF)";
+			filter:  progid:DXImageTransform.Microsoft.Gradient(startColorStr=#31FFFFFF, endColorStr=#31FFFFFF);	
+	}
 	#user-info-bar .user-info-block a:hover {
-		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33FFFFFF, endColorStr=#33FFFFFF)";
-			filter:  progid:DXImageTransform.Microsoft.Gradient(startColorStr=#33FFFFFF, endColorStr=#33FFFFFF);
+		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr=#44FFFFFF, endColorStr=#44FFFFFF)";
+			filter:  progid:DXImageTransform.Microsoft.Gradient(startColorStr=#44FFFFFF, endColorStr=#44FFFFFF);
 	}
 /* ----- theme definition end ------------------ */

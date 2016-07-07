@@ -485,7 +485,6 @@
 			}
 
 			#credit-details-pane .content-panel > .col.col-1 p .value {
-				font-size: 19px;
 				display: inline-block;
 				vertical-align: baseline;
 			}
@@ -498,6 +497,7 @@
 				margin-left: -0.25px\0; /* for fixing IE 8 rendering bug */
 			}
 
+			#credit-details-pane .content-panel .button-container [role="button"],
 			#credit-details-pane .content-panel .button-container button {
 				margin: 9.8px 0;
 				font-size: 12px;
@@ -511,7 +511,7 @@
 		}
 
 		.user-has-logged-in #splash-block #splash-slogan {
-			/* margin-left: 175px; */
+			margin-left: 175px;
 			margin-top: 45px;
 		}
 
