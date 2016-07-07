@@ -641,15 +641,18 @@
 				}
 
 				if (isIE9) {
-					listItem.style.msTransform = 'scale('+factor+')';
+					listItem.style.msTransform = 'scale('+factor+', '+factor+')';
 				}
 			}
 			function _doZoomDelay(targetStage) {
 				var zoomFactor = 1;
 				if (targetStage !== tempStageCounter-1) {
 					var lastSegRatioBetweenPiAndTwoPi = 0.75;
-					var ratio = Math.cos(targetStage/(tempStageCounter-1) * Math.PI * lastSegRatioBetweenPiAndTwoPi + Math.PI * (2 - lastSegRatioBetweenPiAndTwoPi)) * 0.5 + 0.5;
-					ratio = Math.sqrt(ratio);
+
+					var animationProgress = targetStage/(tempStageCounter-1);
+					var ratio = Math.cos(Math.PI * (2 - (1 - animationProgress) * lastSegRatioBetweenPiAndTwoPi));
+						ratio = ratio * 0.5 + 0.5;
+
 					zoomFactor = minFactor + (1 - minFactor) * ratio;
 				}
 
@@ -678,12 +681,16 @@
 			}
 
 			if (isIE8) {
-				frameGapMS = 14;
-				tempStageCounter = 18;
+				// frameGapMS = 14;
+				// tempStageCounter = 18;
+				frameGapMS = 22;
+				tempStageCounter = 14;
 			}
 			if (isIE9) {
-				frameGapMS = 11;
-				tempStageCounter = 27;
+				// frameGapMS = 11;
+				// tempStageCounter = 27;
+				frameGapMS = 18;
+				tempStageCounter = 19;
 			}
 
 			for (var i = 0; i < tempStageCounter; i++) {
