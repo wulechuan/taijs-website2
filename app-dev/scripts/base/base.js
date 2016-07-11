@@ -18,6 +18,14 @@
 		};
 	}
 
+	// if (isIE8) {
+	// 	$('.f-list > li .timestamp').each(function () {
+	// 		this.innerHTML = '2013-05-15 11:55';
+	// 	});
+	// } else {
+	// 	$('.f-list > li .timestamp > time').html('2013-05-15 11:55');
+	// }
+
 	function processParametersPassedIn() {
 		var qString = location.href.match(/\?.*/);
 		if (qString) qString = qString[0].slice(1);
