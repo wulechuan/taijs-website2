@@ -495,8 +495,13 @@
 
 		#user-info-bar-user-avatar {
 			overflow: hidden;
+			transition-property: transform;
+			transition-timing-function: cubic-bezier(.219,3.19,.87,1.2);
+			transform-style: preserve-3d;
 			}
-
+			#user-info-bar-user-avatar:hover {
+				transform: scale(1.08, 1.08);
+			}
 			#ie-user-avatar,
 			#ie-user-avatar #ie-user-avatar-borders,
 			#user-info-bar-user-avatar,
@@ -536,6 +541,9 @@
 				top: 0;
 				border-width: 2px;
 				border-style: solid;
+			}
+			#user-info-bar-user-avatar:hover .avatar-borders {
+				border-width: 3px;
 			}
 
 
@@ -998,9 +1006,11 @@
 			border-color: white;
 			border-color: rgba(255, 255, 255, 0.5);
 		}
-		#ie-user-avatar:hover #ie-user-avatar-borders.rectangle,
-		#user-info-bar-user-avatar:hover .avatar-borders {
+		#ie-user-avatar:hover #ie-user-avatar-borders.rectangle {
 			border-color: white;
+		}
+		#user-info-bar-user-avatar:hover .avatar-borders {
+			border-color: rgba(255, 255, 255, 0.87);
 		}
 
 		#user-info-bar .user-info-block a {

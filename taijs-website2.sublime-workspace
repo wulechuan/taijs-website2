@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"bac",
+				"backface-visibility"
+			],
+			[
+				"tr",
+				"transition-property"
+			],
+			[
+				"trasnfo",
+				"transform-origin"
+			],
+			[
 				"in",
 				"initial"
 			],
@@ -126,10 +138,6 @@
 			[
 				"ex",
 				"expandableContent"
-			],
-			[
-				"tr",
-				"trigger"
 			],
 			[
 				"exp",
@@ -286,10 +294,6 @@
 			[
 				"rgb",
 				"rgba()"
-			],
-			[
-				"bac",
-				"background-color"
 			],
 			[
 				"c",
@@ -510,15 +514,19 @@
 			[
 				"st",
 				"style	Tag"
-			],
-			[
-				"fil",
-				"filterIris"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "app-dev/styles/pages/xfzq-layout.css",
+			"settings":
+			{
+				"buffer_size": 24535,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -593,11 +601,12 @@
 	],
 	"file_history":
 	[
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-head-after-title.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/_fonts.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-user-info-bar.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-header.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-list.html",
@@ -667,7 +676,6 @@
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-footer.html",
 		"/D/p/dev/taijs/taijs-website2/app-dist/styles/base/base.min.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/fonts.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-head-after-title.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-base.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8-theme.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/user-avatar.html",
@@ -747,6 +755,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"1.08",
+			"05",
+			"1.2",
+			"avatar",
+			"avatar-borders",
+			"user-",
+			"property",
 			"631",
 			"624",
 			"666",
@@ -867,14 +882,7 @@
 			"33ddff",
 			"44",
 			"60",
-			"info-set",
-			"number1",
-			"<input",
-			"stopPropagation",
-			"argument",
-			"function_name",
-			"checkbox",
-			"4"
+			"info-set"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -914,8 +922,38 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app-dev/styles/pages/xfzq-layout.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 24535,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9977,
+								9977
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 9729.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -967,6 +1005,18 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"xfl",
+				"app-dev\\styles\\pages\\xfzq-layout.css"
+			],
+			[
+				"lay",
+				"app-dev\\styles\\base\\layout.css"
+			],
+			[
+				"after",
+				"app-dev\\html-snippets\\tag-head-after-title.html"
+			],
 			[
 				"fonts",
 				"app-dev\\styles\\base\\_fonts.css"
@@ -1112,10 +1162,6 @@
 				"app-dev\\styles\\base\\base-ie8.css"
 			],
 			[
-				"xfl",
-				"app-dev\\styles\\pages\\xfzq-layout.css"
-			],
-			[
 				"closin",
 				"app-dev\\html\\xfzq-close-installments-list.html"
 			],
@@ -1206,10 +1252,6 @@
 			[
 				"xla",
 				"app-dev\\styles\\pages\\xfzq-layout.css"
-			],
-			[
-				"lay",
-				"app-dev\\styles\\base\\layout.css"
 			],
 			[
 				"recent",
@@ -1474,10 +1516,6 @@
 			[
 				"billl",
 				"app-dev\\html\\xfzq-bills-list.html"
-			],
-			[
-				"qnal",
-				"app-dev\\html\\xfzq-help-desk-qna-list.html"
 			]
 		],
 		"width": 0.0
@@ -1515,7 +1553,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 287.0,
 	"status_bar_visible": true,
 	"template_settings":
