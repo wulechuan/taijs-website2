@@ -373,6 +373,15 @@ label.deco-input {
 			input[type="radio"] + label.deco-input[for]:hover:before {
 				color: #333;
 			}
+			/* input[type="radio"][checked]    + label.deco-input[for]:before, */
+			input[type="radio"]:checked     + label.deco-input[for]:before {
+				border-color: black;
+			}
+			/* input[type="radio"][checked] + label.deco-input[for]:after, */
+			input[type="radio"]:checked  + label.deco-input[for]::after {
+				background-color: black;
+			}
+
 
 		input[type="checkbox"] + label.deco-input[for]:before {
 			border-color: #c5c5c5;
@@ -381,47 +390,30 @@ label.deco-input {
 			input[type="checkbox"] + label.deco-input[for]:hover:before {
 				border-color: #333;
 			}
-
-		/* input[type="radio"][checked]    + label.deco-input[for], */
-		input[type="radio"]:checked     + label.deco-input[for],
-		/* input[type="checkbox"][checked] + label.deco-input[for], */
-		input[type="checkbox"]:checked  + label.deco-input[for] {
-			background-color: black;
-			}
-			/* input[type="radio"][checked]    + label.deco-input[for]:before, */
-			input[type="radio"]:checked     + label.deco-input[for]:before {
-				color: black;
-			}
 			/* input[type="checkbox"][checked] + label.deco-input[for]:before, */
 			input[type="checkbox"]:checked  + label.deco-input[for]:before {
 				border-color: black;
+				background-color: black;
 			}
-			/* input[type="radio"][checked]    + label.deco-input[for]:after, */
-			input[type="radio"]:checked     + label.deco-input[for]:after,
 			/* input[type="checkbox"][checked] + label.deco-input[for]:after, */
 			input[type="checkbox"]:checked  + label.deco-input[for]:after {
 				color: white;
 			}
 
 
-
-	/* .selected input[type="radio"][checked]    + label.deco-input[for], */
-	.selected input[type="radio"]:checked     + label.deco-input[for],
-	.selected input[type="radio"]             + label.deco-input[for],
-	/* .selected input[type="checkbox"][checked] + label.deco-input[for], */
-	.selected input[type="checkbox"]:checked  + label.deco-input[for],
-	.selected input[type="checkbox"]          + label.deco-input[for] {
-		background-color: transparent;
+		.selected input[type="radio"] + label.deco-input[for]:before {
+			border-color: white;
 		}
-		.selected input[type="radio"] + label.deco-input[for]:before,
 		.selected input[type="radio"] + label.deco-input[for]:after {
-			color: white;
+			background-color: white;
 		}
 		.selected input[type="checkbox"] + label.deco-input[for]:before {
 			border-color: rgba(255, 255, 255, 0.75);
+			background-color: transparent;
 		}
-		.selected input[type="checkbox"]:hover + label.deco-input[for]:before,
-		.selected input[type="checkbox"] + label.deco-input[for]:hover:before {
+		.selected:hover input[type="checkbox"]       + label.deco-input[for]:before,
+		.selected       input[type="checkbox"]:hover + label.deco-input[for]:before,
+		.selected       input[type="checkbox"]       + label.deco-input[for]:hover:before {
 			border-color: white;
 		}
 		.selected input[type="checkbox"] + label.deco-input[for]:after {
@@ -609,6 +601,10 @@ label.deco-input {
 		background-color: #157dff;
 	}
 
+	.tabular > .f-list > li.selectable.selected.seletcor-is-checkbox:hover {
+		background-color: #3f93ff;
+	}
+
 	.tabular.dialog-summary-sheet > .f-list > li {
 		color: #333;
 		}
@@ -768,6 +764,16 @@ label.deco-input {
 	#my-assets .menu.level-1 > .menu-item > .deco,
 	#my-assets .menu.level-2 {
 	    border-color: #e6e6e6;
+	}
+
+	#my-assets .menu.level-2 > .menu-item > a > .label,
+	#my-assets .menu.level-2 > .menu-item > .label {
+		color: #666;
+	}
+
+	#my-assets .menu.level-2 > .menu-item > a:hover > .label,
+	#my-assets .menu.level-2 > .menu-item > .label:hover {
+		color: white;
 	}
 
 	#my-assets .menu-wrap.level-2:after,
