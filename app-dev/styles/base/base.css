@@ -997,6 +997,14 @@ label.deco-input {
 			border-style: solid;
 			border-radius: 2px;
 		}
+		input[type="checkbox"][disabled] + label.deco-input[for]:before,
+		input[type="checkbox"]:disabled  + label.deco-input[for]:before {
+			border-style: dashed;
+		}
+		.selectable.disabled input[type="checkbox"] + label.deco-input[for]:before { /* ie8 ignores :disabled; */
+			content: ' '\0;
+			border-style: dashed;
+		}
 		input[type="checkbox"] + label.deco-input[for]:after {
 			font-family: 'iconfont'!important;
 			content: '\e630';
@@ -1014,14 +1022,15 @@ label.deco-input {
 			border-width: 0;
 			border-style: none;
 		}
-	input[type="radio"]    + label.deco-input[for] {
+	input[type="radio"] + label.deco-input[for] {
 		font-size: 12px;
 		margin-left: -17px;
-		margin-top: 1px;
+		margin-top: 5px;
 		}
-		input[type="radio"] + label.deco-input[for]:before {
-			font-family: 'iconfont'!important;
-			content: '\e631';
+		input[type="radio"] + label.deco-input[for]::before {
+			/* font-family: 'iconfont'!important;
+			content: '\e631'; */
+			content: '';
 			box-sizing: border-box;
 			display: block;
 			position: absolute;
@@ -1029,17 +1038,23 @@ label.deco-input {
 			top: 0;
 			width: 100%;
 			height: 100%;
-			border-width: 0;
-			border-style: none;
+			border-width: 1px;
+			border-style: solid;
+			border-radius: 1000px;
 		}
-		input[type="radio"] + label.deco-input[for]:after {
+		input[type="radio"][disabled] + label.deco-input[for]:before,
+		input[type="radio"]:disabled  + label.deco-input[for]:before {
+			border-style: dashed;
+		}
+		input[type="checkbox"] + label.deco-input[for]:after {
 			font-family: 'iconfont'!important;
-			content: '\e632';
+			content: '\e630';
 			box-sizing: border-box;
 			display: block;
 			visibility: hidden;
 			position: absolute;
 			text-indent: 0;
+			line-height: 1;
 
 			left: 0;
 			top: 0;
@@ -1048,8 +1063,28 @@ label.deco-input {
 			border-width: 0;
 			border-style: none;
 		}
-	input[type="radio"][checked]    + label.deco-input[for]:after,
-	input[type="radio"]:checked     + label.deco-input[for]:after,
+		input[type="radio"] + label.deco-input[for]::after {
+			/* font-family: 'iconfont'!important;
+			content: '\e632'; */
+			content: '';
+			box-sizing: border-box;
+			display: block;
+			visibility: hidden;
+			position: absolute;
+			text-indent: 0;
+
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: 3px;
+
+			border-width: 0;
+			border-style: none;
+			border-radius: 1000px;
+		}
+	input[type="radio"][checked]    + label.deco-input[for]::after,
+	input[type="radio"]:checked     + label.deco-input[for]::after,
 	input[type="checkbox"][checked] + label.deco-input[for]:after,
 	input[type="checkbox"]:checked  + label.deco-input[for]:after {
 		visibility: visible;
@@ -1965,7 +2000,7 @@ label.deco-input {
 		.tabular > .f-list > li.selectable {
 			cursor: pointer;
 		}
-		.tabular > .f-list > li.selectable.seletcor-is-chechbox {
+		.tabular > .f-list > li.selectable.seletcor-is-checkbox {
 			animation: tabular-list-item-deselected 0.5s ease-out;
 		}
 		.tabular > .f-list > li.selectable.selected {

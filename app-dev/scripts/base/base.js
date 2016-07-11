@@ -566,22 +566,27 @@
 	var $allTabularLists = $('.tabular .f-list');
 
 	$allTabularLists.each(function () {
-		var tabluar = this;
 		var $allListItems  = $(this).find(' > li.selectable');
 		var $allCheckboxes = $allListItems.find('input[type="checkbox"].selectable-list-item-selector');
 		var $allRadios     = $allListItems.find('input[type="radio"].selectable-list-item-selector');
 		// console.log('has checkboxes: ', $allCheckboxes.length > 0, '\nhas radios: ', $allRadios.length > 0);
 
-		function _updateListItemAccordingToCheckboxStatus(listItem, isChecked) {
-			if (isChecked === true) {
-				$(listItem).addClass('selected');
+		function _updateListItemAccordingToCheckboxStatus(listItem, checkbox) {
+			var $li = $(listItem);
+			if (checkbox.disabled) {
+				$li.addClass('disabled');
 			} else {
-				$(listItem).removeClass('selected');
+				$li.removeClass('disabled');
+			}
+
+			if (checkbox.checked) {
+				$li.addClass('selected');
+			} else {
+				$li.removeClass('selected');
 			}
 		}
 
 		if ($allCheckboxes.length > 0) {
-
 			$allListItems.each(function () {
 				var listItem = this;
 				var $listItem = $(this);
@@ -591,11 +596,11 @@
 				var myCheckbox = $myCheckbox[0];
 				var $myCheckboxLabel = $myCheckbox.find('+ label.deco-input[for]');
 
-				var isInitiallyChecked = myCheckbox && myCheckbox.checked;
+
 				var _myCheckboxUntouchedYet = true;
 				setTimeout(function () { /* Initializing selection status; And this must dealy because ie8 to ie11 updates cached "checked" statuses very late */
 					if (_myCheckboxUntouchedYet) {
-						_updateListItemAccordingToCheckboxStatus(listItem, isInitiallyChecked);
+						_updateListItemAccordingToCheckboxStatus(listItem, myCheckbox);
 					}
 				}, 100);
 
@@ -607,63 +612,63 @@
 						});
 					}
 					$myCheckbox.on('click', function(event) {
+						if (this.disabled) return false;
 						_myCheckboxUntouchedYet = false;
 						if (event) event.stopPropagation();
 						if (isIE8) {
-							_updateListItemAccordingToCheckboxStatus(listItem, this.checked);
+							_updateListItemAccordingToCheckboxStatus(listItem, this);
 							_playAnimationForIE8AndIE9OnStatusChange(listItem);
 						}
 					});
 
 					$listItem.on('click', function () {
+						if (myCheckbox.disabled) return false;
 						myCheckbox.checked = !myCheckbox.checked;
 						_myCheckboxUntouchedYet = false;
-						_updateListItemAccordingToCheckboxStatus(this, myCheckbox.checked);
+						_updateListItemAccordingToCheckboxStatus(this, myCheckbox);
 						_playAnimationForIE8AndIE9OnStatusChange(this);
 					});
 
 					$myCheckbox.on('change', function() {
-						_updateListItemAccordingToCheckboxStatus(listItem, this.checked);
+						_updateListItemAccordingToCheckboxStatus(listItem, this);
 						// _playAnimationForIE8AndIE9OnStatusChange(listItem);
 					});
 				}
 			});
 		}
 
-		function _updateAllListItemsAccordingToRadioValue(checkedRadioValue) {
-			if (!_radioUntouchedYet && checkedRadioValue === tabluar.radioLatestValue) return true;
 
+
+
+
+
+
+		function _updateAllListItemsAccordingToRadioStatuses() {
 			for (var i = 0; i < $allListItems.length; i++) {
 				var _li = $allListItems[i];
 				var _radio = _li.elements && _li.elements.radio;
-				if (_radio.value === checkedRadioValue) {
-					$(_li).addClass('selected');
-					_playAnimationForIE8AndIE9OnStatusChange(_li);
-				} else if (_radio.value === tabluar.radioLatestValue) {
-					$(_li).removeClass('selected');
+
+				var $li = $(_li);
+
+				if (_radio.disabled) {
+					$li.addClass('disabled');
+				}
+
+				if (_radio.checked) {
+					$li.addClass('selected');
+					if (!_radio.disabled) _playAnimationForIE8AndIE9OnStatusChange(_li);
+				} else {
+					$li.removeClass('selected');
 					// _playAnimationForIE8AndIE9OnStatusChange(_li);
 				}
 			}
-
-			tabluar.radioLatestValue = checkedRadioValue;
 		}
 
 		if ($allRadios.length > 0) {
-
-			tabluar.radioLatestValue = null;
-			for (var i = 0; i < $allRadios.length; i++) {
-				var _radio = $allRadios[i];
-				if (_radio.checked) {
-					tabluar.radioLatestValue = _radio.value;
-					break;
-				}
-			}
-
 			var _radioUntouchedYet = true;
 			setTimeout(function () { /* Initializing selection status; And this must dealy because ie8 to ie11 updates cached "checked" statuses very late */
 				if (_radioUntouchedYet) {
-					// console.log('init radioLatestValue: ', tabluar.radioLatestValue);
-					_updateAllListItemsAccordingToRadioValue(tabluar.radioLatestValue);
+					_updateAllListItemsAccordingToRadioStatuses();
 				}
 			}, 100);
 
@@ -678,9 +683,11 @@
 					listItem.elements.radio = myRadio;
 
 					$listItem.on('click', function () {
-						_radioUntouchedYet = false;
-						myRadio.checked = true;
-						_updateAllListItemsAccordingToRadioValue(myRadio.value);
+						if (!myRadio.disabled) {
+							_radioUntouchedYet = false;
+							myRadio.checked = true;
+						}
+						_updateAllListItemsAccordingToRadioStatuses();
 					});
 				}
 			});
