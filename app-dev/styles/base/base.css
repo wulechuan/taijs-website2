@@ -463,7 +463,7 @@ dd {
 			background-image: url(../../images/_common/sprite-logos-china-banks-20x20.png);
 		}
 		.tabular .cell [class*="icon-bank-cn"] {
-			margin-top: -3px;
+			margin-top: 0;
 			margin-right: 0.5em;
 		}
 

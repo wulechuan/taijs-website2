@@ -520,42 +520,34 @@
 	"buffers":
 	[
 		{
-			"file": "app-dev/styles/pages/xfzq-layout.css",
+			"file": "app-dev/html-snippets/tag-body-end.html",
 			"settings":
 			{
-				"buffer_size": 22455,
+				"buffer_size": 51,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app-dev/styles/base/_fonts.css",
+			"file": "app-dev/html-snippets/tag-body-begin.html",
 			"settings":
 			{
-				"buffer_size": 1294,
+				"buffer_size": 16,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app-dev/styles/pages/index.css",
+			"file": "app-dev/html/xfzq-repayments.html",
 			"settings":
 			{
-				"buffer_size": 14778,
+				"buffer_size": 28521,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app-dev/styles/base/theme-_default.css",
+			"file": "gulpfile.js",
 			"settings":
 			{
-				"buffer_size": 18058,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app-dev/styles/base/base.css",
-			"settings":
-			{
-				"buffer_size": 55071,
+				"buffer_size": 16476,
 				"line_ending": "Windows"
 			}
 		}
@@ -628,23 +620,31 @@
 		"/D/p/dev/taijs/taijs-website2",
 		"/D/p/dev/taijs/taijs-website2/app-dev",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages"
 	],
 	"file_history":
 	[
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/index.css",
+		"/D/p/dev/g.bat",
+		"/D/Users/wulechuan/Downloads/jquery.mobile-1.4.5/jquery.mobile-1.4.5.js",
+		"/D/Users/wulechuan/Downloads/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css",
+		"/D/p/dev/taijs/taijs-website-m/gulpfile.js",
+		"/D/p/dev/taijs/taijs-website-m/.gitattributes",
+		"/C/Windows/System32/cmd.exe",
+		"/D/Users/wulechuan/Downloads/百度云/seedlink-app-_base.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/index.js",
-		"/D/p/dev/taijs/taijs-website2/app-dev/index.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-close-installments.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/_fonts.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/index.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/index.html",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-close-installments.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base-ie8.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-list.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/_fonts.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-quick-repayment.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-create-installments.js",
@@ -754,14 +754,7 @@
 		"/D/Users/wulechuan/Downloads/install-a-new-font.txt",
 		"/D/Users/wulechuan/Downloads/china.js",
 		"/D/Users/wulechuan/Downloads/china.json",
-		"/D/p/dev/taijs/taijs-website2/node_modules/gulp-inject/src/inject/index.js",
-		"/D/Users/wulechuan/Desktop/柱状图.js.qq不让直接传js文件",
-		"/D/Users/wulechuan/Desktop/柱状图.js.qq不然直接传js文件",
-		"/C/Users/wulechuan/AppData/Roaming/Sublime Text 3/Packages/JSHint Gutter/.jshintrc",
-		"/D/p/dev/private/wlcJS/app-dev/stylesheets/seedlink/seedlink-app-_theme-_default.css",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/warm-up.sublime-project",
-		"/D/p/dev/taijs/taijs-website2/taijs-website2.sublime-project",
-		"/D/p/dev/private/wlc-web-front-end-learning-and-warming-up/.gitignore"
+		"/D/p/dev/taijs/taijs-website2/node_modules/gulp-inject/src/inject/index.js"
 	],
 	"find":
 	{
@@ -788,6 +781,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"row",
+			"argument",
+			"$pL1.show();",
 			"8",
 			"top",
 			"input",
@@ -912,10 +908,7 @@
 			"console",
 			"_chooseOption",
 			"inputForStoringHTML",
-			"chosenValueHTML",
-			"chosenOptionHTML",
-			"chosenOption",
-			"bank"
+			"chosenValueHTML"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -955,30 +948,87 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app-dev/styles/pages/xfzq-layout.css",
+					"file": "app-dev/html-snippets/tag-body-end.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 22455,
+						"buffer_size": 51,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								115,
-								115
+								6,
+								6
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app-dev/html-snippets/tag-body-begin.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16,
+								16
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app-dev/html/xfzq-repayments.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 28521,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14,
+								14
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -988,119 +1038,33 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "app-dev/styles/base/_fonts.css",
+					"buffer": 3,
+					"file": "gulpfile.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1294,
+						"buffer_size": 16476,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1202,
-								1202
+								36,
+								36
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 540.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app-dev/styles/pages/index.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 14778,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3405,
-								3405
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2880.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app-dev/styles/base/theme-_default.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 18058,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								10972,
-								10972
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 8820.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app-dev/styles/base/base.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 55071,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								29212,
-								29039
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 24926.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1154,6 +1118,22 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"gul",
+				"gulpfile.js"
+			],
+			[
+				"indexj",
+				"app-dev\\scripts\\pages\\index.js"
+			],
+			[
+				"indexh",
+				"app-dev\\index.html"
+			],
+			[
+				"indexjs",
+				"app-dev\\scripts\\pages\\index.js"
+			],
 			[
 				"font",
 				"app-dev\\styles\\base\\_fonts.css"
@@ -1495,10 +1475,6 @@
 				"app-dev\\html\\xfzq-orders.html"
 			],
 			[
-				"indexj",
-				"app-dev\\scripts\\pages\\index.js"
-			],
-			[
 				"closh",
 				"app-dev\\html\\xfzq-close-installments-list.html"
 			],
@@ -1572,10 +1548,6 @@
 			],
 			[
 				"g",
-				"gulpfile.js"
-			],
-			[
-				"gul",
 				"gulpfile.js"
 			],
 			[
@@ -1657,14 +1629,6 @@
 			[
 				"ind",
 				"app-dev\\index.html"
-			],
-			[
-				"head",
-				"app-dev\\html-snippets\\module-app-header.html"
-			],
-			[
-				"x",
-				"app-dev\\styles\\pages\\xfzq-base.css"
 			]
 		],
 		"width": 0.0
@@ -1702,8 +1666,8 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
-	"side_bar_width": 220.0,
+	"side_bar_visible": true,
+	"side_bar_width": 287.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
