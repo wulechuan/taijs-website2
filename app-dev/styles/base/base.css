@@ -1028,8 +1028,6 @@ label.deco-input {
 		margin-top: 5px;
 		}
 		input[type="radio"] + label.deco-input[for]::before {
-			/* font-family: 'iconfont'!important;
-			content: '\e631'; */
 			content: '';
 			box-sizing: border-box;
 			display: block;
@@ -1064,8 +1062,6 @@ label.deco-input {
 			border-style: none;
 		}
 		input[type="radio"] + label.deco-input[for]::after {
-			/* font-family: 'iconfont'!important;
-			content: '\e632'; */
 			content: '';
 			box-sizing: border-box;
 			display: block;
