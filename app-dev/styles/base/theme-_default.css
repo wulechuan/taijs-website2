@@ -766,6 +766,16 @@ label.deco-input {
 	    border-color: #e6e6e6;
 	}
 
+	#my-assets .menu.level-2 > .menu-item > a > .label,
+	#my-assets .menu.level-2 > .menu-item > .label {
+		color: #666;
+	}
+
+	#my-assets .menu.level-2 > .menu-item > a:hover > .label,
+	#my-assets .menu.level-2 > .menu-item > .label:hover {
+		color: white;
+	}
+
 	#my-assets .menu-wrap.level-2:after,
 	#my-assets .menu.level-1 > .menu-item > .deco,
 	#my-assets .menu.level-2 {
