@@ -238,155 +238,46 @@ gulp.task('html-inject-snippets', ['pre-process-html-snippets'], () => {
 
   var pathSnippetsRoot = pathTempRoot+'/html-snippets/';
 
-  return gulp.src([
+  var injectionCouples = [
+    { file: 'tag-head-before-title.html', name: 'headBeforeTitle:html' },
+    { file: 'tag-head-after-title.html', name: 'headAfterTitle:html' },
+    { file: 'tag-body-begin.html', name: 'bodyBegin:html' },
+    { file: 'tag-body-end.html', name: 'bodyEnd:html' },
+    { file: 'module-app-header.html', name: 'appHeader:html' },
+    { file: 'module-app-footer.html', name: 'appFooter:html' },
+    { file: 'module-app-body-wrap-begin.html', name: 'appBodyWrapBegin:html' },
+    { file: 'module-app-body-wrap-end.html', name: 'appBodyWrapEnd:html' },
+    { file: 'module-popup-layers-wrap-begin.html', name: 'popupLayersWrapBegin:html' },
+    { file: 'module-popup-layers-wrap-end.html', name: 'popupLayersWrapEnd:html' },
+    { file: 'module-xfzq-user-info-bar.html', name: 'xfzqUserInfoBar:html' },
+    { file: 'module-xfzq-page-wrap-begin.html', name: 'xfzqPageWrapBegin:html' },
+    { file: 'module-xfzq-page-wrap-end.html', name: 'xfzqPageWrapEnd:html' },
+    { file: 'module-xfzq-page-sidebar-0.html', name: 'xfzqPageSidebar0:html' },
+    { file: 'module-xfzq-page-chief-part-wrap-begin.html', name: 'xfzqPageChiefPartWrapBegin:html' },
+    { file: 'module-xfzq-page-chief-part-wrap-end.html', name: 'xfzqPageChiefPartWrapEnd:html' },
+    { file: 'module-xfzq-page-content-wrap-begin.html', name: 'xfzqPageContentWrapBegin:html' },
+    { file: 'module-xfzq-page-content-wrap-end.html', name: 'xfzqPageContentWrapEnd:html' }
+  ];
+
+  var targetFilesToProcess = gulp.src([
     pathSrcRoot+'/**/*.html',
     '!'+pathSrcRoot+'/html-snippets/**/*' // 我们要排除的是源文件夹的片段，而不是临时文件夹的片段
-  ])
+  ]);
 
-    .pipe(inject(gulp.src([
-          pathSnippetsRoot+'tag-head-before-title.html'
-    ]), {
-      starttag: '<!-- inject:headBeforeTitle:html -->',
+  var stageGlobs = targetFilesToProcess;
+  for (var i = 0; i < injectionCouples.length; i++) {
+    var injection = injectionCouples[i];
+    var filePath = pathSnippetsRoot+injection.file;
+    var starttag = '<!-- inject:'+injection.name+' -->';
+
+    stageGlobs = stageGlobs.pipe(inject(gulp.src([filePath]), {
+      starttag: starttag,
       transform: _processHtmlSnippetString,
       quiet: true
-    }))
+    }));
+  }
 
-    .pipe(inject(gulp.src([
-          pathSnippetsRoot+'tag-head-after-title.html'
-    ]), {
-      starttag: '<!-- inject:headAfterTitle:html -->',
-      transform: _processHtmlSnippetString,
-      quiet: true
-    }))
-
-    .pipe(inject(gulp.src([
-          pathSnippetsRoot+'tag-body-begin.html'
-    ]), {
-      starttag: '<!-- inject:bodyBegin:html -->',
-      transform: _processHtmlSnippetString,
-      quiet: true
-    }))
-
-    .pipe(inject(gulp.src([
-          pathSnippetsRoot+'tag-body-end.html'
-    ]), {
-      starttag: '<!-- inject:bodyEnd:html -->',
-      transform: _processHtmlSnippetString,
-      quiet: true
-    }))
-
-    .pipe(inject(gulp.src([
-          pathSnippetsRoot+'module-app-header.html'
-    ]), {
-      starttag: '<!-- inject:appHeader:html -->',
-      transform: _processHtmlSnippetString,
-      quiet: true
-    }))
-
-    .pipe(inject(gulp.src([
-          pathSnippetsRoot+'module-app-footer.html'
-    ]), {
-      starttag: '<!-- inject:appFooter:html -->',
-      transform: _processHtmlSnippetString,
-      quiet: true
-    }))
-
-    .pipe(inject(gulp.src([
-          pathSnippetsRoot+'module-app-body-wrap-begin.html'
-    ]), {
-      starttag: '<!-- inject:appBodyWrapBegin:html -->',
-      transform: _processHtmlSnippetString,
-      quiet: true
-    }))
-
-    .pipe(inject(gulp.src([
-          pathSnippetsRoot+'module-app-body-wrap-end.html'
-    ]), {
-      starttag: '<!-- inject:appBodyWrapEnd:html -->',
-      transform: _processHtmlSnippetString,
-      quiet: true
-    }))
-
-    .pipe(inject(gulp.src([
-          pathSnippetsRoot+'module-popup-layers-wrap-begin.html'
-    ]), {
-      starttag: '<!-- inject:popupLayersWrapBegin:html -->',
-      transform: _processHtmlSnippetString,
-      quiet: true
-    }))
-
-    .pipe(inject(gulp.src([
-          pathSnippetsRoot+'module-popup-layers-wrap-end.html'
-    ]), {
-      starttag: '<!-- inject:popupLayersWrapEnd:html -->',
-      transform: _processHtmlSnippetString,
-      quiet: true
-    }))
-
-    .pipe(inject(gulp.src([
-          pathSnippetsRoot+'module-xfzq-user-info-bar.html'
-    ]), {
-      starttag: '<!-- inject:xfzqUserInfoBar:html -->',
-      transform: _processHtmlSnippetString,
-      quiet: true
-    }))
-
-    .pipe(inject(gulp.src([
-          pathSnippetsRoot+'module-xfzq-page-wrap-begin.html'
-    ]), {
-      starttag: '<!-- inject:xfzqPageWrapBegin:html -->',
-      transform: _processHtmlSnippetString,
-      quiet: true
-    }))
-
-    .pipe(inject(gulp.src([
-          pathSnippetsRoot+'module-xfzq-page-wrap-end.html'
-    ]), {
-      starttag: '<!-- inject:xfzqPageWrapEnd:html -->',
-      transform: _processHtmlSnippetString,
-      quiet: true
-    }))
-
-    .pipe(inject(gulp.src([
-          pathSnippetsRoot+'module-xfzq-page-sidebar-0.html'
-    ]), {
-      starttag: '<!-- inject:xfzqPageSidebar0:html -->',
-      transform: _processHtmlSnippetString,
-      quiet: true
-    }))
-
-    .pipe(inject(gulp.src([
-          pathSnippetsRoot+'module-xfzq-page-chief-part-wrap-begin.html'
-    ]), {
-      starttag: '<!-- inject:xfzqPageChiefPartWrapBegin:html -->',
-      transform: _processHtmlSnippetString,
-      quiet: true
-    }))
-
-    .pipe(inject(gulp.src([
-          pathSnippetsRoot+'module-xfzq-page-chief-part-wrap-end.html'
-    ]), {
-      starttag: '<!-- inject:xfzqPageChiefPartWrapEnd:html -->',
-      transform: _processHtmlSnippetString,
-      quiet: true
-    }))
-
-    .pipe(inject(gulp.src([
-          pathSnippetsRoot+'module-xfzq-page-content-wrap-begin.html'
-    ]), {
-      starttag: '<!-- inject:xfzqPageContentWrapBegin:html -->',
-      transform: _processHtmlSnippetString,
-      quiet: true
-    }))
-
-    .pipe(inject(gulp.src([
-          pathSnippetsRoot+'module-xfzq-page-content-wrap-end.html'
-    ]), {
-      starttag: '<!-- inject:xfzqPageContentWrapEnd:html -->',
-      transform: _processHtmlSnippetString,
-      quiet: true
-    }))
-
+  return stageGlobs
     .pipe(gulp.dest(pathNewDistCacheRoot)) // 将文件写入指定文件夹
   ;
 });
