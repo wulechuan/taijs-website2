@@ -1,7 +1,7 @@
 input.empty-field:focus,
 input.empty-field:active,
 html, body, button, textarea, input, select, option, .font-default {
-	font-family: 'Microsoft Yahei', 'Lucida Grande', 'SimHei', 'SimSun';
+	font-family: 'Microsoft Yahei UI', 'Microsoft Yahei', 'Helvetica', Arial, 'Lucida Grande', 'SimHei', Sans-Serif;
 }
 
 
@@ -30,7 +30,7 @@ input.empty-field {
 .pagination button,
 .dialog .dialog-body > .content .article p,
 .breadcrumbs,
-#header-info-and-links,
+#app-header-info-and-links,
 #app-footer-nav p,
 #app-footer-services-info,
 blockquote,

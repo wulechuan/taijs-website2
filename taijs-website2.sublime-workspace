@@ -519,14 +519,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "gulpfile.js",
-			"settings":
-			{
-				"buffer_size": 14315,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -600,14 +592,15 @@
 	],
 	"file_history":
 	[
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
 		"/D/p/dev/g.bat",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/_fonts.css",
+		"/D/p/dev/taijs/taijs-website2/gulpfile.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-head-after-title.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/_fonts.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-user-info-bar.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-header.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-list.html",
@@ -631,7 +624,6 @@
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/pages/xfzq-page-orders.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-body-begin.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-body-end.html",
-		"/D/p/dev/taijs/taijs-website2/gulpfile.js",
 		"/D/Users/wulechuan/Downloads/jquery.mobile-1.4.5/jquery.mobile-1.4.5.js",
 		"/D/Users/wulechuan/Downloads/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css",
 		"/D/p/dev/taijs/taijs-website-m/gulpfile.js",
@@ -754,6 +746,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"checkbox",
+			"docking",
 			"1.08",
 			"05",
 			"1.2",
@@ -879,9 +873,7 @@
 			"19",
 			"60",
 			"33ddff",
-			"44",
-			"60",
-			"info-set"
+			"44"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -921,39 +913,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "gulpfile.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 14315,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								8171,
-								8171
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 2801.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1006,6 +967,14 @@
 		"selected_items":
 		[
 			[
+				"fonts",
+				"app-dev\\styles\\base\\_fonts.css"
+			],
+			[
+				"base",
+				"app-dev\\styles\\base\\base.css"
+			],
+			[
 				"gu",
 				"gulpfile.js"
 			],
@@ -1020,10 +989,6 @@
 			[
 				"after",
 				"app-dev\\html-snippets\\tag-head-after-title.html"
-			],
-			[
-				"fonts",
-				"app-dev\\styles\\base\\_fonts.css"
 			],
 			[
 				"user",
@@ -1132,10 +1097,6 @@
 			[
 				"indexcss",
 				"app-dev\\styles\\pages\\index.css"
-			],
-			[
-				"base",
-				"app-dev\\styles\\base\\base.css"
 			],
 			[
 				"xfzl",
