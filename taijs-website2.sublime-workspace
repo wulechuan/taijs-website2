@@ -592,16 +592,16 @@
 	],
 	"file_history":
 	[
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default.css",
+		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/base.css",
 		"/D/p/dev/g.bat",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/_fonts.css",
 		"/D/p/dev/taijs/taijs-website2/gulpfile.js",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/pages/xfzq-layout.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/tag-head-after-title.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/layout.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-xfzq-user-info-bar.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html-snippets/module-app-header.html",
-		"/D/p/dev/taijs/taijs-website2/app-dev/styles/base/theme-_default.css",
 		"/D/p/dev/taijs/taijs-website2/app-dev/scripts/base/base.js",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-close-installments-list.html",
 		"/D/p/dev/taijs/taijs-website2/app-dev/html/xfzq-repayments.html",
@@ -746,6 +746,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"panel",
 			"checkbox",
 			"docking",
 			"1.08",
@@ -872,8 +873,7 @@
 			"info-set",
 			"19",
 			"60",
-			"33ddff",
-			"44"
+			"33ddff"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -967,6 +967,14 @@
 		"selected_items":
 		[
 			[
+				"xfzq",
+				"app-dev\\styles\\pages\\xfzq-layout.css"
+			],
+			[
+				"them",
+				"app-dev\\styles\\base\\theme-_default.css"
+			],
+			[
 				"fonts",
 				"app-dev\\styles\\base\\_fonts.css"
 			],
@@ -997,10 +1005,6 @@
 			[
 				"haeder",
 				"app-dev\\html-snippets\\module-app-header.html"
-			],
-			[
-				"them",
-				"app-dev\\styles\\base\\theme-_default.css"
 			],
 			[
 				"layou",
@@ -1465,10 +1469,6 @@
 			[
 				"billjs",
 				"app-dev\\scripts\\pages\\xfzq-page-bills-list.js"
-			],
-			[
-				"xfzq",
-				"app-dev\\styles\\pages\\xfzq-base.css"
 			],
 			[
 				"record",
