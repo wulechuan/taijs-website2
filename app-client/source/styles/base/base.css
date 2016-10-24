@@ -1044,23 +1044,6 @@ label.deco-input {
 		input[type="radio"]:disabled  + label.deco-input[for]:before {
 			border-style: dashed;
 		}
-		input[type="checkbox"] + label.deco-input[for]:after {
-			font-family: 'iconfont'!important;
-			content: '\e630';
-			box-sizing: border-box;
-			display: block;
-			visibility: hidden;
-			position: absolute;
-			text-indent: 0;
-			line-height: 1;
-
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			border-width: 0;
-			border-style: none;
-		}
 		input[type="radio"] + label.deco-input[for]::after {
 			content: '';
 			box-sizing: border-box;
@@ -2396,10 +2379,12 @@ ol.f-list, ul.f-list { /* function list */
 		vertical-align: middle;
 	}
 
-	.popup-layer.has-no-popup-window:before {
-		content: none;
+	.popup-layer.has-no-popup-window {
 		white-space: normal;
-	}
+		}
+		.popup-layer.has-no-popup-window:before {
+			content: none;
+		}
 
 	.popup-layer.current {
 		z-index: 5;

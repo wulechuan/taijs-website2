@@ -2,7 +2,7 @@
 <html>
 <head>
     <!-- inject:headBeforeTitle:html --><!-- endinject -->
-    <title>快速还款</title>
+    <title>结束分期</title>
     <!-- inject:headAfterTitle:html --><!-- endinject -->
     <link rel="stylesheet" type="text/css" href="../styles/pages/xfzq-layout.min.css">
     <!--[if lte IE 8]>
@@ -26,8 +26,8 @@
             <li><a href="http://wwwuat.taijs.com/">首页</a></li>
             <li><a href="#">用户中心</a></li>
             <li><a href="../index.html">泰有信</a></li>
-            <li><a href="../html/xfzq-bills-recent.html">账单</a></li>
-            <li><span>快速还款</span></li>
+            <li><a href="../html/xfzq-opening-installments-list.html">分期</a></li>
+            <li><span>结束分期</span></li>
         </ul>
     </nav>
 </div>
@@ -35,7 +35,7 @@
 <!-- inject:xfzqPageChiefPartWrapBegin:html --><!-- endinject -->
 
 <div class="content has-sidebar">
-    <script type="text/javascript">window.psn = { level1: 'taiyx', level2: 'bills-recent' };</script>
+    <script type="text/javascript">window.psn = { level1: 'taiyx', level2: 'close-installments' };</script>
     <!-- inject:xfzqPageSidebar0:html --><!-- endinject -->
 
     <!-- inject:xfzqPageContentWrapBegin:html --><!-- endinject -->
@@ -44,14 +44,14 @@
             ><li role="tab"
                           aria-controls="panel-close-installments"
                         aria-labelledby="panel-tab-close-installments"
-                ><span class="label" id="panel-tab-close-installments">快速还款</span
+                ><span class="label" id="panel-tab-close-installments">结束分期</span
             ></li
         ></ul>
         <div class="panel-group">
             <div role="tabpanel" class="panel" aria-hidden="false" id="panel-close-installments">
                 <div class="article">
                     <article>
-                        <form name="proceed-quick-repayment" action>
+                        <form name="proceed-closing-installments" action>
                             <div class="form">
                                 <div class="row">
                                     <div class="col"><span class="label">还款金额</span></div>
@@ -64,20 +64,20 @@
                                             <div class="drop-down-list-current-value">
                                                 <span class="drop-down-list-option"
                                                     ><i class="icon icon-bank-cn-ccb"></i
-                                                    ><span class="value" data-value="建设银行">建设银行|5568 [单笔<em>5</em>万；日累计<em>5</em>万</em>]</span
+                                                    ><span class="value" data-value="建设银行">建设银行|5568 [单笔<em>5</em>万；日累计<em>5</em>万]</span
                                                 ></span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col"><span class="label">输入密码</span></div>
-                                    <div class="col"><input type="password" name="password" id="input-password"><span><a href="#">忘记密码？</a></span></div>
+                                    <div class="col"><span class="label">还款金额</span></div>
+                                    <div class="col"><input type="number" name="amount" id=""></div>
                                 </div>
                                 <div class="row">
                                     <div class="col"></div>
                                     <div class="col buttons-in-single-line">
-                                        <button class="rounded-corners size-std-regular" button-action="confirm" id="button-submit-quick-repayment">
+                                        <button class="rounded-corners size-std-regular" button-action="confirm" id="button-submit-closing-installments">
                                             <span class="ie-bg"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
                                             <span class="ie-borders"><i class="corner-1"></i><i class="corner-2"></i><i class="corner-3"></i><i class="corner-4"></i></span>
                                             <span class="label">确定</span>
@@ -103,7 +103,7 @@
 <!-- inject:appFooter:html --><!-- endinject -->
 
 <!-- inject:popupLayersWrapBegin:html --><!-- endinject -->
-<div role="dialog" class="popup-layer" id="pl-quick-repayment-succeed">
+<div role="dialog" class="popup-layer" id="pl-close-installments-succeed">
     <div class="popup-window has-dialog">
         <div class="ie-shadow"><div class="ie-shadow-matte"></div></div>
         <!-- <button class="button-x"></button> -->
@@ -119,8 +119,8 @@
                     <div class="article">
                         <article>
                             <div class="title">
-                                <h1>恭喜您，还款申请成功！</h1>
-                                <h4 class="subtitle">还款金额：<span class="value payment-amount">2,400.00</span
+                                <h1>恭喜您，结束分期申请成功！</h1>
+                                <h4 class="subtitle">还款金额：<span class="value payment-amount">0.00</span
                                     ><span class="currency-unit">元</span
                                 ></h4>
                             </div>
@@ -144,5 +144,5 @@
 <!-- inject:popupLayersWrapEnd:html --><!-- endinject -->
 
 <!-- inject:bodyEnd:html --><!-- endinject -->
-<script src="../scripts/pages/xfzq-page-quick-repayment.min.js"></script>
+<script src="../scripts/pages/xfzq-page-close-installments.min.js"></script>
 </body></html>
